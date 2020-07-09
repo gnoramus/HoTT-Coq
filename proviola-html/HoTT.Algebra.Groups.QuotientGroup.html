@@ -808,22 +808,22 @@
           
 
             i = 158;
-            data = "1 subgoal (ID 38)	  	  G : Group	  H : Group	  H0 : IsSubgroup H G	  k, k' : IsNormalSubgroup H	  ============================	  IsSemiGroupPreserving (reflexivity (G / H))	";
+            data = "1 subgoal (ID 38)	  	  G : Group	  H : Group	  H0 : IsSubgroup H G	  k, k' : IsNormalSubgroup H	  ============================	  IsSemiGroupPreserving 1%equiv	";
             responses[i]=data;
           
 
             i = 159;
-            data = "1 subgoal (ID 45)	  	  G : Group	  H : Group	  H0 : IsSubgroup H G	  k, k' : IsNormalSubgroup H	  x : G / H	  ============================	  forall y : G / H,	  reflexivity (G / H) (x * y) = reflexivity (G / H) x * reflexivity (G / H) y	";
+            data = "1 subgoal (ID 45)	  	  G : Group	  H : Group	  H0 : IsSubgroup H G	  k, k' : IsNormalSubgroup H	  x : G / H	  ============================	  forall y : G / H, 1%equiv (x * y) = 1%equiv x * 1%equiv y	";
             responses[i]=data;
           
 
             i = 160;
-            data = "1 subgoal (ID 158)	  	  G : Group	  H : Group	  H0 : IsSubgroup H G	  k, k' : IsNormalSubgroup H	  y : G	  ============================	  forall x : G / H,	  (fun q : Quotient (in_cosetL H) =>	   reflexivity (G / H) (x * q) =	   reflexivity (G / H) x * reflexivity (G / H) q) 	    (class_of (in_cosetL H) y)	";
+            data = "1 subgoal (ID 158)	  	  G : Group	  H : Group	  H0 : IsSubgroup H G	  k, k' : IsNormalSubgroup H	  y : G	  ============================	  forall x : G / H,	  (fun q : Quotient (in_cosetL H) => 1%equiv (x * q) = 1%equiv x * 1%equiv q)	    (class_of (in_cosetL H) y)	";
             responses[i]=data;
           
 
             i = 161;
-            data = "1 subgoal (ID 269)	  	  G : Group	  H : Group	  H0 : IsSubgroup H G	  k, k' : IsNormalSubgroup H	  y : G	  x : G	  ============================	  (fun q : Quotient (in_cosetL H) =>	   (fun q0 : Quotient (in_cosetL H) =>	    reflexivity (G / H) (q * q0) =	    reflexivity (G / H) q * reflexivity (G / H) q0)	     (class_of (in_cosetL H) y)) (class_of (in_cosetL H) x)	";
+            data = "1 subgoal (ID 269)	  	  G : Group	  H : Group	  H0 : IsSubgroup H G	  k, k' : IsNormalSubgroup H	  y : G	  x : G	  ============================	  (fun q : Quotient (in_cosetL H) =>	   (fun q0 : Quotient (in_cosetL H) =>	    1%equiv (q * q0) = 1%equiv q * 1%equiv q0) (class_of (in_cosetL H) y))	    (class_of (in_cosetL H) x)	";
             responses[i]=data;
           
 
@@ -1128,12 +1128,12 @@
           
 
             i = 222;
-            data = "";
+            data = "1 subgoal (ID 246)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  ============================	  isinj grp_image_quotient	1 subgoal (ID 336)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x : A	  ============================	  forall x1 : A / grp_kernel phi,	  grp_image_quotient (class_of (in_cosetL (grp_kernel phi)) x) =	  grp_image_quotient x1 -> class_of (in_cosetL (grp_kernel phi)) x = x1	1 subgoal (ID 399)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x, y : A	  ============================	  grp_image_quotient (class_of (in_cosetL (grp_kernel phi)) x) =	  grp_image_quotient (class_of (in_cosetL (grp_kernel phi)) y) ->	  class_of (in_cosetL (grp_kernel phi)) x =	  class_of (in_cosetL (grp_kernel phi)) y	1 subgoal (ID 401)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x, y : A	  h : (phi x; tr (x; 1)) = (phi y; tr (y; 1))	  ============================	  class_of (in_cosetL (grp_kernel phi)) x =	  class_of (in_cosetL (grp_kernel phi)) y	1 subgoal (ID 406)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x, y : A	  h : (phi x; tr (x; 1)) = (phi y; tr (y; 1))	  ============================	  in_cosetL (grp_kernel phi) x y	";
             responses[i]=data;
           
 
             i = 223;
-            data = "1 subgoal (ID 246)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  ============================	  isinj grp_image_quotient	1 subgoal (ID 336)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x : A	  ============================	  forall x1 : A / grp_kernel phi,	  grp_image_quotient (class_of (in_cosetL (grp_kernel phi)) x) =	  grp_image_quotient x1 -> class_of (in_cosetL (grp_kernel phi)) x = x1	1 subgoal (ID 399)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x, y : A	  ============================	  grp_image_quotient (class_of (in_cosetL (grp_kernel phi)) x) =	  grp_image_quotient (class_of (in_cosetL (grp_kernel phi)) y) ->	  class_of (in_cosetL (grp_kernel phi)) x =	  class_of (in_cosetL (grp_kernel phi)) y	1 subgoal (ID 401)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x, y : A	  h : (phi x; tr (x; 1)) = (phi y; tr (y; 1))	  ============================	  class_of (in_cosetL (grp_kernel phi)) x =	  class_of (in_cosetL (grp_kernel phi)) y	1 subgoal (ID 406)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x, y : A	  h : (phi x; tr (x; 1)) = (phi y; tr (y; 1))	  ============================	  in_cosetL (grp_kernel phi) x y	2 subgoals (ID 411)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x, y : A	  h : (phi x; tr (x; 1)) = (phi y; tr (y; 1))	  ============================	  grp_kernel phi		subgoal 2 (ID 413) is:	 (fun x0 : grp_kernel phi => issubgroup_incl x0 = - x * y) ?proj1_sig	";
+            data = "2 subgoals (ID 411)	  	  H : Funext	  A, B : Group	  phi : A $-> B	  x, y : A	  h : (phi x; tr (x; 1)) = (phi y; tr (y; 1))	  ============================	  grp_kernel phi		subgoal 2 (ID 413) is:	 (fun x0 : grp_kernel phi => issubgroup_incl x0 = - x * y) ?proj1_sig	";
             responses[i]=data;
           
 

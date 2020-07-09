@@ -753,7 +753,7 @@
           
 
             i = 147;
-            data = "1 subgoal (ID 40)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  C : Cone X D	  i : G	  ============================	  forall (j : G) (g : G i j) (x : X),	  legs_comm (cone_precompose C idmap) i j g x @	  (fun i0 : G => reflexivity (C i0)) j x =	  ap (D _f g) ((fun i0 : G => reflexivity (C i0)) i x) @ legs_comm C i j g x	";
+            data = "1 subgoal (ID 40)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  C : Cone X D	  i : G	  ============================	  forall (j : G) (g : G i j) (x : X),	  legs_comm (cone_precompose C idmap) i j g x @	  (fun (i0 : G) (x0 : X) => 1) j x =	  ap (D _f g) ((fun (i0 : G) (x0 : X) => 1) i x) @ legs_comm C i j g x	";
             responses[i]=data;
           
 
@@ -788,7 +788,7 @@
           
 
             i = 154;
-            data = "1 subgoal (ID 75)	  	  H : Funext	  G : Graph	  D : Diagram G	  Z : Type	  Y : Type	  f : Z -> Y	  X : Type	  g : Y -> X	  C : Cone X D	  i : G	  ============================	  forall (j : G) (g0 : G i j) (x : Z),	  legs_comm (cone_precompose C (g o f)) i j g0 x @	  (fun i0 : G => reflexivity (cone_precompose (cone_precompose C g) f i0)) j	    x =	  ap (D _f g0)	    ((fun i0 : G => reflexivity (cone_precompose (cone_precompose C g) f i0))	       i x) @ legs_comm (cone_precompose (cone_precompose C g) f) i j g0 x	";
+            data = "1 subgoal (ID 75)	  	  H : Funext	  G : Graph	  D : Diagram G	  Z : Type	  Y : Type	  f : Z -> Y	  X : Type	  g : Y -> X	  C : Cone X D	  i : G	  ============================	  forall (j : G) (g0 : G i j) (x : Z),	  legs_comm (cone_precompose C (g o f)) i j g0 x @	  (fun (i0 : G) (x0 : Z) => 1) j x =	  ap (D _f g0) ((fun (i0 : G) (x0 : Z) => 1) i x) @	  legs_comm (cone_precompose (cone_precompose C g) f) i j g0 x	";
             responses[i]=data;
           
 
@@ -998,7 +998,7 @@
           
 
             i = 196;
-            data = "1 subgoal (ID 97)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  C : Cone X D	  ============================	  forall (i j : G) (g : G i j) (x : X),	  (1 @ ap idmap (legs_comm C i j g x)) @	  (fun i0 : G => reflexivity (fun x0 : X => C i0 x0)) j x =	  ap (D _f g) ((fun i0 : G => reflexivity (fun x0 : X => C i0 x0)) i x) @	  legs_comm C i j g x	";
+            data = "1 subgoal (ID 97)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  C : Cone X D	  ============================	  forall (i j : G) (g : G i j) (x : X),	  (1 @ ap idmap (legs_comm C i j g x)) @ (fun (i0 : G) (x0 : X) => 1) j x =	  ap (D _f g) ((fun (i0 : G) (x0 : X) => 1) i x) @ legs_comm C i j g x	";
             responses[i]=data;
           
 
@@ -1043,7 +1043,7 @@
           
 
             i = 205;
-            data = "1 subgoal (ID 129)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  D3 : Diagram G	  m2 : DiagramMap D2 D3	  m1 : DiagramMap D1 D2	  X : Type	  C : Cone X D1	  ============================	  forall (i j : G) (g : G i j) (x : X),	  legs_comm (cone_postcompose m2 (cone_postcompose m1 C)) i j g x @	  (fun i0 : G => reflexivity (cone_postcompose (diagram_comp m2 m1) C i0)) j	    x =	  ap (D3 _f g)	    ((fun i0 : G => reflexivity (cone_postcompose (diagram_comp m2 m1) C i0))	       i x) @ legs_comm (cone_postcompose (diagram_comp m2 m1) C) i j g x	";
+            data = "1 subgoal (ID 129)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  D3 : Diagram G	  m2 : DiagramMap D2 D3	  m1 : DiagramMap D1 D2	  X : Type	  C : Cone X D1	  ============================	  forall (i j : G) (g : G i j) (x : X),	  legs_comm (cone_postcompose m2 (cone_postcompose m1 C)) i j g x @	  (fun (i0 : G) (x0 : X) => 1) j x =	  ap (D3 _f g) ((fun (i0 : G) (x0 : X) => 1) i x) @	  legs_comm (cone_postcompose (diagram_comp m2 m1) C) i j g x	";
             responses[i]=data;
           
 
@@ -1133,7 +1133,7 @@
           
 
             i = 223;
-            data = "1 subgoal (ID 155)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : DiagramMap D1 D2	  Y : Type	  X : Type	  f : Y -> X	  C : Cone X D1	  i : G	  ============================	  forall (j : G) (g : G i j) (x : Y),	  legs_comm (cone_precompose (cone_postcompose m C) f) i j g x @	  (fun i0 : G => reflexivity (cone_postcompose m (cone_precompose C f) i0)) j	    x =	  ap (D2 _f g)	    ((fun i0 : G => reflexivity (cone_postcompose m (cone_precompose C f) i0))	       i x) @ legs_comm (cone_postcompose m (cone_precompose C f)) i j g x	";
+            data = "1 subgoal (ID 155)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : DiagramMap D1 D2	  Y : Type	  X : Type	  f : Y -> X	  C : Cone X D1	  i : G	  ============================	  forall (j : G) (g : G i j) (x : Y),	  legs_comm (cone_precompose (cone_postcompose m C) f) i j g x @	  (fun (i0 : G) (x0 : Y) => 1) j x =	  ap (D2 _f g) ((fun (i0 : G) (x0 : Y) => 1) i x) @	  legs_comm (cone_postcompose m (cone_precompose C f)) i j g x	";
             responses[i]=data;
           
 

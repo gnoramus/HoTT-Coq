@@ -518,7 +518,7 @@
           
 
             i = 100;
-            data = "1 subgoal (ID 301)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  Cocone.legs_comm	    {|	    legs := fun (i0 : G) (g0 : D i0) =>	            Colimit_rec P {| legs := legs; legs_comm := legs_comm |}	              (colim i0 g0);	    legs_comm := fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	                 ap	                   (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	                   (colimp i0 j0 g0 x0) |} i j g x @	  (fun i0 : G => reflexivity ({| legs := legs; legs_comm := legs_comm |} i0))	    i x =	  (fun i0 : G => reflexivity ({| legs := legs; legs_comm := legs_comm |} i0))	    j ((D _f g) x) @	  Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	";
+            data = "1 subgoal (ID 301)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  Cocone.legs_comm	    {|	    legs := fun (i0 : G) (g0 : D i0) =>	            Colimit_rec P {| legs := legs; legs_comm := legs_comm |}	              (colim i0 g0);	    legs_comm := fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	                 ap	                   (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	                   (colimp i0 j0 g0 x0) |} i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @	  Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	";
             responses[i]=data;
           
 
@@ -598,7 +598,7 @@
           
 
             i = 116;
-            data = "1 subgoal (ID 187)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  legs_comm (cocone_postcompose (cocone_colimit D) (Colimit_rec Y C)) i j g x @	  (fun i0 : G => reflexivity (C i0)) i x =	  (fun i0 : G => reflexivity (C i0)) j ((D _f g) x) @ legs_comm C i j g x	";
+            data = "1 subgoal (ID 187)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  legs_comm (cocone_postcompose (cocone_colimit D) (Colimit_rec Y C)) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ legs_comm C i j g x	";
             responses[i]=data;
           
 

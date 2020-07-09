@@ -1458,7 +1458,7 @@
           
 
             i = 288;
-            data = "1 subgoal (ID 1032)	  	  A : pType	  B : pType	  C : pType	  D : pType	  h : C ->* D	  g : B ->* C	  f : A ->* B	  ============================	  reflexivity (h o* (g o* f)) (point A) =	  dpoint_eq ((h o* g) o* f) @ (dpoint_eq (h o* (g o* f)))^	";
+            data = "1 subgoal (ID 1032)	  	  A : pType	  B : pType	  C : pType	  D : pType	  h : C ->* D	  g : B ->* C	  f : A ->* B	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq ((h o* g) o* f) @ (dpoint_eq (h o* (g o* f)))^	";
             responses[i]=data;
           
 
@@ -1523,12 +1523,12 @@
           
 
             i = 301;
-            data = "1 subgoal (ID 1043)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  reflexivity f (point A) = dpoint_eq (f o* pmap_idmap) @ (dpoint_eq f)^	";
+            data = "1 subgoal (ID 1043)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  (fun x0 : A => 1) (point A) = dpoint_eq (f o* pmap_idmap) @ (dpoint_eq f)^	";
             responses[i]=data;
           
 
             i = 302;
-            data = "1 subgoal (ID 1062)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  dpoint_eq (f o* pmap_idmap) @ (dpoint_eq f)^ = reflexivity f (point A)	";
+            data = "1 subgoal (ID 1062)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  dpoint_eq (f o* pmap_idmap) @ (dpoint_eq f)^ = (fun x0 : A => 1) (point A)	";
             responses[i]=data;
           
 
@@ -1578,17 +1578,17 @@
           
 
             i = 312;
-            data = "1 subgoal (ID 1054)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  reflexivity f (point A) = dpoint_eq (pmap_idmap o* f) @ (dpoint_eq f)^	";
+            data = "1 subgoal (ID 1054)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  (fun x0 : A => 1) (point A) = dpoint_eq (pmap_idmap o* f) @ (dpoint_eq f)^	";
             responses[i]=data;
           
 
             i = 313;
-            data = "1 subgoal (ID 1073)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  dpoint_eq (pmap_idmap o* f) @ (dpoint_eq f)^ = reflexivity f (point A)	";
+            data = "1 subgoal (ID 1073)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  dpoint_eq (pmap_idmap o* f) @ (dpoint_eq f)^ = (fun x0 : A => 1) (point A)	";
             responses[i]=data;
           
 
             i = 314;
-            data = "1 subgoal (ID 1078)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  dpoint_eq (pmap_idmap o* f) = reflexivity f (point A) @ dpoint_eq f	";
+            data = "1 subgoal (ID 1078)	  	  A : pType	  B : pType	  f : A ->* B	  ============================	  dpoint_eq (pmap_idmap o* f) = 1 @ dpoint_eq f	";
             responses[i]=data;
           
 
@@ -2693,12 +2693,12 @@
           
 
             i = 535;
-            data = "";
+            data = "1 subgoal (ID 1604)	  	  H : Funext	  A : Type	  point : IsPointed A	  P : A -> Type	  f : forall x : A, P x	  ============================	  1 = 1	No more subgoals.	";
             responses[i]=data;
           
 
             i = 536;
-            data = "1 subgoal (ID 1604)	  	  H : Funext	  A : Type	  point : IsPointed A	  P : A -> Type	  f : forall x : A, P x	  ============================	  1 = 1	No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 

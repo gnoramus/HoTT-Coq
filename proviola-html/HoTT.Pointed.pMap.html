@@ -228,7 +228,7 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 73)	  	  A : pType	  B : pType	  C : pType	  f : A ->* B	  ============================	  reflexivity pconst (point A) =	  dpoint_eq (pconst o* f) @ (dpoint_eq pconst)^	";
+            data = "1 subgoal (ID 73)	  	  A : pType	  B : pType	  C : pType	  f : A ->* B	  ============================	  (fun x0 : A => 1) (point A) = dpoint_eq (pconst o* f) @ (dpoint_eq pconst)^	";
             responses[i]=data;
           
 
@@ -643,12 +643,12 @@
           
 
             i = 125;
-            data = "1 subgoal (ID 331)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==	  pmap_compose_ppforall h (pmap_compose_ppforall g f)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 333)		subgoal 1 (ID 333) is:	 reflexivity (pmap_compose_ppforall h (pmap_compose_ppforall g f)) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	 (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	";
+            data = "1 subgoal (ID 331)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==	  pmap_compose_ppforall h (pmap_compose_ppforall g f)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 333)		subgoal 1 (ID 333) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	 (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	";
             responses[i]=data;
           
 
             i = 126;
-            data = "1 subgoal (ID 333)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  reflexivity (pmap_compose_ppforall h (pmap_compose_ppforall g f)) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	  (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	1 subgoal (ID 342)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  1 =	  (ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	   (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))) @	  (ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	   point_eq (h (point A)))^	";
+            data = "1 subgoal (ID 333)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	  (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	1 subgoal (ID 342)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  1 =	  (ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	   (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))) @	  (ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	   point_eq (h (point A)))^	";
             responses[i]=data;
           
 
@@ -773,12 +773,12 @@
           
 
             i = 151;
-            data = "1 subgoal (ID 450)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f == f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 452)		subgoal 1 (ID 452) is:	 reflexivity f (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	 (dpoint_eq f)^	";
+            data = "1 subgoal (ID 450)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f == f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 452)		subgoal 1 (ID 452) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	 (dpoint_eq f)^	";
             responses[i]=data;
           
 
             i = 152;
-            data = "1 subgoal (ID 452)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  reflexivity f (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^	1 subgoal (ID 471)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^ = reflexivity f (point A)	";
+            data = "1 subgoal (ID 452)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^	1 subgoal (ID 471)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^ = (fun x0 : A => 1) (point A)	";
             responses[i]=data;
           
 

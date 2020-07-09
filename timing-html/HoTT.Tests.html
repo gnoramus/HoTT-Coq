@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: Tests.v
 Line: 1
-Time: 0.477s">
+Time: 0.48s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.</pre>
 </div>
@@ -120,8 +120,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 19
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.20833333333333%"></div>
 <pre>Check (fun A : Type =&gt; _ : IsPointed (Susp A)).</pre>
 </div>
 <div class="code" title="File: Tests.v
@@ -255,7 +255,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 51
 Time: 0.003s">
-<div class="time" style="width: 0.62893081761006%"></div>
+<div class="time" style="width: 0.625%"></div>
 <pre>
     equiv_induction (@equiv_path_nat O (S n)).</pre>
 </div>
@@ -281,7 +281,97 @@ Time: 0s">
 End Issue754_1.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 56
+Line: 55
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Module Issue_1358.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 57
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Axiom A@{i} : Type@{i}.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 59
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Axiom foo@{i} : A@{i} &lt;~&gt; A@{i}.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 61
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Definition bar@{i} : A@{i} &lt;~&gt; A@{i}.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 63
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 64
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    reflexivity.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 65
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 66
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Definition bar'@{i} : A@{i} &lt;~&gt; A@{i}.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 68
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Proof.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 69
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    exact equiv_idmap.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 70
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Defined.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 71
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+End Issue_1358.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

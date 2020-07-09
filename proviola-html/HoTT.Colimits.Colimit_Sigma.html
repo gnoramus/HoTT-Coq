@@ -673,7 +673,7 @@
           
 
             i = 131;
-            data = "1 subgoal (ID 824)	  	  H : Funext	  G : Graph	  Y : Type	  D : Y -> Diagram G	  Q : Y -> Type	  HQ : forall y : Y, IsColimit (D y) (Q y)	  SigmaC := sigma_cocone (fun y : Y => HQ y)	   : Cocone sigma_diagram {x : _ & Q x}	  X : Type	  f : {x : _ & Q x} -> X	  y : Y	  x : Q y	  ============================	  forall (i j : G) (g : G i j) (x0 : D y i),	  legs_comm	    (cocone_postcompose (cocone_precompose (sigma_diagram_map y) SigmaC) f) i	    j g x0 @	  (fun i0 : G =>	   reflexivity (cocone_postcompose (HQ y) (fun x1 : Q y => f (y; x1)) i0)) i	    x0 =	  (fun i0 : G =>	   reflexivity (cocone_postcompose (HQ y) (fun x1 : Q y => f (y; x1)) i0)) j	    (((D y) _f g) x0) @	  legs_comm (cocone_postcompose (HQ y) (fun x1 : Q y => f (y; x1))) i j g x0	";
+            data = "1 subgoal (ID 824)	  	  H : Funext	  G : Graph	  Y : Type	  D : Y -> Diagram G	  Q : Y -> Type	  HQ : forall y : Y, IsColimit (D y) (Q y)	  SigmaC := sigma_cocone (fun y : Y => HQ y)	   : Cocone sigma_diagram {x : _ & Q x}	  X : Type	  f : {x : _ & Q x} -> X	  y : Y	  x : Q y	  ============================	  forall (i j : G) (g : G i j) (x0 : D y i),	  legs_comm	    (cocone_postcompose (cocone_precompose (sigma_diagram_map y) SigmaC) f) i	    j g x0 @ (fun (i0 : G) (x1 : D y i0) => 1) i x0 =	  (fun (i0 : G) (x1 : D y i0) => 1) j (((D y) _f g) x0) @	  legs_comm (cocone_postcompose (HQ y) (fun x1 : Q y => f (y; x1))) i j g x0	";
             responses[i]=data;
           
 
