@@ -196,8 +196,8 @@ Infix "-&gt;" := implb : bool_scope.</pre>
 </div>
 <div class="code" title="File: Bool.v
 Line: 34
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
 
 Definition implb_true {b} : implb b true = true
@@ -220,8 +220,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Bool.v
 Line: 40
-Time: 0.003s">
-<div class="time" style="width: 20%"></div>
+Time: 0.004s">
+<div class="time" style="width: 26.666666666667%"></div>
 <pre>
   destruct a; simpl; split; trivial using idpath with nocore;
   destruct b; simpl; auto using idpath with nocore.</pre>
@@ -235,8 +235,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Bool.v
 Line: 43
-Time: 0.001s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance trunc_if n A B `{IsTrunc n A, IsTrunc n B} (b : Bool)
@@ -261,8 +261,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
   Definition false_ne_true : ~ (false = true)
     := fun H =&gt; match H in (_ = y) return (if y return Set then Empty else Bool) with
@@ -370,8 +370,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Bool.v
 Line: 81
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
   destruct b1, b2.</pre>
 </div>
@@ -495,8 +495,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 103
-Time: 0.003s">
-<div class="time" style="width: 20%"></div>
+Time: 0.004s">
+<div class="time" style="width: 26.666666666667%"></div>
 <pre>
     apply (equiv_adjointify f g);
     repeat (reflexivity
@@ -767,8 +767,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 153
-Time: 0.001s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> refine (eval_bool_isequiv e @ _).</pre>
 </div>
 <div class="code" title="File: Bool.v
@@ -892,8 +892,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 170
-Time: 0.002s">
-<div class="time" style="width: 13.333333333333%"></div>
+Time: 0.003s">
+<div class="time" style="width: 20%"></div>
 <pre>
     destruct e; simpl.</pre>
 </div>
@@ -925,8 +925,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Bool.v
 Line: 173
-Time: 0.001s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>

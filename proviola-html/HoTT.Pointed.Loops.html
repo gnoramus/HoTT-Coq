@@ -1808,12 +1808,12 @@
           
 
             i = 358;
-            data = "1 subgoal (ID 751)	  	  H : Univalence	  n : trunc_index	  X : Type	  ============================	  (forall x : IsPointed X, IsTrunc n.+1 (loops (X, x))) -> IsTrunc n.+2 X	";
+            data = "";
             responses[i]=data;
           
 
             i = 359;
-            data = "1 subgoal (ID 880)	  	  H : Univalence	  n : trunc_index	  X : Type	  tr_loops : forall x : IsPointed X, IsTrunc n.+1 (loops (X, x))	  ============================	  IsTrunc n.+2 X	";
+            data = "1 subgoal (ID 751)	  	  H : Univalence	  n : trunc_index	  X : Type	  ============================	  (forall x : IsPointed X, IsTrunc n.+1 (loops (X, x))) -> IsTrunc n.+2 X	1 subgoal (ID 880)	  	  H : Univalence	  n : trunc_index	  X : Type	  tr_loops : forall x : IsPointed X, IsTrunc n.+1 (loops (X, x))	  ============================	  IsTrunc n.+2 X	";
             responses[i]=data;
           
 
@@ -2258,12 +2258,12 @@
           
 
             i = 448;
-            data = "1 subgoal (ID 615)	  	  A, B : pType	  f : A $-> B	  ============================	  (fun p : loops A =>	   (inv_Vp (point_eq f) (ap f p @ point_eq f) @	    whiskerR	      (inv_pp (ap f p) (point_eq f) @ whiskerL (point_eq f)^ (ap_V f p)^)	      (point_eq f)) @	   concat_pp_p (point_eq f)^ (ap f (loops_inv A p)) (point_eq f))	    (point (loops A)) =	  dpoint_eq (loops_inv B $o fmap loops f) @	  (dpoint_eq (fmap loops f $o loops_inv A))^	1 subgoal (ID 723)	  	  A : Type	  point0 : IsPointed A	  B : Type	  f : A -> B	  ============================	  1 = 1	";
+            data = "1 subgoal (ID 615)	  	  A, B : pType	  f : A $-> B	  ============================	  (fun p : loops A =>	   (inv_Vp (point_eq f) (ap f p @ point_eq f) @	    whiskerR	      (inv_pp (ap f p) (point_eq f) @ whiskerL (point_eq f)^ (ap_V f p)^)	      (point_eq f)) @	   concat_pp_p (point_eq f)^ (ap f (loops_inv A p)) (point_eq f))	    (point (loops A)) =	  dpoint_eq (loops_inv B $o fmap loops f) @	  (dpoint_eq (fmap loops f $o loops_inv A))^	";
             responses[i]=data;
           
 
             i = 449;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 723)	  	  A : Type	  point0 : IsPointed A	  B : Type	  f : A -> B	  ============================	  1 = 1	No more subgoals.	";
             responses[i]=data;
           
 
