@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: Tests.v
 Line: 1
-Time: 0.539s">
+Time: 0.557s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.</pre>
 </div>
@@ -121,7 +121,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 19
 Time: 0.001s">
-<div class="time" style="width: 0.18552875695733%"></div>
+<div class="time" style="width: 0.17953321364452%"></div>
 <pre>Check (fun A : Type =&gt; _ : IsPointed (Susp A)).</pre>
 </div>
 <div class="code" title="File: Tests.v
@@ -169,7 +169,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 0.18552875695733%"></div>
+<div class="time" style="width: 0.17953321364452%"></div>
 <pre>
   Inductive nat : Type1 :=
   | O : nat
@@ -255,7 +255,7 @@ Time: 0s">
 <div class="code" title="File: Tests.v
 Line: 51
 Time: 0.003s">
-<div class="time" style="width: 0.55658627087199%"></div>
+<div class="time" style="width: 0.53859964093357%"></div>
 <pre>
     equiv_induction (@equiv_path_nat O (S n)).</pre>
 </div>
@@ -268,8 +268,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 53
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.17953321364452%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -321,8 +321,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Tests.v
 Line: 64
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.17953321364452%"></div>
 <pre>
     reflexivity.</pre>
 </div>
@@ -371,7 +371,51 @@ Time: 0s">
 End Issue_1358.</pre>
 </div>
 <div class="code" title="File: Tests.v
-Line: 74
+Line: 73
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Module Issue_973.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 75
+Time: 0.001s">
+<div class="time" style="width: 0.17953321364452%"></div>
+<pre>
+
+  Inductive vec (A : Type) : nat -&gt; Type :=
+  | nil : vec A 0
+  | cons : forall n : nat, A -&gt; vec A n -&gt; vec A (S n).</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 79
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+(*   Arguments nil [A]. *)
+
+ </pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 82
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Definition hd (A : Type) (n : nat) (v : vec A (S n)) : A :=
+  match v in (vec _ (S n)) return A with
+  | cons _ h _ =&gt; h
+  end.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 85
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+End Issue_973.</pre>
+</div>
+<div class="code" title="File: Tests.v
+Line: 88
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

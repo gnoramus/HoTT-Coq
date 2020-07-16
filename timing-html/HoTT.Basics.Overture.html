@@ -40,7 +40,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 4
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Require Export Basics.Notations.</pre>
 </div>
 <div class="code" title="File: Overture.v
@@ -197,8 +197,8 @@ Arguments reflexivity {A R} _.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 30
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 
 Class Symmetric {A} (R : Relation A) :=
@@ -822,7 +822,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 160
 Time: 0.002s">
-<div class="time" style="width: 3.7735849056604%"></div>
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>Instance iff_compose : Transitive iff | 1
   := fun A B C f g =&gt; (fst g o fst f , snd f o snd g).</pre>
 </div>
@@ -844,7 +844,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 164
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Instance iff_inverse : Symmetric iff | 1
   := fun A B f =&gt; (snd f , fst f).</pre>
 </div>
@@ -1183,8 +1183,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 226
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   destruct p.</pre>
 </div>
@@ -1236,8 +1236,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 237
-Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition inverse {A : Type} {x y : A} (p : x = y) : y = x
   := match p with idpath =&gt; idpath end.</pre>
 </div>
@@ -1326,7 +1326,7 @@ Module Export symmetric_paths := inverseSymmetric inverse.
 <div class="code" title="File: Overture.v
 Line: 271
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Definition concat {A : Type} {x y z : A} (p : x = y) (q : y = z) : x = z :=
   match p, q with idpath, idpath =&gt; idpath end.</pre>
 </div>
@@ -1541,8 +1541,8 @@ Definition pointwise_paths A (P : A -&gt; Type) (f g : forall x, P x)
 </div>
 <div class="code" title="File: Overture.v
 Line: 322
-Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition pointwise_paths_concat {A} {P : A -&gt; Type} {f g h : forall x, P x}
@@ -1634,8 +1634,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
 Line: 343
-Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros ? ? p ?; symmetry; apply p.</pre>
 </div>
@@ -1711,8 +1711,8 @@ Global Arguments apD10 {A%type_scope B} {f g}%function_scope h%path_scope _.</pr
 </div>
 <div class="code" title="File: Overture.v
 Line: 360
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 
 Definition ap10 {A B} {f g:A-&gt;B} (h:f=g) : f == g
@@ -1742,8 +1742,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 367
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 
 Definition ap11 {A B} {f g:A-&gt;B} (h:f=g) {x y:A} (p:x=y) : f x = g y.</pre>
@@ -1806,7 +1806,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 381
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Definition apD {A:Type} {B:A-&gt;Type} (f:forall a:A, B a) {x y:A} (p:x=y):
   p # (f x) = f y
   :=
@@ -1876,7 +1876,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 409
 Time: 0.002s">
-<div class="time" style="width: 3.7735849056604%"></div>
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>Cumulative Class IsEquiv {A B : Type} (f : A -&gt; B) := {
   equiv_inv : B -&gt; A ;
   eisretr : Sect equiv_inv f;
@@ -1924,7 +1924,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 421
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Cumulative Record Equiv A B := {
   equiv_fun : A -&gt; B ;
   equiv_isequiv : IsEquiv equiv_fun
@@ -2006,7 +2006,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 441
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Definition ap10_equiv {A B : Type} {f g : A &lt;~&gt; B} (h : f = g) : f == g
   := ap10 (ap equiv_fun h).</pre>
 </div>
@@ -2225,7 +2225,7 @@ Time: 0s">
 <div class="code" title="File: Overture.v
 Line: 502
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Fixpoint IsTrunc_internal (n : trunc_index) (A : Type) : Type :=
   match n with
     | minus_two =&gt; Contr_internal A
@@ -2289,8 +2289,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Overture.v
 Line: 516
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>Global Instance istrunc_paths (A : Type) n `{H : IsTrunc n.+1 A} (x y : A)
 : IsTrunc n (x = y)
   := H x y.</pre>
@@ -2458,7 +2458,7 @@ Existing Class Funext.</pre>
 <div class="code" title="File: Overture.v
 Line: 567
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 Axiom isequiv_apD10 : forall `{Funext} (A : Type) (P : A -&gt; Type) f g, IsEquiv (@apD10 A P f g).</pre>
 </div>
@@ -2472,7 +2472,7 @@ Global Existing Instance isequiv_apD10.</pre>
 <div class="code" title="File: Overture.v
 Line: 569
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 
 Definition path_forall `{Funext} {A : Type} {P : A -&gt; Type} (f g : forall x : A, P x) :
@@ -2645,8 +2645,8 @@ Class Irreflexive {A} (R : Relation A) :=
 </div>
 <div class="code" title="File: Overture.v
 Line: 617
-Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Class Asymmetric {A} (R : Relation A) :=
@@ -2664,11 +2664,10 @@ Time: 0s">
 Line: 622
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Inductive Unit : Type0 :=
-    tt : Unit.</pre>
+<pre>Inductive Unit : Type0 := tt : Unit.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 623
+Line: 622
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2676,21 +2675,21 @@ Time: 0s">
 Scheme Unit_ind := Induction for Unit Sort Type.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 625
+Line: 624
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Scheme Unit_rec := Minimality for Unit Sort Type.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 626
+Line: 625
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition Unit_rect := Unit_ind.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 627
+Line: 626
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2698,13 +2697,28 @@ Time: 0s">
 (** A [Unit] goal should be resolved by [auto] and [trivial]. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 629
+Line: 628
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Hint Resolve tt : core.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 629
+Line: 628
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Register Unit as core.IDProp.type.</pre>
+</div>
+<div class="code" title="File: Overture.v
+Line: 630
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Register tt as core.IDProp.idProp.</pre>
+</div>
+<div class="code" title="File: Overture.v
+Line: 631
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2714,13 +2728,13 @@ Time: 0s">
 (** A space is pointed if that space has a point. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 633
+Line: 635
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Class IsPointed (A : Type) := point : A.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 633
+Line: 635
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2728,7 +2742,7 @@ Time: 0s">
 Arguments point A {_}.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 635
+Line: 637
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2738,7 +2752,7 @@ Record pType :=
     ispointed_type : IsPointed pointed_type }.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 639
+Line: 641
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2746,7 +2760,7 @@ Time: 0s">
 Coercion pointed_type : pType &gt;-&gt; Sortclass.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 641
+Line: 643
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2754,7 +2768,7 @@ Time: 0s">
 Global Existing Instance ispointed_type.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 643
+Line: 645
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2766,13 +2780,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 648
+Line: 650
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition hfiber {A B : Type} (f : A -&gt; B) (y : B) := { x : A &amp; f x = y }.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 648
+Line: 650
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2780,7 +2794,7 @@ Time: 0s">
 Global Arguments hfiber {A B}%type_scope f%function_scope y.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 650
+Line: 652
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2790,7 +2804,7 @@ Time: 0s">
 (** Clear a hypothesis and also its dependencies.  Taken from Coq stdlib, with the performance-enhancing change to [lazymatch] suggested at [https://github.com/coq/coq/issues/11689]. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 654
+Line: 656
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "clear" "dependent" hyp(h) :=
@@ -2803,7 +2817,7 @@ Time: 0s">
  in depclear h.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 661
+Line: 663
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2812,14 +2826,14 @@ Time: 0s">
 (** A version of [generalize dependent] that applies only to a hypothesis.  Taken from Coq stdlib. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 664
+Line: 666
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "revert" "dependent" hyp(h) :=
   generalize dependent h.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 665
+Line: 667
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2827,7 +2841,7 @@ Time: 0s">
 (** Applying a tactic to a term with increasingly many arguments *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 667
+Line: 669
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "do_with_holes" tactic3(x) uconstr(p) :=
@@ -2864,7 +2878,7 @@ Time: 0s">
   x uconstr:(p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _).</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 698
+Line: 700
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2872,7 +2886,7 @@ Time: 0s">
 (** Same thing but starting with many holes first *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 700
+Line: 702
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "do_with_holes'" tactic3(x) uconstr(p) :=
@@ -2909,7 +2923,7 @@ Time: 0s">
   x uconstr:(p).</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 731
+Line: 733
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2917,39 +2931,39 @@ Time: 0s">
 (** A shorter name for [simple refine]. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 733
+Line: 735
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "srefine" uconstr(term) := simple refine term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 733
+Line: 735
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 (** A shorter name for [notypeclasses refine]. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 734
+Line: 736
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "nrefine" uconstr(term) := notypeclasses refine term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 734
+Line: 736
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 (** A shorter name for [simple notypeclasses refine]. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 735
+Line: 737
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "snrefine" uconstr(term) := simple notypeclasses refine term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 735
+Line: 737
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2957,14 +2971,14 @@ Time: 0s">
 (** Note that the Coq standard library has a [rapply], but it is like our [rapply'] with many-holes first.  We prefer fewer-holes first, for instance so that a theorem producing an equivalence will by preference be used to produce an equivalence rather than to apply the coercion of that equivalence to a function. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 737
+Line: 739
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "rapply" uconstr(term)
   := do_with_holes ltac:(fun x =&gt; refine x) term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 738
+Line: 740
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2972,7 +2986,7 @@ Tactic Notation "rapply'" uconstr(term)
   := do_with_holes' ltac:(fun x =&gt; refine x) term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 740
+Line: 742
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2981,7 +2995,7 @@ Tactic Notation "srapply" uconstr(term)
   := do_with_holes ltac:(fun x =&gt; srefine x) term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 743
+Line: 745
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2989,7 +3003,7 @@ Tactic Notation "srapply'" uconstr(term)
   := do_with_holes' ltac:(fun x =&gt; srefine x) term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 745
+Line: 747
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2998,7 +3012,7 @@ Tactic Notation "nrapply" uconstr(term)
   := do_with_holes ltac:(fun x =&gt; nrefine x) term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 748
+Line: 750
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3006,7 +3020,7 @@ Tactic Notation "nrapply'" uconstr(term)
   := do_with_holes' ltac:(fun x =&gt; nrefine x) term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 750
+Line: 752
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3015,7 +3029,7 @@ Tactic Notation "snrapply" uconstr(term)
   := do_with_holes ltac:(fun x =&gt; snrefine x) term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 753
+Line: 755
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3023,7 +3037,7 @@ Tactic Notation "snrapply'" uconstr(term)
   := do_with_holes' ltac:(fun x =&gt; snrefine x) term.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 755
+Line: 757
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3031,7 +3045,7 @@ Time: 0s">
 (** Ssreflect tactics, adapted by Robbert Krebbers *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 757
+Line: 759
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac done :=
@@ -3049,7 +3063,7 @@ Time: 0s">
       end ].</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 769
+Line: 771
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3058,7 +3072,7 @@ Tactic Notation "by" tactic(tac) :=
   tac; done.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 772
+Line: 774
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3066,7 +3080,7 @@ Time: 0s">
 (** A convenient tactic for using function extensionality. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 774
+Line: 776
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac by_extensionality x :=
@@ -3082,7 +3096,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 784
+Line: 786
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3091,14 +3105,14 @@ Time: 0s">
 (** For instance, if you have to prove [f = g] where [f] and [g] take two arguments, you can use [funext x y], and the goal become [f x y = g x y]. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 787
+Line: 789
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "funext" simple_intropattern(a)
   := apply path_forall; intros a.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 788
+Line: 790
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3106,7 +3120,7 @@ Tactic Notation "funext" simple_intropattern(a)  simple_intropattern(b)
   := funext a; funext b.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 790
+Line: 792
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3114,7 +3128,7 @@ Tactic Notation "funext" simple_intropattern(a) simple_intropattern(b) simple_in
   := funext a; funext b; funext c.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 792
+Line: 794
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3122,7 +3136,7 @@ Tactic Notation "funext" simple_intropattern(a) simple_intropattern(b) simple_in
   := funext a; funext b; funext c; funext d.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 794
+Line: 796
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3130,7 +3144,7 @@ Tactic Notation "funext" simple_intropattern(a) simple_intropattern(b) simple_in
   := funext a; funext b; funext c; funext d; funext e.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 796
+Line: 798
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3138,7 +3152,7 @@ Tactic Notation "funext" simple_intropattern(a) simple_intropattern(b) simple_in
   := funext a; funext b; funext c; funext d; funext e; funext f.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 798
+Line: 800
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3146,14 +3160,14 @@ Time: 0s">
 (* Test whether a tactic fails or succeeds, without actually doing anything.  Taken from Coq stdlib. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 800
+Line: 802
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac assert_fails tac :=
   tryif (once tac) then gfail 0 tac "succeeds" else idtac.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 801
+Line: 803
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3161,7 +3175,7 @@ Ltac assert_succeeds tac :=
   tryif (assert_fails tac) then gfail 0 tac "fails" else idtac.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 803
+Line: 805
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3169,7 +3183,7 @@ Tactic Notation "assert_succeeds" tactic3(tac) :=
   assert_succeeds tac.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 805
+Line: 807
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3177,7 +3191,7 @@ Tactic Notation "assert_fails" tactic3(tac) :=
   assert_fails tac.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 807
+Line: 809
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3185,7 +3199,7 @@ Time: 0s">
 (** This tactic doesn't end with [auto], but you can always write "by (path_induction;auto with path_hints)" if you want.*)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 809
+Line: 811
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac path_induction :=
@@ -3196,7 +3210,7 @@ Time: 0s">
   ).</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 814
+Line: 816
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3204,7 +3218,7 @@ Time: 0s">
 (** The tactic [f_ap] is a replacement for the previously existing standard library tactic [f_equal].  This tactic works by repeatedly applying the fact that [f = g -&gt; x = y -&gt; f x = g y] to turn, e.g., [f x y = f z w] first into [f x = f z] and [y = w], and then turns the first of these into [f = f] and [x = z].  The [done] tactic is used to detect the [f = f] case and finish, and the [trivial] is used to solve, e.g., [x = x] when using [f_ap] on [f y x = f z x].  This tactic only works for non-dependently-typed functions; we cannot express [y = w] in the first example if [y] and [w] have different types.  If and when Arnaud's new-tacticals branch lands, and we can have a goal which depends on the term used to discharge another goal, then this tactic should probably be generalized to deal with dependent functions. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 816
+Line: 818
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac f_ap :=
@@ -3218,7 +3232,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 824
+Line: 826
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3226,7 +3240,7 @@ Time: 0s">
 (** [expand] replaces both terms of an equality (either [paths] or [pointwise_paths] in the goal with their head normal forms *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 826
+Line: 828
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac expand :=
@@ -3239,7 +3253,7 @@ Time: 0s">
   end; simpl.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 833
+Line: 835
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3247,7 +3261,7 @@ Time: 0s">
 (** [atomic x] is the same as [idtac] if [x] is a variable or hypothesis, but is [fail 0] if [x] has internal structure.  This is useful, for example, to easily destruct all variables that show up as the discriminees of [match] statements, without destructing more complicated terms whose structures might matter. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 835
+Line: 837
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac atomic x :=
@@ -3266,7 +3280,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 848
+Line: 850
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3274,7 +3288,7 @@ Time: 0s">
 (** Find the head of the given expression. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 850
+Line: 852
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac head expr :=
@@ -3284,7 +3298,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 854
+Line: 856
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3292,7 +3306,7 @@ Time: 0s">
 (** This tactic gets the constructor of any one-constructor inductive type. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 856
+Line: 858
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac get_constructor_head T :=
@@ -3309,7 +3323,7 @@ Time: 0s">
   h.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 867
+Line: 869
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3317,7 +3331,7 @@ Time: 0s">
 (* A version of econstructor that doesn't resolve typeclasses. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 869
+Line: 871
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac ntc_constructor :=
@@ -3327,7 +3341,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 873
+Line: 875
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3335,7 +3349,7 @@ Time: 0s">
 (** [case_path] is a HoTT replacement for [case_eq]; [case_path x] is like [destruct x], but it remembers the original value of [x] in an equation to be introduced. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 875
+Line: 877
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac case_path x :=
@@ -3346,7 +3360,7 @@ Time: 0s">
     destruct x'.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 880
+Line: 882
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3354,7 +3368,7 @@ Time: 0s">
 (** [revert_opaque x] is like [revert x], except that it fails if [x] is not an opaque variable (i.e. if it has a [:=] definition rather than just a type). *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 882
+Line: 884
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac revert_opaque x :=
@@ -3365,7 +3379,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 887
+Line: 889
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3374,7 +3388,7 @@ Time: 0s">
 (** Since binders don't respect [fresh], we use a name unlikely to be reused. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 890
+Line: 892
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "transparent" "assert" "(" ident(name) ":" constr(type) ")" :=
@@ -3385,7 +3399,7 @@ Time: 0s">
     rename H into name) ].</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 895
+Line: 897
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3393,27 +3407,27 @@ Time: 0s">
 (** [transparent eassert] is like [transparent assert], but allows holes in the type, which will be turned into evars. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 897
+Line: 899
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "transparent" "assert" "(" ident(name) ":" constr(type) ")" "by" tactic3(tac) := let name := fresh "H" in transparent assert (name : type); [ solve [ tac ] | ].</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 897
+Line: 899
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Tactic Notation "transparent" "eassert" "(" ident(name) ":" open_constr(type) ")" := transparent assert (name : type).</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 898
+Line: 900
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Tactic Notation "transparent" "eassert" "(" ident(name) ":" open_constr(type) ")" "by" tactic3(tac) := transparent assert (name : type) by tac.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 899
+Line: 901
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3421,7 +3435,7 @@ Time: 0s">
 (** A version of Coq's [remember] that uses our equality. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 901
+Line: 903
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac remember_as term name eqname :=
@@ -3430,7 +3444,7 @@ Time: 0s">
   clearbody eqname name.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 904
+Line: 906
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3439,7 +3453,7 @@ Tactic Notation "remember" constr(term) "as" ident(name) "eqn:" ident(eqname) :=
   remember_as term name eqname.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 907
+Line: 909
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3447,7 +3461,7 @@ Time: 0s">
 (** A variant that doesn't substitute in the goal and hypotheses. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 909
+Line: 911
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac recall_as term name eqname :=
@@ -3456,7 +3470,7 @@ Time: 0s">
   clearbody eqname name.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 912
+Line: 914
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3465,7 +3479,7 @@ Tactic Notation "recall" constr(term) "as" ident(name) "eqn:" ident(eqname) :=
   recall_as term name eqname.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 915
+Line: 917
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3473,7 +3487,7 @@ Time: 0s">
 (** [rel_hnf], when given a goal of the form [R x y] for any relation [R], puts [x] and [y] in head normal form. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 917
+Line: 919
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac rel_hnf :=
@@ -3485,7 +3499,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 923
+Line: 925
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3494,7 +3508,7 @@ Time: 0s">
 All three arguments are expected to be tactic thunks which will be passed a dummy unit argument.*)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 926
+Line: 928
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac tryif_cps require if_yes if_no :=
@@ -3505,7 +3519,7 @@ Time: 0s">
              end in res ().</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 931
+Line: 933
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3535,7 +3549,7 @@ In order to define this tactic we have many helper tactics.
 </pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 954
+Line: 956
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Ltac peel_evars term :=
@@ -3549,7 +3563,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 962
+Line: 964
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3565,7 +3579,7 @@ Local Ltac pi_to_sig ty :=
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 972
+Line: 974
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3576,7 +3590,7 @@ Local Ltac ctor_to_sig ctor :=
   pi_to_sig t.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 977
+Line: 979
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3590,7 +3604,7 @@ Local Ltac unify_first_evar_with term u :=
   end.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 985
+Line: 987
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3601,7 +3615,7 @@ Local Ltac unify_with_projections term u :=
    tryif has_evar term then fail 0 term "has evars remaining" else idtac).</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 990
+Line: 992
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3609,7 +3623,7 @@ Time: 0s">
 (* Completely destroys v into it's pieces and trys to put pieces in sigma. *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 992
+Line: 994
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Ltac refine_with_existT_as_much_as_needed_then_destruct v :=
@@ -3619,7 +3633,7 @@ Time: 0s">
     | refine_with_existT_as_much_as_needed_then_destruct v ])).</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 996
+Line: 998
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3628,7 +3642,7 @@ Time: 0s">
 (* Finally we can define our issig tactic: *)</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 999
+Line: 1001
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac issig :=
@@ -3661,7 +3675,7 @@ Time: 0s">
   | reflexivity ].</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1026
+Line: 1028
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3671,67 +3685,67 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1029
+Line: 1031
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition issig_contr (A : Type)
   : {x : A &amp; forall y, x = y} &lt;~&gt; Contr A.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1030
+Line: 1032
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1031
+Line: 1033
 Time: 0.009s">
-<div class="time" style="width: 16.981132075472%"></div>
+<div class="time" style="width: 16.363636363636%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1032
+Line: 1034
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1033
+Line: 1035
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 
 Definition issig_equiv (A B : Type)
   : {f : A -&gt; B &amp; IsEquiv f} &lt;~&gt; Equiv A B.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1036
+Line: 1038
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1037
-Time: 0.009s">
-<div class="time" style="width: 16.981132075472%"></div>
+Line: 1039
+Time: 0.01s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1038
+Line: 1040
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1039
+Line: 1041
 Time: 0.001s">
-<div class="time" style="width: 1.8867924528302%"></div>
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
 
 Definition issig_isequiv {A B : Type} (f : A -&gt; B)
@@ -3740,28 +3754,28 @@ Definition issig_isequiv {A B : Type} (f : A -&gt; B)
   &lt;~&gt; IsEquiv f.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1044
+Line: 1046
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1045
-Time: 0.053s">
+Line: 1047
+Time: 0.055s">
 <div class="time" style="width: 100%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1046
-Time: 0.009s">
-<div class="time" style="width: 16.981132075472%"></div>
+Line: 1048
+Time: 0.01s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Overture.v
-Line: 1048
+Line: 1050
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

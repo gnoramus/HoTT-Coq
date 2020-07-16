@@ -3843,12 +3843,12 @@
           
 
             i = 765;
-            data = "1 subgoal (ID 1131)	  	  H : Funext	  X : Type	  Y : Type	  H0 : Finite X	  H1 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (forall x : Fin n, (fun _ : Fin n => Y) x) = nat_exp (fcard Y) n	  ============================	  fcard (forall x : Fin n.+1, (fun _ : Fin n.+1 => Y) x) =	  nat_exp (fcard Y) n.+1	1 subgoal (ID 1549)	  	  H : Funext	  X : Type	  Y : Type	  H0 : Finite X	  H1 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (forall x : Fin n, (fun _ : Fin n => Y) x) = nat_exp (fcard Y) n	  ============================	  fcard	    (((fix Fin (n0 : nat) : Type :=	         match n0 with	         | 0 => Empty	         | n1.+1 => (Fin n1 + Unit)%type	         end) n -> Y) * (Unit -> Y)) = nat_exp (fcard Y) n.+1	";
+            data = "1 subgoal (ID 1131)	  	  H : Funext	  X : Type	  Y : Type	  H0 : Finite X	  H1 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (forall x : Fin n, (fun _ : Fin n => Y) x) = nat_exp (fcard Y) n	  ============================	  fcard (forall x : Fin n.+1, (fun _ : Fin n.+1 => Y) x) =	  nat_exp (fcard Y) n.+1	";
             responses[i]=data;
           
 
             i = 766;
-            data = "1 subgoal (ID 1563)	  	  H : Funext	  X : Type	  Y : Type	  H0 : Finite X	  H1 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (forall x : Fin n, (fun _ : Fin n => Y) x) = nat_exp (fcard Y) n	  ============================	  fcard	    (forall	     x : (fix Fin (n0 : nat) : Type :=	            match n0 with	            | 0 => Empty	            | n1.+1 => (Fin n1 + Unit)%type	            end) n,	     (fun	        _ : (fix Fin (n0 : nat) : Type :=	               match n0 with	               | 0 => Empty	               | n1.+1 => (Fin n1 + Unit)%type	               end) n => Y) x) * fcard (forall x : Unit, unit_name Y x) =	  nat_exp (fcard Y) n.+1	";
+            data = "1 subgoal (ID 1549)	  	  H : Funext	  X : Type	  Y : Type	  H0 : Finite X	  H1 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (forall x : Fin n, (fun _ : Fin n => Y) x) = nat_exp (fcard Y) n	  ============================	  fcard	    (((fix Fin (n0 : nat) : Type :=	         match n0 with	         | 0 => Empty	         | n1.+1 => (Fin n1 + Unit)%type	         end) n -> Y) * (Unit -> Y)) = nat_exp (fcard Y) n.+1	1 subgoal (ID 1563)	  	  H : Funext	  X : Type	  Y : Type	  H0 : Finite X	  H1 : Finite Y	  e : X <~> Fin (fcard X)	  n : nat	  IH : fcard (forall x : Fin n, (fun _ : Fin n => Y) x) = nat_exp (fcard Y) n	  ============================	  fcard	    (forall	     x : (fix Fin (n0 : nat) : Type :=	            match n0 with	            | 0 => Empty	            | n1.+1 => (Fin n1 + Unit)%type	            end) n,	     (fun	        _ : (fix Fin (n0 : nat) : Type :=	               match n0 with	               | 0 => Empty	               | n1.+1 => (Fin n1 + Unit)%type	               end) n => Y) x) * fcard (forall x : Unit, unit_name Y x) =	  nat_exp (fcard Y) n.+1	";
             responses[i]=data;
           
 
@@ -4873,12 +4873,12 @@
           
 
             i = 971;
-            data = "";
+            data = "1 subgoal (ID 2154)	  	  X : Type	  H : Finite X	  P : X -> Type	  H0 : forall x : X, IsHProp (P x)	  Pf : Finite {x : X & P x}	  x : X	  ============================	  Decidable (hfiber pr1 x)	1 subgoal (ID 2178)	  	  X : Type	  H : Finite X	  P : X -> Type	  H0 : forall x : X, IsHProp (P x)	  Pf : Finite {x : X & P x}	  x : X	  ============================	  IsEmbedding pr1	";
             responses[i]=data;
           
 
             i = 972;
-            data = "1 subgoal (ID 2154)	  	  X : Type	  H : Finite X	  P : X -> Type	  H0 : forall x : X, IsHProp (P x)	  Pf : Finite {x : X & P x}	  x : X	  ============================	  Decidable (hfiber pr1 x)	1 subgoal (ID 2178)	  	  X : Type	  H : Finite X	  P : X -> Type	  H0 : forall x : X, IsHProp (P x)	  Pf : Finite {x : X & P x}	  x : X	  ============================	  IsEmbedding pr1	1 subgoal (ID 2178)	  	  X : Type	  H : Finite X	  P : X -> Type	  H0 : forall x : X, IsHProp (P x)	  Pf : Finite {x : X & P x}	  x : X	  ============================	  IsEmbedding pr1	No more subgoals.	";
+            data = "1 subgoal (ID 2178)	  	  X : Type	  H : Finite X	  P : X -> Type	  H0 : forall x : X, IsHProp (P x)	  Pf : Finite {x : X & P x}	  x : X	  ============================	  IsEmbedding pr1	No more subgoals.	";
             responses[i]=data;
           
 
@@ -5473,12 +5473,12 @@
           
 
             i = 1091;
-            data = "";
+            data = "1 subgoal (ID 1773)	  	  H : Funext	  X : Type	  Y : Type	  n, m : nat	  f : X -> Y	  X0 : MapIn (Tr (-1)) f	  e' : Y <~> Fin m	  e : X <~> Fin n	  ============================	  n <= m	";
             responses[i]=data;
           
 
             i = 1092;
-            data = "1 subgoal (ID 1773)	  	  H : Funext	  X : Type	  Y : Type	  n, m : nat	  f : X -> Y	  X0 : MapIn (Tr (-1)) f	  e' : Y <~> Fin m	  e : X <~> Fin n	  ============================	  n <= m	1 subgoal (ID 1905)	  	  H : Funext	  X : Type	  Y : Type	  n, m : nat	  f : X -> Y	  X0 : MapIn (Tr (-1)) f	  e' : Y <~> Fin m	  e : X <~> Fin n	  g := e' o f o e^-1 : Fin n -> Fin m	  ============================	  n <= m	";
+            data = "1 subgoal (ID 1905)	  	  H : Funext	  X : Type	  Y : Type	  n, m : nat	  f : X -> Y	  X0 : MapIn (Tr (-1)) f	  e' : Y <~> Fin m	  e : X <~> Fin n	  g := e' o f o e^-1 : Fin n -> Fin m	  ============================	  n <= m	";
             responses[i]=data;
           
 

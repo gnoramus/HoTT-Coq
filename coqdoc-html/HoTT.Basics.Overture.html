@@ -1318,8 +1318,7 @@ We put <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html
 Likewise, we put <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a></span> here, instead of in <span class="inlinecode"><span class="id" title="var">Unit.v</span></span>, because <span class="inlinecode"><a class="idref" href="HoTT.Truncations.Core.html#Trunc.Trunc"><span class="id" title="inductive">Trunc</span></a></span> uses it. 
 </div>
 <div class="code">
-<span class="id" title="keyword">Inductive</span> <a id="Unit" class="idref" href="#Unit"><span class="id" title="inductive">Unit</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Type0"><span class="id" title="abbreviation">Type0</span></a> :=<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<a id="tt" class="idref" href="#tt"><span class="id" title="constructor">tt</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Unit:321"><span class="id" title="inductive">Unit</span></a>.<br/>
+<span class="id" title="keyword">Inductive</span> <a id="Unit" class="idref" href="#Unit"><span class="id" title="inductive">Unit</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Type0"><span class="id" title="abbreviation">Type0</span></a> := <a id="tt" class="idref" href="#tt"><span class="id" title="constructor">tt</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Unit:321"><span class="id" title="inductive">Unit</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Scheme</span> <a id="Unit_ind" class="idref" href="#Unit_ind"><span class="id" title="definition">Unit_ind</span></a> := <span class="id" title="keyword">Induction</span> <span class="id" title="keyword">for</span> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a> <span class="id" title="keyword">Sort</span> <span class="id" title="keyword">Type</span>.<br/>
@@ -1334,6 +1333,10 @@ A <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit
 </div>
 <div class="code">
 <span class="id" title="keyword">Hint Resolve</span> <span class="id" title="var">tt</span> : <span class="id" title="var">core</span>.<br/>
+
+<br/>
+<span class="id" title="var">Register</span> <span class="id" title="var">Unit</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.IDProp.type</span>.<br/>
+<span class="id" title="var">Register</span> <span class="id" title="var">tt</span> <span class="id" title="keyword">as</span> <span class="id" title="var">core.IDProp.idProp</span>.<br/>
 
 <br/>
 </div>
