@@ -3553,12 +3553,12 @@
           
 
             i = 707;
-            data = "1 subgoal (ID 867)	  	  n : nat	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  C : Coeq f' g' -> Type	  ek : ExtendableAlong n k (C o coeq)	  eh : forall u v : forall x : B', C (coeq (g' x)),	       ExtendableAlong n h (fun x : B' => u x = v x)	  ============================	  ExtendableAlong n (functor_coeq h k p q) C	";
+            data = "";
             responses[i]=data;
           
 
             i = 708;
-            data = "";
+            data = "1 subgoal (ID 867)	  	  n : nat	  B : Type	  A : Type	  f, g : B -> A	  B' : Type	  A' : Type	  f', g' : B' -> A'	  h : B -> B'	  k : A -> A'	  p : k o f == f' o h	  q : k o g == g' o h	  C : Coeq f' g' -> Type	  ek : ExtendableAlong n k (C o coeq)	  eh : forall u v : forall x : B', C (coeq (g' x)),	       ExtendableAlong n h (fun x : B' => u x = v x)	  ============================	  ExtendableAlong n (functor_coeq h k p q) C	";
             responses[i]=data;
           
 
@@ -3878,7 +3878,8 @@ This elimination rule (and others) can be seen as saying that, given a fibration
 <span class="inlinecode"><a class="idref" href="HoTT.Extensions.html#ExtensionAlong"><span class="id" title="definition">ExtensionAlong</span></a></span> takes 4 universe parameters:
 <ul class="doclist">
 <li> the size of A
-<ul class="doclist">
+
+</li>
 <li> the size of B
 
 </li>
@@ -3887,8 +3888,6 @@ This elimination rule (and others) can be seen as saying that, given a fibration
 </li>
 <li> &gt;= max(A,B,P)
 
-</li>
-</ul>
 </li>
 </ul>
 <div class="doc" scenenumber="5"> </div>
@@ -4117,7 +4116,8 @@ Here is the iterated version.
 <span class="inlinecode"><a class="idref" href="HoTT.Extensions.html#ExtendableAlong"><span class="id" title="definition">ExtendableAlong</span></a></span> takes 4 universe parameters:
 <ul class="doclist">
 <li> size of A
-<ul class="doclist">
+
+</li>
 <li> size of B
 
 </li>
@@ -4125,8 +4125,6 @@ Here is the iterated version.
 
 </li>
 <li> size of result (&gt;= A,B,C) 
-</li>
-</ul>
 </li>
 </ul>
 </div>
