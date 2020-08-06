@@ -1143,11 +1143,246 @@
           
 
             i = 225;
-            data = "";
+            data = "1 subgoal (ID 1578)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (y $-> z) <~> (x $-> z)	";
             responses[i]=data;
           
 
             i = 226;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 227;
+            data = "4 subgoals (ID 1602)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (y $-> z) -> x $-> z		subgoal 2 (ID 1604) is:	 (x $-> z) -> y $-> z	subgoal 3 (ID 1606) is:	 Sect ?g ?f	subgoal 4 (ID 1608) is:	 Sect ?f ?g	";
+            responses[i]=data;
+          
+
+            i = 228;
+            data = "3 subgoals (ID 1604)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (x $-> z) -> y $-> z		subgoal 2 (ID 1606) is:	 Sect ?g (fun g : y $-> z => g $o f)	subgoal 3 (ID 1608) is:	 Sect (fun g : y $-> z => g $o f) ?g	";
+            responses[i]=data;
+          
+
+            i = 229;
+            data = "2 subgoals (ID 1606)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  Sect (fun h : x $-> z => h $o f^-1$) (fun g : y $-> z => g $o f)		subgoal 2 (ID 1608) is:	 Sect (fun g : y $-> z => g $o f) (fun h : x $-> z => h $o f^-1$)	";
+            responses[i]=data;
+          
+
+            i = 230;
+            data = "1 subgoal (ID 1606)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  Sect (fun h : x $-> z => h $o f^-1$) (fun g : y $-> z => g $o f)	1 subgoal (ID 1631)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  (h $o f^-1$) $o f = h	";
+            responses[i]=data;
+          
+
+            i = 231;
+            data = "1 subgoal (ID 1641)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  (h $o f^-1$) $o f $== h	";
+            responses[i]=data;
+          
+
+            i = 232;
+            data = "1 subgoal (ID 1665)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  h $o (f^-1$ $o f) $== h	";
+            responses[i]=data;
+          
+
+            i = 233;
+            data = "2 focused subgoals	(shelved: 1) (ID 1678)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  h $o (f^-1$ $o f) $== ?Goal		subgoal 2 (ID 1680) is:	 ?Goal $== h	";
+            responses[i]=data;
+          
+
+            i = 234;
+            data = "1 focused subgoal	(shelved: 1) (ID 1678)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  h $o (f^-1$ $o f) $== ?Goal	1 focused subgoal	(shelved: 1) (ID 1717)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  f^-1$ $o f $== ?Goal0	";
+            responses[i]=data;
+          
+
+            i = 235;
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 1680)		subgoal 1 (ID 1680) is:	 h $o Id x $== h	subgoal 2 (ID 1608) is:	 Sect (fun g : y $-> z => g $o f) (fun h : x $-> z => h $o f^-1$)	1 subgoal (ID 1680)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  h $o Id x $== h	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1608)		subgoal 1 (ID 1608) is:	 Sect (fun g : y $-> z => g $o f) (fun h : x $-> z => h $o f^-1$)	1 subgoal (ID 1608)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  Sect (fun g : y $-> z => g $o f) (fun h : x $-> z => h $o f^-1$)	1 subgoal (ID 1732)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  g : y $-> z	  ============================	  (g $o f) $o f^-1$ = g	";
+            responses[i]=data;
+          
+
+            i = 236;
+            data = "1 subgoal (ID 1742)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  g : y $-> z	  ============================	  (g $o f) $o f^-1$ $== g	";
+            responses[i]=data;
+          
+
+            i = 237;
+            data = "1 subgoal (ID 1766)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  g : y $-> z	  ============================	  g $o (f $o f^-1$) $== g	";
+            responses[i]=data;
+          
+
+            i = 238;
+            data = "2 focused subgoals	(shelved: 1) (ID 1779)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  g : y $-> z	  ============================	  g $o (f $o f^-1$) $== ?Goal		subgoal 2 (ID 1781) is:	 ?Goal $== g	";
+            responses[i]=data;
+          
+
+            i = 239;
+            data = "1 focused subgoal	(shelved: 1) (ID 1779)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  g : y $-> z	  ============================	  g $o (f $o f^-1$) $== ?Goal	1 focused subgoal	(shelved: 1) (ID 1818)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  g : y $-> z	  ============================	  f $o f^-1$ $== ?Goal0	";
+            responses[i]=data;
+          
+
+            i = 240;
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1781)		subgoal 1 (ID 1781) is:	 g $o Id y $== g	1 subgoal (ID 1781)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  g : y $-> z	  ============================	  g $o Id y $== g	No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 241;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 242;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 243;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 244;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 245;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 246;
+            data = "1 subgoal (ID 1604)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (x $-> y) <~> (x $-> z)	";
+            responses[i]=data;
+          
+
+            i = 247;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 248;
+            data = "4 subgoals (ID 1628)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (x $-> y) -> x $-> z		subgoal 2 (ID 1630) is:	 (x $-> z) -> x $-> y	subgoal 3 (ID 1632) is:	 Sect ?g ?f	subgoal 4 (ID 1634) is:	 Sect ?f ?g	";
+            responses[i]=data;
+          
+
+            i = 249;
+            data = "3 subgoals (ID 1630)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (x $-> z) -> x $-> y		subgoal 2 (ID 1632) is:	 Sect ?g (fun g : x $-> y => f $o g)	subgoal 3 (ID 1634) is:	 Sect (fun g : x $-> y => f $o g) ?g	";
+            responses[i]=data;
+          
+
+            i = 250;
+            data = "2 subgoals (ID 1632)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  Sect (fun h : x $-> z => f^-1$ $o h) (fun g : x $-> y => f $o g)		subgoal 2 (ID 1634) is:	 Sect (fun g : x $-> y => f $o g) (fun h : x $-> z => f^-1$ $o h)	";
+            responses[i]=data;
+          
+
+            i = 251;
+            data = "1 subgoal (ID 1632)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  Sect (fun h : x $-> z => f^-1$ $o h) (fun g : x $-> y => f $o g)	1 subgoal (ID 1657)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  f $o (f^-1$ $o h) = h	";
+            responses[i]=data;
+          
+
+            i = 252;
+            data = "1 subgoal (ID 1667)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  f $o (f^-1$ $o h) $== h	";
+            responses[i]=data;
+          
+
+            i = 253;
+            data = "1 subgoal (ID 1697)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  (f $o f^-1$) $o h $== h	";
+            responses[i]=data;
+          
+
+            i = 254;
+            data = "2 focused subgoals	(shelved: 1) (ID 1710)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  (f $o f^-1$) $o h $== ?Goal		subgoal 2 (ID 1712) is:	 ?Goal $== h	";
+            responses[i]=data;
+          
+
+            i = 255;
+            data = "1 focused subgoal	(shelved: 1) (ID 1710)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  (f $o f^-1$) $o h $== ?Goal	1 focused subgoal	(shelved: 1) (ID 1749)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  f $o f^-1$ $== ?Goal0	";
+            responses[i]=data;
+          
+
+            i = 256;
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals (ID 1712)		subgoal 1 (ID 1712) is:	 Id z $o h $== h	subgoal 2 (ID 1634) is:	 Sect (fun g : x $-> y => f $o g) (fun h : x $-> z => f^-1$ $o h)	1 subgoal (ID 1712)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  Id z $o h $== h	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1634)		subgoal 1 (ID 1634) is:	 Sect (fun g : x $-> y => f $o g) (fun h : x $-> z => f^-1$ $o h)	1 subgoal (ID 1634)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  Sect (fun g : x $-> y => f $o g) (fun h : x $-> z => f^-1$ $o h)	1 subgoal (ID 1764)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  g : x $-> y	  ============================	  f^-1$ $o (f $o g) = g	";
+            responses[i]=data;
+          
+
+            i = 257;
+            data = "1 subgoal (ID 1774)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  g : x $-> y	  ============================	  f^-1$ $o (f $o g) $== g	";
+            responses[i]=data;
+          
+
+            i = 258;
+            data = "1 subgoal (ID 1804)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  g : x $-> y	  ============================	  (f^-1$ $o f) $o g $== g	";
+            responses[i]=data;
+          
+
+            i = 259;
+            data = "2 focused subgoals	(shelved: 1) (ID 1817)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  g : x $-> y	  ============================	  (f^-1$ $o f) $o g $== ?Goal		subgoal 2 (ID 1819) is:	 ?Goal $== g	";
+            responses[i]=data;
+          
+
+            i = 260;
+            data = "1 focused subgoal	(shelved: 1) (ID 1817)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  g : x $-> y	  ============================	  (f^-1$ $o f) $o g $== ?Goal	1 focused subgoal	(shelved: 1) (ID 1856)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  g : x $-> y	  ============================	  f^-1$ $o f $== ?Goal0	";
+            responses[i]=data;
+          
+
+            i = 261;
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1819)		subgoal 1 (ID 1819) is:	 Id y $o g $== g	1 subgoal (ID 1819)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  g : x $-> y	  ============================	  Id y $o g $== g	No more subgoals.	";
+            responses[i]=data;
+          
+
+            i = 262;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 263;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 264;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 265;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 266;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 267;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 268;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 269;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 270;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 271;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 272;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 273;
             data = "";
             responses[i]=data;
           
@@ -2249,9 +2484,219 @@ When we have equivalences, we can define what it means for a category to be univ
       " onmouseover="
       mouseover(216, '0_3_39');
       "><br>
+<br>
 </span>
 </div>
 <div class="goal" id="goal0_3_39"><pre><span></span></pre></div>
+<div class="doc" scenenumber="41">
+<a id="lab75"></a><h2 class="section">Pre/post-composition with equivalences</h2>
+<div class="doc" scenenumber="4"> </div>
+
+ Precompositon with a cat_equiv is an equivalence between the homs 
+</div>
+<div scenenumber="43" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(225, '0_3_43');
+      ">
+<span class="id" title="keyword">Definition</span> <a id="equiv_precompose_cat_equiv" class="idref" href="#equiv_precompose_cat_equiv"><span class="id" title="definition">equiv_precompose_cat_equiv</span></a> {<a id="A:404" class="idref" href="#A:404"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>} `{<a id="H0:408" class="idref" href="#H0:408"><span class="id" title="binder">HasEquivs</span></a> <a id="H0:408" class="idref" href="#H0:408"><span class="id" title="binder">A</span></a>} `{<a id="HasMorExt0:409" class="idref" href="#HasMorExt0:409"><span class="id" title="binder">!</span></a><a id="HasMorExt0:409" class="idref" href="#HasMorExt0:409"><span class="id" title="binder">HasMorExt</span></a> <a id="HasMorExt0:409" class="idref" href="#HasMorExt0:409"><span class="id" title="binder">A</span></a>}<br>
+  {<a id="x:410" class="idref" href="#x:410"><span class="id" title="binder">x</span></a> <a id="y:411" class="idref" href="#y:411"><span class="id" title="binder">y</span></a> <a id="z:412" class="idref" href="#z:412"><span class="id" title="binder">z</span></a> : <a class="idref" href="HoTT.WildCat.Equiv.html#A:404"><span class="id" title="variable">A</span></a>} (<a id="f:413" class="idref" href="#f:413"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.WildCat.Equiv.html#x:410"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#53abe9e5a667eb1e98048ced5c0b4484"><span class="id" title="notation">$&lt;~&gt;</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#y:411"><span class="id" title="variable">y</span></a>)<br>
+  : <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.WildCat.Equiv.html#y:411"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#z:412"><span class="id" title="variable">z</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.WildCat.Equiv.html#x:410"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#z:412"><span class="id" title="variable">z</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(226, '0_3_43');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(227, '0_3_43');
+      "><br>
+  <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_adjointify"><span class="id" title="definition">equiv_adjointify</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(228, '0_3_43');
+      "><br>
+  1: <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="g:415" class="idref" href="#g:415"><span class="id" title="binder">g</span></a> ⇒ <a class="idref" href="HoTT.WildCat.Equiv.html#g:414"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <span class="id" title="var">f</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(229, '0_3_43');
+      "><br>
+  1: <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="h:417" class="idref" href="#h:417"><span class="id" title="binder">h</span></a> ⇒ <a class="idref" href="HoTT.WildCat.Equiv.html#h:416"><span class="id" title="variable">h</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <span class="id" title="var">f</span><a class="idref" href="HoTT.WildCat.Equiv.html#7d05958368842391a80db4d665c8f1e0"><span class="id" title="notation">^-1$</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(230, '0_3_43');
+      "><br>
+  { <span class="id" title="tactic">intros</span> <span class="id" title="var">h</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(231, '0_3_43');
+      "><br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#path_hom"><span class="id" title="definition">path_hom</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(232, '0_3_43');
+      "><br>
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.WildCat.Core.html#cat_assoc"><span class="id" title="method">cat_assoc</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="HoTT.WildCat.Core.html#f5c149dc2f355016086a7de7ef6fc992"><span class="id" title="notation">$@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(233, '0_3_43');
+      "><br>
+    <span class="id" title="tactic">refine</span> (<span class="id" title="var">_</span> <a class="idref" href="HoTT.WildCat.Core.html#f5c149dc2f355016086a7de7ef6fc992"><span class="id" title="notation">$@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(234, '0_3_43');
+      "><br>
+    { <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_postwhisker"><span class="id" title="definition">cat_postwhisker</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(235, '0_3_43');
+      "><br>
+      <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Equiv.html#cate_issect"><span class="id" title="definition">cate_issect</span></a>. }<br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_idr"><span class="id" title="method">cat_idr</span></a>. }<br>
+  <span class="id" title="tactic">intros</span> <span class="id" title="var">g</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(236, '0_3_43');
+      "><br>
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#path_hom"><span class="id" title="definition">path_hom</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(237, '0_3_43');
+      "><br>
+  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.WildCat.Core.html#cat_assoc"><span class="id" title="method">cat_assoc</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="HoTT.WildCat.Core.html#f5c149dc2f355016086a7de7ef6fc992"><span class="id" title="notation">$@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(238, '0_3_43');
+      "><br>
+  <span class="id" title="tactic">refine</span> (<span class="id" title="var">_</span> <a class="idref" href="HoTT.WildCat.Core.html#f5c149dc2f355016086a7de7ef6fc992"><span class="id" title="notation">$@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(239, '0_3_43');
+      "><br>
+  { <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_postwhisker"><span class="id" title="definition">cat_postwhisker</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(240, '0_3_43');
+      "><br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Equiv.html#cate_isretr"><span class="id" title="definition">cate_isretr</span></a>. }<br>
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_idr"><span class="id" title="method">cat_idr</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(241, '0_3_43');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_43');
+      " onmouseover="
+      mouseover(242, '0_3_43');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_43"><pre><span></span></pre></div>
+<div class="doc" scenenumber="45">
+Postcompositon with a cat_equiv is an equivalence between the homs 
+</div>
+<div scenenumber="47" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(246, '0_3_47');
+      ">
+<span class="id" title="keyword">Definition</span> <a id="equiv_postcompose_cat_equiv" class="idref" href="#equiv_postcompose_cat_equiv"><span class="id" title="definition">equiv_postcompose_cat_equiv</span></a> {<a id="A:418" class="idref" href="#A:418"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>} `{<a id="H0:422" class="idref" href="#H0:422"><span class="id" title="binder">HasEquivs</span></a> <a id="H0:422" class="idref" href="#H0:422"><span class="id" title="binder">A</span></a>} `{<a id="HasMorExt0:423" class="idref" href="#HasMorExt0:423"><span class="id" title="binder">!</span></a><a id="HasMorExt0:423" class="idref" href="#HasMorExt0:423"><span class="id" title="binder">HasMorExt</span></a> <a id="HasMorExt0:423" class="idref" href="#HasMorExt0:423"><span class="id" title="binder">A</span></a>}<br>
+  {<a id="x:424" class="idref" href="#x:424"><span class="id" title="binder">x</span></a> <a id="y:425" class="idref" href="#y:425"><span class="id" title="binder">y</span></a> <a id="z:426" class="idref" href="#z:426"><span class="id" title="binder">z</span></a> : <a class="idref" href="HoTT.WildCat.Equiv.html#A:418"><span class="id" title="variable">A</span></a>} (<a id="f:427" class="idref" href="#f:427"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.WildCat.Equiv.html#y:425"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#53abe9e5a667eb1e98048ced5c0b4484"><span class="id" title="notation">$&lt;~&gt;</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#z:426"><span class="id" title="variable">z</span></a>)<br>
+  : <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.WildCat.Equiv.html#x:424"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#y:425"><span class="id" title="variable">y</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.WildCat.Equiv.html#x:424"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.WildCat.Core.html#c02781df22df625c7b63399d41d90de5"><span class="id" title="notation">$-&gt;</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#z:426"><span class="id" title="variable">z</span></a><a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(247, '0_3_47');
+      "><br>
+<span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(248, '0_3_47');
+      "><br>
+  <span class="id" title="var">snrapply</span> <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_adjointify"><span class="id" title="definition">equiv_adjointify</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(249, '0_3_47');
+      "><br>
+  1: <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="g:429" class="idref" href="#g:429"><span class="id" title="binder">g</span></a> ⇒ <span class="id" title="var">f</span> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#g:428"><span class="id" title="variable">g</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(250, '0_3_47');
+      "><br>
+  1: <span class="id" title="tactic">exact</span> (<span class="id" title="keyword">fun</span> <a id="h:431" class="idref" href="#h:431"><span class="id" title="binder">h</span></a> ⇒ <span class="id" title="var">f</span><a class="idref" href="HoTT.WildCat.Equiv.html#7d05958368842391a80db4d665c8f1e0"><span class="id" title="notation">^-1$</span></a> <a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">$</span></a><a class="idref" href="HoTT.WildCat.Core.html#dccd97e5e8654d6017c4fbeb4597fdb1"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.WildCat.Equiv.html#h:430"><span class="id" title="variable">h</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(251, '0_3_47');
+      "><br>
+  { <span class="id" title="tactic">intros</span> <span class="id" title="var">h</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(252, '0_3_47');
+      "><br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#path_hom"><span class="id" title="definition">path_hom</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(253, '0_3_47');
+      "><br>
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.WildCat.Core.html#8ee154f795cff7ee80397472b84ea7a8"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.WildCat.Core.html#cat_assoc"><span class="id" title="method">cat_assoc</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.WildCat.Core.html#8ee154f795cff7ee80397472b84ea7a8"><span class="id" title="notation">)^$</span></a> <a class="idref" href="HoTT.WildCat.Core.html#f5c149dc2f355016086a7de7ef6fc992"><span class="id" title="notation">$@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(254, '0_3_47');
+      "><br>
+    <span class="id" title="tactic">refine</span> (<span class="id" title="var">_</span> <a class="idref" href="HoTT.WildCat.Core.html#f5c149dc2f355016086a7de7ef6fc992"><span class="id" title="notation">$@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(255, '0_3_47');
+      "><br>
+    { <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_prewhisker"><span class="id" title="definition">cat_prewhisker</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(256, '0_3_47');
+      "><br>
+      <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Equiv.html#cate_isretr"><span class="id" title="definition">cate_isretr</span></a>. }<br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_idl"><span class="id" title="method">cat_idl</span></a>. }<br>
+  <span class="id" title="tactic">intros</span> <span class="id" title="var">g</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(257, '0_3_47');
+      "><br>
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#path_hom"><span class="id" title="definition">path_hom</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(258, '0_3_47');
+      "><br>
+  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.WildCat.Core.html#8ee154f795cff7ee80397472b84ea7a8"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.WildCat.Core.html#cat_assoc"><span class="id" title="method">cat_assoc</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.WildCat.Core.html#8ee154f795cff7ee80397472b84ea7a8"><span class="id" title="notation">)^$</span></a> <a class="idref" href="HoTT.WildCat.Core.html#f5c149dc2f355016086a7de7ef6fc992"><span class="id" title="notation">$@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(259, '0_3_47');
+      "><br>
+  <span class="id" title="tactic">refine</span> (<span class="id" title="var">_</span> <a class="idref" href="HoTT.WildCat.Core.html#f5c149dc2f355016086a7de7ef6fc992"><span class="id" title="notation">$@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(260, '0_3_47');
+      "><br>
+  { <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_prewhisker"><span class="id" title="definition">cat_prewhisker</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(261, '0_3_47');
+      "><br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Equiv.html#cate_issect"><span class="id" title="definition">cate_issect</span></a>. }<br>
+  <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.WildCat.Core.html#cat_idl"><span class="id" title="method">cat_idl</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(262, '0_3_47');
+      "><br>
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_47');
+      " onmouseover="
+      mouseover(263, '0_3_47');
+      "><br>
+<br>
+</span>
+</div>
+<div class="goal" id="goal0_3_47"><pre><span></span></pre></div>
 </div>
 <div id="footer" scenenumber="5" class="doc">
 <hr>
