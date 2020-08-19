@@ -898,12 +898,12 @@
           
 
             i = 176;
-            data = "1 subgoal (ID 354)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  H0 : IsConnMap (Tr n.+1) f	  p : loops B	  ============================	  IsConnected (Tr n)	    ((point A; (point_eq f @ p) @ (point_eq f)^) = (point A; 1))	No more subgoals.	";
+            data = "1 subgoal (ID 354)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  H0 : IsConnMap (Tr n.+1) f	  p : loops B	  ============================	  IsConnected (Tr n)	    ((point A; (point_eq f @ p) @ (point_eq f)^) = (point A; 1))	";
             responses[i]=data;
           
 
             i = 177;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
@@ -998,12 +998,12 @@
           
 
             i = 196;
-            data = "1 subgoal (ID 421)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	       pointed_type := image (Tr n.+1) f;	       ispointed_type := factor1 (image (Tr n.+1) f) (point A) |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  ============================	  Factorization (@IsConnMap (Tr n)) (@MapIn (Tr n)) (loops_functor f)	1 subgoal (ID 605)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	       pointed_type := image (Tr n.+1) f;	       ispointed_type := factor1 (image (Tr n.+1) f) (point A) |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  ============================	  (fun x : loops A => loops_functor h (loops_functor g x)) == loops_functor f	";
+            data = "1 subgoal (ID 421)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	       pointed_type := image (Tr n.+1) f;	       ispointed_type := factor1 (image (Tr n.+1) f) (point A) |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  ============================	  Factorization (@IsConnMap (Tr n)) (@MapIn (Tr n)) (loops_functor f)	";
             responses[i]=data;
           
 
             i = 197;
-            data = "1 subgoal (ID 619)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	       pointed_type := image (Tr n.+1) f;	       ispointed_type := factor1 (image (Tr n.+1) f) (point A) |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  x : loops A	  ============================	  loops_functor f x = loops_functor h (loops_functor g x)	";
+            data = "1 subgoal (ID 605)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	       pointed_type := image (Tr n.+1) f;	       ispointed_type := factor1 (image (Tr n.+1) f) (point A) |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  ============================	  (fun x : loops A => loops_functor h (loops_functor g x)) == loops_functor f	1 subgoal (ID 619)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	       pointed_type := image (Tr n.+1) f;	       ispointed_type := factor1 (image (Tr n.+1) f) (point A) |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  x : loops A	  ============================	  loops_functor f x = loops_functor h (loops_functor g x)	";
             responses[i]=data;
           
 
@@ -2258,12 +2258,12 @@
           
 
             i = 448;
-            data = "1 subgoal (ID 615)	  	  A, B : pType	  f : A $-> B	  ============================	  (fun p : loops A =>	   (inv_Vp (point_eq f) (ap f p @ point_eq f) @	    whiskerR	      (inv_pp (ap f p) (point_eq f) @ whiskerL (point_eq f)^ (ap_V f p)^)	      (point_eq f)) @	   concat_pp_p (point_eq f)^ (ap f (loops_inv A p)) (point_eq f))	    (point (loops A)) =	  dpoint_eq (loops_inv B $o fmap loops f) @	  (dpoint_eq (fmap loops f $o loops_inv A))^	1 subgoal (ID 723)	  	  A : Type	  point0 : IsPointed A	  B : Type	  f : A -> B	  ============================	  1 = 1	";
+            data = "1 subgoal (ID 615)	  	  A, B : pType	  f : A $-> B	  ============================	  (fun p : loops A =>	   (inv_Vp (point_eq f) (ap f p @ point_eq f) @	    whiskerR	      (inv_pp (ap f p) (point_eq f) @ whiskerL (point_eq f)^ (ap_V f p)^)	      (point_eq f)) @	   concat_pp_p (point_eq f)^ (ap f (loops_inv A p)) (point_eq f))	    (point (loops A)) =	  dpoint_eq (loops_inv B $o fmap loops f) @	  (dpoint_eq (fmap loops f $o loops_inv A))^	";
             responses[i]=data;
           
 
             i = 449;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 723)	  	  A : Type	  point0 : IsPointed A	  B : Type	  f : A -> B	  ============================	  1 = 1	No more subgoals.	";
             responses[i]=data;
           
 

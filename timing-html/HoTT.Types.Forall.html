@@ -100,8 +100,8 @@ This equivalence, however, is just the combination of [apD10] and function exten
 </div>
 <div class="code" title="File: Forall.v
 Line: 21
-Time: 0.002s">
-<div class="time" style="width: 12.5%"></div>
+Time: 0.003s">
+<div class="time" style="width: 18.75%"></div>
 <pre>Definition apD10_path_forall `{P : A -&gt; Type}
   (f g : forall x, P x) (h : f == g)
   : apD10 (path_forall _ _ h) == h
@@ -140,8 +140,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 36
-Time: 0.003s">
-<div class="time" style="width: 18.75%"></div>
+Time: 0.004s">
+<div class="time" style="width: 25%"></div>
 <pre>Definition equiv_apD10 `{Funext} {A : Type} (P : A -&gt; Type) f g
 : (f = g) &lt;~&gt; (f == g)
   := Build_Equiv _ _ (@apD10 A P f g) _.</pre>
@@ -186,8 +186,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 51
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>Definition path_forall_pp `{P : A -&gt; Type} (f g h : forall x, P x)
            (p : f == g) (q : g == h)
 : path_forall f h (fun x =&gt; p x @ q x) = path_forall f g p @ path_forall g h q.</pre>
@@ -236,8 +236,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 59
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply ap, path_forall; intros x.</pre>
 </div>
 <div class="code" title="File: Forall.v
@@ -256,8 +256,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 61
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre> refine (eta_path_forall _ _ _ @ _).</pre>
 </div>
 <div class="code" title="File: Forall.v
@@ -269,15 +269,15 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 62
-Time: 0.002s">
-<div class="time" style="width: 12.5%"></div>
+Time: 0.003s">
+<div class="time" style="width: 18.75%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 
 
@@ -308,14 +308,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 71
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 71
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Forall.v
@@ -383,8 +383,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 74
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -402,8 +402,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 81
-Time: 0.006s">
-<div class="time" style="width: 37.5%"></div>
+Time: 0.007s">
+<div class="time" style="width: 43.75%"></div>
 <pre>Definition transport_forall
   {A : Type} {P : A -&gt; Type} {C : forall x, P x -&gt; Type}
   {x1 x2 : A} (p : x1 = x2) (f : forall y : P x1, C x1 y)
@@ -434,8 +434,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 95
-Time: 0.005s">
-<div class="time" style="width: 31.25%"></div>
+Time: 0.006s">
+<div class="time" style="width: 37.5%"></div>
 <pre>
 
 Definition apD_transport_forall_constant
@@ -457,8 +457,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 106
-Time: 0.005s">
-<div class="time" style="width: 31.25%"></div>
+Time: 0.006s">
+<div class="time" style="width: 37.5%"></div>
 <pre>
   destruct p, q; reflexivity.</pre>
 </div>
@@ -481,16 +481,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 112
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>Definition ap_apply_lD {A} {B : A -&gt; Type} {f g : forall x, B x} (p : f = g) (z : A)
   : ap (fun f =&gt; f z) p = apD10 p z
 := 1.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 114
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
 
 Definition ap_apply_lD2 {A} {B : A -&gt; Type} { C : forall x, B x -&gt; Type}
@@ -544,8 +544,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 127
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
   destruct p;
   symmetry;
@@ -553,8 +553,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 130
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -590,8 +590,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   destruct p.</pre>
 </div>
@@ -604,15 +604,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 144
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 145
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 
 Definition dpath_forall_constant
@@ -631,8 +631,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 153
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct p.</pre>
 </div>
@@ -705,8 +705,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 172
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   destruct h.</pre>
 </div>
@@ -718,8 +718,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 173
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   transitivity (idpath (functor_forall f0 f1 g)).</pre>
 </div>
@@ -732,8 +732,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 175
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre> exact (ap (ap (functor_forall f0 f1)) (path_forall_1 g)).</pre>
 </div>
 <div class="code" title="File: Forall.v
@@ -745,8 +745,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 176
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> symmetry.</pre>
 </div>
 <div class="code" title="File: Forall.v
@@ -757,8 +757,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 176
-Time: 0.002s">
-<div class="time" style="width: 12.5%"></div>
+Time: 0.003s">
+<div class="time" style="width: 18.75%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -788,8 +788,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 188
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition functor_forall_id `{P : A -&gt; Type} `{Q : A -&gt; Type}
     (f1 : forall a:A, P a -&gt; Q a)
   : (forall a:A, P a) -&gt; (forall a:A, Q a)
@@ -797,8 +797,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 191
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 
 Definition functor_forall_pb {A B : Type} `{P : A -&gt; Type}
@@ -833,8 +833,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 202
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   nrapply (functor_forall f0^-1).</pre>
 </div>
@@ -868,8 +868,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 207
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition functor_forall_equiv_pb {A B : Type} `{Q : B -&gt; Type}
@@ -909,8 +909,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 218
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
   srapply ap10; apply ap; apply eisadj.</pre>
 </div>
@@ -933,8 +933,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 224
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>Global Instance isequiv_functor_forall `{P : A -&gt; Type} `{Q : B -&gt; Type}
   `{IsEquiv B A f} `{forall b, @IsEquiv (P (f b)) (Q b) (g b)}
   : IsEquiv (functor_forall f g) | 1000.</pre>
@@ -948,8 +948,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 227
-Time: 0.002s">
-<div class="time" style="width: 12.5%"></div>
+Time: 0.003s">
+<div class="time" style="width: 18.75%"></div>
 <pre>
   simple refine (isequiv_adjointify (functor_forall f g)
     (functor_forall (f^-1)
@@ -966,8 +966,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 233
-Time: 0.009s">
-<div class="time" style="width: 56.25%"></div>
+Time: 0.011s">
+<div class="time" style="width: 68.75%"></div>
 <pre> abstract (
         apply path_forall; intros b; unfold functor_forall;
         rewrite eisadj;
@@ -986,8 +986,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 241
-Time: 0.005s">
-<div class="time" style="width: 31.25%"></div>
+Time: 0.006s">
+<div class="time" style="width: 37.5%"></div>
 <pre> abstract (
         apply path_forall; intros a; unfold functor_forall;
         rewrite eissect;
@@ -1003,8 +1003,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 246
-Time: 0.004s">
-<div class="time" style="width: 25%"></div>
+Time: 0.006s">
+<div class="time" style="width: 37.5%"></div>
 <pre>
 
 Definition equiv_functor_forall `{P : A -&gt; Type} `{Q : B -&gt; Type}
@@ -1016,8 +1016,8 @@ Definition equiv_functor_forall `{P : A -&gt; Type} `{Q : B -&gt; Type}
 </div>
 <div class="code" title="File: Forall.v
 Line: 253
-Time: 0.011s">
-<div class="time" style="width: 68.75%"></div>
+Time: 0.016s">
+<div class="time" style="width: 100%"></div>
 <pre>
 
 Definition equiv_functor_forall' `{P : A -&gt; Type} `{Q : B -&gt; Type}
@@ -1027,8 +1027,8 @@ Definition equiv_functor_forall' `{P : A -&gt; Type} `{Q : B -&gt; Type}
 </div>
 <div class="code" title="File: Forall.v
 Line: 258
-Time: 0.01s">
-<div class="time" style="width: 62.5%"></div>
+Time: 0.012s">
+<div class="time" style="width: 75%"></div>
 <pre>
 
 Definition equiv_functor_forall_id `{P : A -&gt; Type} `{Q : A -&gt; Type}
@@ -1038,8 +1038,8 @@ Definition equiv_functor_forall_id `{P : A -&gt; Type} `{Q : A -&gt; Type}
 </div>
 <div class="code" title="File: Forall.v
 Line: 263
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
 
 Definition equiv_functor_forall_pb {A B : Type} {P : A -&gt; Type}
@@ -1114,8 +1114,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 290
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   apply path_forall; intros c.</pre>
 </div>
@@ -1128,8 +1128,8 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 292
-Time: 0.003s">
-<div class="time" style="width: 18.75%"></div>
+Time: 0.004s">
+<div class="time" style="width: 25%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1145,8 +1145,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 297
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition iff_functor_forall {A : Type} {P Q : A -&gt; Type}
            (f : forall a, P a &lt;-&gt; Q a)
   : (forall a, P a) &lt;-&gt; (forall a, Q a).</pre>
@@ -1193,8 +1193,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 303
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.015s">
+<div class="time" style="width: 93.75%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1210,16 +1210,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 307
-Time: 0.016s">
-<div class="time" style="width: 100%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>Definition equiv_path_forall11 {A : Type} {B : A -&gt; Type} {P : forall a : A, B a -&gt; Type} (f g : forall a b, P a b)
   : (forall (a : A) (b : B a), f a b = g a b) &lt;~&gt; f = g
   := (equiv_path_forall f g) oE (equiv_functor_forall_id (fun a =&gt; equiv_path_forall (f a) (g a))).</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 309
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 
 Definition path_forall11 {A : Type} {B : A -&gt; Type} {P : forall a : A, B a -&gt; Type} (f g : forall a b, P a b)
@@ -1228,8 +1228,8 @@ Definition path_forall11 {A : Type} {B : A -&gt; Type} {P : forall a : A, B a -&
 </div>
 <div class="code" title="File: Forall.v
 Line: 313
-Time: 0.001s">
-<div class="time" style="width: 6.25%"></div>
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
 
 Global Instance isequiv_path_forall11 {A : Type} {B : A -&gt; Type} `{P : forall a : A, B a -&gt; Type} (f g : forall a b, P a b)
@@ -1381,8 +1381,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Forall.v
 Line: 339
-Time: 0.003s">
-<div class="time" style="width: 18.75%"></div>
+Time: 0.005s">
+<div class="time" style="width: 31.25%"></div>
 <pre> intros f g; apply (trunc_equiv _ (apD10 ^-1)).</pre>
 </div>
 <div class="code" title="File: Forall.v
@@ -1583,8 +1583,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Forall.v
 Line: 372
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 
 Definition equiv_flip `(P : A -&gt; B -&gt; Type)
@@ -1593,8 +1593,8 @@ Definition equiv_flip `(P : A -&gt; B -&gt; Type)
 </div>
 <div class="code" title="File: Forall.v
 Line: 376
-Time: 0.008s">
-<div class="time" style="width: 50%"></div>
+Time: 0.014s">
+<div class="time" style="width: 87.5%"></div>
 <pre>
 
 End AssumeFunext.</pre>
