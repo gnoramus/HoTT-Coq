@@ -39,8 +39,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 3
-Time: 0.01s">
-<div class="time" style="width: 26.315789473684%"></div>
+Time: 0.009s">
+<div class="time" style="width: 23.684210526316%"></div>
 <pre>Require Import Basics.Overture Basics.PathGroupoids Basics.Notations Basics.Contractible.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
@@ -80,8 +80,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 13
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance isequiv_idmap (A : Type) : IsEquiv idmap | 0 :=
   Build_IsEquiv A A idmap idmap (fun _ =&gt; 1) (fun _ =&gt; 1) (fun _ =&gt; 1).</pre>
 </div>
@@ -111,8 +111,8 @@ Notation "1" := equiv_idmap : equiv_scope.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 20
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance reflexive_equiv : Reflexive Equiv | 0 := @equiv_idmap.</pre>
@@ -174,8 +174,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 47
-Time: 0.003s">
-<div class="time" style="width: 7.8947368421053%"></div>
+Time: 0.002s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
 
 Definition equiv_compose {A B C : Type} (g : B -&gt; C) (f : A -&gt; B)
@@ -280,8 +280,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 75
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Let retr := (fun a:A =&gt; (ap f^-1 (h a))^ @ eissect f a).</pre>
 </div>
@@ -316,8 +316,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 81
-Time: 0.002s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>
     rewrite ap_pp.</pre>
 </div>
@@ -336,8 +336,8 @@ Time: 0.008s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 83
-Time: 0.002s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>
     rewrite ap_V; apply moveL_Vp.</pre>
 </div>
@@ -373,8 +373,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 90
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition isequiv_homotopic : IsEquiv g
     := Build_IsEquiv _ _ g (f ^-1) sect retr adj.</pre>
 </div>
@@ -536,43 +536,43 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 132
-Time: 0.015s">
-<div class="time" style="width: 39.473684210526%"></div>
+Time: 0.017s">
+<div class="time" style="width: 44.736842105263%"></div>
 <pre>
     repeat rewrite ap_pp, concat_p_pp; rewrite &lt;- ap_compose.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 133
-Time: 0.002s">
-<div class="time" style="width: 5.2631578947368%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.8947368421053%"></div>
 <pre>
     rewrite (concat_pA1 (fun b =&gt; (isretr b)^) (ap f (issect a)^)).</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 134
-Time: 0.015s">
-<div class="time" style="width: 39.473684210526%"></div>
+Time: 0.012s">
+<div class="time" style="width: 31.578947368421%"></div>
 <pre>
     repeat rewrite concat_pp_p; rewrite ap_V; apply moveL_Vp; rewrite concat_p1.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 135
-Time: 0.005s">
-<div class="time" style="width: 13.157894736842%"></div>
+Time: 0.004s">
+<div class="time" style="width: 10.526315789474%"></div>
 <pre>
     rewrite concat_p_pp, &lt;- ap_compose.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 136
-Time: 0.003s">
-<div class="time" style="width: 7.8947368421053%"></div>
+Time: 0.002s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
     rewrite (concat_pA1 (fun b =&gt; (isretr b)^) (isretr (f a))).</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 137
-Time: 0.004s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.8947368421053%"></div>
 <pre>
     rewrite concat_pV, concat_1p; reflexivity.</pre>
 </div>
@@ -610,8 +610,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 146
-Time: 0.009s">
-<div class="time" style="width: 23.684210526316%"></div>
+Time: 0.007s">
+<div class="time" style="width: 18.421052631579%"></div>
 <pre>
 
 End Adjointify.</pre>
@@ -641,8 +641,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 153
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>Definition isequiv_involution {X : Type} (f : X -&gt; X) (isinvol : Sect f f)
 : IsEquiv f
   := isequiv_adjointify f f isinvol isinvol.</pre>
@@ -767,8 +767,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 195
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>
   exists (f (center A)).</pre>
 </div>
@@ -802,8 +802,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 200
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition contr_equiv' A {B} `(f : A &lt;~&gt; B) `{Contr A}
@@ -820,8 +820,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 206
-Time: 0.004s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.005s">
+<div class="time" style="width: 13.157894736842%"></div>
 <pre>Global Instance isequiv_contr_contr {A B : Type}
        `{Contr A} `{Contr B} (f : A -&gt; B)
   : IsEquiv f
@@ -912,8 +912,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 232
-Time: 0.004s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>
   symmetry; apply ap_const.</pre>
 </div>
@@ -980,8 +980,8 @@ Definition equiv_precompose' `{Funext} {A B C : Type} (f : A &lt;~&gt; B)
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 257
-Time: 0.005s">
-<div class="time" style="width: 13.157894736842%"></div>
+Time: 0.004s">
+<div class="time" style="width: 10.526315789474%"></div>
 <pre>
 
 Global Instance isequiv_postcompose `{Funext} {A B C : Type}
@@ -994,8 +994,8 @@ Global Instance isequiv_postcompose `{Funext} {A B C : Type}
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 265
-Time: 0.003s">
-<div class="time" style="width: 7.8947368421053%"></div>
+Time: 0.002s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>
 
 Definition equiv_postcompose `{Funext} {A B C : Type}
@@ -1005,8 +1005,8 @@ Definition equiv_postcompose `{Funext} {A B C : Type}
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 270
-Time: 0.016s">
-<div class="time" style="width: 42.105263157895%"></div>
+Time: 0.003s">
+<div class="time" style="width: 7.8947368421053%"></div>
 <pre>
 
 Definition equiv_postcompose' `{Funext} {A B C : Type} (f : B &lt;~&gt; C)
@@ -1025,8 +1025,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 277
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0.012s">
+<div class="time" style="width: 31.578947368421%"></div>
 <pre>Definition isequiv_isequiv_precompose {A B : Type} (f : A -&gt; B)
   (precomp := (fun (C : Type) (h : B -&gt; C) =&gt; h o f))
   (Aeq : IsEquiv (precomp A)) (Beq : IsEquiv (precomp B))
@@ -1091,8 +1091,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 289
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rewrite (eissect (precomp D) _); reflexivity.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
@@ -1295,8 +1295,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 343
-Time: 0.004s">
-<div class="time" style="width: 10.526315789474%"></div>
+Time: 0.002s">
+<div class="time" style="width: 5.2631578947368%"></div>
 <pre>Definition equiv_inj `(f : A -&gt; B) `{IsEquiv A B f} {x y : A}
   : (f x = f y) -&gt; (x = y)
   := (ap f)^-1.</pre>
@@ -1357,14 +1357,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 357
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>refine (_ @ _ @ _ @ _); revgoals.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 357
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>
     1: apply ap_compose.</pre>
 </div>
@@ -1384,8 +1384,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 360
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.6315789473684%"></div>
 <pre>
     1: symmetry; apply eisadj.</pre>
 </div>
@@ -1398,8 +1398,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 362
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Global Instance isequiv_inverse : IsEquiv f^-1 | 10000
@@ -1709,8 +1709,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 433
-Time: 0.007s">
-<div class="time" style="width: 18.421052631579%"></div>
+Time: 0.006s">
+<div class="time" style="width: 15.789473684211%"></div>
 <pre>
   refine (@cancelL_isequiv _ _ _ k f _ _).</pre>
 </div>
@@ -1802,8 +1802,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Equivalences.v
 Line: 447
-Time: 0.001s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply ap, eisretr.</pre>
 </div>
 <div class="code" title="File: Equivalences.v
