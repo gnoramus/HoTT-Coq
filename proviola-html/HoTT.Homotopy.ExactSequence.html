@@ -798,12 +798,12 @@
           
 
             i = 156;
-            data = "2 subgoals (ID 491)	  	  n : Modality	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f, f' : X ->* Y	  ff : f' ==* f	  H : IsExact n i f	  e := equiv_hfiber_homotopic f' f ff (point Y)	   : hfiber f' (point Y) <~> hfiber f (point Y)	  u : F	  ============================	  pr1 (i u; cx_isexact u) =	  pr1 (i u; (ff (i u))^ @ (ff (i u) @ cx_isexact u))		subgoal 2 (ID 493) is:	 pr2 (i u; cx_isexact u) =	 ap f ?q @ pr2 (i u; (ff (i u))^ @ (ff (i u) @ cx_isexact u))	";
+            data = "2 subgoals (ID 491)	  	  n : Modality	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f, f' : X ->* Y	  ff : f' ==* f	  H : IsExact n i f	  e := equiv_hfiber_homotopic f' f ff (point Y)	   : hfiber f' (point Y) <~> hfiber f (point Y)	  u : F	  ============================	  (i u; cx_isexact u).1 = (i u; (ff (i u))^ @ (ff (i u) @ cx_isexact u)).1		subgoal 2 (ID 493) is:	 (i u; cx_isexact u).2 =	 ap f ?q @ (i u; (ff (i u))^ @ (ff (i u) @ cx_isexact u)).2	";
             responses[i]=data;
           
 
             i = 157;
-            data = "1 subgoal (ID 493)	  	  n : Modality	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f, f' : X ->* Y	  ff : f' ==* f	  H : IsExact n i f	  e := equiv_hfiber_homotopic f' f ff (point Y)	   : hfiber f' (point Y) <~> hfiber f (point Y)	  u : F	  ============================	  pr2 (i u; cx_isexact u) =	  ap f 1 @ pr2 (i u; (ff (i u))^ @ (ff (i u) @ cx_isexact u))	";
+            data = "1 subgoal (ID 493)	  	  n : Modality	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f, f' : X ->* Y	  ff : f' ==* f	  H : IsExact n i f	  e := equiv_hfiber_homotopic f' f ff (point Y)	   : hfiber f' (point Y) <~> hfiber f (point Y)	  u : F	  ============================	  (i u; cx_isexact u).2 =	  ap f 1 @ (i u; (ff (i u))^ @ (ff (i u) @ cx_isexact u)).2	";
             responses[i]=data;
           
 
@@ -963,17 +963,17 @@
           
 
             i = 189;
-            data = "2 subgoals (ID 699)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  pr1 (cxfib cx_isexact u) =	  pr1 (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u))		subgoal 2 (ID 701) is:	 pr2 (cxfib cx_isexact u) =	 ap (k o* f') ?q @ pr2 (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u))	";
+            data = "2 subgoals (ID 699)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  (cxfib cx_isexact u).1 =	  (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).1		subgoal 2 (ID 701) is:	 (cxfib cx_isexact u).2 =	 ap (k o* f') ?q @ (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).2	";
             responses[i]=data;
           
 
             i = 190;
-            data = "1 subgoal (ID 699)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  pr1 (cxfib cx_isexact u) =	  pr1 (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 701)		subgoal 1 (ID 701) is:	 pr2 (cxfib cx_isexact u) =	 ap (k o* f') 1 @ pr2 (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u))	1 subgoal (ID 701)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  pr2 (cxfib cx_isexact u) =	  ap (k o* f') 1 @ pr2 (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u))	";
+            data = "1 subgoal (ID 699)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  (cxfib cx_isexact u).1 =	  (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 701)		subgoal 1 (ID 701) is:	 (cxfib cx_isexact u).2 =	 ap (k o* f') 1 @ (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).2	1 subgoal (ID 701)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  (cxfib cx_isexact u).2 =	  ap (k o* f') 1 @ (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).2	1 subgoal (ID 704)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1)))) =	  1 @	  ((1 @	    ap k	      ((((1 @ (1 @ eissect k (f' (i' u)))) @ 1)^ @	        ap k^-1	          (1 @ (q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1))))))) @	       moveR_equiv_V (point Y) (point Y') (point_eq k)^)) @ 	   point_eq k)	";
             responses[i]=data;
           
 
             i = 191;
-            data = "1 subgoal (ID 704)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1)))) =	  1 @	  ((1 @	    ap k	      ((((1 @ (1 @ eissect k (f' (i' u)))) @ 1)^ @	        ap k^-1	          (1 @ (q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1))))))) @	       moveR_equiv_V (point Y) (point Y') (point_eq k)^)) @ 	   point_eq k)	1 subgoal (ID 706)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1)))) =	  1 @	  ((1 @	    ap k	      ((((1 @ (1 @ eissect k (f' (i' u)))) @ 1)^ @	        ap k^-1	          (1 @ (q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1))))))) @	       (ap k^-1 (point_eq k)^ @ eissect k (point Y')))) @ 	   point_eq k)	";
+            data = "1 subgoal (ID 706)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1)))) =	  1 @	  ((1 @	    ap k	      ((((1 @ (1 @ eissect k (f' (i' u)))) @ 1)^ @	        ap k^-1	          (1 @ (q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1))))))) @	       (ap k^-1 (point_eq k)^ @ eissect k (point Y')))) @ 	   point_eq k)	";
             responses[i]=data;
           
 
@@ -1058,12 +1058,12 @@
           
 
             i = 208;
-            data = "";
+            data = "1 subgoal (ID 548)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  IsComplex (pfib f) f	";
             responses[i]=data;
           
 
             i = 209;
-            data = "1 subgoal (ID 548)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  IsComplex (pfib f) f	";
+            data = "";
             responses[i]=data;
           
 
@@ -1073,12 +1073,12 @@
           
 
             i = 211;
-            data = "1 subgoal (ID 564)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  f o* pfib f == pconst	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 566)		subgoal 1 (ID 566) is:	 (fun x0 : pfiber f => (fun x : X => idmap) (pr1 x0) (pr2 x0))	   (point (pfiber f)) = dpoint_eq (f o* pfib f) @ (dpoint_eq pconst)^	";
+            data = "1 subgoal (ID 564)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  f o* pfib f == pconst	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 566)		subgoal 1 (ID 566) is:	 (fun x0 : pfiber f => (fun x : X => idmap) x0.1 x0.2) (point (pfiber f)) =	 dpoint_eq (f o* pfib f) @ (dpoint_eq pconst)^	";
             responses[i]=data;
           
 
             i = 212;
-            data = "1 subgoal (ID 566)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  (fun x0 : pfiber f => (fun x : X => idmap) (pr1 x0) (pr2 x0))	    (point (pfiber f)) = dpoint_eq (f o* pfib f) @ (dpoint_eq pconst)^	1 subgoal (ID 574)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  point_eq f = (1 @ point_eq f) @ 1	";
+            data = "1 subgoal (ID 566)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  (fun x0 : pfiber f => (fun x : X => idmap) x0.1 x0.2) (point (pfiber f)) =	  dpoint_eq (f o* pfib f) @ (dpoint_eq pconst)^	1 subgoal (ID 574)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  point_eq f = (1 @ point_eq f) @ 1	";
             responses[i]=data;
           
 
@@ -1148,7 +1148,7 @@
           
 
             i = 226;
-            data = "1 subgoal (ID 590)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  IsExact oo (i_fiberseq fs) (pr1 fs)	";
+            data = "1 subgoal (ID 590)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  IsExact oo (i_fiberseq fs) fs.1	";
             responses[i]=data;
           
 
@@ -1158,62 +1158,62 @@
           
 
             i = 228;
-            data = "3 subgoals (ID 725)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  pr1 fs o* i_fiberseq fs == pconst		subgoal 2 (ID 727) is:	 ?p (point F) = dpoint_eq (pr1 fs o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 3 (ID 662) is:	 IsConnMap oo (cxfib (Build_pHomotopy ?p ?q))	";
+            data = "3 subgoals (ID 725)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  fs.1 o* i_fiberseq fs == pconst		subgoal 2 (ID 727) is:	 ?p (point F) = dpoint_eq (fs.1 o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 3 (ID 662) is:	 IsConnMap oo (cxfib (Build_pHomotopy ?p ?q))	";
             responses[i]=data;
           
 
             i = 229;
-            data = "1 subgoal (ID 725)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  pr1 fs o* i_fiberseq fs == pconst	1 subgoal (ID 731)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  u : F	  ============================	  pr1 fs (pr1 (pr2 fs u)) = point Y	";
+            data = "1 subgoal (ID 725)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  fs.1 o* i_fiberseq fs == pconst	1 subgoal (ID 731)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  u : F	  ============================	  fs.1 (fs.2 u).1 = point Y	";
             responses[i]=data;
           
 
             i = 230;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 727)		subgoal 1 (ID 727) is:	 (fun u : F => pr2 (pr2 fs u)) (point F) =	 dpoint_eq (pr1 fs o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 2 (ID 662) is:	 IsConnMap oo (cxfib (Build_pHomotopy (fun u : F => pr2 (pr2 fs u)) ?q))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 727)		subgoal 1 (ID 727) is:	 (fun u : F => (fs.2 u).2) (point F) =	 dpoint_eq (fs.1 o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 2 (ID 662) is:	 IsConnMap oo (cxfib (Build_pHomotopy (fun u : F => (fs.2 u).2) ?q))	";
             responses[i]=data;
           
 
             i = 231;
-            data = "1 subgoal (ID 727)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (fun u : F => pr2 (pr2 fs u)) (point F) =	  dpoint_eq (pr1 fs o* i_fiberseq fs) @ (dpoint_eq pconst)^	1 subgoal (ID 740)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  pr2 (pr2 fs (point F)) @ dpoint_eq pconst =	  dpoint_eq (pr1 fs o* i_fiberseq fs)	";
+            data = "1 subgoal (ID 727)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (fun u : F => (fs.2 u).2) (point F) =	  dpoint_eq (fs.1 o* i_fiberseq fs) @ (dpoint_eq pconst)^	1 subgoal (ID 740)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (fs.2 (point F)).2 @ dpoint_eq pconst = dpoint_eq (fs.1 o* i_fiberseq fs)	";
             responses[i]=data;
           
 
             i = 232;
-            data = "1 subgoal (ID 742)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  pr2 (pr2 fs (point F)) @ 1 =	  ap (pr1 fs) (ap pr1 (point_eq (pr2 fs)) @ 1) @ point_eq (pr1 fs)	";
+            data = "1 subgoal (ID 742)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (fs.2 (point F)).2 @ 1 =	  ap fs.1 (ap pr1 (point_eq fs.2) @ 1) @ point_eq fs.1	";
             responses[i]=data;
           
 
             i = 233;
-            data = "1 subgoal (ID 755)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  pr2 (pr2 fs (point F)) =	  ap (pr1 fs) (ap pr1 (point_eq (pr2 fs)) @ 1) @ point_eq (pr1 fs)	";
+            data = "1 subgoal (ID 755)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (fs.2 (point F)).2 = ap fs.1 (ap pr1 (point_eq fs.2) @ 1) @ point_eq fs.1	";
             responses[i]=data;
           
 
             i = 234;
-            data = "1 subgoal (ID 760)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (ap (pr1 fs) (ap pr1 (point_eq (pr2 fs)) @ 1))^ @ pr2 (pr2 fs (point F)) =	  point_eq (pr1 fs)	";
+            data = "1 subgoal (ID 760)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))^ @ (fs.2 (point F)).2 =	  point_eq fs.1	";
             responses[i]=data;
           
 
             i = 235;
-            data = "1 subgoal (ID 776)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (ap (pr1 fs) (ap pr1 (point_eq (pr2 fs)) @ 1))^ @ pr2 (pr2 fs (point F)) =	  transport (fun x : X => pr1 fs x = point Y) (point_eq (pr2 fs)) ..1	    (pr2 (pr2 fs (point F)))	";
+            data = "1 subgoal (ID 776)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))^ @ (fs.2 (point F)).2 =	  transport (fun x : X => fs.1 x = point Y) (point_eq fs.2) ..1	    (fs.2 (point F)).2	";
             responses[i]=data;
           
 
             i = 236;
-            data = "1 subgoal (ID 797)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (ap (pr1 fs) (ap pr1 (point_eq (pr2 fs)) @ 1))^ @ pr2 (pr2 fs (point F)) =	  (ap (pr1 fs) (point_eq (pr2 fs)) ..1)^ @ pr2 (pr2 fs (point F))	";
+            data = "1 subgoal (ID 797)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))^ @ (fs.2 (point F)).2 =	  (ap fs.1 (point_eq fs.2) ..1)^ @ (fs.2 (point F)).2	";
             responses[i]=data;
           
 
             i = 237;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 662)		subgoal 1 (ID 662) is:	 IsConnMap oo	   (cxfib	      (Build_pHomotopy (fun u : F => pr2 (pr2 fs u))	         (moveL_pV (dpoint_eq pconst) (pr2 (pr2 fs (point F)))	            (dpoint_eq (pr1 fs o* i_fiberseq fs))	            (concat_p1 (pr2 (pr2 fs (point F))) @	             moveL_Mp (point_eq (pr1 fs)) (pr2 (pr2 fs (point F)))	               (ap (pr1 fs) (ap pr1 (point_eq (pr2 fs)) @ 1))	               ((whiskerR	                   (inverse2	                      (ap (ap (pr1 fs)) (concat_p1 (point_eq (pr2 fs)) ..1)))	                   (pr2 (pr2 fs (point F))) @	                 (transport_paths_Fl (point_eq (pr2 fs)) ..1	                    (pr2 (pr2 fs (point F))))^) @ 	                (point_eq (pr2 fs)) ..2)))))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 662)		subgoal 1 (ID 662) is:	 IsConnMap oo	   (cxfib	      (Build_pHomotopy (fun u : F => (fs.2 u).2)	         (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	            (dpoint_eq (fs.1 o* i_fiberseq fs))	            (concat_p1 (fs.2 (point F)).2 @	             moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	               (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	               ((whiskerR	                   (inverse2 (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                   (fs.2 (point F)).2 @	                 (transport_paths_Fl (point_eq fs.2) ..1 (fs.2 (point F)).2)^) @	                (point_eq fs.2) ..2)))))	";
             responses[i]=data;
           
 
             i = 238;
-            data = "1 subgoal (ID 662)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  IsConnMap oo	    (cxfib	       (Build_pHomotopy (fun u : F => pr2 (pr2 fs u))	          (moveL_pV (dpoint_eq pconst) (pr2 (pr2 fs (point F)))	             (dpoint_eq (pr1 fs o* i_fiberseq fs))	             (concat_p1 (pr2 (pr2 fs (point F))) @	              moveL_Mp (point_eq (pr1 fs)) (pr2 (pr2 fs (point F)))	                (ap (pr1 fs) (ap pr1 (point_eq (pr2 fs)) @ 1))	                ((whiskerR	                    (inverse2	                       (ap (ap (pr1 fs)) (concat_p1 (point_eq (pr2 fs)) ..1)))	                    (pr2 (pr2 fs (point F))) @	                  (transport_paths_Fl (point_eq (pr2 fs)) ..1	                     (pr2 (pr2 fs (point F))))^) @ 	                 (point_eq (pr2 fs)) ..2)))))	1 subgoal (ID 822)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  x : X	  p : pr1 fs x = point Y	  ============================	  IsConnected oo	    (hfiber	       (cxfib	          (Build_pHomotopy (fun u : F => pr2 (pr2 fs u))	             (moveL_pV (dpoint_eq pconst) (pr2 (pr2 fs (point F)))	                (dpoint_eq (pr1 fs o* i_fiberseq fs))	                (concat_p1 (pr2 (pr2 fs (point F))) @	                 moveL_Mp (point_eq (pr1 fs)) (pr2 (pr2 fs (point F)))	                   (ap (pr1 fs) (ap pr1 (point_eq (pr2 fs)) @ 1))	                   ((whiskerR	                       (inverse2	                          (ap (ap (pr1 fs))	                             (concat_p1 (point_eq (pr2 fs)) ..1)))	                       (pr2 (pr2 fs (point F))) @	                     (transport_paths_Fl (point_eq (pr2 fs)) ..1	                        (pr2 (pr2 fs (point F))))^) @ 	                    (point_eq (pr2 fs)) ..2))))) (x; p))	";
+            data = "1 subgoal (ID 662)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  IsConnMap oo	    (cxfib	       (Build_pHomotopy (fun u : F => (fs.2 u).2)	          (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	             (dpoint_eq (fs.1 o* i_fiberseq fs))	             (concat_p1 (fs.2 (point F)).2 @	              moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	                (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	                ((whiskerR	                    (inverse2 (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                    (fs.2 (point F)).2 @	                  (transport_paths_Fl (point_eq fs.2) ..1 (fs.2 (point F)).2)^) @	                 (point_eq fs.2) ..2)))))	1 subgoal (ID 822)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  x : X	  p : fs.1 x = point Y	  ============================	  IsConnected oo	    (hfiber	       (cxfib	          (Build_pHomotopy (fun u : F => (fs.2 u).2)	             (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	                (dpoint_eq (fs.1 o* i_fiberseq fs))	                (concat_p1 (fs.2 (point F)).2 @	                 moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	                   (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	                   ((whiskerR	                       (inverse2	                          (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                       (fs.2 (point F)).2 @	                     (transport_paths_Fl (point_eq fs.2) ..1	                        (fs.2 (point F)).2)^) @ (point_eq fs.2) ..2)))))	       (x; p))	";
             responses[i]=data;
           
 
             i = 239;
-            data = "1 subgoal (ID 825)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  x : X	  p : pr1 fs x = point Y	  ============================	  IsEquiv	    (cxfib	       (Build_pHomotopy (fun u : F => pr2 (pr2 fs u))	          (moveL_pV (dpoint_eq pconst) (pr2 (pr2 fs (point F)))	             (dpoint_eq (pr1 fs o* i_fiberseq fs))	             (concat_p1 (pr2 (pr2 fs (point F))) @	              moveL_Mp (point_eq (pr1 fs)) (pr2 (pr2 fs (point F)))	                (ap (pr1 fs) (ap pr1 (point_eq (pr2 fs)) @ 1))	                ((whiskerR	                    (inverse2	                       (ap (ap (pr1 fs)) (concat_p1 (point_eq (pr2 fs)) ..1)))	                    (pr2 (pr2 fs (point F))) @	                  (transport_paths_Fl (point_eq (pr2 fs)) ..1	                     (pr2 (pr2 fs (point F))))^) @ 	                 (point_eq (pr2 fs)) ..2)))))	";
+            data = "1 subgoal (ID 825)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  x : X	  p : fs.1 x = point Y	  ============================	  IsEquiv	    (cxfib	       (Build_pHomotopy (fun u : F => (fs.2 u).2)	          (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	             (dpoint_eq (fs.1 o* i_fiberseq fs))	             (concat_p1 (fs.2 (point F)).2 @	              moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	                (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	                ((whiskerR	                    (inverse2 (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                    (fs.2 (point F)).2 @	                  (transport_paths_Fl (point_eq fs.2) ..1 (fs.2 (point F)).2)^) @	                 (point_eq fs.2) ..2)))))	";
             responses[i]=data;
           
 
@@ -1293,12 +1293,12 @@
           
 
             i = 255;
-            data = "1 subgoal (ID 626)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  loops F <~>* pfiber (loops_functor (pr1 fs))	";
+            data = "1 subgoal (ID 626)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  loops F <~>* pfiber (loops_functor fs.1)	";
             responses[i]=data;
           
 
             i = 256;
-            data = "1 subgoal (ID 637)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  loops (pfiber (pr1 fs)) <~>* pfiber (loops_functor (pr1 fs))	";
+            data = "1 subgoal (ID 637)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  loops (pfiber fs.1) <~>* pfiber (loops_functor fs.1)	";
             responses[i]=data;
           
 
@@ -1388,17 +1388,17 @@
           
 
             i = 274;
-            data = "1 subgoal (ID 700)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	  i_fiberseq (fiberseq_loops (fiberseq_isexact_oo i f))	1 subgoal (ID 758)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	  (pfib (pr1 (fiberseq_loops (fiberseq_isexact_oo i f)))	   o* (pfiber_loops_functor (pr1 (fiberseq_isexact_oo i f)))^-1*)	  o* pequiv_loops_functor (pr2 (fiberseq_isexact_oo i f))	";
+            data = "1 subgoal (ID 700)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	  i_fiberseq (fiberseq_loops (fiberseq_isexact_oo i f))	1 subgoal (ID 758)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	  (pfib (fiberseq_loops (fiberseq_isexact_oo i f)).1	   o* (pfiber_loops_functor (fiberseq_isexact_oo i f).1)^-1*)	  o* pequiv_loops_functor (fiberseq_isexact_oo i f).2	";
             responses[i]=data;
           
 
             i = 275;
-            data = "1 subgoal (ID 781)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) ==*	  pfib (pr1 (fiberseq_loops (fiberseq_isexact_oo i f)))	  o* (pfiber_loops_functor (pr1 (fiberseq_isexact_oo i f)))^-1*	";
+            data = "1 subgoal (ID 781)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) ==*	  pfib (fiberseq_loops (fiberseq_isexact_oo i f)).1	  o* (pfiber_loops_functor (fiberseq_isexact_oo i f).1)^-1*	";
             responses[i]=data;
           
 
             i = 276;
-            data = "1 subgoal (ID 785)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f)	  o* pfiber_loops_functor (pr1 (fiberseq_isexact_oo i f)) ==*	  pfib (pr1 (fiberseq_loops (fiberseq_isexact_oo i f)))	";
+            data = "1 subgoal (ID 785)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) o* pfiber_loops_functor (fiberseq_isexact_oo i f).1 ==*	  pfib (fiberseq_loops (fiberseq_isexact_oo i f)).1	";
             responses[i]=data;
           
 
@@ -1903,12 +1903,12 @@
           
 
             i = 377;
-            data = "";
+            data = "6 subgoals (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y		subgoal 2 (ID 924) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 3 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 4 (ID 928) is:	 IsExact oo ?Goal0 ?Goal	subgoal 5 (ID 930) is:	 IsExact oo ?Goal1 ?Goal0	subgoal 6 (ID 932) is:	 IsExact oo ?Goal@{n:=Nat.succ n} ?Goal1	1 subgoal (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	5 subgoals (ID 924)		subgoal 1 (ID 924) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 2 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 928) is:	 IsExact oo ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 930) is:	 IsExact oo ?Goal0 ?Goal	subgoal 5 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal0	5 subgoals (ID 924)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X		subgoal 2 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 928) is:	 IsExact oo ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 930) is:	 IsExact oo ?Goal0 ?Goal	subgoal 5 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal0	1 subgoal (ID 924)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals (ID 926)		subgoal 1 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 2 (ID 928) is:	 IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 930) is:	 IsExact oo ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal	";
             responses[i]=data;
           
 
             i = 378;
-            data = "6 subgoals (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y		subgoal 2 (ID 924) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 3 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 4 (ID 928) is:	 IsExact oo ?Goal0 ?Goal	subgoal 5 (ID 930) is:	 IsExact oo ?Goal1 ?Goal0	subgoal 6 (ID 932) is:	 IsExact oo ?Goal@{n:=Nat.succ n} ?Goal1	1 subgoal (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	5 subgoals (ID 924)		subgoal 1 (ID 924) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 2 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 928) is:	 IsExact oo ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 930) is:	 IsExact oo ?Goal0 ?Goal	subgoal 5 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal0	5 subgoals (ID 924)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X		subgoal 2 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 928) is:	 IsExact oo ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 930) is:	 IsExact oo ?Goal0 ?Goal	subgoal 5 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal0	1 subgoal (ID 924)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals (ID 926)		subgoal 1 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 2 (ID 928) is:	 IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 930) is:	 IsExact oo ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal	4 subgoals (ID 926)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F		subgoal 2 (ID 928) is:	 IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 930) is:	 IsExact oo ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal	1 subgoal (ID 926)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 subgoals (ID 928)		subgoal 1 (ID 928) is:	 IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 2 (ID 930) is:	 IsExact oo	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	   (iterated_loops_functor n i)	subgoal 3 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f)	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	";
+            data = "4 subgoals (ID 926)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F		subgoal 2 (ID 928) is:	 IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 930) is:	 IsExact oo ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal	1 subgoal (ID 926)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 subgoals (ID 928)		subgoal 1 (ID 928) is:	 IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 2 (ID 930) is:	 IsExact oo	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	   (iterated_loops_functor n i)	subgoal 3 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f)	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	";
             responses[i]=data;
           
 

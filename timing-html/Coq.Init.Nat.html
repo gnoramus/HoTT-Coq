@@ -46,14 +46,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 10
-Time: 0.009s">
+Time: 0.008s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Notations Logic Datatypes.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 10
 Time: 0.001s">
-<div class="time" style="width: 11.111111111111%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>
 Require Decimal Hexadecimal Numeral.</pre>
 </div>
@@ -175,7 +175,7 @@ Definition pred n :=
 <div class="code" title="File: Nat.v
 Line: 39
 Time: 0.001s">
-<div class="time" style="width: 11.111111111111%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>
 
 Fixpoint add n m :=
@@ -220,8 +220,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 60
-Time: 0.001s">
-<div class="time" style="width: 11.111111111111%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Fixpoint sub n m :=
   match n, m with
   | S k, S l =&gt; k - l
@@ -352,8 +352,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 109
-Time: 0.002s">
-<div class="time" style="width: 22.222222222222%"></div>
+Time: 0.003s">
+<div class="time" style="width: 37.5%"></div>
 <pre>
 
 Fixpoint of_uint_acc (d:Decimal.uint)(acc:nat) :=
@@ -390,7 +390,7 @@ Local Notation sixteen := (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S (S O)))))
 <div class="code" title="File: Nat.v
 Line: 128
 Time: 0.005s">
-<div class="time" style="width: 55.555555555556%"></div>
+<div class="time" style="width: 62.5%"></div>
 <pre>
 
 Fixpoint of_hex_uint_acc (d:Hexadecimal.uint)(acc:nat) :=
@@ -457,8 +457,8 @@ Definition to_uint n :=
 </div>
 <div class="code" title="File: Nat.v
 Line: 166
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 12.5%"></div>
 <pre>
 
 Definition to_num_uint n := Numeral.UIntDec (to_uint n).</pre>
@@ -532,8 +532,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 198
-Time: 0.002s">
-<div class="time" style="width: 22.222222222222%"></div>
+Time: 0.001s">
+<div class="time" style="width: 12.5%"></div>
 <pre>Fixpoint divmod x y q u :=
   match x with
     | 0 =&gt; (q,u)
@@ -650,7 +650,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 252
 Time: 0.001s">
-<div class="time" style="width: 11.111111111111%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>Fixpoint sqrt_iter k p q r :=
   match k with
     | O =&gt; p
@@ -712,7 +712,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 295
 Time: 0.001s">
-<div class="time" style="width: 11.111111111111%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>Fixpoint log2_iter k p q r :=
   match k with
     | O =&gt; p

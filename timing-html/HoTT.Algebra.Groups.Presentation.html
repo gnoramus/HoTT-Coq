@@ -31,41 +31,41 @@ pre {
 <div class="code" title="File: Presentation.v
 Line: 1
 Time: 0.036s">
-<div class="time" style="width: 17.821782178218%"></div>
+<div class="time" style="width: 20.338983050847%"></div>
 <pre>Require Import Basics Types.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 1
-Time: 0.093s">
-<div class="time" style="width: 46.039603960396%"></div>
+Time: 0.096s">
+<div class="time" style="width: 54.237288135593%"></div>
 <pre>
 Require Import Algebra.Groups.Group.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 2
 Time: 0.002s">
-<div class="time" style="width: 0.99009900990099%"></div>
+<div class="time" style="width: 1.1299435028249%"></div>
 <pre>
 Require Import Algebra.Groups.FreeGroup.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 3
-Time: 0.004s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.8248587570621%"></div>
 <pre>
 Require Import Algebra.Groups.GroupCoeq.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 4
 Time: 0.008s">
-<div class="time" style="width: 3.960396039604%"></div>
+<div class="time" style="width: 4.5197740112994%"></div>
 <pre>
 Require Import Spaces.Finite.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 5
-Time: 0.005s">
-<div class="time" style="width: 2.4752475247525%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
@@ -81,8 +81,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 10
-Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.1299435028249%"></div>
 <pre>Record GroupPresentation := {
   (** We have a type of generators *)
   gp_generators : Type ;
@@ -124,8 +124,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 23
-Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   exact (GroupCoeq
     (FreeGroup_rec I (FreeGroup X) R)
@@ -148,8 +148,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 29
-Time: 0.004s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.1299435028249%"></div>
 <pre>Class HasPresentation (G : Group) := {
   presentation : GroupPresentation;
   grp_iso_presentation : GroupIsomorphism (group_gp presentation) G;
@@ -175,8 +175,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 38
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>Class FinitelyGeneratedPresentation (P : GroupPresentation)
   := finite_gp_generators : Finite (gp_generators P).</pre>
 </div>
@@ -190,8 +190,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 41
-Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Class FinitelyRelatedPresentation (P : GroupPresentation)
   := finite_gp_relators : Finite (gp_rel_index P).</pre>
 </div>
@@ -206,7 +206,7 @@ Time: 0s">
 <div class="code" title="File: Presentation.v
 Line: 44
 Time: 0.002s">
-<div class="time" style="width: 0.99009900990099%"></div>
+<div class="time" style="width: 1.1299435028249%"></div>
 <pre>Class FinitePresentation (P : GroupPresentation) := {
   fp_generators : FinitelyGeneratedPresentation P;
   fp_relators : FinitelyRelatedPresentation P;
@@ -225,7 +225,7 @@ Time: 0s">
 <div class="code" title="File: Presentation.v
 Line: 51
 Time: 0.004s">
-<div class="time" style="width: 1.980198019802%"></div>
+<div class="time" style="width: 2.2598870056497%"></div>
 <pre>Class IsFinitelyGenerated (G : Group) := {
   fg_presentation : HasPresentation G;
   fg_presentation_fg : FinitelyGeneratedPresentation fg_presentation;
@@ -242,7 +242,7 @@ Time: 0s">
 <div class="code" title="File: Presentation.v
 Line: 56
 Time: 0.004s">
-<div class="time" style="width: 1.980198019802%"></div>
+<div class="time" style="width: 2.2598870056497%"></div>
 <pre>Class IsFinitelyRelated (G : Group) := {
   fr_presentation : HasPresentation G;
   fr_presentation_fr : FinitelyRelatedPresentation fr_presentation;
@@ -251,7 +251,7 @@ Time: 0.004s">
 <div class="code" title="File: Presentation.v
 Line: 59
 Time: 0.004s">
-<div class="time" style="width: 1.980198019802%"></div>
+<div class="time" style="width: 2.2598870056497%"></div>
 <pre>
 
 Class IsFinitelyPresented (G : Group) := {
@@ -271,8 +271,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 68
-Time: 0.002s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>Theorem grp_pres_rec {funext : Funext} (G : Group) (P : HasPresentation G) (H : Group)
   : {f : gp_generators P -&gt; H &amp; forall r,
       FreeGroup_rec _ _ f (gp_relators P r) = group_unit}
@@ -288,14 +288,14 @@ Proof.</pre>
 <div class="code" title="File: Presentation.v
 Line: 72
 Time: 0.008s">
-<div class="time" style="width: 3.960396039604%"></div>
+<div class="time" style="width: 4.5197740112994%"></div>
 <pre>
   refine ((equiv_precompose_cat_equiv grp_iso_presentation)^-1 oE _).</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 73
 Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>
   refine (equiv_groupcoeq_rec _ _ oE _).</pre>
 </div>
@@ -308,15 +308,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 75
-Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   2: apply equiv_freegroup_rec.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 76
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>
   apply equiv_functor_sigma_id.</pre>
 </div>
@@ -329,8 +329,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 78
-Time: 0.184s">
-<div class="time" style="width: 91.089108910891%"></div>
+Time: 0.163s">
+<div class="time" style="width: 92.090395480226%"></div>
 <pre>
   srapply equiv_iff_hprop.</pre>
 </div>
@@ -356,22 +356,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 81
-Time: 0.053s">
-<div class="time" style="width: 26.237623762376%"></div>
+Time: 0.044s">
+<div class="time" style="width: 24.858757062147%"></div>
 <pre>
     rapply Trunc_ind.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>
     srapply Coeq.Coeq.Coeq_ind.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 83
-Time: 0.026s">
-<div class="time" style="width: 12.871287128713%"></div>
+Time: 0.022s">
+<div class="time" style="width: 12.429378531073%"></div>
 <pre>
     2: intros; apply path_ishprop.</pre>
 </div>
@@ -384,50 +384,50 @@ Time: 0s">
 </div>
 <div class="code" title="File: Presentation.v
 Line: 85
-Time: 0.002s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>
     induction w.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 86
 Time: 0.003s">
-<div class="time" style="width: 1.4851485148515%"></div>
+<div class="time" style="width: 1.6949152542373%"></div>
 <pre>
     1: reflexivity.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 87
-Time: 0.03s">
-<div class="time" style="width: 14.851485148515%"></div>
+Time: 0.033s">
+<div class="time" style="width: 18.64406779661%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 88
-Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (_ @ _ @ _^).</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 89
-Time: 0.039s">
-<div class="time" style="width: 19.306930693069%"></div>
+Time: 0.04s">
+<div class="time" style="width: 22.598870056497%"></div>
 <pre>
     1,3: exact (grp_homo_op (FreeGroup_rec _ _ _) _ _).</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 90
-Time: 0.057s">
-<div class="time" style="width: 28.217821782178%"></div>
+Time: 0.06s">
+<div class="time" style="width: 33.898305084746%"></div>
 <pre>
     f_ap.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 91
 Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>
     destruct a.</pre>
 </div>
@@ -441,7 +441,7 @@ Time: 0s">
 <div class="code" title="File: Presentation.v
 Line: 93
 Time: 0.004s">
-<div class="time" style="width: 1.980198019802%"></div>
+<div class="time" style="width: 2.2598870056497%"></div>
 <pre>
     refine (grp_homo_inv _ _ @ ap _ _ @ (grp_homo_inv _ _)^).</pre>
 </div>
@@ -475,7 +475,7 @@ Time: 0s">
 <div class="code" title="File: Presentation.v
 Line: 97
 Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>
   pose (p' := p o freegroup_eta _).</pre>
 </div>
@@ -496,7 +496,7 @@ Time: 0s">
 <div class="code" title="File: Presentation.v
 Line: 100
 Time: 0.004s">
-<div class="time" style="width: 1.980198019802%"></div>
+<div class="time" style="width: 2.2598870056497%"></div>
 <pre>
   refine (_ @ p').</pre>
 </div>
@@ -510,34 +510,34 @@ Time: 0s">
 <div class="code" title="File: Presentation.v
 Line: 102
 Time: 0.001s">
-<div class="time" style="width: 0.4950495049505%"></div>
+<div class="time" style="width: 0.56497175141243%"></div>
 <pre>
   symmetry.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 103
-Time: 0.006s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.007s">
+<div class="time" style="width: 3.954802259887%"></div>
 <pre>
   refine (grp_homo_op _ _ _ @ _).</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 104
-Time: 0.005s">
-<div class="time" style="width: 2.4752475247525%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.2598870056497%"></div>
 <pre>
   refine (_ @ right_identity _).</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 105
-Time: 0.004s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.1299435028249%"></div>
 <pre>
   f_ap.</pre>
 </div>
 <div class="code" title="File: Presentation.v
 Line: 106
-Time: 0.202s">
+Time: 0.177s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Defined.</pre>

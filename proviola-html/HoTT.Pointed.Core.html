@@ -1688,7 +1688,7 @@
           
 
             i = 334;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1066)		subgoal 1 (ID 1066) is:	 forall b1 : {f : forall x : A, P x & f (point A) = dpoint P},	 Contr	   {b2 : {f : forall x : A, P x & f (point A) = dpoint P} &	   {p : issig_pforall A P b1 == issig_pforall A P b2 &	   p (point A) =	   dpoint_eq (issig_pforall A P b1) @ (dpoint_eq (issig_pforall A P b2))^}}	1 subgoal (ID 1066)	  	  H : Funext	  A : pType	  P : pFam A	  ============================	  forall b1 : {f : forall x : A, P x & f (point A) = dpoint P},	  Contr	    {b2 : {f : forall x : A, P x & f (point A) = dpoint P} &	    {p : issig_pforall A P b1 == issig_pforall A P b2 &	    p (point A) =	    dpoint_eq (issig_pforall A P b1) @ (dpoint_eq (issig_pforall A P b2))^}}	1 subgoal (ID 1093)	  	  H : Funext	  A : pType	  P : pFam A	  f : forall x : A, P x	  feq : f (point A) = dpoint P	  ============================	  Contr	    {b2 : {f0 : forall x : A, P x & f0 (point A) = dpoint P} &	    {p : f == pr1 b2 & p (point A) = feq @ (pr2 b2)^}}	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1066)		subgoal 1 (ID 1066) is:	 forall b1 : {f : forall x : A, P x & f (point A) = dpoint P},	 Contr	   {b2 : {f : forall x : A, P x & f (point A) = dpoint P} &	   {p : issig_pforall A P b1 == issig_pforall A P b2 &	   p (point A) =	   dpoint_eq (issig_pforall A P b1) @ (dpoint_eq (issig_pforall A P b2))^}}	1 subgoal (ID 1066)	  	  H : Funext	  A : pType	  P : pFam A	  ============================	  forall b1 : {f : forall x : A, P x & f (point A) = dpoint P},	  Contr	    {b2 : {f : forall x : A, P x & f (point A) = dpoint P} &	    {p : issig_pforall A P b1 == issig_pforall A P b2 &	    p (point A) =	    dpoint_eq (issig_pforall A P b1) @ (dpoint_eq (issig_pforall A P b2))^}}	1 subgoal (ID 1093)	  	  H : Funext	  A : pType	  P : pFam A	  f : forall x : A, P x	  feq : f (point A) = dpoint P	  ============================	  Contr	    {b2 : {f0 : forall x : A, P x & f0 (point A) = dpoint P} &	    {p : f == b2.1 & p (point A) = feq @ (b2.2)^}}	";
             responses[i]=data;
           
 
@@ -2233,7 +2233,7 @@
           
 
             i = 443;
-            data = "1 subgoal (ID 1353)	  	  H : Univalence	  A : Type	  a : IsPointed A	  B : Type	  b : IsPointed B	  ============================	  ({| pointed_type := A; ispointed_type := a |} <~>*	   {| pointed_type := B; ispointed_type := b |}) <~>	  {p : pr1 (A; a) = pr1 (B; b) & transport idmap p (pr2 (A; a)) = pr2 (B; b)}	";
+            data = "1 subgoal (ID 1353)	  	  H : Univalence	  A : Type	  a : IsPointed A	  B : Type	  b : IsPointed B	  ============================	  ({| pointed_type := A; ispointed_type := a |} <~>*	   {| pointed_type := B; ispointed_type := b |}) <~>	  {p : (A; a).1 = (B; b).1 & transport idmap p (A; a).2 = (B; b).2}	";
             responses[i]=data;
           
 
@@ -2328,7 +2328,7 @@
           
 
             i = 462;
-            data = "1 subgoal (ID 1357)	  	  H : Funext	  A : pType	  B : pType	  f, g : A <~>* B	  ============================	  f ==* g <~> (issig_pequiv A B)^-1 f = (issig_pequiv A B)^-1 g	1 subgoal (ID 1389)	  	  H : Funext	  A : pType	  B : pType	  f, g : A <~>* B	  ============================	  f ==* g <~> pr1 ((issig_pequiv A B)^-1 f) = pr1 ((issig_pequiv A B)^-1 g)	";
+            data = "1 subgoal (ID 1357)	  	  H : Funext	  A : pType	  B : pType	  f, g : A <~>* B	  ============================	  f ==* g <~> (issig_pequiv A B)^-1 f = (issig_pequiv A B)^-1 g	1 subgoal (ID 1389)	  	  H : Funext	  A : pType	  B : pType	  f, g : A <~>* B	  ============================	  f ==* g <~> ((issig_pequiv A B)^-1 f).1 = ((issig_pequiv A B)^-1 g).1	";
             responses[i]=data;
           
 
