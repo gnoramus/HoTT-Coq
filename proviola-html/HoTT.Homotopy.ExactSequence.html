@@ -378,7 +378,7 @@
           
 
             i = 72;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -403,7 +403,7 @@
           
 
             i = 77;
-            data = "1 subgoal (ID 81)	  	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  cx : IsComplex i f	  ============================	  IsComplex (ptr_functor n i) (ptr_functor n f)	";
+            data = "No more subgoals.	1 subgoal (ID 81)	  	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  cx : IsComplex i f	  ============================	  IsComplex (ptr_functor n i) (ptr_functor n f)	";
             responses[i]=data;
           
 
@@ -1093,7 +1093,7 @@
           
 
             i = 215;
-            data = "1 subgoal (ID 560)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  IsExact oo (pfib f) f	";
+            data = "1 subgoal (ID 560)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  IsExact purely (pfib f) f	";
             responses[i]=data;
           
 
@@ -1103,7 +1103,7 @@
           
 
             i = 217;
-            data = "1 subgoal (ID 569)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  IsConnMap oo (cxfib (iscomplex_pfib f))	";
+            data = "1 subgoal (ID 569)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  IsConnMap purely (cxfib (iscomplex_pfib f))	";
             responses[i]=data;
           
 
@@ -1148,7 +1148,7 @@
           
 
             i = 226;
-            data = "1 subgoal (ID 590)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  IsExact oo (i_fiberseq fs) fs.1	";
+            data = "1 subgoal (ID 590)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  IsExact purely (i_fiberseq fs) fs.1	";
             responses[i]=data;
           
 
@@ -1158,7 +1158,7 @@
           
 
             i = 228;
-            data = "3 subgoals (ID 725)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  fs.1 o* i_fiberseq fs == pconst		subgoal 2 (ID 727) is:	 ?p (point F) = dpoint_eq (fs.1 o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 3 (ID 662) is:	 IsConnMap oo (cxfib (Build_pHomotopy ?p ?q))	";
+            data = "3 subgoals (ID 725)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  fs.1 o* i_fiberseq fs == pconst		subgoal 2 (ID 727) is:	 ?p (point F) = dpoint_eq (fs.1 o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 3 (ID 662) is:	 IsConnMap purely (cxfib (Build_pHomotopy ?p ?q))	";
             responses[i]=data;
           
 
@@ -1168,7 +1168,7 @@
           
 
             i = 230;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 727)		subgoal 1 (ID 727) is:	 (fun u : F => (fs.2 u).2) (point F) =	 dpoint_eq (fs.1 o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 2 (ID 662) is:	 IsConnMap oo (cxfib (Build_pHomotopy (fun u : F => (fs.2 u).2) ?q))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 727)		subgoal 1 (ID 727) is:	 (fun u : F => (fs.2 u).2) (point F) =	 dpoint_eq (fs.1 o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 2 (ID 662) is:	 IsConnMap purely (cxfib (Build_pHomotopy (fun u : F => (fs.2 u).2) ?q))	";
             responses[i]=data;
           
 
@@ -1203,12 +1203,12 @@
           
 
             i = 237;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 662)		subgoal 1 (ID 662) is:	 IsConnMap oo	   (cxfib	      (Build_pHomotopy (fun u : F => (fs.2 u).2)	         (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	            (dpoint_eq (fs.1 o* i_fiberseq fs))	            (concat_p1 (fs.2 (point F)).2 @	             moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	               (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	               ((whiskerR	                   (inverse2 (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                   (fs.2 (point F)).2 @	                 (transport_paths_Fl (point_eq fs.2) ..1 (fs.2 (point F)).2)^) @	                (point_eq fs.2) ..2)))))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 662)		subgoal 1 (ID 662) is:	 IsConnMap purely	   (cxfib	      (Build_pHomotopy (fun u : F => (fs.2 u).2)	         (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	            (dpoint_eq (fs.1 o* i_fiberseq fs))	            (concat_p1 (fs.2 (point F)).2 @	             moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	               (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	               ((whiskerR	                   (inverse2 (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                   (fs.2 (point F)).2 @	                 (transport_paths_Fl (point_eq fs.2) ..1 (fs.2 (point F)).2)^) @	                (point_eq fs.2) ..2)))))	";
             responses[i]=data;
           
 
             i = 238;
-            data = "1 subgoal (ID 662)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  IsConnMap oo	    (cxfib	       (Build_pHomotopy (fun u : F => (fs.2 u).2)	          (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	             (dpoint_eq (fs.1 o* i_fiberseq fs))	             (concat_p1 (fs.2 (point F)).2 @	              moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	                (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	                ((whiskerR	                    (inverse2 (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                    (fs.2 (point F)).2 @	                  (transport_paths_Fl (point_eq fs.2) ..1 (fs.2 (point F)).2)^) @	                 (point_eq fs.2) ..2)))))	1 subgoal (ID 822)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  x : X	  p : fs.1 x = point Y	  ============================	  IsConnected oo	    (hfiber	       (cxfib	          (Build_pHomotopy (fun u : F => (fs.2 u).2)	             (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	                (dpoint_eq (fs.1 o* i_fiberseq fs))	                (concat_p1 (fs.2 (point F)).2 @	                 moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	                   (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	                   ((whiskerR	                       (inverse2	                          (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                       (fs.2 (point F)).2 @	                     (transport_paths_Fl (point_eq fs.2) ..1	                        (fs.2 (point F)).2)^) @ (point_eq fs.2) ..2)))))	       (x; p))	";
+            data = "1 subgoal (ID 662)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  ============================	  IsConnMap purely	    (cxfib	       (Build_pHomotopy (fun u : F => (fs.2 u).2)	          (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	             (dpoint_eq (fs.1 o* i_fiberseq fs))	             (concat_p1 (fs.2 (point F)).2 @	              moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	                (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	                ((whiskerR	                    (inverse2 (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                    (fs.2 (point F)).2 @	                  (transport_paths_Fl (point_eq fs.2) ..1 (fs.2 (point F)).2)^) @	                 (point_eq fs.2) ..2)))))	1 subgoal (ID 822)	  	  F : pType	  X : pType	  Y : pType	  fs : FiberSeq F X Y	  x : X	  p : fs.1 x = point Y	  ============================	  IsConnected purely	    (hfiber	       (cxfib	          (Build_pHomotopy (fun u : F => (fs.2 u).2)	             (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	                (dpoint_eq (fs.1 o* i_fiberseq fs))	                (concat_p1 (fs.2 (point F)).2 @	                 moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	                   (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	                   ((whiskerR	                       (inverse2	                          (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                       (fs.2 (point F)).2 @	                     (transport_paths_Fl (point_eq fs.2) ..1	                        (fs.2 (point F)).2)^) @ (point_eq fs.2) ..2)))))	       (x; p))	";
             responses[i]=data;
           
 
@@ -1228,7 +1228,7 @@
           
 
             i = 242;
-            data = "1 subgoal (ID 601)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  F <~>* pfiber f	";
+            data = "1 subgoal (ID 601)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  F <~>* pfiber f	";
             responses[i]=data;
           
 
@@ -1238,12 +1238,12 @@
           
 
             i = 244;
-            data = "1 focused subgoal	(shelved: 3) (ID 656)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  IsEquiv (cxfib cx_isexact)	";
+            data = "1 focused subgoal	(shelved: 3) (ID 656)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  IsEquiv (cxfib cx_isexact)	";
             responses[i]=data;
           
 
             i = 245;
-            data = "1 focused subgoal	(shelved: 3) (ID 661)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  u : pfiber f	  ============================	  Contr (hfiber (cxfib cx_isexact) u)	";
+            data = "1 focused subgoal	(shelved: 3) (ID 661)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  u : pfiber f	  ============================	  Contr (hfiber (cxfib cx_isexact) u)	";
             responses[i]=data;
           
 
@@ -1258,7 +1258,7 @@
           
 
             i = 248;
-            data = "<infomsg>fiberseq_isexact_oo is defined</infomsg>	";
+            data = "<infomsg>fiberseq_isexact_purely is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1353,7 +1353,7 @@
           
 
             i = 267;
-            data = "1 subgoal (ID 639)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  IsExact oo (loops_functor i) (loops_functor f)	";
+            data = "1 subgoal (ID 639)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  IsExact purely (loops_functor i) (loops_functor f)	";
             responses[i]=data;
           
 
@@ -1363,42 +1363,42 @@
           
 
             i = 269;
-            data = "1 subgoal (ID 665)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor i ==* i_fiberseq (fiberseq_loops (fiberseq_isexact_oo i f))	";
+            data = "1 subgoal (ID 665)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  loops_functor i ==*	  i_fiberseq (fiberseq_loops (fiberseq_isexact_purely i f))	";
             responses[i]=data;
           
 
             i = 270;
-            data = "2 subgoals (ID 698)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor i ==*	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact)		subgoal 2 (ID 700) is:	 loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	 i_fiberseq (fiberseq_loops (fiberseq_isexact_oo i f))	";
+            data = "2 subgoals (ID 698)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  loops_functor i ==*	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact)		subgoal 2 (ID 700) is:	 loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	 i_fiberseq (fiberseq_loops (fiberseq_isexact_purely i f))	";
             responses[i]=data;
           
 
             i = 271;
-            data = "1 subgoal (ID 698)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor i ==*	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact)	1 subgoal (ID 718)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor i ==* loops_functor (pfib f o* cxfib cx_isexact)	";
+            data = "1 subgoal (ID 698)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  loops_functor i ==*	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact)	1 subgoal (ID 718)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  loops_functor i ==* loops_functor (pfib f o* cxfib cx_isexact)	";
             responses[i]=data;
           
 
             i = 272;
-            data = "1 subgoal (ID 723)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  i ==* pfib f o* cxfib cx_isexact	";
+            data = "1 subgoal (ID 723)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  i ==* pfib f o* cxfib cx_isexact	";
             responses[i]=data;
           
 
             i = 273;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 700)		subgoal 1 (ID 700) is:	 loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	 i_fiberseq (fiberseq_loops (fiberseq_isexact_oo i f))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 700)		subgoal 1 (ID 700) is:	 loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	 i_fiberseq (fiberseq_loops (fiberseq_isexact_purely i f))	";
             responses[i]=data;
           
 
             i = 274;
-            data = "1 subgoal (ID 700)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	  i_fiberseq (fiberseq_loops (fiberseq_isexact_oo i f))	1 subgoal (ID 758)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	  (pfib (fiberseq_loops (fiberseq_isexact_oo i f)).1	   o* (pfiber_loops_functor (fiberseq_isexact_oo i f).1)^-1*)	  o* pequiv_loops_functor (fiberseq_isexact_oo i f).2	";
+            data = "1 subgoal (ID 700)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	  i_fiberseq (fiberseq_loops (fiberseq_isexact_purely i f))	1 subgoal (ID 758)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	  (pfib (fiberseq_loops (fiberseq_isexact_purely i f)).1	   o* (pfiber_loops_functor (fiberseq_isexact_purely i f).1)^-1*)	  o* pequiv_loops_functor (fiberseq_isexact_purely i f).2	";
             responses[i]=data;
           
 
             i = 275;
-            data = "1 subgoal (ID 781)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) ==*	  pfib (fiberseq_loops (fiberseq_isexact_oo i f)).1	  o* (pfiber_loops_functor (fiberseq_isexact_oo i f).1)^-1*	";
+            data = "1 subgoal (ID 781)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  loops_functor (pfib f) ==*	  pfib (fiberseq_loops (fiberseq_isexact_purely i f)).1	  o* (pfiber_loops_functor (fiberseq_isexact_purely i f).1)^-1*	";
             responses[i]=data;
           
 
             i = 276;
-            data = "1 subgoal (ID 785)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops_functor (pfib f) o* pfiber_loops_functor (fiberseq_isexact_oo i f).1 ==*	  pfib (fiberseq_loops (fiberseq_isexact_oo i f)).1	";
+            data = "1 subgoal (ID 785)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  loops_functor (pfib f)	  o* pfiber_loops_functor (fiberseq_isexact_purely i f).1 ==*	  pfib (fiberseq_loops (fiberseq_isexact_purely i f)).1	";
             responses[i]=data;
           
 
@@ -1413,7 +1413,7 @@
           
 
             i = 279;
-            data = "1 subgoal (ID 659)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : nat	  ============================	  IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	";
+            data = "1 subgoal (ID 659)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : nat	  ============================	  IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	";
             responses[i]=data;
           
 
@@ -1528,7 +1528,7 @@
           
 
             i = 302;
-            data = "1 subgoal (ID 695)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact oo i f	  ============================	  IsExact (Tr n) (ptr_functor n.+1 i) (ptr_functor n.+1 f)	";
+            data = "1 subgoal (ID 695)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact purely i f	  ============================	  IsExact (Tr n) (ptr_functor n.+1 i) (ptr_functor n.+1 f)	";
             responses[i]=data;
           
 
@@ -1538,17 +1538,17 @@
           
 
             i = 304;
-            data = "1 subgoal (ID 764)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact oo i f	  ============================	  IsExact (Tr n) i f	";
+            data = "1 subgoal (ID 764)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact purely i f	  ============================	  IsExact (Tr n) i f	";
             responses[i]=data;
           
 
             i = 305;
-            data = "1 subgoal (ID 778)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact oo i f	  ============================	  IsConnMap (Tr n) (cxfib cx_isexact)	";
+            data = "1 subgoal (ID 778)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact purely i f	  ============================	  IsConnMap (Tr n) (cxfib cx_isexact)	";
             responses[i]=data;
           
 
             i = 306;
-            data = "1 subgoal (ID 781)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact oo i f	  z : pfiber f	  ============================	  Contr (hfiber (cxfib cx_isexact) z)	";
+            data = "1 subgoal (ID 781)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact purely i f	  z : pfiber f	  ============================	  Contr (hfiber (cxfib cx_isexact) z)	";
             responses[i]=data;
           
 
@@ -1618,7 +1618,7 @@
           
 
             i = 320;
-            data = "1 subgoal (ID 741)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  Square pequiv_cxfib pequiv_pmap_idmap i (pfib f)	";
+            data = "1 subgoal (ID 741)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  Square pequiv_cxfib pequiv_pmap_idmap i (pfib f)	";
             responses[i]=data;
           
 
@@ -1628,12 +1628,12 @@
           
 
             i = 322;
-            data = "1 subgoal (ID 743)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  pequiv_pmap_idmap $o i $== pfib f $o pequiv_cxfib	";
+            data = "1 subgoal (ID 743)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  pequiv_pmap_idmap $o i $== pfib f $o pequiv_cxfib	";
             responses[i]=data;
           
 
             i = 323;
-            data = "1 subgoal (ID 758)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  i ==* pfib f $o pequiv_cxfib	";
+            data = "1 subgoal (ID 758)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  i ==* pfib f $o pequiv_cxfib	";
             responses[i]=data;
           
 
@@ -1668,7 +1668,7 @@
           
 
             i = 330;
-            data = "1 subgoal (ID 753)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  FiberSeq (loops Y) F X	";
+            data = "1 subgoal (ID 753)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  FiberSeq (loops Y) F X	";
             responses[i]=data;
           
 
@@ -1678,7 +1678,7 @@
           
 
             i = 332;
-            data = "1 subgoal (ID 755)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  loops Y <~>* pfiber i	";
+            data = "1 subgoal (ID 755)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  loops Y <~>* pfiber i	";
             responses[i]=data;
           
 
@@ -1698,7 +1698,7 @@
           
 
             i = 336;
-            data = "1 subgoal (ID 787)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  IsExact oo (loops_functor f) (connecting_map i f)	";
+            data = "1 subgoal (ID 787)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  IsExact purely (loops_functor f) (connecting_map i f)	";
             responses[i]=data;
           
 
@@ -1708,27 +1708,27 @@
           
 
             i = 338;
-            data = "1 subgoal (ID 877)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  Square	    (loops_inv X o*E pfiber2_loops (pfib f)	     o*E pequiv_pfiber	           (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	              (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	           (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	              (square_pfib_pequiv_cxfib i f)))^-1*	    (pfiber2_loops f	     o*E pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	           (square_pfib_pequiv_cxfib i f))^-1* (loops_functor f)	    (pfib (pfib i))	";
+            data = "1 subgoal (ID 877)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  Square	    (loops_inv X o*E pfiber2_loops (pfib f)	     o*E pequiv_pfiber	           (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	              (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	           (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	              (square_pfib_pequiv_cxfib i f)))^-1*	    (pfiber2_loops f	     o*E pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	           (square_pfib_pequiv_cxfib i f))^-1* (loops_functor f)	    (pfib (pfib i))	";
             responses[i]=data;
           
 
             i = 339;
-            data = "1 subgoal (ID 965)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  Square	    (loops_inv X o*E pfiber2_loops (pfib f)	     o*E pequiv_pfiber	           (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	              (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	           (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	              (square_pfib_pequiv_cxfib i f)))	    (pfiber2_loops f	     o*E pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	           (square_pfib_pequiv_cxfib i f)) (pfib (pfib i)) 	    (loops_functor f)	";
+            data = "1 subgoal (ID 965)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  Square	    (loops_inv X o*E pfiber2_loops (pfib f)	     o*E pequiv_pfiber	           (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	              (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	           (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	              (square_pfib_pequiv_cxfib i f)))	    (pfiber2_loops f	     o*E pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	           (square_pfib_pequiv_cxfib i f)) (pfib (pfib i)) 	    (loops_functor f)	";
             responses[i]=data;
           
 
             i = 340;
-            data = "2 focused subgoals	(shelved: 1) (ID 1053)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  Square	    (pequiv_pfiber	       (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	       (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)))	    (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	       (square_pfib_pequiv_cxfib i f)) (pfib (pfib i)) 	    ?Goal		subgoal 2 (ID 1055) is:	 Square (loops_inv X o* pfiber2_loops (pfib f)) (pfiber2_loops f) 	   ?Goal (loops_functor f)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 1053)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  Square	    (pequiv_pfiber	       (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	       (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)))	    (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	       (square_pfib_pequiv_cxfib i f)) (pfib (pfib i)) 	    ?Goal		subgoal 2 (ID 1055) is:	 Square (loops_inv X o* pfiber2_loops (pfib f)) (pfiber2_loops f) 	   ?Goal (loops_functor f)	";
             responses[i]=data;
           
 
             i = 341;
-            data = "1 focused subgoal	(shelved: 1) (ID 1053)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  Square	    (pequiv_pfiber	       (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	       (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)))	    (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	       (square_pfib_pequiv_cxfib i f)) (pfib (pfib i)) 	    ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1055)		subgoal 1 (ID 1055) is:	 Square (loops_inv X o* pfiber2_loops (pfib f)) (pfiber2_loops f)	   (pfib (pfib (pfib f))) (loops_functor f)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 1053)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  Square	    (pequiv_pfiber	       (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	       (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)))	    (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	       (square_pfib_pequiv_cxfib i f)) (pfib (pfib i)) 	    ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1055)		subgoal 1 (ID 1055) is:	 Square (loops_inv X o* pfiber2_loops (pfib f)) (pfiber2_loops f)	   (pfib (pfib (pfib f))) (loops_functor f)	";
             responses[i]=data;
           
 
             i = 342;
-            data = "1 subgoal (ID 1055)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  Square (loops_inv X o* pfiber2_loops (pfib f)) (pfiber2_loops f)	    (pfib (pfib (pfib f))) (loops_functor f)	No more subgoals.	";
+            data = "1 subgoal (ID 1055)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  Square (loops_inv X o* pfiber2_loops (pfib f)) (pfiber2_loops f)	    (pfib (pfib (pfib f))) (loops_functor f)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1878,7 +1878,7 @@
           
 
             i = 372;
-            data = "1 subgoal (ID 817)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  LongExactSequence oo (N3)	";
+            data = "1 subgoal (ID 817)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  LongExactSequence purely (N3)	";
             responses[i]=data;
           
 
@@ -1888,7 +1888,7 @@
           
 
             i = 374;
-            data = "2 subgoals (ID 819)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  ============================	  forall n : N3, loops_carrier F X Y n.+1 ->* loops_carrier F X Y n		subgoal 2 (ID 821) is:	 forall n : N3, IsExact oo (?les_fn n.+1) (?les_fn n)	";
+            data = "2 subgoals (ID 819)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  forall n : N3, loops_carrier F X Y n.+1 ->* loops_carrier F X Y n		subgoal 2 (ID 821) is:	 forall n : N3, IsExact purely (?les_fn n.+1) (?les_fn n)	";
             responses[i]=data;
           
 
@@ -1898,22 +1898,22 @@
           
 
             i = 376;
-            data = "";
+            data = "6 subgoals (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y		subgoal 2 (ID 924) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 3 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 4 (ID 928) is:	 IsExact purely ?Goal0 ?Goal	subgoal 5 (ID 930) is:	 IsExact purely ?Goal1 ?Goal0	subgoal 6 (ID 932) is:	 IsExact purely ?Goal@{n:=Nat.succ n} ?Goal1	1 subgoal (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	5 subgoals (ID 924)		subgoal 1 (ID 924) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 2 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 928) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 930) is:	 IsExact purely ?Goal0 ?Goal	subgoal 5 (ID 932) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	";
             responses[i]=data;
           
 
             i = 377;
-            data = "6 subgoals (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y		subgoal 2 (ID 924) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 3 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 4 (ID 928) is:	 IsExact oo ?Goal0 ?Goal	subgoal 5 (ID 930) is:	 IsExact oo ?Goal1 ?Goal0	subgoal 6 (ID 932) is:	 IsExact oo ?Goal@{n:=Nat.succ n} ?Goal1	1 subgoal (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	5 subgoals (ID 924)		subgoal 1 (ID 924) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 2 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 928) is:	 IsExact oo ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 930) is:	 IsExact oo ?Goal0 ?Goal	subgoal 5 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal0	5 subgoals (ID 924)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X		subgoal 2 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 928) is:	 IsExact oo ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 930) is:	 IsExact oo ?Goal0 ?Goal	subgoal 5 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal0	1 subgoal (ID 924)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals (ID 926)		subgoal 1 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 2 (ID 928) is:	 IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 930) is:	 IsExact oo ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal	";
+            data = "5 subgoals (ID 924)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X		subgoal 2 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 928) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 930) is:	 IsExact purely ?Goal0 ?Goal	subgoal 5 (ID 932) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	1 subgoal (ID 924)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals (ID 926)		subgoal 1 (ID 926) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 2 (ID 928) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 930) is:	 IsExact purely ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 932) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal	";
             responses[i]=data;
           
 
             i = 378;
-            data = "4 subgoals (ID 926)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F		subgoal 2 (ID 928) is:	 IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 930) is:	 IsExact oo ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f) ?Goal	1 subgoal (ID 926)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 subgoals (ID 928)		subgoal 1 (ID 928) is:	 IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 2 (ID 930) is:	 IsExact oo	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	   (iterated_loops_functor n i)	subgoal 3 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f)	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	";
+            data = "4 subgoals (ID 926)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F		subgoal 2 (ID 928) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 930) is:	 IsExact purely ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 932) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal	1 subgoal (ID 926)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 subgoals (ID 928)		subgoal 1 (ID 928) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 2 (ID 930) is:	 IsExact purely	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	   (iterated_loops_functor n i)	subgoal 3 (ID 932) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f)	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	";
             responses[i]=data;
           
 
             i = 379;
-            data = "3 subgoals (ID 928)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact oo i f	  n : +N	  ============================	  IsExact oo (iterated_loops_functor n i) (iterated_loops_functor n f)		subgoal 2 (ID 930) is:	 IsExact oo	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	   (iterated_loops_functor n i)	subgoal 3 (ID 932) is:	 IsExact oo (iterated_loops_functor (Nat.succ n) f)	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	No more subgoals.	";
+            data = "3 subgoals (ID 928)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)		subgoal 2 (ID 930) is:	 IsExact purely	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	   (iterated_loops_functor n i)	subgoal 3 (ID 932) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f)	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1943,7 +1943,7 @@
           
 
             i = 385;
-            data = "";
+            data = "<infomsg>Pi_les is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -2800,7 +2800,7 @@ An equivalence of short sequences preserves exactness.
 </div>
 <div class="goal" id="goal0_3_47"><pre><span></span></pre></div>
 <div class="doc" scenenumber="49">
-When <span class="inlinecode"><span class="id" title="var">n</span></span> is the identity modality <span class="inlinecode"><a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a></span>, so that <span class="inlinecode"><a class="idref" href="HoTT.Homotopy.ExactSequence.html#cxfib"><span class="id" title="definition">cxfib</span></a></span> is an equivalence, we get simply a fiber sequence.  In particular, the fiber of a given map yields an oo-exact sequence. 
+When <span class="inlinecode"><span class="id" title="var">n</span></span> is the identity modality <span class="inlinecode"><a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a></span>, so that <span class="inlinecode"><a class="idref" href="HoTT.Homotopy.ExactSequence.html#cxfib"><span class="id" title="definition">cxfib</span></a></span> is an equivalence, we get simply a fiber sequence.  In particular, the fiber of a given map yields an purely-exact sequence. 
 </div>
 <div scenenumber="51" class="code">
 <span class="command" onmouseout="
@@ -2846,7 +2846,7 @@ When <span class="inlinecode"><span class="id" title="var">n</span></span> is th
       "><br>
 <br>
 <span class="id" title="keyword">Global Instance</span> <a id="isexact_pfib" class="idref" href="#isexact_pfib"><span class="id" title="instance">isexact_pfib</span></a> {<a id="X:136" class="idref" href="#X:136"><span class="id" title="binder">X</span></a> <a id="Y:137" class="idref" href="#Y:137"><span class="id" title="binder">Y</span></a>} (<a id="f:138" class="idref" href="#f:138"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:136"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:137"><span class="id" title="variable">Y</span></a>)<br>
-  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a> (<a class="idref" href="HoTT.Pointed.pFiber.html#pfib"><span class="id" title="definition">pfib</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:138"><span class="id" title="variable">f</span></a>) <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:138"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
+  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> (<a class="idref" href="HoTT.Pointed.pFiber.html#pfib"><span class="id" title="definition">pfib</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:138"><span class="id" title="variable">f</span></a>) <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:138"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(216, '0_3_51');
@@ -2898,8 +2898,8 @@ Fiber sequences can alternatively be defined as an equivalence to the fiber of s
       mouseover(226, '0_3_55');
       "><br>
 <br>
-<span class="id" title="keyword">Global Instance</span> <a id="isexact_oo_fiberseq" class="idref" href="#isexact_oo_fiberseq"><span class="id" title="instance">isexact_oo_fiberseq</span></a> {<a id="F:147" class="idref" href="#F:147"><span class="id" title="binder">F</span></a> <a id="X:148" class="idref" href="#X:148"><span class="id" title="binder">X</span></a> <a id="Y:149" class="idref" href="#Y:149"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="fs:150" class="idref" href="#fs:150"><span class="id" title="binder">fs</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#FiberSeq"><span class="id" title="definition">FiberSeq</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:147"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:148"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:149"><span class="id" title="variable">Y</span></a>)<br>
-  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#i_fiberseq"><span class="id" title="definition">i_fiberseq</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#fs:150"><span class="id" title="variable">fs</span></a>) <a class="idref" href="HoTT.Homotopy.ExactSequence.html#fs:150"><span class="id" title="variable">fs</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">.1</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Global Instance</span> <a id="isexact_purely_fiberseq" class="idref" href="#isexact_purely_fiberseq"><span class="id" title="instance">isexact_purely_fiberseq</span></a> {<a id="F:147" class="idref" href="#F:147"><span class="id" title="binder">F</span></a> <a id="X:148" class="idref" href="#X:148"><span class="id" title="binder">X</span></a> <a id="Y:149" class="idref" href="#Y:149"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="fs:150" class="idref" href="#fs:150"><span class="id" title="binder">fs</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#FiberSeq"><span class="id" title="definition">FiberSeq</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:147"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:148"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:149"><span class="id" title="variable">Y</span></a>)<br>
+  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#i_fiberseq"><span class="id" title="definition">i_fiberseq</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#fs:150"><span class="id" title="variable">fs</span></a>) <a class="idref" href="HoTT.Homotopy.ExactSequence.html#fs:150"><span class="id" title="variable">fs</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">.1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
       mouseover(227, '0_3_55');
@@ -2980,7 +2980,7 @@ Fiber sequences can alternatively be defined as an equivalence to the fiber of s
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="pequiv_cxfib" class="idref" href="#pequiv_cxfib"><span class="id" title="definition">pequiv_cxfib</span></a> {<a id="F:151" class="idref" href="#F:151"><span class="id" title="binder">F</span></a> <a id="X:152" class="idref" href="#X:152"><span class="id" title="binder">X</span></a> <a id="Y:153" class="idref" href="#Y:153"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} {<a id="i:154" class="idref" href="#i:154"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:151"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:152"><span class="id" title="variable">X</span></a>} {<a id="f:155" class="idref" href="#f:155"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:152"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:153"><span class="id" title="variable">Y</span></a>}<br>
-           `{<a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">IsExact</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">oo</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">F</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">X</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">Y</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">i</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">f</span></a>}<br>
+           `{<a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">IsExact</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">purely</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">F</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">X</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">Y</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">i</span></a> <a id="H:156" class="idref" href="#H:156"><span class="id" title="binder">f</span></a>}<br>
   : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:151"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#103880150f1b8a9c385f8c09ab3e01b0"><span class="id" title="notation">&lt;~&gt;*</span></a> <a class="idref" href="HoTT.Pointed.pFiber.html#pfiber"><span class="id" title="definition">pfiber</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:155"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
@@ -3012,8 +3012,8 @@ Fiber sequences can alternatively be defined as an equivalence to the fiber of s
       mouseover(248, '0_3_55');
       "><br>
 <br>
-<span class="id" title="keyword">Definition</span> <a id="fiberseq_isexact_oo" class="idref" href="#fiberseq_isexact_oo"><span class="id" title="definition">fiberseq_isexact_oo</span></a> {<a id="F:157" class="idref" href="#F:157"><span class="id" title="binder">F</span></a> <a id="X:158" class="idref" href="#X:158"><span class="id" title="binder">X</span></a> <a id="Y:159" class="idref" href="#Y:159"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="i:160" class="idref" href="#i:160"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:157"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:158"><span class="id" title="variable">X</span></a>) (<a id="f:161" class="idref" href="#f:161"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:158"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:159"><span class="id" title="variable">Y</span></a>)<br>
-           `{<a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">IsExact</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">oo</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">F</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">X</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">Y</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">i</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">f</span></a>}<br>
+<span class="id" title="keyword">Definition</span> <a id="fiberseq_isexact_purely" class="idref" href="#fiberseq_isexact_purely"><span class="id" title="definition">fiberseq_isexact_purely</span></a> {<a id="F:157" class="idref" href="#F:157"><span class="id" title="binder">F</span></a> <a id="X:158" class="idref" href="#X:158"><span class="id" title="binder">X</span></a> <a id="Y:159" class="idref" href="#Y:159"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="i:160" class="idref" href="#i:160"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:157"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:158"><span class="id" title="variable">X</span></a>) (<a id="f:161" class="idref" href="#f:161"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:158"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:159"><span class="id" title="variable">Y</span></a>)<br>
+           `{<a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">IsExact</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">purely</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">F</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">X</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">Y</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">i</span></a> <a id="H:162" class="idref" href="#H:162"><span class="id" title="binder">f</span></a>}<br>
   : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#FiberSeq"><span class="id" title="definition">FiberSeq</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:157"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:158"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:159"><span class="id" title="variable">Y</span></a><br>
   := <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:161"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#pequiv_cxfib"><span class="id" title="definition">pequiv_cxfib</span></a><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
@@ -3025,7 +3025,7 @@ Fiber sequences can alternatively be defined as an equivalence to the fiber of s
 </div>
 <div class="goal" id="goal0_3_55"><pre><span></span></pre></div>
 <div class="doc" scenenumber="57">
-It's easier to show that loops preserve fiber sequences than that they preserve oo-exact sequences. 
+It's easier to show that loops preserve fiber sequences than that they preserve purely-exact sequences. 
 </div>
 <div scenenumber="59" class="code">
 <span class="command" onmouseout="
@@ -3069,7 +3069,7 @@ It's easier to show that loops preserve fiber sequences than that they preserve 
 </div>
 <div class="goal" id="goal0_3_59"><pre><span></span></pre></div>
 <div class="doc" scenenumber="61">
-Now we can deduce that they preserve oo-exact sequences.  The hardest part is modifying the first map back to <span class="inlinecode"><a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span>. 
+Now we can deduce that they preserve purely-exact sequences.  The hardest part is modifying the first map back to <span class="inlinecode"><a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span>. 
 </div>
 <div scenenumber="63" class="code">
 <span class="command" onmouseout="
@@ -3078,8 +3078,8 @@ Now we can deduce that they preserve oo-exact sequences.  The hardest part is mo
       mouseover(267, '0_3_63');
       ">
 <span class="id" title="keyword">Global Instance</span> <a id="isexact_loops" class="idref" href="#isexact_loops"><span class="id" title="instance">isexact_loops</span></a> {<a id="F:167" class="idref" href="#F:167"><span class="id" title="binder">F</span></a> <a id="X:168" class="idref" href="#X:168"><span class="id" title="binder">X</span></a> <a id="Y:169" class="idref" href="#Y:169"><span class="id" title="binder">Y</span></a>} (<a id="i:170" class="idref" href="#i:170"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:167"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:168"><span class="id" title="variable">X</span></a>) (<a id="f:171" class="idref" href="#f:171"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:168"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:169"><span class="id" title="variable">Y</span></a>)<br>
-           `{<a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">IsExact</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">oo</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">F</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">X</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">Y</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">i</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">f</span></a>}<br>
-  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a> (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:170"><span class="id" title="variable">i</span></a>) (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:171"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
+           `{<a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">IsExact</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">purely</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">F</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">X</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">Y</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">i</span></a> <a id="H:172" class="idref" href="#H:172"><span class="id" title="binder">f</span></a>}<br>
+  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:170"><span class="id" title="variable">i</span></a>) (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:171"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(268, '0_3_63');
@@ -3089,9 +3089,8 @@ Now we can deduce that they preserve oo-exact sequences.  The hardest part is mo
       " onmouseover="
       mouseover(269, '0_3_63');
       "><br>
-  <span class="id" title="tactic">refine</span> (@<a class="idref" href="HoTT.Homotopy.ExactSequence.html#isexact_homotopic_i"><span class="id" title="definition">isexact_homotopic_i</span></a><br>
-            <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <span class="id" title="var">i</span>) <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <span class="id" title="var">f</span>)<br>
-            (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#isexact_oo_fiberseq"><span class="id" title="instance">isexact_oo_fiberseq</span></a> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#fiberseq_loops"><span class="id" title="definition">fiberseq_loops</span></a> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#fiberseq_isexact_oo"><span class="id" title="definition">fiberseq_isexact_oo</span></a> <span class="id" title="var">i</span> <span class="id" title="var">f</span>)))).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">refine</span> (@<a class="idref" href="HoTT.Homotopy.ExactSequence.html#isexact_homotopic_i"><span class="id" title="definition">isexact_homotopic_i</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <span class="id" title="var">i</span>) <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <span class="id" title="var">f</span>)<br>
+    (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#isexact_purely_fiberseq"><span class="id" title="instance">isexact_purely_fiberseq</span></a> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#fiberseq_loops"><span class="id" title="definition">fiberseq_loops</span></a> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#fiberseq_isexact_purely"><span class="id" title="definition">fiberseq_isexact_purely</span></a> <span class="id" title="var">i</span> <span class="id" title="var">f</span>)))).</span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(270, '0_3_63');
@@ -3143,8 +3142,8 @@ Now we can deduce that they preserve oo-exact sequences.  The hardest part is mo
       "><br>
 <br>
 <span class="id" title="keyword">Global Instance</span> <a id="isexact_iterated_loops" class="idref" href="#isexact_iterated_loops"><span class="id" title="instance">isexact_iterated_loops</span></a> {<a id="F:173" class="idref" href="#F:173"><span class="id" title="binder">F</span></a> <a id="X:174" class="idref" href="#X:174"><span class="id" title="binder">X</span></a> <a id="Y:175" class="idref" href="#Y:175"><span class="id" title="binder">Y</span></a>} (<a id="i:176" class="idref" href="#i:176"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:173"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:174"><span class="id" title="variable">X</span></a>) (<a id="f:177" class="idref" href="#f:177"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:174"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:175"><span class="id" title="variable">Y</span></a>)<br>
-           `{<a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">IsExact</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">oo</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">F</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">X</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">Y</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">i</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">f</span></a>} (<a id="n:179" class="idref" href="#n:179"><span class="id" title="binder">n</span></a> : <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)<br>
-  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a> (<a class="idref" href="HoTT.Pointed.Loops.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:179"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:176"><span class="id" title="variable">i</span></a>) (<a class="idref" href="HoTT.Pointed.Loops.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:179"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:177"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
+           `{<a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">IsExact</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">purely</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">F</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">X</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">Y</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">i</span></a> <a id="H:178" class="idref" href="#H:178"><span class="id" title="binder">f</span></a>} (<a id="n:179" class="idref" href="#n:179"><span class="id" title="binder">n</span></a> : <a class="idref" href="Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)<br>
+  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> (<a class="idref" href="HoTT.Pointed.Loops.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:179"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:176"><span class="id" title="variable">i</span></a>) (<a class="idref" href="HoTT.Pointed.Loops.html#iterated_loops_functor"><span class="id" title="definition">iterated_loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:179"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:177"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_63');
       " onmouseover="
       mouseover(280, '0_3_63');
@@ -3253,8 +3252,8 @@ In particular, (n.+1)-truncation takes fiber sequences to n-exact ones.
       " onmouseover="
       mouseover(302, '0_3_71');
       ">
-<span class="id" title="keyword">Global Instance</span> <a id="isexact_ptr_oo" class="idref" href="#isexact_ptr_oo"><span class="id" title="instance">isexact_ptr_oo</span></a> `{<a id="H:190" class="idref" href="#H:190"><span class="id" title="binder">Univalence</span></a>} (<a id="n:191" class="idref" href="#n:191"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a>)<br>
-           {<a id="F:192" class="idref" href="#F:192"><span class="id" title="binder">F</span></a> <a id="X:193" class="idref" href="#X:193"><span class="id" title="binder">X</span></a> <a id="Y:194" class="idref" href="#Y:194"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="i:195" class="idref" href="#i:195"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:192"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:193"><span class="id" title="variable">X</span></a>) (<a id="f:196" class="idref" href="#f:196"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:193"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:194"><span class="id" title="variable">Y</span></a>) `{<a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">IsExact</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">oo</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">F</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">X</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">Y</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">i</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">f</span></a>}<br>
+<span class="id" title="keyword">Global Instance</span> <a id="isexact_ptr_purely" class="idref" href="#isexact_ptr_purely"><span class="id" title="instance">isexact_ptr_purely</span></a> `{<a id="H:190" class="idref" href="#H:190"><span class="id" title="binder">Univalence</span></a>} (<a id="n:191" class="idref" href="#n:191"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a>)<br>
+           {<a id="F:192" class="idref" href="#F:192"><span class="id" title="binder">F</span></a> <a id="X:193" class="idref" href="#X:193"><span class="id" title="binder">X</span></a> <a id="Y:194" class="idref" href="#Y:194"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="i:195" class="idref" href="#i:195"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:192"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:193"><span class="id" title="variable">X</span></a>) (<a id="f:196" class="idref" href="#f:196"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:193"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:194"><span class="id" title="variable">Y</span></a>) `{<a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">IsExact</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">purely</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">F</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">X</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">Y</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">i</span></a> <a id="H0:197" class="idref" href="#H0:197"><span class="id" title="binder">f</span></a>}<br>
   : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> (<a class="idref" href="HoTT.Truncations.Core.html#Tr"><span class="id" title="definition">Tr</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:191"><span class="id" title="variable">n</span></a>) (<a class="idref" href="HoTT.Pointed.pTrunc.html#ptr_functor"><span class="id" title="definition">ptr_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:191"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:195"><span class="id" title="variable">i</span></a>) (<a class="idref" href="HoTT.Pointed.pTrunc.html#ptr_functor"><span class="id" title="definition">ptr_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:191"><span class="id" title="variable">n</span></a><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:196"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_71');
       " onmouseover="
@@ -3308,7 +3307,7 @@ In particular, (n.+1)-truncation takes fiber sequences to n-exact ones.
       ">
 <span class="id" title="keyword">Definition</span> <a id="square_pfib_pequiv_cxfib" class="idref" href="#square_pfib_pequiv_cxfib"><span class="id" title="definition">square_pfib_pequiv_cxfib</span></a><br>
            {<a id="F:198" class="idref" href="#F:198"><span class="id" title="binder">F</span></a> <a id="X:199" class="idref" href="#X:199"><span class="id" title="binder">X</span></a> <a id="Y:200" class="idref" href="#Y:200"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="i:201" class="idref" href="#i:201"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:198"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:199"><span class="id" title="variable">X</span></a>) (<a id="f:202" class="idref" href="#f:202"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:199"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:200"><span class="id" title="variable">Y</span></a>)<br>
-           `{<a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">IsExact</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">oo</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">F</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">X</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">Y</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">i</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">f</span></a>}<br>
+           `{<a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">IsExact</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">purely</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">F</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">X</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">Y</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">i</span></a> <a id="H:203" class="idref" href="#H:203"><span class="id" title="binder">f</span></a>}<br>
   : <a class="idref" href="HoTT.WildCat.Square.html#Square"><span class="id" title="definition">Square</span></a> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#pequiv_cxfib"><span class="id" title="definition">pequiv_cxfib</span></a>) (<a class="idref" href="HoTT.Pointed.pEquiv.html#pequiv_pmap_idmap"><span class="id" title="definition">pequiv_pmap_idmap</span></a>) <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:201"><span class="id" title="variable">i</span></a> (<a class="idref" href="HoTT.Pointed.pFiber.html#pfib"><span class="id" title="definition">pfib</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:202"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_75');
       " onmouseover="
@@ -3353,7 +3352,7 @@ The connecting maps for the long exact sequence of loop spaces, defined as an ex
       mouseover(330, '0_3_79');
       ">
 <span class="id" title="keyword">Definition</span> <a id="connect_fiberseq" class="idref" href="#connect_fiberseq"><span class="id" title="definition">connect_fiberseq</span></a> {<a id="F:204" class="idref" href="#F:204"><span class="id" title="binder">F</span></a> <a id="X:205" class="idref" href="#X:205"><span class="id" title="binder">X</span></a> <a id="Y:206" class="idref" href="#Y:206"><span class="id" title="binder">Y</span></a>} (<a id="i:207" class="idref" href="#i:207"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:204"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:205"><span class="id" title="variable">X</span></a>) (<a id="f:208" class="idref" href="#f:208"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:205"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:206"><span class="id" title="variable">Y</span></a>)<br>
-           `{<a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">IsExact</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">oo</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">F</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">X</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">Y</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">i</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">f</span></a>}<br>
+           `{<a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">IsExact</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">purely</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">F</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">X</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">Y</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">i</span></a> <a id="H:209" class="idref" href="#H:209"><span class="id" title="binder">f</span></a>}<br>
   : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#FiberSeq"><span class="id" title="definition">FiberSeq</span></a> (<a class="idref" href="HoTT.Pointed.Loops.html#loops"><span class="id" title="definition">loops</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:206"><span class="id" title="variable">Y</span></a>) <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:204"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:205"><span class="id" title="variable">X</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
@@ -3381,7 +3380,7 @@ The connecting maps for the long exact sequence of loop spaces, defined as an ex
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="connecting_map" class="idref" href="#connecting_map"><span class="id" title="definition">connecting_map</span></a> {<a id="F:210" class="idref" href="#F:210"><span class="id" title="binder">F</span></a> <a id="X:211" class="idref" href="#X:211"><span class="id" title="binder">X</span></a> <a id="Y:212" class="idref" href="#Y:212"><span class="id" title="binder">Y</span></a>} (<a id="i:213" class="idref" href="#i:213"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:210"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:211"><span class="id" title="variable">X</span></a>) (<a id="f:214" class="idref" href="#f:214"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:211"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:212"><span class="id" title="variable">Y</span></a>)<br>
-           `{<a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">IsExact</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">oo</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">F</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">X</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">Y</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">i</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">f</span></a>}<br>
+           `{<a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">IsExact</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">purely</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">F</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">X</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">Y</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">i</span></a> <a id="H:215" class="idref" href="#H:215"><span class="id" title="binder">f</span></a>}<br>
   : <a class="idref" href="HoTT.Pointed.Loops.html#loops"><span class="id" title="definition">loops</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:212"><span class="id" title="variable">Y</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:210"><span class="id" title="variable">F</span></a><br>
   := <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i_fiberseq"><span class="id" title="definition">i_fiberseq</span></a> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#connect_fiberseq"><span class="id" title="definition">connect_fiberseq</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:213"><span class="id" title="variable">i</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:214"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_79');
@@ -3390,8 +3389,8 @@ The connecting maps for the long exact sequence of loop spaces, defined as an ex
       "><br>
 <br>
 <span class="id" title="keyword">Global Instance</span> <a id="isexact_connect_R" class="idref" href="#isexact_connect_R"><span class="id" title="instance">isexact_connect_R</span></a> {<a id="F:216" class="idref" href="#F:216"><span class="id" title="binder">F</span></a> <a id="X:217" class="idref" href="#X:217"><span class="id" title="binder">X</span></a> <a id="Y:218" class="idref" href="#Y:218"><span class="id" title="binder">Y</span></a>} (<a id="i:219" class="idref" href="#i:219"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:216"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:217"><span class="id" title="variable">X</span></a>) (<a id="f:220" class="idref" href="#f:220"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:217"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:218"><span class="id" title="variable">Y</span></a>)<br>
-       `{<a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">IsExact</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">oo</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">F</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">X</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">Y</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">i</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">f</span></a>}<br>
-  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a> (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:220"><span class="id" title="variable">f</span></a>) (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#connecting_map"><span class="id" title="definition">connecting_map</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:219"><span class="id" title="variable">i</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:220"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
+       `{<a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">IsExact</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">purely</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">F</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">X</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">Y</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">i</span></a> <a id="H:221" class="idref" href="#H:221"><span class="id" title="binder">f</span></a>}<br>
+  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#IsExact"><span class="id" title="class">IsExact</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:220"><span class="id" title="variable">f</span></a>) (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#connecting_map"><span class="id" title="definition">connecting_map</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:219"><span class="id" title="variable">i</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:220"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_79');
       " onmouseover="
       mouseover(337, '0_3_79');
@@ -3401,7 +3400,7 @@ The connecting maps for the long exact sequence of loop spaces, defined as an ex
       " onmouseover="
       mouseover(338, '0_3_79');
       "><br>
-  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#isexact_equiv_i"><span class="id" title="definition">isexact_equiv_i</span></a> (<span class="id" title="var">Y</span> := <span class="id" title="var">F</span>) <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a><br>
+  <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#isexact_equiv_i"><span class="id" title="definition">isexact_equiv_i</span></a> (<span class="id" title="var">Y</span> := <span class="id" title="var">F</span>) <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a><br>
           (<a class="idref" href="HoTT.Pointed.pFiber.html#pfib"><span class="id" title="definition">pfib</span></a> (<a class="idref" href="HoTT.Pointed.pFiber.html#pfib"><span class="id" title="definition">pfib</span></a> <span class="id" title="var">i</span>)) (<a class="idref" href="HoTT.Pointed.Loops.html#loops_functor"><span class="id" title="definition">loops_functor</span></a> <span class="id" title="var">f</span>)<br>
           (<a class="idref" href="HoTT.Pointed.pEquiv.html#6066ff0cc4f085446f9265d383e4aa41"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Pointed.Loops.html#loops_inv"><span class="id" title="definition">loops_inv</span></a> <span class="id" title="var">X</span><a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">o</span></a><a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">×</span></a><a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">E</span></a><br>
             <a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Pointed.pFiber.html#pfiber2_loops"><span class="id" title="definition">pfiber2_loops</span></a> (<a class="idref" href="HoTT.Pointed.pFiber.html#pfib"><span class="id" title="definition">pfib</span></a> <span class="id" title="var">f</span>)<a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">o</span></a><a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">×</span></a><a class="idref" href="HoTT.Pointed.pEquiv.html#2879376cadffadabc69839ab63eb581d"><span class="id" title="notation">E</span></a><br>
@@ -3498,7 +3497,7 @@ Long exact sequences are preserved by truncation.
       mouseover(359, '0_3_87');
       ">
 <span class="id" title="keyword">Definition</span> <a id="trunc_les" class="idref" href="#trunc_les"><span class="id" title="definition">trunc_les</span></a> `{<a id="H:230" class="idref" href="#H:230"><span class="id" title="binder">Univalence</span></a>} (<a id="k:231" class="idref" href="#k:231"><span class="id" title="binder">k</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#trunc_index"><span class="id" title="inductive">trunc_index</span></a>) {<a id="N:232" class="idref" href="#N:232"><span class="id" title="binder">N</span></a> : <a class="idref" href="HoTT.Homotopy.SuccessorStructure.html#SuccStr"><span class="id" title="record">SuccStr</span></a>}<br>
-           (<a id="S:233" class="idref" href="#S:233"><span class="id" title="binder">S</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#LongExactSequence"><span class="id" title="record">LongExactSequence</span></a> <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#N:232"><span class="id" title="variable">N</span></a>)<br>
+           (<a id="S:233" class="idref" href="#S:233"><span class="id" title="binder">S</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#LongExactSequence"><span class="id" title="record">LongExactSequence</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#N:232"><span class="id" title="variable">N</span></a>)<br>
   : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#LongExactSequence"><span class="id" title="record">LongExactSequence</span></a> (<a class="idref" href="HoTT.Truncations.Core.html#Tr"><span class="id" title="definition">Tr</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#k:231"><span class="id" title="variable">k</span></a>) <a class="idref" href="HoTT.Homotopy.ExactSequence.html#N:232"><span class="id" title="variable">N</span></a><br>
   := <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Build_LongExactSequence"><span class="id" title="constructor">Build_LongExactSequence</span></a><br>
        (<a class="idref" href="HoTT.Truncations.Core.html#Tr"><span class="id" title="definition">Tr</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#k:231"><span class="id" title="variable">k</span></a>) <a class="idref" href="HoTT.Homotopy.ExactSequence.html#N:232"><span class="id" title="variable">N</span></a> (<span class="id" title="keyword">fun</span> <a id="n:235" class="idref" href="#n:235"><span class="id" title="binder">n</span></a> ⇒ <a class="idref" href="HoTT.Pointed.pTrunc.html#pTr"><span class="id" title="definition">pTr</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#k:231"><span class="id" title="variable">k</span></a><a class="idref" href="HoTT.Basics.Overture.html#b76e54fb8c8bc6b885dddb77bd7d01b8"><span class="id" title="notation">.+1</span></a> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#S:233"><span class="id" title="variable">S</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#n:235"><span class="id" title="variable">n</span></a>))<br>
@@ -3537,7 +3536,7 @@ Long exact sequences are preserved by truncation.
 </div>
 <div class="goal" id="goal0_3_91"><pre><span></span></pre></div>
 <div class="doc" scenenumber="93">
-Starting from a fiber sequence, we can obtain a long oo-exact sequence of loop spaces. 
+Starting from a fiber sequence, we can obtain a long purely-exact sequence of loop spaces. 
 </div>
 <div scenenumber="95" class="code">
 <span class="command" onmouseout="
@@ -3546,8 +3545,8 @@ Starting from a fiber sequence, we can obtain a long oo-exact sequence of loop s
       mouseover(372, '0_3_95');
       ">
 <span class="id" title="keyword">Definition</span> <a id="loops_les" class="idref" href="#loops_les"><span class="id" title="definition">loops_les</span></a> {<a id="F:241" class="idref" href="#F:241"><span class="id" title="binder">F</span></a> <a id="X:242" class="idref" href="#X:242"><span class="id" title="binder">X</span></a> <a id="Y:243" class="idref" href="#Y:243"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="i:244" class="idref" href="#i:244"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:241"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:242"><span class="id" title="variable">X</span></a>) (<a id="f:245" class="idref" href="#f:245"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:242"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:243"><span class="id" title="variable">Y</span></a>)<br>
-           `{<a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">IsExact</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">oo</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">F</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">X</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">Y</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">i</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">f</span></a>}<br>
-  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#LongExactSequence"><span class="id" title="record">LongExactSequence</span></a> <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a> (<a class="idref" href="HoTT.Homotopy.SuccessorStructure.html#::succ_scope:'N3'"><span class="id" title="notation">N3</span></a>).</span><span class="command" onmouseout="
+           `{<a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">IsExact</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">purely</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">F</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">X</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">Y</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">i</span></a> <a id="H:246" class="idref" href="#H:246"><span class="id" title="binder">f</span></a>}<br>
+  : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#LongExactSequence"><span class="id" title="record">LongExactSequence</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> (<a class="idref" href="HoTT.Homotopy.SuccessorStructure.html#::succ_scope:'N3'"><span class="id" title="notation">N3</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_95');
       " onmouseover="
       mouseover(373, '0_3_95');
@@ -3557,7 +3556,7 @@ Starting from a fiber sequence, we can obtain a long oo-exact sequence of loop s
       " onmouseover="
       mouseover(374, '0_3_95');
       "><br>
-  <span class="id" title="var">srefine</span> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#Build_LongExactSequence"><span class="id" title="constructor">Build_LongExactSequence</span></a> <a class="idref" href="HoTT.Truncations.Core.html#oo"><span class="id" title="abbreviation">oo</span></a> (<a class="idref" href="HoTT.Homotopy.SuccessorStructure.html#::succ_scope:'N3'"><span class="id" title="notation">N3</span></a>) (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#loops_carrier"><span class="id" title="definition">loops_carrier</span></a> <span class="id" title="var">F</span> <span class="id" title="var">X</span> <span class="id" title="var">Y</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+  <span class="id" title="var">srefine</span> (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#Build_LongExactSequence"><span class="id" title="constructor">Build_LongExactSequence</span></a> <a class="idref" href="HoTT.Modalities.Identity.html#purely"><span class="id" title="definition">purely</span></a> (<a class="idref" href="HoTT.Homotopy.SuccessorStructure.html#::succ_scope:'N3'"><span class="id" title="notation">N3</span></a>) (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#loops_carrier"><span class="id" title="definition">loops_carrier</span></a> <span class="id" title="var">F</span> <span class="id" title="var">X</span> <span class="id" title="var">Y</span>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_95');
       " onmouseover="
       mouseover(375, '0_3_95');
@@ -3607,7 +3606,7 @@ And from that, a long exact sequence of homotopy groups (though for now it is ju
       mouseover(385, '0_3_99');
       ">
 <span class="id" title="keyword">Definition</span> <a id="Pi_les" class="idref" href="#Pi_les"><span class="id" title="definition">Pi_les</span></a> `{<a id="H:247" class="idref" href="#H:247"><span class="id" title="binder">Univalence</span></a>} {<a id="F:248" class="idref" href="#F:248"><span class="id" title="binder">F</span></a> <a id="X:249" class="idref" href="#X:249"><span class="id" title="binder">X</span></a> <a id="Y:250" class="idref" href="#Y:250"><span class="id" title="binder">Y</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#pType"><span class="id" title="record">pType</span></a>} (<a id="i:251" class="idref" href="#i:251"><span class="id" title="binder">i</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#F:248"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:249"><span class="id" title="variable">X</span></a>) (<a id="f:252" class="idref" href="#f:252"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#X:249"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Pointed.Core.html#dce20fa1e59aa814d0a053d0ce7a8a86"><span class="id" title="notation">-&gt;*</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#Y:250"><span class="id" title="variable">Y</span></a>)<br>
-           `{<a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">IsExact</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">oo</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">F</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">X</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">Y</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">i</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">f</span></a>}<br>
+           `{<a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">IsExact</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">purely</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">F</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">X</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">Y</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">i</span></a> <a id="H0:253" class="idref" href="#H0:253"><span class="id" title="binder">f</span></a>}<br>
   : <a class="idref" href="HoTT.Homotopy.ExactSequence.html#LongExactSequence"><span class="id" title="record">LongExactSequence</span></a> (<a class="idref" href="HoTT.Truncations.Core.html#Tr"><span class="id" title="definition">Tr</span></a> (-1)) (<a class="idref" href="HoTT.Homotopy.SuccessorStructure.html#::succ_scope:'N3'"><span class="id" title="notation">N3</span></a>)<br>
   := <a class="idref" href="HoTT.Homotopy.ExactSequence.html#trunc_les"><span class="id" title="definition">trunc_les</span></a> (-1) (<a class="idref" href="HoTT.Homotopy.ExactSequence.html#loops_les"><span class="id" title="definition">loops_les</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#i:251"><span class="id" title="variable">i</span></a> <a class="idref" href="HoTT.Homotopy.ExactSequence.html#f:252"><span class="id" title="variable">f</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_99');
