@@ -36,20 +36,20 @@ Time: 0s">
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 1
-Time: 0.03s">
-<div class="time" style="width: 42.857142857143%"></div>
+Time: 0.032s">
+<div class="time" style="width: 34.408602150538%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 1
-Time: 0.066s">
-<div class="time" style="width: 94.285714285714%"></div>
+Time: 0.07s">
+<div class="time" style="width: 75.268817204301%"></div>
 <pre>
 Require Import Equiv.BiInv Idempotents.</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 2
-Time: 0.07s">
+Time: 0.093s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Spaces.BAut Spaces.BAut.Bool.</pre>
@@ -96,8 +96,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 12
-Time: 0.006s">
-<div class="time" style="width: 8.5714285714286%"></div>
+Time: 0.009s">
+<div class="time" style="width: 9.6774193548387%"></div>
 <pre>Definition nontrivial_qidem_baut_baut_bool
   : IsQuasiIdempotent (preidem_idmap (BAut (BAut Bool)))
     := negb_center2_baut_baut_bool.</pre>
@@ -105,7 +105,7 @@ Time: 0.006s">
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 14
 Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+<div class="time" style="width: 2.1505376344086%"></div>
 <pre>
 
   Let ret := splitting_preidem_retractof_qidem (preidem_idmap (BAut (BAut Bool))).</pre>
@@ -127,7 +127,7 @@ Time: 0s">
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 18
 Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+<div class="time" style="width: 1.0752688172043%"></div>
 <pre>
   Let issect := retract_issect ret : r o s == idmap.</pre>
 </div>
@@ -142,8 +142,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 22
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.0752688172043%"></div>
 <pre>Definition splitting_preidem_notequiv_qidem_baut_baut_bool
   : ~ (s o r == idmap).</pre>
 </div>
@@ -164,49 +164,49 @@ Time: 0s">
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 25
 Time: 0.003s">
-<div class="time" style="width: 4.2857142857143%"></div>
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>
     assert (p := oops nontrivial_qidem_baut_baut_bool).</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 26
 Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+<div class="time" style="width: 1.0752688172043%"></div>
 <pre>
     assert (q := oops (isqidem_idmap (BAut (BAut Bool)))); clear oops.</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 27
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>
     apply nontrivial_negb_center_baut_baut_bool.</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 28
-Time: 0.032s">
-<div class="time" style="width: 45.714285714286%"></div>
+Time: 0.041s">
+<div class="time" style="width: 44.086021505376%"></div>
 <pre>
     refine (p^ @ ap s _ @ q).</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 29
 Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+<div class="time" style="width: 1.0752688172043%"></div>
 <pre>
     pose (contr_splitting_preidem_idmap (BAut (BAut Bool))).</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 30
 Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+<div class="time" style="width: 2.1505376344086%"></div>
 <pre>
     apply path_contr.</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 31
-Time: 0.027s">
-<div class="time" style="width: 38.571428571429%"></div>
+Time: 0.033s">
+<div class="time" style="width: 35.483870967742%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -221,8 +221,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 35
-Time: 0.017s">
-<div class="time" style="width: 24.285714285714%"></div>
+Time: 0.023s">
+<div class="time" style="width: 24.731182795699%"></div>
 <pre>Definition not_all_coherent_qidem_baut_baut_bool
   : ~ (forall q : IsQuasiIdempotent (preidem_idmap (BAut (BAut Bool))),
          { S : Splitting_PreIdempotent (preidem_idmap _) &amp; s S = q }).</pre>
@@ -257,8 +257,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 41
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.0752688172043%"></div>
 <pre> apply isequiv_biinv; split.</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
@@ -271,7 +271,7 @@ Time: 0s">
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 42
 Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+<div class="time" style="width: 1.0752688172043%"></div>
 <pre> exists r; exact issect.</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
@@ -283,14 +283,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 43
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.1505376344086%"></div>
 <pre> exists (fun q =&gt; (oops q).1).</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 43
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
         exact (fun q =&gt; (oops q).2).</pre>
 </div>
@@ -302,22 +302,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 44
-Time: 0.002s">
-<div class="time" style="width: 2.8571428571429%"></div>
+Time: 0.003s">
+<div class="time" style="width: 3.2258064516129%"></div>
 <pre>
     apply splitting_preidem_notequiv_qidem_baut_baut_bool; intros q.</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 1.4285714285714%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.1505376344086%"></div>
 <pre>
     refine (ap s (ap r (eisretr s q)^) @ _).</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 46
-Time: 0.035s">
-<div class="time" style="width: 50%"></div>
+Time: 0.044s">
+<div class="time" style="width: 47.311827956989%"></div>
 <pre>
     refine (ap s (issect (s^-1 q)) @ _).</pre>
 </div>
@@ -330,8 +330,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 48
-Time: 0.008s">
-<div class="time" style="width: 11.428571428571%"></div>
+Time: 0.013s">
+<div class="time" style="width: 13.978494623656%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -347,8 +347,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IncoherentIdempotent.v
 Line: 52
-Time: 0.006s">
-<div class="time" style="width: 8.5714285714286%"></div>
+Time: 0.009s">
+<div class="time" style="width: 9.6774193548387%"></div>
 <pre>End IncoherentQuasiIdempotent.</pre>
 </div>
 <div class="code" title="File: IncoherentIdempotent.v

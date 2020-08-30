@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: FreeGroup.v
 Line: 1
-Time: 0.027s">
-<div class="time" style="width: 23.684210526316%"></div>
+Time: 0.036s">
+<div class="time" style="width: 25.174825174825%"></div>
 <pre>Require Import Basics Types.</pre>
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 1
-Time: 0.077s">
-<div class="time" style="width: 67.543859649123%"></div>
+Time: 0.093s">
+<div class="time" style="width: 65.034965034965%"></div>
 <pre>
 Require Import Groups.Group.</pre>
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 2
 Time: 0.002s">
-<div class="time" style="width: 1.7543859649123%"></div>
+<div class="time" style="width: 1.3986013986014%"></div>
 <pre>
 Require Import WildCat.</pre>
 </div>
@@ -61,7 +61,7 @@ Time: 0s">
 <div class="code" title="File: FreeGroup.v
 Line: 7
 Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>Require Export Algebra.Groups.FreeGroup.ListQuotient.</pre>
 </div>
 <div class="code" title="File: FreeGroup.v
@@ -77,7 +77,7 @@ Time: 0s">
 <div class="code" title="File: FreeGroup.v
 Line: 11
 Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>Theorem equiv_isfreegroup_rec `{Funext} (G F : Group) (A : Type) (i : A -&gt; F)
   `{IsFreeGroupOn A F i}
   : (F $-&gt; G) &lt;~&gt; (A -&gt; G).</pre>
@@ -91,8 +91,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 14
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
   snrapply Build_Equiv.</pre>
 </div>
@@ -146,7 +146,7 @@ Time: 0s">
 <div class="code" title="File: FreeGroup.v
 Line: 20
 Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
   snrapply contr_equiv'.</pre>
 </div>
@@ -192,8 +192,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
   exact _.</pre>
 </div>
@@ -215,7 +215,7 @@ Time: 0s">
 <div class="code" title="File: FreeGroup.v
 Line: 29
 Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>Theorem equiv_freegroup_rec `{Funext} (G : Group) (A : Type)
   : (FreeGroup A $-&gt; G) &lt;~&gt; (A -&gt; G).</pre>
 </div>
@@ -228,8 +228,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 31
-Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.3986013986014%"></div>
 <pre>
   rapply equiv_isfreegroup_rec.</pre>
 </div>
@@ -265,15 +265,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 38
-Time: 0.007s">
-<div class="time" style="width: 6.140350877193%"></div>
+Time: 0.009s">
+<div class="time" style="width: 6.2937062937063%"></div>
 <pre>
   apply trunc_forall.</pre>
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 39
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -287,8 +287,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 42
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>Definition equiv_isfregroupon_isequiv_precomp `{Funext} (F : Group) (A : Type) (i : A -&gt; F)
   : IsFreeGroupOn A F i &lt;~&gt; forall G, IsEquiv (fun f : F $-&gt; G =&gt; f o i).</pre>
 </div>
@@ -301,15 +301,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 44
-Time: 0.114s">
+Time: 0.143s">
 <div class="time" style="width: 100%"></div>
 <pre>
   srapply equiv_iff_hprop.</pre>
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 45
-Time: 0.023s">
-<div class="time" style="width: 20.175438596491%"></div>
+Time: 0.027s">
+<div class="time" style="width: 18.881118881119%"></div>
 <pre>
   1: intros k G; rapply (equiv_isequiv (equiv_isfreegroup_rec G F A i)).</pre>
 </div>
@@ -376,15 +376,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 53
-Time: 0.003s">
-<div class="time" style="width: 2.6315789473684%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.7972027972028%"></div>
 <pre>
   exact _.</pre>
 </div>
 <div class="code" title="File: FreeGroup.v
 Line: 54
 Time: 0.001s">
-<div class="time" style="width: 0.87719298245614%"></div>
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
 Defined.</pre>
 </div>
