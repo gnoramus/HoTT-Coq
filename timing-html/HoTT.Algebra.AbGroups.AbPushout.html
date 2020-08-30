@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: AbPushout.v
 Line: 1
-Time: 0.06s">
-<div class="time" style="width: 21.58273381295%"></div>
+Time: 0.044s">
+<div class="time" style="width: 20%"></div>
 <pre>Require Import Basics Types WildCat.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 1
-Time: 0.09s">
-<div class="time" style="width: 32.374100719424%"></div>
+Time: 0.068s">
+<div class="time" style="width: 30.909090909091%"></div>
 <pre>
 Require Import Algebra.Groups Algebra.AbGroups.AbelianGroup.</pre>
 </div>
@@ -69,7 +69,7 @@ Time: 0s">
 <div class="code" title="File: AbPushout.v
 Line: 8
 Time: 0.002s">
-<div class="time" style="width: 0.71942446043165%"></div>
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>Definition ab_pushout {A B C : AbGroup}
            (f : A $-&gt; B) (g : A $-&gt; C) : AbGroup
   := QuotientAbGroup
@@ -86,8 +86,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 14
-Time: 0.004s">
-<div class="time" style="width: 1.4388489208633%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.3636363636364%"></div>
 <pre>Theorem ab_pushout_rec {A B C Y : AbGroup} {f : A $-&gt; B} {g : A $-&gt; C}
         (b : B $-&gt; Y) (c : C $-&gt; Y) (p : b o f == c o g)
   : ab_pushout f g $-&gt; Y.</pre>
@@ -101,8 +101,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 17
-Time: 0.005s">
-<div class="time" style="width: 1.7985611510791%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   srapply grp_quotient_rec.</pre>
 </div>
@@ -128,14 +128,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 20
-Time: 0.243s">
-<div class="time" style="width: 87.410071942446%"></div>
+Time: 0.211s">
+<div class="time" style="width: 95.909090909091%"></div>
 <pre> intros [[x y] q]; strip_truncations; simpl.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 20
-Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct q as [a q].</pre>
 </div>
@@ -147,8 +147,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 21
-Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (ap (uncurry (fun x y =&gt; b x + c y)) q^ @ _).</pre>
 </div>
@@ -161,29 +161,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 23
-Time: 0.004s">
-<div class="time" style="width: 1.4388489208633%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.3636363636364%"></div>
 <pre>
     refine (ap011 sg_op (p a) (preserves_negate (f:=c $o g) _) @ _).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 24
-Time: 0.003s">
-<div class="time" style="width: 1.0791366906475%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
     exact (right_inverse _).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 25
-Time: 0.062s">
-<div class="time" style="width: 22.302158273381%"></div>
+Time: 0.054s">
+<div class="time" style="width: 24.545454545455%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 26
-Time: 0.003s">
-<div class="time" style="width: 1.0791366906475%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
 Corollary ab_pushout_rec_uncurried {A B C : AbGroup}
@@ -201,21 +201,21 @@ Proof.</pre>
 <div class="code" title="File: AbPushout.v
 Line: 32
 Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
   intros [b [c p]]; exact (ab_pushout_rec b c p).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 33
-Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 34
-Time: 0.058s">
-<div class="time" style="width: 20.863309352518%"></div>
+Time: 0.045s">
+<div class="time" style="width: 20.454545454545%"></div>
 <pre>
 
 Definition ab_pushout_inl {A B C : AbGroup} {f : A $-&gt; B} {g : A $-&gt; C}
@@ -223,8 +223,8 @@ Definition ab_pushout_inl {A B C : AbGroup} {f : A $-&gt; B} {g : A $-&gt; C}
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 37
-Time: 0.053s">
-<div class="time" style="width: 19.064748201439%"></div>
+Time: 0.038s">
+<div class="time" style="width: 17.272727272727%"></div>
 <pre>
 
 Definition ab_pushout_inr {A B C : AbGroup} {f : A $-&gt; B} {g : A $-&gt; C}
@@ -232,8 +232,8 @@ Definition ab_pushout_inr {A B C : AbGroup} {f : A $-&gt; B} {g : A $-&gt; C}
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 40
-Time: 0.003s">
-<div class="time" style="width: 1.0791366906475%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
 
 Proposition ab_pushout_commsq {A B C : AbGroup} {f : A $-&gt; B} {g : A $-&gt; C}
@@ -255,22 +255,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 45
-Time: 0.011s">
-<div class="time" style="width: 3.9568345323741%"></div>
+Time: 0.007s">
+<div class="time" style="width: 3.1818181818182%"></div>
 <pre>
   apply qglue.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 46
-Time: 0.015s">
-<div class="time" style="width: 5.3956834532374%"></div>
+Time: 0.01s">
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>
   pose (bc := grp_image_in (ab_biprod_corec f (g $o ab_homo_negation)) a).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 47
-Time: 0.072s">
-<div class="time" style="width: 25.89928057554%"></div>
+Time: 0.053s">
+<div class="time" style="width: 24.090909090909%"></div>
 <pre>
   exists (-bc); simpl.</pre>
 </div>
@@ -290,8 +290,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 50
-Time: 0.028s">
-<div class="time" style="width: 10.071942446043%"></div>
+Time: 0.021s">
+<div class="time" style="width: 9.5454545454545%"></div>
 <pre> exact (right_identity (- f a))^.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
@@ -303,42 +303,42 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 51
-Time: 0.018s">
-<div class="time" style="width: 6.4748201438849%"></div>
+Time: 0.011s">
+<div class="time" style="width: 5%"></div>
 <pre> rewrite (preserves_negate (f:=g)).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 51
-Time: 0.018s">
-<div class="time" style="width: 6.4748201438849%"></div>
+Time: 0.011s">
+<div class="time" style="width: 5%"></div>
 <pre>
     refine (negate_involutive _ @ _).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 52
-Time: 0.016s">
-<div class="time" style="width: 5.7553956834532%"></div>
+Time: 0.01s">
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>
     symmetry.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 53
-Time: 0.031s">
-<div class="time" style="width: 11.151079136691%"></div>
+Time: 0.024s">
+<div class="time" style="width: 10.909090909091%"></div>
 <pre>
     exact (ap (fun x =&gt; x + g a) negate_mon_unit @ left_identity _).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 54
-Time: 0.016s">
-<div class="time" style="width: 5.7553956834532%"></div>
+Time: 0.01s">
+<div class="time" style="width: 4.5454545454545%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 55
-Time: 0.125s">
-<div class="time" style="width: 44.964028776978%"></div>
+Time: 0.093s">
+<div class="time" style="width: 42.272727272727%"></div>
 <pre>
 
 Proposition ab_pushout_rec_beta `{Funext} {A B C Y : AbGroup}
@@ -356,29 +356,29 @@ Proof.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 62
-Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   pose (N := grp_image (ab_biprod_corec f (g $o ab_homo_negation))).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 63
-Time: 0.128s">
-<div class="time" style="width: 46.043165467626%"></div>
+Time: 0.097s">
+<div class="time" style="width: 44.090909090909%"></div>
 <pre>
   apply (equiv_ap' (equiv_grp_quotient_ump (G:=ab_biprod B C) N Y)^-1%equiv _ _)^-1.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 64
-Time: 0.278s">
+Time: 0.22s">
 <div class="time" style="width: 100%"></div>
 <pre>
   srapply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 65
-Time: 0.134s">
-<div class="time" style="width: 48.201438848921%"></div>
+Time: 0.105s">
+<div class="time" style="width: 47.727272727273%"></div>
 <pre>
   change (ab_pushout_rec
             (phi $o ab_pushout_inl) (phi $o ab_pushout_inr)
@@ -387,8 +387,8 @@ Time: 0.134s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 69
-Time: 0.005s">
-<div class="time" style="width: 1.7985611510791%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
   refine (grp_quotient_rec_beta N Y _ _ @ _).</pre>
 </div>
@@ -401,22 +401,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 71
-Time: 0.057s">
-<div class="time" style="width: 20.503597122302%"></div>
+Time: 0.054s">
+<div class="time" style="width: 24.545454545455%"></div>
 <pre>
   exact (ab_biprod_rec_beta' (phi $o grp_quotient_map) bc).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 72
-Time: 0.17s">
-<div class="time" style="width: 61.151079136691%"></div>
+Time: 0.147s">
+<div class="time" style="width: 66.818181818182%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 73
 Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
 
 Theorem isequiv_ab_pushout_rec `{Funext} {A B C Y : AbGroup}
@@ -453,7 +453,7 @@ Time: 0s">
 <div class="code" title="File: AbPushout.v
 Line: 80
 Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
     refine (phi $o ab_pushout_inl; phi $o ab_pushout_inr; _).</pre>
 </div>
@@ -467,14 +467,14 @@ Time: 0s">
 <div class="code" title="File: AbPushout.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
     apply (ap phi).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 83
 Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre>
     exact (ab_pushout_commsq a).</pre>
 </div>
@@ -487,14 +487,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 85
-Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intro phi.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 85
-Time: 0.003s">
-<div class="time" style="width: 1.0791366906475%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
     exact (ab_pushout_rec_beta phi).</pre>
 </div>
@@ -507,14 +507,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 87
-Time: 0.009s">
-<div class="time" style="width: 3.2374100719424%"></div>
+Time: 0.007s">
+<div class="time" style="width: 3.1818181818182%"></div>
 <pre> intros [b [c p]].</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 87
-Time: 0.003s">
-<div class="time" style="width: 1.0791366906475%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.90909090909091%"></div>
 <pre>
     srapply path_sigma.</pre>
 </div>
@@ -528,27 +528,27 @@ Time: 0s">
 <div class="code" title="File: AbPushout.v
 Line: 89
 Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+<div class="time" style="width: 0.45454545454545%"></div>
 <pre> apply equiv_path_grouphomomorphism.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 89
-Time: 0.013s">
-<div class="time" style="width: 4.6762589928058%"></div>
+Time: 0.008s">
+<div class="time" style="width: 3.6363636363636%"></div>
 <pre>
       intro x; simpl.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 90
-Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (ap (fun k =&gt; b x + k) (grp_homo_unit c) @ _).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 91
-Time: 0.007s">
-<div class="time" style="width: 2.5179856115108%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
       apply right_identity.</pre>
 </div>
@@ -561,14 +561,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 93
-Time: 0.007s">
-<div class="time" style="width: 2.5179856115108%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.2727272727273%"></div>
 <pre> refine (transport_sigma' _ _ @ _).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 93
-Time: 0.073s">
-<div class="time" style="width: 26.258992805755%"></div>
+Time: 0.053s">
+<div class="time" style="width: 24.090909090909%"></div>
 <pre>
       apply path_sigma_hprop; simpl.</pre>
 </div>
@@ -581,29 +581,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 95
-Time: 0.006s">
-<div class="time" style="width: 2.158273381295%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
       intro y; simpl.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 96
-Time: 0.001s">
-<div class="time" style="width: 0.35971223021583%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       refine (ap (fun k =&gt; k + c y) (grp_homo_unit b) @ _).</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 97
-Time: 0.007s">
-<div class="time" style="width: 2.5179856115108%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.8181818181818%"></div>
 <pre>
       apply left_identity.</pre>
 </div>
 <div class="code" title="File: AbPushout.v
 Line: 98
-Time: 0.204s">
-<div class="time" style="width: 73.381294964029%"></div>
+Time: 0.134s">
+<div class="time" style="width: 60.909090909091%"></div>
 <pre>
 Defined.</pre>
 </div>
