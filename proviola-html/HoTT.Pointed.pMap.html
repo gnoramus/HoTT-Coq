@@ -253,12 +253,12 @@
           
 
             i = 47;
-            data = "1 subgoal (ID 83)	  	  A : pType	  B : pType	  f : pUnit ->* B	  g : A ->* pUnit	  ============================	  f o* g ==* f o* pconst	";
+            data = "1 subgoal (ID 82)	  	  A : pType	  B : pType	  f : pUnit ->* B	  g : A ->* pUnit	  ============================	  f o* g ==* f o* pconst	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 89)	  	  A : pType	  B : pType	  f : pUnit ->* B	  g : A ->* pUnit	  ============================	  g ==* pconst	";
+            data = "1 subgoal (ID 88)	  	  A : pType	  B : pType	  f : pUnit ->* B	  g : A ->* pUnit	  ============================	  g ==* pconst	";
             responses[i]=data;
           
 
@@ -308,72 +308,72 @@
           
 
             i = 58;
-            data = "1 subgoal (ID 126)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : {f : A -> Type & forall x : A, f x}	  ============================	  forall	  g : forall a : A,	      B a ->*	      (equiv_functor_arrow' 1 issig_ptype	       oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) C a,	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) C) g	";
+            data = "1 subgoal (ID 125)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : {f : A -> Type & forall x : A, f x}	  ============================	  forall	  g : forall a : A,	      B a ->*	      (equiv_functor_arrow' 1 issig_ptype	       oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) C a,	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) C) g	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 131)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  ============================	  forall	  g : forall a : A,	      B a ->*	      (equiv_functor_arrow' 1 issig_ptype	       oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) 	        (C; c0) a,	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) 	       (C; c0)) g	";
+            data = "1 subgoal (ID 130)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  ============================	  forall	  g : forall a : A,	      B a ->*	      (equiv_functor_arrow' 1 issig_ptype	       oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) 	        (C; c0) a,	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) 	       (C; c0)) g	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 155)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : {f	      : forall x : A,	        B x -> {| pointed_type := C x; ispointed_type := c0 x |} &	      forall x : A,	      f x (point (B x)) =	      point {| pointed_type := C x; ispointed_type := c0 x |}}	  ============================	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) 	       (C; c0))	    ((equiv_functor_forall_id	        (fun a : A =>	         issig_pmap (B a) {| pointed_type := C a; ispointed_type := c0 a |})	      oE equiv_sigT_coind	           (fun x : A =>	            B x -> {| pointed_type := C x; ispointed_type := c0 x |})	           (fun (x : A)	              (f : B x -> {| pointed_type := C x; ispointed_type := c0 x |})	            =>	            f (point (B x)) =	            point {| pointed_type := C x; ispointed_type := c0 x |})) g)	";
+            data = "1 subgoal (ID 153)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : {f	      : forall x : A,	        B x -> {| pointed_type := C x; ispointed_type := c0 x |} &	      forall x : A,	      f x (point (B x)) =	      point {| pointed_type := C x; ispointed_type := c0 x |}}	  ============================	  P	    ((equiv_functor_arrow' 1 issig_ptype	      oE equiv_sigT_coind (fun _ : A => Type) (fun _ : A => idmap)) 	       (C; c0))	    ((equiv_functor_forall_id	        (fun a : A =>	         issig_pmap (B a) {| pointed_type := C a; ispointed_type := c0 a |})	      oE equiv_sigT_coind	           (fun x : A =>	            B x -> {| pointed_type := C x; ispointed_type := c0 x |})	           (fun (x : A)	              (f : B x -> {| pointed_type := C x; ispointed_type := c0 x |})	            =>	            f (point (B x)) =	            point {| pointed_type := C x; ispointed_type := c0 x |})) g)	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 157)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : {f : forall x : A, B x -> C x &	      forall x : A, f x (point (B x)) = point (C x)}	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sigT_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sigT_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x)) g))	";
+            data = "1 subgoal (ID 155)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : {f : forall x : A, B x -> C x &	      forall x : A, f x (point (B x)) = point (C x)}	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sigT_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sigT_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x)) g))	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 162)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (point (B x)) = point (C x)	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sigT_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sigT_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x))	          (g; g0)))	";
+            data = "1 subgoal (ID 160)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (point (B x)) = point (C x)	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sigT_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sigT_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x))	          (g; g0)))	";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 163)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sigT_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sigT_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x))	          (g; g0)))	";
+            data = "1 subgoal (ID 161)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (functor_forall idmap	       (fun (_ : A) (u : {X : Type & X}) =>	        {| pointed_type := u.1; ispointed_type := u.2 |})	       (sigT_coind_uncurried (fun _ : A => idmap) (C; c0)))	    (functor_forall idmap	       (fun (a : A) (u : {f : B a -> C a & f (point (B a)) = point (C a)}) =>	        {| pointed_fun := u.1; dpoint_eq := u.2 |})	       (sigT_coind_uncurried	          (fun (x : A) (f : B x -> C x) => f (point (B x)) = point (C x))	          (g; g0)))	";
             responses[i]=data;
           
 
             i = 64;
-            data = "1 subgoal (ID 165)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (fun b : A =>	     {|	     pointed_type := ((C; c0).1 b; (C; c0).2 b).1;	     ispointed_type := ((C; c0).1 b; (C; c0).2 b).2 |})	    (fun b : A =>	     {|	     pointed_fun := ((g; g0).1 b; (g; g0).2 b).1;	     dpoint_eq := ((g; g0).1 b; (g; g0).2 b).2 |})	";
+            data = "1 subgoal (ID 162)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (fun b : A =>	     {|	     pointed_type := ((C; c0).1 b; (C; c0).2 b).1;	     ispointed_type := ((C; c0).1 b; (C; c0).2 b).2 |})	    (fun b : A =>	     {|	     pointed_fun := ((g; g0).1 b; (g; g0).2 b).1;	     dpoint_eq := ((g; g0).1 b; (g; g0).2 b).2 |})	";
             responses[i]=data;
           
 
             i = 65;
-            data = "1 subgoal (ID 167)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 subgoal (ID 163)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 subgoal (ID 173)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 subgoal (ID 169)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 67;
-            data = "2 subgoals (ID 179)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  ============================	  p = path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0		subgoal 2 (ID 180) is:	 P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	   (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "2 subgoals (ID 175)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  ============================	  p = path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0		subgoal 2 (ID 176) is:	 P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	   (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 68;
-            data = "1 subgoal (ID 180)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  X : p = path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 subgoal (ID 176)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  p := path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	   : (fun x : A => g x (ispointed_type (B x))) = c0	  X : p = path_forall (fun x : A => g x (ispointed_type (B x))) c0 g0	  ============================	  P (fun b : A => {| pointed_type := C b; ispointed_type := c0 b |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 192)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = g x (ispointed_type (B x))	  X : 1 =	      path_forall (fun x : A => g x (ispointed_type (B x)))	        (fun x : A => g x (ispointed_type (B x))) g0	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 subgoal (ID 188)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = g x (ispointed_type (B x))	  X : 1 =	      path_forall (fun x : A => g x (ispointed_type (B x)))	        (fun x : A => g x (ispointed_type (B x))) g0	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 subgoal (ID 198)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = g x (ispointed_type (B x))	  X : (path_forall (fun x : A => g x (ispointed_type (B x)))	         (fun x : A => g x (ispointed_type (B x))))^-1 1 = g0	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
+            data = "1 subgoal (ID 194)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = g x (ispointed_type (B x))	  X : (path_forall (fun x : A => g x (ispointed_type (B x)))	         (fun x : A => g x (ispointed_type (B x))))^-1 1 = g0	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A => {| pointed_fun := g b; dpoint_eq := g0 b |})	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 202)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A =>	     {|	     pointed_fun := g b;	     dpoint_eq := (path_forall (fun x : A => g x (ispointed_type (B x)))	                     (fun x : A => g x (ispointed_type (B x))))^-1 1 b |})	";
+            data = "1 subgoal (ID 198)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A =>	     {|	     pointed_fun := g b;	     dpoint_eq := (path_forall (fun x : A => g x (ispointed_type (B x)))	                     (fun x : A => g x (ispointed_type (B x))))^-1 1 b |})	";
             responses[i]=data;
           
 
@@ -428,32 +428,32 @@
           
 
             i = 82;
-            data = "1 subgoal (ID 214)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  p (point A) =	  (equiv_path_pforall (f (point A)) (g (point A)))^-1	    (dpoint_eq f @ (dpoint_eq g)^)	";
+            data = "1 subgoal (ID 212)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  p (point A) =	  (equiv_path_pforall (f (point A)) (g (point A)))^-1	    (dpoint_eq f @ (dpoint_eq g)^)	";
             responses[i]=data;
           
 
             i = 83;
-            data = "2 focused subgoals	(shelved: 1) (ID 233)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  ?Goal0 (dpoint_eq f @ (dpoint_eq g)^) = p (point A)		subgoal 2 (ID 237) is:	 ?Goal0 = (equiv_path_pforall (f (point A)) (g (point A)))^-1	";
+            data = "2 focused subgoals	(shelved: 1) (ID 230)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  ?Goal0 (dpoint_eq f @ (dpoint_eq g)^) = p (point A)		subgoal 2 (ID 232) is:	 ?Goal0 = (equiv_path_pforall (f (point A)) (g (point A)))^-1	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 233)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f @ (dpoint_eq g)^) = p (point A)	";
+            data = "1 subgoal (ID 230)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f @ (dpoint_eq g)^) = p (point A)	";
             responses[i]=data;
           
 
             i = 85;
-            data = "1 subgoal (ID 248)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f @ (dpoint_eq g)^) ==* p (point A)	";
+            data = "1 subgoal (ID 243)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f @ (dpoint_eq g)^) ==* p (point A)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 282)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f) @* phomotopy_path (dpoint_eq g)^ ==*	  phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	";
+            data = "1 subgoal (ID 276)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq f) @* phomotopy_path (dpoint_eq g)^ ==*	  phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 subgoal (ID 289)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq g)^ ==* (phomotopy_path (point_eq g))^*	";
+            data = "1 subgoal (ID 283)	  	  H : Funext	  A : pType	  B : pType	  C : B -> pType	  f, g : A ->* (ppforall b : B, C b)	  p : forall a : A, f a ==* g a	  q : p (point A) ==*	      phomotopy_path (point_eq f) @* (phomotopy_path (point_eq g))^*	  ============================	  phomotopy_path (dpoint_eq g)^ ==* (phomotopy_path (point_eq g))^*	";
             responses[i]=data;
           
 
@@ -518,12 +518,12 @@
           
 
             i = 100;
-            data = "1 subgoal (ID 235)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	  dpoint_eq (functor_pforall_right g g₀ f) @	  (dpoint_eq (functor_pforall_right g' g₀' f'))^	";
+            data = "1 subgoal (ID 235)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	  dpoint_eq (functor_pforall_right g g₀ f) @	  (dpoint_eq (functor_pforall_right g' g₀' f'))^	1 subgoal (ID 399)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  p point (f point) @ ap (g' point) (q point) =	  ap (g point) (q point) @ p point (f' point)	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 401)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  p point (f point) @ ap (g' point) (q point) =	  ap (g point) (q point) @ p point (f' point)	1 subgoal (ID 425)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  ap (g point) (q point) @ p point (f' point) =	  p point (f point) @ ap (g' point) (q point)	";
+            data = "1 subgoal (ID 421)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  ap (g point) (q point) @ p point (f' point) =	  p point (f point) @ ap (g' point) (q point)	";
             responses[i]=data;
           
 
@@ -548,7 +548,7 @@
           
 
             i = 106;
-            data = "1 subgoal (ID 330)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g : forall a : A, B a -> C a	  f : forall x : A, B x	  ============================	  functor2_pforall_right (fun (a : A) (x0 : B a) => 1)	    (phomotopy_reflexive {| pointed_fun := f; dpoint_eq := 1 |}) 1 ==*	  phomotopy_reflexive	    (functor_pforall_right g 1 {| pointed_fun := f; dpoint_eq := 1 |})	";
+            data = "1 subgoal (ID 328)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g : forall a : A, B a -> C a	  f : forall x : A, B x	  ============================	  functor2_pforall_right (fun (a : A) (x0 : B a) => 1)	    (phomotopy_reflexive {| pointed_fun := f; dpoint_eq := 1 |}) 1 ==*	  phomotopy_reflexive	    (functor_pforall_right g 1 {| pointed_fun := f; dpoint_eq := 1 |})	";
             responses[i]=data;
           
 
@@ -648,17 +648,17 @@
           
 
             i = 126;
-            data = "1 subgoal (ID 333)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	  (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	1 subgoal (ID 342)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  1 =	  (ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	   (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))) @	  (ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	   point_eq (h (point A)))^	";
+            data = "1 subgoal (ID 333)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	  (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	1 subgoal (ID 341)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  1 =	  (ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	   (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))) @	  (ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	   point_eq (h (point A)))^	";
             responses[i]=data;
           
 
             i = 127;
-            data = "1 subgoal (ID 371)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	  point_eq (h (point A)) =	  ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	  (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))	";
+            data = "1 subgoal (ID 369)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) @	  point_eq (h (point A)) =	  ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	  (ap (h (point A)) (point_eq (g (point A))) @ point_eq (h (point A)))	";
             responses[i]=data;
           
 
             i = 128;
-            data = "1 subgoal (ID 398)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) =	  ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	  ap (h (point A)) (point_eq (g (point A)))	";
+            data = "1 subgoal (ID 395)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (h (point A)) (ap (g (point A)) (dpoint_eq f) @ point_eq (g (point A))) =	  ap (fun x : P (point A) => h (point A) (g (point A) x)) (dpoint_eq f) @	  ap (h (point A)) (point_eq (g (point A)))	";
             responses[i]=data;
           
 
@@ -728,22 +728,22 @@
           
 
             i = 142;
-            data = "1 subgoal (ID 423)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  functor2_pforall_right (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) (point_htpy (phomotopy_reflexive (g (point A)))) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
+            data = "1 subgoal (ID 422)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  functor2_pforall_right (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) (point_htpy (phomotopy_reflexive (g (point A)))) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 subgoal (ID 425)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  forall (Q : A -> pType) (g : forall a : A, P a ->* Q a),	  functor2_pforall_right (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) (point_htpy (phomotopy_reflexive (g (point A)))) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
+            data = "1 subgoal (ID 424)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  forall (Q : A -> pType) (g : forall a : A, P a ->* Q a),	  functor2_pforall_right (fun a : A => phomotopy_reflexive (g a))	    (phomotopy_reflexive f) (point_htpy (phomotopy_reflexive (g (point A)))) ==*	  phomotopy_reflexive (pmap_compose_ppforall g f)	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 subgoal (ID 434)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  forall (C : A -> Type) (g : forall a : A, P a -> C a),	  functor2_pforall_right	    (fun a : A => phomotopy_reflexive (pmap_from_pointed (g a)))	    (phomotopy_reflexive f)	    (point_htpy (phomotopy_reflexive (pmap_from_pointed (g (point A))))) ==*	  phomotopy_reflexive	    (pmap_compose_ppforall (fun a : A => pmap_from_pointed (g a)) f)	";
+            data = "1 subgoal (ID 432)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  forall (C : A -> Type) (g : forall a : A, P a -> C a),	  functor2_pforall_right	    (fun a : A => phomotopy_reflexive (pmap_from_pointed (g a)))	    (phomotopy_reflexive f)	    (point_htpy (phomotopy_reflexive (pmap_from_pointed (g (point A))))) ==*	  phomotopy_reflexive	    (pmap_compose_ppforall (fun a : A => pmap_from_pointed (g a)) f)	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 subgoal (ID 436)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  Q : A -> Type	  g : forall a : A, P a -> Q a	  ============================	  functor2_pforall_right	    (fun a : A => phomotopy_reflexive (pmap_from_pointed (g a)))	    (phomotopy_reflexive f)	    (point_htpy (phomotopy_reflexive (pmap_from_pointed (g (point A))))) ==*	  phomotopy_reflexive	    (pmap_compose_ppforall (fun a : A => pmap_from_pointed (g a)) f)	";
+            data = "1 subgoal (ID 434)	  	  H : Funext	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  Q : A -> Type	  g : forall a : A, P a -> Q a	  ============================	  functor2_pforall_right	    (fun a : A => phomotopy_reflexive (pmap_from_pointed (g a)))	    (phomotopy_reflexive f)	    (point_htpy (phomotopy_reflexive (pmap_from_pointed (g (point A))))) ==*	  phomotopy_reflexive	    (pmap_compose_ppforall (fun a : A => pmap_from_pointed (g a)) f)	";
             responses[i]=data;
           
 
@@ -778,7 +778,7 @@
           
 
             i = 152;
-            data = "1 subgoal (ID 452)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^	1 subgoal (ID 471)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^ = (fun x0 : A => 1) (point A)	";
+            data = "1 subgoal (ID 452)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  (fun x0 : A => 1) (point A) =	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^	1 subgoal (ID 469)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	  (dpoint_eq f)^ = (fun x0 : A => 1) (point A)	";
             responses[i]=data;
           
 
@@ -808,12 +808,12 @@
           
 
             i = 158;
-            data = "1 subgoal (ID 489)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (pmap_compose_ppforall g) (path_pforall (reflexivity f)) =	  path_pforall (pmap_compose_ppforall2_right g (reflexivity f))	";
+            data = "1 subgoal (ID 488)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  ap (pmap_compose_ppforall g) (path_pforall (reflexivity f)) =	  path_pforall (pmap_compose_ppforall2_right g (reflexivity f))	";
             responses[i]=data;
           
 
             i = 159;
-            data = "1 subgoal (ID 527)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall2_right g (reflexivity f) =	  reflexivity (pmap_compose_ppforall g f)	";
+            data = "1 subgoal (ID 525)	  	  H : Funext	  A : pType	  P : A -> pType	  Q : A -> pType	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall2_right g (reflexivity f) =	  reflexivity (pmap_compose_ppforall g f)	";
             responses[i]=data;
           
 
@@ -939,7 +939,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab661"></a><h2 class="section">Trivially pointed maps</h2>
+<a id="lab665"></a><h2 class="section">Trivially pointed maps</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Not infrequently we have a map between two unpointed types and want to consider it as a pointed map that trivially respects some given point in the domain. 

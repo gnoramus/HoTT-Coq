@@ -328,27 +328,27 @@
           
 
             i = 62;
-            data = "1 subgoal (ID 172)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  ============================	  forall a : A * B,	  transport (paths (pushl (center A))) (pglue a)	    ((fun a0 : A => ap pushl (contr a0)) (fst a)) =	  (fun b : B => pglue (center A, b)) (snd a)	1 subgoal (ID 194)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  transport (paths (pushl (center A))) (pglue (a, b)) (ap pushl (contr a)) =	  pglue (center A, b)	";
+            data = "1 subgoal (ID 172)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  ============================	  forall a : A * B,	  transport (paths (pushl (center A))) (pglue a)	    ((fun a0 : A => ap pushl (contr a0)) (fst a)) =	  (fun b : B => pglue (center A, b)) (snd a)	1 subgoal (ID 193)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  transport (paths (pushl (center A))) (pglue (a, b)) (ap pushl (contr a)) =	  pglue (center A, b)	";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 215)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  transport (paths (pushl (center A))) (pglue (a, b)) (ap pushl (contr a)) =	  transport (fun a' : A => joinl a' = joinr b) (contr a)^ (jglue a b)	";
+            data = "1 subgoal (ID 213)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  transport (paths (pushl (center A))) (pglue (a, b)) (ap pushl (contr a)) =	  transport (fun a' : A => joinl a' = joinr b) (contr a)^ (jglue a b)	";
             responses[i]=data;
           
 
             i = 64;
-            data = "1 subgoal (ID 239)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  ap pushl (contr a) @ pglue (a, b) =	  ((ap joinl (contr a)^)^ @ jglue a b) @ ap (fun _ : A => joinr b) (contr a)^	";
+            data = "1 subgoal (ID 236)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  ap pushl (contr a) @ pglue (a, b) =	  ((ap joinl (contr a)^)^ @ jglue a b) @ ap (fun _ : A => joinr b) (contr a)^	";
             responses[i]=data;
           
 
             i = 65;
-            data = "1 subgoal (ID 257)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  ap pushl (contr a) @ pglue (a, b) =	  ap joinl (contr a) @ (jglue a b @ ap (fun _ : A => joinr b) (contr a)^)	";
+            data = "1 subgoal (ID 254)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  ap pushl (contr a) @ pglue (a, b) =	  ap joinl (contr a) @ (jglue a b @ ap (fun _ : A => joinr b) (contr a)^)	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 subgoal (ID 275)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  ap pushl (contr a) @ pglue (a, b) = ap joinl (contr a) @ jglue a b	";
+            data = "1 subgoal (ID 272)	  	  A : Type	  B : Type	  Contr0 : Contr A	  y : Join A B	  a : A	  b : B	  ============================	  ap pushl (contr a) @ pglue (a, b) = ap joinl (contr a) @ jglue a b	";
             responses[i]=data;
           
 
@@ -393,7 +393,7 @@
           
 
             i = 75;
-            data = "1 subgoal (ID 166)	  	  A : Type	  B : Type	  ============================	  Pushout fst snd <~> Pushout snd fst	";
+            data = "1 subgoal (ID 164)	  	  A : Type	  B : Type	  ============================	  Pushout fst snd <~> Pushout snd fst	";
             responses[i]=data;
           
 
@@ -523,32 +523,32 @@
           
 
             i = 101;
-            data = "1 subgoal (ID 327)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  DPath	    (fun x : Join A B =>	     functor_join (fun x0 : A => h (f x0)) (fun x0 : B => i (g x0)) x =	     functor_join h i (functor_join f g x)) (jglue a b) 1 1	";
+            data = "1 subgoal (ID 326)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  DPath	    (fun x : Join A B =>	     functor_join (fun x0 : A => h (f x0)) (fun x0 : B => i (g x0)) x =	     functor_join h i (functor_join f g x)) (jglue a b) 1 1	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 345)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  PathSquare 1 1	    (ap (functor_join (fun x : A => h (f x)) (fun x : B => i (g x)))	       (jglue a b))	    (ap (fun x : Join A B => functor_join h i (functor_join f g x))	       (jglue a b))	";
+            data = "1 subgoal (ID 344)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  PathSquare 1 1	    (ap (functor_join (fun x : A => h (f x)) (fun x : B => i (g x)))	       (jglue a b))	    (ap (fun x : Join A B => functor_join h i (functor_join f g x))	       (jglue a b))	";
             responses[i]=data;
           
 
             i = 103;
-            data = "1 subgoal (ID 354)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  ap (functor_join (fun x : A => h (f x)) (fun x : B => i (g x))) (jglue a b) =	  ap (fun x : Join A B => functor_join h i (functor_join f g x)) (jglue a b)	";
+            data = "1 subgoal (ID 353)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  ap (functor_join (fun x : A => h (f x)) (fun x : B => i (g x))) (jglue a b) =	  ap (fun x : Join A B => functor_join h i (functor_join f g x)) (jglue a b)	";
             responses[i]=data;
           
 
             i = 104;
-            data = "1 subgoal (ID 366)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  ap (fun x : Join A B => functor_join h i (functor_join f g x)) (jglue a b) =	  ap (functor_join (fun x : A => h (f x)) (fun x : B => i (g x))) (jglue a b)	";
+            data = "1 subgoal (ID 363)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  ap (fun x : Join A B => functor_join h i (functor_join f g x)) (jglue a b) =	  ap (functor_join (fun x : A => h (f x)) (fun x : B => i (g x))) (jglue a b)	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 subgoal (ID 370)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  ap (functor_join h i) (ap (functor_join f g) (jglue a b)) =	  ap (functor_join (fun x : A => h (f x)) (fun x : B => i (g x))) (jglue a b)	";
+            data = "1 subgoal (ID 367)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  ap (functor_join h i) (ap (functor_join f g) (jglue a b)) =	  ap (functor_join (fun x : A => h (f x)) (fun x : B => i (g x))) (jglue a b)	";
             responses[i]=data;
           
 
             i = 106;
-            data = "1 subgoal (ID 385)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  jglue (h (f a)) (i (g b)) = jglue (h (f a)) (i (g b))	";
+            data = "1 subgoal (ID 382)	  	  A : Type	  B : Type	  C : Type	  D : Type	  E : Type	  F : Type	  f : A -> C	  g : B -> D	  h : C -> E	  i : D -> F	  a : A	  b : B	  ============================	  jglue (h (f a)) (i (g b)) = jglue (h (f a)) (i (g b))	";
             responses[i]=data;
           
 
@@ -588,17 +588,17 @@
           
 
             i = 114;
-            data = "1 subgoal (ID 349)	  	  A : Type	  a : A	  b : A	  ============================	  ((ap (functor_join idmap idmap) (jglue a b))^ @ 1) @ ap idmap (jglue a b) =	  1	";
+            data = "1 subgoal (ID 348)	  	  A : Type	  a : A	  b : A	  ============================	  ((ap (functor_join idmap idmap) (jglue a b))^ @ 1) @ ap idmap (jglue a b) =	  1	";
             responses[i]=data;
           
 
             i = 115;
-            data = "1 subgoal (ID 353)	  	  A : Type	  a : A	  b : A	  ============================	  ((jglue a b)^ @ 1) @ ap idmap (jglue a b) = 1	";
+            data = "1 subgoal (ID 352)	  	  A : Type	  a : A	  b : A	  ============================	  ((jglue a b)^ @ 1) @ ap idmap (jglue a b) = 1	";
             responses[i]=data;
           
 
             i = 116;
-            data = "1 subgoal (ID 367)	  	  A : Type	  a : A	  b : A	  ============================	  (jglue a b)^ @ jglue a b = 1	";
+            data = "1 subgoal (ID 366)	  	  A : Type	  a : A	  b : A	  ============================	  (jglue a b)^ @ jglue a b = 1	";
             responses[i]=data;
           
 
@@ -648,27 +648,27 @@
           
 
             i = 126;
-            data = "2 subgoals (ID 464)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  DPath (fun x : Join C D => functor_join f g (functor_join f^-1 g^-1 x) = x)	    (jglue c d) ((fun a : C => ap joinl (eisretr f a)) c)	    ((fun b : D => ap joinr (eisretr g b)) d)		subgoal 2 (ID 466) is:	 DPath (fun x : Join A B => functor_join f^-1 g^-1 (functor_join f g x) = x)	   (jglue c d) ((fun a : A => ap joinl (eissect f a)) c)	   ((fun b : B => ap joinr (eissect g b)) d)	";
+            data = "2 subgoals (ID 460)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  DPath (fun x : Join C D => functor_join f g (functor_join f^-1 g^-1 x) = x)	    (jglue c d) ((fun a : C => ap joinl (eisretr f a)) c)	    ((fun b : D => ap joinr (eisretr g b)) d)		subgoal 2 (ID 462) is:	 DPath (fun x : Join A B => functor_join f^-1 g^-1 (functor_join f g x) = x)	   (jglue c d) ((fun a : A => ap joinl (eissect f a)) c)	   ((fun b : B => ap joinr (eissect g b)) d)	";
             responses[i]=data;
           
 
             i = 127;
-            data = "2 subgoals (ID 484)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  PathSquare (ap joinl (eisretr f c)) (ap joinr (eisretr g d))	    (ap (fun x : Join C D => functor_join f g (functor_join f^-1 g^-1 x))	       (jglue c d)) (ap idmap (jglue c d))		subgoal 2 (ID 502) is:	 PathSquare (ap joinl (eissect f c)) (ap joinr (eissect g d))	   (ap (fun x : Join A B => functor_join f^-1 g^-1 (functor_join f g x))	      (jglue c d)) (ap idmap (jglue c d))	";
+            data = "2 subgoals (ID 480)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  PathSquare (ap joinl (eisretr f c)) (ap joinr (eisretr g d))	    (ap (fun x : Join C D => functor_join f g (functor_join f^-1 g^-1 x))	       (jglue c d)) (ap idmap (jglue c d))		subgoal 2 (ID 498) is:	 PathSquare (ap joinl (eissect f c)) (ap joinr (eissect g d))	   (ap (fun x : Join A B => functor_join f^-1 g^-1 (functor_join f g x))	      (jglue c d)) (ap idmap (jglue c d))	";
             responses[i]=data;
           
 
             i = 128;
-            data = "2 subgoals (ID 514)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  PathSquare (ap joinl (eisretr f c)) (ap joinr (eisretr g d))	    (ap (functor_join f g) (ap (functor_join f^-1 g^-1) (jglue c d)))	    (ap idmap (jglue c d))		subgoal 2 (ID 502) is:	 PathSquare (ap joinl (eissect f c)) (ap joinr (eissect g d))	   (ap (fun x : Join A B => functor_join f^-1 g^-1 (functor_join f g x))	      (jglue c d)) (ap idmap (jglue c d))	";
+            data = "2 subgoals (ID 510)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  PathSquare (ap joinl (eisretr f c)) (ap joinr (eisretr g d))	    (ap (functor_join f g) (ap (functor_join f^-1 g^-1) (jglue c d)))	    (ap idmap (jglue c d))		subgoal 2 (ID 498) is:	 PathSquare (ap joinl (eissect f c)) (ap joinr (eissect g d))	   (ap (fun x : Join A B => functor_join f^-1 g^-1 (functor_join f g x))	      (jglue c d)) (ap idmap (jglue c d))	";
             responses[i]=data;
           
 
             i = 129;
-            data = "2 subgoals (ID 514)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  PathSquare (ap joinl (eisretr f c)) (ap joinr (eisretr g d))	    (ap (functor_join f g) (ap (functor_join f^-1 g^-1) (jglue c d)))	    (ap idmap (jglue c d))		subgoal 2 (ID 533) is:	 PathSquare (ap joinl (eissect f c)) (ap joinr (eissect g d))	   (ap (functor_join f^-1 g^-1) (ap (functor_join f g) (jglue c d)))	   (ap idmap (jglue c d))	";
+            data = "2 subgoals (ID 510)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  PathSquare (ap joinl (eisretr f c)) (ap joinr (eisretr g d))	    (ap (functor_join f g) (ap (functor_join f^-1 g^-1) (jglue c d)))	    (ap idmap (jglue c d))		subgoal 2 (ID 529) is:	 PathSquare (ap joinl (eissect f c)) (ap joinr (eissect g d))	   (ap (functor_join f^-1 g^-1) (ap (functor_join f g) (jglue c d)))	   (ap idmap (jglue c d))	";
             responses[i]=data;
           
 
             i = 130;
-            data = "2 subgoals (ID 555)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  PathSquare (ap joinl (eisretr f c)) (ap joinr (eisretr g d))	    (jglue (f (f^-1 c)) (g (g^-1 d))) (jglue c d)		subgoal 2 (ID 573) is:	 PathSquare (ap joinl (eissect f c)) (ap joinr (eissect g d))	   (jglue (f^-1 (f c)) (g^-1 (g d))) (jglue c d)	";
+            data = "2 subgoals (ID 551)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> C	  IsEquiv0 : IsEquiv f	  g : B -> D	  IsEquiv1 : IsEquiv g	  c : C	  d : D	  ============================	  PathSquare (ap joinl (eisretr f c)) (ap joinr (eisretr g d))	    (jglue (f (f^-1 c)) (g (g^-1 d))) (jglue c d)		subgoal 2 (ID 569) is:	 PathSquare (ap joinl (eissect f c)) (ap joinr (eissect g d))	   (jglue (f^-1 (f c)) (g^-1 (g d))) (jglue c d)	";
             responses[i]=data;
           
 
@@ -723,32 +723,32 @@
           
 
             i = 141;
-            data = "1 subgoal (ID 357)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  Pushout fst snd -> Contr (Pushout fst snd)	";
+            data = "1 subgoal (ID 356)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  Pushout fst snd -> Contr (Pushout fst snd)	";
             responses[i]=data;
           
 
             i = 142;
-            data = "2 subgoals (ID 538)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  A -> Contr (Pushout fst snd)		subgoal 2 (ID 540) is:	 B -> Contr (Pushout fst snd)	";
+            data = "2 subgoals (ID 536)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  A -> Contr (Pushout fst snd)		subgoal 2 (ID 537) is:	 B -> Contr (Pushout fst snd)	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 subgoal (ID 538)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  A -> Contr (Pushout fst snd)	1 subgoal (ID 542)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  a : A	  ============================	  Contr A	";
+            data = "1 subgoal (ID 536)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  A -> Contr (Pushout fst snd)	1 subgoal (ID 539)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  a : A	  ============================	  Contr A	";
             responses[i]=data;
           
 
             i = 144;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 540)		subgoal 1 (ID 540) is:	 B -> Contr (Pushout fst snd)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 537)		subgoal 1 (ID 537) is:	 B -> Contr (Pushout fst snd)	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 subgoal (ID 540)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  B -> Contr (Pushout fst snd)	1 subgoal (ID 625)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  b : B	  ============================	  Contr (Join B A)	";
+            data = "1 subgoal (ID 537)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  B -> Contr (Pushout fst snd)	1 subgoal (ID 621)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  b : B	  ============================	  Contr (Join B A)	";
             responses[i]=data;
           
 
             i = 146;
-            data = "1 subgoal (ID 626)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  b : B	  ============================	  Contr B	";
+            data = "1 subgoal (ID 622)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  b : B	  ============================	  Contr B	";
             responses[i]=data;
           
 
@@ -898,7 +898,7 @@
           
 
             i = 176;
-            data = "1 subgoal (ID 485)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  ============================	  forall b : A, (fun w : Pushout fst snd => k w = c tt) (pushl b)	1 subgoal (ID 492)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  a : A	  ============================	  k (pushl a) = c tt	";
+            data = "1 subgoal (ID 485)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  ============================	  forall b : A, (fun w : Pushout fst snd => k w = c tt) (pushl b)	1 subgoal (ID 491)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  a : A	  ============================	  k (pushl a) = c tt	";
             responses[i]=data;
           
 
@@ -908,7 +908,7 @@
           
 
             i = 178;
-            data = "1 subgoal (ID 487)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  ============================	  forall c0 : B, (fun w : Pushout fst snd => k w = c tt) (pushr c0)	1 subgoal (ID 503)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  b : B	  ============================	  k (pushr b) = c tt	";
+            data = "1 subgoal (ID 487)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  ============================	  forall c0 : B, (fun w : Pushout fst snd => k w = c tt) (pushr c0)	1 subgoal (ID 501)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  b : B	  ============================	  k (pushr b) = c tt	";
             responses[i]=data;
           
 
@@ -918,47 +918,47 @@
           
 
             i = 180;
-            data = "1 subgoal (ID 489)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  ============================	  forall a : A * B,	  transport (fun w : Pushout fst snd => k w = c tt) 	    (pglue a) ((fun a0 : A => ap10 (h a0) ..1 tt) (fst a)) =	  (fun b : B => (g b)^) (snd a)	1 subgoal (ID 511)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  a : A	  b : B	  ============================	  transport (fun w : Pushout fst snd => k w = c tt) 	    (pglue (a, b)) (ap10 (h (fst (a, b))) ..1 tt) = 	  (g (snd (a, b)))^	";
+            data = "1 subgoal (ID 489)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  ============================	  forall a : A * B,	  transport (fun w : Pushout fst snd => k w = c tt) 	    (pglue a) ((fun a0 : A => ap10 (h a0) ..1 tt) (fst a)) =	  (fun b : B => (g b)^) (snd a)	1 subgoal (ID 509)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  a : A	  b : B	  ============================	  transport (fun w : Pushout fst snd => k w = c tt) 	    (pglue (a, b)) (ap10 (h (fst (a, b))) ..1 tt) = 	  (g (snd (a, b)))^	";
             responses[i]=data;
           
 
             i = 181;
-            data = "1 subgoal (ID 542)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  a : A	  b : B	  ============================	  (ap k (pglue (a, b)))^ @ ap10 (h a) ..1 tt = (g b)^	";
+            data = "1 subgoal (ID 539)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : In (Tr (m +2+ n)) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), In (Tr n) A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  f := fun a : A => (unit_name (k (pushl a)); fun b : B => ap k (jglue a b))	   : A -> {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  h : forall x : A, f x = (c; g)	  a : A	  b : B	  ============================	  (ap k (pglue (a, b)))^ @ ap10 (h a) ..1 tt = (g b)^	";
             responses[i]=data;
           
 
             i = 182;
-            data = "1 subgoal (ID 572)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ha2 : transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	          (fun b : B => ap k (jglue a b)) = g	  ============================	  (ap k (pglue (a, b)))^ @ ap10 ha1 tt = (g b)^	";
+            data = "1 subgoal (ID 569)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ha2 : transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	          (fun b : B => ap k (jglue a b)) = g	  ============================	  (ap k (pglue (a, b)))^ @ ap10 ha1 tt = (g b)^	";
             responses[i]=data;
           
 
             i = 183;
-            data = "1 subgoal (ID 580)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ha2 : transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	          (fun b : B => ap k (jglue a b)) = g	  ============================	  (ap k (pglue (a, b)))^ @ ((ap10 ha1 tt)^)^ = (g b)^	";
+            data = "1 subgoal (ID 577)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ha2 : transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	          (fun b : B => ap k (jglue a b)) = g	  ============================	  (ap k (pglue (a, b)))^ @ ((ap10 ha1 tt)^)^ = (g b)^	";
             responses[i]=data;
           
 
             i = 184;
-            data = "1 subgoal (ID 592)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ha2 : transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	          (fun b : B => ap k (jglue a b)) = g	  ============================	  ((ap10 ha1 tt)^ @ ap k (pglue (a, b)))^ = (g b)^	";
+            data = "1 subgoal (ID 589)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ha2 : transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	          (fun b : B => ap k (jglue a b)) = g	  ============================	  ((ap10 ha1 tt)^ @ ap k (pglue (a, b)))^ = (g b)^	";
             responses[i]=data;
           
 
             i = 185;
-            data = "1 subgoal (ID 602)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ha2 : transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	          (fun b : B => ap k (jglue a b)) = g	  ============================	  (ap10 ha1 tt)^ @ ap k (pglue (a, b)) = g b	";
+            data = "1 subgoal (ID 599)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ha2 : transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	          (fun b : B => ap k (jglue a b)) = g	  ============================	  (ap10 ha1 tt)^ @ ap k (pglue (a, b)) = g b	";
             responses[i]=data;
           
 
             i = 186;
-            data = "1 subgoal (ID 615)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ============================	  (ap10 ha1 tt)^ @ ap k (pglue (a, b)) =	  transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	    (fun b0 : B => ap k (jglue a b0)) b	";
+            data = "1 subgoal (ID 611)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ============================	  (ap10 ha1 tt)^ @ ap k (pglue (a, b)) =	  transport (fun s : Unit -> C => forall x : B, s tt = k (pushr x)) ha1	    (fun b0 : B => ap k (jglue a b0)) b	";
             responses[i]=data;
           
 
             i = 187;
-            data = "1 subgoal (ID 635)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ============================	  (ap10 ha1 tt)^ @ ap k (pglue (a, b)) =	  ((ap (fun x : Unit -> C => x tt) ha1)^ @ ap k (jglue a b)) @	  ap (fun _ : Unit -> C => k (pushr b)) ha1	";
+            data = "1 subgoal (ID 631)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ============================	  (ap10 ha1 tt)^ @ ap k (pglue (a, b)) =	  ((ap (fun x : Unit -> C => x tt) ha1)^ @ ap k (jglue a b)) @	  ap (fun _ : Unit -> C => k (pushr b)) ha1	";
             responses[i]=data;
           
 
             i = 188;
-            data = "1 subgoal (ID 654)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ============================	  (ap10 ha1 tt)^ @ ap k (pglue (a, b)) =	  (ap (fun x : Unit -> C => x tt) ha1)^ @ ap k (jglue a b)	";
+            data = "1 subgoal (ID 650)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  B : Type	  H0 : IsConnected (Tr m) A	  H1 : IsConnected (Tr n) B	  C : Type	  H2 : IsTrunc (m +2+ n) C	  k : Join A B -> C	  i := @istrunc_inO_tr	   : forall (n : trunc_index) (A : Type), IsTrunc n A -> IsTrunc n A	  X : IsTrunc m {s : Unit -> C & forall x : B, s tt = k (pushr x)}	  c : Unit -> C	  g : forall x : B, c tt = k (pushr x)	  a : A	  b : B	  ha1 : unit_name (k (pushl a)) = c	  ============================	  (ap10 ha1 tt)^ @ ap k (pglue (a, b)) =	  (ap (fun x : Unit -> C => x tt) ha1)^ @ ap k (jglue a b)	";
             responses[i]=data;
           
 
@@ -1078,7 +1078,7 @@
           
 
             i = 212;
-            data = "1 subgoal (ID 50)	  	  A : Type	  B : Type	  a : A	  b : B	  ============================	  sq_path 1 = sq_path (concat_pV (jglue a b) @ (concat_pV (jglue a b))^)	";
+            data = "1 subgoal (ID 49)	  	  A : Type	  B : Type	  a : A	  b : B	  ============================	  sq_path 1 = sq_path (concat_pV (jglue a b) @ (concat_pV (jglue a b))^)	";
             responses[i]=data;
           
 
@@ -1259,7 +1259,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab626"></a><h1 class="section">Joins</h1>
+<a id="lab630"></a><h1 class="section">Joins</h1>
 <div class="doc" scenenumber="4"> </div>
 
  The join is the pushout of two types under their product. 

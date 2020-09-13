@@ -298,12 +298,12 @@
           
 
             i = 56;
-            data = "1 subgoal (ID 38)	  	  A : Type	  B : Type	  P : A -> A -> Type	  e : B <~> A	  K : forall b0 b1 : B, P (e b0) (e b1) <~> b0 = b1	  b0, b1 : B	  ============================	  P (e b0) (e b1) <~> e b0 = e b1	";
+            data = "1 subgoal (ID 36)	  	  A : Type	  B : Type	  P : A -> A -> Type	  e : B <~> A	  K : forall b0 b1 : B, P (e b0) (e b1) <~> b0 = b1	  b0, b1 : B	  ============================	  P (e b0) (e b1) <~> e b0 = e b1	";
             responses[i]=data;
           
 
             i = 57;
-            data = "1 subgoal (ID 45)	  	  A : Type	  B : Type	  P : A -> A -> Type	  e : B <~> A	  K : forall b0 b1 : B, P (e b0) (e b1) <~> b0 = b1	  b0, b1 : B	  ============================	  b0 = b1 <~> e b0 = e b1	";
+            data = "1 subgoal (ID 42)	  	  A : Type	  B : Type	  P : A -> A -> Type	  e : B <~> A	  K : forall b0 b1 : B, P (e b0) (e b1) <~> b0 = b1	  b0, b1 : B	  ============================	  b0 = b1 <~> e b0 = e b1	";
             responses[i]=data;
           
 
@@ -483,22 +483,22 @@
           
 
             i = 93;
-            data = "1 subgoal (ID 147)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D : forall a : A, B a -> C a -> Type	  cac : Contr {x : A & C x}	  a : A	  c : C a	  ccd : Contr {y : B a & D a y c}	  b := (center {y : B a & D a y c}).1 : B a	  d := (center {y : B a & D a y c}).2 : D a b c	  a' : A	  b' : B a'	  c' : C a'	  d' : D a' b' c'	  ac' := (a'; c') : {x : _ & C x}	  bd' := ((b'; d') : {y : B ac'.1 & D ac'.1 y ac'.2})	   : {y : B ac'.1 & D ac'.1 y ac'.2}	  ============================	  ((a; b); c; d) = ((ac'.1; bd'.1); ac'.2; bd'.2)	";
+            data = "1 subgoal (ID 146)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D : forall a : A, B a -> C a -> Type	  cac : Contr {x : A & C x}	  a : A	  c : C a	  ccd : Contr {y : B a & D a y c}	  b := (center {y : B a & D a y c}).1 : B a	  d := (center {y : B a & D a y c}).2 : D a b c	  a' : A	  b' : B a'	  c' : C a'	  d' : D a' b' c'	  ac' := (a'; c') : {x : _ & C x}	  bd' := ((b'; d') : {y : B ac'.1 & D ac'.1 y ac'.2})	   : {y : B ac'.1 & D ac'.1 y ac'.2}	  ============================	  ((a; b); c; d) = ((ac'.1; bd'.1); ac'.2; bd'.2)	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 149)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D : forall a : A, B a -> C a -> Type	  cac : Contr {x : A & C x}	  a : A	  c : C a	  ccd : Contr {y : B a & D a y c}	  b := (center {y : B a & D a y c}).1 : B a	  d := (center {y : B a & D a y c}).2 : D a b c	  ac' : {x : _ & C x}	  bd' : {y : B ac'.1 & D ac'.1 y ac'.2}	  ============================	  ((a; b); c; d) = ((ac'.1; bd'.1); ac'.2; bd'.2)	";
+            data = "1 subgoal (ID 148)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D : forall a : A, B a -> C a -> Type	  cac : Contr {x : A & C x}	  a : A	  c : C a	  ccd : Contr {y : B a & D a y c}	  b := (center {y : B a & D a y c}).1 : B a	  d := (center {y : B a & D a y c}).2 : D a b c	  ac' : {x : _ & C x}	  bd' : {y : B ac'.1 & D ac'.1 y ac'.2}	  ============================	  ((a; b); c; d) = ((ac'.1; bd'.1); ac'.2; bd'.2)	";
             responses[i]=data;
           
 
             i = 95;
-            data = "1 subgoal (ID 164)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D : forall a : A, B a -> C a -> Type	  cac : Contr {x : A & C x}	  a : A	  c : C a	  ccd : Contr {y : B a & D a y c}	  b := (center {y : B a & D a y c}).1 : B a	  d := (center {y : B a & D a y c}).2 : D a b c	  bd' : {y : B (a; c).1 & D (a; c).1 y (a; c).2}	  ============================	  ((a; b); c; d) = (((a; c).1; bd'.1); (a; c).2; bd'.2)	";
+            data = "1 subgoal (ID 163)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D : forall a : A, B a -> C a -> Type	  cac : Contr {x : A & C x}	  a : A	  c : C a	  ccd : Contr {y : B a & D a y c}	  b := (center {y : B a & D a y c}).1 : B a	  d := (center {y : B a & D a y c}).2 : D a b c	  bd' : {y : B (a; c).1 & D (a; c).1 y (a; c).2}	  ============================	  ((a; b); c; d) = (((a; c).1; bd'.1); (a; c).2; bd'.2)	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 subgoal (ID 175)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D : forall a : A, B a -> C a -> Type	  cac : Contr {x : A & C x}	  a : A	  c : C a	  ccd : Contr {y : B a & D a y c}	  b := (center {y : B a & D a y c}).1 : B a	  d := (center {y : B a & D a y c}).2 : D a b c	  ============================	  ((a; b); c; d) = (((a; c).1; (b; d).1); (a; c).2; (b; d).2)	";
+            data = "1 subgoal (ID 174)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D : forall a : A, B a -> C a -> Type	  cac : Contr {x : A & C x}	  a : A	  c : C a	  ccd : Contr {y : B a & D a y c}	  b := (center {y : B a & D a y c}).1 : B a	  d := (center {y : B a & D a y c}).2 : D a b c	  ============================	  ((a; b); c; d) = (((a; c).1; (b; d).1); (a; c).2; (b; d).2)	";
             responses[i]=data;
           
 

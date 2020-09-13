@@ -538,7 +538,7 @@
           
 
             i = 104;
-            data = "1 subgoal (ID 62)	  	  ============================	  forall x : Bool,	  (if negb x as b return (negb (negb b) = b) then 1 else 1) =	  ap negb (if x as b return (negb (negb b) = b) then 1 else 1)	";
+            data = "1 subgoal (ID 61)	  	  ============================	  forall x : Bool,	  (if negb x as b return (negb (negb b) = b) then 1 else 1) =	  ap negb (if x as b return (negb (negb b) = b) then 1 else 1)	";
             responses[i]=data;
           
 
@@ -658,7 +658,7 @@
           
 
             i = 128;
-            data = "1 subgoal (ID 87)	  	  f : Bool -> Bool	  H : IsEquiv f	  X : f^-1 true = true	  X0 : f^-1 false = false	  ============================	  false = negb true	1 subgoal (ID 137)	  	  f : Bool -> Bool	  H : IsEquiv f	  X : f^-1 true = true	  X0 : f^-1 false = false	  ============================	  false = false	";
+            data = "1 subgoal (ID 87)	  	  f : Bool -> Bool	  H : IsEquiv f	  X : f^-1 true = true	  X0 : f^-1 false = false	  ============================	  false = negb true	1 subgoal (ID 129)	  	  f : Bool -> Bool	  H : IsEquiv f	  X : f^-1 true = true	  X0 : f^-1 false = false	  ============================	  false = false	";
             responses[i]=data;
           
 
@@ -668,7 +668,7 @@
           
 
             i = 130;
-            data = "1 subgoal (ID 99)	  	  f : Bool -> Bool	  H : IsEquiv f	  X : f^-1 false = true	  X0 : f^-1 true = false	  ============================	  true = negb false	1 subgoal (ID 140)	  	  f : Bool -> Bool	  H : IsEquiv f	  X : f^-1 false = true	  X0 : f^-1 true = false	  ============================	  true = true	";
+            data = "1 subgoal (ID 99)	  	  f : Bool -> Bool	  H : IsEquiv f	  X : f^-1 false = true	  X0 : f^-1 true = false	  ============================	  true = negb false	1 subgoal (ID 131)	  	  f : Bool -> Bool	  H : IsEquiv f	  X : f^-1 false = true	  X0 : f^-1 true = false	  ============================	  true = true	";
             responses[i]=data;
           
 
@@ -763,17 +763,17 @@
           
 
             i = 149;
-            data = "2 subgoals (ID 64)	  	  e : Bool <~> Bool	  ============================	  e true = (if e true then 1%equiv else equiv_negb) true		subgoal 2 (ID 66) is:	 e false = (if e true then 1%equiv else equiv_negb) false	";
+            data = "2 subgoals (ID 62)	  	  e : Bool <~> Bool	  ============================	  e true = (if e true then 1%equiv else equiv_negb) true		subgoal 2 (ID 63) is:	 e false = (if e true then 1%equiv else equiv_negb) false	";
             responses[i]=data;
           
 
             i = 150;
-            data = "1 subgoal (ID 64)	  	  e : Bool <~> Bool	  ============================	  e true = (if e true then 1%equiv else equiv_negb) true	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 66)		subgoal 1 (ID 66) is:	 e false = (if e true then 1%equiv else equiv_negb) false	";
+            data = "1 subgoal (ID 62)	  	  e : Bool <~> Bool	  ============================	  e true = (if e true then 1%equiv else equiv_negb) true	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 63)		subgoal 1 (ID 63) is:	 e false = (if e true then 1%equiv else equiv_negb) false	";
             responses[i]=data;
           
 
             i = 151;
-            data = "1 subgoal (ID 66)	  	  e : Bool <~> Bool	  ============================	  e false = (if e true then 1%equiv else equiv_negb) false	1 subgoal (ID 87)	  	  e : Bool <~> Bool	  ============================	  negb (e true) = (if e true then 1%equiv else equiv_negb) false	";
+            data = "1 subgoal (ID 63)	  	  e : Bool <~> Bool	  ============================	  e false = (if e true then 1%equiv else equiv_negb) false	1 subgoal (ID 83)	  	  e : Bool <~> Bool	  ============================	  negb (e true) = (if e true then 1%equiv else equiv_negb) false	";
             responses[i]=data;
           
 
@@ -798,27 +798,27 @@
           
 
             i = 156;
-            data = "2 subgoals (ID 63)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  Sect f g		subgoal 2 (ID 65) is:	 Sect g f	";
+            data = "2 subgoals (ID 62)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  Sect f g		subgoal 2 (ID 63) is:	 Sect g f	";
             responses[i]=data;
           
 
             i = 157;
-            data = "1 subgoal (ID 63)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  Sect f g	1 subgoal (ID 67)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  e : Bool <~> Bool	  ============================	  g (f e) = e	";
+            data = "1 subgoal (ID 62)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  Sect f g	1 subgoal (ID 65)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  e : Bool <~> Bool	  ============================	  g (f e) = e	";
             responses[i]=data;
           
 
             i = 158;
-            data = "1 subgoal (ID 77)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  e : Bool <~> Bool	  ============================	  g (f e) == e	";
+            data = "1 subgoal (ID 75)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  e : Bool <~> Bool	  ============================	  g (f e) == e	";
             responses[i]=data;
           
 
             i = 159;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 65)		subgoal 1 (ID 65) is:	 Sect g f	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 63)		subgoal 1 (ID 63) is:	 Sect g f	";
             responses[i]=data;
           
 
             i = 160;
-            data = "1 subgoal (ID 65)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  Sect g f	No more subgoals.	";
+            data = "1 subgoal (ID 63)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  Sect g f	No more subgoals.	";
             responses[i]=data;
           
 
@@ -893,22 +893,22 @@
           
 
             i = 175;
-            data = "1 subgoal (ID 74)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  e : Bool	  ============================	  (equiv_bool_aut_bool e = 1%equiv) + (equiv_bool_aut_bool e = equiv_negb)	";
+            data = "1 subgoal (ID 73)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  e : Bool	  ============================	  (equiv_bool_aut_bool e = 1%equiv) + (equiv_bool_aut_bool e = equiv_negb)	";
             responses[i]=data;
           
 
             i = 176;
-            data = "2 subgoals (ID 81)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  (1%equiv = 1%equiv) + (1%equiv = equiv_negb)		subgoal 2 (ID 83) is:	 (equiv_negb = 1%equiv) + (equiv_negb = equiv_negb)	";
+            data = "2 subgoals (ID 79)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  (1%equiv = 1%equiv) + (1%equiv = equiv_negb)		subgoal 2 (ID 80) is:	 (equiv_negb = 1%equiv) + (equiv_negb = equiv_negb)	";
             responses[i]=data;
           
 
             i = 177;
-            data = "1 subgoal (ID 81)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  (1%equiv = 1%equiv) + (1%equiv = equiv_negb)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 83)		subgoal 1 (ID 83) is:	 (equiv_negb = 1%equiv) + (equiv_negb = equiv_negb)	";
+            data = "1 subgoal (ID 79)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  (1%equiv = 1%equiv) + (1%equiv = equiv_negb)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 80)		subgoal 1 (ID 80) is:	 (equiv_negb = 1%equiv) + (equiv_negb = equiv_negb)	";
             responses[i]=data;
           
 
             i = 178;
-            data = "1 subgoal (ID 83)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  (equiv_negb = 1%equiv) + (equiv_negb = equiv_negb)	No more subgoals.	";
+            data = "1 subgoal (ID 80)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  H : Funext	  ============================	  (equiv_negb = 1%equiv) + (equiv_negb = equiv_negb)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1008,27 +1008,27 @@
           
 
             i = 198;
-            data = "1 subgoal (ID 102)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  e1 (g (f e2) b) = e2 (e1 b)	";
+            data = "1 subgoal (ID 101)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  e1 (g (f e2) b) = e2 (e1 b)	";
             responses[i]=data;
           
 
             i = 199;
-            data = "1 subgoal (ID 112)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  g (f e1) (g (f e2) b) = e2 (e1 b)	";
+            data = "1 subgoal (ID 110)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  g (f e1) (g (f e2) b) = e2 (e1 b)	";
             responses[i]=data;
           
 
             i = 200;
-            data = "1 subgoal (ID 127)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  g (f e1) (g (f e2) b) = e2 (g (f e1) b)	";
+            data = "1 subgoal (ID 124)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  g (f e1) (g (f e2) b) = e2 (g (f e1) b)	";
             responses[i]=data;
           
 
             i = 201;
-            data = "1 subgoal (ID 140)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  g (f e1) (g (f e2) b) = g (f e2) (g (f e1) b)	";
+            data = "1 subgoal (ID 136)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  g (f e1) (g (f e2) b) = g (f e2) (g (f e1) b)	";
             responses[i]=data;
           
 
             i = 202;
-            data = "1 subgoal (ID 142)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  (if e1 true then 1%equiv else equiv_negb)	    ((if e2 true then 1%equiv else equiv_negb) b) =	  (if e2 true then 1%equiv else equiv_negb)	    ((if e1 true then 1%equiv else equiv_negb) b)	";
+            data = "1 subgoal (ID 137)	  	  f := fun e : Bool <~> Bool => e true : Bool <~> Bool -> Bool	  g := fun b : Bool => if b then 1%equiv else equiv_negb	   : Bool -> Bool <~> Bool	  e1 : Bool <~> Bool	  e2 : Bool <~> Bool	  b : Bool	  ============================	  (if e1 true then 1%equiv else equiv_negb)	    ((if e2 true then 1%equiv else equiv_negb) b) =	  (if e2 true then 1%equiv else equiv_negb)	    ((if e1 true then 1%equiv else equiv_negb) b)	";
             responses[i]=data;
           
 

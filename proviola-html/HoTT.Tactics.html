@@ -1398,17 +1398,17 @@
           
 
             i = 276;
-            data = "2 focused subgoals	(shelved: 1) (ID 170)	  	  H : Funext	  A : Type	  B : A -> Type	  x0 : A	  P : (forall a : A, B a) -> B x0 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P f (f x0)	  ============================	  transport (fun f0 : forall a : A, B a => P f0 (f0 x0)) 	    (path_forall f g e) Px = ?Goal		subgoal 2 (ID 172) is:	 ?Goal =	 transport (fun x : forall x : A, B x => P x (g x0)) 	   (path_forall f g e) (transport (fun y : B x0 => P f y) (e x0) Px)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 166)	  	  H : Funext	  A : Type	  B : A -> Type	  x0 : A	  P : (forall a : A, B a) -> B x0 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P f (f x0)	  ============================	  transport (fun f0 : forall a : A, B a => P f0 (f0 x0)) 	    (path_forall f g e) Px = ?Goal		subgoal 2 (ID 167) is:	 ?Goal =	 transport (fun x : forall x : A, B x => P x (g x0)) 	   (path_forall f g e) (transport (fun y : B x0 => P f y) (e x0) Px)	";
             responses[i]=data;
           
 
             i = 277;
-            data = "1 focused subgoal	(shelved: 1) (ID 170)	  	  H : Funext	  A : Type	  B : A -> Type	  x0 : A	  P : (forall a : A, B a) -> B x0 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P f (f x0)	  ============================	  transport (fun f0 : forall a : A, B a => P f0 (f0 x0)) 	    (path_forall f g e) Px = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 172)		subgoal 1 (ID 172) is:	 transport (fun x : (forall a : A, B a) * B x0 => P (fst x) (snd x))	   (path_prod' (path_forall f g e) (e x0)) Px =	 transport (fun x : forall x : A, B x => P x (g x0)) 	   (path_forall f g e) (transport (fun y : B x0 => P f y) (e x0) Px)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 166)	  	  H : Funext	  A : Type	  B : A -> Type	  x0 : A	  P : (forall a : A, B a) -> B x0 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P f (f x0)	  ============================	  transport (fun f0 : forall a : A, B a => P f0 (f0 x0)) 	    (path_forall f g e) Px = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 167)		subgoal 1 (ID 167) is:	 transport (fun x : (forall a : A, B a) * B x0 => P (fst x) (snd x))	   (path_prod' (path_forall f g e) (e x0)) Px =	 transport (fun x : forall x : A, B x => P x (g x0)) 	   (path_forall f g e) (transport (fun y : B x0 => P f y) (e x0) Px)	";
             responses[i]=data;
           
 
             i = 278;
-            data = "1 subgoal (ID 172)	  	  H : Funext	  A : Type	  B : A -> Type	  x0 : A	  P : (forall a : A, B a) -> B x0 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P f (f x0)	  ============================	  transport (fun x : (forall a : A, B a) * B x0 => P (fst x) (snd x))	    (path_prod' (path_forall f g e) (e x0)) Px =	  transport (fun x : forall x : A, B x => P x (g x0)) 	    (path_forall f g e) (transport (fun y : B x0 => P f y) (e x0) Px)	No more subgoals.	";
+            data = "1 subgoal (ID 167)	  	  H : Funext	  A : Type	  B : A -> Type	  x0 : A	  P : (forall a : A, B a) -> B x0 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P f (f x0)	  ============================	  transport (fun x : (forall a : A, B a) * B x0 => P (fst x) (snd x))	    (path_prod' (path_forall f g e) (e x0)) Px =	  transport (fun x : forall x : A, B x => P x (g x0)) 	    (path_forall f g e) (transport (fun y : B x0 => P f y) (e x0) Px)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1708,12 +1708,12 @@
           
 
             i = 338;
-            data = "1 subgoal (ID 268)	  	  H : Funext	  A : Type	  B : A -> Type	  x0, x1 : A	  P : B x0 -> B x1 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P (f x0) (f x1)	  ============================	  transport (fun y : B x1 => P (g x0) y) (e x1)	    (transport (fun y : B x0 => P y (f x1)) (e x0) Px) =	  transport (fun x : B x0 * B x1 => P (fst x) (snd x))	    (path_prod' (e x0) (e x1)) Px	";
+            data = "1 subgoal (ID 262)	  	  H : Funext	  A : Type	  B : A -> Type	  x0, x1 : A	  P : B x0 -> B x1 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P (f x0) (f x1)	  ============================	  transport (fun y : B x1 => P (g x0) y) (e x1)	    (transport (fun y : B x0 => P y (f x1)) (e x0) Px) =	  transport (fun x : B x0 * B x1 => P (fst x) (snd x))	    (path_prod' (e x0) (e x1)) Px	";
             responses[i]=data;
           
 
             i = 339;
-            data = "1 subgoal (ID 300)	  	  H : Funext	  A : Type	  B : A -> Type	  x0, x1 : A	  P : B x0 -> B x1 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P (f x0) (f x1)	  ============================	  Px = Px	";
+            data = "1 subgoal (ID 293)	  	  H : Funext	  A : Type	  B : A -> Type	  x0, x1 : A	  P : B x0 -> B x1 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P (f x0) (f x1)	  ============================	  Px = Px	";
             responses[i]=data;
           
 
@@ -1738,7 +1738,7 @@
           
 
             i = 344;
-            data = "1 subgoal (ID 317)	  	  H : Funext	  A : Type	  B : A -> Type	  x0, x1 : A	  P : B x0 -> B x1 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P (f x0) (f x1)	  ============================	  transport (fun y : B x1 => P (g x0) y) (e x1)	    (transport (fun y : B x0 => P y (f x1)) (e x0) Px) =	  transport (fun y : B x1 => P (g x0) y) (e x1)	    (transport (fun y : B x0 => P y (f x1)) (e x0) Px)	";
+            data = "1 subgoal (ID 311)	  	  H : Funext	  A : Type	  B : A -> Type	  x0, x1 : A	  P : B x0 -> B x1 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P (f x0) (f x1)	  ============================	  transport (fun y : B x1 => P (g x0) y) (e x1)	    (transport (fun y : B x0 => P y (f x1)) (e x0) Px) =	  transport (fun y : B x1 => P (g x0) y) (e x1)	    (transport (fun y : B x0 => P y (f x1)) (e x0) Px)	";
             responses[i]=data;
           
 
@@ -3084,11 +3084,11 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab708"></a><h1 class="section">Extra tactics for homotopy type theory.</h1>
+<a id="lab712"></a><h1 class="section">Extra tactics for homotopy type theory.</h1>
 <div class="doc" scenenumber="4"> </div>
-<a id="lab709"></a><h2 class="section">Tactics for dealing with <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>
+<a id="lab713"></a><h2 class="section">Tactics for dealing with <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>
 </h2>
-<a id="lab710"></a><h3 class="section">Tactics about <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a></span>ing with <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a></span>
+<a id="lab714"></a><h3 class="section">Tactics about <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#transport"><span class="id" title="definition">transport</span></a></span>ing with <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#path_forall"><span class="id" title="definition">path_forall</span></a></span>
 </h3>
 <div class="doc" scenenumber="12"> </div>
 
@@ -3444,7 +3444,7 @@ An example showing that it works
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
 <div class="doc" scenenumber="33">
-<a id="lab711"></a><h2 class="section">A more powerful variant of <span class="inlinecode"><span class="id" title="var">path_induction</span></span>
+<a id="lab715"></a><h2 class="section">A more powerful variant of <span class="inlinecode"><span class="id" title="var">path_induction</span></span>
 </h2>
  We first define some helper tactics, and then define <span class="inlinecode"><span class="id" title="var">path_induction_hammer</span></span>, which has poor computational behavior, but is vastly more powerful than <span class="inlinecode"><span class="id" title="var">path_induction</span></span>, and removes paths which are discoverably contractible, and paths which only appear in the goal, etc. 
 <div class="doc" scenenumber="8"> </div>
@@ -3677,7 +3677,7 @@ And now the actual tactic.  Note that the order of the cases in the <span class=
 </div>
 <div class="goal" id="goal0_3_59"><pre><span></span></pre></div>
 <div class="doc" scenenumber="61">
-<a id="lab712"></a><h1 class="section">Miscellaneous tactics</h1>
+<a id="lab716"></a><h1 class="section">Miscellaneous tactics</h1>
 <div class="doc" scenenumber="4"> </div>
 
  Substitute all hypotheses with bodies, i.e., of the form <span class="inlinecode"><a class="idref" href="HoTT.Categories.Adjoint.Composition.AssociativityLaw.html#composition_lemmas.H"><span class="id" title="variable">H</span></a></span> <span class="inlinecode">:=</span> <span class="inlinecode"><span class="id" title="var">_</span></span>. 

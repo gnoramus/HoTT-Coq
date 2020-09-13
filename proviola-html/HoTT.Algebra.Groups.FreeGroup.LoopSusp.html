@@ -268,27 +268,27 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 118)	  	  H : Funext	  A : Type	  X : pType	  f : pointify A ->* X	  ============================	  {|	  pointed_fun := fun X0 : A + Unit =>	                 match X0 with	                 | inl a => f (inl a)	                 | inr _ => ispointed_type X	                 end;	  dpoint_eq := 1 |} = f	";
+            data = "1 subgoal (ID 117)	  	  H : Funext	  A : Type	  X : pType	  f : pointify A ->* X	  ============================	  {|	  pointed_fun := fun X0 : A + Unit =>	                 match X0 with	                 | inl a => f (inl a)	                 | inr _ => ispointed_type X	                 end;	  dpoint_eq := 1 |} = f	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 145)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  {|	  pointed_fun := fun X0 : A + Unit =>	                 match X0 with	                 | inl a => f (inl a)	                 | inr _ => f (inr tt)	                 end;	  dpoint_eq := 1 |} = {| pointed_fun := f; dpoint_eq := 1 |}	";
+            data = "1 subgoal (ID 142)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  {|	  pointed_fun := fun X0 : A + Unit =>	                 match X0 with	                 | inl a => f (inl a)	                 | inr _ => f (inr tt)	                 end;	  dpoint_eq := 1 |} = {| pointed_fun := f; dpoint_eq := 1 |}	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 170)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  {|	  pointed_fun := fun X0 : A + Unit =>	                 match X0 with	                 | inl a => f (inl a)	                 | inr _ => f (inr tt)	                 end;	  dpoint_eq := 1 |} ==* {| pointed_fun := f; dpoint_eq := 1 |}	";
+            data = "1 subgoal (ID 166)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  {|	  pointed_fun := fun X0 : A + Unit =>	                 match X0 with	                 | inl a => f (inl a)	                 | inr _ => f (inr tt)	                 end;	  dpoint_eq := 1 |} ==* {| pointed_fun := f; dpoint_eq := 1 |}	";
             responses[i]=data;
           
 
             i = 53;
-            data = "2 subgoals (ID 186)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  {|	  pointed_fun := fun X0 : A + Unit =>	                 match X0 with	                 | inl a => f (inl a)	                 | inr _ => f (inr tt)	                 end;	  dpoint_eq := 1 |} == {| pointed_fun := f; dpoint_eq := 1 |}		subgoal 2 (ID 188) is:	 ?p (point {| pointed_type := A + Unit; ispointed_type := inr tt |}) =	 dpoint_eq	   {|	   pointed_fun := fun X0 : A + Unit =>	                  match X0 with	                  | inl a => f (inl a)	                  | inr _ => f (inr tt)	                  end;	   dpoint_eq := 1 |} @ (dpoint_eq {| pointed_fun := f; dpoint_eq := 1 |})^	";
+            data = "2 subgoals (ID 182)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  {|	  pointed_fun := fun X0 : A + Unit =>	                 match X0 with	                 | inl a => f (inl a)	                 | inr _ => f (inr tt)	                 end;	  dpoint_eq := 1 |} == {| pointed_fun := f; dpoint_eq := 1 |}		subgoal 2 (ID 184) is:	 ?p (point {| pointed_type := A + Unit; ispointed_type := inr tt |}) =	 dpoint_eq	   {|	   pointed_fun := fun X0 : A + Unit =>	                  match X0 with	                  | inl a => f (inl a)	                  | inr _ => f (inr tt)	                  end;	   dpoint_eq := 1 |} @ (dpoint_eq {| pointed_fun := f; dpoint_eq := 1 |})^	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 188)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  (fun x : {| pointed_type := A + Unit; ispointed_type := inr tt |} =>	   match	     x as s	     return	       ({|	        pointed_fun := fun X0 : A + Unit =>	                       match X0 with	                       | inl a => f (inl a)	                       | inr _ => f (inr tt)	                       end;	        dpoint_eq := 1 |} s = {| pointed_fun := f; dpoint_eq := 1 |} s)	   with	   | inl a => 1%path	   | inr u =>	       match	         u as u0	         return	           ({|	            pointed_fun := fun X0 : A + Unit =>	                           match X0 with	                           | inl a => f (inl a)	                           | inr _ => f (inr tt)	                           end;	            dpoint_eq := 1 |} (inr u0) =	            {| pointed_fun := f; dpoint_eq := 1 |} (inr u0))	       with	       | tt => 1%path	       end	   end) (point {| pointed_type := A + Unit; ispointed_type := inr tt |}) =	  dpoint_eq	    {|	    pointed_fun := fun X0 : A + Unit =>	                   match X0 with	                   | inl a => f (inl a)	                   | inr _ => f (inr tt)	                   end;	    dpoint_eq := 1 |} @ (dpoint_eq {| pointed_fun := f; dpoint_eq := 1 |})^	";
+            data = "1 subgoal (ID 184)	  	  H : Funext	  A : Type	  X : Type	  f : A + Unit -> X	  ============================	  (fun x : {| pointed_type := A + Unit; ispointed_type := inr tt |} =>	   match	     x as s	     return	       ({|	        pointed_fun := fun X0 : A + Unit =>	                       match X0 with	                       | inl a => f (inl a)	                       | inr _ => f (inr tt)	                       end;	        dpoint_eq := 1 |} s = {| pointed_fun := f; dpoint_eq := 1 |} s)	   with	   | inl a => 1%path	   | inr u =>	       match	         u as u0	         return	           ({|	            pointed_fun := fun X0 : A + Unit =>	                           match X0 with	                           | inl a => f (inl a)	                           | inr _ => f (inr tt)	                           end;	            dpoint_eq := 1 |} (inr u0) =	            {| pointed_fun := f; dpoint_eq := 1 |} (inr u0))	       with	       | tt => 1%path	       end	   end) (point {| pointed_type := A + Unit; ispointed_type := inr tt |}) =	  dpoint_eq	    {|	    pointed_fun := fun X0 : A + Unit =>	                   match X0 with	                   | inl a => f (inl a)	                   | inr _ => f (inr tt)	                   end;	    dpoint_eq := 1 |} @ (dpoint_eq {| pointed_fun := f; dpoint_eq := 1 |})^	";
             responses[i]=data;
           
 
@@ -353,12 +353,12 @@
           
 
             i = 67;
-            data = "1 subgoal (ID 88)	  	  H : Funext	  F : Group	  A : Type	  i : A -> F	  G : Group	  k : IsEquiv (fun f : F $-> G => f o i)	  g : A -> G	  ============================	  hfiber (fun (f : GroupHomomorphism F G) (x : A) => f (i x)) g <~>	  FactorsThroughFreeGroup A F i G g	1 subgoal (ID 106)	  	  H : Funext	  F : Group	  A : Type	  i : A -> F	  G : Group	  k : IsEquiv (fun f : F $-> G => f o i)	  g : A -> G	  ============================	  forall a : GroupHomomorphism F G,	  (fun x : A => a (i x)) = g <~> (fun x : A => a (i x)) == g	";
+            data = "1 subgoal (ID 88)	  	  H : Funext	  F : Group	  A : Type	  i : A -> F	  G : Group	  k : IsEquiv (fun f : F $-> G => f o i)	  g : A -> G	  ============================	  hfiber (fun (f : GroupHomomorphism F G) (x : A) => f (i x)) g <~>	  FactorsThroughFreeGroup A F i G g	1 subgoal (ID 105)	  	  H : Funext	  F : Group	  A : Type	  i : A -> F	  G : Group	  k : IsEquiv (fun f : F $-> G => f o i)	  g : A -> G	  ============================	  forall a : GroupHomomorphism F G,	  (fun x : A => a (i x)) = g <~> (fun x : A => a (i x)) == g	";
             responses[i]=data;
           
 
             i = 68;
-            data = "1 subgoal (ID 116)	  	  H : Funext	  F : Group	  A : Type	  i : A -> F	  G : Group	  k : IsEquiv (fun f : F $-> G => f o i)	  g : A -> G	  y : GroupHomomorphism F G	  ============================	  (fun x : A => y (i x)) == g <~> (fun x : A => y (i x)) = g	";
+            data = "1 subgoal (ID 113)	  	  H : Funext	  F : Group	  A : Type	  i : A -> F	  G : Group	  k : IsEquiv (fun f : F $-> G => f o i)	  g : A -> G	  y : GroupHomomorphism F G	  ============================	  (fun x : A => y (i x)) == g <~> (fun x : A => y (i x)) = g	";
             responses[i]=data;
           
 
@@ -438,7 +438,7 @@
           
 
             i = 84;
-            data = "1 subgoal (ID 63)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (psusp (pointify S)) $-> G) <~> (S -> G)	";
+            data = "1 subgoal (ID 62)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (psusp (pointify S)) $-> G) <~> (S -> G)	";
             responses[i]=data;
           
 
@@ -463,17 +463,17 @@
           
 
             i = 89;
-            data = "2 focused subgoals	(shelved: 1) (ID 80)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (psusp (pointify S)) $-> G) <~> ?Goal		subgoal 2 (ID 82) is:	 ?Goal <~> (S -> G)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 75)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (psusp (pointify S)) $-> G) <~> ?Goal		subgoal 2 (ID 76) is:	 ?Goal <~> (S -> G)	";
             responses[i]=data;
           
 
             i = 90;
-            data = "1 focused subgoal	(shelved: 1) (ID 80)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (psusp (pointify S)) $-> G) <~> ?Goal	2 subgoals (ID 116)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  Group		subgoal 2 (ID 120) is:	 ?x $<~> Pi1 (psusp (pointify S))	";
+            data = "1 focused subgoal	(shelved: 1) (ID 75)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (psusp (pointify S)) $-> G) <~> ?Goal	2 subgoals (ID 110)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  Group		subgoal 2 (ID 114) is:	 ?x $<~> Pi1 (psusp (pointify S))	";
             responses[i]=data;
           
 
             i = 91;
-            data = "1 subgoal (ID 120)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  Pi1 (pTr 1 (psusp (pointify S))) $<~> Pi1 (psusp (pointify S))	";
+            data = "1 subgoal (ID 114)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  Pi1 (pTr 1 (psusp (pointify S))) $<~> Pi1 (psusp (pointify S))	";
             responses[i]=data;
           
 
@@ -498,12 +498,12 @@
           
 
             i = 96;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 82)		subgoal 1 (ID 82) is:	 (Pi1 (pTr 1 (psusp (pointify S))) $-> G) <~> (S -> G)	1 subgoal (ID 82)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (pTr 1 (psusp (pointify S))) $-> G) <~> (S -> G)	2 focused subgoals	(shelved: 1) (ID 144)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (pTr 1 (psusp (pointify S))) $-> G) <~> ?Goal		subgoal 2 (ID 146) is:	 ?Goal <~> (S -> G)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 76)		subgoal 1 (ID 76) is:	 (Pi1 (pTr 1 (psusp (pointify S))) $-> G) <~> (S -> G)	1 subgoal (ID 76)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (pTr 1 (psusp (pointify S))) $-> G) <~> (S -> G)	2 focused subgoals	(shelved: 1) (ID 134)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (Pi1 (pTr 1 (psusp (pointify S))) $-> G) <~> ?Goal		subgoal 2 (ID 135) is:	 ?Goal <~> (S -> G)	";
             responses[i]=data;
           
 
             i = 97;
-            data = "1 subgoal (ID 146)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G) <~> (S -> G)	";
+            data = "1 subgoal (ID 135)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G) <~> (S -> G)	";
             responses[i]=data;
           
 
@@ -528,47 +528,47 @@
           
 
             i = 102;
-            data = "2 focused subgoals	(shelved: 1) (ID 172)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G) <~> ?Goal		subgoal 2 (ID 174) is:	 ?Goal <~> (S -> G)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 157)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G) <~> ?Goal		subgoal 2 (ID 158) is:	 ?Goal <~> (S -> G)	";
             responses[i]=data;
           
 
             i = 103;
-            data = "1 focused subgoal	(shelved: 1) (ID 172)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G) <~> ?Goal	1 focused subgoal	(shelved: 1) (ID 194)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  ?Goal0 <~>* B (Pi1 (pTr 1 (psusp (pointify S))))	";
+            data = "1 focused subgoal	(shelved: 1) (ID 157)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G) <~> ?Goal	1 focused subgoal	(shelved: 1) (ID 176)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  ?Goal0 <~>* B (Pi1 (pTr 1 (psusp (pointify S))))	";
             responses[i]=data;
           
 
             i = 104;
-            data = "1 focused subgoal	(shelved: 1) (ID 203)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  B (Pi1 (pTr 1 (psusp (pointify S)))) <~>* ?Goal0	";
+            data = "1 focused subgoal	(shelved: 1) (ID 183)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  B (Pi1 (pTr 1 (psusp (pointify S)))) <~>* ?Goal0	";
             responses[i]=data;
           
 
             i = 105;
-            data = "3 subgoals (ID 221)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  Univalence		subgoal 2 (ID 223) is:	 IsConnected (Tr 0) (pTr 1 (psusp (pointify S)))	subgoal 3 (ID 225) is:	 IsTrunc 1 (pTr 1 (psusp (pointify S)))	";
+            data = "3 subgoals (ID 200)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  Univalence		subgoal 2 (ID 201) is:	 IsConnected (Tr 0) (pTr 1 (psusp (pointify S)))	subgoal 3 (ID 202) is:	 IsTrunc 1 (pTr 1 (psusp (pointify S)))	";
             responses[i]=data;
           
 
             i = 106;
-            data = "1 subgoal (ID 223)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  IsConnected (Tr 0) (pTr 1 (psusp (pointify S)))	";
+            data = "1 subgoal (ID 201)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  IsConnected (Tr 0) (pTr 1 (psusp (pointify S)))	";
             responses[i]=data;
           
 
             i = 107;
-            data = "1 subgoal (ID 229)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  IsConnected (Tr 0) (psusp (pointify S))	";
+            data = "1 subgoal (ID 206)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  IsConnected (Tr 0) (psusp (pointify S))	";
             responses[i]=data;
           
 
             i = 108;
-            data = "1 subgoal (ID 271)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  IsConnected (Tr (-1)) (pointify S)	";
+            data = "1 subgoal (ID 247)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  IsConnected (Tr (-1)) (pointify S)	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 subgoal (ID 340)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  Tr (-1) (pointify S)	";
+            data = "1 subgoal (ID 315)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  Tr (-1) (pointify S)	";
             responses[i]=data;
           
 
             i = 110;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 174)		subgoal 1 (ID 174) is:	 (pTr 1 (psusp (pointify S)) ->* B G) <~> (S -> G)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 158)		subgoal 1 (ID 158) is:	 (pTr 1 (psusp (pointify S)) ->* B G) <~> (S -> G)	";
             responses[i]=data;
           
 
@@ -593,12 +593,12 @@
           
 
             i = 115;
-            data = "1 subgoal (ID 174)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pTr 1 (psusp (pointify S)) ->* B G) <~> (S -> G)	2 focused subgoals	(shelved: 1) (ID 363)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pTr 1 (psusp (pointify S)) ->* B G) <~> ?Goal		subgoal 2 (ID 365) is:	 ?Goal <~> (S -> G)	";
+            data = "1 subgoal (ID 158)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pTr 1 (psusp (pointify S)) ->* B G) <~> (S -> G)	2 focused subgoals	(shelved: 1) (ID 334)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pTr 1 (psusp (pointify S)) ->* B G) <~> ?Goal		subgoal 2 (ID 335) is:	 ?Goal <~> (S -> G)	";
             responses[i]=data;
           
 
             i = 116;
-            data = "1 subgoal (ID 365)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (psusp (pointify S) ->* B G) <~> (S -> G)	";
+            data = "1 subgoal (ID 335)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (psusp (pointify S) ->* B G) <~> (S -> G)	";
             responses[i]=data;
           
 
@@ -623,12 +623,12 @@
           
 
             i = 121;
-            data = "2 focused subgoals	(shelved: 1) (ID 390)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (psusp (pointify S) ->* B G) <~> ?Goal		subgoal 2 (ID 392) is:	 ?Goal <~> (S -> G)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 356)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (psusp (pointify S) ->* B G) <~> ?Goal		subgoal 2 (ID 357) is:	 ?Goal <~> (S -> G)	";
             responses[i]=data;
           
 
             i = 122;
-            data = "1 subgoal (ID 392)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pointify S ->* loops (B G)) <~> (S -> G)	";
+            data = "1 subgoal (ID 357)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pointify S ->* loops (B G)) <~> (S -> G)	";
             responses[i]=data;
           
 
@@ -653,12 +653,12 @@
           
 
             i = 127;
-            data = "2 focused subgoals	(shelved: 1) (ID 413)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pointify S ->* loops (B G)) <~> ?Goal		subgoal 2 (ID 415) is:	 ?Goal <~> (S -> G)	";
+            data = "2 focused subgoals	(shelved: 1) (ID 374)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pointify S ->* loops (B G)) <~> ?Goal		subgoal 2 (ID 375) is:	 ?Goal <~> (S -> G)	";
             responses[i]=data;
           
 
             i = 128;
-            data = "1 focused subgoal	(shelved: 1) (ID 413)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pointify S ->* loops (B G)) <~> ?Goal	1 focused subgoal	(shelved: 1) (ID 435)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  loops (B G) <~>* ?Goal0	";
+            data = "1 focused subgoal	(shelved: 1) (ID 374)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pointify S ->* loops (B G)) <~> ?Goal	1 focused subgoal	(shelved: 1) (ID 393)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  loops (B G) <~>* ?Goal0	";
             responses[i]=data;
           
 
@@ -683,7 +683,7 @@
           
 
             i = 133;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 415)		subgoal 1 (ID 415) is:	 (pointify S ->* {| pointed_type := G; ispointed_type := ispointed_group G |}) <~>	 (S -> G)	1 subgoal (ID 415)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pointify S ->*	   {| pointed_type := G; ispointed_type := ispointed_group G |}) <~> 	  (S -> G)	No more subgoals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 375)		subgoal 1 (ID 375) is:	 (pointify S ->* {| pointed_type := G; ispointed_type := ispointed_group G |}) <~>	 (S -> G)	1 subgoal (ID 375)	  	  H : Univalence	  S : Type	  G : Group	  ============================	  (pointify S ->*	   {| pointed_type := G; ispointed_type := ispointed_group G |}) <~> 	  (S -> G)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -723,7 +723,7 @@
           
 
             i = 141;
-            data = "1 subgoal (ID 76)	  	  H : Univalence	  S : Type	  ============================	  FreeGroup S $-> FreeGroup S	";
+            data = "1 subgoal (ID 75)	  	  H : Univalence	  S : Type	  ============================	  FreeGroup S $-> FreeGroup S	";
             responses[i]=data;
           
 
@@ -803,12 +803,12 @@
           
 
             i = 157;
-            data = "1 subgoal (ID 95)	  	  H : Univalence	  S : Type	  G : Group	  f : FreeGroup S $-> G	  ============================	  transitive_equiv (Pi1 (psusp (pointify S)) $-> G)	    (Pi1 (pTr 1 (psusp (pointify S))) $-> G) (S -> G)	    (equiv_precompose_cat_equiv (grp_iso_pi1_Tr (psusp (pointify S))))	    (transitive_equiv (Pi1 (pTr 1 (psusp (pointify S))) $-> G)	       (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G) 	       (S -> G) (equiv_grp_homo_pmap_bg (Pi1 (pTr 1 (psusp (pointify S)))) G)	       (transitive_equiv (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G)	          (pTr 1 (psusp (pointify S)) ->* B G) (S -> G)	          (equiv_pequiv_precompose	             (pequiv_symmetric (B (Pi1 (pTr 1 (psusp (pointify S)))))	                (pTr 1 (psusp (pointify S)))	                (pequiv_pclassifyingspace_pi1 (pTr 1 (psusp (pointify S))))))	          (transitive_equiv (pTr 1 (psusp (pointify S)) ->* B G)	             (psusp (pointify S) ->* B G) (S -> G) equiv_ptr_rec	             (transitive_equiv (psusp (pointify S) ->* B G)	                (pointify S ->* loops (B G)) (S -> G)	                (loop_susp_adjoint (pointify S) (B G))	                (transitive_equiv (pointify S ->* loops (B G))	                   (pointify S ->*	                    {|	                    pointed_type := G;	                    ispointed_type := ispointed_group G |}) 	                   (S -> G) (equiv_pequiv_postcompose pequiv_loops_bg_g)	                   (equiv_pointify_map S	                      {|	                      pointed_type := G;	                      ispointed_type := ispointed_group G |})))))) f =	  (fun x : S => f (freegroup_incl S x))	";
+            data = "1 subgoal (ID 94)	  	  H : Univalence	  S : Type	  G : Group	  f : FreeGroup S $-> G	  ============================	  transitive_equiv (Pi1 (psusp (pointify S)) $-> G)	    (Pi1 (pTr 1 (psusp (pointify S))) $-> G) (S -> G)	    (equiv_precompose_cat_equiv (grp_iso_pi1_Tr (psusp (pointify S))))	    (transitive_equiv (Pi1 (pTr 1 (psusp (pointify S))) $-> G)	       (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G) 	       (S -> G) (equiv_grp_homo_pmap_bg (Pi1 (pTr 1 (psusp (pointify S)))) G)	       (transitive_equiv (B (Pi1 (pTr 1 (psusp (pointify S)))) ->* B G)	          (pTr 1 (psusp (pointify S)) ->* B G) (S -> G)	          (equiv_pequiv_precompose	             (pequiv_symmetric (B (Pi1 (pTr 1 (psusp (pointify S)))))	                (pTr 1 (psusp (pointify S)))	                (pequiv_pclassifyingspace_pi1 (pTr 1 (psusp (pointify S))))))	          (transitive_equiv (pTr 1 (psusp (pointify S)) ->* B G)	             (psusp (pointify S) ->* B G) (S -> G) equiv_ptr_rec	             (transitive_equiv (psusp (pointify S) ->* B G)	                (pointify S ->* loops (B G)) (S -> G)	                (loop_susp_adjoint (pointify S) (B G))	                (transitive_equiv (pointify S ->* loops (B G))	                   (pointify S ->*	                    {|	                    pointed_type := G;	                    ispointed_type := ispointed_group G |}) 	                   (S -> G) (equiv_pequiv_postcompose pequiv_loops_bg_g)	                   (equiv_pointify_map S	                      {|	                      pointed_type := G;	                      ispointed_type := ispointed_group G |})))))) f =	  (fun x : S => f (freegroup_incl S x))	";
             responses[i]=data;
           
 
             i = 158;
-            data = "1 subgoal (ID 97)	  	  H : Univalence	  S : Type	  G : Group	  f : FreeGroup S $-> G	  ============================	  equiv_compose	    (equiv_compose	       (equiv_compose	          (equiv_compose	             (equiv_compose	                (equiv_compose	                   (equiv_pointify_map S	                      {|	                      pointed_type := G;	                      ispointed_type := ispointed_group G |})	                   (equiv_pequiv_postcompose pequiv_loops_bg_g))	                (loop_susp_adjoint (pointify S) (B G))) equiv_ptr_rec)	          (equiv_pequiv_precompose	             (pequiv_symmetric (B (Pi1 (pTr 1 (psusp (pointify S)))))	                (pTr 1 (psusp (pointify S)))	                (pequiv_pclassifyingspace_pi1 (pTr 1 (psusp (pointify S)))))))	       (equiv_grp_homo_pmap_bg (Pi1 (pTr 1 (psusp (pointify S)))) G))	    (equiv_precompose_cat_equiv (grp_iso_pi1_Tr (psusp (pointify S)))) f =	  (fun x : S => f (freegroup_incl S x))	";
+            data = "1 subgoal (ID 95)	  	  H : Univalence	  S : Type	  G : Group	  f : FreeGroup S $-> G	  ============================	  equiv_compose	    (equiv_compose	       (equiv_compose	          (equiv_compose	             (equiv_compose	                (equiv_compose	                   (equiv_pointify_map S	                      {|	                      pointed_type := G;	                      ispointed_type := ispointed_group G |})	                   (equiv_pequiv_postcompose pequiv_loops_bg_g))	                (loop_susp_adjoint (pointify S) (B G))) equiv_ptr_rec)	          (equiv_pequiv_precompose	             (pequiv_symmetric (B (Pi1 (pTr 1 (psusp (pointify S)))))	                (pTr 1 (psusp (pointify S)))	                (pequiv_pclassifyingspace_pi1 (pTr 1 (psusp (pointify S)))))))	       (equiv_grp_homo_pmap_bg (Pi1 (pTr 1 (psusp (pointify S)))) G))	    (equiv_precompose_cat_equiv (grp_iso_pi1_Tr (psusp (pointify S)))) f =	  (fun x : S => f (freegroup_incl S x))	";
             responses[i]=data;
           
 
@@ -843,12 +843,12 @@
           
 
             i = 165;
-            data = "";
+            data = "1 subgoal (ID 96)	  	  H : Univalence	  S : Type	  G : Group	  f : FreeGroup S $-> G	  ============================	  {|	  equiv_fun := fun x : Pi1 (psusp (pointify S)) $-> G =>	               {|	               equiv_fun := fun x0 : Pi1 (pTr 1 (psusp (pointify S))) $-> G	                            =>	                            {|	                            equiv_fun := fun	                                           x1 : B	                                                 (Pi1	                                                 (pTr 1 (psusp (pointify S)))) ->*	                                                B G =>	                                         {|	                                         equiv_fun := fun	                                                 x2 : 	                                                 pTr 1 (psusp (pointify S)) ->*	                                                 B G =>	                                                 {|	                                                 equiv_fun := fun	                                                 x3 : 	                                                 psusp (pointify S) ->* 	                                                 B G =>	                                                 {|	                                                 equiv_fun := fun	                                                 x4 : 	                                                 pointify S ->* 	                                                 loops (B G) =>	                                                 equiv_pointify_map S	                                                 {|	                                                 pointed_type := G;	                                                 ispointed_type := ispointed_group	                                                 G |}	                                                 (equiv_pequiv_postcompose	                                                 pequiv_loops_bg_g x4);	                                                 equiv_isequiv := isequiv_compose |}	                                                 (loop_susp_adjoint	                                                 (pointify S) 	                                                 (B G) x3);	                                                 equiv_isequiv := isequiv_compose |}	                                                 (equiv_ptr_rec x2);	                                         equiv_isequiv := isequiv_compose |}	                                           (equiv_pequiv_precompose	                                              (pequiv_symmetric	                                                 (B	                                                 (Pi1	                                                 (pTr 1 (psusp (pointify S)))))	                                                 (pTr 1 (psusp (pointify S)))	                                                 (pequiv_pclassifyingspace_pi1	                                                 (pTr 1 (psusp (pointify S)))))	                                              x1);	                            equiv_isequiv := isequiv_compose |}	                              (equiv_grp_homo_pmap_bg	                                 (Pi1 (pTr 1 (psusp (pointify S)))) G x0);	               equiv_isequiv := isequiv_compose |}	                 (equiv_precompose_cat_equiv	                    (grp_iso_pi1_Tr (psusp (pointify S))) x);	  equiv_isequiv := isequiv_compose |} f =	  (fun x : S => f (freegroup_incl S x))	";
             responses[i]=data;
           
 
             i = 166;
-            data = "1 subgoal (ID 99)	  	  H : Univalence	  S : Type	  G : Group	  f : FreeGroup S $-> G	  ============================	  {|	  equiv_fun := fun x : Pi1 (psusp (pointify S)) $-> G =>	               {|	               equiv_fun := fun x0 : Pi1 (pTr 1 (psusp (pointify S))) $-> G	                            =>	                            {|	                            equiv_fun := fun	                                           x1 : B	                                                 (Pi1	                                                 (pTr 1 (psusp (pointify S)))) ->*	                                                B G =>	                                         {|	                                         equiv_fun := fun	                                                 x2 : 	                                                 pTr 1 (psusp (pointify S)) ->*	                                                 B G =>	                                                 {|	                                                 equiv_fun := fun	                                                 x3 : 	                                                 psusp (pointify S) ->* 	                                                 B G =>	                                                 {|	                                                 equiv_fun := fun	                                                 x4 : 	                                                 pointify S ->* 	                                                 loops (B G) =>	                                                 equiv_pointify_map S	                                                 {|	                                                 pointed_type := G;	                                                 ispointed_type := ispointed_group	                                                 G |}	                                                 (equiv_pequiv_postcompose	                                                 pequiv_loops_bg_g x4);	                                                 equiv_isequiv := isequiv_compose |}	                                                 (loop_susp_adjoint	                                                 (pointify S) 	                                                 (B G) x3);	                                                 equiv_isequiv := isequiv_compose |}	                                                 (equiv_ptr_rec x2);	                                         equiv_isequiv := isequiv_compose |}	                                           (equiv_pequiv_precompose	                                              (pequiv_symmetric	                                                 (B	                                                 (Pi1	                                                 (pTr 1 (psusp (pointify S)))))	                                                 (pTr 1 (psusp (pointify S)))	                                                 (pequiv_pclassifyingspace_pi1	                                                 (pTr 1 (psusp (pointify S)))))	                                              x1);	                            equiv_isequiv := isequiv_compose |}	                              (equiv_grp_homo_pmap_bg	                                 (Pi1 (pTr 1 (psusp (pointify S)))) G x0);	               equiv_isequiv := isequiv_compose |}	                 (equiv_precompose_cat_equiv	                    (grp_iso_pi1_Tr (psusp (pointify S))) x);	  equiv_isequiv := isequiv_compose |} f =	  (fun x : S => f (freegroup_incl S x))	";
+            data = "1 subgoal (ID 97)	  	  H : Univalence	  S : Type	  G : Group	  f : FreeGroup S $-> G	  ============================	  {|	  equiv_fun := fun x : Pi1 (psusp (pointify S)) $-> G =>	               {|	               equiv_fun := fun x0 : Pi1 (pTr 1 (psusp (pointify S))) $-> G	                            =>	                            {|	                            equiv_fun := fun	                                           x1 : B	                                                 (Pi1	                                                 (pTr 1 (psusp (pointify S)))) ->*	                                                B G =>	                                         {|	                                         equiv_fun := fun	                                                 x2 : 	                                                 pTr 1 (psusp (pointify S)) ->*	                                                 B G =>	                                                 {|	                                                 equiv_fun := fun	                                                 x3 : 	                                                 psusp (pointify S) ->* 	                                                 B G =>	                                                 {|	                                                 equiv_fun := fun	                                                 x4 : 	                                                 pointify S ->* 	                                                 loops (B G) =>	                                                 equiv_pointify_map S	                                                 {|	                                                 pointed_type := G;	                                                 ispointed_type := ispointed_group	                                                 G |}	                                                 (equiv_pequiv_postcompose	                                                 pequiv_loops_bg_g x4);	                                                 equiv_isequiv := isequiv_compose |}	                                                 (loop_susp_adjoint	                                                 (pointify S) 	                                                 (B G) x3);	                                                 equiv_isequiv := isequiv_compose |}	                                                 (equiv_ptr_rec x2);	                                         equiv_isequiv := isequiv_compose |}	                                           (equiv_pequiv_precompose	                                              (pequiv_symmetric	                                                 (B	                                                 (Pi1	                                                 (pTr 1 (psusp (pointify S)))))	                                                 (pTr 1 (psusp (pointify S)))	                                                 (pequiv_pclassifyingspace_pi1	                                                 (pTr 1 (psusp (pointify S)))))	                                              x1);	                            equiv_isequiv := isequiv_compose |}	                              (equiv_grp_homo_pmap_bg	                                 (Pi1 (pTr 1 (psusp (pointify S)))) G x0);	               equiv_isequiv := isequiv_compose |}	                 (equiv_precompose_cat_equiv	                    (grp_iso_pi1_Tr (psusp (pointify S))) x);	  equiv_isequiv := isequiv_compose |} f =	  (fun x : S => f (freegroup_incl S x))	";
             responses[i]=data;
           
 

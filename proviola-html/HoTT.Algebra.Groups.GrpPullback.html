@@ -118,22 +118,22 @@
           
 
             i = 20;
-            data = "1 subgoal (ID 53)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  f (b * d) = g (c * e)	";
+            data = "1 subgoal (ID 52)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  f (b * d) = g (c * e)	";
             responses[i]=data;
           
 
             i = 21;
-            data = "2 focused subgoals	(shelved: 1) (ID 80)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  f b * f d = ?Goal		subgoal 2 (ID 82) is:	 ?Goal = g c * g e	";
+            data = "2 focused subgoals	(shelved: 1) (ID 77)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  f b * f d = ?Goal		subgoal 2 (ID 78) is:	 ?Goal = g c * g e	";
             responses[i]=data;
           
 
             i = 22;
-            data = "1 focused subgoal	(shelved: 1) (ID 80)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  f b * f d = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 82)		subgoal 1 (ID 82) is:	 f b * g e = g c * g e	";
+            data = "1 focused subgoal	(shelved: 1) (ID 77)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  f b * f d = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 78)		subgoal 1 (ID 78) is:	 f b * g e = g c * g e	";
             responses[i]=data;
           
 
             i = 23;
-            data = "1 subgoal (ID 82)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  f b * g e = g c * g e	No more subgoals.	";
+            data = "1 subgoal (ID 78)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  d : B	  e : C	  q : f d = g e	  ============================	  f b * g e = g c * g e	No more subgoals.	";
             responses[i]=data;
           
 
@@ -158,17 +158,17 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 59)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  x1 : B	  x2 : C	  p : f x1 = g x2	  y1 : B	  y2 : C	  q : f y1 = g y2	  z1 : B	  z2 : C	  u : f z1 = g z2	  ============================	  {p0 : x1 * (y1 * z1) = x1 * y1 * z1 &	  {q0 : x2 * (y2 * z2) = x2 * y2 * z2 &	  PathSquare (ap f p0) (ap g q0)	    ((grp_homo_op f x1 (y1 * z1) @	      (ap (fun y : A => f x1 * y)	         ((grp_homo_op f y1 z1 @	           (ap (fun y : A => f y1 * y) u @ ap (fun x : A => x * g z2) q)) @	          (grp_homo_op g y2 z2)^) @ ap (fun x : A => x * g (y2 * z2)) p)) @	     (grp_homo_op g x2 (y2 * z2))^)	    ((grp_homo_op f (x1 * y1) z1 @	      (ap (fun y : A => f (x1 * y1) * y) u @	       ap (fun x : A => x * g z2)	         ((grp_homo_op f x1 y1 @	           (ap (fun y : A => f x1 * y) q @ ap (fun x : A => x * g y2) p)) @	          (grp_homo_op g x2 y2)^))) @ (grp_homo_op g (x2 * y2) z2)^)}}	";
+            data = "1 subgoal (ID 58)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  x1 : B	  x2 : C	  p : f x1 = g x2	  y1 : B	  y2 : C	  q : f y1 = g y2	  z1 : B	  z2 : C	  u : f z1 = g z2	  ============================	  {p0 : x1 * (y1 * z1) = x1 * y1 * z1 &	  {q0 : x2 * (y2 * z2) = x2 * y2 * z2 &	  PathSquare (ap f p0) (ap g q0)	    ((grp_homo_op f x1 (y1 * z1) @	      (ap (fun y : A => f x1 * y)	         ((grp_homo_op f y1 z1 @	           (ap (fun y : A => f y1 * y) u @ ap (fun x : A => x * g z2) q)) @	          (grp_homo_op g y2 z2)^) @ ap (fun x : A => x * g (y2 * z2)) p)) @	     (grp_homo_op g x2 (y2 * z2))^)	    ((grp_homo_op f (x1 * y1) z1 @	      (ap (fun y : A => f (x1 * y1) * y) u @	       ap (fun x : A => x * g z2)	         ((grp_homo_op f x1 y1 @	           (ap (fun y : A => f x1 * y) q @ ap (fun x : A => x * g y2) p)) @	          (grp_homo_op g x2 y2)^))) @ (grp_homo_op g (x2 * y2) z2)^)}}	";
             responses[i]=data;
           
 
             i = 29;
-            data = "1 subgoal (ID 343)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  x1 : B	  x2 : C	  p : f x1 = g x2	  y1 : B	  y2 : C	  q : f y1 = g y2	  z1 : B	  z2 : C	  u : f z1 = g z2	  ============================	  PathSquare (ap f (associativity x1 y1 z1)) (ap g (associativity x2 y2 z2))	    ((grp_homo_op f x1 (y1 * z1) @	      (ap (fun y : A => f x1 * y)	         ((grp_homo_op f y1 z1 @	           (ap (fun y : A => f y1 * y) u @ ap (fun x : A => x * g z2) q)) @	          (grp_homo_op g y2 z2)^) @ ap (fun x : A => x * g (y2 * z2)) p)) @	     (grp_homo_op g x2 (y2 * z2))^)	    ((grp_homo_op f (x1 * y1) z1 @	      (ap (fun y : A => f (x1 * y1) * y) u @	       ap (fun x : A => x * g z2)	         ((grp_homo_op f x1 y1 @	           (ap (fun y : A => f x1 * y) q @ ap (fun x : A => x * g y2) p)) @	          (grp_homo_op g x2 y2)^))) @ (grp_homo_op g (x2 * y2) z2)^)	";
+            data = "1 subgoal (ID 341)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  x1 : B	  x2 : C	  p : f x1 = g x2	  y1 : B	  y2 : C	  q : f y1 = g y2	  z1 : B	  z2 : C	  u : f z1 = g z2	  ============================	  PathSquare (ap f (associativity x1 y1 z1)) (ap g (associativity x2 y2 z2))	    ((grp_homo_op f x1 (y1 * z1) @	      (ap (fun y : A => f x1 * y)	         ((grp_homo_op f y1 z1 @	           (ap (fun y : A => f y1 * y) u @ ap (fun x : A => x * g z2) q)) @	          (grp_homo_op g y2 z2)^) @ ap (fun x : A => x * g (y2 * z2)) p)) @	     (grp_homo_op g x2 (y2 * z2))^)	    ((grp_homo_op f (x1 * y1) z1 @	      (ap (fun y : A => f (x1 * y1) * y) u @	       ap (fun x : A => x * g z2)	         ((grp_homo_op f x1 y1 @	           (ap (fun y : A => f x1 * y) q @ ap (fun x : A => x * g y2) p)) @	          (grp_homo_op g x2 y2)^))) @ (grp_homo_op g (x2 * y2) z2)^)	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 356)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  x1 : B	  x2 : C	  p : f x1 = g x2	  y1 : B	  y2 : C	  q : f y1 = g y2	  z1 : B	  z2 : C	  u : f z1 = g z2	  ============================	  ap f (associativity x1 y1 z1) @	  ((grp_homo_op f (x1 * y1) z1 @	    (ap (fun y : A => f (x1 * y1) * y) u @	     ap (fun x : A => x * g z2)	       ((grp_homo_op f x1 y1 @	         (ap (fun y : A => f x1 * y) q @ ap (fun x : A => x * g y2) p)) @	        (grp_homo_op g x2 y2)^))) @ (grp_homo_op g (x2 * y2) z2)^) =	  ((grp_homo_op f x1 (y1 * z1) @	    (ap (fun y : A => f x1 * y)	       ((grp_homo_op f y1 z1 @	         (ap (fun y : A => f y1 * y) u @ ap (fun x : A => x * g z2) q)) @	        (grp_homo_op g y2 z2)^) @ ap (fun x : A => x * g (y2 * z2)) p)) @	   (grp_homo_op g x2 (y2 * z2))^) @ ap g (associativity x2 y2 z2)	";
+            data = "1 subgoal (ID 354)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  x1 : B	  x2 : C	  p : f x1 = g x2	  y1 : B	  y2 : C	  q : f y1 = g y2	  z1 : B	  z2 : C	  u : f z1 = g z2	  ============================	  ap f (associativity x1 y1 z1) @	  ((grp_homo_op f (x1 * y1) z1 @	    (ap (fun y : A => f (x1 * y1) * y) u @	     ap (fun x : A => x * g z2)	       ((grp_homo_op f x1 y1 @	         (ap (fun y : A => f x1 * y) q @ ap (fun x : A => x * g y2) p)) @	        (grp_homo_op g x2 y2)^))) @ (grp_homo_op g (x2 * y2) z2)^) =	  ((grp_homo_op f x1 (y1 * z1) @	    (ap (fun y : A => f x1 * y)	       ((grp_homo_op f y1 z1 @	         (ap (fun y : A => f y1 * y) u @ ap (fun x : A => x * g z2) q)) @	        (grp_homo_op g y2 z2)^) @ ap (fun x : A => x * g (y2 * z2)) p)) @	   (grp_homo_op g x2 (y2 * z2))^) @ ap g (associativity x2 y2 z2)	";
             responses[i]=data;
           
 
@@ -203,22 +203,22 @@
           
 
             i = 37;
-            data = "1 subgoal (ID 1062)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  grp_pullback_sgop grp_pullback_mon_unit (b; c; p) = (b; c; p)	";
+            data = "1 subgoal (ID 1061)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  grp_pullback_sgop grp_pullback_mon_unit (b; c; p) = (b; c; p)	";
             responses[i]=data;
           
 
             i = 38;
-            data = "1 subgoal (ID 1071)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  {p0 : 1 * b = b &	  {q : 1 * c = c &	  PathSquare (ap f p0) (ap g q)	    ((grp_homo_op f 1%mc b @	      (ap (fun y : A => f 1%mc * y) p @	       ap (fun x : A => x * g c) (grp_homo_unit f @ (grp_homo_unit g)^))) @	     (grp_homo_op g 1%mc c)^) p}}	";
+            data = "1 subgoal (ID 1069)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  {p0 : 1 * b = b &	  {q : 1 * c = c &	  PathSquare (ap f p0) (ap g q)	    ((grp_homo_op f 1%mc b @	      (ap (fun y : A => f 1%mc * y) p @	       ap (fun x : A => x * g c) (grp_homo_unit f @ (grp_homo_unit g)^))) @	     (grp_homo_op g 1%mc c)^) p}}	";
             responses[i]=data;
           
 
             i = 39;
-            data = "1 subgoal (ID 1233)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  PathSquare (ap f (left_identity b)) (ap g (left_identity c))	    ((grp_homo_op f 1%mc b @	      (ap (fun y : A => f 1%mc * y) p @	       ap (fun x : A => x * g c) (grp_homo_unit f @ (grp_homo_unit g)^))) @	     (grp_homo_op g 1%mc c)^) p	";
+            data = "1 subgoal (ID 1230)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  PathSquare (ap f (left_identity b)) (ap g (left_identity c))	    ((grp_homo_op f 1%mc b @	      (ap (fun y : A => f 1%mc * y) p @	       ap (fun x : A => x * g c) (grp_homo_unit f @ (grp_homo_unit g)^))) @	     (grp_homo_op g 1%mc c)^) p	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 1246)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  ap f (left_identity b) @ p =	  ((grp_homo_op f 1%mc b @	    (ap (fun y : A => f 1%mc * y) p @	     ap (fun x : A => x * g c) (grp_homo_unit f @ (grp_homo_unit g)^))) @	   (grp_homo_op g 1%mc c)^) @ ap g (left_identity c)	";
+            data = "1 subgoal (ID 1243)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  ap f (left_identity b) @ p =	  ((grp_homo_op f 1%mc b @	    (ap (fun y : A => f 1%mc * y) p @	     ap (fun x : A => x * g c) (grp_homo_unit f @ (grp_homo_unit g)^))) @	   (grp_homo_op g 1%mc c)^) @ ap g (left_identity c)	";
             responses[i]=data;
           
 
@@ -243,22 +243,22 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 1065)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  grp_pullback_sgop (b; c; p) grp_pullback_mon_unit = (b; c; p)	";
+            data = "1 subgoal (ID 1064)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  grp_pullback_sgop (b; c; p) grp_pullback_mon_unit = (b; c; p)	";
             responses[i]=data;
           
 
             i = 46;
-            data = "1 subgoal (ID 1074)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  {p0 : b * 1 = b &	  {q : c * 1 = c &	  PathSquare (ap f p0) (ap g q)	    ((grp_homo_op f b 1%mc @	      (ap (fun y : A => f b * y) (grp_homo_unit f @ (grp_homo_unit g)^) @	       ap (fun x : A => x * g 1%mc) p)) @ (grp_homo_op g c 1%mc)^) p}}	";
+            data = "1 subgoal (ID 1072)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  {p0 : b * 1 = b &	  {q : c * 1 = c &	  PathSquare (ap f p0) (ap g q)	    ((grp_homo_op f b 1%mc @	      (ap (fun y : A => f b * y) (grp_homo_unit f @ (grp_homo_unit g)^) @	       ap (fun x : A => x * g 1%mc) p)) @ (grp_homo_op g c 1%mc)^) p}}	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 1236)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  PathSquare (ap f (right_identity b)) (ap g (right_identity c))	    ((grp_homo_op f b 1%mc @	      (ap (fun y : A => f b * y) (grp_homo_unit f @ (grp_homo_unit g)^) @	       ap (fun x : A => x * g 1%mc) p)) @ (grp_homo_op g c 1%mc)^) p	";
+            data = "1 subgoal (ID 1233)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  PathSquare (ap f (right_identity b)) (ap g (right_identity c))	    ((grp_homo_op f b 1%mc @	      (ap (fun y : A => f b * y) (grp_homo_unit f @ (grp_homo_unit g)^) @	       ap (fun x : A => x * g 1%mc) p)) @ (grp_homo_op g c 1%mc)^) p	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 1249)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  ap f (right_identity b) @ p =	  ((grp_homo_op f b 1%mc @	    (ap (fun y : A => f b * y) (grp_homo_unit f @ (grp_homo_unit g)^) @	     ap (fun x : A => x * g 1%mc) p)) @ (grp_homo_op g c 1%mc)^) @	  ap g (right_identity c)	";
+            data = "1 subgoal (ID 1246)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  ap f (right_identity b) @ p =	  ((grp_homo_op f b 1%mc @	    (ap (fun y : A => f b * y) (grp_homo_unit f @ (grp_homo_unit g)^) @	     ap (fun x : A => x * g 1%mc) p)) @ (grp_homo_op g c 1%mc)^) @	  ap g (right_identity c)	";
             responses[i]=data;
           
 
@@ -293,7 +293,7 @@
           
 
             i = 55;
-            data = "1 subgoal (ID 1104)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  - f b = - g c	";
+            data = "1 subgoal (ID 1103)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  - f b = - g c	";
             responses[i]=data;
           
 
@@ -318,32 +318,32 @@
           
 
             i = 60;
-            data = "1 subgoal (ID 1071)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  ============================	  forall x : Pullback f g,	  grp_pullback_sgop (grp_pullback_negate x) x = grp_pullback_mon_unit	";
+            data = "1 subgoal (ID 1070)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  ============================	  forall x : Pullback f g,	  grp_pullback_sgop (grp_pullback_negate x) x = grp_pullback_mon_unit	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 1080)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  grp_pullback_sgop (grp_pullback_negate (b; c; p)) (b; c; p) =	  grp_pullback_mon_unit	";
+            data = "1 subgoal (ID 1079)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  grp_pullback_sgop (grp_pullback_negate (b; c; p)) (b; c; p) =	  grp_pullback_mon_unit	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 1084)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  (- b * b; - c * c;	  (grp_homo_op f (- b) b @	   (ap (fun y : A => f (- b) * y) p @	    ap (fun x : A => x * g c)	      ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^))) @	  (grp_homo_op g (- c) c)^) = grp_pullback_mon_unit	";
+            data = "1 subgoal (ID 1081)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  (- b * b; - c * c;	  (grp_homo_op f (- b) b @	   (ap (fun y : A => f (- b) * y) p @	    ap (fun x : A => x * g c)	      ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^))) @	  (grp_homo_op g (- c) c)^) = grp_pullback_mon_unit	";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 1093)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  {p0 : - b * b = 1 &	  {q : - c * c = 1 &	  PathSquare (ap f p0) (ap g q)	    ((grp_homo_op f (- b) b @	      (ap (fun y : A => f (- b) * y) p @	       ap (fun x : A => x * g c)	         ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^))) @	     (grp_homo_op g (- c) c)^) (grp_homo_unit f @ (grp_homo_unit g)^)}}	";
+            data = "1 subgoal (ID 1089)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  {p0 : - b * b = 1 &	  {q : - c * c = 1 &	  PathSquare (ap f p0) (ap g q)	    ((grp_homo_op f (- b) b @	      (ap (fun y : A => f (- b) * y) p @	       ap (fun x : A => x * g c)	         ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^))) @	     (grp_homo_op g (- c) c)^) (grp_homo_unit f @ (grp_homo_unit g)^)}}	";
             responses[i]=data;
           
 
             i = 64;
-            data = "1 subgoal (ID 1127)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  PathSquare (ap f (left_inverse b)) (ap g (left_inverse c))	    ((grp_homo_op f (- b) b @	      (ap (fun y : A => f (- b) * y) p @	       ap (fun x : A => x * g c)	         ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^))) @	     (grp_homo_op g (- c) c)^) (grp_homo_unit f @ (grp_homo_unit g)^)	";
+            data = "1 subgoal (ID 1122)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  PathSquare (ap f (left_inverse b)) (ap g (left_inverse c))	    ((grp_homo_op f (- b) b @	      (ap (fun y : A => f (- b) * y) p @	       ap (fun x : A => x * g c)	         ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^))) @	     (grp_homo_op g (- c) c)^) (grp_homo_unit f @ (grp_homo_unit g)^)	";
             responses[i]=data;
           
 
             i = 65;
-            data = "1 subgoal (ID 1140)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  ap f (left_inverse b) @ (grp_homo_unit f @ (grp_homo_unit g)^) =	  ((grp_homo_op f (- b) b @	    (ap (fun y : A => f (- b) * y) p @	     ap (fun x : A => x * g c)	       ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^))) @	   (grp_homo_op g (- c) c)^) @ ap g (left_inverse c)	";
+            data = "1 subgoal (ID 1135)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  ap f (left_inverse b) @ (grp_homo_unit f @ (grp_homo_unit g)^) =	  ((grp_homo_op f (- b) b @	    (ap (fun y : A => f (- b) * y) p @	     ap (fun x : A => x * g c)	       ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^))) @	   (grp_homo_op g (- c) c)^) @ ap g (left_inverse c)	";
             responses[i]=data;
           
 
@@ -373,22 +373,22 @@
           
 
             i = 71;
-            data = "1 subgoal (ID 1087)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  (b * - b; c * - c;	  (grp_homo_op f b (- b) @	   (ap (fun y : A => f b * y)	      ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^) @	    ap (fun x : A => x * g (- c)) p)) @ (grp_homo_op g c (- c))^) =	  grp_pullback_mon_unit	";
+            data = "1 subgoal (ID 1085)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  (b * - b; c * - c;	  (grp_homo_op f b (- b) @	   (ap (fun y : A => f b * y)	      ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^) @	    ap (fun x : A => x * g (- c)) p)) @ (grp_homo_op g c (- c))^) =	  grp_pullback_mon_unit	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 1096)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  {p0 : b * - b = 1 &	  {q : c * - c = 1 &	  PathSquare (ap f p0) (ap g q)	    ((grp_homo_op f b (- b) @	      (ap (fun y : A => f b * y)	         ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^) @	       ap (fun x : A => x * g (- c)) p)) @ (grp_homo_op g c (- c))^)	    (grp_homo_unit f @ (grp_homo_unit g)^)}}	";
+            data = "1 subgoal (ID 1093)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  {p0 : b * - b = 1 &	  {q : c * - c = 1 &	  PathSquare (ap f p0) (ap g q)	    ((grp_homo_op f b (- b) @	      (ap (fun y : A => f b * y)	         ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^) @	       ap (fun x : A => x * g (- c)) p)) @ (grp_homo_op g c (- c))^)	    (grp_homo_unit f @ (grp_homo_unit g)^)}}	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 subgoal (ID 1130)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  PathSquare (ap f (right_inverse b)) (ap g (right_inverse c))	    ((grp_homo_op f b (- b) @	      (ap (fun y : A => f b * y)	         ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^) @	       ap (fun x : A => x * g (- c)) p)) @ (grp_homo_op g c (- c))^)	    (grp_homo_unit f @ (grp_homo_unit g)^)	";
+            data = "1 subgoal (ID 1126)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  PathSquare (ap f (right_inverse b)) (ap g (right_inverse c))	    ((grp_homo_op f b (- b) @	      (ap (fun y : A => f b * y)	         ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^) @	       ap (fun x : A => x * g (- c)) p)) @ (grp_homo_op g c (- c))^)	    (grp_homo_unit f @ (grp_homo_unit g)^)	";
             responses[i]=data;
           
 
             i = 74;
-            data = "1 subgoal (ID 1143)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  ap f (right_inverse b) @ (grp_homo_unit f @ (grp_homo_unit g)^) =	  ((grp_homo_op f b (- b) @	    (ap (fun y : A => f b * y)	       ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^) @	     ap (fun x : A => x * g (- c)) p)) @ (grp_homo_op g c (- c))^) @	  ap g (right_inverse c)	";
+            data = "1 subgoal (ID 1139)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  b : B	  c : C	  p : f b = g c	  ============================	  ap f (right_inverse b) @ (grp_homo_unit f @ (grp_homo_unit g)^) =	  ((grp_homo_op f b (- b) @	    (ap (fun y : A => f b * y)	       ((grp_homo_inv f b @ ap (fun a : A => - a) p) @ (grp_homo_inv g c)^) @	     ap (fun x : A => x * g (- c)) p)) @ (grp_homo_op g c (- c))^) @	  ap g (right_inverse c)	";
             responses[i]=data;
           
 
@@ -513,7 +513,7 @@
           
 
             i = 99;
-            data = "1 subgoal (ID 1186)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  pr1 (b (x * y); c (x * y); p (x * y)) =	  pr1 ((b x; c x; p x) * (b y; c y; p y))	1 subgoal (ID 1190)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  b (x * y) = b x * b y	";
+            data = "1 subgoal (ID 1186)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  pr1 (b (x * y); c (x * y); p (x * y)) =	  pr1 ((b x; c x; p x) * (b y; c y; p y))	1 subgoal (ID 1189)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  b (x * y) = b x * b y	";
             responses[i]=data;
           
 
@@ -523,27 +523,27 @@
           
 
             i = 101;
-            data = "1 subgoal (ID 1188)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  transport (fun b0 : B => {c0 : C & f b0 = g c0}) 	    (grp_homo_op b x y) (pr2 (b (x * y); c (x * y); p (x * y))) =	  pr2 ((b x; c x; p x) * (b y; c y; p y))	1 subgoal (ID 1194)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  transport (fun b0 : B => {c0 : C & f b0 = g c0}) 	    (grp_homo_op b x y) (c (x * y); p (x * y)) =	  pr2 ((b x; c x; p x) * (b y; c y; p y))	";
+            data = "1 subgoal (ID 1188)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  transport (fun b0 : B => {c0 : C & f b0 = g c0}) 	    (grp_homo_op b x y) (pr2 (b (x * y); c (x * y); p (x * y))) =	  pr2 ((b x; c x; p x) * (b y; c y; p y))	1 subgoal (ID 1192)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  transport (fun b0 : B => {c0 : C & f b0 = g c0}) 	    (grp_homo_op b x y) (c (x * y); p (x * y)) =	  pr2 ((b x; c x; p x) * (b y; c y; p y))	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 1211)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  (pr1 (c (x * y); p (x * y));	  transport (fun x0 : B => f x0 = g (pr1 (c (x * y); p (x * y))))	    (grp_homo_op b x y) (pr2 (c (x * y); p (x * y)))) =	  (c x * c y;	  (grp_homo_op f (b x) (b y) @	   (ap (fun y0 : A => f (b x) * y0) (p y) @	    ap (fun x0 : A => x0 * g (c y)) (p x))) @ (grp_homo_op g (c x) (c y))^)	";
+            data = "1 subgoal (ID 1208)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  (pr1 (c (x * y); p (x * y));	  transport (fun x0 : B => f x0 = g (pr1 (c (x * y); p (x * y))))	    (grp_homo_op b x y) (pr2 (c (x * y); p (x * y)))) =	  (c x * c y;	  (grp_homo_op f (b x) (b y) @	   (ap (fun y0 : A => f (b x) * y0) (p y) @	    ap (fun x0 : A => x0 * g (c y)) (p x))) @ (grp_homo_op g (c x) (c y))^)	";
             responses[i]=data;
           
 
             i = 103;
-            data = "1 subgoal (ID 1213)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  (c (x * y);	  transport (fun x0 : B => f x0 = g (c (x * y))) (grp_homo_op b x y)	    (pr2 (c (x * y); p (x * y)))) =	  (c x * c y;	  (grp_homo_op f (b x) (b y) @	   (ap (fun y0 : A => f (b x) * y0) (p y) @	    ap (fun x0 : A => x0 * g (c y)) (p x))) @ (grp_homo_op g (c x) (c y))^)	";
+            data = "1 subgoal (ID 1209)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  (c (x * y);	  transport (fun x0 : B => f x0 = g (c (x * y))) (grp_homo_op b x y)	    (pr2 (c (x * y); p (x * y)))) =	  (c x * c y;	  (grp_homo_op f (b x) (b y) @	   (ap (fun y0 : A => f (b x) * y0) (p y) @	    ap (fun x0 : A => x0 * g (c y)) (p x))) @ (grp_homo_op g (c x) (c y))^)	";
             responses[i]=data;
           
 
             i = 104;
-            data = "1 subgoal (ID 1404)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  pr1	    (c (x * y);	    transport (fun x0 : B => f x0 = g (c (x * y))) 	      (grp_homo_op b x y) (pr2 (c (x * y); p (x * y)))) =	  pr1	    (c x * c y;	    (grp_homo_op f (b x) (b y) @	     (ap (fun y0 : A => f (b x) * y0) (p y) @	      ap (fun x0 : A => x0 * g (c y)) (p x))) @ (grp_homo_op g (c x) (c y))^)	";
+            data = "1 subgoal (ID 1400)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  pr1	    (c (x * y);	    transport (fun x0 : B => f x0 = g (c (x * y))) 	      (grp_homo_op b x y) (pr2 (c (x * y); p (x * y)))) =	  pr1	    (c x * c y;	    (grp_homo_op f (b x) (b y) @	     (ap (fun y0 : A => f (b x) * y0) (p y) @	      ap (fun x0 : A => x0 * g (c y)) (p x))) @ (grp_homo_op g (c x) (c y))^)	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 subgoal (ID 1406)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  c (x * y) = c x * c y	";
+            data = "1 subgoal (ID 1401)	  	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  b : X $-> B	  c : X $-> C	  p : f o b == g o c	  x, y : X	  ============================	  c (x * y) = c x * c y	";
             responses[i]=data;
           
 
@@ -653,7 +653,7 @@
           
 
             i = 127;
-            data = "1 subgoal (ID 170)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  phi : X $-> grp_pullback f g	  ============================	  (fun x : X => f ((grp_pullback_pr1 f g $o phi) x)) ==	  (fun x : X => g ((grp_pullback_pr2 f g $o phi) x))	";
+            data = "1 subgoal (ID 169)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  phi : X $-> grp_pullback f g	  ============================	  (fun x : X => f ((grp_pullback_pr1 f g $o phi) x)) ==	  (fun x : X => g ((grp_pullback_pr2 f g $o phi) x))	";
             responses[i]=data;
           
 
@@ -663,7 +663,7 @@
           
 
             i = 129;
-            data = "1 subgoal (ID 139)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  ============================	  Sect	    (fun phi : X $-> grp_pullback f g =>	     (grp_pullback_pr1 f g $o phi; grp_pullback_pr2 f g $o phi;	     fun x : X => pullback_commsq f g (phi x))) (grp_pullback_corec' f g X)	1 subgoal (ID 177)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  phi : X $-> grp_pullback f g	  ============================	  grp_pullback_corec' f g X	    (grp_pullback_pr1 f g $o phi; grp_pullback_pr2 f g $o phi;	    fun x : X => pullback_commsq f g (phi x)) = phi	";
+            data = "1 subgoal (ID 139)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  ============================	  Sect	    (fun phi : X $-> grp_pullback f g =>	     (grp_pullback_pr1 f g $o phi; grp_pullback_pr2 f g $o phi;	     fun x : X => pullback_commsq f g (phi x))) (grp_pullback_corec' f g X)	1 subgoal (ID 176)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  phi : X $-> grp_pullback f g	  ============================	  grp_pullback_corec' f g X	    (grp_pullback_pr1 f g $o phi; grp_pullback_pr2 f g $o phi;	    fun x : X => pullback_commsq f g (phi x)) = phi	";
             responses[i]=data;
           
 
@@ -673,37 +673,37 @@
           
 
             i = 131;
-            data = "1 subgoal (ID 141)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  ============================	  Sect (grp_pullback_corec' f g X)	    (fun phi : X $-> grp_pullback f g =>	     (grp_pullback_pr1 f g $o phi; grp_pullback_pr2 f g $o phi;	     fun x : X => pullback_commsq f g (phi x)))	1 subgoal (ID 197)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  (grp_homo_compose (grp_pullback_pr1 f g) (grp_pullback_corec' f g X bcp);	  grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	  fun x : X =>	  pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x)) = bcp	";
+            data = "1 subgoal (ID 141)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  ============================	  Sect (grp_pullback_corec' f g X)	    (fun phi : X $-> grp_pullback f g =>	     (grp_pullback_pr1 f g $o phi; grp_pullback_pr2 f g $o phi;	     fun x : X => pullback_commsq f g (phi x)))	1 subgoal (ID 195)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  (grp_homo_compose (grp_pullback_pr1 f g) (grp_pullback_corec' f g X bcp);	  grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	  fun x : X =>	  pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x)) = bcp	";
             responses[i]=data;
           
 
             i = 132;
-            data = "2 subgoals (ID 231)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  pr1	    (grp_homo_compose (grp_pullback_pr1 f g) (grp_pullback_corec' f g X bcp);	    grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	    fun x : X =>	    pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x)) =	  pr1 bcp		subgoal 2 (ID 233) is:	 transport	   (fun b : GroupHomomorphism X B =>	    {c : GroupHomomorphism X C &	    (fun x : X => f (b x)) == (fun x : X => g (c x))}) 	   ?p	   (pr2	      (grp_homo_compose (grp_pullback_pr1 f g)	         (grp_pullback_corec' f g X bcp);	      grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	      fun x : X =>	      pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x))) =	 pr2 bcp	";
+            data = "2 subgoals (ID 229)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  pr1	    (grp_homo_compose (grp_pullback_pr1 f g) (grp_pullback_corec' f g X bcp);	    grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	    fun x : X =>	    pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x)) =	  pr1 bcp		subgoal 2 (ID 231) is:	 transport	   (fun b : GroupHomomorphism X B =>	    {c : GroupHomomorphism X C &	    (fun x : X => f (b x)) == (fun x : X => g (c x))}) 	   ?p	   (pr2	      (grp_homo_compose (grp_pullback_pr1 f g)	         (grp_pullback_corec' f g X bcp);	      grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	      fun x : X =>	      pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x))) =	 pr2 bcp	";
             responses[i]=data;
           
 
             i = 133;
-            data = "1 subgoal (ID 231)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  pr1	    (grp_homo_compose (grp_pullback_pr1 f g) (grp_pullback_corec' f g X bcp);	    grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	    fun x : X =>	    pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x)) =	  pr1 bcp	1 subgoal (ID 235)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  grp_homo_compose (grp_pullback_pr1 f g) (grp_pullback_corec' f g X bcp) =	  pr1 bcp	";
+            data = "1 subgoal (ID 229)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  pr1	    (grp_homo_compose (grp_pullback_pr1 f g) (grp_pullback_corec' f g X bcp);	    grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	    fun x : X =>	    pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x)) =	  pr1 bcp	1 subgoal (ID 232)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  grp_homo_compose (grp_pullback_pr1 f g) (grp_pullback_corec' f g X bcp) =	  pr1 bcp	";
             responses[i]=data;
           
 
             i = 134;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 233)		subgoal 1 (ID 233) is:	 transport	   (fun b : GroupHomomorphism X B =>	    {c : GroupHomomorphism X C &	    (fun x : X => f (b x)) == (fun x : X => g (c x))})	   (grp_pullback_corec_pr1 (pr1 bcp) (pr1 (pr2 bcp)) (pr2 (pr2 bcp)))	   (pr2	      (grp_homo_compose (grp_pullback_pr1 f g)	         (grp_pullback_corec' f g X bcp);	      grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	      fun x : X =>	      pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x))) =	 pr2 bcp	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 231)		subgoal 1 (ID 231) is:	 transport	   (fun b : GroupHomomorphism X B =>	    {c : GroupHomomorphism X C &	    (fun x : X => f (b x)) == (fun x : X => g (c x))})	   (grp_pullback_corec_pr1 (pr1 bcp) (pr1 (pr2 bcp)) (pr2 (pr2 bcp)))	   (pr2	      (grp_homo_compose (grp_pullback_pr1 f g)	         (grp_pullback_corec' f g X bcp);	      grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp);	      fun x : X =>	      pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x))) =	 pr2 bcp	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 subgoal (ID 233)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  transport	    (fun b : GroupHomomorphism X B =>	     {c : GroupHomomorphism X C &	     (fun x : X => f (b x)) == (fun x : X => g (c x))})	    (grp_pullback_corec_pr1 (pr1 bcp) (pr1 (pr2 bcp)) (pr2 (pr2 bcp)))	    (pr2	       (grp_homo_compose (grp_pullback_pr1 f g)	          (grp_pullback_corec' f g X bcp);	       grp_homo_compose (grp_pullback_pr2 f g)	         (grp_pullback_corec' f g X bcp);	       fun x : X =>	       pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x))) =	  pr2 bcp	1 subgoal (ID 253)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  (pr1	     (pr2	        (grp_homo_compose (grp_pullback_pr1 f g)	           (grp_pullback_corec' f g X bcp);	        grp_homo_compose (grp_pullback_pr2 f g)	          (grp_pullback_corec' f g X bcp);	        fun x : X =>	        pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x)));	  transport	    (fun x : GroupHomomorphism X B =>	     (fun x0 : X => f (x x0)) ==	     (fun x0 : X =>	      g	        (pr1	           (pr2	              (grp_homo_compose (grp_pullback_pr1 f g)	                 (grp_pullback_corec' f g X bcp);	              grp_homo_compose (grp_pullback_pr2 f g)	                (grp_pullback_corec' f g X bcp);	              fun x1 : X =>	              pullback_commsq f g	                (pr1 bcp x1; pr1 (pr2 bcp) x1; pr2 (pr2 bcp) x1))) x0)))	    (grp_pullback_corec_pr1 (pr1 bcp) (pr1 (pr2 bcp)) (pr2 (pr2 bcp)))	    (pr2	       (pr2	          (grp_homo_compose (grp_pullback_pr1 f g)	             (grp_pullback_corec' f g X bcp);	          grp_homo_compose (grp_pullback_pr2 f g)	            (grp_pullback_corec' f g X bcp);	          fun x : X =>	          pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x))))) =	  pr2 bcp	";
+            data = "1 subgoal (ID 231)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  transport	    (fun b : GroupHomomorphism X B =>	     {c : GroupHomomorphism X C &	     (fun x : X => f (b x)) == (fun x : X => g (c x))})	    (grp_pullback_corec_pr1 (pr1 bcp) (pr1 (pr2 bcp)) (pr2 (pr2 bcp)))	    (pr2	       (grp_homo_compose (grp_pullback_pr1 f g)	          (grp_pullback_corec' f g X bcp);	       grp_homo_compose (grp_pullback_pr2 f g)	         (grp_pullback_corec' f g X bcp);	       fun x : X =>	       pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x))) =	  pr2 bcp	1 subgoal (ID 249)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  (pr1	     (pr2	        (grp_homo_compose (grp_pullback_pr1 f g)	           (grp_pullback_corec' f g X bcp);	        grp_homo_compose (grp_pullback_pr2 f g)	          (grp_pullback_corec' f g X bcp);	        fun x : X =>	        pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x)));	  transport	    (fun x : GroupHomomorphism X B =>	     (fun x0 : X => f (x x0)) ==	     (fun x0 : X =>	      g	        (pr1	           (pr2	              (grp_homo_compose (grp_pullback_pr1 f g)	                 (grp_pullback_corec' f g X bcp);	              grp_homo_compose (grp_pullback_pr2 f g)	                (grp_pullback_corec' f g X bcp);	              fun x1 : X =>	              pullback_commsq f g	                (pr1 bcp x1; pr1 (pr2 bcp) x1; pr2 (pr2 bcp) x1))) x0)))	    (grp_pullback_corec_pr1 (pr1 bcp) (pr1 (pr2 bcp)) (pr2 (pr2 bcp)))	    (pr2	       (pr2	          (grp_homo_compose (grp_pullback_pr1 f g)	             (grp_pullback_corec' f g X bcp);	          grp_homo_compose (grp_pullback_pr2 f g)	            (grp_pullback_corec' f g X bcp);	          fun x : X =>	          pullback_commsq f g (pr1 bcp x; pr1 (pr2 bcp) x; pr2 (pr2 bcp) x))))) =	  pr2 bcp	";
             responses[i]=data;
           
 
             i = 136;
-            data = "1 subgoal (ID 473)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp) =	  pr1 (pr2 bcp)	";
+            data = "1 subgoal (ID 468)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp) =	  pr1 (pr2 bcp)	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 475)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp) =	  pr1 (pr2 bcp)	";
+            data = "1 subgoal (ID 469)	  	  H : Funext	  A, B, C : Group	  f : B $-> A	  g : C $-> A	  X : Group	  bcp : {b : X $-> B &	        {c : X $-> C & (fun x : X => f (b x)) == (fun x : X => g (c x))}}	  ============================	  grp_homo_compose (grp_pullback_pr2 f g) (grp_pullback_corec' f g X bcp) =	  pr1 (pr2 bcp)	";
             responses[i]=data;
           
 

@@ -888,7 +888,7 @@
           
 
             i = 174;
-            data = "1 subgoal (ID 49)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  a0 : A	  b0 : B	  f0 : Functor (S a0) (T b0)	  a1 : A	  b1 : B	  f1 : Functor (S a1) (T b1)	  ============================	  forall (Ha : a0 = a1) (Hb : b0 = b1),	  match Ha in (_ = X) return (Functor (S X) (T b1)) with	  | 1%path =>	      match Hb in (_ = Y) return (Functor (S a0) (T Y)) with	      | 1%path => f0	      end	  end = f1 ->	  {| a := a0; b := b0; f := f0 |} = {| a := a1; b := b1; f := f1 |}	";
+            data = "1 subgoal (ID 48)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  a0 : A	  b0 : B	  f0 : Functor (S a0) (T b0)	  a1 : A	  b1 : B	  f1 : Functor (S a1) (T b1)	  ============================	  forall (Ha : a0 = a1) (Hb : b0 = b1),	  match Ha in (_ = X) return (Functor (S X) (T b1)) with	  | 1%path =>	      match Hb in (_ = Y) return (Functor (S a0) (T Y)) with	      | 1%path => f0	      end	  end = f1 ->	  {| a := a0; b := b0; f := f0 |} = {| a := a1; b := b1; f := f1 |}	";
             responses[i]=data;
           
 
@@ -1078,27 +1078,27 @@
           
 
             i = 212;
-            data = "1 subgoal (ID 406)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh, g'h' : morphism abf a'b'f'	  Hg : g gh = g g'h'	  Hh : h gh = h g'h'	  Hp : (f a'b'f'	        oL Category.Morphisms.idtoiso (S (a abf) -> S (a a'b'f'))	             (ap (p_morphism_of S) Hg) o p gh	        o ((Category.Morphisms.idtoiso (T (b abf) -> T (b a'b'f'))	              (ap (p_morphism_of T) Hh))^-1 oR f abf))%natural_transformation =	       p g'h'	  ============================	  match	    Hg in (_ = g0)	    return	      (NaturalTransformation (p_morphism_of T (h g'h') o f abf)	         (f a'b'f' o p_morphism_of S g0))	  with	  | 1%path =>	      match	        Hh in (_ = h0)	        return	          (NaturalTransformation (p_morphism_of T h0 o f abf)	             (f a'b'f' o p_morphism_of S (g gh)))	      with	      | 1%path => p gh	      end	  end = p g'h'	";
+            data = "1 subgoal (ID 405)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh, g'h' : morphism abf a'b'f'	  Hg : g gh = g g'h'	  Hh : h gh = h g'h'	  Hp : (f a'b'f'	        oL Category.Morphisms.idtoiso (S (a abf) -> S (a a'b'f'))	             (ap (p_morphism_of S) Hg) o p gh	        o ((Category.Morphisms.idtoiso (T (b abf) -> T (b a'b'f'))	              (ap (p_morphism_of T) Hh))^-1 oR f abf))%natural_transformation =	       p g'h'	  ============================	  match	    Hg in (_ = g0)	    return	      (NaturalTransformation (p_morphism_of T (h g'h') o f abf)	         (f a'b'f' o p_morphism_of S g0))	  with	  | 1%path =>	      match	        Hh in (_ = h0)	        return	          (NaturalTransformation (p_morphism_of T h0 o f abf)	             (f a'b'f' o p_morphism_of S (g gh)))	      with	      | 1%path => p gh	      end	  end = p g'h'	";
             responses[i]=data;
           
 
             i = 213;
-            data = "1 subgoal (ID 421)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh : morphism abf a'b'f'	  g0 : Core.morphism A (a abf) (a a'b'f')	  h0 : Core.morphism B (b abf) (b a'b'f')	  p0 : NaturalTransformation (p_morphism_of T h0 o f abf)	         (f a'b'f' o p_morphism_of S g0)	  Hg : g gh = g0	  Hh : h gh = h0	  Hp : (f a'b'f'	        oL Category.Morphisms.idtoiso (S (a abf) -> S (a a'b'f'))	             (ap (p_morphism_of S) Hg) o p gh	        o ((Category.Morphisms.idtoiso (T (b abf) -> T (b a'b'f'))	              (ap (p_morphism_of T) Hh))^-1 oR f abf))%natural_transformation =	       p0	  ============================	  match	    Hg in (_ = g1)	    return	      (NaturalTransformation (p_morphism_of T h0 o f abf)	         (f a'b'f' o p_morphism_of S g1))	  with	  | 1%path =>	      match	        Hh in (_ = h1)	        return	          (NaturalTransformation (p_morphism_of T h1 o f abf)	             (f a'b'f' o p_morphism_of S (g gh)))	      with	      | 1%path => p gh	      end	  end = p0	";
+            data = "1 subgoal (ID 420)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh : morphism abf a'b'f'	  g0 : Core.morphism A (a abf) (a a'b'f')	  h0 : Core.morphism B (b abf) (b a'b'f')	  p0 : NaturalTransformation (p_morphism_of T h0 o f abf)	         (f a'b'f' o p_morphism_of S g0)	  Hg : g gh = g0	  Hh : h gh = h0	  Hp : (f a'b'f'	        oL Category.Morphisms.idtoiso (S (a abf) -> S (a a'b'f'))	             (ap (p_morphism_of S) Hg) o p gh	        o ((Category.Morphisms.idtoiso (T (b abf) -> T (b a'b'f'))	              (ap (p_morphism_of T) Hh))^-1 oR f abf))%natural_transformation =	       p0	  ============================	  match	    Hg in (_ = g1)	    return	      (NaturalTransformation (p_morphism_of T h0 o f abf)	         (f a'b'f' o p_morphism_of S g1))	  with	  | 1%path =>	      match	        Hh in (_ = h1)	        return	          (NaturalTransformation (p_morphism_of T h1 o f abf)	             (f a'b'f' o p_morphism_of S (g gh)))	      with	      | 1%path => p gh	      end	  end = p0	";
             responses[i]=data;
           
 
             i = 214;
-            data = "1 subgoal (ID 447)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh : morphism abf a'b'f'	  ============================	  p gh =	  (f a'b'f' oL Identity.identity (p_morphism_of S (g gh)) o p gh	   o (Identity.identity (p_morphism_of T (h gh)) oR f abf))%natural_transformation	";
+            data = "1 subgoal (ID 446)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh : morphism abf a'b'f'	  ============================	  p gh =	  (f a'b'f' oL Identity.identity (p_morphism_of S (g gh)) o p gh	   o (Identity.identity (p_morphism_of T (h gh)) oR f abf))%natural_transformation	";
             responses[i]=data;
           
 
             i = 215;
-            data = "1 subgoal (ID 454)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh : morphism abf a'b'f'	  x : S (a abf)	  ============================	  p gh x = (f a'b'f') _1 1 o p gh x o 1	";
+            data = "1 subgoal (ID 452)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh : morphism abf a'b'f'	  x : S (a abf)	  ============================	  p gh x = (f a'b'f') _1 1 o p gh x o 1	";
             responses[i]=data;
           
 
             i = 216;
-            data = "1 subgoal (ID 459)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh : morphism abf a'b'f'	  x : S (a abf)	  ============================	  p gh x = p gh x	";
+            data = "1 subgoal (ID 457)	  	  H : Funext	  A : PreCategory	  B : PreCategory	  S : Pseudofunctor A	  T : Pseudofunctor B	  H0 : forall (a : A) (b : B), IsHSet (Functor (S a) (T b))	  abf, a'b'f' : object	  gh : morphism abf a'b'f'	  x : S (a abf)	  ============================	  p gh x = p gh x	";
             responses[i]=data;
           
 

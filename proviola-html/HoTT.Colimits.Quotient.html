@@ -203,7 +203,7 @@
           
 
             i = 37;
-            data = "1 focused subgoal	(shelved: 1) (ID 117)	  	  A : Type	  R : Relation A	  P : Quotient R -> Type	  sP : forall x : Quotient R, IsHSet (P x)	  pclass : forall x : A, P (class_of R x)	  peq : forall (x y : A) (H : R x y),	        transport P (qglue H) (pclass x) = pclass y	  a, b : A	  p : R a b	  ============================	  transport P (ap tr (cglue (a; b; p))) (?coeq' (a; b; p).1) =	  ?coeq' ((a; b; p).2).1	";
+            data = "1 focused subgoal	(shelved: 1) (ID 116)	  	  A : Type	  R : Relation A	  P : Quotient R -> Type	  sP : forall x : Quotient R, IsHSet (P x)	  pclass : forall x : A, P (class_of R x)	  peq : forall (x y : A) (H : R x y),	        transport P (qglue H) (pclass x) = pclass y	  a, b : A	  p : R a b	  ============================	  transport P (ap tr (cglue (a; b; p))) (?coeq' (a; b; p).1) =	  ?coeq' ((a; b; p).2).1	";
             responses[i]=data;
           
 
@@ -228,12 +228,12 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 136)	  	  A : Type	  R : Relation A	  P : Quotient R -> Type	  sP : forall x : Quotient R, IsHSet (P x)	  pclass : forall x : A, P (class_of R x)	  peq : forall (x y : A) (H : R x y),	        transport P (qglue H) (pclass x) = pclass y	  x, y : A	  p : R x y	  ============================	  (transport_compose P tr (cglue (x; y; p))	     (Quotient_ind R P pclass peq (tr (coeq x))))^ @	  apD	    (fun	       x0 : Coeq (fun x0 : {a : A & {x : _ & R a x}} => x0.1)	              (fun x0 : {a : A & {x : _ & R a x}} => (x0.2).1) =>	     Quotient_ind R P pclass peq (tr x0)) (cglue (x; y; p)) = 	  peq x y p	";
+            data = "1 subgoal (ID 135)	  	  A : Type	  R : Relation A	  P : Quotient R -> Type	  sP : forall x : Quotient R, IsHSet (P x)	  pclass : forall x : A, P (class_of R x)	  peq : forall (x y : A) (H : R x y),	        transport P (qglue H) (pclass x) = pclass y	  x, y : A	  p : R x y	  ============================	  (transport_compose P tr (cglue (x; y; p))	     (Quotient_ind R P pclass peq (tr (coeq x))))^ @	  apD	    (fun	       x0 : Coeq (fun x0 : {a : A & {x : _ & R a x}} => x0.1)	              (fun x0 : {a : A & {x : _ & R a x}} => (x0.2).1) =>	     Quotient_ind R P pclass peq (tr x0)) (cglue (x; y; p)) = 	  peq x y p	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 162)	  	  A : Type	  R : Relation A	  P : Quotient R -> Type	  sP : forall x : Quotient R, IsHSet (P x)	  pclass : forall x : A, P (class_of R x)	  peq : forall (x y : A) (H : R x y),	        transport P (qglue H) (pclass x) = pclass y	  x, y : A	  p : R x y	  ============================	  (transport_compose P tr (cglue (x; y; p))	     (Quotient_ind R P pclass peq (tr (coeq x))))^ @	  (transport_compose P tr (cglue (x; y; p)) (pclass (x; y; p).1) @	   peq (x; y; p).1 ((x; y; p).2).1 p) = peq x y p	";
+            data = "1 subgoal (ID 160)	  	  A : Type	  R : Relation A	  P : Quotient R -> Type	  sP : forall x : Quotient R, IsHSet (P x)	  pclass : forall x : A, P (class_of R x)	  peq : forall (x y : A) (H : R x y),	        transport P (qglue H) (pclass x) = pclass y	  x, y : A	  p : R x y	  ============================	  (transport_compose P tr (cglue (x; y; p))	     (Quotient_ind R P pclass peq (tr (coeq x))))^ @	  (transport_compose P tr (cglue (x; y; p)) (pclass (x; y; p).1) @	   peq (x; y; p).1 ((x; y; p).2).1 p) = peq x y p	";
             responses[i]=data;
           
 
@@ -288,7 +288,7 @@
           
 
             i = 54;
-            data = "1 subgoal (ID 177)	  	  A : Type	  R : Relation A	  P : Type	  IsHSet0 : IsHSet P	  pclass : A -> P	  peq : forall x y : A, R x y -> pclass x = pclass y	  x, y : A	  p : R x y	  ============================	  ap	    (fun	       x0 : Coeq (fun x0 : {a : A & {x : _ & R a x}} => x0.1)	              (fun x0 : {a : A & {x : _ & R a x}} => (x0.2).1) =>	     Quotient_rec R P pclass peq (tr x0)) (cglue (x; y; p)) = 	  peq x y p	";
+            data = "1 subgoal (ID 176)	  	  A : Type	  R : Relation A	  P : Type	  IsHSet0 : IsHSet P	  pclass : A -> P	  peq : forall x y : A, R x y -> pclass x = pclass y	  x, y : A	  p : R x y	  ============================	  ap	    (fun	       x0 : Coeq (fun x0 : {a : A & {x : _ & R a x}} => x0.1)	              (fun x0 : {a : A & {x : _ & R a x}} => (x0.2).1) =>	     Quotient_rec R P pclass peq (tr x0)) (cglue (x; y; p)) = 	  peq x y p	";
             responses[i]=data;
           
 
@@ -373,27 +373,27 @@
           
 
             i = 71;
-            data = "1 subgoal (ID 354)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  ============================	  (fun b : A => BuildhProp (R x b)) = (fun b : A => BuildhProp (R y b))	";
+            data = "1 subgoal (ID 353)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  ============================	  (fun b : A => BuildhProp (R x b)) = (fun b : A => BuildhProp (R y b))	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 363)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  z : A	  ============================	  BuildhProp (R x z) = BuildhProp (R y z)	";
+            data = "1 subgoal (ID 362)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  z : A	  ============================	  BuildhProp (R x z) = BuildhProp (R y z)	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 subgoal (ID 367)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  z : A	  ============================	  BuildhProp (R x z) <~> BuildhProp (R y z)	";
+            data = "1 subgoal (ID 366)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  z : A	  ============================	  BuildhProp (R x z) <~> BuildhProp (R y z)	";
             responses[i]=data;
           
 
             i = 74;
-            data = "2 subgoals (ID 572)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  z : A	  ============================	  R x z -> R y z		subgoal 2 (ID 574) is:	 R y z -> R x z	";
+            data = "2 subgoals (ID 570)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  z : A	  ============================	  R x z -> R y z		subgoal 2 (ID 571) is:	 R y z -> R x z	";
             responses[i]=data;
           
 
             i = 75;
-            data = "1 subgoal (ID 574)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  z : A	  ============================	  R y z -> R x z	";
+            data = "1 subgoal (ID 571)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : R x y	  z : A	  ============================	  R y z -> R x z	";
             responses[i]=data;
           
 
@@ -523,12 +523,12 @@
           
 
             i = 101;
-            data = "1 subgoal (ID 197)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : class_of R x = class_of R y	  ============================	  in_class (class_of R x) y	";
+            data = "1 subgoal (ID 196)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : class_of R x = class_of R y	  ============================	  in_class (class_of R x) y	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 215)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : class_of R y = class_of R y	  ============================	  in_class (class_of R y) y	";
+            data = "1 subgoal (ID 214)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  x, y : A	  p : class_of R y = class_of R y	  ============================	  in_class (class_of R y) y	";
             responses[i]=data;
           
 
@@ -648,12 +648,12 @@
           
 
             i = 126;
-            data = "1 subgoal (ID 565)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  H3 : Funext	  B : hSet	  dclass : A -> A -> B	  dequiv : forall x x' : A,	           R x x' -> forall y y' : A, R y y' -> dclass x y = dclass x' y'	  x, y : A	  p : R x y	  ============================	  forall x0 : A,	  (fun q : A / R =>	   Quotient_rec R B (dclass x) (dequiv x x (H2 x)) q =	   Quotient_rec R B (dclass y) (dequiv y y (H2 y)) q) 	    (class_of R x0)	1 subgoal (ID 615)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  H3 : Funext	  B : hSet	  dclass : A -> A -> B	  dequiv : forall x x' : A,	           R x x' -> forall y y' : A, R y y' -> dclass x y = dclass x' y'	  x, y : A	  p : R x y	  a : A	  ============================	  Quotient_rec R B (dclass x) (dequiv x x (H2 x)) (class_of R a) =	  Quotient_rec R B (dclass y) (dequiv y y (H2 y)) (class_of R a)	";
+            data = "1 subgoal (ID 565)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  H3 : Funext	  B : hSet	  dclass : A -> A -> B	  dequiv : forall x x' : A,	           R x x' -> forall y y' : A, R y y' -> dclass x y = dclass x' y'	  x, y : A	  p : R x y	  ============================	  forall x0 : A,	  (fun q : A / R =>	   Quotient_rec R B (dclass x) (dequiv x x (H2 x)) q =	   Quotient_rec R B (dclass y) (dequiv y y (H2 y)) q) 	    (class_of R x0)	1 subgoal (ID 614)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  H3 : Funext	  B : hSet	  dclass : A -> A -> B	  dequiv : forall x x' : A,	           R x x' -> forall y y' : A, R y y' -> dclass x y = dclass x' y'	  x, y : A	  p : R x y	  a : A	  ============================	  Quotient_rec R B (dclass x) (dequiv x x (H2 x)) (class_of R a) =	  Quotient_rec R B (dclass y) (dequiv y y (H2 y)) (class_of R a)	";
             responses[i]=data;
           
 
             i = 127;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 567)		subgoal 1 (ID 567) is:	 forall (x0 y0 : A) (H4 : R x0 y0),	 transport	   (fun q : A / R =>	    Quotient_rec R B (dclass x) (dequiv x x (H2 x)) q =	    Quotient_rec R B (dclass y) (dequiv y y (H2 y)) q) 	   (qglue H4) ((fun a : A => dequiv x y p a a (H2 a)) x0) =	 (fun a : A => dequiv x y p a a (H2 a)) y0	1 subgoal (ID 567)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  H3 : Funext	  B : hSet	  dclass : A -> A -> B	  dequiv : forall x x' : A,	           R x x' -> forall y y' : A, R y y' -> dclass x y = dclass x' y'	  x, y : A	  p : R x y	  ============================	  forall (x0 y0 : A) (H4 : R x0 y0),	  transport	    (fun q : A / R =>	     Quotient_rec R B (dclass x) (dequiv x x (H2 x)) q =	     Quotient_rec R B (dclass y) (dequiv y y (H2 y)) q) 	    (qglue H4) ((fun a : A => dequiv x y p a a (H2 a)) x0) =	  (fun a : A => dequiv x y p a a (H2 a)) y0	1 subgoal (ID 620)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  H3 : Funext	  B : hSet	  dclass : A -> A -> B	  dequiv : forall x x' : A,	           R x x' -> forall y y' : A, R y y' -> dclass x y = dclass x' y'	  x, y : A	  p : R x y	  a, b : A	  q : R a b	  ============================	  transport	    (fun q0 : A / R =>	     Quotient_rec R B (dclass x) (dequiv x x (H2 x)) q0 =	     Quotient_rec R B (dclass y) (dequiv y y (H2 y)) q0) 	    (qglue q) ((fun a0 : A => dequiv x y p a0 a0 (H2 a0)) a) =	  (fun a0 : A => dequiv x y p a0 a0 (H2 a0)) b	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 567)		subgoal 1 (ID 567) is:	 forall (x0 y0 : A) (H4 : R x0 y0),	 transport	   (fun q : A / R =>	    Quotient_rec R B (dclass x) (dequiv x x (H2 x)) q =	    Quotient_rec R B (dclass y) (dequiv y y (H2 y)) q) 	   (qglue H4) ((fun a : A => dequiv x y p a a (H2 a)) x0) =	 (fun a : A => dequiv x y p a a (H2 a)) y0	1 subgoal (ID 567)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  H3 : Funext	  B : hSet	  dclass : A -> A -> B	  dequiv : forall x x' : A,	           R x x' -> forall y y' : A, R y y' -> dclass x y = dclass x' y'	  x, y : A	  p : R x y	  ============================	  forall (x0 y0 : A) (H4 : R x0 y0),	  transport	    (fun q : A / R =>	     Quotient_rec R B (dclass x) (dequiv x x (H2 x)) q =	     Quotient_rec R B (dclass y) (dequiv y y (H2 y)) q) 	    (qglue H4) ((fun a : A => dequiv x y p a a (H2 a)) x0) =	  (fun a : A => dequiv x y p a a (H2 a)) y0	1 subgoal (ID 619)	  	  H : Univalence	  A : Type	  R : Relation A	  is_mere_relation0 : is_mere_relation A R	  H0 : Transitive R	  H1 : Symmetric R	  H2 : Reflexive R	  H3 : Funext	  B : hSet	  dclass : A -> A -> B	  dequiv : forall x x' : A,	           R x x' -> forall y y' : A, R y y' -> dclass x y = dclass x' y'	  x, y : A	  p : R x y	  a, b : A	  q : R a b	  ============================	  transport	    (fun q0 : A / R =>	     Quotient_rec R B (dclass x) (dequiv x x (H2 x)) q0 =	     Quotient_rec R B (dclass y) (dequiv y y (H2 y)) q0) 	    (qglue q) ((fun a0 : A => dequiv x y p a0 a0 (H2 a0)) a) =	  (fun a0 : A => dequiv x y p a0 a0 (H2 a0)) b	";
             responses[i]=data;
           
 
@@ -923,12 +923,12 @@
           
 
             i = 181;
-            data = "1 subgoal (ID 184)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y -> S (f x) (f y)	  ============================	  forall x y : A, R x y -> class_of S (f x) = class_of S (f y)	";
+            data = "1 subgoal (ID 183)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y -> S (f x) (f y)	  ============================	  forall x y : A, R x y -> class_of S (f x) = class_of S (f y)	";
             responses[i]=data;
           
 
             i = 182;
-            data = "1 subgoal (ID 187)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y -> S (f x) (f y)	  x, y : A	  r : R x y	  ============================	  class_of S (f x) = class_of S (f y)	";
+            data = "1 subgoal (ID 186)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y -> S (f x) (f y)	  x, y : A	  r : R x y	  ============================	  class_of S (f x) = class_of S (f y)	";
             responses[i]=data;
           
 
@@ -1023,7 +1023,7 @@
           
 
             i = 201;
-            data = "1 subgoal (ID 441)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y <-> S (f x) (f y)	  H : IsEquiv f	  ============================	  forall x : B,	  (fun q : B / S =>	   Quotient_functor R S f (fun x0 y : A => fst (fresp x0 y))	     (Quotient_functor S R f^-1	        (fun (u v : B) (s : S u v) =>	         snd (fresp (f^-1 u) (f^-1 v))	           (isequiv_quotient_functor_subproof f H u v s)) q) = q)	    (class_of S x)	1 subgoal (ID 648)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y <-> S (f x) (f y)	  H : IsEquiv f	  b : B	  ============================	  class_of S (f (f^-1 b)) = class_of S b	";
+            data = "1 subgoal (ID 441)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y <-> S (f x) (f y)	  H : IsEquiv f	  ============================	  forall x : B,	  (fun q : B / S =>	   Quotient_functor R S f (fun x0 y : A => fst (fresp x0 y))	     (Quotient_functor S R f^-1	        (fun (u v : B) (s : S u v) =>	         snd (fresp (f^-1 u) (f^-1 v))	           (isequiv_quotient_functor_subproof f H u v s)) q) = q)	    (class_of S x)	1 subgoal (ID 647)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y <-> S (f x) (f y)	  H : IsEquiv f	  b : B	  ============================	  class_of S (f (f^-1 b)) = class_of S b	";
             responses[i]=data;
           
 
@@ -1038,7 +1038,7 @@
           
 
             i = 204;
-            data = "1 subgoal (ID 598)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y <-> S (f x) (f y)	  H : IsEquiv f	  ============================	  forall x : A,	  (fun q : A / R =>	   Quotient_functor S R f^-1	     (fun (u v : B) (s : S u v) =>	      snd (fresp (f^-1 u) (f^-1 v))	        (isequiv_quotient_functor_subproof f H u v s))	     (Quotient_functor R S f (fun x0 y : A => fst (fresp x0 y)) q) = q)	    (class_of R x)	1 subgoal (ID 677)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y <-> S (f x) (f y)	  H : IsEquiv f	  a : A	  ============================	  class_of R (f^-1 (f a)) = class_of R a	";
+            data = "1 subgoal (ID 598)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y <-> S (f x) (f y)	  H : IsEquiv f	  ============================	  forall x : A,	  (fun q : A / R =>	   Quotient_functor S R f^-1	     (fun (u v : B) (s : S u v) =>	      snd (fresp (f^-1 u) (f^-1 v))	        (isequiv_quotient_functor_subproof f H u v s))	     (Quotient_functor R S f (fun x0 y : A => fst (fresp x0 y)) q) = q)	    (class_of R x)	1 subgoal (ID 675)	  	  A : Type	  R : Relation A	  B : Type	  S : Relation B	  f : A -> B	  fresp : forall x y : A, R x y <-> S (f x) (f y)	  H : IsEquiv f	  a : A	  ============================	  class_of R (f^-1 (f a)) = class_of R a	";
             responses[i]=data;
           
 
@@ -1208,82 +1208,82 @@
           
 
             i = 238;
-            data = "2 subgoals (ID 225)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  x, y : A	  p : R x y	  ============================	  transport (fun _ : A / R => B) (qglue p) (f x) = f x		subgoal 2 (ID 227) is:	 f x = f y	";
+            data = "2 subgoals (ID 222)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  x, y : A	  p : R x y	  ============================	  transport (fun _ : A / R => B) (qglue p) (f x) = f x		subgoal 2 (ID 223) is:	 f x = f y	";
             responses[i]=data;
           
 
             i = 239;
-            data = "1 subgoal (ID 225)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  x, y : A	  p : R x y	  ============================	  transport (fun _ : A / R => B) (qglue p) (f x) = f x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 227)		subgoal 1 (ID 227) is:	 f x = f y	subgoal 2 (ID 191) is:	 (fun m : A / R -> B =>	  IsHSet (A / R) * IsConnMap (Tr (-1)) (class_of R) * IsEmbedding m *	  (f = (fun x : A => m (class_of R x))))	   (Quotient_ind R (fun _ : A / R => B) f	      (fun (x y : A) (p : R x y) => transport_const (qglue p) (f x) @ ?Goal))	";
+            data = "1 subgoal (ID 222)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  x, y : A	  p : R x y	  ============================	  transport (fun _ : A / R => B) (qglue p) (f x) = f x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 223)		subgoal 1 (ID 223) is:	 f x = f y	subgoal 2 (ID 191) is:	 (fun m : A / R -> B =>	  IsHSet (A / R) * IsConnMap (Tr (-1)) (class_of R) * IsEmbedding m *	  (f = (fun x : A => m (class_of R x))))	   (Quotient_ind R (fun _ : A / R => B) f	      (fun (x y : A) (p : R x y) => transport_const (qglue p) (f x) @ ?Goal))	";
             responses[i]=data;
           
 
             i = 240;
-            data = "1 subgoal (ID 227)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  x, y : A	  p : R x y	  ============================	  f x = f y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 191)		subgoal 1 (ID 191) is:	 (fun m : A / R -> B =>	  IsHSet (A / R) * IsConnMap (Tr (-1)) (class_of R) * IsEmbedding m *	  (f = (fun x : A => m (class_of R x))))	   (Quotient_ind R (fun _ : A / R => B) f	      (fun (x y : A) (p : R x y) =>	       transport_const (qglue p) (f x) @ (is_ker x y)^-1 p))	";
+            data = "1 subgoal (ID 223)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  x, y : A	  p : R x y	  ============================	  f x = f y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 191)		subgoal 1 (ID 191) is:	 (fun m : A / R -> B =>	  IsHSet (A / R) * IsConnMap (Tr (-1)) (class_of R) * IsEmbedding m *	  (f = (fun x : A => m (class_of R x))))	   (Quotient_ind R (fun _ : A / R => B) f	      (fun (x y : A) (p : R x y) =>	       transport_const (qglue p) (f x) @ (is_ker x y)^-1 p))	";
             responses[i]=data;
           
 
             i = 241;
-            data = "1 subgoal (ID 191)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  ============================	  (fun m : A / R -> B =>	   IsHSet (A / R) * IsConnMap (Tr (-1)) (class_of R) * IsEmbedding m *	   (f = (fun x : A => m (class_of R x))))	    (Quotient_ind R (fun _ : A / R => B) f	       (fun (x y : A) (p : R x y) =>	        transport_const (qglue p) (f x) @ (is_ker x y)^-1 p))	1 subgoal (ID 245)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  ============================	  IsEmbedding	    (Quotient_ind R (fun _ : A / R => B) f	       (fun (x y : A) (p : R x y) =>	        transport_const (qglue p) (f x) @ (is_ker x y)^-1 p))	";
+            data = "1 subgoal (ID 191)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  ============================	  (fun m : A / R -> B =>	   IsHSet (A / R) * IsConnMap (Tr (-1)) (class_of R) * IsEmbedding m *	   (f = (fun x : A => m (class_of R x))))	    (Quotient_ind R (fun _ : A / R => B) f	       (fun (x y : A) (p : R x y) =>	        transport_const (qglue p) (f x) @ (is_ker x y)^-1 p))	1 subgoal (ID 241)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  ============================	  IsEmbedding	    (Quotient_ind R (fun _ : A / R => B) f	       (fun (x y : A) (p : R x y) =>	        transport_const (qglue p) (f x) @ (is_ker x y)^-1 p))	";
             responses[i]=data;
           
 
             i = 242;
-            data = "1 subgoal (ID 299)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  IsHProp	    (hfiber	       (Quotient_ind R (fun _ : A / R => B) f	          (fun (x y : A) (p : R x y) =>	           transport_const (qglue p) (f x) @ (is_ker x y)^-1 p)) u)	";
+            data = "1 subgoal (ID 295)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  IsHProp	    (hfiber	       (Quotient_ind R (fun _ : A / R => B) f	          (fun (x y : A) (p : R x y) =>	           transport_const (qglue p) (f x) @ (is_ker x y)^-1 p)) u)	";
             responses[i]=data;
           
 
             i = 243;
-            data = "1 subgoal (ID 300)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  forall	  (x : hfiber	         (Quotient_ind R (fun _ : A / R => B) f	            (fun (x y : A) (p : R x y) =>	             transport_const (qglue p) (f x) @ (is_ker x y)^-1 p)) u)	  (y : hfiber	         (Quotient_ind R (fun _ : A / R => B) f	            (fun (x0 y : A) (p : R x0 y) =>	             transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p)) u),	  x = y	";
+            data = "1 subgoal (ID 296)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  forall	  (x : hfiber	         (Quotient_ind R (fun _ : A / R => B) f	            (fun (x y : A) (p : R x y) =>	             transport_const (qglue p) (f x) @ (is_ker x y)^-1 p)) u)	  (y : hfiber	         (Quotient_ind R (fun _ : A / R => B) f	            (fun (x0 y : A) (p : R x0 y) =>	             transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p)) u),	  x = y	";
             responses[i]=data;
           
 
             i = 244;
-            data = "1 subgoal (ID 310)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  x : A / R	  q : Quotient_ind R (fun _ : A / R => B) f	        (fun (x y : A) (p : R x y) =>	         transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) x = u	  y : A / R	  p' : Quotient_ind R (fun _ : A / R => B) f	         (fun (x y : A) (p : R x y) =>	          transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) y = u	  ============================	  (x; q) = (y; p')	";
+            data = "1 subgoal (ID 306)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  x : A / R	  q : Quotient_ind R (fun _ : A / R => B) f	        (fun (x y : A) (p : R x y) =>	         transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) x = u	  y : A / R	  p' : Quotient_ind R (fun _ : A / R => B) f	         (fun (x y : A) (p : R x y) =>	          transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) y = u	  ============================	  (x; q) = (y; p')	";
             responses[i]=data;
           
 
             i = 245;
-            data = "1 subgoal (ID 345)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  x : A / R	  q : Quotient_ind R (fun _ : A / R => B) f	        (fun (x y : A) (p : R x y) =>	         transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) x = u	  y : A / R	  p' : Quotient_ind R (fun _ : A / R => B) f	         (fun (x y : A) (p : R x y) =>	          transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) y = u	  ============================	  x = y	";
+            data = "1 subgoal (ID 340)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  x : A / R	  q : Quotient_ind R (fun _ : A / R => B) f	        (fun (x y : A) (p : R x y) =>	         transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) x = u	  y : A / R	  p' : Quotient_ind R (fun _ : A / R => B) f	         (fun (x y : A) (p : R x y) =>	          transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) y = u	  ============================	  x = y	";
             responses[i]=data;
           
 
             i = 246;
-            data = "1 subgoal (ID 347)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  forall x y : A / R,	  Quotient_ind R (fun _ : A / R => B) f	    (fun (x0 y0 : A) (p : R x0 y0) =>	     transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) x = u ->	  Quotient_ind R (fun _ : A / R => B) f	    (fun (x0 y0 : A) (p : R x0 y0) =>	     transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) y = u -> 	  x = y	";
+            data = "1 subgoal (ID 342)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  forall x y : A / R,	  Quotient_ind R (fun _ : A / R => B) f	    (fun (x0 y0 : A) (p : R x0 y0) =>	     transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) x = u ->	  Quotient_ind R (fun _ : A / R => B) f	    (fun (x0 y0 : A) (p : R x0 y0) =>	     transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) y = u -> 	  x = y	";
             responses[i]=data;
           
 
             i = 247;
-            data = "2 subgoals (ID 463)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  forall x : A,	  (fun q : A / R =>	   forall y : A / R,	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y0 : A) (p : R x0 y0) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) q = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y0 : A) (p : R x0 y0) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) y = u -> 	   q = y) (class_of R x)		subgoal 2 (ID 465) is:	 forall (x y : A) (H0 : R x y),	 transport	   (fun q : A / R =>	    forall y0 : A / R,	    Quotient_ind R (fun _ : A / R => B) f	      (fun (x0 y1 : A) (p : R x0 y1) =>	       transport_const (qglue p) (f x0) @ (is_ker x0 y1)^-1 p) q = u ->	    Quotient_ind R (fun _ : A / R => B) f	      (fun (x0 y1 : A) (p : R x0 y1) =>	       transport_const (qglue p) (f x0) @ (is_ker x0 y1)^-1 p) y0 = u ->	    q = y0) (qglue H0) (?pclass x) = ?pclass y	";
+            data = "2 subgoals (ID 458)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  forall x : A,	  (fun q : A / R =>	   forall y : A / R,	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y0 : A) (p : R x0 y0) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) q = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y0 : A) (p : R x0 y0) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) y = u -> 	   q = y) (class_of R x)		subgoal 2 (ID 460) is:	 forall (x y : A) (H0 : R x y),	 transport	   (fun q : A / R =>	    forall y0 : A / R,	    Quotient_ind R (fun _ : A / R => B) f	      (fun (x0 y1 : A) (p : R x0 y1) =>	       transport_const (qglue p) (f x0) @ (is_ker x0 y1)^-1 p) q = u ->	    Quotient_ind R (fun _ : A / R => B) f	      (fun (x0 y1 : A) (p : R x0 y1) =>	       transport_const (qglue p) (f x0) @ (is_ker x0 y1)^-1 p) y0 = u ->	    q = y0) (qglue H0) (?pclass x) = ?pclass y	";
             responses[i]=data;
           
 
             i = 248;
-            data = "1 subgoal (ID 463)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  forall x : A,	  (fun q : A / R =>	   forall y : A / R,	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y0 : A) (p : R x0 y0) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) q = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y0 : A) (p : R x0 y0) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) y = u -> 	   q = y) (class_of R x)	";
+            data = "1 subgoal (ID 458)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  ============================	  forall x : A,	  (fun q : A / R =>	   forall y : A / R,	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y0 : A) (p : R x0 y0) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) q = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y0 : A) (p : R x0 y0) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) y = u -> 	   q = y) (class_of R x)	";
             responses[i]=data;
           
 
             i = 249;
-            data = "1 subgoal (ID 737)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  ============================	  (fun q : A / R =>	   forall y : A / R,	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x y0 : A) (p : R x y0) =>	      transport_const (qglue p) (f x) @ (is_ker x y0)^-1 p) q = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x y0 : A) (p : R x y0) =>	      transport_const (qglue p) (f x) @ (is_ker x y0)^-1 p) y = u -> 	   q = y) (class_of R a)	";
+            data = "1 subgoal (ID 732)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  ============================	  (fun q : A / R =>	   forall y : A / R,	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x y0 : A) (p : R x y0) =>	      transport_const (qglue p) (f x) @ (is_ker x y0)^-1 p) q = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x y0 : A) (p : R x y0) =>	      transport_const (qglue p) (f x) @ (is_ker x y0)^-1 p) y = u -> 	   q = y) (class_of R a)	";
             responses[i]=data;
           
 
             i = 250;
-            data = "2 subgoals (ID 853)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  ============================	  forall x : A,	  (fun q : A / R =>	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y : A) (p : R x0 y) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p) 	     (class_of R a) = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y : A) (p : R x0 y) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p) q = u ->	   class_of R a = q) (class_of R x)		subgoal 2 (ID 855) is:	 forall (x y : A) (H0 : R x y),	 transport	   (fun q : A / R =>	    Quotient_ind R (fun _ : A / R => B) f	      (fun (x0 y0 : A) (p : R x0 y0) =>	       transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) 	      (class_of R a) = u ->	    Quotient_ind R (fun _ : A / R => B) f	      (fun (x0 y0 : A) (p : R x0 y0) =>	       transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) q = u ->	    class_of R a = q) (qglue H0) (?pclass x) = ?pclass y	";
+            data = "2 subgoals (ID 848)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  ============================	  forall x : A,	  (fun q : A / R =>	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y : A) (p : R x0 y) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p) 	     (class_of R a) = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y : A) (p : R x0 y) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p) q = u ->	   class_of R a = q) (class_of R x)		subgoal 2 (ID 850) is:	 forall (x y : A) (H0 : R x y),	 transport	   (fun q : A / R =>	    Quotient_ind R (fun _ : A / R => B) f	      (fun (x0 y0 : A) (p : R x0 y0) =>	       transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) 	      (class_of R a) = u ->	    Quotient_ind R (fun _ : A / R => B) f	      (fun (x0 y0 : A) (p : R x0 y0) =>	       transport_const (qglue p) (f x0) @ (is_ker x0 y0)^-1 p) q = u ->	    class_of R a = q) (qglue H0) (?pclass x) = ?pclass y	";
             responses[i]=data;
           
 
             i = 251;
-            data = "1 subgoal (ID 853)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  ============================	  forall x : A,	  (fun q : A / R =>	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y : A) (p : R x0 y) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p) 	     (class_of R a) = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y : A) (p : R x0 y) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p) q = u ->	   class_of R a = q) (class_of R x)	";
+            data = "1 subgoal (ID 848)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  ============================	  forall x : A,	  (fun q : A / R =>	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y : A) (p : R x0 y) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p) 	     (class_of R a) = u ->	   Quotient_ind R (fun _ : A / R => B) f	     (fun (x0 y : A) (p : R x0 y) =>	      transport_const (qglue p) (f x0) @ (is_ker x0 y)^-1 p) q = u ->	   class_of R a = q) (class_of R x)	";
             responses[i]=data;
           
 
             i = 252;
-            data = "1 subgoal (ID 1060)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  a' : A	  p : Quotient_ind R (fun _ : A / R => B) f	        (fun (x y : A) (p : R x y) =>	         transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) 	        (class_of R a) = u	  p' : Quotient_ind R (fun _ : A / R => B) f	         (fun (x y : A) (p : R x y) =>	          transport_const (qglue p) (f x) @ (is_ker x y)^-1 p)	         (class_of R a') = u	  ============================	  class_of R a = class_of R a'	";
+            data = "1 subgoal (ID 1055)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  a' : A	  p : Quotient_ind R (fun _ : A / R => B) f	        (fun (x y : A) (p : R x y) =>	         transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) 	        (class_of R a) = u	  p' : Quotient_ind R (fun _ : A / R => B) f	         (fun (x y : A) (p : R x y) =>	          transport_const (qglue p) (f x) @ (is_ker x y)^-1 p)	         (class_of R a') = u	  ============================	  class_of R a = class_of R a'	";
             responses[i]=data;
           
 
             i = 253;
-            data = "1 subgoal (ID 1069)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  a' : A	  p : Quotient_ind R (fun _ : A / R => B) f	        (fun (x y : A) (p : R x y) =>	         transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) 	        (class_of R a) = u	  p' : Quotient_ind R (fun _ : A / R => B) f	         (fun (x y : A) (p : R x y) =>	          transport_const (qglue p) (f x) @ (is_ker x y)^-1 p)	         (class_of R a') = u	  ============================	  f a = f a'	";
+            data = "1 subgoal (ID 1064)	  	  H : Funext	  A : Type	  B : Type	  IsHSet0 : IsHSet B	  f : A -> B	  R : Relation A	  is_ker : forall x y : A, f x = f y <~> R x y	  u : B	  a : A	  a' : A	  p : Quotient_ind R (fun _ : A / R => B) f	        (fun (x y : A) (p : R x y) =>	         transport_const (qglue p) (f x) @ (is_ker x y)^-1 p) 	        (class_of R a) = u	  p' : Quotient_ind R (fun _ : A / R => B) f	         (fun (x y : A) (p : R x y) =>	          transport_const (qglue p) (f x) @ (is_ker x y)^-1 p)	         (class_of R a') = u	  ============================	  f a = f a'	";
             responses[i]=data;
           
 
@@ -1434,7 +1434,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab492"></a><h1 class="section">Quotient of a Type by an hprop-valued Relation</h1>
+<a id="lab493"></a><h1 class="section">Quotient of a Type by an hprop-valued Relation</h1>
 <div class="doc" scenenumber="4"> </div>
 
 We aim to model:
@@ -2428,7 +2428,7 @@ TODO: The equivalence with VVquotient <span class="inlinecode"><a class="idref" 
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-<a id="lab493"></a><h2 class="section">Quotients of kernels of maps to sets give a surjection/mono factorization.</h2>
+<a id="lab494"></a><h2 class="section">Quotients of kernels of maps to sets give a surjection/mono factorization.</h2>
 </div>
 <div scenenumber="23" class="code">
 <span class="command" onmouseout="

@@ -203,12 +203,12 @@
           
 
             i = 37;
-            data = "1 subgoal (ID 70)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  a : A	  ============================	  transport (D (const tt a)) ((fst ext g).2 a)	    ((fst (ext' (fst ext g).1)	        (fun a0 : A =>	         transport (D (const tt a0)) ((fst ext g).2 a0)^ (g' a0))).1	       (const tt a)) = g' a	";
+            data = "1 subgoal (ID 69)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  a : A	  ============================	  transport (D (const tt a)) ((fst ext g).2 a)	    ((fst (ext' (fst ext g).1)	        (fun a0 : A =>	         transport (D (const tt a0)) ((fst ext g).2 a0)^ (g' a0))).1	       (const tt a)) = g' a	";
             responses[i]=data;
           
 
             i = 38;
-            data = "1 subgoal (ID 72)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  a : A	  ============================	  (fst (ext' (fst ext g).1)	     (fun a0 : A => transport (D (const tt a0)) ((fst ext g).2 a0)^ (g' a0))).1	    (const tt a) = transport (D (const tt a)) ((fst ext g).2 a)^ (g' a)	";
+            data = "1 subgoal (ID 71)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  a : A	  ============================	  (fst (ext' (fst ext g).1)	     (fun a0 : A => transport (D (const tt a0)) ((fst ext g).2 a0)^ (g' a0))).1	    (const tt a) = transport (D (const tt a)) ((fst ext g).2 a)^ (g' a)	";
             responses[i]=data;
           
 
@@ -218,12 +218,12 @@
           
 
             i = 40;
-            data = "1 subgoal (ID 42)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  ============================	  forall (h k : forall b : Unit, C b) (h' : forall b : Unit, D b (h b))	  (k' : forall b : Unit, D b (k b)),	  ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	    (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	    (snd ext h k)	1 subgoal (ID 97)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  h, k : forall b : Unit, C b	  h' : forall b : Unit, D b (h b)	  k' : forall b : Unit, D b (k b)	  ============================	  ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	    (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	    (snd ext h k)	";
+            data = "1 subgoal (ID 42)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  ============================	  forall (h k : forall b : Unit, C b) (h' : forall b : Unit, D b (h b))	  (k' : forall b : Unit, D b (k b)),	  ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	    (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	    (snd ext h k)	1 subgoal (ID 96)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  h, k : forall b : Unit, C b	  h' : forall b : Unit, D b (h b)	  k' : forall b : Unit, D b (k b)	  ============================	  ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	    (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	    (snd ext h k)	";
             responses[i]=data;
           
 
             i = 41;
-            data = "1 subgoal (ID 99)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  h, k : forall b : Unit, C b	  h' : forall b : Unit, D b (h b)	  k' : forall b : Unit, D b (k b)	  g : forall u : Unit, h u = k u	  ============================	  ExtendableAlong n (const tt)	    (fun u : Unit => transport (D u) (g u) (h' u) = k' u)	";
+            data = "1 subgoal (ID 98)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  h, k : forall b : Unit, C b	  h' : forall b : Unit, D b (h b)	  k' : forall b : Unit, D b (k b)	  g : forall u : Unit, h u = k u	  ============================	  ExtendableAlong n (const tt)	    (fun u : Unit => transport (D u) (g u) (h' u) = k' u)	";
             responses[i]=data;
           
 
@@ -318,17 +318,17 @@
           
 
             i = 60;
-            data = "1 subgoal (ID 93)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  ============================	  ooExtendableAlong_Over (null_to_local_generators S i)	    (fun _ : lgen_codomain (null_to_local_generators S) i =>	     Localize (null_to_local_generators S) A)	    (fun _ : lgen_codomain (null_to_local_generators S) i => B)	    (islocal_localize (null_to_local_generators S) A i)	";
+            data = "1 subgoal (ID 92)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  ============================	  ooExtendableAlong_Over (null_to_local_generators S i)	    (fun _ : lgen_codomain (null_to_local_generators S) i =>	     Localize (null_to_local_generators S) A)	    (fun _ : lgen_codomain (null_to_local_generators S) i => B)	    (islocal_localize (null_to_local_generators S) A i)	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 95)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  c : Unit -> Localize (null_to_local_generators S) A	  ============================	  ooExtendableAlong (const tt) (fun u : Unit => B (c u))	";
+            data = "1 subgoal (ID 94)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  c : Unit -> Localize (null_to_local_generators S) A	  ============================	  ooExtendableAlong (const tt) (fun u : Unit => B (c u))	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 120)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  c : Unit -> Localize (null_to_local_generators S) A	  ============================	  ooExtendableAlong (const tt) (unit_name (B (c tt)))	";
+            data = "1 subgoal (ID 118)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  c : Unit -> Localize (null_to_local_generators S) A	  ============================	  ooExtendableAlong (const tt) (unit_name (B (c tt)))	";
             responses[i]=data;
           
 
@@ -590,7 +590,7 @@
 </span></div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab433"></a><h1 class="section">Nullification</h1>
+<a id="lab434"></a><h1 class="section">Nullification</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -854,7 +854,7 @@ And here is the "real" definition of the notation <span class="inlinecode"><a cl
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-<a id="lab434"></a><h2 class="section">Nullification and Accessibility</h2>
+<a id="lab435"></a><h2 class="section">Nullification and Accessibility</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Nullification modalities are accessible, essentially by definition. 

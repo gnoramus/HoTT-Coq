@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 1
-Time: 0.008s">
-<div class="time" style="width: 4.2328042328042%"></div>
+Time: 0.007s">
+<div class="time" style="width: 4.8951048951049%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: IdentityLaws.v
@@ -49,15 +49,15 @@ Require Import Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 2
-Time: 0.03s">
-<div class="time" style="width: 15.873015873016%"></div>
+Time: 0.024s">
+<div class="time" style="width: 16.783216783217%"></div>
 <pre>
 Require Import Functor.Composition.Laws.</pre>
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 3
-Time: 0.006s">
-<div class="time" style="width: 3.1746031746032%"></div>
+Time: 0.005s">
+<div class="time" style="width: 3.4965034965035%"></div>
 <pre>
 Require Import Adjoint.Composition.Core Adjoint.UnitCounit Adjoint.Core Adjoint.Paths Adjoint.Identity.</pre>
 </div>
@@ -71,7 +71,7 @@ Require Adjoint.Composition.LawsTactic.</pre>
 <div class="code" title="File: IdentityLaws.v
 Line: 5
 Time: 0.002s">
-<div class="time" style="width: 1.0582010582011%"></div>
+<div class="time" style="width: 1.3986013986014%"></div>
 <pre>
 Require Import Types.Sigma HoTT.Tactics Types.Prod Basics.PathGroupoids Types.Forall.</pre>
 </div>
@@ -186,7 +186,7 @@ Time: 0s">
 <div class="code" title="File: IdentityLaws.v
 Line: 30
 Time: 0.003s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 2.0979020979021%"></div>
 <pre>
 
   Lemma left_identity
@@ -201,15 +201,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 34
-Time: 0.001s">
-<div class="time" style="width: 0.52910052910053%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.3986013986014%"></div>
 <pre>
     apply path_sigma_uncurried; simpl.</pre>
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 35
-Time: 0.002s">
-<div class="time" style="width: 1.0582010582011%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
     (exists (path_prod'
                (Functor.Composition.Laws.left_identity _)
@@ -217,22 +217,22 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 38
-Time: 0.189s">
+Time: 0.143s">
 <div class="time" style="width: 100%"></div>
 <pre>
     Adjoint.Composition.LawsTactic.law_t.</pre>
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 39
-Time: 0.096s">
-<div class="time" style="width: 50.793650793651%"></div>
+Time: 0.082s">
+<div class="time" style="width: 57.342657342657%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 40
 Time: 0.002s">
-<div class="time" style="width: 1.0582010582011%"></div>
+<div class="time" style="width: 1.3986013986014%"></div>
 <pre>
 
   Lemma right_identity
@@ -254,8 +254,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 45
-Time: 0.002s">
-<div class="time" style="width: 1.0582010582011%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
     (exists (path_prod'
                (Functor.Composition.Laws.right_identity _)
@@ -263,15 +263,15 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 48
-Time: 0.148s">
-<div class="time" style="width: 78.306878306878%"></div>
+Time: 0.117s">
+<div class="time" style="width: 81.818181818182%"></div>
 <pre>
     Adjoint.Composition.LawsTactic.law_t.</pre>
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 49
-Time: 0.073s">
-<div class="time" style="width: 38.624338624339%"></div>
+Time: 0.059s">
+<div class="time" style="width: 41.258741258741%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -284,8 +284,8 @@ End identity_lemmas.</pre>
 </div>
 <div class="code" title="File: IdentityLaws.v
 Line: 51
-Time: 0.002s">
-<div class="time" style="width: 1.0582010582011%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
 
 Hint Rewrite @left_identity @right_identity : category.</pre>
@@ -293,7 +293,7 @@ Hint Rewrite @left_identity @right_identity : category.</pre>
 <div class="code" title="File: IdentityLaws.v
 Line: 53
 Time: 0.001s">
-<div class="time" style="width: 0.52910052910053%"></div>
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
 Hint Immediate left_identity right_identity : category.</pre>
 </div>

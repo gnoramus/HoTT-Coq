@@ -148,7 +148,7 @@
           
 
             i = 26;
-            data = "1 subgoal (ID 27)	  	  H : Funext	  U : hProp	  ============================	  forall T : Type, T -> (fun X : Type => U -> X) T	1 subgoal (ID 38)	  	  H : Funext	  U : hProp	  T : Type	  x : T	  ============================	  U -> T	";
+            data = "1 subgoal (ID 27)	  	  H : Funext	  U : hProp	  ============================	  forall T : Type, T -> (fun X : Type => U -> X) T	1 subgoal (ID 37)	  	  H : Funext	  U : hProp	  T : Type	  x : T	  ============================	  U -> T	";
             responses[i]=data;
           
 
@@ -158,17 +158,17 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 29)	  	  H : Funext	  U : hProp	  ============================	  forall (A : Type) (B : (fun X : Type => U -> X) A -> Type),	  (forall a : A,	   (fun X : Type => U -> X) (B ((fun (T : Type) (x : T) (_ : U) => x) A a))) ->	  forall z : (fun X : Type => U -> X) A, (fun X : Type => U -> X) (B z)	1 subgoal (ID 46)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  z : U -> A	  u : U	  ============================	  B z	";
+            data = "1 subgoal (ID 29)	  	  H : Funext	  U : hProp	  ============================	  forall (A : Type) (B : (fun X : Type => U -> X) A -> Type),	  (forall a : A,	   (fun X : Type => U -> X) (B ((fun (T : Type) (x : T) (_ : U) => x) A a))) ->	  forall z : (fun X : Type => U -> X) A, (fun X : Type => U -> X) (B z)	1 subgoal (ID 44)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  z : U -> A	  u : U	  ============================	  B z	";
             responses[i]=data;
           
 
             i = 29;
-            data = "1 subgoal (ID 53)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  z : U -> A	  u : U	  ============================	  (fun _ : U => z u) = z	";
+            data = "1 subgoal (ID 50)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  z : U -> A	  u : U	  ============================	  (fun _ : U => z u) = z	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 59)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  z : U -> A	  u, u' : U	  ============================	  z u = z u'	";
+            data = "1 subgoal (ID 56)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  z : U -> A	  u, u' : U	  ============================	  z u = z u'	";
             responses[i]=data;
           
 
@@ -178,107 +178,107 @@
           
 
             i = 32;
-            data = "1 subgoal (ID 31)	  	  H : Funext	  U : hProp	  ============================	  forall (A : Type) (B : (fun X : Type => U -> X) A -> Type)	  (f : forall a : A,	       (fun X : Type => U -> X)	         (B ((fun (T : Type) (x : T) (_ : U) => x) A a))) 	  (a : A),	  (fun (A0 : Type) (B0 : (U -> A0) -> Type)	     (f0 : forall a0 : A0, U -> B0 (fun _ : U => a0)) 	     (z : U -> A0) (u : U) =>	   transport B0	     (path_arrow (fun _ : U => z u) z	        (fun u' : U => ap z (path_ishprop u u'))) 	     (f0 (z u) u)) A B f ((fun (T : Type) (x : T) (_ : U) => x) A a) = 	  f a	1 subgoal (ID 70)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  ============================	  (fun u : U =>	   transport B	     (path_arrow (fun _ : U => a) (fun _ : U => a)	        (fun u' : U => ap (fun _ : U => a) (path_ishprop u u'))) 	     (f a u)) = f a	";
+            data = "1 subgoal (ID 31)	  	  H : Funext	  U : hProp	  ============================	  forall (A : Type) (B : (fun X : Type => U -> X) A -> Type)	  (f : forall a : A,	       (fun X : Type => U -> X)	         (B ((fun (T : Type) (x : T) (_ : U) => x) A a))) 	  (a : A),	  (fun (A0 : Type) (B0 : (U -> A0) -> Type)	     (f0 : forall a0 : A0, U -> B0 (fun _ : U => a0)) 	     (z : U -> A0) (u : U) =>	   transport B0	     (path_arrow (fun _ : U => z u) z	        (fun u' : U => ap z (path_ishprop u u'))) 	     (f0 (z u) u)) A B f ((fun (T : Type) (x : T) (_ : U) => x) A a) = 	  f a	1 subgoal (ID 66)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  ============================	  (fun u : U =>	   transport B	     (path_arrow (fun _ : U => a) (fun _ : U => a)	        (fun u' : U => ap (fun _ : U => a) (path_ishprop u u'))) 	     (f a u)) = f a	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 76)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  transport B	    (path_arrow (fun _ : U => a) (fun _ : U => a)	       (fun u' : U => ap (fun _ : U => a) (path_ishprop u u'))) 	    (f a u) = f a u	";
+            data = "1 subgoal (ID 72)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  transport B	    (path_arrow (fun _ : U => a) (fun _ : U => a)	       (fun u' : U => ap (fun _ : U => a) (path_ishprop u u'))) 	    (f a u) = f a u	";
             responses[i]=data;
           
 
             i = 34;
-            data = "1 subgoal (ID 97)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  transport B	    (path_arrow (fun _ : U => a) (fun _ : U => a)	       (fun u' : U => ap (fun _ : U => a) (path_ishprop u u'))) 	    (f a u) = transport B 1 (f a u)	";
+            data = "1 subgoal (ID 90)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  transport B	    (path_arrow (fun _ : U => a) (fun _ : U => a)	       (fun u' : U => ap (fun _ : U => a) (path_ishprop u u'))) 	    (f a u) = transport B 1 (f a u)	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 115)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  path_arrow (fun _ : U => a) (fun _ : U => a)	    (fun u' : U => ap (fun _ : U => a) (path_ishprop u u')) = 1	";
+            data = "1 subgoal (ID 107)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  path_arrow (fun _ : U => a) (fun _ : U => a)	    (fun u' : U => ap (fun _ : U => a) (path_ishprop u u')) = 1	";
             responses[i]=data;
           
 
             i = 36;
-            data = "2 subgoals (ID 144)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  path_arrow (fun _ : U => a) (fun _ : U => a)	    (fun u' : U => ap (fun _ : U => a) (path_ishprop u u')) =	  path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1)		subgoal 2 (ID 146) is:	 path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1) = 1	";
+            data = "2 subgoals (ID 133)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  path_arrow (fun _ : U => a) (fun _ : U => a)	    (fun u' : U => ap (fun _ : U => a) (path_ishprop u u')) =	  path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1)		subgoal 2 (ID 134) is:	 path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1) = 1	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 144)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  path_arrow (fun _ : U => a) (fun _ : U => a)	    (fun u' : U => ap (fun _ : U => a) (path_ishprop u u')) =	  path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1)	1 subgoal (ID 159)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  (fun u' : U => ap (fun _ : U => a) (path_ishprop u u')) = ap10 1	";
+            data = "1 subgoal (ID 133)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  path_arrow (fun _ : U => a) (fun _ : U => a)	    (fun u' : U => ap (fun _ : U => a) (path_ishprop u u')) =	  path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1)	1 subgoal (ID 147)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  (fun u' : U => ap (fun _ : U => a) (path_ishprop u u')) = ap10 1	";
             responses[i]=data;
           
 
             i = 38;
-            data = "1 subgoal (ID 165)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u, u' : U	  ============================	  ap (fun _ : U => a) (path_ishprop u u') = ap10 1 u'	";
+            data = "1 subgoal (ID 153)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u, u' : U	  ============================	  ap (fun _ : U => a) (path_ishprop u u') = ap10 1 u'	";
             responses[i]=data;
           
 
             i = 39;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 146)		subgoal 1 (ID 146) is:	 path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1) = 1	subgoal 2 (ID 33) is:	 forall (A : Type) (z z' : (fun X : Type => U -> X) A),	 IsEquiv ((fun (T : Type) (x : T) (_ : U) => x) (z = z'))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 134)		subgoal 1 (ID 134) is:	 path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1) = 1	subgoal 2 (ID 33) is:	 forall (A : Type) (z z' : (fun X : Type => U -> X) A),	 IsEquiv ((fun (T : Type) (x : T) (_ : U) => x) (z = z'))	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 146)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1) = 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 33)		subgoal 1 (ID 33) is:	 forall (A : Type) (z z' : (fun X : Type => U -> X) A),	 IsEquiv ((fun (T : Type) (x : T) (_ : U) => x) (z = z'))	";
+            data = "1 subgoal (ID 134)	  	  H : Funext	  U : hProp	  A : Type	  B : (U -> A) -> Type	  f : forall a : A, U -> B (fun _ : U => a)	  a : A	  u : U	  ============================	  path_arrow (fun _ : U => a) (fun _ : U => a) (ap10 1) = 1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 33)		subgoal 1 (ID 33) is:	 forall (A : Type) (z z' : (fun X : Type => U -> X) A),	 IsEquiv ((fun (T : Type) (x : T) (_ : U) => x) (z = z'))	";
             responses[i]=data;
           
 
             i = 41;
-            data = "1 subgoal (ID 33)	  	  H : Funext	  U : hProp	  ============================	  forall (A : Type) (z z' : (fun X : Type => U -> X) A),	  IsEquiv ((fun (T : Type) (x : T) (_ : U) => x) (z = z'))	1 subgoal (ID 175)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  IsEquiv ((fun (T : Type) (x : T) (_ : U) => x) (z = z'))	";
+            data = "1 subgoal (ID 33)	  	  H : Funext	  U : hProp	  ============================	  forall (A : Type) (z z' : (fun X : Type => U -> X) A),	  IsEquiv ((fun (T : Type) (x : T) (_ : U) => x) (z = z'))	1 subgoal (ID 163)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  IsEquiv ((fun (T : Type) (x : T) (_ : U) => x) (z = z'))	";
             responses[i]=data;
           
 
             i = 42;
-            data = "3 subgoals (ID 181)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  (U -> z = z') -> z = z'		subgoal 2 (ID 183) is:	 Sect ?g (fun (x : z = z') (_ : U) => x)	subgoal 3 (ID 185) is:	 Sect (fun (x : z = z') (_ : U) => x) ?g	";
+            data = "3 subgoals (ID 169)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  (U -> z = z') -> z = z'		subgoal 2 (ID 171) is:	 Sect ?g (fun (x : z = z') (_ : U) => x)	subgoal 3 (ID 173) is:	 Sect (fun (x : z = z') (_ : U) => x) ?g	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 181)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  (U -> z = z') -> z = z'	1 subgoal (ID 192)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  z u = z' u	";
+            data = "1 subgoal (ID 169)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  (U -> z = z') -> z = z'	1 subgoal (ID 180)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  z u = z' u	";
             responses[i]=data;
           
 
             i = 44;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 183)		subgoal 1 (ID 183) is:	 Sect (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	   (fun (x : z = z') (_ : U) => x)	subgoal 2 (ID 185) is:	 Sect (fun (x : z = z') (_ : U) => x)	   (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 171)		subgoal 1 (ID 171) is:	 Sect (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	   (fun (x : z = z') (_ : U) => x)	subgoal 2 (ID 173) is:	 Sect (fun (x : z = z') (_ : U) => x)	   (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	";
             responses[i]=data;
           
 
             i = 45;
-            data = "1 subgoal (ID 183)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  Sect (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	    (fun (x : z = z') (_ : U) => x)	1 subgoal (ID 204)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  path_arrow z z' (fun u0 : U => ap10 (f u0) u0) = f u	";
+            data = "1 subgoal (ID 171)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  Sect (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	    (fun (x : z = z') (_ : U) => x)	1 subgoal (ID 192)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  path_arrow z z' (fun u0 : U => ap10 (f u0) u0) = f u	";
             responses[i]=data;
           
 
             i = 46;
-            data = "2 subgoals (ID 227)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  path_arrow z z' (fun u0 : U => ap10 (f u0) u0) =	  path_arrow z z' (ap10 (f u))		subgoal 2 (ID 229) is:	 path_arrow z z' (ap10 (f u)) = f u	";
+            data = "2 subgoals (ID 212)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  path_arrow z z' (fun u0 : U => ap10 (f u0) u0) =	  path_arrow z z' (ap10 (f u))		subgoal 2 (ID 213) is:	 path_arrow z z' (ap10 (f u)) = f u	";
             responses[i]=data;
           
 
             i = 47;
-            data = "1 subgoal (ID 227)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  path_arrow z z' (fun u0 : U => ap10 (f u0) u0) =	  path_arrow z z' (ap10 (f u))	1 subgoal (ID 234)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  (fun u0 : U => ap10 (f u0) u0) = ap10 (f u)	";
+            data = "1 subgoal (ID 212)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  path_arrow z z' (fun u0 : U => ap10 (f u0) u0) =	  path_arrow z z' (ap10 (f u))	1 subgoal (ID 217)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  (fun u0 : U => ap10 (f u0) u0) = ap10 (f u)	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 240)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u, u' : U	  ============================	  ap10 (f u') u' = ap10 (f u) u'	";
+            data = "1 subgoal (ID 223)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u, u' : U	  ============================	  ap10 (f u') u' = ap10 (f u) u'	";
             responses[i]=data;
           
 
             i = 49;
-            data = "1 subgoal (ID 250)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u, u' : U	  ============================	  u' = u	";
+            data = "1 subgoal (ID 233)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u, u' : U	  ============================	  u' = u	";
             responses[i]=data;
           
 
             i = 50;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 229)		subgoal 1 (ID 229) is:	 path_arrow z z' (ap10 (f u)) = f u	subgoal 2 (ID 185) is:	 Sect (fun (x : z = z') (_ : U) => x)	   (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 213)		subgoal 1 (ID 213) is:	 path_arrow z z' (ap10 (f u)) = f u	subgoal 2 (ID 173) is:	 Sect (fun (x : z = z') (_ : U) => x)	   (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 229)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  path_arrow z z' (ap10 (f u)) = f u	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal (ID 185)		subgoal 1 (ID 185) is:	 Sect (fun (x : z = z') (_ : U) => x)	   (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	";
+            data = "1 subgoal (ID 213)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  f : U -> z = z'	  u : U	  ============================	  path_arrow z z' (ap10 (f u)) = f u	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal (ID 173)		subgoal 1 (ID 173) is:	 Sect (fun (x : z = z') (_ : U) => x)	   (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 185)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  Sect (fun (x : z = z') (_ : U) => x)	    (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	1 subgoal (ID 257)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  p : z = z'	  ============================	  path_arrow z z' (fun u : U => ap10 p u) = p	";
+            data = "1 subgoal (ID 173)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  ============================	  Sect (fun (x : z = z') (_ : U) => x)	    (fun f : U -> z = z' => path_arrow z z' (fun u : U => ap10 (f u) u))	1 subgoal (ID 240)	  	  H : Funext	  U : hProp	  A : Type	  z, z' : (fun X : Type => U -> X) A	  p : z = z'	  ============================	  path_arrow z z' (fun u : U => ap10 p u) = p	";
             responses[i]=data;
           
 
@@ -373,22 +373,22 @@
           
 
             i = 71;
-            data = "1 subgoal (ID 98)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  u : U	  i := contr_inhabited_hprop U u : Contr U	  ============================	  Contr (U -> A)	";
+            data = "1 subgoal (ID 97)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  u : U	  i := contr_inhabited_hprop U u : Contr U	  ============================	  Contr (U -> A)	";
             responses[i]=data;
           
 
             i = 72;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 18)		subgoal 1 (ID 18) is:	 IsConnected (Op U) (x = y)	1 subgoal (ID 18)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  ============================	  IsConnected (Op U) (x = y)	2 subgoals (ID 102)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  ============================	  Op U (x = y)		subgoal 2 (ID 104) is:	 forall y0 : Op U (x = y), ?center = y0	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 18)		subgoal 1 (ID 18) is:	 IsConnected (Op U) (x = y)	1 subgoal (ID 18)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  ============================	  IsConnected (Op U) (x = y)	2 subgoals (ID 101)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  ============================	  Op U (x = y)		subgoal 2 (ID 103) is:	 forall y0 : Op U (x = y), ?center = y0	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 subgoal (ID 102)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  ============================	  Op U (x = y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 104)		subgoal 1 (ID 104) is:	 forall y0 : Op U (x = y),	 (fun u : U => let i := uc u in center (x = y)) = y0	";
+            data = "1 subgoal (ID 101)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  ============================	  Op U (x = y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 103)		subgoal 1 (ID 103) is:	 forall y0 : Op U (x = y),	 (fun u : U => let i := uc u in center (x = y)) = y0	";
             responses[i]=data;
           
 
             i = 74;
-            data = "1 subgoal (ID 104)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  ============================	  forall y0 : Op U (x = y),	  (fun u : U => let i := uc u in center (x = y)) = y0	1 subgoal (ID 129)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  f : Op U (x = y)	  u : U	  ============================	  (let i := uc u in center (x = y)) = f u	";
+            data = "1 subgoal (ID 103)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  ============================	  forall y0 : Op U (x = y),	  (fun u : U => let i := uc u in center (x = y)) = y0	1 subgoal (ID 128)	  	  H : Funext	  U : hProp	  A : Type	  Ac : IsConnected (Op U) A	  x, y : A	  uc : U -> Contr A	  f : Op U (x = y)	  u : U	  ============================	  (let i := uc u in center (x = y)) = f u	";
             responses[i]=data;
           
 
@@ -478,7 +478,7 @@
           
 
             i = 92;
-            data = "1 subgoal (ID 336)	  	  H : Funext	  U : hProp	  X : Type	  X_inO : In (Op U) X	  u : lgen_indices	        (null_to_local_generators	           {| ngen_indices := Unit; ngen_type := unit_name U |})	  ============================	  IsEquiv	    (fun x : X =>	     unit_name x	     oD null_to_local_generators	          {| ngen_indices := Unit; ngen_type := unit_name U |} u)	";
+            data = "1 subgoal (ID 335)	  	  H : Funext	  U : hProp	  X : Type	  X_inO : In (Op U) X	  u : lgen_indices	        (null_to_local_generators	           {| ngen_indices := Unit; ngen_type := unit_name U |})	  ============================	  IsEquiv	    (fun x : X =>	     unit_name x	     oD null_to_local_generators	          {| ngen_indices := Unit; ngen_type := unit_name U |} u)	";
             responses[i]=data;
           
 
@@ -488,17 +488,17 @@
           
 
             i = 94;
-            data = "1 subgoal (ID 23)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  IsNull_Internal.IsNull {| ngen_indices := Unit; ngen_type := unit_name U |}	    X -> In (Op U) X	1 subgoal (ID 339)	  	  H : Funext	  U : hProp	  X : Type	  ext : ooExtendableAlong	          (null_to_local_generators	             {| ngen_indices := Unit; ngen_type := unit_name U |} tt)	          (fun	             _ : lgen_codomain	                   (null_to_local_generators	                      {| ngen_indices := Unit; ngen_type := unit_name U |})	                   tt => X)	  ============================	  In (Op U) X	";
+            data = "1 subgoal (ID 23)	  	  H : Funext	  U : hProp	  X : Type	  ============================	  IsNull_Internal.IsNull {| ngen_indices := Unit; ngen_type := unit_name U |}	    X -> In (Op U) X	1 subgoal (ID 338)	  	  H : Funext	  U : hProp	  X : Type	  ext : ooExtendableAlong	          (null_to_local_generators	             {| ngen_indices := Unit; ngen_type := unit_name U |} tt)	          (fun	             _ : lgen_codomain	                   (null_to_local_generators	                      {| ngen_indices := Unit; ngen_type := unit_name U |})	                   tt => X)	  ============================	  In (Op U) X	";
             responses[i]=data;
           
 
             i = 95;
-            data = "";
+            data = "1 subgoal (ID 738)	  	  H : Funext	  U : hProp	  X : Type	  ext : ooExtendableAlong	          (null_to_local_generators	             {| ngen_indices := Unit; ngen_type := unit_name U |} tt)	          (fun	             _ : lgen_codomain	                   (null_to_local_generators	                      {| ngen_indices := Unit; ngen_type := unit_name U |})	                   tt => X)	  ============================	  IsEquiv (fun (h : Unit -> X) (x : U) => h (const tt x))	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 subgoal (ID 740)	  	  H : Funext	  U : hProp	  X : Type	  ext : ooExtendableAlong	          (null_to_local_generators	             {| ngen_indices := Unit; ngen_type := unit_name U |} tt)	          (fun	             _ : lgen_codomain	                   (null_to_local_generators	                      {| ngen_indices := Unit; ngen_type := unit_name U |})	                   tt => X)	  ============================	  IsEquiv (fun (h : Unit -> X) (x : U) => h (const tt x))	No more subgoals.	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
@@ -670,9 +670,9 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab435"></a><h1 class="section">Open modalities</h1>
+<a id="lab436"></a><h1 class="section">Open modalities</h1>
 <div class="doc" scenenumber="4"> </div>
-<a id="lab436"></a><h2 class="section">Definition</h2>
+<a id="lab437"></a><h2 class="section">Definition</h2>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -853,7 +853,7 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-<a id="lab437"></a><h2 class="section">The open modality is lex</h2>
+<a id="lab438"></a><h2 class="section">The open modality is lex</h2>
 <div class="doc" scenenumber="4"> </div>
 
  Note that unlike most other cases, we can prove this without univalence (though we do of course need funext). 
@@ -936,7 +936,7 @@
 </div>
 <div class="goal" id="goal0_3_11"><pre><span></span></pre></div>
 <div class="doc" scenenumber="13">
-<a id="lab438"></a><h2 class="section">The open modality is accessible.</h2>
+<a id="lab439"></a><h2 class="section">The open modality is accessible.</h2>
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="

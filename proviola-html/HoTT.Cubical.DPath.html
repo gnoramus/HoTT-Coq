@@ -688,7 +688,7 @@
           
 
             i = 134;
-            data = "1 subgoal (ID 526)	  	  A : Type	  x1, x2, y : A	  p : x1 = x2	  q : x1 = y	  r : x2 = y	  ============================	  p^ @ q = r <~> transport (fun x : A => x = y) p q = r	";
+            data = "1 subgoal (ID 525)	  	  A : Type	  x1, x2, y : A	  p : x1 = x2	  q : x1 = y	  r : x2 = y	  ============================	  p^ @ q = r <~> transport (fun x : A => x = y) p q = r	";
             responses[i]=data;
           
 
@@ -718,7 +718,7 @@
           
 
             i = 140;
-            data = "1 subgoal (ID 551)	  	  A : Type	  x, y1, y2 : A	  p : y1 = y2	  q : x = y1	  r : x = y2	  ============================	  q @ p = r <~> transport (fun y : A => x = y) p q = r	";
+            data = "1 subgoal (ID 550)	  	  A : Type	  x, y1, y2 : A	  p : y1 = y2	  q : x = y1	  r : x = y2	  ============================	  q @ p = r <~> transport (fun y : A => x = y) p q = r	";
             responses[i]=data;
           
 
@@ -838,7 +838,7 @@
           
 
             i = 164;
-            data = "1 subgoal (ID 692)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  x1, x2 : A	  p : x1 = x2	  q : g (f x1) = x1	  r : g (f x2) = x2	  ============================	  ((ap g (ap f p))^ @ q) @ p = r <~>	  transport (fun x : A => g (f x) = x) p q = r	";
+            data = "1 subgoal (ID 691)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  x1, x2 : A	  p : x1 = x2	  q : g (f x1) = x1	  r : g (f x2) = x2	  ============================	  ((ap g (ap f p))^ @ q) @ p = r <~>	  transport (fun x : A => g (f x) = x) p q = r	";
             responses[i]=data;
           
 
@@ -1058,22 +1058,22 @@
           
 
             i = 208;
-            data = "1 subgoal (ID 1013)	  	  A : Type	  P : A -> Type	  x, x' : A	  y : P x	  y' : P x'	  ============================	  {p : x = x' & DPath P p y y'} <~>	  {p : (x; y).1 = (x'; y').1 & transport P p (x; y).2 = (x'; y').2}	";
+            data = "1 subgoal (ID 1012)	  	  A : Type	  P : A -> Type	  x, x' : A	  y : P x	  y' : P x'	  ============================	  {p : x = x' & DPath P p y y'} <~>	  {p : (x; y).1 = (x'; y').1 & transport P p (x; y).2 = (x'; y').2}	";
             responses[i]=data;
           
 
             i = 209;
-            data = "1 subgoal (ID 1017)	  	  A : Type	  P : A -> Type	  x, x' : A	  y : P x	  y' : P x'	  ============================	  forall a : x = x', DPath P a y y' <~> transport P a (x; y).2 = (x'; y').2	";
+            data = "1 subgoal (ID 1016)	  	  A : Type	  P : A -> Type	  x, x' : A	  y : P x	  y' : P x'	  ============================	  forall a : x = x', DPath P a y y' <~> transport P a (x; y).2 = (x'; y').2	";
             responses[i]=data;
           
 
             i = 210;
-            data = "1 subgoal (ID 1018)	  	  A : Type	  P : A -> Type	  x, x' : A	  y : P x	  y' : P x'	  p : x = x'	  ============================	  DPath P p y y' <~> transport P p (x; y).2 = (x'; y').2	";
+            data = "1 subgoal (ID 1017)	  	  A : Type	  P : A -> Type	  x, x' : A	  y : P x	  y' : P x'	  p : x = x'	  ============================	  DPath P p y y' <~> transport P p (x; y).2 = (x'; y').2	";
             responses[i]=data;
           
 
             i = 211;
-            data = "1 subgoal (ID 1027)	  	  A : Type	  P : A -> Type	  x, x' : A	  y : P x	  y' : P x'	  p : x = x'	  ============================	  transport P p (x; y).2 = (x'; y').2 <~> DPath P p y y'	";
+            data = "1 subgoal (ID 1024)	  	  A : Type	  P : A -> Type	  x, x' : A	  y : P x	  y' : P x'	  p : x = x'	  ============================	  transport P p (x; y).2 = (x'; y').2 <~> DPath P p y y'	";
             responses[i]=data;
           
 
@@ -1123,57 +1123,57 @@
           
 
             i = 221;
-            data = "1 subgoal (ID 1087)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1, a2 : A	  p : a1 = a2	  f : forall x : B a1, C (a1; x)	  g : forall x : B a2, C (a2; x)	  ============================	  DPath (fun a : A => forall x : B a, C (a; x)) p f g <~>	  (forall (x : B a1) (y : B a2) (q : DPath B p x y),	   DPath C (path_sigma_dp (p; q)) (f x) (g y))	";
+            data = "1 subgoal (ID 1085)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1, a2 : A	  p : a1 = a2	  f : forall x : B a1, C (a1; x)	  g : forall x : B a2, C (a2; x)	  ============================	  DPath (fun a : A => forall x : B a, C (a; x)) p f g <~>	  (forall (x : B a1) (y : B a2) (q : DPath B p x y),	   DPath C (path_sigma_dp (p; q)) (f x) (g y))	";
             responses[i]=data;
           
 
             i = 222;
-            data = "1 subgoal (ID 1096)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  ============================	  f = g <~>	  (forall (x y : B a1) (q : x = y),	   DPath C	     (path_sigma_uncurried B (a1; x) (a1; y)	        (functor_sigma idmap (fun a : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f x) (g y))	";
+            data = "1 subgoal (ID 1093)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  ============================	  f = g <~>	  (forall (x y : B a1) (q : x = y),	   DPath C	     (path_sigma_uncurried B (a1; x) (a1; y)	        (functor_sigma idmap (fun a : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f x) (g y))	";
             responses[i]=data;
           
 
             i = 223;
-            data = "1 subgoal (ID 1111)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  ============================	  f == g <~>	  (forall (x y : B a1) (q : x = y),	   DPath C	     (path_sigma_uncurried B (a1; x) (a1; y)	        (functor_sigma idmap (fun a : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f x) (g y))	";
+            data = "1 subgoal (ID 1107)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  ============================	  f == g <~>	  (forall (x y : B a1) (q : x = y),	   DPath C	     (path_sigma_uncurried B (a1; x) (a1; y)	        (functor_sigma idmap (fun a : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f x) (g y))	";
             responses[i]=data;
           
 
             i = 224;
-            data = "1 subgoal (ID 1116)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  ============================	  forall a : B a1,	  f a = g a <~>	  (forall (y : B a1) (q : a = y),	   DPath C	     (path_sigma_uncurried B (a1; a) (a1; y)	        (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f a) (g y))	";
+            data = "1 subgoal (ID 1112)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  ============================	  forall a : B a1,	  f a = g a <~>	  (forall (y : B a1) (q : a = y),	   DPath C	     (path_sigma_uncurried B (a1; a) (a1; y)	        (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f a) (g y))	";
             responses[i]=data;
           
 
             i = 225;
-            data = "1 subgoal (ID 1117)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  f a = g a <~>	  (forall (y : B a1) (q : a = y),	   DPath C	     (path_sigma_uncurried B (a1; a) (a1; y)	        (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f a) (g y))	";
+            data = "1 subgoal (ID 1113)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  f a = g a <~>	  (forall (y : B a1) (q : a = y),	   DPath C	     (path_sigma_uncurried B (a1; a) (a1; y)	        (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f a) (g y))	";
             responses[i]=data;
           
 
             i = 226;
-            data = "4 subgoals (ID 1141)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  f a = g a ->	  forall (y : B a1) (q : a = y),	  DPath C	    (path_sigma_uncurried B (a1; a) (a1; y)	       (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	          (1%path; q))) (f a) (g y)		subgoal 2 (ID 1143) is:	 (forall (y : B a1) (q : a = y),	  DPath C	    (path_sigma_uncurried B (a1; a) (a1; y)	       (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	          (1%path; q))) (f a) (g y)) -> f a = g a	subgoal 3 (ID 1145) is:	 Sect ?g ?f	subgoal 4 (ID 1147) is:	 Sect ?f ?g	";
+            data = "4 subgoals (ID 1137)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  f a = g a ->	  forall (y : B a1) (q : a = y),	  DPath C	    (path_sigma_uncurried B (a1; a) (a1; y)	       (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	          (1%path; q))) (f a) (g y)		subgoal 2 (ID 1139) is:	 (forall (y : B a1) (q : a = y),	  DPath C	    (path_sigma_uncurried B (a1; a) (a1; y)	       (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	          (1%path; q))) (f a) (g y)) -> f a = g a	subgoal 3 (ID 1141) is:	 Sect ?g ?f	subgoal 4 (ID 1143) is:	 Sect ?f ?g	";
             responses[i]=data;
           
 
             i = 227;
-            data = "1 subgoal (ID 1141)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  f a = g a ->	  forall (y : B a1) (q : a = y),	  DPath C	    (path_sigma_uncurried B (a1; a) (a1; y)	       (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	          (1%path; q))) (f a) (g y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 1143)		subgoal 1 (ID 1143) is:	 (forall (y : B a1) (q : a = y),	  DPath C	    (path_sigma_uncurried B (a1; a) (a1; y)	       (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	          (1%path; q))) (f a) (g y)) -> f a = g a	subgoal 2 (ID 1145) is:	 Sect ?g	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end)	subgoal 3 (ID 1147) is:	 Sect	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end) ?g	";
+            data = "1 subgoal (ID 1137)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  f a = g a ->	  forall (y : B a1) (q : a = y),	  DPath C	    (path_sigma_uncurried B (a1; a) (a1; y)	       (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	          (1%path; q))) (f a) (g y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 1139)		subgoal 1 (ID 1139) is:	 (forall (y : B a1) (q : a = y),	  DPath C	    (path_sigma_uncurried B (a1; a) (a1; y)	       (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	          (1%path; q))) (f a) (g y)) -> f a = g a	subgoal 2 (ID 1141) is:	 Sect ?g	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end)	subgoal 3 (ID 1143) is:	 Sect	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end) ?g	";
             responses[i]=data;
           
 
             i = 228;
-            data = "1 subgoal (ID 1143)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  (forall (y : B a1) (q : a = y),	   DPath C	     (path_sigma_uncurried B (a1; a) (a1; y)	        (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f a) (g y)) -> f a = g a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 1145)		subgoal 1 (ID 1145) is:	 Sect	   (fun	      F : forall (y : B a1) (q : a = y),	          DPath C	            (path_sigma_uncurried B (a1; a) (a1; y)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; q))) (f a) (g y) => F a 1)	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end)	subgoal 2 (ID 1147) is:	 Sect	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end)	   (fun	      F : forall (y : B a1) (q : a = y),	          DPath C	            (path_sigma_uncurried B (a1; a) (a1; y)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; q))) (f a) (g y) => F a 1)	";
+            data = "1 subgoal (ID 1139)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  (forall (y : B a1) (q : a = y),	   DPath C	     (path_sigma_uncurried B (a1; a) (a1; y)	        (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	           (1%path; q))) (f a) (g y)) -> f a = g a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 1141)		subgoal 1 (ID 1141) is:	 Sect	   (fun	      F : forall (y : B a1) (q : a = y),	          DPath C	            (path_sigma_uncurried B (a1; a) (a1; y)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; q))) (f a) (g y) => F a 1)	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end)	subgoal 2 (ID 1143) is:	 Sect	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end)	   (fun	      F : forall (y : B a1) (q : a = y),	          DPath C	            (path_sigma_uncurried B (a1; a) (a1; y)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; q))) (f a) (g y) => F a 1)	";
             responses[i]=data;
           
 
             i = 229;
-            data = "1 subgoal (ID 1145)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  Sect	    (fun	       F : forall (y : B a1) (q : a = y),	           DPath C	             (path_sigma_uncurried B (a1; a) (a1; y)	                (functor_sigma idmap	                   (fun a0 : a1 = a1 => dp_path_transport^-1) 	                   (1%path; q))) (f a) (g y) => F a 1)	    (fun (X : f a = g a) (y : B a1) (q : a = y) =>	     match	       q as p in (_ = y0)	       return	         (DPath C	            (path_sigma_uncurried B (a1; a) (a1; y0)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; p))) (f a) (g y0))	     with	     | 1%path => X	     end)	1 subgoal (ID 1169)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  x : forall (y : B a1) (q : a = y),	      DPath C	        (path_sigma_uncurried B (a1; a) (a1; y)	           (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	              (1%path; q))) (f a) (g y)	  x0 : B a1	  ============================	  (fun q : a = x0 =>	   match	     q as p in (_ = y)	     return	       (DPath C	          (path_sigma_uncurried B (a1; a) (a1; y)	             (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                (1%path; p))) (f a) (g y))	   with	   | 1%path => x a 1	   end) == x x0	";
+            data = "1 subgoal (ID 1141)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  Sect	    (fun	       F : forall (y : B a1) (q : a = y),	           DPath C	             (path_sigma_uncurried B (a1; a) (a1; y)	                (functor_sigma idmap	                   (fun a0 : a1 = a1 => dp_path_transport^-1) 	                   (1%path; q))) (f a) (g y) => F a 1)	    (fun (X : f a = g a) (y : B a1) (q : a = y) =>	     match	       q as p in (_ = y0)	       return	         (DPath C	            (path_sigma_uncurried B (a1; a) (a1; y0)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; p))) (f a) (g y0))	     with	     | 1%path => X	     end)	1 subgoal (ID 1165)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  x : forall (y : B a1) (q : a = y),	      DPath C	        (path_sigma_uncurried B (a1; a) (a1; y)	           (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	              (1%path; q))) (f a) (g y)	  x0 : B a1	  ============================	  (fun q : a = x0 =>	   match	     q as p in (_ = y)	     return	       (DPath C	          (path_sigma_uncurried B (a1; a) (a1; y)	             (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                (1%path; p))) (f a) (g y))	   with	   | 1%path => x a 1	   end) == x x0	";
             responses[i]=data;
           
 
             i = 230;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 1147)		subgoal 1 (ID 1147) is:	 Sect	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end)	   (fun	      F : forall (y : B a1) (q : a = y),	          DPath C	            (path_sigma_uncurried B (a1; a) (a1; y)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; q))) (f a) (g y) => F a 1)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 1143)		subgoal 1 (ID 1143) is:	 Sect	   (fun (X : f a = g a) (y : B a1) (q : a = y) =>	    match	      q as p in (_ = y0)	      return	        (DPath C	           (path_sigma_uncurried B (a1; a) (a1; y0)	              (functor_sigma idmap (fun a0 : a1 = a1 => dp_path_transport^-1)	                 (1%path; p))) (f a) (g y0))	    with	    | 1%path => X	    end)	   (fun	      F : forall (y : B a1) (q : a = y),	          DPath C	            (path_sigma_uncurried B (a1; a) (a1; y)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; q))) (f a) (g y) => F a 1)	";
             responses[i]=data;
           
 
             i = 231;
-            data = "1 subgoal (ID 1147)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  Sect	    (fun (X : f a = g a) (y : B a1) (q : a = y) =>	     match	       q as p in (_ = y0)	       return	         (DPath C	            (path_sigma_uncurried B (a1; a) (a1; y0)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; p))) (f a) (g y0))	     with	     | 1%path => X	     end)	    (fun	       F : forall (y : B a1) (q : a = y),	           DPath C	             (path_sigma_uncurried B (a1; a) (a1; y)	                (functor_sigma idmap	                   (fun a0 : a1 = a1 => dp_path_transport^-1) 	                   (1%path; q))) (f a) (g y) => F a 1)	No more subgoals.	";
+            data = "1 subgoal (ID 1143)	  	  H : Funext	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  a1 : A	  f, g : forall x : B a1, C (a1; x)	  a : B a1	  ============================	  Sect	    (fun (X : f a = g a) (y : B a1) (q : a = y) =>	     match	       q as p in (_ = y0)	       return	         (DPath C	            (path_sigma_uncurried B (a1; a) (a1; y0)	               (functor_sigma idmap	                  (fun a0 : a1 = a1 => dp_path_transport^-1) 	                  (1%path; p))) (f a) (g y0))	     with	     | 1%path => X	     end)	    (fun	       F : forall (y : B a1) (q : a = y),	           DPath C	             (path_sigma_uncurried B (a1; a) (a1; y)	                (functor_sigma idmap	                   (fun a0 : a1 = a1 => dp_path_transport^-1) 	                   (1%path; q))) (f a) (g y) => F a 1)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1263,27 +1263,27 @@
           
 
             i = 249;
-            data = "1 subgoal (ID 1199)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y1, y2 : {y : B x1 & C (x1; y)}	  ============================	  {n : DPath B 1 y1.1 y2.1 & DPath C (path_sigma_dp (1%path; n)) y1.2 y2.2} <~>	  {p : y1.1 = y2.1 & DPath (fun y : B x1 => C (x1; y)) p y1.2 y2.2}	";
+            data = "1 subgoal (ID 1198)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y1, y2 : {y : B x1 & C (x1; y)}	  ============================	  {n : DPath B 1 y1.1 y2.1 & DPath C (path_sigma_dp (1%path; n)) y1.2 y2.2} <~>	  {p : y1.1 = y2.1 & DPath (fun y : B x1 => C (x1; y)) p y1.2 y2.2}	";
             responses[i]=data;
           
 
             i = 250;
-            data = "1 subgoal (ID 1203)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y1, y2 : {y : B x1 & C (x1; y)}	  ============================	  forall a : DPath B 1 y1.1 y2.1,	  DPath C (path_sigma_dp (1%path; a)) y1.2 y2.2 <~>	  DPath (fun y : B x1 => C (x1; y)) a y1.2 y2.2	";
+            data = "1 subgoal (ID 1202)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y1, y2 : {y : B x1 & C (x1; y)}	  ============================	  forall a : DPath B 1 y1.1 y2.1,	  DPath C (path_sigma_dp (1%path; a)) y1.2 y2.2 <~>	  DPath (fun y : B x1 => C (x1; y)) a y1.2 y2.2	";
             responses[i]=data;
           
 
             i = 251;
-            data = "1 subgoal (ID 1206)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y1, y2 : {y : B x1 & C (x1; y)}	  q : y1.1 = y2.1	  ============================	  DPath C	    (path_sigma_uncurried B (x1; y1.1) (x1; y2.1)	       (functor_sigma idmap (fun a : x1 = x1 => dp_path_transport^-1)	          (1%path; q))) y1.2 y2.2 <~>	  DPath (fun y : B x1 => C (x1; y)) q y1.2 y2.2	";
+            data = "1 subgoal (ID 1204)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y1, y2 : {y : B x1 & C (x1; y)}	  q : y1.1 = y2.1	  ============================	  DPath C	    (path_sigma_uncurried B (x1; y1.1) (x1; y2.1)	       (functor_sigma idmap (fun a : x1 = x1 => dp_path_transport^-1)	          (1%path; q))) y1.2 y2.2 <~>	  DPath (fun y : B x1 => C (x1; y)) q y1.2 y2.2	";
             responses[i]=data;
           
 
             i = 252;
-            data = "1 subgoal (ID 1224)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y11 : B x1	  y12 : C (x1; y11)	  y21 : B x1	  y22 : C (x1; y21)	  q : (y11; y12).1 = (y21; y22).1	  ============================	  DPath C	    (path_sigma_uncurried B (x1; (y11; y12).1) (x1; (y21; y22).1)	       (functor_sigma idmap (fun a : x1 = x1 => dp_path_transport^-1)	          (1%path; q))) (y11; y12).2 (y21; y22).2 <~>	  DPath (fun y : B x1 => C (x1; y)) q (y11; y12).2 (y21; y22).2	";
+            data = "1 subgoal (ID 1222)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y11 : B x1	  y12 : C (x1; y11)	  y21 : B x1	  y22 : C (x1; y21)	  q : (y11; y12).1 = (y21; y22).1	  ============================	  DPath C	    (path_sigma_uncurried B (x1; (y11; y12).1) (x1; (y21; y22).1)	       (functor_sigma idmap (fun a : x1 = x1 => dp_path_transport^-1)	          (1%path; q))) (y11; y12).2 (y21; y22).2 <~>	  DPath (fun y : B x1 => C (x1; y)) q (y11; y12).2 (y21; y22).2	";
             responses[i]=data;
           
 
             i = 253;
-            data = "1 subgoal (ID 1226)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y11 : B x1	  y12 : C (x1; y11)	  y21 : B x1	  y22 : C (x1; y21)	  q : y11 = y21	  ============================	  DPath C	    (path_sigma_uncurried B (x1; y11) (x1; y21)	       (functor_sigma idmap (fun a : x1 = x1 => dp_path_transport^-1)	          (1%path; q))) y12 y22 <~>	  DPath (fun y : B x1 => C (x1; y)) q y12 y22	";
+            data = "1 subgoal (ID 1224)	  	  A : Type	  B : A -> Type	  C : {x : _ & B x} -> Type	  x1 : A	  y11 : B x1	  y12 : C (x1; y11)	  y21 : B x1	  y22 : C (x1; y21)	  q : y11 = y21	  ============================	  DPath C	    (path_sigma_uncurried B (x1; y11) (x1; y21)	       (functor_sigma idmap (fun a : x1 = x1 => dp_path_transport^-1)	          (1%path; q))) y12 y22 <~>	  DPath (fun y : B x1 => C (x1; y)) q y12 y22	";
             responses[i]=data;
           
 
