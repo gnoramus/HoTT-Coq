@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: Spec.v
 Line: 1
-Time: 0.012s">
+Time: 0.016s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 1
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 Require Import Pos.Core.</pre>
 </div>
@@ -75,7 +75,7 @@ Proof.</pre>
 <div class="code" title="File: Spec.v
 Line: 8
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
   by destruct p.</pre>
 </div>
@@ -103,8 +103,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 13
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   by destruct p.</pre>
 </div>
@@ -147,15 +147,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 20
-Time: 0.005s">
-<div class="time" style="width: 41.666666666667%"></div>
+Time: 0.006s">
+<div class="time" style="width: 37.5%"></div>
 <pre>
   induction p; destruct q; simpl; by apply ap.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 21
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -165,7 +165,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-(** ** Commutativity *)
+(** ** Commutativity of [add] *)
 
 </pre>
 </div>
@@ -191,22 +191,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 27
-Time: 0.005s">
-<div class="time" style="width: 41.666666666667%"></div>
+Time: 0.006s">
+<div class="time" style="width: 37.5%"></div>
 <pre>
   induction p; destruct q; simpl; apply ap; trivial.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 28
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   rewrite 2 pos_add_carry_spec; by apply ap.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 29
 Time: 0.002s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -242,8 +242,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 35
-Time: 0.007s">
-<div class="time" style="width: 58.333333333333%"></div>
+Time: 0.009s">
+<div class="time" style="width: 56.25%"></div>
 <pre>
   induction p; destruct q; simpl; apply ap;
    auto using pos_add_1_r; rewrite pos_add_carry_spec; auto.</pre>
@@ -251,7 +251,7 @@ Time: 0.007s">
 <div class="code" title="File: Spec.v
 Line: 37
 Time: 0.002s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -272,8 +272,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 41
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   rewrite pos_add_comm, (pos_add_comm p).</pre>
 </div>
@@ -307,8 +307,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 46
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   by rewrite pos_add_succ_r, pos_add_succ_l.</pre>
 </div>
@@ -344,8 +344,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 53
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -409,8 +409,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 64
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   induction p as [ |p IHp|p IHp]; intros [ |q|q].</pre>
 </div>
@@ -466,7 +466,7 @@ Time: 0s">
 <div class="code" title="File: Spec.v
 Line: 72
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -501,7 +501,7 @@ Time: 0s">
 <div class="code" title="File: Spec.v
 Line: 77
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
   induction n as [ | n x | n x]; induction m as [ | m y | m y].</pre>
 </div>
@@ -567,8 +567,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 84
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
     destruct m.</pre>
 </div>
@@ -648,8 +648,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 93
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
     destruct (x1_neq_x0 p).</pre>
 </div>
@@ -682,8 +682,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 97
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
     destruct n.</pre>
 </div>
@@ -751,7 +751,7 @@ Time: 0s">
 <div class="code" title="File: Spec.v
 Line: 105
 Time: 0.002s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -802,34 +802,34 @@ Time: 0s">
 <div class="code" title="File: Spec.v
 Line: 113
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre> intros [|q|q] [|r|r].</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 113
 Time: 0.003s">
-<div class="time" style="width: 25%"></div>
+<div class="time" style="width: 18.75%"></div>
 <pre>
     all: try reflexivity.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 114
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
     all: simpl.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 115
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
     1,2: by destruct r.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 116
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
     1,2: apply ap; symmetry.</pre>
 </div>
@@ -878,20 +878,20 @@ Time: 0s">
 <div class="code" title="File: Spec.v
 Line: 123
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre> intros [|q|q] [|r|r].</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 123
-Time: 0.004s">
-<div class="time" style="width: 33.333333333333%"></div>
+Time: 0.005s">
+<div class="time" style="width: 31.25%"></div>
 <pre>
     all: try reflexivity.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 124
-Time: 0.002s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.003s">
+<div class="time" style="width: 18.75%"></div>
 <pre>
     all: cbn; apply ap.</pre>
 </div>
@@ -954,12 +954,12 @@ Time: 0s">
 <div class="code" title="File: Spec.v
 Line: 133
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre> intros [|q|q] [|r|r].</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 133
-Time: 0.003s">
+Time: 0.004s">
 <div class="time" style="width: 25%"></div>
 <pre>
     all: cbn; apply ap.</pre>
@@ -1001,22 +1001,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 139
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
     2: symmetry; apply pos_add_carry_spec_r.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 140
-Time: 0.002s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.003s">
+<div class="time" style="width: 18.75%"></div>
 <pre>
     1,2: rewrite 2 pos_add_carry_spec, ?pos_add_succ_l.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 141
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
     1,2: apply ap, IHp.</pre>
 </div>
@@ -1043,8 +1043,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 145
-Time: 0.008s">
-<div class="time" style="width: 66.666666666667%"></div>
+Time: 0.01s">
+<div class="time" style="width: 62.5%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1102,8 +1102,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Spec.v
 Line: 155
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   induction p; cbn; trivial; by apply ap.</pre>
 </div>
@@ -1241,8 +1241,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 179
-Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   by rewrite pos_peano_ind_beta_pos_succ.</pre>
 </div>
@@ -1278,8 +1278,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Spec.v
 Line: 186
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
 <pre>
   srapply pos_peano_ind.</pre>
 </div>
@@ -1307,7 +1307,7 @@ Time: 0s">
 <div class="code" title="File: Spec.v
 Line: 190
 Time: 0.002s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>
   1,3: unfold pos_iter;
     by rewrite pos_peano_ind_beta_pos_succ.</pre>
@@ -1329,16 +1329,421 @@ Time: 0s">
 <div class="code" title="File: Spec.v
 Line: 194
 Time: 0.001s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 6.25%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Spec.v
-Line: 196
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
+(** ** Right reduction properties for multiplication *)</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 197
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma mul_xO_r p q : p * q~0 = (p * q)~0.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 197
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 198
+Time: 0.003s">
+<div class="time" style="width: 18.75%"></div>
+<pre>
+  induction p; simpl; f_ap; f_ap; trivial.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 199
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 200
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Lemma mul_xI_r p q : p * q~1 = p + (p * q)~0.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 202
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 203
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
+<pre>
+  induction p; simpl; trivial; f_ap.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 204
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  rewrite IHp.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 205
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  rewrite pos_add_assoc.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 206
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  rewrite (pos_add_comm q p).</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 207
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
+<pre>
+  symmetry.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 208
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  apply pos_add_assoc.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 209
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 210
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Commutativity of multiplication *)</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 212
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma pos_mul_comm p q : p * q = q * p.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 212
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 213
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  induction q; simpl.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 214
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  1: apply pos_mul_1_r.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 215
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 216
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> rewrite mul_xO_r.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 216
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    f_ap.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 217
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 218
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> rewrite mul_xI_r.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 218
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
+<pre>
+    f_ap; f_ap.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 219
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 220
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Distributivity of addition over multiplication *)</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 222
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Theorem pos_mul_add_distr_l p q r :
+  p * (q + r) = p * q + p * r.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 223
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 224
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
+<pre>
+  induction p; cbn; [reflexivity | f_ap | ].</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 225
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  rewrite IHp.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 226
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  set (m:=(p*q)~0).</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 227
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  set (n:=(p*r)~0).</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 228
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  change ((p*q+p*r)~0) with (m+n).</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 229
+Time: 0.004s">
+<div class="time" style="width: 25%"></div>
+<pre>
+  rewrite 2 pos_add_assoc; f_ap.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 230
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
+<pre>
+  rewrite &lt;- 2 pos_add_assoc; f_ap.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 231
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  apply pos_add_comm.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 232
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 233
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Theorem pos_mul_add_distr_r p q r :
+  (p + q) * r = p * r + q * r.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 236
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 237
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
+<pre>
+  rewrite 3 (pos_mul_comm _ r); apply pos_mul_add_distr_l.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 238
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 239
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Associativity of multiplication *)</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 241
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Theorem pos_mul_assoc p q r : p * (q * r) = p * q * r.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 241
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 242
+Time: 0.002s">
+<div class="time" style="width: 12.5%"></div>
+<pre>
+  induction p; simpl; rewrite ?IHp; trivial.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 243
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  by rewrite pos_mul_add_distr_r.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 244
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 245
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** pos_succ and pos_mul *)
+
+</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 248
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Lemma pos_mul_succ_l p q
+  : (pos_succ p) * q = p * q + q.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 249
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 250
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
+<pre>
+  by rewrite &lt;- pos_add_1_r, pos_mul_add_distr_r, pos_mul_1_l.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 251
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 252
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Lemma pos_mul_succ_r p q
+  : p * (pos_succ q) = p + p * q.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 255
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 256
+Time: 0.001s">
+<div class="time" style="width: 6.25%"></div>
+<pre>
+  by rewrite &lt;- pos_add_1_l, pos_mul_add_distr_l, pos_mul_1_r.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 257
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: Spec.v
+Line: 259
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
 
 </pre>
 </div>

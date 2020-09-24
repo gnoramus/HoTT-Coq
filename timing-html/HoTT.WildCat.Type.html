@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: Type.v
 Line: 1
-Time: 0.013s">
-<div class="time" style="width: 13.829787234043%"></div>
+Time: 0.015s">
+<div class="time" style="width: 12.396694214876%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 1
-Time: 0.002s">
-<div class="time" style="width: 2.1276595744681%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.4793388429752%"></div>
 <pre>
 Require Import WildCat.Core.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 2
 Time: 0.002s">
-<div class="time" style="width: 2.1276595744681%"></div>
+<div class="time" style="width: 1.6528925619835%"></div>
 <pre>
 Require Import WildCat.Equiv.</pre>
 </div>
@@ -123,7 +123,7 @@ Defined.</pre>
 <div class="code" title="File: Type.v
 Line: 14
 Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
 
 Global Instance isgraph_arrow {A B : Type} : IsGraph (A $-&gt; B)
@@ -223,7 +223,7 @@ Defined.</pre>
 <div class="code" title="File: Type.v
 Line: 30
 Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
 
 Global Instance is0functor_type_postcomp {A B C : Type} (h : B $-&gt; C):
@@ -253,14 +253,14 @@ Time: 0s">
 <div class="code" title="File: Type.v
 Line: 36
 Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 37
 Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
 
 Global Instance is0functor_type_precomp {A B C : Type} (h : A $-&gt; B):
@@ -311,22 +311,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 47
-Time: 0.094s">
+Time: 0.121s">
 <div class="time" style="width: 100%"></div>
 <pre>
   srapply Build_Is1Cat_Strong; cbn; intros; reflexivity.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 48
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 49
-Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance hasmorext_type `{Funext} : HasMorExt Type.</pre>
@@ -341,21 +341,21 @@ Proof.</pre>
 <div class="code" title="File: Type.v
 Line: 52
 Time: 0.02s">
-<div class="time" style="width: 21.276595744681%"></div>
+<div class="time" style="width: 16.528925619835%"></div>
 <pre>
   srapply Build_HasMorExt.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 53
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
   intros A B f g; cbn in *.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 54
-Time: 0.003s">
-<div class="time" style="width: 3.1914893617021%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6528925619835%"></div>
 <pre>
   refine (isequiv_homotopic (@apD10 A (fun _ =&gt; B) f g) _).</pre>
 </div>
@@ -375,15 +375,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Type.v
 Line: 57
-Time: 0.002s">
-<div class="time" style="width: 2.1276595744681%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 58
 Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
 
 Global Instance hasequivs_type : HasEquivs Type.</pre>
@@ -397,8 +397,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 61
-Time: 0.008s">
-<div class="time" style="width: 8.5106382978723%"></div>
+Time: 0.009s">
+<div class="time" style="width: 7.4380165289256%"></div>
 <pre>
   srefine (Build_HasEquivs Type _ _ _ Equiv (@IsEquiv) _ _ _ _ _ _ _ _); intros A B.</pre>
 </div>
@@ -431,8 +431,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Type.v
 Line: 65
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: Type.v
@@ -457,8 +457,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Type.v
 Line: 67
-Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6528925619835%"></div>
 <pre> intros; reflexivity.</pre>
 </div>
 <div class="code" title="File: Type.v
@@ -489,8 +489,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Type.v
 Line: 69
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre> intros ?; apply eissect.</pre>
 </div>
 <div class="code" title="File: Type.v
@@ -527,15 +527,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Type.v
 Line: 71
-Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6528925619835%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Type.v
 Line: 72
 Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
 
 Definition catie_isequiv {A B : Type} {f : A $-&gt; B}
@@ -573,7 +573,7 @@ Hint Immediate catie_isequiv : typeclass_instances.</pre>
 <div class="code" title="File: Type.v
 Line: 80
 Time: 0.001s">
-<div class="time" style="width: 1.063829787234%"></div>
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
 
 Global Instance isinitial_zero : IsInitial Empty.</pre>
@@ -608,8 +608,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Type.v
 Line: 86
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.82644628099174%"></div>
 <pre>
   rapply Empty_ind.</pre>
 </div>
