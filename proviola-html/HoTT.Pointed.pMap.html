@@ -338,7 +338,7 @@
           
 
             i = 64;
-            data = "1 subgoal (ID 162)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (fun b : A =>	     {|	     pointed_type := ((C; c0).1 b; (C; c0).2 b).1;	     ispointed_type := ((C; c0).1 b; (C; c0).2 b).2 |})	    (fun b : A =>	     {|	     pointed_fun := ((g; g0).1 b; (g; g0).2 b).1;	     dpoint_eq := ((g; g0).1 b; (g; g0).2 b).2 |})	";
+            data = "1 subgoal (ID 162)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  c0 : forall x : A, C x	  g : forall x : A, B x -> C x	  g0 : forall x : A, g x (ispointed_type (B x)) = c0 x	  ============================	  P	    (fun b : A =>	     {|	       pointed_type := ((C; c0).1 b; (C; c0).2 b).1;	       ispointed_type := ((C; c0).1 b; (C; c0).2 b).2	     |})	    (fun b : A =>	     {|	       pointed_fun := ((g; g0).1 b; (g; g0).2 b).1;	       dpoint_eq := ((g; g0).1 b; (g; g0).2 b).2	     |})	";
             responses[i]=data;
           
 
@@ -373,7 +373,7 @@
           
 
             i = 71;
-            data = "1 subgoal (ID 198)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A =>	     {|	     pointed_fun := g b;	     dpoint_eq := (path_forall (fun x : A => g x (ispointed_type (B x)))	                     (fun x : A => g x (ispointed_type (B x))))^-1 1 b |})	";
+            data = "1 subgoal (ID 198)	  	  H0 : Funext	  A : Type	  B : A -> pType	  P : forall C : A -> pType, (forall a : A, B a ->* C a) -> Type	  H : forall (C : A -> Type) (g : forall a : A, B a -> C a),	      P	        (fun a : A =>	         {| pointed_type := C a; ispointed_type := g a (point (B a)) |})	        (fun a : A => pmap_from_pointed (g a))	  C : A -> Type	  g : forall x : A, B x -> C x	  ============================	  P	    (fun b : A =>	     {| pointed_type := C b; ispointed_type := g b (ispointed_type (B b)) |})	    (fun b : A =>	     {|	       pointed_fun := g b;	       dpoint_eq :=	         (path_forall (fun x : A => g x (ispointed_type (B x)))	            (fun x : A => g x (ispointed_type (B x))))^-1 1 b	     |})	";
             responses[i]=data;
           
 
@@ -513,17 +513,17 @@
           
 
             i = 99;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 235)		subgoal 1 (ID 235) is:	 (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	 dpoint_eq (functor_pforall_right g g₀ f) @	 (dpoint_eq (functor_pforall_right g' g₀' f'))^	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 235) is:	 (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	 dpoint_eq (functor_pforall_right g g₀ f) @	 (dpoint_eq (functor_pforall_right g' g₀' f'))^	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 subgoal (ID 235)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	  dpoint_eq (functor_pforall_right g g₀ f) @	  (dpoint_eq (functor_pforall_right g' g₀' f'))^	";
+            data = "1 subgoal (ID 235)	  	  A : pType	  B : pFam A	  C : pFam A	  g, g' : forall a : A, B a -> C a	  g₀ : g (point A) (dpoint B) = dpoint C	  g₀' : g' (point A) (dpoint B) = dpoint C	  f, f' : pForall A B	  p : forall a : A, g a == g' a	  q : f ==* f'	  r : p (point A) (dpoint B) @ g₀' = g₀	  ============================	  (fun a : A => p a (f a) @ ap (g' a) (q a)) (point A) =	  dpoint_eq (functor_pforall_right g g₀ f) @	  (dpoint_eq (functor_pforall_right g' g₀' f'))^	1 subgoal (ID 399)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  p point (f point) @ ap (g' point) (q point) =	  ap (g point) (q point) @ p point (f' point)	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 399)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  p point (f point) @ ap (g' point) (q point) =	  ap (g point) (q point) @ p point (f' point)	1 subgoal (ID 421)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  ap (g point) (q point) @ p point (f' point) =	  p point (f point) @ ap (g' point) (q point)	";
+            data = "1 subgoal (ID 421)	  	  A : Type	  point : IsPointed A	  B : A -> Type	  C : A -> Type	  g, g' : forall a : A, B a -> C a	  f', f : forall x : A, B x	  p : forall a : A, g a == g' a	  q : forall x : A, f x = f' x	  ============================	  ap (g point) (q point) @ p point (f' point) =	  p point (f point) @ ap (g' point) (q point)	";
             responses[i]=data;
           
 
@@ -578,7 +578,7 @@
           
 
             i = 112;
-            data = "1 subgoal (ID 278)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  forall a : A,	  pointed_fam (fun a0 : A => B a0) a -> pointed_fam (fun a0 : A => B' a0) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 280)		subgoal 1 (ID 280) is:	 (fun a : A => pointed_fun (g a)) (point A)	   (dpoint (pointed_fam (fun a : A => B a))) =	 dpoint (pointed_fam (fun a : A => B' a))	";
+            data = "1 subgoal (ID 278)	  	  A : pType	  B : A -> pType	  B' : A -> pType	  g : forall a : A, B a ->* B' a	  f : ppforall a : A, B a	  ============================	  forall a : A,	  pointed_fam (fun a0 : A => B a0) a -> pointed_fam (fun a0 : A => B' a0) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 280) is:	 (fun a : A => pointed_fun (g a)) (point A)	   (dpoint (pointed_fam (fun a : A => B a))) =	 dpoint (pointed_fam (fun a : A => B' a))	";
             responses[i]=data;
           
 
@@ -613,7 +613,7 @@
           
 
             i = 119;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 305)		subgoal 1 (ID 305) is:	 (fun x : A => point_eq (g x)) (point A) =	 dpoint_eq (pmap_compose_ppforall g (point_pforall B)) @	 (dpoint_eq (point_pforall B'))^	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 305) is:	 (fun x : A => point_eq (g x)) (point A) =	 dpoint_eq (pmap_compose_ppforall g (point_pforall B)) @	 (dpoint_eq (point_pforall B'))^	";
             responses[i]=data;
           
 
@@ -643,7 +643,7 @@
           
 
             i = 125;
-            data = "1 subgoal (ID 331)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==	  pmap_compose_ppforall h (pmap_compose_ppforall g f)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 333)		subgoal 1 (ID 333) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	 (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	";
+            data = "1 subgoal (ID 331)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  R : A -> pType	  h : forall a : A, Q a ->* R a	  g : forall a : A, P a ->* Q a	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => h a o* g a) f ==	  pmap_compose_ppforall h (pmap_compose_ppforall g f)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 333) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => h a o* g a) f) @	 (dpoint_eq (pmap_compose_ppforall h (pmap_compose_ppforall g f)))^	";
             responses[i]=data;
           
 
@@ -688,12 +688,12 @@
           
 
             i = 134;
-            data = "1 subgoal (ID 388)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  forall a : A,	  (fun a0 : A => pointed_fun (g a0)) a ==	  (fun a0 : A => pointed_fun (g' a0)) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 390)		subgoal 1 (ID 390) is:	 f ==* f'	subgoal 2 (ID 392) is:	 (fun a : A => pointed_htpy (p a)) (point A)	   (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	 point_eq (g (point A))	";
+            data = "1 subgoal (ID 388)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  forall a : A,	  (fun a0 : A => pointed_fun (g a0)) a ==	  (fun a0 : A => pointed_fun (g' a0)) a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 390) is:	 f ==* f'	subgoal 2 (ID 392) is:	 (fun a : A => pointed_htpy (p a)) (point A)	   (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	 point_eq (g (point A))	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 subgoal (ID 390)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  f ==* f'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 392)		subgoal 1 (ID 392) is:	 (fun a : A => pointed_htpy (p a)) (point A)	   (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	 point_eq (g (point A))	";
+            data = "1 subgoal (ID 390)	  	  A : pType	  P : A -> pType	  Q : A -> pType	  g, g' : forall a : A, P a ->* Q a	  f, f' : ppforall a : A, P a	  p : forall a : A, g a ==* g' a	  q : f ==* f'	  ============================	  f ==* f'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 392) is:	 (fun a : A => pointed_htpy (p a)) (point A)	   (dpoint (pointed_fam (fun a : A => P a))) @ point_eq (g' (point A)) =	 point_eq (g (point A))	";
             responses[i]=data;
           
 
@@ -773,7 +773,7 @@
           
 
             i = 151;
-            data = "1 subgoal (ID 450)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f == f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 452)		subgoal 1 (ID 452) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	 (dpoint_eq f)^	";
+            data = "1 subgoal (ID 450)	  	  A : pType	  P : A -> pType	  f : ppforall a : A, P a	  ============================	  pmap_compose_ppforall (fun a : A => pmap_idmap) f == f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 452) is:	 (fun x0 : A => 1) (point A) =	 dpoint_eq (pmap_compose_ppforall (fun a : A => pmap_idmap) f) @	 (dpoint_eq f)^	";
             responses[i]=data;
           
 

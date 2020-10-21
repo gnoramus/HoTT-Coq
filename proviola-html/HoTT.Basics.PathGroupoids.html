@@ -2428,7 +2428,7 @@
           
 
             i = 482;
-            data = "1 subgoal (ID 2731)	  	  A : Type	  B : A -> Type	  C : Type	  f : forall x : A, B x -> C	  g, g' : forall x : A, B x	  p : g = g'	  a : A	  ============================	  apD10 (ap (fun (h : forall x : A, B x) (x : A) => f x (h x)) p) a =	  ap (f a) (apD10 p a)	";
+            data = "1 subgoal (ID 2729)	  	  A : Type	  B : A -> Type	  C : Type	  f : forall x : A, B x -> C	  g, g' : forall x : A, B x	  p : g = g'	  a : A	  ============================	  apD10 (ap (fun (h : forall x : A, B x) (x : A) => f x (h x)) p) a =	  ap (f a) (apD10 p a)	";
             responses[i]=data;
           
 
@@ -2528,7 +2528,7 @@
           
 
             i = 502;
-            data = "1 subgoal (ID 3049)	  	  A : Type	  P : A -> Type	  x, y, z, w : A	  p : x = y	  q : y = z	  r : z = w	  u : P x	  ============================	  (ap (fun e : x = w => transport P e u) (concat_p_pp p q r) @	   transport_pp P (p @ q) r u) @ ap (transport P r) (transport_pp P p q u) =	  transport_pp P p (q @ r) u @ transport_pp P q r (transport P p u)	";
+            data = "1 subgoal (ID 3047)	  	  A : Type	  P : A -> Type	  x, y, z, w : A	  p : x = y	  q : y = z	  r : z = w	  u : P x	  ============================	  (ap (fun e : x = w => transport P e u) (concat_p_pp p q r) @	   transport_pp P (p @ q) r u) @ ap (transport P r) (transport_pp P p q u) =	  transport_pp P p (q @ r) u @ transport_pp P q r (transport P p u)	";
             responses[i]=data;
           
 
@@ -2538,12 +2538,12 @@
           
 
             i = 504;
-            data = "1 subgoal (ID 3069)	  	  A : Type	  P : A -> Type	  x : A	  u : P x	  ============================	  (ap (fun e : x = x => transport P e u) (concat_p_pp 1 1 1) @	   transport_pp P (1 @ 1) 1 u) @ ap (transport P 1) (transport_pp P 1 1 u) =	  transport_pp P 1 (1 @ 1) u @ transport_pp P 1 1 (transport P 1 u)	";
+            data = "1 subgoal (ID 3067)	  	  A : Type	  P : A -> Type	  x : A	  u : P x	  ============================	  (ap (fun e : x = x => transport P e u) (concat_p_pp 1 1 1) @	   transport_pp P (1 @ 1) 1 u) @ ap (transport P 1) (transport_pp P 1 1 u) =	  transport_pp P 1 (1 @ 1) u @ transport_pp P 1 1 (transport P 1 u)	";
             responses[i]=data;
           
 
             i = 505;
-            data = "1 subgoal (ID 3070)	  	  A : Type	  P : A -> Type	  x : A	  u : P x	  ============================	  1 = 1	";
+            data = "1 subgoal (ID 3068)	  	  A : Type	  P : A -> Type	  x : A	  u : P x	  ============================	  1 = 1	";
             responses[i]=data;
           
 
@@ -2558,7 +2558,7 @@
           
 
             i = 508;
-            data = "1 subgoal (ID 3077)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  z : P x	  ============================	  transport_pV P p (transport P p z) =	  ap (transport P p) (transport_Vp P p z)	";
+            data = "1 subgoal (ID 3075)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  z : P x	  ============================	  transport_pV P p (transport P p z) =	  ap (transport P p) (transport_Vp P p z)	";
             responses[i]=data;
           
 
@@ -2578,7 +2578,7 @@
           
 
             i = 512;
-            data = "1 subgoal (ID 3111)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  z : P y	  ============================	  transport_Vp P p (transport P p^ z) =	  ap (transport P p^) (transport_pV P p z)	";
+            data = "1 subgoal (ID 3109)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  z : P y	  ============================	  transport_Vp P p (transport P p^ z) =	  ap (transport P p^) (transport_pV P p z)	";
             responses[i]=data;
           
 
@@ -2598,7 +2598,7 @@
           
 
             i = 516;
-            data = "1 subgoal (ID 3147)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  e : transport P p u = v	  ============================	  ap (transport P p) (moveL_transport_V P p u v e) @ transport_pV P p v = e	";
+            data = "1 subgoal (ID 3145)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  e : transport P p u = v	  ============================	  ap (transport P p) (moveL_transport_V P p u v e) @ transport_pV P p v = e	";
             responses[i]=data;
           
 
@@ -2618,7 +2618,7 @@
           
 
             i = 520;
-            data = "1 subgoal (ID 3175)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  ============================	  moveL_transport_V P p u (transport P p u) 1 = (transport_Vp P p u)^	";
+            data = "1 subgoal (ID 3173)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  ============================	  moveL_transport_V P p u (transport P p u) 1 = (transport_Vp P p u)^	";
             responses[i]=data;
           
 
@@ -2668,7 +2668,7 @@
           
 
             i = 530;
-            data = "1 subgoal (ID 3218)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P y	  ============================	  paths_ind_r y (fun (b : A) (_ : b = y) => P b) u x p = transport P p^ u	";
+            data = "1 subgoal (ID 3216)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P y	  ============================	  paths_ind_r y (fun (b : A) (_ : b = y) => P b) u x p = transport P p^ u	";
             responses[i]=data;
           
 
@@ -2723,7 +2723,7 @@
           
 
             i = 541;
-            data = "1 subgoal (ID 3253)	  	  A : Type	  B : Type	  f, g : A -> B	  h : f = g	  x, y : A	  p : x = y	  ============================	  ap11 h p = ap10 h x @ ap g p	";
+            data = "1 subgoal (ID 3251)	  	  A : Type	  B : Type	  f, g : A -> B	  h : f = g	  x, y : A	  p : x = y	  ============================	  ap11 h p = ap10 h x @ ap g p	";
             responses[i]=data;
           
 
@@ -2808,7 +2808,7 @@
           
 
             i = 558;
-            data = "1 subgoal (ID 3311)	  	  A : Type	  B : Type	  C : Type	  f : A -> B -> C	  x, x' : A	  y, y' : B	  p : x = x'	  q : y = y'	  ============================	  f x y = f x' y'	";
+            data = "1 subgoal (ID 3309)	  	  A : Type	  B : Type	  C : Type	  f : A -> B -> C	  x, x' : A	  y, y' : B	  p : x = x'	  q : y = y'	  ============================	  f x y = f x' y'	";
             responses[i]=data;
           
 
@@ -2818,7 +2818,7 @@
           
 
             i = 560;
-            data = "1 subgoal (ID 3319)	  	  A : Type	  B : Type	  C : Type	  f : A -> B -> C	  x : A	  y : B	  ============================	  f x y = f x y	";
+            data = "1 subgoal (ID 3317)	  	  A : Type	  B : Type	  C : Type	  f : A -> B -> C	  x : A	  y : B	  ============================	  f x y = f x y	";
             responses[i]=data;
           
 
@@ -2853,7 +2853,7 @@
           
 
             i = 567;
-            data = "1 subgoal (ID 3346)	  	  A : Type	  B : A -> Type	  C : Type	  f : forall a : A, B a -> C	  x, x' : A	  p : x = x'	  y : B x	  y' : B x'	  q : transport B p y = y'	  ============================	  f x y = f x' y'	";
+            data = "1 subgoal (ID 3344)	  	  A : Type	  B : A -> Type	  C : Type	  f : forall a : A, B a -> C	  x, x' : A	  p : x = x'	  y : B x	  y' : B x'	  q : transport B p y = y'	  ============================	  f x y = f x' y'	";
             responses[i]=data;
           
 
@@ -2873,7 +2873,7 @@
           
 
             i = 571;
-            data = "1 subgoal (ID 3386)	  	  A : Type	  B : A -> Type	  C : A -> Type	  f : forall a : A, B a -> C a	  x, x' : A	  p : x = x'	  y : B x	  y' : B x'	  q : transport B p y = y'	  ============================	  transport C p (f x y) = f x' y'	";
+            data = "1 subgoal (ID 3384)	  	  A : Type	  B : A -> Type	  C : A -> Type	  f : forall a : A, B a -> C a	  x, x' : A	  p : x = x'	  y : B x	  y' : B x'	  q : transport B p y = y'	  ============================	  transport C p (f x y) = f x' y'	";
             responses[i]=data;
           
 
@@ -2893,7 +2893,7 @@
           
 
             i = 575;
-            data = "1 subgoal (ID 3431)	  	  A : Type	  B : A -> Type	  C : forall x : A, B x -> Type	  f : forall (a : A) (b : B a), C a b	  x, x' : A	  p : x = x'	  y : B x	  y' : B x'	  q : transport B p y = y'	  ============================	  transport (C x') q (transportD B C p y (f x y)) = f x' y'	";
+            data = "1 subgoal (ID 3429)	  	  A : Type	  B : A -> Type	  C : forall x : A, B x -> Type	  f : forall (a : A) (b : B a), C a b	  x, x' : A	  p : x = x'	  y : B x	  y' : B x'	  q : transport B p y = y'	  ============================	  transport (C x') q (transportD B C p y (f x y)) = f x' y'	";
             responses[i]=data;
           
 
@@ -2963,7 +2963,7 @@
           
 
             i = 589;
-            data = "1 subgoal (ID 3543)	  	  A : Type	  P : A -> Type	  x, y : A	  p1, p2, p3 : x = y	  r1 : p1 = p2	  r2 : p2 = p3	  z : P x	  ============================	  transport2 P (r1 @ r2) z = transport2 P r1 z @ transport2 P r2 z	";
+            data = "1 subgoal (ID 3541)	  	  A : Type	  P : A -> Type	  x, y : A	  p1, p2, p3 : x = y	  r1 : p1 = p2	  r2 : p2 = p3	  z : P x	  ============================	  transport2 P (r1 @ r2) z = transport2 P r1 z @ transport2 P r2 z	";
             responses[i]=data;
           
 
@@ -2993,7 +2993,7 @@
           
 
             i = 595;
-            data = "1 subgoal (ID 3673)	  	  A : Type	  P : A -> Type	  Q : A -> Type	  x, y : A	  p : x = y	  f : forall x : A, P x -> Q x	  z : P x	  ============================	  f y (transport P p z) = transport Q p (f x z)	";
+            data = "1 subgoal (ID 3671)	  	  A : Type	  P : A -> Type	  Q : A -> Type	  x, y : A	  p : x = y	  f : forall x : A, P x -> Q x	  z : P x	  ============================	  f y (transport P p z) = transport Q p (f x z)	";
             responses[i]=data;
           
 
@@ -3013,7 +3013,7 @@
           
 
             i = 599;
-            data = "1 subgoal (ID 3701)	  	  A : Type	  B : A -> Type	  C1 : forall a : A, B a -> Type	  C2 : forall a : A, B a -> Type	  f : forall (a : A) (b : B a), C1 a b -> C2 a b	  x1, x2 : A	  p : x1 = x2	  y : B x1	  z : C1 x1 y	  ============================	  f x2 (transport B p y) (transportD B C1 p y z) =	  transportD B C2 p y (f x1 y z)	";
+            data = "1 subgoal (ID 3699)	  	  A : Type	  B : A -> Type	  C1 : forall a : A, B a -> Type	  C2 : forall a : A, B a -> Type	  f : forall (a : A) (b : B a), C1 a b -> C2 a b	  x1, x2 : A	  p : x1 = x2	  y : B x1	  z : C1 x1 y	  ============================	  f x2 (transport B p y) (transportD B C1 p y z) =	  transportD B C2 p y (f x1 y z)	";
             responses[i]=data;
           
 
@@ -3033,7 +3033,7 @@
           
 
             i = 603;
-            data = "1 subgoal (ID 3739)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D1 : forall a : A, B a -> C a -> Type	  D2 : forall a : A, B a -> C a -> Type	  f : forall (a : A) (b : B a) (c : C a), D1 a b c -> D2 a b c	  x1, x2 : A	  p : x1 = x2	  y : B x1	  z : C x1	  w : D1 x1 y z	  ============================	  f x2 (transport B p y) (transport C p z) (transportD2 B C D1 p y z w) =	  transportD2 B C D2 p y z (f x1 y z w)	";
+            data = "1 subgoal (ID 3737)	  	  A : Type	  B : A -> Type	  C : A -> Type	  D1 : forall a : A, B a -> C a -> Type	  D2 : forall a : A, B a -> C a -> Type	  f : forall (a : A) (b : B a) (c : C a), D1 a b c -> D2 a b c	  x1, x2 : A	  p : x1 = x2	  y : B x1	  z : C x1	  w : D1 x1 y z	  ============================	  f x2 (transport B p y) (transport C p z) (transportD2 B C D1 p y z w) =	  transportD2 B C D2 p y z (f x1 y z w)	";
             responses[i]=data;
           
 
@@ -3053,7 +3053,7 @@
           
 
             i = 607;
-            data = "1 subgoal (ID 3789)	  	  X : Type	  Y : X -> Type	  x1, x2 : X	  p : x1 = x2	  y1, y2 : Y x2	  q : y1 = y2	  ============================	  ap (transport Y p) (ap (transport Y p^) q) =	  (transport_pV Y p y1 @ q) @ (transport_pV Y p y2)^	";
+            data = "1 subgoal (ID 3787)	  	  X : Type	  Y : X -> Type	  x1, x2 : X	  p : x1 = x2	  y1, y2 : Y x2	  q : y1 = y2	  ============================	  ap (transport Y p) (ap (transport Y p^) q) =	  (transport_pV Y p y1 @ q) @ (transport_pV Y p y2)^	";
             responses[i]=data;
           
 
@@ -3073,7 +3073,7 @@
           
 
             i = 611;
-            data = "1 subgoal (ID 3827)	  	  X : Type	  P : X -> Type	  f : forall x : X, P x	  x1, x2 : X	  p : x1 = x2	  ============================	  ap (transport P p) (apD f p^) @ apD f p = transport_pV P p (f x2)	";
+            data = "1 subgoal (ID 3825)	  	  X : Type	  P : X -> Type	  f : forall x : X, P x	  x1, x2 : X	  p : x1 = x2	  ============================	  ap (transport P p) (apD f p^) @ apD f p = transport_pV P p (f x2)	";
             responses[i]=data;
           
 
@@ -3093,7 +3093,7 @@
           
 
             i = 615;
-            data = "1 subgoal (ID 3879)	  	  A : Type	  P : A -> Type	  f : forall x : A, P x	  x, y, z : A	  p : x = y	  q : y = z	  ============================	  apD f (p @ q) =	  (transport_pp P p q (f x) @ ap (transport P q) (apD f p)) @ apD f q	";
+            data = "1 subgoal (ID 3877)	  	  A : Type	  P : A -> Type	  f : forall x : A, P x	  x, y, z : A	  p : x = y	  q : y = z	  ============================	  apD f (p @ q) =	  (transport_pp P p q (f x) @ ap (transport P q) (apD f p)) @ apD f q	";
             responses[i]=data;
           
 
@@ -3113,7 +3113,7 @@
           
 
             i = 619;
-            data = "1 subgoal (ID 3917)	  	  A : Type	  P : A -> Type	  f : forall x : A, P x	  x, y : A	  p : x = y	  ============================	  apD f p^ = moveR_transport_V P p (f y) (f x) (apD f p)^	";
+            data = "1 subgoal (ID 3915)	  	  A : Type	  P : A -> Type	  f : forall x : A, P x	  x, y : A	  p : x = y	  ============================	  apD f p^ = moveR_transport_V P p (f y) (f x) (apD f p)^	";
             responses[i]=data;
           
 
@@ -3188,7 +3188,7 @@
           
 
             i = 634;
-            data = "1 subgoal (ID 3932)	  	  A : Type	  B : Type	  x1, x2 : A	  p : x1 = x2	  y : B	  ============================	  transport (fun _ : A => B) p y = y	";
+            data = "1 subgoal (ID 3930)	  	  A : Type	  B : Type	  x1, x2 : A	  p : x1 = x2	  y : B	  ============================	  transport (fun _ : A => B) p y = y	";
             responses[i]=data;
           
 
@@ -3198,7 +3198,7 @@
           
 
             i = 636;
-            data = "1 subgoal (ID 3936)	  	  A : Type	  B : Type	  x1 : A	  y : B	  ============================	  transport (fun _ : A => B) 1 y = y	";
+            data = "1 subgoal (ID 3934)	  	  A : Type	  B : Type	  x1 : A	  y : B	  ============================	  transport (fun _ : A => B) 1 y = y	";
             responses[i]=data;
           
 
@@ -3238,7 +3238,7 @@
           
 
             i = 644;
-            data = "1 subgoal (ID 3997)	  	  A : Type	  B : Type	  x, y : A	  P : B -> Type	  f : A -> B	  p : x = y	  z : P (f x)	  ============================	  transport (fun x0 : A => P (f x0)) p z = transport P (ap f p) z	";
+            data = "1 subgoal (ID 3995)	  	  A : Type	  B : Type	  x, y : A	  P : B -> Type	  f : A -> B	  p : x = y	  z : P (f x)	  ============================	  transport (fun x0 : A => P (f x0)) p z = transport P (ap f p) z	";
             responses[i]=data;
           
 
@@ -3258,7 +3258,7 @@
           
 
             i = 648;
-            data = "1 subgoal (ID 4050)	  	  A : Type	  A' : Type	  B : A' -> Type	  x, x' : A	  C : forall x : A', B x -> Type	  f : A -> A'	  p : x = x'	  y : B (f x)	  z : C (f x) y	  ============================	  transportD (B o f) (C oD f) p y z =	  transport (C (f x')) (transport_compose B f p y)^	    (transportD B C (ap f p) y z)	";
+            data = "1 subgoal (ID 4048)	  	  A : Type	  A' : Type	  B : A' -> Type	  x, x' : A	  C : forall x : A', B x -> Type	  f : A -> A'	  p : x = x'	  y : B (f x)	  z : C (f x) y	  ============================	  transportD (B o f) (C oD f) p y z =	  transport (C (f x')) (transport_compose B f p y)^	    (transportD B C (ap f p) y z)	";
             responses[i]=data;
           
 
@@ -3278,7 +3278,7 @@
           
 
             i = 652;
-            data = "1 subgoal (ID 4086)	  	  A : Type	  B : A -> Type	  f : forall x : A, B x	  C : forall x : A, B x -> Type	  x1, x2 : A	  p : x1 = x2	  z : C x1 (f x1)	  ============================	  transport (C x2) (apD f p) (transportD B C p (f x1) z) =	  transport (fun x : A => C x (f x)) p z	";
+            data = "1 subgoal (ID 4084)	  	  A : Type	  B : A -> Type	  f : forall x : A, B x	  C : forall x : A, B x -> Type	  x1, x2 : A	  p : x1 = x2	  z : C x1 (f x1)	  ============================	  transport (C x2) (apD f p) (transportD B C p (f x1) z) =	  transport (fun x : A => C x (f x)) p z	";
             responses[i]=data;
           
 
@@ -3298,7 +3298,7 @@
           
 
             i = 656;
-            data = "1 subgoal (ID 4143)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g, g' : B -> C	  p : g = g'	  ============================	  transport (fun h : B -> C => g o f = h o f) p 1 =	  ap (fun h : B -> C => h o f) p	";
+            data = "1 subgoal (ID 4141)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g, g' : B -> C	  p : g = g'	  ============================	  transport (fun h : B -> C => g o f = h o f) p 1 =	  ap (fun h : B -> C => h o f) p	";
             responses[i]=data;
           
 
@@ -3568,7 +3568,7 @@
           
 
             i = 710;
-            data = "1 subgoal (ID 4206)	  	  A : Type	  B : Type	  C : A -> B -> Type	  x1, x2 : A	  p : x1 = x2	  y1, y2 : B	  q : y1 = y2	  c : C x1 y1	  ============================	  transport (C x2) q (transport (fun x : A => C x y1) p c) =	  transport (fun x : A => C x y2) p (transport (C x1) q c)	";
+            data = "1 subgoal (ID 4204)	  	  A : Type	  B : Type	  C : A -> B -> Type	  x1, x2 : A	  p : x1 = x2	  y1, y2 : B	  q : y1 = y2	  c : C x1 y1	  ============================	  transport (C x2) q (transport (fun x : A => C x y1) p c) =	  transport (fun x : A => C x y2) p (transport (C x1) q c)	";
             responses[i]=data;
           
 
@@ -3663,7 +3663,7 @@
           
 
             i = 729;
-            data = "1 subgoal (ID 4235)	  	  A : Type	  B : Type	  x, y : A	  f : A -> B	  p : x = y	  ============================	  apD f p = transport_const p (f x) @ ap f p	";
+            data = "1 subgoal (ID 4233)	  	  A : Type	  B : Type	  x, y : A	  f : A -> B	  p : x = y	  ============================	  apD f p = transport_const p (f x) @ ap f p	";
             responses[i]=data;
           
 
@@ -3683,7 +3683,7 @@
           
 
             i = 733;
-            data = "1 subgoal (ID 4286)	  	  A : Type	  A' : Type	  B : A' -> Type	  g : A -> A'	  f : forall a : A', B a	  x, y : A	  p : x = y	  ============================	  apD (f o g) p = transport_compose B g p (f (g x)) @ apD f (ap g p)	";
+            data = "1 subgoal (ID 4284)	  	  A : Type	  A' : Type	  B : A' -> Type	  g : A -> A'	  f : forall a : A', B a	  x, y : A	  p : x = y	  ============================	  apD (f o g) p = transport_compose B g p (f (g x)) @ apD f (ap g p)	";
             responses[i]=data;
           
 
@@ -3703,7 +3703,7 @@
           
 
             i = 737;
-            data = "1 subgoal (ID 4338)	  	  A : Type	  A' : Type	  B : A' -> Type	  g : A -> A'	  f : forall a : A', B a	  x, y : A	  p : x = y	  ============================	  apD f (ap g p) = (transport_compose B g p (f (g x)))^ @ apD (f o g) p	";
+            data = "1 subgoal (ID 4336)	  	  A : Type	  A' : Type	  B : A' -> Type	  g : A -> A'	  f : forall a : A', B a	  x, y : A	  p : x = y	  ============================	  apD f (ap g p) = (transport_compose B g p (f (g x)))^ @ apD (f o g) p	";
             responses[i]=data;
           
 
@@ -3783,7 +3783,7 @@
           
 
             i = 753;
-            data = "1 subgoal (ID 4409)	  	  A : Type	  B : Type	  x', y', z' : B	  f : A -> x' = y'	  g : A -> y' = z'	  x, y : A	  p : x = y	  ============================	  ap f p @@ ap g p = ap (fun u : A => f u @ g u) p	";
+            data = "1 subgoal (ID 4407)	  	  A : Type	  B : Type	  x', y', z' : B	  f : A -> x' = y'	  g : A -> y' = z'	  x, y : A	  p : x = y	  ============================	  ap f p @@ ap g p = ap (fun u : A => f u @ g u) p	";
             responses[i]=data;
           
 
@@ -3848,7 +3848,7 @@
           
 
             i = 766;
-            data = "1 subgoal (ID 4491)	  	  A : Type	  B : Type	  f : A -> B	  x, y : A	  p : x = y	  ============================	  ap_pp f p p^ @ ((1 @@ ap_V f p) @ concat_pV (ap f p)) =	  ap (ap f) (concat_pV p)	";
+            data = "1 subgoal (ID 4489)	  	  A : Type	  B : Type	  f : A -> B	  x, y : A	  p : x = y	  ============================	  ap_pp f p p^ @ ((1 @@ ap_V f p) @ concat_pV (ap f p)) =	  ap (ap f) (concat_pV p)	";
             responses[i]=data;
           
 
@@ -3868,7 +3868,7 @@
           
 
             i = 770;
-            data = "1 subgoal (ID 4552)	  	  A : Type	  B : Type	  f : A -> B	  x, y : A	  p : x = y	  ============================	  ap_pp f p^ p @ ((ap_V f p @@ 1) @ concat_Vp (ap f p)) =	  ap (ap f) (concat_Vp p)	";
+            data = "1 subgoal (ID 4550)	  	  A : Type	  B : Type	  f : A -> B	  x, y : A	  p : x = y	  ============================	  ap_pp f p^ p @ ((ap_V f p @@ 1) @ concat_Vp (ap f p)) =	  ap (ap f) (concat_Vp p)	";
             responses[i]=data;
           
 
@@ -3888,7 +3888,7 @@
           
 
             i = 774;
-            data = "1 subgoal (ID 4591)	  	  A : Type	  x, y : A	  p, q : x = y	  r : p = q	  ============================	  (r @@ inverse2 r) @ concat_pV q = concat_pV p	";
+            data = "1 subgoal (ID 4589)	  	  A : Type	  x, y : A	  p, q : x = y	  r : p = q	  ============================	  (r @@ inverse2 r) @ concat_pV q = concat_pV p	";
             responses[i]=data;
           
 
@@ -3908,7 +3908,7 @@
           
 
             i = 778;
-            data = "1 subgoal (ID 4630)	  	  A : Type	  x, y : A	  p, q : x = y	  r : p = q	  ============================	  (inverse2 r @@ r) @ concat_Vp q = concat_Vp p	";
+            data = "1 subgoal (ID 4628)	  	  A : Type	  x, y : A	  p, q : x = y	  r : p = q	  ============================	  (inverse2 r @@ r) @ concat_Vp q = concat_Vp p	";
             responses[i]=data;
           
 
@@ -4058,7 +4058,7 @@
           
 
             i = 808;
-            data = "1 subgoal (ID 5339)	  	  A : Type	  x : A	  h : 1 = 1	  ============================	  whiskerR h 1 = h	";
+            data = "1 subgoal (ID 5337)	  	  A : Type	  x : A	  h : 1 = 1	  ============================	  whiskerR h 1 = h	";
             responses[i]=data;
           
 
@@ -4068,7 +4068,7 @@
           
 
             i = 810;
-            data = "1 subgoal (ID 5352)	  	  A : Type	  x : A	  h : 1 = 1	  ============================	  whiskerR h 1 = (1 @ whiskerR h 1) @ 1	";
+            data = "1 subgoal (ID 5350)	  	  A : Type	  x : A	  h : 1 = 1	  ============================	  whiskerR h 1 = (1 @ whiskerR h 1) @ 1	";
             responses[i]=data;
           
 
@@ -4083,7 +4083,7 @@
           
 
             i = 813;
-            data = "1 subgoal (ID 5358)	  	  A : Type	  x : A	  h : 1 = 1	  ============================	  whiskerL 1 h = h	";
+            data = "1 subgoal (ID 5356)	  	  A : Type	  x : A	  h : 1 = 1	  ============================	  whiskerL 1 h = h	";
             responses[i]=data;
           
 
@@ -4093,7 +4093,7 @@
           
 
             i = 815;
-            data = "1 subgoal (ID 5371)	  	  A : Type	  x : A	  h : 1 = 1	  ============================	  whiskerL 1 h = (1 @ whiskerL 1 h) @ 1	";
+            data = "1 subgoal (ID 5369)	  	  A : Type	  x : A	  h : 1 = 1	  ============================	  whiskerL 1 h = (1 @ whiskerL 1 h) @ 1	";
             responses[i]=data;
           
 
@@ -4118,7 +4118,7 @@
           
 
             i = 820;
-            data = "1 subgoal (ID 5498)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  g : p = p'	  h, k : q = q'	  ============================	  g @@ h = g @@ k -> h = k	";
+            data = "1 subgoal (ID 5496)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  g : p = p'	  h, k : q = q'	  ============================	  g @@ h = g @@ k -> h = k	";
             responses[i]=data;
           
 
@@ -4128,32 +4128,32 @@
           
 
             i = 822;
-            data = "1 subgoal (ID 5499)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  g : p = p'	  h, k : q = q'	  r : g @@ h = g @@ k	  ============================	  h = k	";
+            data = "1 subgoal (ID 5497)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  g : p = p'	  h, k : q = q'	  r : g @@ h = g @@ k	  ============================	  h = k	";
             responses[i]=data;
           
 
             i = 823;
-            data = "1 subgoal (ID 5534)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  h = k	";
+            data = "1 subgoal (ID 5532)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  h = k	";
             responses[i]=data;
           
 
             i = 824;
-            data = "1 subgoal (ID 5549)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  ((concat_1p 1)^ @ whiskerL 1 h) @ concat_1p q' = k	";
+            data = "1 subgoal (ID 5547)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  ((concat_1p 1)^ @ whiskerL 1 h) @ concat_1p q' = k	";
             responses[i]=data;
           
 
             i = 825;
-            data = "1 subgoal (ID 5561)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  ((concat_1p 1)^ @ whiskerL 1 h) @ concat_1p q' =	  ((concat_1p 1)^ @ whiskerL 1 k) @ concat_1p q'	";
+            data = "1 subgoal (ID 5559)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  ((concat_1p 1)^ @ whiskerL 1 h) @ concat_1p q' =	  ((concat_1p 1)^ @ whiskerL 1 k) @ concat_1p q'	";
             responses[i]=data;
           
 
             i = 826;
-            data = "1 subgoal (ID 5572)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  (concat_1p 1)^ @ whiskerL 1 h = (concat_1p 1)^ @ whiskerL 1 k	";
+            data = "1 subgoal (ID 5570)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  (concat_1p 1)^ @ whiskerL 1 h = (concat_1p 1)^ @ whiskerL 1 k	";
             responses[i]=data;
           
 
             i = 827;
-            data = "1 subgoal (ID 5583)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  whiskerL 1 h = whiskerL 1 k	";
+            data = "1 subgoal (ID 5581)	  	  A : Type	  x : A	  q' : x = x	  h, k : 1 = q'	  r : 1 @@ h = 1 @@ k	  ============================	  whiskerL 1 h = whiskerL 1 k	";
             responses[i]=data;
           
 
@@ -4168,7 +4168,7 @@
           
 
             i = 830;
-            data = "1 subgoal (ID 5544)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  g, h : p = p'	  k : q = q'	  ============================	  g @@ k = h @@ k -> g = h	";
+            data = "1 subgoal (ID 5542)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  g, h : p = p'	  k : q = q'	  ============================	  g @@ k = h @@ k -> g = h	";
             responses[i]=data;
           
 
@@ -4178,32 +4178,32 @@
           
 
             i = 832;
-            data = "1 subgoal (ID 5545)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  g, h : p = p'	  k : q = q'	  r : g @@ k = h @@ k	  ============================	  g = h	";
+            data = "1 subgoal (ID 5543)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  g, h : p = p'	  k : q = q'	  r : g @@ k = h @@ k	  ============================	  g = h	";
             responses[i]=data;
           
 
             i = 833;
-            data = "1 subgoal (ID 5574)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  g = h	";
+            data = "1 subgoal (ID 5572)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  g = h	";
             responses[i]=data;
           
 
             i = 834;
-            data = "1 subgoal (ID 5589)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  ((concat_p1 1)^ @ whiskerR g 1) @ concat_p1 p' = h	";
+            data = "1 subgoal (ID 5587)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  ((concat_p1 1)^ @ whiskerR g 1) @ concat_p1 p' = h	";
             responses[i]=data;
           
 
             i = 835;
-            data = "1 subgoal (ID 5601)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  ((concat_p1 1)^ @ whiskerR g 1) @ concat_p1 p' =	  ((concat_p1 1)^ @ whiskerR h 1) @ concat_p1 p'	";
+            data = "1 subgoal (ID 5599)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  ((concat_p1 1)^ @ whiskerR g 1) @ concat_p1 p' =	  ((concat_p1 1)^ @ whiskerR h 1) @ concat_p1 p'	";
             responses[i]=data;
           
 
             i = 836;
-            data = "1 subgoal (ID 5612)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  (concat_p1 1)^ @ whiskerR g 1 = (concat_p1 1)^ @ whiskerR h 1	";
+            data = "1 subgoal (ID 5610)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  (concat_p1 1)^ @ whiskerR g 1 = (concat_p1 1)^ @ whiskerR h 1	";
             responses[i]=data;
           
 
             i = 837;
-            data = "1 subgoal (ID 5623)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  whiskerR g 1 = whiskerR h 1	";
+            data = "1 subgoal (ID 5621)	  	  A : Type	  x : A	  p' : x = x	  g, h : 1 = p'	  r : g @@ 1 = h @@ 1	  ============================	  whiskerR g 1 = whiskerR h 1	";
             responses[i]=data;
           
 
@@ -4238,7 +4238,7 @@
           
 
             i = 844;
-            data = "1 subgoal (ID 5596)	  	  A : Type	  x, y, z : A	  p : x = y	  q, q', q'' : y = z	  r : q = q'	  s : q' = q''	  ============================	  whiskerL p (r @ s) = whiskerL p r @ whiskerL p s	";
+            data = "1 subgoal (ID 5594)	  	  A : Type	  x, y, z : A	  p : x = y	  q, q', q'' : y = z	  r : q = q'	  s : q' = q''	  ============================	  whiskerL p (r @ s) = whiskerL p r @ whiskerL p s	";
             responses[i]=data;
           
 
@@ -4258,7 +4258,7 @@
           
 
             i = 848;
-            data = "1 subgoal (ID 5648)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q : y = z	  r : p = p'	  s : p' = p''	  ============================	  whiskerR (r @ s) q = whiskerR r q @ whiskerR s q	";
+            data = "1 subgoal (ID 5646)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q : y = z	  r : p = p'	  s : p' = p''	  ============================	  whiskerR (r @ s) q = whiskerR r q @ whiskerR s q	";
             responses[i]=data;
           
 
@@ -4278,7 +4278,7 @@
           
 
             i = 852;
-            data = "1 subgoal (ID 5702)	  	  A : Type	  x, y, z : A	  p : x = y	  q, q' : y = z	  r : q = q'	  ============================	  ((concat_V_pp p q)^ @ whiskerL p^ (whiskerL p r)) @ concat_V_pp p q' = r	";
+            data = "1 subgoal (ID 5700)	  	  A : Type	  x, y, z : A	  p : x = y	  q, q' : y = z	  r : q = q'	  ============================	  ((concat_V_pp p q)^ @ whiskerL p^ (whiskerL p r)) @ concat_V_pp p q' = r	";
             responses[i]=data;
           
 
@@ -4288,7 +4288,7 @@
           
 
             i = 854;
-            data = "1 subgoal (ID 5721)	  	  A : Type	  x : A	  ============================	  ((concat_V_pp 1 1)^ @ whiskerL 1^ (whiskerL 1 1)) @ concat_V_pp 1 1 = 1	";
+            data = "1 subgoal (ID 5719)	  	  A : Type	  x : A	  ============================	  ((concat_V_pp 1 1)^ @ whiskerL 1^ (whiskerL 1 1)) @ concat_V_pp 1 1 = 1	";
             responses[i]=data;
           
 
@@ -4303,7 +4303,7 @@
           
 
             i = 857;
-            data = "1 subgoal (ID 5756)	  	  A : Type	  x, y, z : A	  p : y = x	  q, q' : y = z	  r : q = q'	  ============================	  ((concat_p_Vp p q)^ @ whiskerL p (whiskerL p^ r)) @ concat_p_Vp p q' = r	";
+            data = "1 subgoal (ID 5754)	  	  A : Type	  x, y, z : A	  p : y = x	  q, q' : y = z	  r : q = q'	  ============================	  ((concat_p_Vp p q)^ @ whiskerL p (whiskerL p^ r)) @ concat_p_Vp p q' = r	";
             responses[i]=data;
           
 
@@ -4313,7 +4313,7 @@
           
 
             i = 859;
-            data = "1 subgoal (ID 5768)	  	  A : Type	  y : A	  ============================	  ((concat_p_Vp 1 1)^ @ whiskerL 1 (whiskerL 1^ 1)) @ concat_p_Vp 1 1 = 1	";
+            data = "1 subgoal (ID 5766)	  	  A : Type	  y : A	  ============================	  ((concat_p_Vp 1 1)^ @ whiskerL 1 (whiskerL 1^ 1)) @ concat_p_Vp 1 1 = 1	";
             responses[i]=data;
           
 
@@ -4328,7 +4328,7 @@
           
 
             i = 862;
-            data = "1 subgoal (ID 5810)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  r : p = p'	  q : y = z	  ============================	  ((concat_pp_V p q)^ @ whiskerR (whiskerR r q) q^) @ concat_pp_V p' q = r	";
+            data = "1 subgoal (ID 5808)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  r : p = p'	  q : y = z	  ============================	  ((concat_pp_V p q)^ @ whiskerR (whiskerR r q) q^) @ concat_pp_V p' q = r	";
             responses[i]=data;
           
 
@@ -4338,7 +4338,7 @@
           
 
             i = 864;
-            data = "1 subgoal (ID 5829)	  	  A : Type	  x : A	  ============================	  ((concat_pp_V 1 1)^ @ whiskerR (whiskerR 1 1) 1^) @ concat_pp_V 1 1 = 1	";
+            data = "1 subgoal (ID 5827)	  	  A : Type	  x : A	  ============================	  ((concat_pp_V 1 1)^ @ whiskerR (whiskerR 1 1) 1^) @ concat_pp_V 1 1 = 1	";
             responses[i]=data;
           
 
@@ -4353,7 +4353,7 @@
           
 
             i = 867;
-            data = "1 subgoal (ID 5864)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  r : p = p'	  q : z = y	  ============================	  ((concat_pV_p p q)^ @ whiskerR (whiskerR r q^) q) @ concat_pV_p p' q = r	";
+            data = "1 subgoal (ID 5862)	  	  A : Type	  x, y, z : A	  p, p' : x = y	  r : p = p'	  q : z = y	  ============================	  ((concat_pV_p p q)^ @ whiskerR (whiskerR r q^) q) @ concat_pV_p p' q = r	";
             responses[i]=data;
           
 
@@ -4363,7 +4363,7 @@
           
 
             i = 869;
-            data = "1 subgoal (ID 5883)	  	  A : Type	  z : A	  ============================	  ((concat_pV_p 1 1)^ @ whiskerR (whiskerR 1 1^) 1) @ concat_pV_p 1 1 = 1	";
+            data = "1 subgoal (ID 5881)	  	  A : Type	  z : A	  ============================	  ((concat_pV_p 1 1)^ @ whiskerR (whiskerR 1 1^) 1) @ concat_pV_p 1 1 = 1	";
             responses[i]=data;
           
 
@@ -4398,7 +4398,7 @@
           
 
             i = 876;
-            data = "1 subgoal (ID 5937)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (a @@ c) @ (b @@ d) = (a @ b) @@ (c @ d)	";
+            data = "1 subgoal (ID 5935)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (a @@ c) @ (b @@ d) = (a @ b) @@ (c @ d)	";
             responses[i]=data;
           
 
@@ -4408,22 +4408,22 @@
           
 
             i = 878;
-            data = "1 subgoal (ID 5938)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (a @@ c) @ (b @@ 1) = (a @ b) @@ (c @ 1)	";
+            data = "1 subgoal (ID 5936)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (a @@ c) @ (b @@ 1) = (a @ b) @@ (c @ 1)	";
             responses[i]=data;
           
 
             i = 879;
-            data = "1 subgoal (ID 5939)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (a @@ 1) @ (b @@ 1) = (a @ b) @@ (1 @ 1)	";
+            data = "1 subgoal (ID 5937)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (a @@ 1) @ (b @@ 1) = (a @ b) @@ (1 @ 1)	";
             responses[i]=data;
           
 
             i = 880;
-            data = "1 subgoal (ID 5940)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (a @@ 1) @ (1 @@ 1) = (a @ 1) @@ (1 @ 1)	";
+            data = "1 subgoal (ID 5938)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (a @@ 1) @ (1 @@ 1) = (a @ 1) @@ (1 @ 1)	";
             responses[i]=data;
           
 
             i = 881;
-            data = "1 subgoal (ID 5941)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (1 @@ 1) @ (1 @@ 1) = (1 @ 1) @@ (1 @ 1)	";
+            data = "1 subgoal (ID 5939)	  	  A : Type	  x, y, z : A	  p, p', p'' : x = y	  q, q', q'' : y = z	  a : p = p'	  b : p' = p''	  c : q = q'	  d : q' = q''	  ============================	  (1 @@ 1) @ (1 @@ 1) = (1 @ 1) @@ (1 @ 1)	";
             responses[i]=data;
           
 
@@ -4503,7 +4503,7 @@
           
 
             i = 897;
-            data = "1 subgoal (ID 6114)	  	  A : Type	  v, w, x, y, z : A	  p : v = w	  q : w = x	  r : x = y	  s : y = z	  ============================	  (whiskerL p (concat_p_pp q r s) @ concat_p_pp p (q @ r) s) @	  whiskerR (concat_p_pp p q r) s =	  concat_p_pp p q (r @ s) @ concat_p_pp (p @ q) r s	";
+            data = "1 subgoal (ID 6112)	  	  A : Type	  v, w, x, y, z : A	  p : v = w	  q : w = x	  r : x = y	  s : y = z	  ============================	  (whiskerL p (concat_p_pp q r s) @ concat_p_pp p (q @ r) s) @	  whiskerR (concat_p_pp p q r) s =	  concat_p_pp p q (r @ s) @ concat_p_pp (p @ q) r s	";
             responses[i]=data;
           
 
@@ -4513,7 +4513,7 @@
           
 
             i = 899;
-            data = "1 subgoal (ID 6141)	  	  A : Type	  v : A	  ============================	  (whiskerL 1 (concat_p_pp 1 1 1) @ concat_p_pp 1 (1 @ 1) 1) @	  whiskerR (concat_p_pp 1 1 1) 1 =	  concat_p_pp 1 1 (1 @ 1) @ concat_p_pp (1 @ 1) 1 1	";
+            data = "1 subgoal (ID 6139)	  	  A : Type	  v : A	  ============================	  (whiskerL 1 (concat_p_pp 1 1 1) @ concat_p_pp 1 (1 @ 1) 1) @	  whiskerR (concat_p_pp 1 1 1) 1 =	  concat_p_pp 1 1 (1 @ 1) @ concat_p_pp (1 @ 1) 1 1	";
             responses[i]=data;
           
 
@@ -4548,7 +4548,7 @@
           
 
             i = 906;
-            data = "1 subgoal (ID 6156)	  	  A : Type	  x, y, z : A	  p : x = y	  q : y = z	  ============================	  concat_p_pp p 1 q @ whiskerR (concat_p1 p) q = whiskerL p (concat_1p q)	";
+            data = "1 subgoal (ID 6154)	  	  A : Type	  x, y, z : A	  p : x = y	  q : y = z	  ============================	  concat_p_pp p 1 q @ whiskerR (concat_p1 p) q = whiskerL p (concat_1p q)	";
             responses[i]=data;
           
 
@@ -4558,7 +4558,7 @@
           
 
             i = 908;
-            data = "1 subgoal (ID 6167)	  	  A : Type	  x : A	  ============================	  concat_p_pp 1 1 1 @ whiskerR (concat_p1 1) 1 = whiskerL 1 (concat_1p 1)	";
+            data = "1 subgoal (ID 6165)	  	  A : Type	  x : A	  ============================	  concat_p_pp 1 1 1 @ whiskerR (concat_p1 1) 1 = whiskerL 1 (concat_1p 1)	";
             responses[i]=data;
           
 
@@ -4623,7 +4623,7 @@
           
 
             i = 921;
-            data = "1 subgoal (ID 6401)	  	  A : Type	  B : Type	  f : A -> B	  x, y : A	  p, p', p'' : x = y	  r : p = p'	  r' : p' = p''	  ============================	  ap02 f (r @ r') = ap02 f r @ ap02 f r'	";
+            data = "1 subgoal (ID 6399)	  	  A : Type	  B : Type	  f : A -> B	  x, y : A	  p, p', p'' : x = y	  r : p = p'	  r' : p' = p''	  ============================	  ap02 f (r @ r') = ap02 f r @ ap02 f r'	";
             responses[i]=data;
           
 
@@ -4643,7 +4643,7 @@
           
 
             i = 925;
-            data = "1 subgoal (ID 6485)	  	  A : Type	  B : Type	  f : A -> B	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  r : p = p'	  s : q = q'	  ============================	  ap02 f (r @@ s) = (ap_pp f p q @ (ap02 f r @@ ap02 f s)) @ (ap_pp f p' q')^	";
+            data = "1 subgoal (ID 6483)	  	  A : Type	  B : Type	  f : A -> B	  x, y, z : A	  p, p' : x = y	  q, q' : y = z	  r : p = p'	  s : q = q'	  ============================	  ap02 f (r @@ s) = (ap_pp f p q @ (ap02 f r @@ ap02 f s)) @ (ap_pp f p' q')^	";
             responses[i]=data;
           
 
@@ -4653,7 +4653,7 @@
           
 
             i = 927;
-            data = "1 subgoal (ID 6504)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  ============================	  ap02 f (1 @@ 1) = (ap_pp f 1 1 @ (ap02 f 1 @@ ap02 f 1)) @ (ap_pp f 1 1)^	";
+            data = "1 subgoal (ID 6502)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  ============================	  ap02 f (1 @@ 1) = (ap_pp f 1 1 @ (ap02 f 1 @@ ap02 f 1)) @ (ap_pp f 1 1)^	";
             responses[i]=data;
           
 
@@ -4678,7 +4678,7 @@
           
 
             i = 932;
-            data = "1 subgoal (ID 7181)	  	  A : Type	  B : A -> Type	  f : forall x : A, B x	  x, y : A	  p1, p2, p3 : x = y	  r1 : p1 = p2	  r2 : p2 = p3	  ============================	  apD02 f (r1 @ r2) =	  ((apD02 f r1 @ whiskerL (transport2 B r1 (f x)) (apD02 f r2)) @	   concat_p_pp (transport2 B r1 (f x)) (transport2 B r2 (f x)) (apD f p3)) @	  whiskerR (transport2_p2p B r1 r2 (f x))^ (apD f p3)	";
+            data = "1 subgoal (ID 7179)	  	  A : Type	  B : A -> Type	  f : forall x : A, B x	  x, y : A	  p1, p2, p3 : x = y	  r1 : p1 = p2	  r2 : p2 = p3	  ============================	  apD02 f (r1 @ r2) =	  ((apD02 f r1 @ whiskerL (transport2 B r1 (f x)) (apD02 f r2)) @	   concat_p_pp (transport2 B r1 (f x)) (transport2 B r2 (f x)) (apD f p3)) @	  whiskerR (transport2_p2p B r1 r2 (f x))^ (apD f p3)	";
             responses[i]=data;
           
 
@@ -4688,12 +4688,12 @@
           
 
             i = 934;
-            data = "1 subgoal (ID 7192)	  	  A : Type	  B : A -> Type	  f : forall x : A, B x	  x, y : A	  p1 : x = y	  ============================	  apD02 f (1 @ 1) =	  ((apD02 f 1 @ whiskerL (transport2 B 1 (f x)) (apD02 f 1)) @	   concat_p_pp (transport2 B 1 (f x)) (transport2 B 1 (f x)) (apD f p1)) @	  whiskerR (transport2_p2p B 1 1 (f x))^ (apD f p1)	";
+            data = "1 subgoal (ID 7190)	  	  A : Type	  B : A -> Type	  f : forall x : A, B x	  x, y : A	  p1 : x = y	  ============================	  apD02 f (1 @ 1) =	  ((apD02 f 1 @ whiskerL (transport2 B 1 (f x)) (apD02 f 1)) @	   concat_p_pp (transport2 B 1 (f x)) (transport2 B 1 (f x)) (apD f p1)) @	  whiskerR (transport2_p2p B 1 1 (f x))^ (apD f p1)	";
             responses[i]=data;
           
 
             i = 935;
-            data = "1 subgoal (ID 7196)	  	  A : Type	  B : A -> Type	  f : forall x : A, B x	  x : A	  ============================	  apD02 f (1 @ 1) =	  ((apD02 f 1 @ whiskerL (transport2 B 1 (f x)) (apD02 f 1)) @	   concat_p_pp (transport2 B 1 (f x)) (transport2 B 1 (f x)) (apD f 1)) @	  whiskerR (transport2_p2p B 1 1 (f x))^ (apD f 1)	";
+            data = "1 subgoal (ID 7194)	  	  A : Type	  B : A -> Type	  f : forall x : A, B x	  x : A	  ============================	  apD02 f (1 @ 1) =	  ((apD02 f 1 @ whiskerL (transport2 B 1 (f x)) (apD02 f 1)) @	   concat_p_pp (transport2 B 1 (f x)) (transport2 B 1 (f x)) (apD f 1)) @	  whiskerR (transport2_p2p B 1 1 (f x))^ (apD f 1)	";
             responses[i]=data;
           
 
@@ -4728,7 +4728,7 @@
           
 
             i = 942;
-            data = "1 subgoal (ID 7264)	  	  A, B : Type	  p, q : A = B	  r : q = p	  z : A	  ============================	  (ap (transport idmap q^) (ap (fun s : A = B => transport idmap s z) r) @	   ap (fun s : B = A => transport idmap s (transport idmap p z)) (inverse2 r)) @	  transport_Vp idmap p z = transport_Vp idmap q z	";
+            data = "1 subgoal (ID 7262)	  	  A, B : Type	  p, q : A = B	  r : q = p	  z : A	  ============================	  (ap (transport idmap q^) (ap (fun s : A = B => transport idmap s z) r) @	   ap (fun s : B = A => transport idmap s (transport idmap p z)) (inverse2 r)) @	  transport_Vp idmap p z = transport_Vp idmap q z	";
             responses[i]=data;
           
 
@@ -4748,7 +4748,7 @@
           
 
             i = 946;
-            data = "1 subgoal (ID 7348)	  	  A, B : Type	  p, q : A = B	  r : q = p	  z : B	  ============================	  (ap (transport idmap q) (ap (fun s : A = B => transport idmap s^ z) r) @	   ap (fun s : A = B => transport idmap s (transport idmap p^ z)) r) @	  transport_pV idmap p z = transport_pV idmap q z	";
+            data = "1 subgoal (ID 7346)	  	  A, B : Type	  p, q : A = B	  r : q = p	  z : B	  ============================	  (ap (transport idmap q) (ap (fun s : A = B => transport idmap s^ z) r) @	   ap (fun s : A = B => transport idmap s (transport idmap p^ z)) r) @	  transport_pV idmap p z = transport_pV idmap q z	";
             responses[i]=data;
           
 

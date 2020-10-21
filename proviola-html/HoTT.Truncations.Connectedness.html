@@ -393,7 +393,7 @@
           
 
             i = 75;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 38)		subgoal 1 (ID 38) is:	 IsTrunc m'.+1 (ExtensionAlong f P d)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 38) is:	 IsTrunc m'.+1 (ExtensionAlong f P d)	";
             responses[i]=data;
           
 
@@ -733,7 +733,7 @@
           
 
             i = 143;
-            data = "1 subgoal (ID 21)	  	  A : Type	  H : IsConnected (Tr (-1)) A	  ============================	  merely A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 26)		subgoal 1 (ID 26) is:	 merely A	";
+            data = "1 subgoal (ID 21)	  	  A : Type	  H : IsConnected (Tr (-1)) A	  ============================	  merely A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 26) is:	 merely A	";
             responses[i]=data;
           
 
@@ -933,12 +933,12 @@
           
 
             i = 183;
-            data = "";
+            data = "1 subgoal (ID 323)	  	  H : Univalence	  A : Type	  p : forall x y : A, merely (x = y)	  merely0, w, z : A	  ============================	  tr z = tr w	";
             responses[i]=data;
           
 
             i = 184;
-            data = "1 subgoal (ID 323)	  	  H : Univalence	  A : Type	  p : forall x y : A, merely (x = y)	  merely0, w, z : A	  ============================	  tr z = tr w	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 184)		subgoal 1 (ID 184) is:	 Tr 0 A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 184) is:	 Tr 0 A	";
             responses[i]=data;
           
 
@@ -1023,7 +1023,7 @@
           
 
             i = 201;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 213)		subgoal 1 (ID 213) is:	 X -> (forall x : X, is_inl (f x)) + (forall x : X, is_inr (f x))	subgoal 2 (ID 56) is:	 ~~ X	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 213) is:	 X -> (forall x : X, is_inl (f x)) + (forall x : X, is_inr (f x))	subgoal 2 (ID 56) is:	 ~~ X	";
             responses[i]=data;
           
 
@@ -1053,7 +1053,7 @@
           
 
             i = 207;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 56)		subgoal 1 (ID 56) is:	 ~~ X	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 56) is:	 ~~ X	";
             responses[i]=data;
           
 
@@ -1188,107 +1188,107 @@
           
 
             i = 234;
-            data = "2 subgoals (ID 92)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  ExtensionAlong (unit_name a0)	    (fun a : A => ExtensionAlong (unit_name b0) (P a) (unit_name (f_b0 a)))	    (unit_name (f_a0; unit_name f_a0b0))		subgoal 2 (ID 94) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "2 subgoals (ID 87)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  ExtensionAlong (unit_name a0)	    (fun a : A => ExtensionAlong (unit_name b0) (P a) (unit_name (f_b0 a)))	    (unit_name (f_a0; unit_name f_a0b0))		subgoal 2 (ID 89) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
             i = 235;
-            data = "1 subgoal (ID 92)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  ExtensionAlong (unit_name a0)	    (fun a : A => ExtensionAlong (unit_name b0) (P a) (unit_name (f_b0 a)))	    (unit_name (f_a0; unit_name f_a0b0))	2 subgoals (ID 97)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  IsConnMap (Tr m) (unit_name a0)		subgoal 2 (ID 98) is:	 forall b : A,	 In (Tr m) (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	";
+            data = "1 subgoal (ID 87)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  ExtensionAlong (unit_name a0)	    (fun a : A => ExtensionAlong (unit_name b0) (P a) (unit_name (f_b0 a)))	    (unit_name (f_a0; unit_name f_a0b0))	2 subgoals (ID 92)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  IsConnMap (Tr m) (unit_name a0)		subgoal 2 (ID 93) is:	 forall b : A,	 In (Tr m) (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	";
             responses[i]=data;
           
 
             i = 236;
-            data = "1 subgoal (ID 97)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  IsConnMap (Tr m) (unit_name a0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 98)		subgoal 1 (ID 98) is:	 forall b : A,	 In (Tr m) (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	subgoal 2 (ID 94) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 92)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  IsConnMap (Tr m) (unit_name a0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 93) is:	 forall b : A,	 In (Tr m) (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	subgoal 2 (ID 89) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
             i = 237;
-            data = "1 subgoal (ID 98)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  forall b : A,	  In (Tr m) (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	1 subgoal (ID 103)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  In (Tr m) (ExtensionAlong (unit_name b0) (P a) (unit_name (f_b0 a)))	";
+            data = "1 subgoal (ID 93)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  ============================	  forall b : A,	  In (Tr m) (ExtensionAlong (unit_name b0) (P b) (unit_name (f_b0 b)))	1 subgoal (ID 98)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  In (Tr m) (ExtensionAlong (unit_name b0) (P a) (unit_name (f_b0 a)))	";
             responses[i]=data;
           
 
             i = 238;
-            data = "2 subgoals (ID 108)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  IsConnMap (Tr n) (unit_name b0)		subgoal 2 (ID 109) is:	 forall b : B, IsTrunc (m +2+ n) (P a b)	";
+            data = "2 subgoals (ID 103)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  IsConnMap (Tr n) (unit_name b0)		subgoal 2 (ID 104) is:	 forall b : B, IsTrunc (m +2+ n) (P a b)	";
             responses[i]=data;
           
 
             i = 239;
-            data = "1 subgoal (ID 108)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  IsConnMap (Tr n) (unit_name b0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 109)		subgoal 1 (ID 109) is:	 forall b : B, IsTrunc (m +2+ n) (P a b)	subgoal 2 (ID 94) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 103)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  IsConnMap (Tr n) (unit_name b0)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals		subgoal 1 (ID 104) is:	 forall b : B, IsTrunc (m +2+ n) (P a b)	subgoal 2 (ID 89) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
             i = 240;
-            data = "1 subgoal (ID 109)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  forall b : B, IsTrunc (m +2+ n) (P a b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 94)		subgoal 1 (ID 94) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 104)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  a : A	  ============================	  forall b : B, IsTrunc (m +2+ n) (P a b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 89) is:	 {f : forall (a : A) (b : B), P a b &	 {e_a0 : forall b : B, f a0 b = f_a0 b &	 {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
             i = 241;
-            data = "1 subgoal (ID 94)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  goal_as_extension : ExtensionAlong (unit_name a0)	                        (fun a : A =>	                         ExtensionAlong (unit_name b0) 	                           (P a) (unit_name (f_b0 a)))	                        (unit_name (f_a0; unit_name f_a0b0))	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	1 subgoal (ID 118)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  name_ea_eab : Unit -> f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 89)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  goal_as_extension : ExtensionAlong (unit_name a0)	                        (fun a : A =>	                         ExtensionAlong (unit_name b0) 	                           (P a) (unit_name (f_b0 a)))	                        (fun x : Unit => (f_a0; unit_name f_a0b0))	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	1 subgoal (ID 113)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  name_ea_eab : Unit -> f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
             i = 242;
-            data = "1 subgoal (ID 122)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
+            data = "1 subgoal (ID 117)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {f : forall (a : A) (b : B), P a b &	  {e_a0 : forall b : B, f a0 b = f_a0 b &	  {e_b0 : forall a : A, f a b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}}	";
             responses[i]=data;
           
 
             i = 243;
-            data = "1 subgoal (ID 127)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {e_a0 : forall b : B, (f_eb a0).1 b = f_a0 b &	  {e_b0 : forall a : A, (f_eb a).1 b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}	";
+            data = "1 subgoal (ID 122)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {e_a0 : forall b : B, (f_eb a0).1 b = f_a0 b &	  {e_b0 : forall a : A, (f_eb a).1 b0 = f_b0 a & e_b0 a0 = e_a0 b0 @ f_a0b0}}	";
             responses[i]=data;
           
 
             i = 244;
-            data = "1 subgoal (ID 138)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {e_b0 : forall a : A, (f_eb a).1 b0 = f_b0 a &	  e_b0 a0 = apD10 ea_eab ..1 b0 @ f_a0b0}	";
+            data = "1 subgoal (ID 133)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  {e_b0 : forall a : A, (f_eb a).1 b0 = f_b0 a &	  e_b0 a0 = apD10 ea_eab ..1 b0 @ f_a0b0}	";
             responses[i]=data;
           
 
             i = 245;
-            data = "1 subgoal (ID 143)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  (f_eb a0).2 tt = apD10 ea_eab ..1 b0 @ f_a0b0	";
+            data = "1 subgoal (ID 138)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  (f_eb a0).2 tt = apD10 ea_eab ..1 b0 @ f_a0b0	";
             responses[i]=data;
           
 
             i = 246;
-            data = "1 subgoal (ID 148)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  (apD10 ea_eab ..1 b0)^ @ (f_eb a0).2 tt = f_a0b0	";
+            data = "1 subgoal (ID 143)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  (apD10 ea_eab ..1 b0)^ @ (f_eb a0).2 tt = f_a0b0	";
             responses[i]=data;
           
 
             i = 247;
-            data = "1 subgoal (ID 169)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  (apD10 ea_eab ..1 b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0)	    ea_eab ..1 (f_eb a0).2 tt	";
+            data = "1 subgoal (ID 164)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ============================	  (apD10 ea_eab ..1 b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0)	    ea_eab ..1 (f_eb a0).2 tt	";
             responses[i]=data;
           
 
             i = 248;
-            data = "1 subgoal (ID 175)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ea := ea_eab ..1 : (f_eb a0).1 = (f_a0; unit_name f_a0b0).1	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0) ea	    (f_eb a0).2 tt	";
+            data = "1 subgoal (ID 170)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ea := ea_eab ..1 : (f_eb a0).1 = (f_a0; unit_name f_a0b0).1	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0) ea	    (f_eb a0).2 tt	";
             responses[i]=data;
           
 
             i = 249;
-            data = "1 subgoal (ID 177)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ea := ea_eab ..1 : (f_eb a0).1 = (f_a0; unit_name f_a0b0).1	  ============================	  forall ea0 : (f_eb a0).1 = f_a0,	  (apD10 ea0 b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0) ea0	    (f_eb a0).2 tt	";
+            data = "1 subgoal (ID 172)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea_eab : f_eb a0 = (f_a0; unit_name f_a0b0)	  ea := ea_eab ..1 : (f_eb a0).1 = (f_a0; unit_name f_a0b0).1	  ============================	  forall ea0 : (f_eb a0).1 = f_a0,	  (apD10 ea0 b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0) ea0	    (f_eb a0).2 tt	";
             responses[i]=data;
           
 
             i = 250;
-            data = "1 subgoal (ID 178)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ============================	  forall ea : (f_eb a0).1 = f_a0,	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0) ea	    (f_eb a0).2 tt	";
+            data = "1 subgoal (ID 173)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ============================	  forall ea : (f_eb a0).1 = f_a0,	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0) ea	    (f_eb a0).2 tt	";
             responses[i]=data;
           
 
             i = 251;
-            data = "1 subgoal (ID 179)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea : (f_eb a0).1 = f_a0	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0) ea	    (f_eb a0).2 tt	";
+            data = "1 subgoal (ID 174)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea : (f_eb a0).1 = f_a0	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun s : forall y : B, P a0 y => Unit -> s b0 = f_b0 a0) ea	    (f_eb a0).2 tt	";
             responses[i]=data;
           
 
             i = 252;
-            data = "1 subgoal (ID 185)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea : (f_eb a0).1 = f_a0	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun x : forall y : B, P a0 y => x b0 = f_b0 a0) ea	    ((f_eb a0).2 (transport (fun _ : forall y : B, P a0 y => Unit) ea^ tt))	";
+            data = "1 subgoal (ID 180)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea : (f_eb a0).1 = f_a0	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun x : forall y : B, P a0 y => x b0 = f_b0 a0) ea	    ((f_eb a0).2 (transport (fun _ : forall y : B, P a0 y => Unit) ea^ tt))	";
             responses[i]=data;
           
 
             i = 253;
-            data = "1 subgoal (ID 195)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea : (f_eb a0).1 = f_a0	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun x : forall y : B, P a0 y => x b0 = f_b0 a0) ea	    ((f_eb a0).2 tt)	";
+            data = "1 subgoal (ID 190)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea : (f_eb a0).1 = f_a0	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  transport (fun x : forall y : B, P a0 y => x b0 = f_b0 a0) ea	    ((f_eb a0).2 tt)	";
             responses[i]=data;
           
 
             i = 254;
-            data = "1 subgoal (ID 206)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea : (f_eb a0).1 = f_a0	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  (ap (fun x : forall y : B, P a0 y => x b0) ea)^ @ (f_eb a0).2 tt	";
+            data = "1 subgoal (ID 201)	  	  H : Univalence	  m, n : trunc_index	  A : Type	  a0 : A	  H0 : IsConnected (Tr m.+1) A	  B : Type	  b0 : B	  H1 : IsConnected (Tr n.+1) B	  P : A -> B -> Type	  HP : forall (a : A) (b : B), IsTrunc (m +2+ n) (P a b)	  f_a0 : forall b : B, P a0 b	  f_b0 : forall a : A, P a b0	  f_a0b0 : f_a0 b0 = f_b0 a0	  f_eb : forall y : A,	         ExtensionAlong (unit_name b0) (P y) (unit_name (f_b0 y))	  ea : (f_eb a0).1 = f_a0	  ============================	  (apD10 ea b0)^ @ (f_eb a0).2 tt =	  (ap (fun x : forall y : B, P a0 y => x b0) ea)^ @ (f_eb a0).2 tt	";
             responses[i]=data;
           
 

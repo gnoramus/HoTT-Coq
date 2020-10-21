@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 110)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C1, C2 : Cone X D	  path_legs : forall i : G, C1 i == C2 i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm C1 i j g x @ path_legs j x =	                   ap (D _f g) (path_legs i x) @ legs_comm C2 i j g x	  ============================	  C1 = C2	";
+            data = "1 subgoal (ID 108)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C1, C2 : Cone X D	  path_legs : forall i : G, C1 i == C2 i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm C1 i j g x @ path_legs j x =	                   ap (D _f g) (path_legs i x) @ legs_comm C2 i j g x	  ============================	  C1 = C2	";
             responses[i]=data;
           
 
@@ -253,42 +253,42 @@
           
 
             i = 47;
-            data = "1 subgoal (ID 132)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  ============================	  {| legs := legs; legs_comm := pp_q |} = {| legs := r; legs_comm := pp_r |}	";
+            data = "1 subgoal (ID 130)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  ============================	  {| legs := legs; legs_comm := pp_q |} = {| legs := r; legs_comm := pp_r |}	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 152)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  ============================	  transport	    (fun q' : forall x : G, X -> D x =>	     forall (i j : G) (g : G i j) (x : X), (D _f g) (q' i x) = q' j x)	    (path_forall {| legs := legs; legs_comm := pp_q |}	       {| legs := r; legs_comm := pp_r |}	       (fun i : G =>	        path_forall ({| legs := legs; legs_comm := pp_q |} i)	          ({| legs := r; legs_comm := pp_r |} i) (path_legs i)))	    (legs_comm {| legs := legs; legs_comm := pp_q |}) =	  legs_comm {| legs := r; legs_comm := pp_r |}	";
+            data = "1 subgoal (ID 150)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  ============================	  transport	    (fun q' : forall x : G, X -> D x =>	     forall (i j : G) (g : G i j) (x : X), (D _f g) (q' i x) = q' j x)	    (path_forall {| legs := legs; legs_comm := pp_q |}	       {| legs := r; legs_comm := pp_r |}	       (fun i : G =>	        path_forall ({| legs := legs; legs_comm := pp_q |} i)	          ({| legs := r; legs_comm := pp_r |} i) (path_legs i)))	    (legs_comm {| legs := legs; legs_comm := pp_q |}) =	  legs_comm {| legs := r; legs_comm := pp_r |}	";
             responses[i]=data;
           
 
             i = 49;
-            data = "1 subgoal (ID 177)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  transport	    (fun q' : forall x0 : G, X -> D x0 =>	     forall (i0 j0 : G) (g : G i0 j0) (x0 : X),	     (D _f g) (q' i0 x0) = q' j0 x0)	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) pp_q i j	    f x = pp_r i j f x	";
+            data = "1 subgoal (ID 175)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  transport	    (fun q' : forall x0 : G, X -> D x0 =>	     forall (i0 j0 : G) (g : G i0 j0) (x0 : X),	     (D _f g) (q' i0 x0) = q' j0 x0)	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) pp_q i j	    f x = pp_r i j f x	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 221)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  ((ap (fun x0 : forall x0 : G, X -> D x0 => (D _f f) (x0 i x))	      (path_forall legs r	         (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))))^ @	   pp_q i j f x) @	  ap (fun x0 : forall x0 : G, X -> D x0 => x0 j x)	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) =	  pp_r i j f x	";
+            data = "1 subgoal (ID 219)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  ((ap (fun x0 : forall x0 : G, X -> D x0 => (D _f f) (x0 i x))	      (path_forall legs r	         (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))))^ @	   pp_q i j f x) @	  ap (fun x0 : forall x0 : G, X -> D x0 => x0 j x)	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) =	  pp_r i j f x	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 243)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  pp_q i j f x @	  ap (fun x0 : forall x0 : G, X -> D x0 => x0 j x)	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) =	  ap (fun x0 : forall x0 : G, X -> D x0 => (D _f f) (x0 i x))	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) @	  pp_r i j f x	";
+            data = "1 subgoal (ID 241)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  pp_q i j f x @	  ap (fun x0 : forall x0 : G, X -> D x0 => x0 j x)	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) =	  ap (fun x0 : forall x0 : G, X -> D x0 => (D _f f) (x0 i x))	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) @	  pp_r i j f x	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 247)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  pp_q i j f x @	  ap (fun x0 : forall x0 : G, X -> D x0 => x0 j x)	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) =	  ap (D _f f)	    (ap (fun x0 : forall x0 : G, X -> D x0 => x0 i x)	       (path_forall legs r	          (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0)))) @	  pp_r i j f x	";
+            data = "1 subgoal (ID 245)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  pp_q i j f x @	  ap (fun x0 : forall x0 : G, X -> D x0 => x0 j x)	    (path_forall legs r	       (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) =	  ap (D _f f)	    (ap (fun x0 : forall x0 : G, X -> D x0 => x0 i x)	       (path_forall legs r	          (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0)))) @	  pp_r i j f x	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 276)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  pp_q i j f x @	  apD10	    (apD10	       (path_forall legs r	          (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) j) x =	  ap (D _f f)	    (apD10	       (apD10	          (path_forall legs r	             (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) i)	       x) @ pp_r i j f x	";
+            data = "1 subgoal (ID 274)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  pp_q i j f x @	  apD10	    (apD10	       (path_forall legs r	          (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) j) x =	  ap (D _f f)	    (apD10	       (apD10	          (path_forall legs r	             (fun i0 : G => path_forall (legs i0) (r i0) (path_legs i0))) i)	       x) @ pp_r i j f x	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 303)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  pp_q i j f x @ path_legs j x = ap (D _f f) (path_legs i x) @ pp_r i j f x	";
+            data = "1 subgoal (ID 301)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  legs : forall i : G, X -> D i	  pp_q : forall (i j : G) (g : G i j),	         (fun x : X => (D _f g) (legs i x)) == legs j	  r : forall i : G, X -> D i	  pp_r : forall (i j : G) (g : G i j), (fun x : X => (D _f g) (r i x)) == r j	  path_legs : forall i : G,	              {| legs := legs; legs_comm := pp_q |} i ==	              {| legs := r; legs_comm := pp_r |} i	  path_legs_comm : forall (i j : G) (g : G i j) (x : X),	                   legs_comm {| legs := legs; legs_comm := pp_q |} i j g x @	                   path_legs j x =	                   ap (D _f g) (path_legs i x) @	                   legs_comm {| legs := r; legs_comm := pp_r |} i j g x	  i, j : G	  f : G i j	  x : X	  ============================	  pp_q i j f x @ path_legs j x = ap (D _f f) (path_legs i x) @ pp_r i j f x	";
             responses[i]=data;
           
 
@@ -408,7 +408,7 @@
           
 
             i = 78;
-            data = "1 subgoal (ID 116)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C : Cone X D	  Y : Type	  f : Y -> X	  ============================	  Cone Y D	";
+            data = "1 subgoal (ID 114)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C : Cone X D	  Y : Type	  f : Y -> X	  ============================	  Cone Y D	";
             responses[i]=data;
           
 
@@ -418,17 +418,17 @@
           
 
             i = 80;
-            data = "2 subgoals (ID 132)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C : Cone X D	  Y : Type	  f : Y -> X	  i : G	  ============================	  Y -> D i		subgoal 2 (ID 133) is:	 forall (j : G) (g : G i j),	 D _f g o (fun i0 : G => ?Goal@{i:=i0}) i == (fun i0 : G => ?Goal@{i:=i0}) j	";
+            data = "2 subgoals (ID 130)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C : Cone X D	  Y : Type	  f : Y -> X	  i : G	  ============================	  Y -> D i		subgoal 2 (ID 131) is:	 forall (j : G) (g : G i j),	 D _f g o (fun i0 : G => ?Goal@{i:=i0}) i == (fun i0 : G => ?Goal@{i:=i0}) j	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 133)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C : Cone X D	  Y : Type	  f : Y -> X	  i : G	  ============================	  forall (j : G) (g : G i j),	  D _f g o (fun i0 : G => C i0 o f) i == (fun i0 : G => C i0 o f) j	";
+            data = "1 subgoal (ID 131)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C : Cone X D	  Y : Type	  f : Y -> X	  i : G	  ============================	  forall (j : G) (g : G i j),	  D _f g o (fun i0 : G => C i0 o f) i == (fun i0 : G => C i0 o f) j	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 146)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C : Cone X D	  Y : Type	  f : Y -> X	  i, j : G	  g : G i j	  x : Y	  ============================	  (D _f g) (C i (f x)) = C j (f x)	";
+            data = "1 subgoal (ID 144)	  	  H : Funext	  X : Type	  G : Graph	  D : Diagram G	  C : Cone X D	  Y : Type	  f : Y -> X	  i, j : G	  g : G i j	  x : Y	  ============================	  (D _f g) (C i (f x)) = C j (f x)	";
             responses[i]=data;
           
 
@@ -1208,7 +1208,7 @@
           
 
             i = 238;
-            data = "1 focused subgoal	(shelved: 1) (ID 201)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cone X D2	  ============================	  cone_postcompose m (cone_postcompose (diagram_equiv_inv m) C) = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 202)		subgoal 1 (ID 202) is:	 cone_postcompose (diagram_comp m (diagram_equiv_inv m)) C = C	subgoal 2 (ID 169) is:	 Sect (cone_postcompose m) (cone_postcompose (diagram_equiv_inv m))	";
+            data = "1 focused subgoal	(shelved: 1) (ID 201)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cone X D2	  ============================	  cone_postcompose m (cone_postcompose (diagram_equiv_inv m) C) = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 202) is:	 cone_postcompose (diagram_comp m (diagram_equiv_inv m)) C = C	subgoal 2 (ID 169) is:	 Sect (cone_postcompose m) (cone_postcompose (diagram_equiv_inv m))	";
             responses[i]=data;
           
 
@@ -1218,7 +1218,7 @@
           
 
             i = 240;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 169)		subgoal 1 (ID 169) is:	 Sect (cone_postcompose m) (cone_postcompose (diagram_equiv_inv m))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 169) is:	 Sect (cone_postcompose m) (cone_postcompose (diagram_equiv_inv m))	";
             responses[i]=data;
           
 
@@ -1233,7 +1233,7 @@
           
 
             i = 243;
-            data = "1 focused subgoal	(shelved: 1) (ID 233)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cone X D1	  ============================	  cone_postcompose (diagram_equiv_inv m) (cone_postcompose m C) = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 234)		subgoal 1 (ID 234) is:	 cone_postcompose (diagram_comp (diagram_equiv_inv m) m) C = C	";
+            data = "1 focused subgoal	(shelved: 1) (ID 233)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cone X D1	  ============================	  cone_postcompose (diagram_equiv_inv m) (cone_postcompose m C) = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 234) is:	 cone_postcompose (diagram_comp (diagram_equiv_inv m) m) C = C	";
             responses[i]=data;
           
 
@@ -1308,7 +1308,7 @@
           
 
             i = 258;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 223)		subgoal 1 (ID 223) is:	 cone_precompose C (fun x : Y => f^-1 (f x)) = C	subgoal 2 (ID 183) is:	 Sect (fun C : Cone X D => cone_precompose C f)	   (fun C : Cone Y D => cone_precompose C f^-1)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 223) is:	 cone_precompose C (fun x : Y => f^-1 (f x)) = C	subgoal 2 (ID 183) is:	 Sect (fun C : Cone X D => cone_precompose C f)	   (fun C : Cone Y D => cone_precompose C f^-1)	";
             responses[i]=data;
           
 
@@ -1328,7 +1328,7 @@
           
 
             i = 262;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 183)		subgoal 1 (ID 183) is:	 Sect (fun C : Cone X D => cone_precompose C f)	   (fun C : Cone Y D => cone_precompose C f^-1)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 183) is:	 Sect (fun C : Cone X D => cone_precompose C f)	   (fun C : Cone Y D => cone_precompose C f^-1)	";
             responses[i]=data;
           
 
@@ -1348,7 +1348,7 @@
           
 
             i = 266;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 287)		subgoal 1 (ID 287) is:	 cone_precompose C (fun x : X => f (f^-1 x)) = C	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 287) is:	 cone_precompose C (fun x : X => f (f^-1 x)) = C	";
             responses[i]=data;
           
 

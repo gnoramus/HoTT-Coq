@@ -168,12 +168,12 @@
           
 
             i = 30;
-            data = "1 subgoal (ID 132)	  	  H : Funext	  A : Type	  ============================	  {| equiv_fun := transport idmap 1; equiv_isequiv := isequiv_path 1 |} =	  {|	  equiv_fun := {|	               equiv_fun := transport idmap 1;	               equiv_isequiv := isequiv_path 1 |}^-1;	  equiv_isequiv := isequiv_inverse	                     {|	                     equiv_fun := transport idmap 1;	                     equiv_isequiv := isequiv_path 1 |} |}	";
+            data = "1 subgoal (ID 132)	  	  H : Funext	  A : Type	  ============================	  {| equiv_fun := transport idmap 1; equiv_isequiv := isequiv_path 1 |} =	  {|	    equiv_fun :=	      {| equiv_fun := transport idmap 1; equiv_isequiv := isequiv_path 1 |}^-1;	    equiv_isequiv :=	      isequiv_inverse	        {| equiv_fun := transport idmap 1; equiv_isequiv := isequiv_path 1 |}	  |}	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 133)	  	  H : Funext	  A : Type	  ============================	  {| equiv_fun := transport idmap 1; equiv_isequiv := isequiv_path 1 |} =	  {|	  equiv_fun := transport idmap 1;	  equiv_isequiv := isequiv_inverse (transport idmap 1) |}	";
+            data = "1 subgoal (ID 133)	  	  H : Funext	  A : Type	  ============================	  {| equiv_fun := transport idmap 1; equiv_isequiv := isequiv_path 1 |} =	  {|	    equiv_fun := transport idmap 1;	    equiv_isequiv := isequiv_inverse (transport idmap 1)	  |}	";
             responses[i]=data;
           
 
@@ -618,7 +618,7 @@
           
 
             i = 120;
-            data = "1 subgoal (ID 511)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : A = B	  ============================	  path_universe_uncurried (equiv_path A B p)^-1 =	  path_universe_uncurried (equiv_path B A p^)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 512)		subgoal 1 (ID 512) is:	 path_universe_uncurried (equiv_path B A p^) = p^	";
+            data = "1 subgoal (ID 511)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : A = B	  ============================	  path_universe_uncurried (equiv_path A B p)^-1 =	  path_universe_uncurried (equiv_path B A p^)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 512) is:	 path_universe_uncurried (equiv_path B A p^) = p^	";
             responses[i]=data;
           
 
@@ -1233,7 +1233,7 @@
           
 
             i = 243;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 829)		subgoal 1 (ID 829) is:	 transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	 ap (fun s : B = A => transport idmap s (transport idmap p z))	   (inverse2 (eissect (equiv_path A B) p))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 829) is:	 transport_path_universe_V (equiv_path A B p) (equiv_path A B p z) =	 ap (fun s : B = A => transport idmap s (transport idmap p z))	   (inverse2 (eissect (equiv_path A B) p))	";
             responses[i]=data;
           
 
@@ -1548,12 +1548,12 @@
           
 
             i = 306;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 1094)		subgoal 1 (ID 1094) is:	 ap path_universe_uncurried (eisretr (equiv_path A C) g) =	 eta_path_universe (path_universe g)	subgoal 2 (ID 1033) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	 eta_path_universe (path_universe g) =	 ((((concat_1p (path_universe g))^ @	    whiskerR path_universe_1^ (path_universe g)) @	   whiskerR (equiv_path2_universe 1 1 p) (path_universe g)) @	  whiskerR path_universe_1 (path_universe g)) @ concat_1p (path_universe g)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 1094) is:	 ap path_universe_uncurried (eisretr (equiv_path A C) g) =	 eta_path_universe (path_universe g)	subgoal 2 (ID 1033) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	 eta_path_universe (path_universe g) =	 ((((concat_1p (path_universe g))^ @	    whiskerR path_universe_1^ (path_universe g)) @	   whiskerR (equiv_path2_universe 1 1 p) (path_universe g)) @	  whiskerR path_universe_1 (path_universe g)) @ concat_1p (path_universe g)	";
             responses[i]=data;
           
 
             i = 307;
-            data = "1 subgoal (ID 1094)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  ap path_universe_uncurried (eisretr (equiv_path A C) g) =	  eta_path_universe (path_universe g)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1033)		subgoal 1 (ID 1033) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	 eta_path_universe (path_universe g) =	 ((((concat_1p (path_universe g))^ @	    whiskerR path_universe_1^ (path_universe g)) @	   whiskerR (equiv_path2_universe 1 1 p) (path_universe g)) @	  whiskerR path_universe_1 (path_universe g)) @ concat_1p (path_universe g)	";
+            data = "1 subgoal (ID 1094)	  	  H : Univalence	  H0 : Funext	  A : Type	  C : Type	  p : forall a : A, a = a	  g : A <~> C	  ============================	  ap path_universe_uncurried (eisretr (equiv_path A C) g) =	  eta_path_universe (path_universe g)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1033) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A C (path_universe g))	    (equiv_path A C (path_universe g))	    (fun a : A => ap (equiv_path A C (path_universe g)) (p a))) @	 eta_path_universe (path_universe g) =	 ((((concat_1p (path_universe g))^ @	    whiskerR path_universe_1^ (path_universe g)) @	   whiskerR (equiv_path2_universe 1 1 p) (path_universe g)) @	  whiskerR path_universe_1 (path_universe g)) @ concat_1p (path_universe g)	";
             responses[i]=data;
           
 
@@ -1653,12 +1653,12 @@
           
 
             i = 327;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 1162)		subgoal 1 (ID 1162) is:	 ap path_universe_uncurried (eisretr (equiv_path A B) g) =	 eta_path_universe (path_universe g)	subgoal 2 (ID 1107) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))) @	 eta_path_universe (path_universe g) =	 ((((concat_p1 (path_universe g))^ @	    whiskerL (path_universe g) path_universe_1^) @	   whiskerL (path_universe g) (equiv_path2_universe 1 1 p)) @	  whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 1162) is:	 ap path_universe_uncurried (eisretr (equiv_path A B) g) =	 eta_path_universe (path_universe g)	subgoal 2 (ID 1107) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))) @	 eta_path_universe (path_universe g) =	 ((((concat_p1 (path_universe g))^ @	    whiskerL (path_universe g) path_universe_1^) @	   whiskerL (path_universe g) (equiv_path2_universe 1 1 p)) @	  whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
             i = 328;
-            data = "1 subgoal (ID 1162)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  ap path_universe_uncurried (eisretr (equiv_path A B) g) =	  eta_path_universe (path_universe g)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1107)		subgoal 1 (ID 1107) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))) @	 eta_path_universe (path_universe g) =	 ((((concat_p1 (path_universe g))^ @	    whiskerL (path_universe g) path_universe_1^) @	   whiskerL (path_universe g) (equiv_path2_universe 1 1 p)) @	  whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g)	";
+            data = "1 subgoal (ID 1162)	  	  H : Univalence	  H0 : Funext	  A : Type	  B : Type	  p : forall b : B, b = b	  g : A <~> B	  ============================	  ap path_universe_uncurried (eisretr (equiv_path A B) g) =	  eta_path_universe (path_universe g)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1107) is:	 ((eta_path_universe (path_universe g))^ @	  equiv_path2_universe (equiv_path A B (path_universe g))	    (equiv_path A B (path_universe g))	    (fun a : A => p (equiv_path A B (path_universe g) a))) @	 eta_path_universe (path_universe g) =	 ((((concat_p1 (path_universe g))^ @	    whiskerL (path_universe g) path_universe_1^) @	   whiskerL (path_universe g) (equiv_path2_universe 1 1 p)) @	  whiskerL (path_universe g) path_universe_1) @ concat_p1 (path_universe g)	";
             responses[i]=data;
           
 
@@ -1858,7 +1858,7 @@
           
 
             i = 368;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1061)		subgoal 1 (ID 1061) is:	 transport_path_universe (equiv_path A B p) ((equiv_path A B p)^-1 z) =	 ap (fun s : A = B => transport idmap s (transport idmap p^ z))	   (eissect (equiv_path A B) p)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1061) is:	 transport_path_universe (equiv_path A B p) ((equiv_path A B p)^-1 z) =	 ap (fun s : A = B => transport idmap s (transport idmap p^ z))	   (eissect (equiv_path A B) p)	";
             responses[i]=data;
           
 
@@ -2128,7 +2128,7 @@
           
 
             i = 422;
-            data = "1 subgoal (ID 1119)	  	  H : Univalence	  X : Type	  ============================	  {Y : Type & Y <~> X}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1121)		subgoal 1 (ID 1121) is:	 forall y : {Y : Type & Y <~> X}, (X; 1%equiv) = y	";
+            data = "1 subgoal (ID 1119)	  	  H : Univalence	  X : Type	  ============================	  {Y : Type & Y <~> X}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1121) is:	 forall y : {Y : Type & Y <~> X}, (X; 1%equiv) = y	";
             responses[i]=data;
           
 

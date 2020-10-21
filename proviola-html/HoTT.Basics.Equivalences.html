@@ -1063,7 +1063,7 @@
           
 
             i = 209;
-            data = "1 subgoal (ID 889)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  IsEquiv f	";
+            data = "1 subgoal (ID 885)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  IsEquiv f	";
             responses[i]=data;
           
 
@@ -1073,77 +1073,77 @@
           
 
             i = 211;
-            data = "2 subgoals (ID 926)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  forall (C D : Type) (Ceq : IsEquiv (precomp C)) 	  (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (fun x : A => k (h x))		subgoal 2 (ID 928) is:	 IsEquiv f	";
+            data = "2 subgoals (ID 922)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  forall (C D : Type) (Ceq : IsEquiv (precomp C)) 	  (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (fun x : A => k (h x))		subgoal 2 (ID 924) is:	 IsEquiv f	";
             responses[i]=data;
           
 
             i = 212;
-            data = "1 subgoal (ID 926)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  forall (C D : Type) (Ceq : IsEquiv (precomp C)) 	  (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (fun x : A => k (h x))	1 subgoal (ID 934)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (fun x : A => k (h x))	";
+            data = "1 subgoal (ID 922)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  ============================	  forall (C D : Type) (Ceq : IsEquiv (precomp C)) 	  (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (fun x : A => k (h x))	1 subgoal (ID 930)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (fun x : A => k (h x))	";
             responses[i]=data;
           
 
             i = 213;
-            data = "2 subgoals (ID 968)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))		subgoal 2 (ID 969) is:	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h)) =	 (precomp D)^-1 (fun x : A => k (h x))	";
+            data = "2 subgoals (ID 964)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))		subgoal 2 (ID 965) is:	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h)) =	 (precomp D)^-1 (fun x : A => k (h x))	";
             responses[i]=data;
           
 
             i = 214;
-            data = "1 subgoal (ID 968)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))	2 subgoals (ID 1003)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (precomp D (k o (precomp C)^-1 h))		subgoal 2 (ID 1004) is:	 (precomp D)^-1 (precomp D (k o (precomp C)^-1 h)) =	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))	";
+            data = "1 subgoal (ID 964)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))	2 subgoals (ID 999)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (precomp D (k o (precomp C)^-1 h))		subgoal 2 (ID 1000) is:	 (precomp D)^-1 (precomp D (k o (precomp C)^-1 h)) =	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))	";
             responses[i]=data;
           
 
             i = 215;
-            data = "1 subgoal (ID 1003)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (precomp D (k o (precomp C)^-1 h))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 1004)		subgoal 1 (ID 1004) is:	 (precomp D)^-1 (precomp D (k o (precomp C)^-1 h)) =	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))	subgoal 2 (ID 969) is:	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h)) =	 (precomp D)^-1 (fun x : A => k (h x))	subgoal 3 (ID 928) is:	 IsEquiv f	";
+            data = "1 subgoal (ID 999)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (fun x : B => k ((precomp C)^-1 h x)) =	  (precomp D)^-1 (precomp D (k o (precomp C)^-1 h))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals		subgoal 1 (ID 1000) is:	 (precomp D)^-1 (precomp D (k o (precomp C)^-1 h)) =	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))	subgoal 2 (ID 965) is:	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h)) =	 (precomp D)^-1 (fun x : A => k (h x))	subgoal 3 (ID 924) is:	 IsEquiv f	";
             responses[i]=data;
           
 
             i = 216;
-            data = "1 subgoal (ID 1004)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (precomp D)^-1 (precomp D (k o (precomp C)^-1 h)) =	  (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 969)		subgoal 1 (ID 969) is:	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h)) =	 (precomp D)^-1 (fun x : A => k (h x))	subgoal 2 (ID 928) is:	 IsEquiv f	";
+            data = "1 subgoal (ID 1000)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (precomp D)^-1 (precomp D (k o (precomp C)^-1 h)) =	  (precomp D)^-1 (k o precomp C ((precomp C)^-1 h))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 965) is:	 (precomp D)^-1 (k o precomp C ((precomp C)^-1 h)) =	 (precomp D)^-1 (fun x : A => k (h x))	subgoal 2 (ID 924) is:	 IsEquiv f	";
             responses[i]=data;
           
 
             i = 217;
-            data = "1 subgoal (ID 969)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (precomp D)^-1 (k o precomp C ((precomp C)^-1 h)) =	  (precomp D)^-1 (fun x : A => k (h x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 928)		subgoal 1 (ID 928) is:	 IsEquiv f	1 subgoal (ID 928)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  ============================	  IsEquiv f	2 subgoals (ID 1039)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  ============================	  Sect ((precomp A)^-1 idmap) f		subgoal 2 (ID 1040) is:	 Sect f ((precomp A)^-1 idmap)	";
+            data = "1 subgoal (ID 965)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  C : Type	  D : Type	  Ceq : IsEquiv (precomp C)	  Deq : IsEquiv (precomp D)	  k : C -> D	  h : A -> C	  ============================	  (precomp D)^-1 (k o precomp C ((precomp C)^-1 h)) =	  (precomp D)^-1 (fun x : A => k (h x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 924) is:	 IsEquiv f	1 subgoal (ID 924)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  ============================	  IsEquiv f	2 subgoals (ID 1035)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  ============================	  Sect ((precomp A)^-1 idmap) f		subgoal 2 (ID 1036) is:	 Sect f ((precomp A)^-1 idmap)	";
             responses[i]=data;
           
 
             i = 218;
-            data = "1 subgoal (ID 1039)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  ============================	  Sect ((precomp A)^-1 idmap) f	1 subgoal (ID 1042)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  f ((precomp A)^-1 idmap x) = x	";
+            data = "1 subgoal (ID 1035)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  ============================	  Sect ((precomp A)^-1 idmap) f	1 subgoal (ID 1038)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  f ((precomp A)^-1 idmap x) = x	";
             responses[i]=data;
           
 
             i = 219;
-            data = "1 subgoal (ID 1062)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  (f o (precomp A)^-1 idmap) x = idmap x	";
+            data = "1 subgoal (ID 1058)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  (f o (precomp A)^-1 idmap) x = idmap x	";
             responses[i]=data;
           
 
             i = 220;
-            data = "1 subgoal (ID 1067)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  (fun x0 : B => f ((precomp A)^-1 idmap x0)) = idmap	";
+            data = "1 subgoal (ID 1063)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  (fun x0 : B => f ((precomp A)^-1 idmap x0)) = idmap	";
             responses[i]=data;
           
 
             i = 221;
-            data = "1 subgoal (ID 1068)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  (precomp B)^-1 (fun x0 : A => f x0) = idmap	";
+            data = "1 subgoal (ID 1064)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  (precomp B)^-1 (fun x0 : A => f x0) = idmap	";
             responses[i]=data;
           
 
             i = 222;
-            data = "1 subgoal (ID 1079)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  (precomp B)^-1 (precomp B idmap) = idmap	";
+            data = "1 subgoal (ID 1075)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : B	  ============================	  (precomp B)^-1 (precomp B idmap) = idmap	";
             responses[i]=data;
           
 
             i = 223;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1040)		subgoal 1 (ID 1040) is:	 Sect f ((precomp A)^-1 idmap)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1036) is:	 Sect f ((precomp A)^-1 idmap)	";
             responses[i]=data;
           
 
             i = 224;
-            data = "1 subgoal (ID 1040)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  ============================	  Sect f ((precomp A)^-1 idmap)	1 subgoal (ID 1083)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : A	  ============================	  (precomp A)^-1 idmap (f x) = x	";
+            data = "1 subgoal (ID 1036)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  ============================	  Sect f ((precomp A)^-1 idmap)	1 subgoal (ID 1079)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : A	  ============================	  (precomp A)^-1 idmap (f x) = x	";
             responses[i]=data;
           
 
             i = 225;
-            data = "1 subgoal (ID 1094)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall x : Type, (B -> x) -> A -> x	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : A	  ============================	  precomp A ((precomp A)^-1 idmap) x = idmap x	";
+            data = "1 subgoal (ID 1090)	  	  A : Type	  B : Type	  f : A -> B	  precomp := fun (C : Type) (h : B -> C) => h o f	   : forall C : Type, (B -> C) -> A -> C	  Aeq : IsEquiv (precomp A)	  Beq : IsEquiv (precomp B)	  H : forall (C D : Type) (Ceq : IsEquiv (precomp C))	      (Deq : IsEquiv (precomp D)) (k : C -> D) (h : A -> C),	      k o (precomp C)^-1 h = (precomp D)^-1 (k o h)	  x : A	  ============================	  precomp A ((precomp A)^-1 idmap) x = idmap x	";
             responses[i]=data;
           
 
@@ -1283,7 +1283,7 @@
           
 
             i = 253;
-            data = "1 subgoal (ID 1260)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  eissect f (f^-1 b) = ap f^-1 (eisretr f b)	";
+            data = "1 subgoal (ID 1256)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  eissect f (f^-1 b) = ap f^-1 (eisretr f b)	";
             responses[i]=data;
           
 
@@ -1293,27 +1293,27 @@
           
 
             i = 255;
-            data = "1 subgoal (ID 1293)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ap f (eissect f (f^-1 b)) = ap f (ap f^-1 (eisretr f b))	";
+            data = "1 subgoal (ID 1289)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ap f (eissect f (f^-1 b)) = ap f (ap f^-1 (eisretr f b))	";
             responses[i]=data;
           
 
             i = 256;
-            data = "4 focused subgoals	(shelved: 3) (ID 1320)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ?Goal = ap f (ap f^-1 (eisretr f b))		subgoal 2 (ID 1319) is:	 ?Goal0 = ?Goal	subgoal 3 (ID 1318) is:	 ?Goal1 = ?Goal0	subgoal 4 (ID 1317) is:	 ap f (eissect f (f^-1 b)) = ?Goal1	";
+            data = "4 focused subgoals	(shelved: 3) (ID 1316)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ?Goal = ap f (ap f^-1 (eisretr f b))		subgoal 2 (ID 1315) is:	 ?Goal0 = ?Goal	subgoal 3 (ID 1314) is:	 ?Goal1 = ?Goal0	subgoal 4 (ID 1313) is:	 ap f (eissect f (f^-1 b)) = ?Goal1	";
             responses[i]=data;
           
 
             i = 257;
-            data = "3 focused subgoals	(shelved: 2) (ID 1319)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ?Goal = ap (fun x : B => f (f^-1 x)) (eisretr f b)		subgoal 2 (ID 1318) is:	 ?Goal0 = ?Goal	subgoal 3 (ID 1317) is:	 ap f (eissect f (f^-1 b)) = ?Goal0	";
+            data = "3 focused subgoals	(shelved: 2) (ID 1315)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ?Goal = ap (fun x : B => f (f^-1 x)) (eisretr f b)		subgoal 2 (ID 1314) is:	 ?Goal0 = ?Goal	subgoal 3 (ID 1313) is:	 ap f (eissect f (f^-1 b)) = ?Goal0	";
             responses[i]=data;
           
 
             i = 258;
-            data = "2 focused subgoals	(shelved: 1) (ID 1318)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ?Goal = (eisretr f (f (f^-1 b)) @ eisretr f b) @ (eisretr f b)^		subgoal 2 (ID 1317) is:	 ap f (eissect f (f^-1 b)) = ?Goal	";
+            data = "2 focused subgoals	(shelved: 1) (ID 1314)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ?Goal = (eisretr f (f (f^-1 b)) @ eisretr f b) @ (eisretr f b)^		subgoal 2 (ID 1313) is:	 ap f (eissect f (f^-1 b)) = ?Goal	";
             responses[i]=data;
           
 
             i = 259;
-            data = "1 subgoal (ID 1317)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ap f (eissect f (f^-1 b)) = eisretr f (f (f^-1 b))	";
+            data = "1 subgoal (ID 1313)	  	  A : Type	  B : Type	  f : A -> B	  feq : IsEquiv f	  b : B	  ============================	  ap f (eissect f (f^-1 b)) = eisretr f (f (f^-1 b))	";
             responses[i]=data;
           
 
@@ -1453,7 +1453,7 @@
           
 
             i = 287;
-            data = "1 subgoal (ID 1235)	  	  A : Type	  B : Type	  ============================	  A <~> B -> B <~> A	";
+            data = "1 subgoal (ID 1231)	  	  A : Type	  B : Type	  ============================	  A <~> B -> B <~> A	";
             responses[i]=data;
           
 
@@ -1463,12 +1463,12 @@
           
 
             i = 289;
-            data = "1 subgoal (ID 1236)	  	  A : Type	  B : Type	  e : A <~> B	  ============================	  B <~> A	";
+            data = "1 subgoal (ID 1232)	  	  A : Type	  B : Type	  e : A <~> B	  ============================	  B <~> A	";
             responses[i]=data;
           
 
             i = 290;
-            data = "1 subgoal (ID 1248)	  	  A : Type	  B : Type	  e : A <~> B	  ============================	  IsEquiv e^-1	";
+            data = "1 subgoal (ID 1244)	  	  A : Type	  B : Type	  e : A <~> B	  ============================	  IsEquiv e^-1	";
             responses[i]=data;
           
 
@@ -1513,7 +1513,7 @@
           
 
             i = 299;
-            data = "1 subgoal (ID 1269)	  	  A : Type	  B : Type	  C : Type	  f : A <~> B	  g : B <~> C	  ============================	  (g oE f)^-1 == f^-1 oE g^-1	";
+            data = "1 subgoal (ID 1265)	  	  A : Type	  B : Type	  C : Type	  f : A <~> B	  g : B <~> C	  ============================	  (g oE f)^-1 == f^-1 oE g^-1	";
             responses[i]=data;
           
 
@@ -1553,7 +1553,7 @@
           
 
             i = 307;
-            data = "1 subgoal (ID 1297)	  	  A : Type	  B : Type	  f, g : A <~> B	  p : f == g	  ============================	  g^-1 == f^-1	";
+            data = "1 subgoal (ID 1293)	  	  A : Type	  B : Type	  f, g : A <~> B	  p : f == g	  ============================	  g^-1 == f^-1	";
             responses[i]=data;
           
 
@@ -1563,17 +1563,17 @@
           
 
             i = 309;
-            data = "3 focused subgoals	(shelved: 2) (ID 1316)	  	  A : Type	  B : Type	  f, g : A <~> B	  p : f == g	  x : B	  ============================	  g^-1 x = ?Goal0		subgoal 2 (ID 1317) is:	 ?Goal0 = ?Goal	subgoal 3 (ID 1318) is:	 ?Goal = f^-1 x	";
+            data = "3 focused subgoals	(shelved: 2) (ID 1312)	  	  A : Type	  B : Type	  f, g : A <~> B	  p : f == g	  x : B	  ============================	  g^-1 x = ?Goal0		subgoal 2 (ID 1313) is:	 ?Goal0 = ?Goal	subgoal 3 (ID 1314) is:	 ?Goal = f^-1 x	";
             responses[i]=data;
           
 
             i = 310;
-            data = "2 focused subgoals	(shelved: 1) (ID 1317)	  	  A : Type	  B : Type	  f, g : A <~> B	  p : f == g	  x : B	  ============================	  f^-1 (f (g^-1 x)) = ?Goal		subgoal 2 (ID 1318) is:	 ?Goal = f^-1 x	";
+            data = "2 focused subgoals	(shelved: 1) (ID 1313)	  	  A : Type	  B : Type	  f, g : A <~> B	  p : f == g	  x : B	  ============================	  f^-1 (f (g^-1 x)) = ?Goal		subgoal 2 (ID 1314) is:	 ?Goal = f^-1 x	";
             responses[i]=data;
           
 
             i = 311;
-            data = "1 subgoal (ID 1318)	  	  A : Type	  B : Type	  f, g : A <~> B	  p : f == g	  x : B	  ============================	  f^-1 (g (g^-1 x)) = f^-1 x	";
+            data = "1 subgoal (ID 1314)	  	  A : Type	  B : Type	  f, g : A <~> B	  p : f == g	  x : B	  ============================	  f^-1 (g (g^-1 x)) = f^-1 x	";
             responses[i]=data;
           
 
@@ -1788,7 +1788,7 @@
           
 
             i = 354;
-            data = "1 subgoal (ID 1552)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  H : IsEquiv f	  H0 : IsEquiv h	  H1 : IsEquiv k	  ============================	  IsEquiv g	";
+            data = "1 subgoal (ID 1548)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  H : IsEquiv f	  H0 : IsEquiv h	  H1 : IsEquiv k	  ============================	  IsEquiv g	";
             responses[i]=data;
           
 
@@ -1798,7 +1798,7 @@
           
 
             i = 356;
-            data = "1 subgoal (ID 1607)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  H : IsEquiv f	  H0 : IsEquiv h	  H1 : IsEquiv k	  ============================	  IsEquiv (fun x : A => g (h x))	";
+            data = "1 subgoal (ID 1603)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  H : IsEquiv f	  H0 : IsEquiv h	  H1 : IsEquiv k	  ============================	  IsEquiv (fun x : A => g (h x))	";
             responses[i]=data;
           
 
@@ -1813,7 +1813,7 @@
           
 
             i = 359;
-            data = "1 subgoal (ID 1603)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : g o h == k o f	  H : IsEquiv g	  H0 : IsEquiv h	  H1 : IsEquiv k	  ============================	  IsEquiv f	";
+            data = "1 subgoal (ID 1599)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : g o h == k o f	  H : IsEquiv g	  H0 : IsEquiv h	  H1 : IsEquiv k	  ============================	  IsEquiv f	";
             responses[i]=data;
           
 
@@ -1823,7 +1823,7 @@
           
 
             i = 361;
-            data = "1 subgoal (ID 1658)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : g o h == k o f	  H : IsEquiv g	  H0 : IsEquiv h	  H1 : IsEquiv k	  ============================	  IsEquiv (fun x : A => k (f x))	";
+            data = "1 subgoal (ID 1654)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : g o h == k o f	  H : IsEquiv g	  H0 : IsEquiv h	  H1 : IsEquiv k	  ============================	  IsEquiv (fun x : A => k (f x))	";
             responses[i]=data;
           
 
@@ -1858,7 +1858,7 @@
           
 
             i = 368;
-            data = "1 subgoal (ID 1613)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  Contr {g : forall x : A, B x & f == g}	";
+            data = "1 subgoal (ID 1609)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  Contr {g : forall x : A, B x & f == g}	";
             responses[i]=data;
           
 
@@ -1868,32 +1868,32 @@
           
 
             i = 370;
-            data = "1 subgoal (ID 1627)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  {g : forall x : A, B x & f = g} <~> {g : forall x : A, B x & f == g}	";
+            data = "1 subgoal (ID 1623)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  {g : forall x : A, B x & f = g} <~> {g : forall x : A, B x & f == g}	";
             responses[i]=data;
           
 
             i = 371;
-            data = "4 subgoals (ID 1662)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f = g	  ============================	  {g0 : forall x : A, B x & f == g0}		subgoal 2 (ID 1667) is:	 {g0 : forall x : A, B x & f = g0}	subgoal 3 (ID 1673) is:	 ?Goal@{g:=?Goal0.1; h:=?Goal0.2} = (g; h)	subgoal 4 (ID 1679) is:	 ?Goal0@{g:=?Goal.1; h:=?Goal.2} = (g; h)	";
+            data = "4 subgoals (ID 1658)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f = g	  ============================	  {g0 : forall x : A, B x & f == g0}		subgoal 2 (ID 1663) is:	 {g0 : forall x : A, B x & f = g0}	subgoal 3 (ID 1669) is:	 ?Goal@{g:=?Goal0.1; h:=?Goal0.2} = (g; h)	subgoal 4 (ID 1675) is:	 ?Goal0@{g:=?Goal.1; h:=?Goal.2} = (g; h)	";
             responses[i]=data;
           
 
             i = 372;
-            data = "1 subgoal (ID 1662)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f = g	  ============================	  {g0 : forall x : A, B x & f == g0}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 1667)		subgoal 1 (ID 1667) is:	 {g0 : forall x : A, B x & f = g0}	subgoal 2 (ID 1673) is:	 (?Goal.1; apD10 ?Goal.2) = (g; h)	subgoal 3 (ID 1679) is:	 ?Goal@{g:=(g; apD10 h).1; h:=(g; apD10 h).2} = (g; h)	";
+            data = "1 subgoal (ID 1658)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f = g	  ============================	  {g0 : forall x : A, B x & f == g0}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals		subgoal 1 (ID 1663) is:	 {g0 : forall x : A, B x & f = g0}	subgoal 2 (ID 1669) is:	 (?Goal.1; apD10 ?Goal.2) = (g; h)	subgoal 3 (ID 1675) is:	 ?Goal@{g:=(g; apD10 h).1; h:=(g; apD10 h).2} = (g; h)	";
             responses[i]=data;
           
 
             i = 373;
-            data = "1 subgoal (ID 1667)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f == g	  ============================	  {g0 : forall x : A, B x & f = g0}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1673)		subgoal 1 (ID 1673) is:	 ((g; path_forall f g h).1; apD10 (g; path_forall f g h).2) = (g; h)	subgoal 2 (ID 1679) is:	 ((g; apD10 h).1; path_forall f (g; apD10 h).1 (g; apD10 h).2) = (g; h)	";
+            data = "1 subgoal (ID 1663)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f == g	  ============================	  {g0 : forall x : A, B x & f = g0}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1669) is:	 ((g; path_forall f g h).1; apD10 (g; path_forall f g h).2) = (g; h)	subgoal 2 (ID 1675) is:	 ((g; apD10 h).1; path_forall f (g; apD10 h).1 (g; apD10 h).2) = (g; h)	";
             responses[i]=data;
           
 
             i = 374;
-            data = "1 subgoal (ID 1673)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f == g	  ============================	  ((g; path_forall f g h).1; apD10 (g; path_forall f g h).2) = (g; h)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1679)		subgoal 1 (ID 1679) is:	 ((g; apD10 h).1; path_forall f (g; apD10 h).1 (g; apD10 h).2) = (g; h)	";
+            data = "1 subgoal (ID 1669)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f == g	  ============================	  ((g; path_forall f g h).1; apD10 (g; path_forall f g h).2) = (g; h)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1675) is:	 ((g; apD10 h).1; path_forall f (g; apD10 h).1 (g; apD10 h).2) = (g; h)	";
             responses[i]=data;
           
 
             i = 375;
-            data = "1 subgoal (ID 1679)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f = g	  ============================	  ((g; apD10 h).1; path_forall f (g; apD10 h).1 (g; apD10 h).2) = (g; h)	No more subgoals.	";
+            data = "1 subgoal (ID 1675)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : f = g	  ============================	  ((g; apD10 h).1; path_forall f (g; apD10 h).1 (g; apD10 h).2) = (g; h)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1903,7 +1903,7 @@
           
 
             i = 377;
-            data = "1 subgoal (ID 1623)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  Contr {g : forall x : A, B x & g == f}	";
+            data = "1 subgoal (ID 1619)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  Contr {g : forall x : A, B x & g == f}	";
             responses[i]=data;
           
 
@@ -1913,32 +1913,32 @@
           
 
             i = 379;
-            data = "1 subgoal (ID 1637)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  {g : forall x : A, B x & g = f} <~> {g : forall x : A, B x & g == f}	";
+            data = "1 subgoal (ID 1633)	  	  H : Funext	  A : Type	  B : A -> Type	  f : forall x : A, B x	  ============================	  {g : forall x : A, B x & g = f} <~> {g : forall x : A, B x & g == f}	";
             responses[i]=data;
           
 
             i = 380;
-            data = "4 subgoals (ID 1672)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g = f	  ============================	  {g0 : forall x : A, B x & g0 == f}		subgoal 2 (ID 1677) is:	 {g0 : forall x : A, B x & g0 = f}	subgoal 3 (ID 1683) is:	 ?Goal@{g:=?Goal0.1; h:=?Goal0.2} = (g; h)	subgoal 4 (ID 1689) is:	 ?Goal0@{g:=?Goal.1; h:=?Goal.2} = (g; h)	";
+            data = "4 subgoals (ID 1668)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g = f	  ============================	  {g0 : forall x : A, B x & g0 == f}		subgoal 2 (ID 1673) is:	 {g0 : forall x : A, B x & g0 = f}	subgoal 3 (ID 1679) is:	 ?Goal@{g:=?Goal0.1; h:=?Goal0.2} = (g; h)	subgoal 4 (ID 1685) is:	 ?Goal0@{g:=?Goal.1; h:=?Goal.2} = (g; h)	";
             responses[i]=data;
           
 
             i = 381;
-            data = "1 subgoal (ID 1672)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g = f	  ============================	  {g0 : forall x : A, B x & g0 == f}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 1677)		subgoal 1 (ID 1677) is:	 {g0 : forall x : A, B x & g0 = f}	subgoal 2 (ID 1683) is:	 (?Goal.1; apD10 ?Goal.2) = (g; h)	subgoal 3 (ID 1689) is:	 ?Goal@{g:=(g; apD10 h).1; h:=(g; apD10 h).2} = (g; h)	";
+            data = "1 subgoal (ID 1668)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g = f	  ============================	  {g0 : forall x : A, B x & g0 == f}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals		subgoal 1 (ID 1673) is:	 {g0 : forall x : A, B x & g0 = f}	subgoal 2 (ID 1679) is:	 (?Goal.1; apD10 ?Goal.2) = (g; h)	subgoal 3 (ID 1685) is:	 ?Goal@{g:=(g; apD10 h).1; h:=(g; apD10 h).2} = (g; h)	";
             responses[i]=data;
           
 
             i = 382;
-            data = "1 subgoal (ID 1677)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g == f	  ============================	  {g0 : forall x : A, B x & g0 = f}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 1683)		subgoal 1 (ID 1683) is:	 ((g; path_forall g f h).1; apD10 (g; path_forall g f h).2) = (g; h)	subgoal 2 (ID 1689) is:	 ((g; apD10 h).1; path_forall (g; apD10 h).1 f (g; apD10 h).2) = (g; h)	";
+            data = "1 subgoal (ID 1673)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g == f	  ============================	  {g0 : forall x : A, B x & g0 = f}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1679) is:	 ((g; path_forall g f h).1; apD10 (g; path_forall g f h).2) = (g; h)	subgoal 2 (ID 1685) is:	 ((g; apD10 h).1; path_forall (g; apD10 h).1 f (g; apD10 h).2) = (g; h)	";
             responses[i]=data;
           
 
             i = 383;
-            data = "1 subgoal (ID 1683)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g == f	  ============================	  ((g; path_forall g f h).1; apD10 (g; path_forall g f h).2) = (g; h)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1689)		subgoal 1 (ID 1689) is:	 ((g; apD10 h).1; path_forall (g; apD10 h).1 f (g; apD10 h).2) = (g; h)	";
+            data = "1 subgoal (ID 1679)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g == f	  ============================	  ((g; path_forall g f h).1; apD10 (g; path_forall g f h).2) = (g; h)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1685) is:	 ((g; apD10 h).1; path_forall (g; apD10 h).1 f (g; apD10 h).2) = (g; h)	";
             responses[i]=data;
           
 
             i = 384;
-            data = "1 subgoal (ID 1689)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g = f	  ============================	  ((g; apD10 h).1; path_forall (g; apD10 h).1 f (g; apD10 h).2) = (g; h)	No more subgoals.	";
+            data = "1 subgoal (ID 1685)	  	  H : Funext	  A : Type	  B : A -> Type	  f, g : forall x : A, B x	  h : g = f	  ============================	  ((g; apD10 h).1; path_forall (g; apD10 h).1 f (g; apD10 h).2) = (g; h)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -2138,7 +2138,7 @@
           
 
             i = 424;
-            data = "1 subgoal (ID 1656)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  equiv_ind f P df (f x) = df x	";
+            data = "1 subgoal (ID 1652)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  equiv_ind f P df (f x) = df x	";
             responses[i]=data;
           
 
@@ -2148,17 +2148,17 @@
           
 
             i = 426;
-            data = "1 subgoal (ID 1657)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport P (eisretr f (f x)) (df (f^-1 (f x))) = df x	";
+            data = "1 subgoal (ID 1653)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport P (eisretr f (f x)) (df (f^-1 (f x))) = df x	";
             responses[i]=data;
           
 
             i = 427;
-            data = "1 subgoal (ID 1660)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport P (ap f (eissect f x)) (df (f^-1 (f x))) = df x	";
+            data = "1 subgoal (ID 1656)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport P (ap f (eissect f x)) (df (f^-1 (f x))) = df x	";
             responses[i]=data;
           
 
             i = 428;
-            data = "1 subgoal (ID 1667)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport (fun x0 : A => P (f x0)) (eissect f x) (df (f^-1 (f x))) = df x	";
+            data = "1 subgoal (ID 1663)	  	  A : Type	  B : Type	  f : A -> B	  H : IsEquiv f	  P : B -> Type	  df : forall x : A, P (f x)	  x : A	  ============================	  transport (fun x0 : A => P (f x0)) (eissect f x) (df (f^-1 (f x))) = df x	";
             responses[i]=data;
           
 

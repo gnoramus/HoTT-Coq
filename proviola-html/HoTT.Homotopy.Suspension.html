@@ -253,12 +253,12 @@
           
 
             i = 47;
-            data = "1 subgoal (ID 86)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, transport P (merid x) H_N = H_S	  ============================	  forall b : Unit, P (pushl b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 88)		subgoal 1 (ID 88) is:	 forall c : Unit, P (pushr c)	subgoal 2 (ID 90) is:	 forall a : X,	 transport P (pglue a) (Unit_ind H_N (const tt a)) = ?pushc (const tt a)	";
+            data = "1 subgoal (ID 86)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, transport P (merid x) H_N = H_S	  ============================	  forall b : Unit, P (pushl b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 88) is:	 forall c : Unit, P (pushr c)	subgoal 2 (ID 90) is:	 forall a : X,	 transport P (pglue a) (Unit_ind H_N (const tt a)) = ?pushc (const tt a)	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 88)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, transport P (merid x) H_N = H_S	  ============================	  forall c : Unit, P (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 90)		subgoal 1 (ID 90) is:	 forall a : X,	 transport P (pglue a) (Unit_ind H_N (const tt a)) =	 Unit_ind H_S (const tt a)	";
+            data = "1 subgoal (ID 88)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, transport P (merid x) H_N = H_S	  ============================	  forall c : Unit, P (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 90) is:	 forall a : X,	 transport P (pglue a) (Unit_ind H_N (const tt a)) =	 Unit_ind H_S (const tt a)	";
             responses[i]=data;
           
 
@@ -308,12 +308,12 @@
           
 
             i = 58;
-            data = "1 subgoal (ID 78)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, DPath P (merid x) H_N H_S	  ============================	  P North	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 80)		subgoal 1 (ID 80) is:	 P South	subgoal 2 (ID 82) is:	 forall x : X, transport P (merid x) H_N = ?H_S	";
+            data = "1 subgoal (ID 78)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, DPath P (merid x) H_N H_S	  ============================	  P North	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 80) is:	 P South	subgoal 2 (ID 82) is:	 forall x : X, transport P (merid x) H_N = ?H_S	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 80)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, DPath P (merid x) H_N H_S	  ============================	  P South	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 82)		subgoal 1 (ID 82) is:	 forall x : X, transport P (merid x) H_N = H_S	";
+            data = "1 subgoal (ID 80)	  	  X : Type	  P : Susp X -> Type	  H_N : P North	  H_S : P South	  H_merid : forall x : X, DPath P (merid x) H_N H_S	  ============================	  P South	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 82) is:	 forall x : X, transport P (merid x) H_N = H_S	";
             responses[i]=data;
           
 
@@ -523,7 +523,7 @@
           
 
             i = 101;
-            data = "1 subgoal (ID 159)	  	  X : Type	  Y : Type	  H_N, H_S : Y	  H_merid : X -> H_N = H_S	  x : X	  ============================	  transport_const (merid x) H_N @ ap (Susp_rec H_N H_S H_merid) (merid x) =	  apD (Susp_rec H_N H_S H_merid) (merid x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 160)		subgoal 1 (ID 160) is:	 apD (Susp_rec H_N H_S H_merid) (merid x) =	 transport_const (merid x) H_N @ H_merid x	";
+            data = "1 subgoal (ID 159)	  	  X : Type	  Y : Type	  H_N, H_S : Y	  H_merid : X -> H_N = H_S	  x : X	  ============================	  transport_const (merid x) H_N @ ap (Susp_rec H_N H_S H_merid) (merid x) =	  apD (Susp_rec H_N H_S H_merid) (merid x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 160) is:	 apD (Susp_rec H_N H_S H_merid) (merid x) =	 transport_const (merid x) H_N @ H_merid x	";
             responses[i]=data;
           
 
@@ -853,12 +853,12 @@
           
 
             i = 167;
-            data = "1 subgoal (ID 241)	  	  X : Type	  Y : Type	  f : X -> Y	  ============================	  Susp Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 243)		subgoal 1 (ID 243) is:	 Susp Y	subgoal 2 (ID 245) is:	 X -> North = ?H_S	";
+            data = "1 subgoal (ID 241)	  	  X : Type	  Y : Type	  f : X -> Y	  ============================	  Susp Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 243) is:	 Susp Y	subgoal 2 (ID 245) is:	 X -> North = ?H_S	";
             responses[i]=data;
           
 
             i = 168;
-            data = "1 subgoal (ID 243)	  	  X : Type	  Y : Type	  f : X -> Y	  ============================	  Susp Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 245)		subgoal 1 (ID 245) is:	 X -> North = South	";
+            data = "1 subgoal (ID 243)	  	  X : Type	  Y : Type	  f : X -> Y	  ============================	  Susp Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 245) is:	 X -> North = South	";
             responses[i]=data;
           
 
@@ -958,7 +958,7 @@
           
 
             i = 188;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 254)		subgoal 1 (ID 254) is:	 IsEquiv	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 254) is:	 IsEquiv	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	";
             responses[i]=data;
           
 
@@ -973,7 +973,7 @@
           
 
             i = 191;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 275)		subgoal 1 (ID 275) is:	 Sect	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	subgoal 2 (ID 277) is:	 Sect	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 275) is:	 Sect	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	subgoal 2 (ID 277) is:	 Sect	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	";
             responses[i]=data;
           
 
@@ -988,7 +988,7 @@
           
 
             i = 194;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 277)		subgoal 1 (ID 277) is:	 Sect	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 277) is:	 Sect	   (fun f : Susp X -> Y => ((f North, f South); fun x : X => ap f (merid x)))	   (fun X0 : {NS : Y * Y & X -> fst NS = snd NS} =>	    (fun proj1_sig : Y * Y =>	     (fun (N S : Y) (m : X -> fst (N, S) = snd (N, S)) => Susp_rec N S m)	       (fst proj1_sig) (snd proj1_sig)) X0.1 X0.2)	";
             responses[i]=data;
           
 
@@ -1603,7 +1603,7 @@
           
 
             i = 317;
-            data = "1 subgoal (ID 321)	  	  X : Type	  P : Susp X -> Type	  f, g : forall z : Susp X, P z	  p : forall a : Susp X, f a = g a	  ============================	  (f North, f South) = (g North, g South)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 322)		subgoal 1 (ID 322) is:	 forall a : X,	 transport Susp_ind_data'	   (path_prod (f North, f South) (g North, g South) (p North) (p South))	   (fun x : X => dp_apD f (merid x)) a = dp_apD g (merid a)	";
+            data = "1 subgoal (ID 321)	  	  X : Type	  P : Susp X -> Type	  f, g : forall z : Susp X, P z	  p : forall a : Susp X, f a = g a	  ============================	  (f North, f South) = (g North, g South)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 322) is:	 forall a : X,	 transport Susp_ind_data'	   (path_prod (f North, f South) (g North, g South) (p North) (p South))	   (fun x : X => dp_apD f (merid x)) a = dp_apD g (merid a)	";
             responses[i]=data;
           
 
@@ -1688,7 +1688,7 @@
           
 
             i = 334;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 332)		subgoal 1 (ID 332) is:	 forall x y : Susp_ind_type, Susp_ind_inv x $== Susp_ind_inv y -> x $== y	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 332) is:	 forall x y : Susp_ind_type, Susp_ind_inv x $== Susp_ind_inv y -> x $== y	";
             responses[i]=data;
           
 
@@ -2153,7 +2153,7 @@
           
 
             i = 427;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 330)		subgoal 1 (ID 330) is:	 DPath P (ap (functor_susp f) (merid x)) (fst NS) (snd NS) <~>	 DPath (P o functor_susp f) (merid x) (fst NS) (snd NS)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 330) is:	 DPath P (ap (functor_susp f) (merid x)) (fst NS) (snd NS) <~>	 DPath (P o functor_susp f) (merid x) (fst NS) (snd NS)	";
             responses[i]=data;
           
 
@@ -2288,7 +2288,7 @@
           
 
             i = 454;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 358)		subgoal 1 (ID 358) is:	 functor_Susp_ind_data' NS	   (fun x : X => (equiv_Susp_ind_data' NS x)^-1 (g x)) $== g	subgoal 2 (ID 353) is:	 forall x y : Susp_ind_data'' NS,	 functor_Susp_ind_data' NS x $== functor_Susp_ind_data' NS y -> x $== y	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 358) is:	 functor_Susp_ind_data' NS	   (fun x : X => (equiv_Susp_ind_data' NS x)^-1 (g x)) $== g	subgoal 2 (ID 353) is:	 forall x y : Susp_ind_data'' NS,	 functor_Susp_ind_data' NS x $== functor_Susp_ind_data' NS y -> x $== y	";
             responses[i]=data;
           
 
@@ -2298,7 +2298,7 @@
           
 
             i = 456;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 353)		subgoal 1 (ID 353) is:	 forall x y : Susp_ind_data'' NS,	 functor_Susp_ind_data' NS x $== functor_Susp_ind_data' NS y -> x $== y	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 353) is:	 forall x y : Susp_ind_data'' NS,	 functor_Susp_ind_data' NS x $== functor_Susp_ind_data' NS y -> x $== y	";
             responses[i]=data;
           
 
@@ -2563,7 +2563,7 @@
           
 
             i = 509;
-            data = "1 subgoal (ID 511)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  (forall g : forall x : Susp X, P (functor_susp f x),	   ExtensionAlong (functor_susp f) P g) <-> SplEssSurj functor_Susp_ind_type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 512)		subgoal 1 (ID 512) is:	 SplEssSurj functor_Susp_ind_type <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	1 subgoal (ID 512)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_type <->	  (forall (NS : P North * P South)	   (g : forall x : X,	        (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	   ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	2 focused subgoals	(shelved: 1) (ID 534)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_type <-> ?Goal		subgoal 2 (ID 535) is:	 ?Goal <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	";
+            data = "1 subgoal (ID 511)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  (forall g : forall x : Susp X, P (functor_susp f x),	   ExtensionAlong (functor_susp f) P g) <-> SplEssSurj functor_Susp_ind_type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 512) is:	 SplEssSurj functor_Susp_ind_type <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	1 subgoal (ID 512)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_type <->	  (forall (NS : P North * P South)	   (g : forall x : X,	        (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	   ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	2 focused subgoals	(shelved: 1) (ID 534)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_type <-> ?Goal		subgoal 2 (ID 535) is:	 ?Goal <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	";
             responses[i]=data;
           
 
@@ -2578,12 +2578,12 @@
           
 
             i = 512;
-            data = "";
+            data = "2 focused subgoals	(shelved: 6) (ID 940)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  IsEquiv0Gpd (Susp_ind_inv Y P)		subgoal 2 (ID 944) is:	 IsEquiv0Gpd (Susp_ind_inv X (fun x : Susp X => P (functor_susp f x)))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 535) is:	 SplEssSurj functor_Susp_ind_data <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	1 subgoal (ID 535)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_data <->	  (forall (NS : P North * P South)	   (g : forall x : X,	        (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	   ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	2 focused subgoals	(shelved: 1) (ID 975)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_data <-> ?Goal		subgoal 2 (ID 976) is:	 ?Goal <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	1 focused subgoal	(shelved: 1) (ID 975)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_data <-> ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 976) is:	 (forall a : P North * P South,	  SplEssSurj	    ((fun NS : P North * P South =>	      functor_Susp_ind_data' NS o functor_Susp_ind_data'' NS) a)) <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	";
             responses[i]=data;
           
 
             i = 513;
-            data = "2 focused subgoals	(shelved: 6) (ID 940)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  IsEquiv0Gpd (Susp_ind_inv Y P)		subgoal 2 (ID 944) is:	 IsEquiv0Gpd (Susp_ind_inv X (fun x : Susp X => P (functor_susp f x)))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 535)		subgoal 1 (ID 535) is:	 SplEssSurj functor_Susp_ind_data <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	1 subgoal (ID 535)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_data <->	  (forall (NS : P North * P South)	   (g : forall x : X,	        (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	   ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	2 focused subgoals	(shelved: 1) (ID 975)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_data <-> ?Goal		subgoal 2 (ID 976) is:	 ?Goal <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	1 focused subgoal	(shelved: 1) (ID 975)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  SplEssSurj functor_Susp_ind_data <-> ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 976)		subgoal 1 (ID 976) is:	 (forall a : P North * P South,	  SplEssSurj	    ((fun NS : P North * P South =>	      functor_Susp_ind_data' NS o functor_Susp_ind_data'' NS) a)) <->	 (forall (NS : P North * P South)	  (g : forall x : X,	       (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	  ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	1 subgoal (ID 976)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  (forall a : P North * P South,	   SplEssSurj	     ((fun NS : P North * P South =>	       functor_Susp_ind_data' NS o functor_Susp_ind_data'' NS) a)) <->	  (forall (NS : P North * P South)	   (g : forall x : X,	        (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	   ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	1 subgoal (ID 1008)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  N : P North	  S : P South	  ============================	  SplEssSurj	    (fun x : Susp_ind_data' Y P (N, S) =>	     functor_Susp_ind_data' (N, S) (functor_Susp_ind_data'' (N, S) x)) <->	  (forall g : forall x : X, DPath P (merid (f x)) N S,	   ExtensionAlong f (fun x : Y => DPath P (merid x) N S) g)	";
+            data = "1 subgoal (ID 976)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  ============================	  (forall a : P North * P South,	   SplEssSurj	     ((fun NS : P North * P South =>	       functor_Susp_ind_data' NS o functor_Susp_ind_data'' NS) a)) <->	  (forall (NS : P North * P South)	   (g : forall x : X,	        (fun x0 : Y => DPath P (merid x0) (fst NS) (snd NS)) (f x)),	   ExtensionAlong f (fun x : Y => DPath P (merid x) (fst NS) (snd NS)) g)	1 subgoal (ID 1008)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  N : P North	  S : P South	  ============================	  SplEssSurj	    (fun x : Susp_ind_data' Y P (N, S) =>	     functor_Susp_ind_data' (N, S) (functor_Susp_ind_data'' (N, S) x)) <->	  (forall g : forall x : X, DPath P (merid (f x)) N S,	   ExtensionAlong f (fun x : Y => DPath P (merid x) N S) g)	";
             responses[i]=data;
           
 
@@ -2593,7 +2593,7 @@
           
 
             i = 515;
-            data = "1 focused subgoal	(shelved: 1) (ID 1023)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  N : P North	  S : P South	  ============================	  SplEssSurj	    (fun x : Susp_ind_data' Y P (N, S) =>	     functor_Susp_ind_data' (N, S) (functor_Susp_ind_data'' (N, S) x)) <->	  ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 1024)		subgoal 1 (ID 1024) is:	 SplEssSurj (functor_Susp_ind_data'' (N, S)) <->	 (forall g : forall x : X, DPath P (merid (f x)) N S,	  ExtensionAlong f (fun x : Y => DPath P (merid x) N S) g)	1 subgoal (ID 1024)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  N : P North	  S : P South	  ============================	  SplEssSurj (functor_Susp_ind_data'' (N, S)) <->	  (forall g : forall x : X, DPath P (merid (f x)) N S,	   ExtensionAlong f (fun x : Y => DPath P (merid x) N S) g)	No more subgoals.	";
+            data = "1 focused subgoal	(shelved: 1) (ID 1023)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  N : P North	  S : P South	  ============================	  SplEssSurj	    (fun x : Susp_ind_data' Y P (N, S) =>	     functor_Susp_ind_data' (N, S) (functor_Susp_ind_data'' (N, S) x)) <->	  ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 1024) is:	 SplEssSurj (functor_Susp_ind_data'' (N, S)) <->	 (forall g : forall x : X, DPath P (merid (f x)) N S,	  ExtensionAlong f (fun x : Y => DPath P (merid x) N S) g)	1 subgoal (ID 1024)	  	  X : Type	  Y : Type	  f : X -> Y	  P : Susp Y -> Type	  N : P North	  S : P South	  ============================	  SplEssSurj (functor_Susp_ind_data'' (N, S)) <->	  (forall g : forall x : X, DPath P (merid (f x)) N S,	   ExtensionAlong f (fun x : Y => DPath P (merid x) N S) g)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -2733,7 +2733,7 @@
           
 
             i = 543;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals (ID 313)		subgoal 1 (ID 313) is:	 forall h k : forall b : Y, DPath P (merid b) (fst (N, S)) (snd (N, S)),	 ExtendableAlong n f (fun b : Y => h b = k b)	subgoal 2 (ID 296) is:	 (forall NS : P North * P South,	  ExtendableAlong n.+1 f (fun x : Y => DPath P (merid x) (fst NS) (snd NS))) ->	 ExtendableAlong n.+1 (functor_susp f) P	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 313) is:	 forall h k : forall b : Y, DPath P (merid b) (fst (N, S)) (snd (N, S)),	 ExtendableAlong n f (fun b : Y => h b = k b)	subgoal 2 (ID 296) is:	 (forall NS : P North * P South,	  ExtendableAlong n.+1 f (fun x : Y => DPath P (merid x) (fst NS) (snd NS))) ->	 ExtendableAlong n.+1 (functor_susp f) P	";
             responses[i]=data;
           
 
@@ -2813,12 +2813,12 @@
           
 
             i = 559;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals (ID 408)		subgoal 1 (ID 408) is:	 dp_apD (Susp_ind_dp P N S k) (merid y) = k y	subgoal 2 (ID 296) is:	 (forall NS : P North * P South,	  ExtendableAlong n.+1 f (fun x : Y => DPath P (merid x) (fst NS) (snd NS))) ->	 ExtendableAlong n.+1 (functor_susp f) P	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals		subgoal 1 (ID 408) is:	 dp_apD (Susp_ind_dp P N S k) (merid y) = k y	subgoal 2 (ID 296) is:	 (forall NS : P North * P South,	  ExtendableAlong n.+1 f (fun x : Y => DPath P (merid x) (fst NS) (snd NS))) ->	 ExtendableAlong n.+1 (functor_susp f) P	";
             responses[i]=data;
           
 
             i = 560;
-            data = "1 subgoal (ID 408)	  	  X : Type	  Y : Type	  f : X -> Y	  n : nat	  P : Susp Y -> Type	  e1 : forall g : forall a : Susp X, P (functor_susp f a),	       ExtensionAlong (functor_susp f) P g	  N : P North	  S : P South	  h, k : forall b : Y, DPath P (merid b) N S	  y : Y	  ============================	  dp_apD (Susp_ind_dp P N S k) (merid y) = k y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 296)		subgoal 1 (ID 296) is:	 (forall NS : P North * P South,	  ExtendableAlong n.+1 f (fun x : Y => DPath P (merid x) (fst NS) (snd NS))) ->	 ExtendableAlong n.+1 (functor_susp f) P	";
+            data = "1 subgoal (ID 408)	  	  X : Type	  Y : Type	  f : X -> Y	  n : nat	  P : Susp Y -> Type	  e1 : forall g : forall a : Susp X, P (functor_susp f a),	       ExtensionAlong (functor_susp f) P g	  N : P North	  S : P South	  h, k : forall b : Y, DPath P (merid b) N S	  y : Y	  ============================	  dp_apD (Susp_ind_dp P N S k) (merid y) = k y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 296) is:	 (forall NS : P North * P South,	  ExtendableAlong n.+1 f (fun x : Y => DPath P (merid x) (fst NS) (snd NS))) ->	 ExtendableAlong n.+1 (functor_susp f) P	";
             responses[i]=data;
           
 
@@ -2833,7 +2833,7 @@
           
 
             i = 563;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 425)		subgoal 1 (ID 425) is:	 forall h k : forall b : Susp Y, P b,	 ExtendableAlong n (functor_susp f) (fun b : Susp Y => h b = k b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 425) is:	 forall h k : forall b : Susp Y, P b,	 ExtendableAlong n (functor_susp f) (fun b : Susp Y => h b = k b)	";
             responses[i]=data;
           
 
@@ -2963,7 +2963,7 @@
           
 
             i = 589;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 305)		subgoal 1 (ID 305) is:	 ooExtendableAlong (functor_susp f) P	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 305) is:	 ooExtendableAlong (functor_susp f) P	";
             responses[i]=data;
           
 
@@ -3093,7 +3093,7 @@
           
 
             i = 615;
-            data = "1 subgoal (ID 379)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  f x @ n.2 South = ap (Susp_rec H_N H_S f) (merid x) @ n.2 South	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 380)		subgoal 1 (ID 380) is:	 ap (Susp_rec H_N H_S f) (merid x) @ n.2 South = n.2 North	";
+            data = "1 subgoal (ID 379)	  	  X : Type	  Z : Type	  H_N, H_S : Z	  f : X -> H_N = H_S	  n : NullHomotopy (Susp_rec H_N H_S f)	  x : X	  ============================	  f x @ n.2 South = ap (Susp_rec H_N H_S f) (merid x) @ n.2 South	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 380) is:	 ap (Susp_rec H_N H_S f) (merid x) @ n.2 South = n.2 North	";
             responses[i]=data;
           
 

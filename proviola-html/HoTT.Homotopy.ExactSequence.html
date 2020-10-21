@@ -223,7 +223,7 @@
           
 
             i = 41;
-            data = "1 subgoal (ID 55)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  cx : IsComplex i f	  ============================	  F -> pfiber f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 57)		subgoal 1 (ID 57) is:	 (fun x : F => (i x; cx x)) (point F) = point (pfiber f)	";
+            data = "1 subgoal (ID 55)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  cx : IsComplex i f	  ============================	  F -> pfiber f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 57) is:	 (fun x : F => (i x; cx x)) (point F) = point (pfiber f)	";
             responses[i]=data;
           
 
@@ -363,7 +363,7 @@
           
 
             i = 69;
-            data = "1 subgoal (ID 77)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  cx : IsComplex i f	  ============================	  pfib f o* cxfib cx == i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 79)		subgoal 1 (ID 79) is:	 (fun u : F => 1) (point F) = dpoint_eq (pfib f o* cxfib cx) @ (dpoint_eq i)^	";
+            data = "1 subgoal (ID 77)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  cx : IsComplex i f	  ============================	  pfib f o* cxfib cx == i	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 79) is:	 (fun u : F => 1) (point F) = dpoint_eq (pfib f o* cxfib cx) @ (dpoint_eq i)^	";
             responses[i]=data;
           
 
@@ -378,7 +378,7 @@
           
 
             i = 72;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
@@ -403,7 +403,7 @@
           
 
             i = 77;
-            data = "No more subgoals.	1 subgoal (ID 81)	  	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  cx : IsComplex i f	  ============================	  IsComplex (ptr_functor n i) (ptr_functor n f)	";
+            data = "1 subgoal (ID 81)	  	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  cx : IsComplex i f	  ============================	  IsComplex (ptr_functor n i) (ptr_functor n f)	";
             responses[i]=data;
           
 
@@ -858,7 +858,7 @@
           
 
             i = 168;
-            data = "1 subgoal (ID 482)	  	  n : Modality	  F, F', X, X' : pType	  Y : pType	  i : F ->* X	  i' : F' ->* X'	  g : F' <~>* F	  h : X' <~>* X	  p : Square g h i' i	  f : X ->* Y	  H : IsExact n i f	  ============================	  hfiber (fun x : X' => f (h x)) (point Y) <~> pfiber f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 483)		subgoal 1 (ID 483) is:	 IsConnMap n	   (equiv_functor_hfiber (fun x : X' => 1) (point Y)	    o (fun x : F' => (i' x; 1 @ (ap f (p x) @ (1 @ (cx_isexact (g x) @ 1))))))	";
+            data = "1 subgoal (ID 482)	  	  n : Modality	  F, F', X, X' : pType	  Y : pType	  i : F ->* X	  i' : F' ->* X'	  g : F' <~>* F	  h : X' <~>* X	  p : Square g h i' i	  f : X ->* Y	  H : IsExact n i f	  ============================	  hfiber (fun x : X' => f (h x)) (point Y) <~> pfiber f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 483) is:	 IsConnMap n	   (equiv_functor_hfiber (fun x : X' => 1) (point Y)	    o (fun x : F' => (i' x; 1 @ (ap f (p x) @ (1 @ (cx_isexact (g x) @ 1))))))	";
             responses[i]=data;
           
 
@@ -968,7 +968,7 @@
           
 
             i = 190;
-            data = "1 subgoal (ID 696)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  (cxfib cx_isexact u).1 =	  (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 698)		subgoal 1 (ID 698) is:	 (cxfib cx_isexact u).2 =	 ap (k o* f') 1 @ (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).2	1 subgoal (ID 698)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  (cxfib cx_isexact u).2 =	  ap (k o* f') 1 @ (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).2	1 subgoal (ID 700)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1)))) =	  1 @	  ((1 @	    ap k	      ((((1 @ (1 @ eissect k (f' (i' u)))) @ 1)^ @	        ap k^-1	          (1 @ (q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1))))))) @	       moveR_equiv_V (point Y) (point Y') (point_eq k)^)) @ 	   point_eq k)	";
+            data = "1 subgoal (ID 696)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  (cxfib cx_isexact u).1 =	  (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 698) is:	 (cxfib cx_isexact u).2 =	 ap (k o* f') 1 @ (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).2	1 subgoal (ID 698)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  (cxfib cx_isexact u).2 =	  ap (k o* f') 1 @ (e (cxfib (iscomplex_cancelR i' f' k cx_isexact) u)).2	1 subgoal (ID 700)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1)))) =	  1 @	  ((1 @	    ap k	      ((((1 @ (1 @ eissect k (f' (i' u)))) @ 1)^ @	        ap k^-1	          (1 @ (q (i' u) @ (1 @ (ap f (p u) @ (1 @ (cx_isexact (g u) @ 1))))))) @	       moveR_equiv_V (point Y) (point Y') (point_eq k)^)) @ 	   point_eq k)	";
             responses[i]=data;
           
 
@@ -1073,7 +1073,7 @@
           
 
             i = 211;
-            data = "1 subgoal (ID 564)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  f o* pfib f == pconst	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 566)		subgoal 1 (ID 566) is:	 (fun x0 : pfiber f => (fun x : X => idmap) x0.1 x0.2) (point (pfiber f)) =	 dpoint_eq (f o* pfib f) @ (dpoint_eq pconst)^	";
+            data = "1 subgoal (ID 564)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  f o* pfib f == pconst	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 566) is:	 (fun x0 : pfiber f => (fun x : X => idmap) x0.1 x0.2) (point (pfiber f)) =	 dpoint_eq (f o* pfib f) @ (dpoint_eq pconst)^	";
             responses[i]=data;
           
 
@@ -1168,7 +1168,7 @@
           
 
             i = 230;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 727)		subgoal 1 (ID 727) is:	 (fun u : F => (fs.2 u).2) (point F) =	 dpoint_eq (fs.1 o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 2 (ID 662) is:	 IsConnMap purely (cxfib (Build_pHomotopy (fun u : F => (fs.2 u).2) ?q))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 727) is:	 (fun u : F => (fs.2 u).2) (point F) =	 dpoint_eq (fs.1 o* i_fiberseq fs) @ (dpoint_eq pconst)^	subgoal 2 (ID 662) is:	 IsConnMap purely (cxfib (Build_pHomotopy (fun u : F => (fs.2 u).2) ?q))	";
             responses[i]=data;
           
 
@@ -1203,7 +1203,7 @@
           
 
             i = 237;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 662)		subgoal 1 (ID 662) is:	 IsConnMap purely	   (cxfib	      (Build_pHomotopy (fun u : F => (fs.2 u).2)	         (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	            (dpoint_eq (fs.1 o* i_fiberseq fs))	            (concat_p1 (fs.2 (point F)).2 @	             moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	               (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	               ((whiskerR	                   (inverse2 (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                   (fs.2 (point F)).2 @	                 (transport_paths_Fl (point_eq fs.2) ..1 (fs.2 (point F)).2)^) @	                (point_eq fs.2) ..2)))))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 662) is:	 IsConnMap purely	   (cxfib	      (Build_pHomotopy (fun u : F => (fs.2 u).2)	         (moveL_pV (dpoint_eq pconst) (fs.2 (point F)).2	            (dpoint_eq (fs.1 o* i_fiberseq fs))	            (concat_p1 (fs.2 (point F)).2 @	             moveL_Mp (point_eq fs.1) (fs.2 (point F)).2	               (ap fs.1 (ap pr1 (point_eq fs.2) @ 1))	               ((whiskerR	                   (inverse2 (ap (ap fs.1) (concat_p1 (point_eq fs.2) ..1)))	                   (fs.2 (point F)).2 @	                 (transport_paths_Fl (point_eq fs.2) ..1 (fs.2 (point F)).2)^) @	                (point_eq fs.2) ..2)))))	";
             responses[i]=data;
           
 
@@ -1383,7 +1383,7 @@
           
 
             i = 273;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 695)		subgoal 1 (ID 695) is:	 loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	 i_fiberseq (fiberseq_loops (fiberseq_isexact_purely i f))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 695) is:	 loops_functor (pfib f) o* loops_functor (cxfib cx_isexact) ==*	 i_fiberseq (fiberseq_loops (fiberseq_isexact_purely i f))	";
             responses[i]=data;
           
 
@@ -1473,7 +1473,7 @@
           
 
             i = 291;
-            data = "1 subgoal (ID 710)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact (Tr n) i f	  ============================	  IsConnMap (Tr n) tr	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal (ID 711)		subgoal 1 (ID 711) is:	 IsConnMap (Tr n) (cxfib (iscomplex_ptr n.+1 i f cx_isexact) o tr)	1 subgoal (ID 711)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact (Tr n) i f	  ============================	  IsConnMap (Tr n) (cxfib (iscomplex_ptr n.+1 i f cx_isexact) o tr)	2 focused subgoals	(shelved: 1) (ID 791)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact (Tr n) i f	  ============================	  ?Goal == (fun x : F => cxfib (iscomplex_ptr n.+1 i f cx_isexact) (tr x))		subgoal 2 (ID 792) is:	 IsConnMap (Tr n) ?Goal	";
+            data = "1 subgoal (ID 710)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact (Tr n) i f	  ============================	  IsConnMap (Tr n) tr	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 711) is:	 IsConnMap (Tr n) (cxfib (iscomplex_ptr n.+1 i f cx_isexact) o tr)	1 subgoal (ID 711)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact (Tr n) i f	  ============================	  IsConnMap (Tr n) (cxfib (iscomplex_ptr n.+1 i f cx_isexact) o tr)	2 focused subgoals	(shelved: 1) (ID 791)	  	  H : Univalence	  n : trunc_index	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H0 : IsExact (Tr n) i f	  ============================	  ?Goal == (fun x : F => cxfib (iscomplex_ptr n.+1 i f cx_isexact) (tr x))		subgoal 2 (ID 792) is:	 IsConnMap (Tr n) ?Goal	";
             responses[i]=data;
           
 
@@ -1493,7 +1493,7 @@
           
 
             i = 295;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 824)		subgoal 1 (ID 824) is:	 IsConnMap (Tr n) (cxfib cx_isexact)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 824) is:	 IsConnMap (Tr n) (cxfib cx_isexact)	";
             responses[i]=data;
           
 
@@ -1723,7 +1723,7 @@
           
 
             i = 341;
-            data = "1 focused subgoal	(shelved: 1) (ID 1049)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  Square	    (pequiv_pfiber	       (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	       (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)))	    (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	       (square_pfib_pequiv_cxfib i f)) (pfib (pfib i)) 	    ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1050)		subgoal 1 (ID 1050) is:	 Square (loops_inv X o* pfiber2_loops (pfib f)) (pfiber2_loops f)	   (pfib (pfib (pfib f))) (loops_functor f)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 1049)	  	  F, X, Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  ============================	  Square	    (pequiv_pfiber	       (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)) pequiv_cxfib	       (square_pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	          (square_pfib_pequiv_cxfib i f)))	    (pequiv_pfiber pequiv_cxfib pequiv_pmap_idmap	       (square_pfib_pequiv_cxfib i f)) (pfib (pfib i)) 	    ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1050) is:	 Square (loops_inv X o* pfiber2_loops (pfib f)) (pfiber2_loops f)	   (pfib (pfib (pfib f))) (loops_functor f)	";
             responses[i]=data;
           
 
@@ -1898,17 +1898,17 @@
           
 
             i = 376;
-            data = "";
+            data = "6 subgoals (ID 921)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y		subgoal 2 (ID 922) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 3 (ID 923) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 4 (ID 924) is:	 IsExact purely ?Goal0 ?Goal	subgoal 5 (ID 925) is:	 IsExact purely ?Goal1 ?Goal0	subgoal 6 (ID 926) is:	 IsExact purely ?Goal@{n:=Nat.succ n} ?Goal1	1 subgoal (ID 921)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	5 subgoals		subgoal 1 (ID 922) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 2 (ID 923) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 924) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 925) is:	 IsExact purely ?Goal0 ?Goal	subgoal 5 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	";
             responses[i]=data;
           
 
             i = 377;
-            data = "6 subgoals (ID 921)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y		subgoal 2 (ID 922) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 3 (ID 923) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 4 (ID 924) is:	 IsExact purely ?Goal0 ?Goal	subgoal 5 (ID 925) is:	 IsExact purely ?Goal1 ?Goal0	subgoal 6 (ID 926) is:	 IsExact purely ?Goal@{n:=Nat.succ n} ?Goal1	1 subgoal (ID 921)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	5 subgoals (ID 922)		subgoal 1 (ID 922) is:	 iterated_loops n F ->* iterated_loops n X	subgoal 2 (ID 923) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 924) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 925) is:	 IsExact purely ?Goal0 ?Goal	subgoal 5 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	5 subgoals (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X		subgoal 2 (ID 923) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 924) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 925) is:	 IsExact purely ?Goal0 ?Goal	subgoal 5 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	1 subgoal (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals (ID 923)		subgoal 1 (ID 923) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 2 (ID 924) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 925) is:	 IsExact purely ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal	";
+            data = "5 subgoals (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X		subgoal 2 (ID 923) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 3 (ID 924) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	subgoal 4 (ID 925) is:	 IsExact purely ?Goal0 ?Goal	subgoal 5 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	1 subgoal (ID 922)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals		subgoal 1 (ID 923) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	subgoal 2 (ID 924) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 925) is:	 IsExact purely ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal	";
             responses[i]=data;
           
 
             i = 378;
-            data = "4 subgoals (ID 923)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F		subgoal 2 (ID 924) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 925) is:	 IsExact purely ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal	1 subgoal (ID 923)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 subgoals (ID 924)		subgoal 1 (ID 924) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 2 (ID 925) is:	 IsExact purely	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	   (iterated_loops_functor n i)	subgoal 3 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f)	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	";
+            data = "4 subgoals (ID 923)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F		subgoal 2 (ID 924) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 3 (ID 925) is:	 IsExact purely ?Goal (iterated_loops_functor n i)	subgoal 4 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal	1 subgoal (ID 923)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  loops (iterated_loops n Y) ->* iterated_loops n F	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 subgoals		subgoal 1 (ID 924) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	subgoal 2 (ID 925) is:	 IsExact purely	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	   (iterated_loops_functor n i)	subgoal 3 (ID 926) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f)	   (connecting_map (iterated_loops_functor n i) (iterated_loops_functor n f))	";
             responses[i]=data;
           
 

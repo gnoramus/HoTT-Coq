@@ -1403,7 +1403,7 @@
           
 
             i = 277;
-            data = "1 focused subgoal	(shelved: 1) (ID 166)	  	  H : Funext	  A : Type	  B : A -> Type	  x0 : A	  P : (forall a : A, B a) -> B x0 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P f (f x0)	  ============================	  transport (fun f0 : forall a : A, B a => P f0 (f0 x0)) 	    (path_forall f g e) Px = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 167)		subgoal 1 (ID 167) is:	 transport (fun x : (forall a : A, B a) * B x0 => P (fst x) (snd x))	   (path_prod' (path_forall f g e) (e x0)) Px =	 transport (fun x : forall x : A, B x => P x (g x0)) 	   (path_forall f g e) (transport (fun y : B x0 => P f y) (e x0) Px)	";
+            data = "1 focused subgoal	(shelved: 1) (ID 166)	  	  H : Funext	  A : Type	  B : A -> Type	  x0 : A	  P : (forall a : A, B a) -> B x0 -> Type	  f, g : forall a : A, B a	  e : f == g	  Px : P f (f x0)	  ============================	  transport (fun f0 : forall a : A, B a => P f0 (f0 x0)) 	    (path_forall f g e) Px = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 167) is:	 transport (fun x : (forall a : A, B a) * B x0 => P (fst x) (snd x))	   (path_prod' (path_forall f g e) (e x0)) Px =	 transport (fun x : forall x : A, B x => P x (g x0)) 	   (path_forall f g e) (transport (fun y : B x0 => P f y) (e x0) Px)	";
             responses[i]=data;
           
 

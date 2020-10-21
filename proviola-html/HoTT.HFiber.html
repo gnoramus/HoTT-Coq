@@ -298,7 +298,7 @@
           
 
             i = 56;
-            data = "1 subgoal (ID 261)	  	  A : Type	  B : Type	  f, g : A -> B	  h : f == g	  b : B	  a : A	  p : g a = b	  ============================	  (h a)^ @ (h a @ p) = p	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 264)		subgoal 1 (ID 264) is:	 h a @ ((h a)^ @ p) = p	";
+            data = "1 subgoal (ID 261)	  	  A : Type	  B : Type	  f, g : A -> B	  h : f == g	  b : B	  a : A	  p : g a = b	  ============================	  (h a)^ @ (h a @ p) = p	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 264) is:	 h a @ ((h a)^ @ p) = p	";
             responses[i]=data;
           
 
@@ -348,7 +348,7 @@
           
 
             i = 66;
-            data = "1 subgoal (ID 217)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  ============================	  A -> C	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 219)		subgoal 1 (ID 219) is:	 forall a : A, (fun x : A => f x = b) a -> (fun x : C => g x = k b) (h a)	";
+            data = "1 subgoal (ID 217)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  ============================	  A -> C	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 219) is:	 forall a : A, (fun x : A => f x = b) a -> (fun x : C => g x = k b) (h a)	";
             responses[i]=data;
           
 
@@ -428,7 +428,7 @@
           
 
             i = 82;
-            data = "1 subgoal (ID 675)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  b' : D	  q : k b = b'	  ============================	  A -> C	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 677)		subgoal 1 (ID 677) is:	 forall a : A, (fun x : A => f x = b) a -> (fun x : C => g x = b') (h a)	";
+            data = "1 subgoal (ID 675)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  b' : D	  q : k b = b'	  ============================	  A -> C	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 677) is:	 forall a : A, (fun x : A => f x = b) a -> (fun x : C => g x = b') (h a)	";
             responses[i]=data;
           
 
@@ -678,7 +678,7 @@
           
 
             i = 132;
-            data = "1 subgoal (ID 982)	  	  B : Type	  C : Type	  f : C -> B	  ============================	  Sect (fun c : {y : B & {x : C & f x = y}} => (c.2).1)	    (fun c : C => (f c; c; 1))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 987)		subgoal 1 (ID 987) is:	 forall x : C,	 (fun x0 : {y : B & {x0 : C & f x0 = y}} =>	  (fun (proj1_sig : B) (proj2_sig : {x1 : C & f x1 = proj1_sig}) =>	   (fun (proj1_sig0 : C) (proj2_sig0 : f proj1_sig0 = proj1_sig) =>	    match	      proj2_sig0 as p in (_ = y)	      return	        ((f ((y; proj1_sig0; p).2).1; ((y; proj1_sig0; p).2).1; 1) =	         (y; proj1_sig0; p))	    with	    | 1 => 1	    end) proj2_sig.1 proj2_sig.2) x0.1 x0.2) ((fun c : C => (f c; c; 1)) x) =	 ap (fun c : C => (f c; c; 1)) ((fun c : C => 1) x)	";
+            data = "1 subgoal (ID 982)	  	  B : Type	  C : Type	  f : C -> B	  ============================	  Sect (fun c : {y : B & {x : C & f x = y}} => (c.2).1)	    (fun c : C => (f c; c; 1))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 987) is:	 forall x : C,	 (fun x0 : {y : B & {x0 : C & f x0 = y}} =>	  (fun (proj1_sig : B) (proj2_sig : {x1 : C & f x1 = proj1_sig}) =>	   (fun (proj1_sig0 : C) (proj2_sig0 : f proj1_sig0 = proj1_sig) =>	    match	      proj2_sig0 as p in (_ = y)	      return	        ((f ((y; proj1_sig0; p).2).1; ((y; proj1_sig0; p).2).1; 1) =	         (y; proj1_sig0; p))	    with	    | 1 => 1	    end) proj2_sig.1 proj2_sig.2) x0.1 x0.2) ((fun c : C => (f c; c; 1)) x) =	 ap (fun c : C => (f c; c; 1)) ((fun c : C => 1) x)	";
             responses[i]=data;
           
 
@@ -708,7 +708,7 @@
           
 
             i = 138;
-            data = "1 subgoal (ID 997)	  	  X : Type	  x : X	  P : X -> Type	  ============================	  Sect (fun Px : {z : {x : _ & P x} & z.1 = x} => transport P Px.2 (Px.1).2)	    (fun Px : P x => ((x; Px); 1))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1002)		subgoal 1 (ID 1002) is:	 forall x0 : P x,	 (fun x1 : {z : {x : _ & P x} & z.1 = x} =>	  (fun proj1_sig : {x : _ & P x} =>	   (fun (proj1_sig0 : X) (proj2_sig : P proj1_sig0)	      (proj2_sig0 : (proj1_sig0; proj2_sig).1 = x) =>	    match	      proj2_sig0 as p in (_ = y)	      return	        (((y;	          transport P ((proj1_sig0; proj2_sig); p).2	            (((proj1_sig0; proj2_sig); p).1).2); 1) =	         ((proj1_sig0; proj2_sig); p))	    with	    | 1 => 1	    end) proj1_sig.1 proj1_sig.2) x1.1 x1.2)	   ((fun Px : P x => ((x; Px); 1)) x0) =	 ap (fun Px : P x => ((x; Px); 1)) ((fun Px : P x => 1) x0)	";
+            data = "1 subgoal (ID 997)	  	  X : Type	  x : X	  P : X -> Type	  ============================	  Sect (fun Px : {z : {x : _ & P x} & z.1 = x} => transport P Px.2 (Px.1).2)	    (fun Px : P x => ((x; Px); 1))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1002) is:	 forall x0 : P x,	 (fun x1 : {z : {x : _ & P x} & z.1 = x} =>	  (fun proj1_sig : {x : _ & P x} =>	   (fun (proj1_sig0 : X) (proj2_sig : P proj1_sig0)	      (proj2_sig0 : (proj1_sig0; proj2_sig).1 = x) =>	    match	      proj2_sig0 as p in (_ = y)	      return	        (((y;	          transport P ((proj1_sig0; proj2_sig); p).2	            (((proj1_sig0; proj2_sig); p).1).2); 1) =	         ((proj1_sig0; proj2_sig); p))	    with	    | 1 => 1	    end) proj1_sig.1 proj1_sig.2) x1.1 x1.2)	   ((fun Px : P x => ((x; Px); 1)) x0) =	 ap (fun Px : P x => ((x; Px); 1)) ((fun Px : P x => 1) x0)	";
             responses[i]=data;
           
 
@@ -803,7 +803,7 @@
           
 
             i = 157;
-            data = "1 focused subgoal	(shelved: 1) (ID 1028)	  	  n : trunc_index	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  b : B	  a : A	  ============================	  {p : g (f a) = g b & (f a; p) = (b; 1)} <~> ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 1027)		subgoal 1 (ID 1027) is:	 {p : g (f a) = g b &	 {p0 : (f a; p).1 = (b; 1).1 &	 transport (fun x : B => g x = g b) p0 (f a; p).2 = (b; 1).2}} <~> 	 f a = b	";
+            data = "1 focused subgoal	(shelved: 1) (ID 1028)	  	  n : trunc_index	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  b : B	  a : A	  ============================	  {p : g (f a) = g b & (f a; p) = (b; 1)} <~> ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1027) is:	 {p : g (f a) = g b &	 {p0 : (f a; p).1 = (b; 1).1 &	 transport (fun x : B => g x = g b) p0 (f a; p).2 = (b; 1).2}} <~> 	 f a = b	";
             responses[i]=data;
           
 

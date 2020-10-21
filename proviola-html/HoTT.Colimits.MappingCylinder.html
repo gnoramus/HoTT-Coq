@@ -298,12 +298,12 @@
           
 
             i = 56;
-            data = "1 subgoal (ID 76)	  	  A : Type	  B : Type	  f : A -> B	  P : Cyl f -> Type	  cyla : forall a : A, P (cyl a)	  cylb : forall b : B, P (cyr b)	  cylg : forall a : A, DPath P (cyglue a) (cyla a) (cylb (f a))	  ============================	  forall b : A, P (pushl b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 78)		subgoal 1 (ID 78) is:	 forall c : B, P (pushr c)	subgoal 2 (ID 80) is:	 forall a : A, transport P (pglue a) (cyla (idmap a)) = ?pushc (f a)	";
+            data = "1 subgoal (ID 76)	  	  A : Type	  B : Type	  f : A -> B	  P : Cyl f -> Type	  cyla : forall a : A, P (cyl a)	  cylb : forall b : B, P (cyr b)	  cylg : forall a : A, DPath P (cyglue a) (cyla a) (cylb (f a))	  ============================	  forall b : A, P (pushl b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 78) is:	 forall c : B, P (pushr c)	subgoal 2 (ID 80) is:	 forall a : A, transport P (pglue a) (cyla (idmap a)) = ?pushc (f a)	";
             responses[i]=data;
           
 
             i = 57;
-            data = "1 subgoal (ID 78)	  	  A : Type	  B : Type	  f : A -> B	  P : Cyl f -> Type	  cyla : forall a : A, P (cyl a)	  cylb : forall b : B, P (cyr b)	  cylg : forall a : A, DPath P (cyglue a) (cyla a) (cylb (f a))	  ============================	  forall c : B, P (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 80)		subgoal 1 (ID 80) is:	 forall a : A, transport P (pglue a) (cyla (idmap a)) = cylb (f a)	";
+            data = "1 subgoal (ID 78)	  	  A : Type	  B : Type	  f : A -> B	  P : Cyl f -> Type	  cyla : forall a : A, P (cyl a)	  cylb : forall b : B, P (cyr b)	  cylg : forall a : A, DPath P (cyglue a) (cyla a) (cylb (f a))	  ============================	  forall c : B, P (pushr c)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 80) is:	 forall a : A, transport P (pglue a) (cyla (idmap a)) = cylb (f a)	";
             responses[i]=data;
           
 
@@ -383,12 +383,12 @@
           
 
             i = 73;
-            data = "1 subgoal (ID 80)	  	  A : Type	  B : Type	  f : A -> B	  P : Type	  cyla : A -> P	  cylb : B -> P	  cylg : cyla == cylb o f	  ============================	  A -> P	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 82)		subgoal 1 (ID 82) is:	 B -> P	subgoal 2 (ID 84) is:	 forall a : A, cyla (idmap a) = ?pushc (f a)	";
+            data = "1 subgoal (ID 80)	  	  A : Type	  B : Type	  f : A -> B	  P : Type	  cyla : A -> P	  cylb : B -> P	  cylg : cyla == cylb o f	  ============================	  A -> P	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 82) is:	 B -> P	subgoal 2 (ID 84) is:	 forall a : A, cyla (idmap a) = ?pushc (f a)	";
             responses[i]=data;
           
 
             i = 74;
-            data = "1 subgoal (ID 82)	  	  A : Type	  B : Type	  f : A -> B	  P : Type	  cyla : A -> P	  cylb : B -> P	  cylg : cyla == cylb o f	  ============================	  B -> P	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 84)		subgoal 1 (ID 84) is:	 forall a : A, cyla (idmap a) = cylb (f a)	";
+            data = "1 subgoal (ID 82)	  	  A : Type	  B : Type	  f : A -> B	  P : Type	  cyla : A -> P	  cylb : B -> P	  cylg : cyla == cylb o f	  ============================	  B -> P	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 84) is:	 forall a : A, cyla (idmap a) = cylb (f a)	";
             responses[i]=data;
           
 
@@ -513,17 +513,17 @@
           
 
             i = 99;
-            data = "1 subgoal (ID 137)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  A -> B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	5 subgoals (ID 139)		subgoal 1 (ID 139) is:	 B -> B	subgoal 2 (ID 141) is:	 f == ?cylb o f	subgoal 3 (ID 121) is:	 Sect (Cyl_rec f ?cylb ?cylg) cyr	subgoal 4 (ID 123) is:	 Sect cyr (Cyl_rec f ?cylb ?cylg)	subgoal 5 (ID 125) is:	 forall x : B, ?eisretr (cyr x) = ap cyr (?eissect x)	";
+            data = "1 subgoal (ID 137)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  A -> B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	5 subgoals		subgoal 1 (ID 139) is:	 B -> B	subgoal 2 (ID 141) is:	 f == ?cylb o f	subgoal 3 (ID 121) is:	 Sect (Cyl_rec f ?cylb ?cylg) cyr	subgoal 4 (ID 123) is:	 Sect cyr (Cyl_rec f ?cylb ?cylg)	subgoal 5 (ID 125) is:	 forall x : B, ?eisretr (cyr x) = ap cyr (?eissect x)	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 subgoal (ID 139)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  B -> B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 141)		subgoal 1 (ID 141) is:	 f == idmap o f	subgoal 2 (ID 121) is:	 Sect (Cyl_rec f idmap ?cylg) cyr	subgoal 3 (ID 123) is:	 Sect cyr (Cyl_rec f idmap ?cylg)	subgoal 4 (ID 125) is:	 forall x : B, ?eisretr (cyr x) = ap cyr (?eissect x)	";
+            data = "1 subgoal (ID 139)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  B -> B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals		subgoal 1 (ID 141) is:	 f == idmap o f	subgoal 2 (ID 121) is:	 Sect (Cyl_rec f idmap ?cylg) cyr	subgoal 3 (ID 123) is:	 Sect cyr (Cyl_rec f idmap ?cylg)	subgoal 4 (ID 125) is:	 forall x : B, ?eisretr (cyr x) = ap cyr (?eissect x)	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 141)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  f == idmap o f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals (ID 121)		subgoal 1 (ID 121) is:	 Sect (Cyl_rec f idmap (fun x0 : A => 1)) cyr	subgoal 2 (ID 123) is:	 Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	subgoal 3 (ID 125) is:	 forall x : B, ?eisretr (cyr x) = ap cyr (?eissect x)	";
+            data = "1 subgoal (ID 141)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  f == idmap o f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals		subgoal 1 (ID 121) is:	 Sect (Cyl_rec f idmap (fun x0 : A => 1)) cyr	subgoal 2 (ID 123) is:	 Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	subgoal 3 (ID 125) is:	 forall x : B, ?eisretr (cyr x) = ap cyr (?eissect x)	";
             responses[i]=data;
           
 
@@ -538,12 +538,12 @@
           
 
             i = 104;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals (ID 167)		subgoal 1 (ID 167) is:	 forall b : B,	 (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c) (cyr b)	subgoal 2 (ID 169) is:	 forall a : A,	 DPath (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (cyglue a) ((fun a0 : A => (cyglue a0)^) a) (?cylb (f a))	subgoal 3 (ID 123) is:	 Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	subgoal 4 (ID 125) is:	 forall x : B,	 Cyl_ind_dp (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (fun a : A => (cyglue a)^) ?cylb ?cylg (cyr x) = 	 ap cyr (?eissect x)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	4 subgoals		subgoal 1 (ID 167) is:	 forall b : B,	 (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c) (cyr b)	subgoal 2 (ID 169) is:	 forall a : A,	 DPath (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (cyglue a) ((fun a0 : A => (cyglue a0)^) a) (?cylb (f a))	subgoal 3 (ID 123) is:	 Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	subgoal 4 (ID 125) is:	 forall x : B,	 Cyl_ind_dp (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (fun a : A => (cyglue a)^) ?cylb ?cylg (cyr x) = 	 ap cyr (?eissect x)	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 subgoal (ID 167)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  forall b : B,	  (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c) (cyr b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals (ID 169)		subgoal 1 (ID 169) is:	 forall a : A,	 DPath (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (cyglue a) ((fun a0 : A => (cyglue a0)^) a) ((fun b : B => 1) (f a))	subgoal 2 (ID 123) is:	 Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	subgoal 3 (ID 125) is:	 forall x : B,	 Cyl_ind_dp (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (fun a : A => (cyglue a)^) (fun b : B => 1) ?cylg 	   (cyr x) = ap cyr (?eissect x)	";
+            data = "1 subgoal (ID 167)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  forall b : B,	  (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c) (cyr b)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals		subgoal 1 (ID 169) is:	 forall a : A,	 DPath (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (cyglue a) ((fun a0 : A => (cyglue a0)^) a) ((fun b : B => 1) (f a))	subgoal 2 (ID 123) is:	 Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	subgoal 3 (ID 125) is:	 forall x : B,	 Cyl_ind_dp (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (fun a : A => (cyglue a)^) (fun b : B => 1) ?cylg 	   (cyr x) = ap cyr (?eissect x)	";
             responses[i]=data;
           
 
@@ -563,12 +563,12 @@
           
 
             i = 109;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 123)		subgoal 1 (ID 123) is:	 Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	subgoal 2 (ID 125) is:	 forall x : B,	 Cyl_ind_dp (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (fun a : A => (cyglue a)^) (fun b : B => 1)	   (fun a : A =>	    let X :=	      fun (p : cyl a = cyr (f a))	        (q : cyr (Cyl_rec f idmap (fun x0 : A => 1) (cyl a)) = cyl a)	        (r : cyr (Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a))) = cyr (f a))	      => equiv_fun (dp_paths_FFlr p q r) in	    X (cyglue a) (cyglue a)^ 1	      (internal_paths_rew_r	         (Cyl_rec f idmap (fun x0 : A => 1) (cyl a) =	          Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a)))	         (ap (Cyl_rec f idmap (fun x0 : A => 1)) (cyglue a)) 1	         (fun	            p : Cyl_rec f idmap (fun x0 : A => 1) (cyl a) =	                Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a)) =>	          ((ap cyr p)^ @ (cyglue a)^) @ cyglue a = 1)	         (concat_pV_p 1 (cyglue a))	         (Cyl_rec_beta_cyglue f idmap (fun x0 : A => 1) a))) 	   (cyr x) = ap cyr (?eissect x)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 123) is:	 Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	subgoal 2 (ID 125) is:	 forall x : B,	 Cyl_ind_dp (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (fun a : A => (cyglue a)^) (fun b : B => 1)	   (fun a : A =>	    let X :=	      fun (p : cyl a = cyr (f a))	        (q : cyr (Cyl_rec f idmap (fun x0 : A => 1) (cyl a)) = cyl a)	        (r : cyr (Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a))) = cyr (f a))	      => equiv_fun (dp_paths_FFlr p q r) in	    X (cyglue a) (cyglue a)^ 1	      (internal_paths_rew_r	         (Cyl_rec f idmap (fun x0 : A => 1) (cyl a) =	          Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a)))	         (ap (Cyl_rec f idmap (fun x0 : A => 1)) (cyglue a)) 1	         (fun	            p : Cyl_rec f idmap (fun x0 : A => 1) (cyl a) =	                Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a)) =>	          ((ap cyr p)^ @ (cyglue a)^) @ cyglue a = 1)	         (concat_pV_p 1 (cyglue a))	         (Cyl_rec_beta_cyglue f idmap (fun x0 : A => 1) a))) 	   (cyr x) = ap cyr (?eissect x)	";
             responses[i]=data;
           
 
             i = 110;
-            data = "1 subgoal (ID 123)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 125)		subgoal 1 (ID 125) is:	 forall x : B,	 Cyl_ind_dp (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (fun a : A => (cyglue a)^) (fun b : B => 1)	   (fun a : A =>	    let X :=	      fun (p : cyl a = cyr (f a))	        (q : cyr (Cyl_rec f idmap (fun x0 : A => 1) (cyl a)) = cyl a)	        (r : cyr (Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a))) = cyr (f a))	      => equiv_fun (dp_paths_FFlr p q r) in	    X (cyglue a) (cyglue a)^ 1	      (internal_paths_rew_r	         (Cyl_rec f idmap (fun x0 : A => 1) (cyl a) =	          Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a)))	         (ap (Cyl_rec f idmap (fun x0 : A => 1)) (cyglue a)) 1	         (fun	            p : Cyl_rec f idmap (fun x0 : A => 1) (cyl a) =	                Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a)) =>	          ((ap cyr p)^ @ (cyglue a)^) @ cyglue a = 1)	         (concat_pV_p 1 (cyglue a))	         (Cyl_rec_beta_cyglue f idmap (fun x0 : A => 1) a))) 	   (cyr x) = ap cyr ((fun b : B => 1) x)	";
+            data = "1 subgoal (ID 123)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  Sect cyr (Cyl_rec f idmap (fun x0 : A => 1))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 125) is:	 forall x : B,	 Cyl_ind_dp (fun c : Cyl f => cyr (Cyl_rec f idmap (fun x0 : A => 1) c) = c)	   (fun a : A => (cyglue a)^) (fun b : B => 1)	   (fun a : A =>	    let X :=	      fun (p : cyl a = cyr (f a))	        (q : cyr (Cyl_rec f idmap (fun x0 : A => 1) (cyl a)) = cyl a)	        (r : cyr (Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a))) = cyr (f a))	      => equiv_fun (dp_paths_FFlr p q r) in	    X (cyglue a) (cyglue a)^ 1	      (internal_paths_rew_r	         (Cyl_rec f idmap (fun x0 : A => 1) (cyl a) =	          Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a)))	         (ap (Cyl_rec f idmap (fun x0 : A => 1)) (cyglue a)) 1	         (fun	            p : Cyl_rec f idmap (fun x0 : A => 1) (cyl a) =	                Cyl_rec f idmap (fun x0 : A => 1) (cyr (f a)) =>	          ((ap cyr p)^ @ (cyglue a)^) @ cyglue a = 1)	         (concat_pV_p 1 (cyglue a))	         (Cyl_rec_beta_cyglue f idmap (fun x0 : A => 1) a))) 	   (cyr x) = ap cyr ((fun b : B => 1) x)	";
             responses[i]=data;
           
 
@@ -738,12 +738,12 @@
           
 
             i = 144;
-            data = "1 subgoal (ID 67)	  	  A : Type	  B : Type	  A' : Type	  B' : Type	  f : A -> B	  f' : A' -> B'	  ga : A -> A'	  gb : B -> B'	  g : f' o ga == gb o f	  ============================	  A -> Cyl f'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 69)		subgoal 1 (ID 69) is:	 B -> Cyl f'	subgoal 2 (ID 71) is:	 cyl o ga == ?cylb o f	";
+            data = "1 subgoal (ID 67)	  	  A : Type	  B : Type	  A' : Type	  B' : Type	  f : A -> B	  f' : A' -> B'	  ga : A -> A'	  gb : B -> B'	  g : f' o ga == gb o f	  ============================	  A -> Cyl f'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 69) is:	 B -> Cyl f'	subgoal 2 (ID 71) is:	 cyl o ga == ?cylb o f	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 subgoal (ID 69)	  	  A : Type	  B : Type	  A' : Type	  B' : Type	  f : A -> B	  f' : A' -> B'	  ga : A -> A'	  gb : B -> B'	  g : f' o ga == gb o f	  ============================	  B -> Cyl f'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 71)		subgoal 1 (ID 71) is:	 cyl o ga == cyr o gb o f	";
+            data = "1 subgoal (ID 69)	  	  A : Type	  B : Type	  A' : Type	  B' : Type	  f : A -> B	  f' : A' -> B'	  ga : A -> A'	  gb : B -> B'	  g : f' o ga == gb o f	  ============================	  B -> Cyl f'	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 71) is:	 cyl o ga == cyr o gb o f	";
             responses[i]=data;
           
 

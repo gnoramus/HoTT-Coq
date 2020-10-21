@@ -143,7 +143,7 @@
           
 
             i = 25;
-            data = "1 subgoal (ID 145)	  	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  b : B $-> Y	  c : C $-> Y	  p : b o f == c o g	  ============================	  ab_biprod B C $-> Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 147)		subgoal 1 (ID 147) is:	 forall n : grp_image (ab_biprod_corec f (g $o ab_homo_negation)),	 ab_biprod_rec b c (issubgroup_incl n) = mon_unit	";
+            data = "1 subgoal (ID 145)	  	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  b : B $-> Y	  c : C $-> Y	  p : b o f == c o g	  ============================	  ab_biprod B C $-> Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 147) is:	 forall n : grp_image (ab_biprod_corec f (g $o ab_homo_negation)),	 ab_biprod_rec b c (issubgroup_incl n) = mon_unit	";
             responses[i]=data;
           
 
@@ -253,7 +253,7 @@
           
 
             i = 47;
-            data = "1 subgoal (ID 216)	  	  A, B, C : AbGroup	  f : A $-> B	  g : A $-> C	  a : A	  bc := grp_image_in (ab_biprod_corec f (g $o ab_homo_negation)) a	   : grp_image (ab_biprod_corec f (g $o ab_homo_negation))	  ============================	  - f a = - f a + mon_unit	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 217)		subgoal 1 (ID 217) is:	 - g (- a) = - mon_unit + g a	";
+            data = "1 subgoal (ID 216)	  	  A, B, C : AbGroup	  f : A $-> B	  g : A $-> C	  a : A	  bc := grp_image_in (ab_biprod_corec f (g $o ab_homo_negation)) a	   : grp_image (ab_biprod_corec f (g $o ab_homo_negation))	  ============================	  - f a = - f a + mon_unit	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 217) is:	 - g (- a) = - mon_unit + g a	";
             responses[i]=data;
           
 
@@ -313,17 +313,17 @@
           
 
             i = 59;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 60;
             data = "1 subgoal (ID 472)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  N := grp_image (ab_biprod_corec f (g $o ab_homo_negation))	   : Subgroup (ab_biprod B C)	  ============================	  pr1	    (((equiv_grp_quotient_ump N Y)^-1)%equiv	       (ab_pushout_rec (phi $o ab_pushout_inl) (phi $o ab_pushout_inr)	          (fun a : A => ap phi (ab_pushout_commsq a)))) =	  pr1 (((equiv_grp_quotient_ump N Y)^-1)%equiv phi)	";
             responses[i]=data;
           
 
+            i = 60;
+            data = "1 subgoal (ID 746)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  N := grp_image (ab_biprod_corec f (g $o ab_homo_negation))	   : Subgroup (ab_biprod B C)	  ============================	  ab_pushout_rec (phi $o ab_pushout_inl) (phi $o ab_pushout_inr)	    (fun a : A => ap phi (ab_pushout_commsq a)) $o grp_quotient_map =	  phi $o grp_quotient_map	1 subgoal (ID 762)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  N := grp_image (ab_biprod_corec f (g $o ab_homo_negation))	   : Subgroup (ab_biprod B C)	  ============================	  ab_biprod_rec (phi $o ab_pushout_inl) (phi $o ab_pushout_inr) =	  phi $o grp_quotient_map	1 subgoal (ID 773)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  N := grp_image (ab_biprod_corec f (g $o ab_homo_negation))	   : Subgroup (ab_biprod B C)	  bc : ab_biprod B C	  ============================	  ab_biprod_rec (phi $o ab_pushout_inl) (phi $o ab_pushout_inr) bc =	  (phi $o grp_quotient_map) bc	";
+            responses[i]=data;
+          
+
             i = 61;
-            data = "1 subgoal (ID 746)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  N := grp_image (ab_biprod_corec f (g $o ab_homo_negation))	   : Subgroup (ab_biprod B C)	  ============================	  ab_pushout_rec (phi $o ab_pushout_inl) (phi $o ab_pushout_inr)	    (fun a : A => ap phi (ab_pushout_commsq a)) $o grp_quotient_map =	  phi $o grp_quotient_map	1 subgoal (ID 762)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  N := grp_image (ab_biprod_corec f (g $o ab_homo_negation))	   : Subgroup (ab_biprod B C)	  ============================	  ab_biprod_rec (phi $o ab_pushout_inl) (phi $o ab_pushout_inr) =	  phi $o grp_quotient_map	1 subgoal (ID 773)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  N := grp_image (ab_biprod_corec f (g $o ab_homo_negation))	   : Subgroup (ab_biprod B C)	  bc : ab_biprod B C	  ============================	  ab_biprod_rec (phi $o ab_pushout_inl) (phi $o ab_pushout_inr) bc =	  (phi $o grp_quotient_map) bc	No more subgoals.	";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
@@ -368,7 +368,7 @@
           
 
             i = 70;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals (ID 288)		subgoal 1 (ID 288) is:	 Sect	   (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)))	   (ab_pushout_rec_uncurried f g Y)	subgoal 2 (ID 290) is:	 Sect (ab_pushout_rec_uncurried f g Y)	   (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 288) is:	 Sect	   (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)))	   (ab_pushout_rec_uncurried f g Y)	subgoal 2 (ID 290) is:	 Sect (ab_pushout_rec_uncurried f g Y)	   (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)))	";
             responses[i]=data;
           
 
@@ -378,7 +378,7 @@
           
 
             i = 72;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal (ID 290)		subgoal 1 (ID 290) is:	 Sect (ab_pushout_rec_uncurried f g Y)	   (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 290) is:	 Sect (ab_pushout_rec_uncurried f g Y)	   (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)))	";
             responses[i]=data;
           
 
@@ -408,7 +408,7 @@
           
 
             i = 78;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal (ID 389)		subgoal 1 (ID 389) is:	 transport	   (fun b0 : B $-> Y =>	    {c0 : C $-> Y & (fun x : A => b0 (f x)) == (fun x : A => c0 (g x))})	   (let X := equiv_fun equiv_path_grouphomomorphism in	    X	      (fun x : B =>	       ap (fun k : Y => b x + k) (grp_homo_unit c) @ right_identity (b x)))	   (pr2	      (ab_pushout_rec_uncurried f g Y (b; c; p) $o ab_pushout_inl;	      ab_pushout_rec_uncurried f g Y (b; c; p) $o ab_pushout_inr;	      fun a : A =>	      ap (ab_pushout_rec_uncurried f g Y (b; c; p)) (ab_pushout_commsq a))) =	 pr2 (b; c; p)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 389) is:	 transport	   (fun b0 : B $-> Y =>	    {c0 : C $-> Y & (fun x : A => b0 (f x)) == (fun x : A => c0 (g x))})	   (let X := equiv_fun equiv_path_grouphomomorphism in	    X	      (fun x : B =>	       ap (fun k : Y => b x + k) (grp_homo_unit c) @ right_identity (b x)))	   (pr2	      (ab_pushout_rec_uncurried f g Y (b; c; p) $o ab_pushout_inl;	      ab_pushout_rec_uncurried f g Y (b; c; p) $o ab_pushout_inr;	      fun a : A =>	      ap (ab_pushout_rec_uncurried f g Y (b; c; p)) (ab_pushout_commsq a))) =	 pr2 (b; c; p)	";
             responses[i]=data;
           
 
