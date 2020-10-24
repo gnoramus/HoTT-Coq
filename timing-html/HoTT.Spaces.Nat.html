@@ -39,27 +39,27 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 3
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>Require Export Coq.Init.Peano.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 3
-Time: 0.012s">
-<div class="time" style="width: 19.047619047619%"></div>
+Time: 0.013s">
+<div class="time" style="width: 19.69696969697%"></div>
 <pre>
 Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 4
 Time: 0.009s">
-<div class="time" style="width: 14.285714285714%"></div>
+<div class="time" style="width: 13.636363636364%"></div>
 <pre>
 Require Import HoTT.Types.Bool.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 5
-Time: 0.063s">
+Time: 0.066s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import HoTT.TruncType HoTT.DProp.</pre>
@@ -276,8 +276,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 35
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre> transitivity (m + n).+1.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -389,8 +389,8 @@ Infix "=n" := code_nat : nat_scope.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 67
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
 
 Fixpoint idcode_nat {n} : (n =n n) :=
@@ -402,7 +402,7 @@ Fixpoint idcode_nat {n} : (n =n n) :=
 <div class="code" title="File: Nat.v
 Line: 73
 Time: 0.002s">
-<div class="time" style="width: 3.1746031746032%"></div>
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 
 Fixpoint path_nat {n m} : (n =n m) -&gt; (n = m) :=
@@ -429,8 +429,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 83
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
   refine (isequiv_adjointify
             (@path_nat n m)
@@ -460,7 +460,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 89
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
     by destruct (IHn^)%path.</pre>
 </div>
@@ -486,7 +486,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 91
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: Nat.v
@@ -498,14 +498,14 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 91
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 92
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
 
 Definition equiv_path_nat {n m} : (n =n m) &lt;~&gt; (n = m)
@@ -538,7 +538,7 @@ Proof.</pre>
 <div class="code" title="File: Nat.v
 Line: 101
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
   exact _.</pre>
 </div>
@@ -624,7 +624,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 119
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
 
 Fixpoint subnn {n} : n - n =n 0 :=
@@ -644,8 +644,8 @@ Global Instance leq_refl : Reflexive leq
 </div>
 <div class="code" title="File: Nat.v
 Line: 128
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
 
 Fixpoint leqnSn {n} : n &lt;= S n :=
@@ -656,8 +656,8 @@ Fixpoint leqnSn {n} : n &lt;= S n :=
 </div>
 <div class="code" title="File: Nat.v
 Line: 134
-Time: 0.027s">
-<div class="time" style="width: 42.857142857143%"></div>
+Time: 0.031s">
+<div class="time" style="width: 46.969696969697%"></div>
 <pre>
 
 Fixpoint leq_transd {x y z} : (x &lt;= y -&gt; y &lt;= z -&gt; x &lt;= z)%dprop :=
@@ -674,8 +674,8 @@ Fixpoint leq_transd {x y z} : (x &lt;= y -&gt; y &lt;= z -&gt; x &lt;= z)%dprop 
 </div>
 <div class="code" title="File: Nat.v
 Line: 146
-Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance leq_trans : Transitive (fun n m =&gt; leq n m)
@@ -683,8 +683,8 @@ Global Instance leq_trans : Transitive (fun n m =&gt; leq n m)
 </div>
 <div class="code" title="File: Nat.v
 Line: 149
-Time: 0.014s">
-<div class="time" style="width: 22.222222222222%"></div>
+Time: 0.017s">
+<div class="time" style="width: 25.757575757576%"></div>
 <pre>
 
 Fixpoint leq_antisymd {x y} : (x &lt;= y -&gt; y &lt;= x -&gt; x =n y)%dprop :=
@@ -696,8 +696,8 @@ Fixpoint leq_antisymd {x y} : (x &lt;= y -&gt; y &lt;= x -&gt; x =n y)%dprop :=
 </div>
 <div class="code" title="File: Nat.v
 Line: 156
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
 
 Lemma leq_antisym : forall {x y}, x &lt;= y -&gt; y &lt;= x -&gt; x = y.</pre>
@@ -725,8 +725,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Nat.v
 Line: 161
-Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply leq_antisymd; assumption.</pre>
 </div>
@@ -739,8 +739,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 163
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
 
 Definition not_nltn n : ~ (n &lt; n).</pre>
@@ -794,8 +794,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 170
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.002s">
+<div class="time" style="width: 3.030303030303%"></div>
 <pre>
 
 Definition leq1Sn {n} : 1 &lt;= n.+1 := tt.</pre>
@@ -817,8 +817,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Nat.v
 Line: 175
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
   induction m, n.</pre>
 </div>
@@ -910,7 +910,7 @@ Time: 0s">
 <div class="code" title="File: Nat.v
 Line: 183
 Time: 0.001s">
-<div class="time" style="width: 1.5873015873016%"></div>
+<div class="time" style="width: 1.5151515151515%"></div>
 <pre>
 Defined.</pre>
 </div>
