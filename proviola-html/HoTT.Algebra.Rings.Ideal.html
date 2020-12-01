@@ -398,22 +398,22 @@
           
 
             i = 76;
-            data = "1 subgoal (ID 65)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  grp_kernel f	1 subgoal (ID 73)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  f (r * pr1 x) = group_unit	";
+            data = "1 subgoal (ID 65)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  grp_kernel f	1 subgoal (ID 73)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  f (r * x.1) = group_unit	";
             responses[i]=data;
           
 
             i = 77;
-            data = "1 subgoal (ID 86)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  f r * f (pr1 x) = group_unit	";
+            data = "1 subgoal (ID 86)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  f r * f x.1 = group_unit	";
             responses[i]=data;
           
 
             i = 78;
-            data = "1 subgoal (ID 100)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  f (pr1 x) = 0	";
+            data = "1 subgoal (ID 100)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  f x.1 = 0	";
             responses[i]=data;
           
 
             i = 79;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 67) is:	 (fun a : grp_kernel f => issubgroup_incl a = r * issubgroup_incl x)	   (r * pr1 x;	   rng_homo_mult f r (pr1 x) @	   (ap (mult (f r)) (pr2 x) @ rng_mult_zero_r (f r)))	1 subgoal (ID 67)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  (fun a : grp_kernel f => issubgroup_incl a = r * issubgroup_incl x)	    (r * pr1 x;	    rng_homo_mult f r (pr1 x) @	    (ap (mult (f r)) (pr2 x) @ rng_mult_zero_r (f r)))	No more subgoals.	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 67) is:	 (fun a : grp_kernel f => issubgroup_incl a = r * issubgroup_incl x)	   (r * x.1;	   rng_homo_mult f r x.1 @ (ap (mult (f r)) x.2 @ rng_mult_zero_r (f r)))	1 subgoal (ID 67)	  	  R : CRing	  S : CRing	  f : CRingHomomorphism R S	  r : R	  x : {x : R & f x = zero_is_mon_unit}	  ============================	  (fun a : grp_kernel f => issubgroup_incl a = r * issubgroup_incl x)	    (r * x.1;	    rng_homo_mult f r x.1 @ (ap (mult (f r)) x.2 @ rng_mult_zero_r (f r)))	No more subgoals.	";
             responses[i]=data;
           
 

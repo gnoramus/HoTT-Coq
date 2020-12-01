@@ -183,7 +183,7 @@
           
 
             i = 33;
-            data = "<infomsg>FamilyProd is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -193,7 +193,7 @@
           
 
             i = 35;
-            data = "";
+            data = "<infomsg>FamilyProd is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -258,7 +258,7 @@
           
 
             i = 48;
-            data = "<infomsg>map_family_prod is defined</infomsg>	<infomsg>map_family_prod is recursively defined (guarded on 3rd argument)	</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -268,7 +268,7 @@
           
 
             i = 50;
-            data = "";
+            data = "<infomsg>map_family_prod is defined</infomsg>	<infomsg>map_family_prod is recursively defined (guarded on 3rd argument)	</infomsg>	";
             responses[i]=data;
           
 
@@ -503,7 +503,7 @@
           
 
             i = 97;
-            data = "<infomsg>for_all_family_prod is defined</infomsg>	<infomsg>for_all_family_prod is recursively defined (guarded on 2nd argument)	</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -513,7 +513,7 @@
           
 
             i = 99;
-            data = "";
+            data = "<infomsg>for_all_family_prod is defined</infomsg>	<infomsg>for_all_family_prod is recursively defined (guarded on 2nd argument)	</infomsg>	";
             responses[i]=data;
           
 
@@ -768,7 +768,7 @@
           
 
             i = 150;
-            data = "<infomsg>for_all_2_family_prod is defined</infomsg>	<infomsg>	for_all_2_family_prod is recursively defined (guarded on 3rd argument)	</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -778,7 +778,7 @@
           
 
             i = 152;
-            data = "";
+            data = "<infomsg>for_all_2_family_prod is defined</infomsg>	<infomsg>	for_all_2_family_prod is recursively defined (guarded on 3rd argument)	</infomsg>	";
             responses[i]=data;
           
 
@@ -933,7 +933,7 @@
           
 
             i = 183;
-            data = "1 subgoal (ID 57)	  	  I : Type	  F : I → Type	  R : forall i : I, Relation (F i)	  H : forall i : I, Reflexive (R i)	  ℓ : list I	  s : FamilyProd F ℓ	  ============================	  for_all_2_family_prod F F R s s	";
+            data = "";
             responses[i]=data;
           
 
@@ -943,7 +943,7 @@
           
 
             i = 185;
-            data = "1 subgoal (ID 71)	  	  I : Type	  F : I → Type	  R : forall i : I, Relation (F i)	  H : forall i : I, Reflexive (R i)	  a : I	  ℓ : list I	  s : FamilyProd F (a :: ℓ)	  IHℓ : forall s : FamilyProd F ℓ, for_all_2_family_prod F F R s s	  ============================	  for_all_2_family_prod F F R s s	1 subgoal (ID 95)	  	  I : Type	  F : I → Type	  R : forall i : I, Relation (F i)	  H : forall i : I, Reflexive (R i)	  a : I	  ℓ : list I	  s : FamilyProd F (a :: ℓ)	  IHℓ : forall s : FamilyProd F ℓ, for_all_2_family_prod F F R s s	  ============================	  for_all_2_family_prod F F R (snd s) (snd s)	No more subgoals.	";
+            data = "1 subgoal (ID 57)	  	  I : Type	  F : I → Type	  R : forall i : I, Relation (F i)	  H : forall i : I, Reflexive (R i)	  ℓ : list I	  s : FamilyProd F ℓ	  ============================	  for_all_2_family_prod F F R s s	";
             responses[i]=data;
           
 
@@ -953,7 +953,7 @@
           
 
             i = 187;
-            data = "";
+            data = "1 subgoal (ID 71)	  	  I : Type	  F : I → Type	  R : forall i : I, Relation (F i)	  H : forall i : I, Reflexive (R i)	  a : I	  ℓ : list I	  s : FamilyProd F (a :: ℓ)	  IHℓ : forall s : FamilyProd F ℓ, for_all_2_family_prod F F R s s	  ============================	  for_all_2_family_prod F F R s s	1 subgoal (ID 95)	  	  I : Type	  F : I → Type	  R : forall i : I, Relation (F i)	  H : forall i : I, Reflexive (R i)	  a : I	  ℓ : list I	  s : FamilyProd F (a :: ℓ)	  IHℓ : forall s : FamilyProd F ℓ, for_all_2_family_prod F F R s s	  ============================	  for_all_2_family_prod F F R (snd s) (snd s)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1008,6 +1008,16 @@
           
 
             i = 198;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 199;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 200;
             data = "";
             responses[i]=data;
           
@@ -1079,10 +1089,11 @@ The following section implements a datatype <span class="inlinecode"><a class="i
 <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.family_prod.html#FamilyProd"><span class="id" title="definition">FamilyProd</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Limits.Core.html#Limit.F"><span class="id" title="variable">F</span></a></span> <span class="inlinecode"><span class="id" title="var">ℓ</span></span> is a product type defined by
 
 <div class="doc" scenenumber="7"> </div>
-<tt>
-        FamilyProd F [i1;i2;...;in] = F i1 * F i2 * ... * F in * Unit
-      </tt>
-<div class="doc" scenenumber="11"> </div>
+<code>
+</code>        FamilyProd F <span class="inlinecode"><span class="id" title="var">i1</span>;<span class="id" title="var">i2</span>;...;<span class="id" title="tactic">in</span></span> = F i1 * F i2 * ... * F in * Unit
+      &gt;&gt;
+
+<div class="doc" scenenumber="13"> </div>
 
       It is convenient to have the <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a></span> in the end.
   
@@ -1091,14 +1102,14 @@ The following section implements a datatype <span class="inlinecode"><a class="i
 <span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(33, '0_3_11');
+      mouseover(35, '0_3_11');
       ">
 <br>
   <span class="id" title="keyword">Definition</span> <a id="FamilyProd" class="idref" href="#FamilyProd"><span class="id" title="definition">FamilyProd</span></a> (<a id="F:2" class="idref" href="#F:2"><span class="id" title="binder">F</span></a> : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) : <a class="idref" href="Coq.Init.Datatypes.html#list"><span class="id" title="inductive">list</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span><br>
     := <a class="idref" href="HoTT.Classes.implementations.list.html#fold_right"><span class="id" title="definition">fold_right</span></a> (<a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">(</span></a><a id="i:3" class="idref" href="#i:3"><span class="id" title="binder">i</span></a>:<a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a>) (<a id="A:4" class="idref" href="#A:4"><span class="id" title="binder">A</span></a>:<span class="id" title="keyword">Type</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:2"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#i:3"><span class="id" title="variable">i</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#A:4"><span class="id" title="variable">A</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
-      mouseover(34, '0_3_11');
+      mouseover(36, '0_3_11');
       "><br>
 <br>
 </span>
@@ -1108,16 +1119,16 @@ The following section implements a datatype <span class="inlinecode"><a class="i
 Map function for <span class="inlinecode"><a class="idref" href="HoTT.Classes.implementations.family_prod.html#FamilyProd"><span class="id" title="definition">FamilyProd</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.Limits.Core.html#Limit.F"><span class="id" title="variable">F</span></a></span> <span class="inlinecode"><span class="id" title="var">ℓ</span></span>,
 
 <div class="doc" scenenumber="7"> </div>
-<tt>
-        map_family_prod f (x1, x2, ..., xn, tt)
+<code>
+</code>        map_family_prod f (x1, x2, ..., xn, tt)
         = (f x1, f x2, ..., f xn, tt)
-      </tt>
+      &gt;&gt; 
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
-      mouseover(48, '0_3_15');
+      mouseover(50, '0_3_15');
       ">
 <br>
   <span class="id" title="keyword">Fixpoint</span> <a id="map_family_prod" class="idref" href="#map_family_prod"><span class="id" title="definition">map_family_prod</span></a> {<a id="F:5" class="idref" href="#F:5"><span class="id" title="binder">F</span></a> <a id="G:6" class="idref" href="#G:6"><span class="id" title="binder">G</span></a> : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>} {<a id="2bec41c2a072b37787e415e195031c6e" class="idref" href="#2bec41c2a072b37787e415e195031c6e"><span class="id" title="binder">ℓ</span></a> : <a class="idref" href="Coq.Init.Datatypes.html#list"><span class="id" title="inductive">list</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a>}<br>
@@ -1125,11 +1136,11 @@ Map function for <span class="inlinecode"><a class="idref" href="HoTT.Classes.im
       : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#FamilyProd"><span class="id" title="definition">FamilyProd</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:5"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#2bec41c2a072b37787e415e195031c6e"><span class="id" title="variable">ℓ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#FamilyProd"><span class="id" title="definition">FamilyProd</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#G:6"><span class="id" title="variable">G</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#2bec41c2a072b37787e415e195031c6e"><span class="id" title="variable">ℓ</span></a> :=<br>
     <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#2bec41c2a072b37787e415e195031c6e"><span class="id" title="variable">ℓ</span></a> <span class="id" title="keyword">with</span><br>
     | <a class="idref" href="Coq.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#const"><span class="id" title="definition">const</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a><br>
-    | <span class="id" title="var">i</span> <a class="idref" href="Coq.Init.Datatypes.html#::list_scope:x_'::'_x"><span class="id" title="notation">::</span></a> <span class="id" title="var">ℓ'</span> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">'(</span></a><a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">x</span></a><a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">,</span></a><a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">s</span></a><a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">)</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.implementations.family_prod.html#f:9"><span class="id" title="variable">f</span></a> <span class="id" title="var">i</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#x:13"><span class="id" title="variable">x</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#map_family_prod:10"><span class="id" title="definition">map_family_prod</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#f:9"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#s:12"><span class="id" title="variable">s</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a><br>
+    | <span class="id" title="var">i</span> <a class="idref" href="Coq.Init.Datatypes.html#::list_scope:x_'::'_x"><span class="id" title="notation">::</span></a> <span class="id" title="var">ℓ'</span> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">'</span></a><a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">(</span></a><a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">x</span></a><a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">,</span></a><a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">s</span></a><a id="pat:14" class="idref" href="#pat:14"><span class="id" title="binder">)</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.implementations.family_prod.html#f:9"><span class="id" title="variable">f</span></a> <span class="id" title="var">i</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#x:13"><span class="id" title="variable">x</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#map_family_prod:10"><span class="id" title="definition">map_family_prod</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#f:9"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#s:12"><span class="id" title="variable">s</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a><br>
     <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
-      mouseover(49, '0_3_15');
+      mouseover(51, '0_3_15');
       "><br>
 <br>
 </span>
@@ -1143,18 +1154,18 @@ Map function for <span class="inlinecode"><a class="idref" href="HoTT.Classes.im
 <span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(97, '0_3_19');
+      mouseover(99, '0_3_19');
       ">
 <br>
   <span class="id" title="keyword">Fixpoint</span> <a id="for_all_family_prod" class="idref" href="#for_all_family_prod"><span class="id" title="definition">for_all_family_prod</span></a> (<a id="F:15" class="idref" href="#F:15"><span class="id" title="binder">F</span></a> : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) {<a id="85f9548ec00c0306d344759eb299d980" class="idref" href="#85f9548ec00c0306d344759eb299d980"><span class="id" title="binder">ℓ</span></a> : <a class="idref" href="Coq.Init.Datatypes.html#list"><span class="id" title="inductive">list</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a>}<br>
       (<a id="P:18" class="idref" href="#P:18"><span class="id" title="binder">P</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="i:17" class="idref" href="#i:17"><span class="id" title="binder">i</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:15"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#i:17"><span class="id" title="variable">i</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#FamilyProd"><span class="id" title="definition">FamilyProd</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:15"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#85f9548ec00c0306d344759eb299d980"><span class="id" title="variable">ℓ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span> :=<br>
     <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#85f9548ec00c0306d344759eb299d980"><span class="id" title="variable">ℓ</span></a> <span class="id" title="keyword">with</span><br>
     | <a class="idref" href="Coq.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <span class="id" title="var">_</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="Coq.Init.Logic.html#True"><span class="id" title="inductive">True</span></a><br>
-    | <span class="id" title="var">i</span> <a class="idref" href="Coq.Init.Datatypes.html#::list_scope:x_'::'_x"><span class="id" title="notation">::</span></a> <span class="id" title="var">ℓ'</span> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">'(</span></a><a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">x</span></a><a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">,</span></a><a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">s</span></a><a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">)</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#P:18"><span class="id" title="variable">P</span></a> <span class="id" title="var">i</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#x:22"><span class="id" title="variable">x</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#3668992ecc3e95973d304a75a28051a2"><span class="id" title="notation">∧</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#for_all_family_prod:19"><span class="id" title="definition">for_all_family_prod</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:15"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#P:18"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#s:21"><span class="id" title="variable">s</span></a><br>
+    | <span class="id" title="var">i</span> <a class="idref" href="Coq.Init.Datatypes.html#::list_scope:x_'::'_x"><span class="id" title="notation">::</span></a> <span class="id" title="var">ℓ'</span> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">'</span></a><a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">(</span></a><a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">x</span></a><a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">,</span></a><a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">s</span></a><a id="pat:23" class="idref" href="#pat:23"><span class="id" title="binder">)</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#P:18"><span class="id" title="variable">P</span></a> <span class="id" title="var">i</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#x:22"><span class="id" title="variable">x</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#3668992ecc3e95973d304a75a28051a2"><span class="id" title="notation">∧</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#for_all_family_prod:19"><span class="id" title="definition">for_all_family_prod</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:15"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#P:18"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#s:21"><span class="id" title="variable">s</span></a><br>
     <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
-      mouseover(98, '0_3_19');
+      mouseover(100, '0_3_19');
       "><br>
 <br>
 </span>
@@ -1168,7 +1179,7 @@ Map function for <span class="inlinecode"><a class="idref" href="HoTT.Classes.im
 <span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(150, '0_3_23');
+      mouseover(152, '0_3_23');
       ">
 <br>
   <span class="id" title="keyword">Fixpoint</span> <a id="for_all_2_family_prod" class="idref" href="#for_all_2_family_prod"><span class="id" title="definition">for_all_2_family_prod</span></a> (<a id="F:24" class="idref" href="#F:24"><span class="id" title="binder">F</span></a> <a id="G:25" class="idref" href="#G:25"><span class="id" title="binder">G</span></a> : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) {<a id="867c3899570a03ca8cdfd7e61e4f8f30" class="idref" href="#867c3899570a03ca8cdfd7e61e4f8f30"><span class="id" title="binder">ℓ</span></a> : <a class="idref" href="Coq.Init.Datatypes.html#list"><span class="id" title="inductive">list</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a>}<br>
@@ -1176,11 +1187,11 @@ Map function for <span class="inlinecode"><a class="idref" href="HoTT.Classes.im
       : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#FamilyProd"><span class="id" title="definition">FamilyProd</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:24"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#867c3899570a03ca8cdfd7e61e4f8f30"><span class="id" title="variable">ℓ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#FamilyProd"><span class="id" title="definition">FamilyProd</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#G:25"><span class="id" title="variable">G</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#867c3899570a03ca8cdfd7e61e4f8f30"><span class="id" title="variable">ℓ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span> :=<br>
     <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#867c3899570a03ca8cdfd7e61e4f8f30"><span class="id" title="variable">ℓ</span></a> <span class="id" title="keyword">with</span><br>
     | <a class="idref" href="Coq.Init.Datatypes.html#nil"><span class="id" title="constructor">nil</span></a> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="Coq.Init.Logic.html#True"><span class="id" title="inductive">True</span></a><br>
-    | <span class="id" title="var">i</span> <a class="idref" href="Coq.Init.Datatypes.html#::list_scope:x_'::'_x"><span class="id" title="notation">::</span></a> <span class="id" title="var">ℓ'</span> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">'(</span></a><a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">x</span></a><a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">,</span></a><a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">s</span></a><a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">)</span></a> <a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">'(</span></a><a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">y</span></a><a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">,</span></a><a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">t</span></a><a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">)</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#R:28"><span class="id" title="variable">R</span></a> <span class="id" title="var">i</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#x:32"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#y:35"><span class="id" title="variable">y</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#3668992ecc3e95973d304a75a28051a2"><span class="id" title="notation">∧</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#for_all_2_family_prod:29"><span class="id" title="definition">for_all_2_family_prod</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:24"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#G:25"><span class="id" title="variable">G</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#R:28"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#s:31"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#t:34"><span class="id" title="variable">t</span></a><br>
+    | <span class="id" title="var">i</span> <a class="idref" href="Coq.Init.Datatypes.html#::list_scope:x_'::'_x"><span class="id" title="notation">::</span></a> <span class="id" title="var">ℓ'</span> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">'</span></a><a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">(</span></a><a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">x</span></a><a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">,</span></a><a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">s</span></a><a id="pat:33" class="idref" href="#pat:33"><span class="id" title="binder">)</span></a> '<a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">(</span></a><a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">y</span></a><a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">,</span></a><a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">t</span></a><a id="pat:36" class="idref" href="#pat:36"><span class="id" title="binder">)</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#R:28"><span class="id" title="variable">R</span></a> <span class="id" title="var">i</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#x:32"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#y:35"><span class="id" title="variable">y</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#3668992ecc3e95973d304a75a28051a2"><span class="id" title="notation">∧</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#for_all_2_family_prod:29"><span class="id" title="definition">for_all_2_family_prod</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:24"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#G:25"><span class="id" title="variable">G</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#R:28"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#s:31"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#t:34"><span class="id" title="variable">t</span></a><br>
     <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
-      mouseover(151, '0_3_23');
+      mouseover(153, '0_3_23');
       "><br>
 <br>
 </span>
@@ -1191,9 +1202,10 @@ If <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSec
       <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a>:<a class="idref" href="HoTT.Idempotents.html#Splitting.I"><span class="id" title="variable">I</span></a></span> and <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSections.Core.html#FunctorSectionCategory.R"><span class="id" title="variable">R</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span> is reflexive for all <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_second_isomorphism.html#i"><span class="id" title="abbreviation">i</span></a></span>, then
 
 <div class="doc" scenenumber="23"> </div>
-<tt>
-        for_all_2_family_prod F F R s s
-      </tt>
+<code>
+</code>        for_all_2_family_prod F F R s s
+      &gt;&gt;
+
 <div class="doc" scenenumber="27"> </div>
 
       holds. 
@@ -1202,7 +1214,7 @@ If <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSec
 <span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(183, '0_3_27');
+      mouseover(185, '0_3_27');
       ">
   <span class="id" title="keyword">Lemma</span> <a id="reflexive_for_all_2_family_prod" class="idref" href="#reflexive_for_all_2_family_prod"><span class="id" title="lemma">reflexive_for_all_2_family_prod</span></a> (<a id="F:37" class="idref" href="#F:37"><span class="id" title="binder">F</span></a> : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod.I"><span class="id" title="variable">I</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
     (<a id="R:39" class="idref" href="#R:39"><span class="id" title="binder">R</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="i:38" class="idref" href="#i:38"><span class="id" title="binder">i</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Relation"><span class="id" title="definition">Relation</span></a> (<a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:37"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#i:38"><span class="id" title="variable">i</span></a>)) `{<a id="H:41" class="idref" href="#H:41"><span class="id" title="binder">!∀</span></a> <a id="H:41" class="idref" href="#H:41"><span class="id" title="binder">i</span></a><a id="H:41" class="idref" href="#H:41"><span class="id" title="binder">,</span></a> <a id="H:41" class="idref" href="#H:41"><span class="id" title="binder">Reflexive</span></a> <a id="H:41" class="idref" href="#H:41"><span class="id" title="binder">(</span></a><a id="H:41" class="idref" href="#H:41"><span class="id" title="binder">R</span></a> <a id="H:41" class="idref" href="#H:41"><span class="id" title="binder">i</span></a><a id="H:41" class="idref" href="#H:41"><span class="id" title="binder">)</span></a>}<br>
@@ -1210,29 +1222,29 @@ If <span class="inlinecode"><a class="idref" href="HoTT.Categories.CategoryOfSec
     : <a class="idref" href="HoTT.Classes.implementations.family_prod.html#for_all_2_family_prod"><span class="id" title="definition">for_all_2_family_prod</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:37"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#F:37"><span class="id" title="variable">F</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#R:39"><span class="id" title="variable">R</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#s:43"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#s:43"><span class="id" title="variable">s</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(184, '0_3_27');
+      mouseover(186, '0_3_27');
       "><br>
   <span class="id" title="keyword">Proof</span> <span class="id" title="keyword">with</span> <span class="id" title="tactic">try</span> <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(185, '0_3_27');
+      mouseover(187, '0_3_27');
       "><br>
     <span class="id" title="tactic">induction</span> <span class="id" title="var">ℓ</span>...<br>
     <span class="id" title="tactic">split</span>...<br>
     <span class="id" title="tactic">apply</span> <span class="id" title="var">IHℓ</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(186, '0_3_27');
+      mouseover(188, '0_3_27');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(187, '0_3_27');
+      mouseover(189, '0_3_27');
       "><br>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.implementations.family_prod.html#family_prod"><span class="id" title="section">family_prod</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
-      mouseover(188, '0_3_27');
+      mouseover(190, '0_3_27');
       "><br>
 </span>
 </div>

@@ -558,7 +558,7 @@
           
 
             i = 108;
-            data = "1 subgoal (ID 701)	  	  F : Funext	  G : Group	  H : Group	  g, h : GroupHomomorphism G H	  ============================	  g == h <~>	  pr1 ((issig_GroupHomomorphism G H)^-1 g) =	  pr1 ((issig_GroupHomomorphism G H)^-1 h)	";
+            data = "1 subgoal (ID 701)	  	  F : Funext	  G : Group	  H : Group	  g, h : GroupHomomorphism G H	  ============================	  g == h <~>	  ((issig_GroupHomomorphism G H)^-1 g).1 =	  ((issig_GroupHomomorphism G H)^-1 h).1	";
             responses[i]=data;
           
 
@@ -973,7 +973,7 @@
           
 
             i = 191;
-            data = "1 subgoal (ID 719)	  	  F : Funext	  G : Group	  H : Group	  f, g : GroupIsomorphism G H	  ============================	  f == g <~>	  pr1 ((issig_GroupIsomorphism G H)^-1 f) =	  pr1 ((issig_GroupIsomorphism G H)^-1 g)	";
+            data = "1 subgoal (ID 719)	  	  F : Funext	  G : Group	  H : Group	  f, g : GroupIsomorphism G H	  ============================	  f == g <~>	  ((issig_GroupIsomorphism G H)^-1 f).1 =	  ((issig_GroupIsomorphism G H)^-1 g).1	";
             responses[i]=data;
           
 
@@ -1253,7 +1253,7 @@
           
 
             i = 247;
-            data = "1 subgoal (ID 714)	  	  U : Univalence	  ============================	  forall	  b1 : {H : Type &	       {H0 : SgOp H & {H1 : MonUnit H & {H2 : Negate H & IsGroup H}}}},	  Contr	    {b2	    : {H : Type &	      {H0 : SgOp H & {H1 : MonUnit H & {H2 : Negate H & IsGroup H}}}} &	    {f : issig_group b1 <~> issig_group b2 & IsMonoidPreserving f}}	1 subgoal (ID 753)	  	  U : Univalence	  G : Type	  op : SgOp G	  unit : MonUnit G	  neg : Negate G	  ax : IsGroup G	  ============================	  Contr	    {b2	    : {H : Type &	      {H0 : SgOp H & {H1 : MonUnit H & {H2 : Negate H & IsGroup H}}}} &	    {f : G <~> pr1 b2 & IsMonoidPreserving f}}	";
+            data = "1 subgoal (ID 714)	  	  U : Univalence	  ============================	  forall	  b1 : {H : Type &	       {H0 : SgOp H & {H1 : MonUnit H & {H2 : Negate H & IsGroup H}}}},	  Contr	    {b2	    : {H : Type &	      {H0 : SgOp H & {H1 : MonUnit H & {H2 : Negate H & IsGroup H}}}} &	    {f : issig_group b1 <~> issig_group b2 & IsMonoidPreserving f}}	1 subgoal (ID 753)	  	  U : Univalence	  G : Type	  op : SgOp G	  unit : MonUnit G	  neg : Negate G	  ax : IsGroup G	  ============================	  Contr	    {b2	    : {H : Type &	      {H0 : SgOp H & {H1 : MonUnit H & {H2 : Negate H & IsGroup H}}}} &	    {f : G <~> b2.1 & IsMonoidPreserving f}}	";
             responses[i]=data;
           
 
@@ -1343,12 +1343,12 @@
           
 
             i = 265;
-            data = "1 subgoal (ID 1388)	  	  U : Univalence	  G, H : Group	  ============================	  {f : {H0 : G -> H & IsMonoidPreserving H0} & IsEquiv (pr1 f)} <~>	  {f : {f : G -> H & IsEquiv f} & IsMonoidPreserving (pr1 f)}	";
+            data = "1 subgoal (ID 1388)	  	  U : Univalence	  G, H : Group	  ============================	  {f : {H0 : G -> H & IsMonoidPreserving H0} & IsEquiv f.1} <~>	  {f : {f : G -> H & IsEquiv f} & IsMonoidPreserving f.1}	";
             responses[i]=data;
           
 
             i = 266;
-            data = "2 subgoals (ID 1546)	  	  U : Univalence	  G, H : Group	  ============================	  Sect	    (fun f : {x : {x : _ & IsEquiv x} & IsMonoidPreserving (pr1 x)} =>	     ((pr1 (pr1 f); pr2 f); pr2 (pr1 f)))	    (fun f : {x : {x : _ & IsMonoidPreserving x} & IsEquiv (pr1 x)} =>	     ((pr1 (pr1 f); pr2 f); pr2 (pr1 f)))		subgoal 2 (ID 1547) is:	 Sect	   (fun f : {x : {x : _ & IsMonoidPreserving x} & IsEquiv (pr1 x)} =>	    ((pr1 (pr1 f); pr2 f); pr2 (pr1 f)))	   (fun f : {x : {x : _ & IsEquiv x} & IsMonoidPreserving (pr1 x)} =>	    ((pr1 (pr1 f); pr2 f); pr2 (pr1 f)))	";
+            data = "2 subgoals (ID 1546)	  	  U : Univalence	  G, H : Group	  ============================	  Sect	    (fun f : {x : {x : _ & IsEquiv x} & IsMonoidPreserving x.1} =>	     (((f.1).1; f.2); (f.1).2))	    (fun f : {x : {x : _ & IsMonoidPreserving x} & IsEquiv x.1} =>	     (((f.1).1; f.2); (f.1).2))		subgoal 2 (ID 1547) is:	 Sect	   (fun f : {x : {x : _ & IsMonoidPreserving x} & IsEquiv x.1} =>	    (((f.1).1; f.2); (f.1).2))	   (fun f : {x : {x : _ & IsEquiv x} & IsMonoidPreserving x.1} =>	    (((f.1).1; f.2); (f.1).2))	";
             responses[i]=data;
           
 
@@ -2313,12 +2313,12 @@
           
 
             i = 459;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 
             i = 460;
-            data = "No more subgoals.	1 subgoal (ID 895)	  	  H : Funext	  ============================	  HasMorExt Group	";
+            data = "1 subgoal (ID 895)	  	  H : Funext	  ============================	  HasMorExt Group	";
             responses[i]=data;
           
 
@@ -2573,22 +2573,22 @@
           
 
             i = 511;
-            data = "1 subgoal (ID 935)	  	  H : Funext	  G : Group	  ============================	  forall y : GroupHomomorphism G grp_trivial,	  pr1 (isterminal_grp_trivial G) = y	";
+            data = "1 subgoal (ID 935)	  	  H : Funext	  G : Group	  ============================	  forall y : GroupHomomorphism G grp_trivial,	  (isterminal_grp_trivial G).1 = y	";
             responses[i]=data;
           
 
             i = 512;
-            data = "1 subgoal (ID 940)	  	  H : Funext	  G : Group	  g : GroupHomomorphism G grp_trivial	  ============================	  pr1 (isterminal_grp_trivial G) = g	";
+            data = "1 subgoal (ID 940)	  	  H : Funext	  G : Group	  g : GroupHomomorphism G grp_trivial	  ============================	  (isterminal_grp_trivial G).1 = g	";
             responses[i]=data;
           
 
             i = 513;
-            data = "1 subgoal (ID 952)	  	  H : Funext	  G : Group	  g : GroupHomomorphism G grp_trivial	  ============================	  pr1 (isterminal_grp_trivial G) == g	";
+            data = "1 subgoal (ID 952)	  	  H : Funext	  G : Group	  g : GroupHomomorphism G grp_trivial	  ============================	  (isterminal_grp_trivial G).1 == g	";
             responses[i]=data;
           
 
             i = 514;
-            data = "1 subgoal (ID 954)	  	  H : Funext	  G : Group	  g : GroupHomomorphism G grp_trivial	  x : G	  ============================	  pr1 (isterminal_grp_trivial G) x = g x	";
+            data = "1 subgoal (ID 954)	  	  H : Funext	  G : Group	  g : GroupHomomorphism G grp_trivial	  x : G	  ============================	  (isterminal_grp_trivial G).1 x = g x	";
             responses[i]=data;
           
 
