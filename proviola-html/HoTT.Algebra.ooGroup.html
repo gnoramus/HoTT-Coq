@@ -478,12 +478,12 @@
           
 
             i = 92;
-            data = "1 subgoal (ID 136)	  	  X : pType	  x0 := point X : X	  BG := {|	          pointed_type := {x : X & merely (x = point X)};	          ispointed_type := (x0; tr 1)	        |} : pType	  x : X	  p : x = point X	  ============================	  point {x1 : X & Tr (-1) (x1 = point X)} = (x; tr p)	";
+            data = "1 subgoal (ID 139)	  	  X : pType	  x0 := point X : X	  BG := {|	          pointed_type := {x : X & merely (x = point X)};	          ispointed_type := (x0; tr 1)	        |} : pType	  x : X	  p : x = point X	  ============================	  point {x1 : X & Tr (-1) (x1 = point X)} = (x; tr p)	";
             responses[i]=data;
           
 
             i = 93;
-            data = "1 subgoal (ID 153)	  	  X : pType	  x0 := point X : X	  BG := {|	          pointed_type := {x : X & merely (x = point X)};	          ispointed_type := (x0; tr 1)	        |} : pType	  x : X	  p : x = point X	  ============================	  x0 = x	";
+            data = "1 subgoal (ID 157)	  	  X : pType	  x0 := point X : X	  BG := {|	          pointed_type := {x : X & merely (x = point X)};	          ispointed_type := (x0; tr 1)	        |} : pType	  x : X	  p : x = point X	  ============================	  x0 = x	";
             responses[i]=data;
           
 
@@ -668,7 +668,7 @@
           
 
             i = 130;
-            data = "1 subgoal (ID 146)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : X	  p : x = point X	  ============================	  f x = point Y	";
+            data = "1 subgoal (ID 151)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : X	  p : x = point X	  ============================	  f x = point Y	";
             responses[i]=data;
           
 
@@ -678,7 +678,7 @@
           
 
             i = 132;
-            data = "1 subgoal (ID 58)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  (fun X0 : {x : X & Tr (-1) (x = point X)} =>	   (fun (x : X) (p : Tr (-1) (x = point X)) =>	    (f x;	    Trunc_ind (fun _ : Trunc (-1) (x = point X) => Tr (-1) (f x = point Y))	      (fun p0 : x = point X => tr (ap f p0 @ point_eq f)) p)) X0.1 X0.2)	    (point {x : X & Tr (-1) (x = point X)}) =	  point {x : Y & Tr (-1) (x = point Y)}	1 subgoal (ID 173)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  f (point X) = point Y	";
+            data = "1 subgoal (ID 58)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  (fun X0 : {x : X & Tr (-1) (x = point X)} =>	   (fun (x : X) (p : Tr (-1) (x = point X)) =>	    (f x;	    Trunc_ind (fun _ : Trunc (-1) (x = point X) => Tr (-1) (f x = point Y))	      (fun p0 : x = point X => tr (ap f p0 @ point_eq f)) p)) X0.1 X0.2)	    (point {x : X & Tr (-1) (x = point X)}) =	  point {x : Y & Tr (-1) (x = point Y)}	1 subgoal (ID 179)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  f (point X) = point Y	";
             responses[i]=data;
           
 
@@ -728,42 +728,42 @@
           
 
             i = 142;
-            data = "1 subgoal (ID 114)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  (equiv_path_sigma_hprop (point (B (group_loops Y)))	     (point (B (group_loops Y))))^-1	    (loops_functor (group_loops_functor f) (loops_group X x)) =	  (equiv_path_sigma_hprop (point (B (group_loops Y)))	     (point (B (group_loops Y))))^-1 (loops_group Y (loops_functor f x))	";
+            data = "1 subgoal (ID 115)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  (equiv_path_sigma_hprop (point (B (group_loops Y)))	     (point (B (group_loops Y))))^-1	    (loops_functor (group_loops_functor f) (loops_group X x)) =	  (equiv_path_sigma_hprop (point (B (group_loops Y)))	     (point (B (group_loops Y))))^-1 (loops_group Y (loops_functor f x))	";
             responses[i]=data;
           
 
             i = 143;
-            data = "1 subgoal (ID 115)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ((path_sigma_hprop (f (point X); tr (1 @ point_eq f))	      (point {x0 : Y & Tr (-1) (x0 = point Y)}) (point_eq f))^ @	   (ap	      (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	       (f X0.1;	       Trunc_ind	         (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	         (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	      (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) @	    path_sigma_hprop (f (point X); tr (1 @ point_eq f))	      (point {x0 : Y & Tr (-1) (x0 = point Y)}) (point_eq f))) ..1 =	  (path_sigma_hprop (point Y; tr 1) (point Y; tr 1)	     ((point_eq f)^ @ (ap f x @ point_eq f))) ..1	";
+            data = "1 subgoal (ID 116)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ((path_sigma_hprop (f (point X); tr (1 @ point_eq f))	      (point {x0 : Y & Tr (-1) (x0 = point Y)}) (point_eq f))^ @	   (ap	      (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	       (f X0.1;	       Trunc_ind	         (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	         (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	      (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) @	    path_sigma_hprop (f (point X); tr (1 @ point_eq f))	      (point {x0 : Y & Tr (-1) (x0 = point Y)}) (point_eq f))) ..1 =	  (path_sigma_hprop (point Y; tr 1) (point Y; tr 1)	     ((point_eq f)^ @ (ap f x @ point_eq f))) ..1	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 subgoal (ID 122)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap pr1	    (path_sigma_hprop (f (point X); tr (1 @ point_eq f))	       (point {x0 : Y & Tr (-1) (x0 = point Y)}) (point_eq f))^ @	  (ap pr1	     (ap	        (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	         (f X0.1;	         Trunc_ind	           (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	           (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	        (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) @	   ap pr1	     (path_sigma_hprop (f (point X); tr (1 @ point_eq f))	        (point {x0 : Y & Tr (-1) (x0 = point Y)}) 	        (point_eq f))) =	  ap pr1	    (path_sigma_hprop (point Y; tr 1) (point Y; tr 1)	       ((point_eq f)^ @ (ap f x @ point_eq f)))	";
+            data = "1 subgoal (ID 123)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap pr1	    (path_sigma_hprop (f (point X); tr (1 @ point_eq f))	       (point {x0 : Y & Tr (-1) (x0 = point Y)}) (point_eq f))^ @	  (ap pr1	     (ap	        (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	         (f X0.1;	         Trunc_ind	           (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	           (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	        (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) @	   ap pr1	     (path_sigma_hprop (f (point X); tr (1 @ point_eq f))	        (point {x0 : Y & Tr (-1) (x0 = point Y)}) 	        (point_eq f))) =	  ap pr1	    (path_sigma_hprop (point Y; tr 1) (point Y; tr 1)	       ((point_eq f)^ @ (ap f x @ point_eq f)))	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 subgoal (ID 139)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  (point_eq f)^ @	  (ap pr1	     (ap	        (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	         (f X0.1;	         Trunc_ind	           (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	           (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	        (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) @ 	   point_eq f) = (point_eq f)^ @ (ap f x @ point_eq f)	";
+            data = "";
             responses[i]=data;
           
 
             i = 146;
-            data = "1 subgoal (ID 157)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap pr1	    (ap	       (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	        (f X0.1;	        Trunc_ind	          (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	          (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	       (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) = 	  ap f x	";
+            data = "1 subgoal (ID 140)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  (point_eq f)^ @	  (ap pr1	     (ap	        (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	         (f X0.1;	         Trunc_ind	           (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	           (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	        (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) @ 	   point_eq f) = (point_eq f)^ @ (ap f x @ point_eq f)	1 subgoal (ID 158)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap pr1	    (ap	       (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	        (f X0.1;	        Trunc_ind	          (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	          (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	       (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) = 	  ap f x	";
             responses[i]=data;
           
 
             i = 147;
-            data = "2 subgoals (ID 215)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap pr1	    (ap	       (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	        (f X0.1;	        Trunc_ind	          (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	          (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	       (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) =	  ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	    (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)		subgoal 2 (ID 216) is:	 ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	   (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) = 	 ap f x	";
+            data = "2 subgoals (ID 217)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap pr1	    (ap	       (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	        (f X0.1;	        Trunc_ind	          (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	          (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	       (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) =	  ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	    (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)		subgoal 2 (ID 218) is:	 ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	   (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) = 	 ap f x	";
             responses[i]=data;
           
 
             i = 148;
-            data = "1 subgoal (ID 215)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap pr1	    (ap	       (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	        (f X0.1;	        Trunc_ind	          (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	          (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	       (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) =	  ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	    (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 216) is:	 ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	   (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) = 	 ap f x	";
+            data = "1 subgoal (ID 217)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap pr1	    (ap	       (fun X0 : {x0 : X & Tr (-1) (x0 = point X)} =>	        (f X0.1;	        Trunc_ind	          (fun _ : Trunc (-1) (X0.1 = point X) => Tr (-1) (f X0.1 = point Y))	          (fun p : X0.1 = point X => tr (ap f p @ point_eq f)) X0.2))	       (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)) =	  ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	    (path_sigma_hprop (point X; tr 1) (point X; tr 1) x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 218) is:	 ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	   (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) = 	 ap f x	";
             responses[i]=data;
           
 
             i = 149;
-            data = "1 subgoal (ID 216)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	    (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) = 	  ap f x	1 subgoal (ID 241)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap (fun x0 : {x0 : X & merely (x0 = point X)} => x0.1)	    (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) = x	";
+            data = "1 subgoal (ID 218)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap (fun X0 : {x0 : X & merely (x0 = point X)} => f X0.1)	    (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) = 	  ap f x	1 subgoal (ID 243)	  	  X : pType	  Y : pType	  f : X ->* Y	  x : loops X	  ============================	  ap (fun x0 : {x0 : X & merely (x0 = point X)} => x0.1)	    (path_sigma_hprop (point X; tr 1) (point X; tr 1) x) = x	";
             responses[i]=data;
           
 
@@ -883,12 +883,12 @@
           
 
             i = 173;
-            data = "1 subgoal (ID 162)	  	  X : pType	  Y : pType	  Z : pType	  psi : Y ->* Z	  phi : X ->* Y	  g : group_loops X	  p := eisretr (loops_group X) g : loops_group X ((loops_group X)^-1 g) = g	  ============================	  loops_group Z	    (loops_functor psi (loops_functor phi ((loops_group X)^-1 g))) =	  loops_group Z (loops_functor (psi o* phi) ((loops_group X)^-1 g))	1 subgoal (ID 170)	  	  X : pType	  Y : pType	  Z : pType	  psi : Y ->* Z	  phi : X ->* Y	  g : group_loops X	  p := eisretr (loops_group X) g : loops_group X ((loops_group X)^-1 g) = g	  ============================	  loops_functor psi (loops_functor phi ((loops_group X)^-1 g)) =	  loops_functor (psi o* phi) ((loops_group X)^-1 g)	No more subgoals.	<infomsg>grouphom_idmap is defined</infomsg>	1 subgoal (ID 112)	  	  X : pType	  ============================	  grouphom_idmap (group_loops X) == group_loops_functor pmap_idmap	";
+            data = "";
             responses[i]=data;
           
 
             i = 174;
-            data = "";
+            data = "1 subgoal (ID 162)	  	  X : pType	  Y : pType	  Z : pType	  psi : Y ->* Z	  phi : X ->* Y	  g : group_loops X	  p := eisretr (loops_group X) g : loops_group X ((loops_group X)^-1 g) = g	  ============================	  loops_group Z	    (loops_functor psi (loops_functor phi ((loops_group X)^-1 g))) =	  loops_group Z (loops_functor (psi o* phi) ((loops_group X)^-1 g))	1 subgoal (ID 170)	  	  X : pType	  Y : pType	  Z : pType	  psi : Y ->* Z	  phi : X ->* Y	  g : group_loops X	  p := eisretr (loops_group X) g : loops_group X ((loops_group X)^-1 g) = g	  ============================	  loops_functor psi (loops_functor phi ((loops_group X)^-1 g)) =	  loops_functor (psi o* phi) ((loops_group X)^-1 g)	No more subgoals.	<infomsg>grouphom_idmap is defined</infomsg>	1 subgoal (ID 112)	  	  X : pType	  ============================	  grouphom_idmap (group_loops X) == group_loops_functor pmap_idmap	";
             responses[i]=data;
           
 
@@ -983,12 +983,12 @@
           
 
             i = 193;
-            data = "1 subgoal (ID 148)	  	  X : pType	  Y : pType	  phi, psi : X ->* Y	  theta : phi ==* psi	  g : group_loops X	  p : loops_group X ((loops_group X)^-1 g) = g	  ============================	  loops_group Y (loops_functor phi ((loops_group X)^-1 g)) =	  loops_group Y (loops_functor psi ((loops_group X)^-1 g))	1 subgoal (ID 156)	  	  X : pType	  Y : pType	  phi, psi : X ->* Y	  theta : phi ==* psi	  g : group_loops X	  p : loops_group X ((loops_group X)^-1 g) = g	  ============================	  loops_functor phi ((loops_group X)^-1 g) =	  loops_functor psi ((loops_group X)^-1 g)	";
+            data = "";
             responses[i]=data;
           
 
             i = 194;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 148)	  	  X : pType	  Y : pType	  phi, psi : X ->* Y	  theta : phi ==* psi	  g : group_loops X	  p : loops_group X ((loops_group X)^-1 g) = g	  ============================	  loops_group Y (loops_functor phi ((loops_group X)^-1 g)) =	  loops_group Y (loops_functor psi ((loops_group X)^-1 g))	1 subgoal (ID 156)	  	  X : pType	  Y : pType	  phi, psi : X ->* Y	  theta : phi ==* psi	  g : group_loops X	  p : loops_group X ((loops_group X)^-1 g) = g	  ============================	  loops_functor phi ((loops_group X)^-1 g) =	  loops_functor psi ((loops_group X)^-1 g)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1438,17 +1438,17 @@
           
 
             i = 284;
-            data = "1 subgoal (ID 386)	  	  G : ooGroup	  H : ooGroup	  incl : ooGroupHom H G	  IsEmbedding0 : IsEmbedding incl	  g, g' : G	  h : H	  p : incl h = g @ g'^	  ============================	  incl h^ @ g = g'	";
+            data = "1 subgoal (ID 387)	  	  G : ooGroup	  H : ooGroup	  incl : ooGroupHom H G	  IsEmbedding0 : IsEmbedding incl	  g, g' : G	  h : H	  p : incl h = g @ g'^	  ============================	  incl h^ @ g = g'	";
             responses[i]=data;
           
 
             i = 285;
-            data = "1 subgoal (ID 405)	  	  G : ooGroup	  H : ooGroup	  incl : ooGroupHom H G	  IsEmbedding0 : IsEmbedding incl	  g, g' : G	  h : H	  p : incl h = g @ g'^	  ============================	  (incl h)^ @ g = g'	";
+            data = "1 subgoal (ID 406)	  	  G : ooGroup	  H : ooGroup	  incl : ooGroupHom H G	  IsEmbedding0 : IsEmbedding incl	  g, g' : G	  h : H	  p : incl h = g @ g'^	  ============================	  (incl h)^ @ g = g'	";
             responses[i]=data;
           
 
             i = 286;
-            data = "1 subgoal (ID 415)	  	  G : ooGroup	  H : ooGroup	  incl : ooGroupHom H G	  IsEmbedding0 : IsEmbedding incl	  g, g' : G	  h : H	  p : incl h = g @ g'^	  ============================	  g @ g'^ = incl h	";
+            data = "1 subgoal (ID 416)	  	  G : ooGroup	  H : ooGroup	  incl : ooGroupHom H G	  IsEmbedding0 : IsEmbedding incl	  g, g' : G	  h : H	  p : incl h = g @ g'^	  ============================	  g @ g'^ = incl h	";
             responses[i]=data;
           
 
