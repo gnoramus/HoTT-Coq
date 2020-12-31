@@ -278,27 +278,27 @@
           
 
             i = 52;
-            data = "4 subgoals (ID 168)	  	  A : Type	  B : Type	  ============================	  Pullback (const tt) (const tt) -> A * B		subgoal 2 (ID 170) is:	 A * B -> Pullback (const tt) (const tt)	subgoal 3 (ID 172) is:	 Sect ?g ?f	subgoal 4 (ID 174) is:	 Sect ?f ?g	";
+            data = "4 subgoals (ID 168)	  	  A : Type	  B : Type	  ============================	  Pullback (const tt) (const tt) -> A * B		subgoal 2 (ID 170) is:	 A * B -> Pullback (const tt) (const tt)	subgoal 3 (ID 172) is:	 ?f o ?g == idmap	subgoal 4 (ID 174) is:	 ?g o ?f == idmap	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 168)	  	  A : Type	  B : Type	  ============================	  Pullback (const tt) (const tt) -> A * B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals		subgoal 1 (ID 170) is:	 A * B -> Pullback (const tt) (const tt)	subgoal 2 (ID 172) is:	 Sect ?g	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2)	subgoal 3 (ID 174) is:	 Sect	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2) ?g	";
+            data = "1 subgoal (ID 168)	  	  A : Type	  B : Type	  ============================	  Pullback (const tt) (const tt) -> A * B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals		subgoal 1 (ID 170) is:	 A * B -> Pullback (const tt) (const tt)	subgoal 2 (ID 172) is:	 (fun X : Pullback (const tt) (const tt) =>	  (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	   (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	     proj2_sig.2) X.1 X.2) o ?g == idmap	subgoal 3 (ID 174) is:	 ?g	 o (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2) == idmap	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 subgoal (ID 170)	  	  A : Type	  B : Type	  ============================	  A * B -> Pullback (const tt) (const tt)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 172) is:	 Sect (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2)	subgoal 2 (ID 174) is:	 Sect	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2)	   (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	";
+            data = "1 subgoal (ID 170)	  	  A : Type	  B : Type	  ============================	  A * B -> Pullback (const tt) (const tt)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 172) is:	 (fun X : Pullback (const tt) (const tt) =>	  (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	   (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	     proj2_sig.2) X.1 X.2)	 o (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X)) ==	 idmap	subgoal 2 (ID 174) is:	 (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	 o (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2) == idmap	";
             responses[i]=data;
           
 
             i = 55;
-            data = "1 subgoal (ID 172)	  	  A : Type	  B : Type	  ============================	  Sect (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	    (fun X : Pullback (const tt) (const tt) =>	     (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	      (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	        proj2_sig.2) X.1 X.2)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 174) is:	 Sect	   (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2)	   (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	";
+            data = "1 subgoal (ID 172)	  	  A : Type	  B : Type	  ============================	  (fun X : Pullback (const tt) (const tt) =>	   (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	    (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	      proj2_sig.2) X.1 X.2)	  o (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X)) ==	  idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 174) is:	 (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	 o (fun X : Pullback (const tt) (const tt) =>	    (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	     (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	       proj2_sig.2) X.1 X.2) == idmap	";
             responses[i]=data;
           
 
             i = 56;
-            data = "1 subgoal (ID 174)	  	  A : Type	  B : Type	  ============================	  Sect	    (fun X : Pullback (const tt) (const tt) =>	     (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	      (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	        proj2_sig.2) X.1 X.2)	    (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	1 subgoal (ID 218)	  	  A : Type	  B : Type	  a : A	  b : B	  p : const tt a = const tt b	  ============================	  (a; b; 1) = (a; b; p)	";
+            data = "1 subgoal (ID 174)	  	  A : Type	  B : Type	  ============================	  (fun X : A * B => (fun (a : A) (b : B) => (a; b; 1)) (fst X) (snd X))	  o (fun X : Pullback (const tt) (const tt) =>	     (fun (a : A) (proj2_sig : {c : B & const tt a = const tt c}) =>	      (fun (b : B) (_ : const tt a = const tt b) => (a, b)) proj2_sig.1	        proj2_sig.2) X.1 X.2) == idmap	1 subgoal (ID 218)	  	  A : Type	  B : Type	  a : A	  b : B	  p : const tt a = const tt b	  ============================	  (a; b; 1) = (a; b; p)	";
             responses[i]=data;
           
 
@@ -608,7 +608,7 @@
           
 
             i = 118;
-            data = "3 subgoals (ID 367)	  	  D : Type	  P : D -> Type	  Q : D -> Type	  ============================	  Pullback pr1 pr1 -> {d : D & P d * Q d}		subgoal 2 (ID 369) is:	 Sect ?g	   (pullback_corec	      (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1))	subgoal 3 (ID 371) is:	 Sect	   (pullback_corec	      (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1))	   ?g	";
+            data = "3 subgoals (ID 367)	  	  D : Type	  P : D -> Type	  Q : D -> Type	  ============================	  Pullback pr1 pr1 -> {d : D & P d * Q d}		subgoal 2 (ID 369) is:	 pullback_corec	   (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1)	 o ?g == idmap	subgoal 3 (ID 371) is:	 ?g	 o pullback_corec	     (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1) ==	 idmap	";
             responses[i]=data;
           
 
@@ -623,22 +623,22 @@
           
 
             i = 121;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 369) is:	 Sect	   (fun X : Pullback pr1 pr1 =>	    (fun proj1_sig : {x : _ & P x} =>	     (fun (d1 : D) (p : P d1)	        (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	      (fun proj1_sig0 : {x : _ & Q x} =>	       (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	        (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	        proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2)	   (pullback_corec	      (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1))	subgoal 2 (ID 371) is:	 Sect	   (pullback_corec	      (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1))	   (fun X : Pullback pr1 pr1 =>	    (fun proj1_sig : {x : _ & P x} =>	     (fun (d1 : D) (p : P d1)	        (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	      (fun proj1_sig0 : {x : _ & Q x} =>	       (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	        (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	        proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 369) is:	 pullback_corec	   (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1)	 o (fun X : Pullback pr1 pr1 =>	    (fun proj1_sig : {x : _ & P x} =>	     (fun (d1 : D) (p : P d1)	        (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	      (fun proj1_sig0 : {x : _ & Q x} =>	       (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	        (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	        proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2) == idmap	subgoal 2 (ID 371) is:	 (fun X : Pullback pr1 pr1 =>	  (fun proj1_sig : {x : _ & P x} =>	   (fun (d1 : D) (p : P d1)	      (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	    (fun proj1_sig0 : {x : _ & Q x} =>	     (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	      (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	      proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2)	 o pullback_corec	     (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1) ==	 idmap	";
             responses[i]=data;
           
 
             i = 122;
-            data = "1 subgoal (ID 369)	  	  D : Type	  P : D -> Type	  Q : D -> Type	  ============================	  Sect	    (fun X : Pullback pr1 pr1 =>	     (fun proj1_sig : {x : _ & P x} =>	      (fun (d1 : D) (p : P d1)	         (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	       (fun proj1_sig0 : {x : _ & Q x} =>	        (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	         (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	         proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2)	    (pullback_corec	       (fun z : {d : D & P d * Q d} =>	        1 : (z.1; fst z.2).1 = (z.1; snd z.2).1))	1 subgoal (ID 422)	  	  D : Type	  P : D -> Type	  Q : D -> Type	  d1 : D	  p : P d1	  d2 : D	  q : Q d2	  e : d1 = d2	  ============================	  ((d1; p); (d1; transport Q e^ q); 1) = ((d1; p); (d2; q); e)	";
+            data = "1 subgoal (ID 369)	  	  D : Type	  P : D -> Type	  Q : D -> Type	  ============================	  pullback_corec	    (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1)	  o (fun X : Pullback pr1 pr1 =>	     (fun proj1_sig : {x : _ & P x} =>	      (fun (d1 : D) (p : P d1)	         (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	       (fun proj1_sig0 : {x : _ & Q x} =>	        (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	         (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	         proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2) == idmap	1 subgoal (ID 422)	  	  D : Type	  P : D -> Type	  Q : D -> Type	  d1 : D	  p : P d1	  d2 : D	  q : Q d2	  e : d1 = d2	  ============================	  ((d1; p); (d1; transport Q e^ q); 1) = ((d1; p); (d2; q); e)	";
             responses[i]=data;
           
 
             i = 123;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 371) is:	 Sect	   (pullback_corec	      (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1))	   (fun X : Pullback pr1 pr1 =>	    (fun proj1_sig : {x : _ & P x} =>	     (fun (d1 : D) (p : P d1)	        (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	      (fun proj1_sig0 : {x : _ & Q x} =>	       (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	        (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	        proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 371) is:	 (fun X : Pullback pr1 pr1 =>	  (fun proj1_sig : {x : _ & P x} =>	   (fun (d1 : D) (p : P d1)	      (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	    (fun proj1_sig0 : {x : _ & Q x} =>	     (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	      (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	      proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2)	 o pullback_corec	     (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1) ==	 idmap	";
             responses[i]=data;
           
 
             i = 124;
-            data = "1 subgoal (ID 371)	  	  D : Type	  P : D -> Type	  Q : D -> Type	  ============================	  Sect	    (pullback_corec	       (fun z : {d : D & P d * Q d} =>	        1 : (z.1; fst z.2).1 = (z.1; snd z.2).1))	    (fun X : Pullback pr1 pr1 =>	     (fun proj1_sig : {x : _ & P x} =>	      (fun (d1 : D) (p : P d1)	         (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	       (fun proj1_sig0 : {x : _ & Q x} =>	        (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	         (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	         proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2)	No more subgoals.	";
+            data = "1 subgoal (ID 371)	  	  D : Type	  P : D -> Type	  Q : D -> Type	  ============================	  (fun X : Pullback pr1 pr1 =>	   (fun proj1_sig : {x : _ & P x} =>	    (fun (d1 : D) (p : P d1)	       (proj2_sig : {c : {x : _ & Q x} & (d1; p).1 = c.1}) =>	     (fun proj1_sig0 : {x : _ & Q x} =>	      (fun (d2 : D) (q : Q d2) (e : (d1; p).1 = (d2; q).1) =>	       (d1; (p, transport Q e^ q))) proj1_sig0.1 proj1_sig0.2) proj2_sig.1	       proj2_sig.2) proj1_sig.1 proj1_sig.2) X.1 X.2)	  o pullback_corec	      (fun z : {d : D & P d * Q d} => 1 : (z.1; fst z.2).1 = (z.1; snd z.2).1) ==	  idmap	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1563,7 +1563,7 @@
           
 
             i = 309;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -1588,7 +1588,7 @@
           
 
             i = 314;
-            data = "";
+            data = "No more subgoals.	";
             responses[i]=data;
           
 

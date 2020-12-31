@@ -1653,7 +1653,7 @@
           
 
             i = 327;
-            data = "2 subgoals (ID 1716)	  	  U : Univalence	  G, H : Group	  ============================	  Sect	    (fun f : {x : {x : _ & IsEquiv x} & IsMonoidPreserving x.1} =>	     (((f.1).1; f.2); (f.1).2))	    (fun f : {x : {x : _ & IsMonoidPreserving x} & IsEquiv x.1} =>	     (((f.1).1; f.2); (f.1).2))		subgoal 2 (ID 1717) is:	 Sect	   (fun f : {x : {x : _ & IsMonoidPreserving x} & IsEquiv x.1} =>	    (((f.1).1; f.2); (f.1).2))	   (fun f : {x : {x : _ & IsEquiv x} & IsMonoidPreserving x.1} =>	    (((f.1).1; f.2); (f.1).2))	";
+            data = "2 subgoals (ID 1716)	  	  U : Univalence	  G, H : Group	  ============================	  (fun x : {x : {x : _ & IsEquiv x} & IsMonoidPreserving x.1} =>	   ((((((x.1).1; x.2); (x.1).2).1).1; (((x.1).1; x.2); (x.1).2).2);	   ((((x.1).1; x.2); (x.1).2).1).2)) == idmap		subgoal 2 (ID 1717) is:	 (fun x : {x : {x : _ & IsMonoidPreserving x} & IsEquiv x.1} =>	  ((((((x.1).1; x.2); (x.1).2).1).1; (((x.1).1; x.2); (x.1).2).2);	  ((((x.1).1; x.2); (x.1).2).1).2)) == idmap	";
             responses[i]=data;
           
 
@@ -1728,12 +1728,12 @@
           
 
             i = 342;
-            data = "3 subgoals (ID 853)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  x : G	  ============================	  G -> G		subgoal 2 (ID 855) is:	 Sect ?g (sg_op x)	subgoal 3 (ID 857) is:	 Sect (sg_op x) ?g	";
+            data = "3 subgoals (ID 853)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  x : G	  ============================	  G -> G		subgoal 2 (ID 855) is:	 sg_op x o ?g == idmap	subgoal 3 (ID 857) is:	 ?g o sg_op x == idmap	";
             responses[i]=data;
           
 
             i = 343;
-            data = "2 subgoals (ID 855)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  x : G	  ============================	  Sect (sg_op (- x)) (sg_op x)		subgoal 2 (ID 857) is:	 Sect (sg_op x) (sg_op (- x))	";
+            data = "2 subgoals (ID 855)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  x : G	  ============================	  sg_op x o sg_op (- x) == idmap		subgoal 2 (ID 857) is:	 sg_op (- x) o sg_op x == idmap	";
             responses[i]=data;
           
 
@@ -1803,12 +1803,12 @@
           
 
             i = 357;
-            data = "3 subgoals (ID 869)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  x : G	  ============================	  G -> G		subgoal 2 (ID 871) is:	 Sect ?g (fun y : G => y * x)	subgoal 3 (ID 873) is:	 Sect (fun y : G => y * x) ?g	";
+            data = "3 subgoals (ID 869)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  x : G	  ============================	  G -> G		subgoal 2 (ID 871) is:	 (fun y : G => y * x) o ?g == idmap	subgoal 3 (ID 873) is:	 ?g o (fun y : G => y * x) == idmap	";
             responses[i]=data;
           
 
             i = 358;
-            data = "2 subgoals (ID 871)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  x : G	  ============================	  Sect (fun y : G => y * - x) (fun y : G => y * x)		subgoal 2 (ID 873) is:	 Sect (fun y : G => y * x) (fun y : G => y * - x)	";
+            data = "2 subgoals (ID 871)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  x : G	  ============================	  (fun y : G => y * x) o (fun y : G => y * - x) == idmap		subgoal 2 (ID 873) is:	 (fun y : G => y * - x) o (fun y : G => y * x) == idmap	";
             responses[i]=data;
           
 
@@ -1863,12 +1863,12 @@
           
 
             i = 369;
-            data = "3 subgoals (ID 950)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  ============================	  G -> G		subgoal 2 (ID 952) is:	 Sect ?g negate	subgoal 3 (ID 954) is:	 Sect negate ?g	";
+            data = "3 subgoals (ID 950)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  ============================	  G -> G		subgoal 2 (ID 952) is:	 negate o ?g == idmap	subgoal 3 (ID 954) is:	 ?g o negate == idmap	";
             responses[i]=data;
           
 
             i = 370;
-            data = "2 subgoals (ID 952)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  ============================	  Sect negate negate		subgoal 2 (ID 954) is:	 Sect negate negate	";
+            data = "2 subgoals (ID 952)	  	  G : Type	  Aop : SgOp G	  Aunit : MonUnit G	  Anegate : Negate G	  H : IsGroup G	  ============================	  negate o negate == idmap		subgoal 2 (ID 954) is:	 negate o negate == idmap	";
             responses[i]=data;
           
 
@@ -2283,7 +2283,7 @@
           
 
             i = 453;
-            data = "1 subgoal (ID 1364)	  	  G : Group	  H : Group	  ============================	  IsMonoid (G * H)	3 subgoals (ID 2335)	  	  G : Group	  H : Group	  ============================	  IsSemiGroup (G * H)		subgoal 2 (ID 2337) is:	 LeftIdentity sg_op mon_unit	subgoal 3 (ID 2339) is:	 RightIdentity sg_op mon_unit	";
+            data = "1 subgoal (ID 1364)	  	  G : Group	  H : Group	  ============================	  IsMonoid (G * H)	";
             responses[i]=data;
           
 
@@ -2308,7 +2308,7 @@
           
 
             i = 458;
-            data = "1 subgoal (ID 2335)	  	  G : Group	  H : Group	  ============================	  IsSemiGroup (G * H)	1 subgoal (ID 3778)	  	  G : Group	  H : Group	  ============================	  Associative sg_op	";
+            data = "3 subgoals (ID 2335)	  	  G : Group	  H : Group	  ============================	  IsSemiGroup (G * H)		subgoal 2 (ID 2337) is:	 LeftIdentity sg_op mon_unit	subgoal 3 (ID 2339) is:	 RightIdentity sg_op mon_unit	1 subgoal (ID 2335)	  	  G : Group	  H : Group	  ============================	  IsSemiGroup (G * H)	1 subgoal (ID 3778)	  	  G : Group	  H : Group	  ============================	  Associative sg_op	";
             responses[i]=data;
           
 
@@ -2843,7 +2843,7 @@
           
 
             i = 565;
-            data = "3 subgoals (ID 1916)	  	  H : Funext	  ============================	  forall (a b c d : Group) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), (h $o g) $o f = h $o (g $o f)		subgoal 2 (ID 1917) is:	 forall (a b : Group) (f : a $-> b), Id b $o f = f	subgoal 3 (ID 1918) is:	 forall (a b : Group) (f : a $-> b), f $o Id a = f	No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -2883,7 +2883,7 @@
           
 
             i = 573;
-            data = "1 subgoal (ID 1041)	  	  ============================	  IsInitial grp_trivial	";
+            data = "3 subgoals (ID 1916)	  	  H : Funext	  ============================	  forall (a b c d : Group) (f : a $-> b) (g : b $-> c) 	  (h : c $-> d), (h $o g) $o f = h $o (g $o f)		subgoal 2 (ID 1917) is:	 forall (a b : Group) (f : a $-> b), Id b $o f = f	subgoal 3 (ID 1918) is:	 forall (a b : Group) (f : a $-> b), f $o Id a = f	No more subgoals.	1 subgoal (ID 1041)	  	  ============================	  IsInitial grp_trivial	";
             responses[i]=data;
           
 

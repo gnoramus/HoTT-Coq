@@ -1458,17 +1458,17 @@
           
 
             i = 288;
-            data = "3 subgoals (ID 868)	  	  X : Type	  ============================	  Sect (fun x : X => (x, tt)) fst		subgoal 2 (ID 870) is:	 Sect fst (fun x : X => (x, tt))	subgoal 3 (ID 872) is:	 forall x : X * Unit, ?eisretr (fst x) = ap fst (?eissect x)	";
+            data = "3 subgoals (ID 868)	  	  X : Type	  ============================	  fst o (fun x : X => (x, tt)) == idmap		subgoal 2 (ID 870) is:	 (fun x : X => (x, tt)) o fst == idmap	subgoal 3 (ID 872) is:	 forall x : X * Unit, ?eisretr (fst x) = ap fst (?eissect x)	";
             responses[i]=data;
           
 
             i = 289;
-            data = "1 subgoal (ID 868)	  	  X : Type	  ============================	  Sect (fun x : X => (x, tt)) fst	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 870) is:	 Sect fst (fun x : X => (x, tt))	subgoal 2 (ID 872) is:	 forall x : X * Unit, (fun x0 : X => 1) (fst x) = ap fst (?eissect x)	";
+            data = "1 subgoal (ID 868)	  	  X : Type	  ============================	  fst o (fun x : X => (x, tt)) == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 870) is:	 (fun x : X => (x, tt)) o fst == idmap	subgoal 2 (ID 872) is:	 forall x : X * Unit, (fun x0 : X => 1) (fst x) = ap fst (?eissect x)	";
             responses[i]=data;
           
 
             i = 290;
-            data = "1 subgoal (ID 870)	  	  X : Type	  ============================	  Sect fst (fun x : X => (x, tt))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 872) is:	 forall x : X * Unit,	 (fun x0 : X => 1) (fst x) =	 ap fst	   ((fun x0 : X * Unit =>	     (fun (x1 : X) (snd : Unit) =>	      match snd as u return ((fst (x1, u), tt) = (x1, u)) with	      | tt => 1	      end) (fst x0) (snd x0)) x)	";
+            data = "1 subgoal (ID 870)	  	  X : Type	  ============================	  (fun x : X => (x, tt)) o fst == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 872) is:	 forall x : X * Unit,	 (fun x0 : X => 1) (fst x) =	 ap fst	   ((fun x0 : X * Unit =>	     (fun (x1 : X) (snd : Unit) =>	      match snd as u return ((fst (x1, u), tt) = (x1, u)) with	      | tt => 1	      end) (fst x0) (snd x0)) x)	";
             responses[i]=data;
           
 
@@ -1498,17 +1498,17 @@
           
 
             i = 296;
-            data = "3 subgoals (ID 871)	  	  X : Type	  ============================	  Sect (fun x : X => (tt, x)) snd		subgoal 2 (ID 873) is:	 Sect snd (fun x : X => (tt, x))	subgoal 3 (ID 875) is:	 forall x : Unit * X, ?eisretr (snd x) = ap snd (?eissect x)	";
+            data = "3 subgoals (ID 871)	  	  X : Type	  ============================	  snd o (fun x : X => (tt, x)) == idmap		subgoal 2 (ID 873) is:	 (fun x : X => (tt, x)) o snd == idmap	subgoal 3 (ID 875) is:	 forall x : Unit * X, ?eisretr (snd x) = ap snd (?eissect x)	";
             responses[i]=data;
           
 
             i = 297;
-            data = "1 subgoal (ID 871)	  	  X : Type	  ============================	  Sect (fun x : X => (tt, x)) snd	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 873) is:	 Sect snd (fun x : X => (tt, x))	subgoal 2 (ID 875) is:	 forall x : Unit * X, (fun x0 : X => 1) (snd x) = ap snd (?eissect x)	";
+            data = "1 subgoal (ID 871)	  	  X : Type	  ============================	  snd o (fun x : X => (tt, x)) == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 873) is:	 (fun x : X => (tt, x)) o snd == idmap	subgoal 2 (ID 875) is:	 forall x : Unit * X, (fun x0 : X => 1) (snd x) = ap snd (?eissect x)	";
             responses[i]=data;
           
 
             i = 298;
-            data = "1 subgoal (ID 873)	  	  X : Type	  ============================	  Sect snd (fun x : X => (tt, x))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 875) is:	 forall x : Unit * X,	 (fun x0 : X => 1) (snd x) =	 ap snd	   ((fun x0 : Unit * X =>	     (fun fst : Unit =>	      match	        fst as u	        return (forall snd : X, (tt, Datatypes.snd (u, snd)) = (u, snd))	      with	      | tt => fun x1 : X => 1	      end) (fst x0) (snd x0)) x)	";
+            data = "1 subgoal (ID 873)	  	  X : Type	  ============================	  (fun x : X => (tt, x)) o snd == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 875) is:	 forall x : Unit * X,	 (fun x0 : X => 1) (snd x) =	 ap snd	   ((fun x0 : Unit * X =>	     (fun fst : Unit =>	      match	        fst as u	        return (forall snd : X, (tt, Datatypes.snd (u, snd)) = (u, snd))	      with	      | tt => fun x1 : X => 1	      end) (fst x0) (snd x0)) x)	";
             responses[i]=data;
           
 
@@ -1858,12 +1858,12 @@
           
 
             i = 368;
-            data = "4 subgoals (ID 1021)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  y : B * D	  ============================	  hfiber (fun z : A * C => (f (fst z), g (snd z))) y ->	  hfiber f (fst y) * hfiber g (snd y)		subgoal 2 (ID 1023) is:	 hfiber f (fst y) * hfiber g (snd y) ->	 hfiber (fun z : A * C => (f (fst z), g (snd z))) y	subgoal 3 (ID 1025) is:	 Sect ?g ?f	subgoal 4 (ID 1027) is:	 Sect ?f ?g	";
+            data = "4 subgoals (ID 1021)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  y : B * D	  ============================	  hfiber (fun z : A * C => (f (fst z), g (snd z))) y ->	  hfiber f (fst y) * hfiber g (snd y)		subgoal 2 (ID 1023) is:	 hfiber f (fst y) * hfiber g (snd y) ->	 hfiber (fun z : A * C => (f (fst z), g (snd z))) y	subgoal 3 (ID 1025) is:	 ?f o ?g == idmap	subgoal 4 (ID 1027) is:	 ?g o ?f == idmap	";
             responses[i]=data;
           
 
             i = 369;
-            data = "1 subgoal (ID 1021)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  y : B * D	  ============================	  hfiber (fun z : A * C => (f (fst z), g (snd z))) y ->	  hfiber f (fst y) * hfiber g (snd y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals		subgoal 1 (ID 1023) is:	 hfiber f (fst y) * hfiber g (snd y) ->	 hfiber (fun z : A * C => (f (fst z), g (snd z))) y	subgoal 2 (ID 1025) is:	 Sect ?g	   (fun x : hfiber (fun z : A * C => (f (fst z), g (snd z))) y =>	    ((fst x.1; ap fst x.2), (snd x.1; ap snd x.2)))	subgoal 3 (ID 1027) is:	 Sect	   (fun x : hfiber (fun z : A * C => (f (fst z), g (snd z))) y =>	    ((fst x.1; ap fst x.2), (snd x.1; ap snd x.2))) 	   ?g	";
+            data = "1 subgoal (ID 1021)	  	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  y : B * D	  ============================	  hfiber (fun z : A * C => (f (fst z), g (snd z))) y ->	  hfiber f (fst y) * hfiber g (snd y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals		subgoal 1 (ID 1023) is:	 hfiber f (fst y) * hfiber g (snd y) ->	 hfiber (fun z : A * C => (f (fst z), g (snd z))) y	subgoal 2 (ID 1025) is:	 (fun x : hfiber (fun z : A * C => (f (fst z), g (snd z))) y =>	  ((fst x.1; ap fst x.2), (snd x.1; ap snd x.2))) o 	 ?g == idmap	subgoal 3 (ID 1027) is:	 ?g	 o (fun x : hfiber (fun z : A * C => (f (fst z), g (snd z))) y =>	    ((fst x.1; ap fst x.2), (snd x.1; ap snd x.2))) == idmap	";
             responses[i]=data;
           
 

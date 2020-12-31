@@ -423,62 +423,62 @@
           
 
             i = 81;
-            data = "2 subgoals (ID 64)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  ============================	  forall f g : X -> X, Sect f g -> Sect (M f) (M g)		subgoal 2 (ID 66) is:	 X <~> X -> Y <~> Y	";
+            data = "2 subgoals (ID 97)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  ============================	  forall f g : X -> X,	  (fun x : X => g (f x)) == idmap -> (fun x : Y => M g (M f x)) == idmap		subgoal 2 (ID 99) is:	 X <~> X -> Y <~> Y	";
             responses[i]=data;
           
 
             i = 82;
-            data = "1 subgoal (ID 64)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  ============================	  forall f g : X -> X, Sect f g -> Sect (M f) (M g)	1 subgoal (ID 71)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : Sect g f	  x : Y	  ============================	  M f (M g x) = x	";
+            data = "1 subgoal (ID 97)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  ============================	  forall f g : X -> X,	  (fun x : X => g (f x)) == idmap -> (fun x : Y => M g (M f x)) == idmap	1 subgoal (ID 104)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : (fun x : X => f (g x)) == idmap	  x : Y	  ============================	  M f (M g x) = x	";
             responses[i]=data;
           
 
             i = 83;
-            data = "2 subgoals (ID 93)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : Sect g f	  x : Y	  ============================	  M f (M g x) = M (f o g) x		subgoal 2 (ID 94) is:	 M (f o g) x = x	";
+            data = "2 subgoals (ID 126)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : (fun x : X => f (g x)) == idmap	  x : Y	  ============================	  M f (M g x) = M (f o g) x		subgoal 2 (ID 127) is:	 M (f o g) x = x	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 93)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : Sect g f	  x : Y	  ============================	  M f (M g x) = M (f o g) x	1 subgoal (ID 104)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : Sect g f	  x : Y	  ============================	  M (f o g) x = M f (M g x)	";
+            data = "1 subgoal (ID 126)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : (fun x : X => f (g x)) == idmap	  x : Y	  ============================	  M f (M g x) = M (f o g) x	1 subgoal (ID 137)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : (fun x : X => f (g x)) == idmap	  x : Y	  ============================	  M (f o g) x = M f (M g x)	";
             responses[i]=data;
           
 
             i = 85;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 94) is:	 M (f o g) x = x	subgoal 2 (ID 66) is:	 X <~> X -> Y <~> Y	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 127) is:	 M (f o g) x = x	subgoal 2 (ID 99) is:	 X <~> X -> Y <~> Y	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 94)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : Sect g f	  x : Y	  ============================	  M (f o g) x = x	2 subgoals (ID 118)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : Sect g f	  x : Y	  ============================	  M (f o g) x = M idmap x		subgoal 2 (ID 119) is:	 M idmap x = x	";
+            data = "1 subgoal (ID 127)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : (fun x : X => f (g x)) == idmap	  x : Y	  ============================	  M (f o g) x = x	2 subgoals (ID 151)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : (fun x : X => f (g x)) == idmap	  x : Y	  ============================	  M (f o g) x = M idmap x		subgoal 2 (ID 152) is:	 M idmap x = x	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 subgoal (ID 118)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : Sect g f	  x : Y	  ============================	  M (f o g) x = M idmap x	1 subgoal (ID 131)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : Sect g f	  x : Y	  ============================	  (fun x0 : X => f (g x0)) == idmap	";
+            data = "1 subgoal (ID 151)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : (fun x : X => f (g x)) == idmap	  x : Y	  ============================	  M (f o g) x = M idmap x	1 subgoal (ID 164)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : (fun x : X => f (g x)) == idmap	  x : Y	  ============================	  (fun x0 : X => f (g x0)) == idmap	";
             responses[i]=data;
           
 
             i = 88;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals		subgoal 1 (ID 119) is:	 M idmap x = x	subgoal 2 (ID 66) is:	 X <~> X -> Y <~> Y	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	2 subgoals		subgoal 1 (ID 152) is:	 M idmap x = x	subgoal 2 (ID 99) is:	 X <~> X -> Y <~> Y	";
             responses[i]=data;
           
 
             i = 89;
-            data = "1 subgoal (ID 119)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : Sect g f	  x : Y	  ============================	  M idmap x = x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 66) is:	 X <~> X -> Y <~> Y	1 subgoal (ID 66)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, Sect f g -> Sect (M f) (M g)	  ============================	  X <~> X -> Y <~> Y	2 subgoals (ID 141)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, Sect f g -> Sect (M f) (M g)	  ============================	  forall f : X -> X, IsEquiv f -> IsEquiv (M f)		subgoal 2 (ID 143) is:	 X <~> X -> Y <~> Y	";
+            data = "1 subgoal (ID 152)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  g, f : X -> X	  s : (fun x : X => f (g x)) == idmap	  x : Y	  ============================	  M idmap x = x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 99) is:	 X <~> X -> Y <~> Y	1 subgoal (ID 99)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, g o f == idmap -> M g o M f == idmap	  ============================	  X <~> X -> Y <~> Y	2 subgoals (ID 174)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, g o f == idmap -> M g o M f == idmap	  ============================	  forall f : X -> X, IsEquiv f -> IsEquiv (M f)		subgoal 2 (ID 176) is:	 X <~> X -> Y <~> Y	";
             responses[i]=data;
           
 
             i = 90;
-            data = "1 subgoal (ID 141)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, Sect f g -> Sect (M f) (M g)	  ============================	  forall f : X -> X, IsEquiv f -> IsEquiv (M f)	1 subgoal (ID 145)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, Sect f g -> Sect (M f) (M g)	  f : X -> X	  X0 : IsEquiv f	  ============================	  IsEquiv (M f)	";
+            data = "1 subgoal (ID 174)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, g o f == idmap -> M g o M f == idmap	  ============================	  forall f : X -> X, IsEquiv f -> IsEquiv (M f)	1 subgoal (ID 178)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, g o f == idmap -> M g o M f == idmap	  f : X -> X	  X0 : IsEquiv f	  ============================	  IsEquiv (M f)	";
             responses[i]=data;
           
 
             i = 91;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 143) is:	 X <~> X -> Y <~> Y	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 176) is:	 X <~> X -> Y <~> Y	";
             responses[i]=data;
           
 
             i = 92;
-            data = "1 subgoal (ID 143)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, Sect f g -> Sect (M f) (M g)	  ME : forall f : X -> X, IsEquiv f -> IsEquiv (M f)	  ============================	  X <~> X -> Y <~> Y	No more subgoals.	";
+            data = "1 subgoal (ID 176)	  	  H : Funext	  X : Type	  Y : Type	  M : (X -> X) -> Y -> Y	  Mid : M idmap == idmap	  MC : forall f g : X -> X, M (g o f) == M g o M f	  MS : forall f g : X -> X, g o f == idmap -> M g o M f == idmap	  ME : forall f : X -> X, IsEquiv f -> IsEquiv (M f)	  ============================	  X <~> X -> Y <~> Y	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1050,7 +1050,7 @@ Assuming univalence, rigidity is equivalent to contractibility of <span class="i
       " onmouseover="
       mouseover(81, '0_3_23');
       "><br>
-  <span class="id" title="tactic">assert</span> (<span class="id" title="var">MS</span> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="f:27" class="idref" href="#f:27"><span class="id" title="binder">f</span></a> <a id="g:28" class="idref" href="#g:28"><span class="id" title="binder">g</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> <a class="idref" href="HoTT.Spaces.BAut.Rigid.html#f:25"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Spaces.BAut.Rigid.html#g:26"><span class="id" title="variable">g</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> (<span class="id" title="var">M</span> <a class="idref" href="HoTT.Spaces.BAut.Rigid.html#f:25"><span class="id" title="variable">f</span></a>) (<span class="id" title="var">M</span> <a class="idref" href="HoTT.Spaces.BAut.Rigid.html#g:26"><span class="id" title="variable">g</span></a>)).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">assert</span> (<span class="id" title="var">MS</span> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="f:27" class="idref" href="#f:27"><span class="id" title="binder">f</span></a> <a id="g:28" class="idref" href="#g:28"><span class="id" title="binder">g</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Spaces.BAut.Rigid.html#g:26"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Spaces.BAut.Rigid.html#f:25"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">(</span></a><span class="id" title="var">M</span> <a class="idref" href="HoTT.Spaces.BAut.Rigid.html#g:26"><span class="id" title="variable">g</span></a><a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">(</span></a><span class="id" title="var">M</span> <a class="idref" href="HoTT.Spaces.BAut.Rigid.html#f:25"><span class="id" title="variable">f</span></a><a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(82, '0_3_23');

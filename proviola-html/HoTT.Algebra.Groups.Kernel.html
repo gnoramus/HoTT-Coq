@@ -633,7 +633,7 @@
           
 
             i = 123;
-            data = "4 subgoals (ID 98)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  ============================	  (G $-> grp_kernel f) -> {g : G $-> A & f $o g == grp_homo_const}		subgoal 2 (ID 100) is:	 {g : G $-> A & f $o g == grp_homo_const} -> G $-> grp_kernel f	subgoal 3 (ID 102) is:	 Sect ?g ?f	subgoal 4 (ID 104) is:	 Sect ?f ?g	";
+            data = "4 subgoals (ID 98)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  ============================	  (G $-> grp_kernel f) -> {g : G $-> A & f $o g == grp_homo_const}		subgoal 2 (ID 100) is:	 {g : G $-> A & f $o g == grp_homo_const} -> G $-> grp_kernel f	subgoal 3 (ID 102) is:	 ?f o ?g == idmap	subgoal 4 (ID 104) is:	 ?g o ?f == idmap	";
             responses[i]=data;
           
 
@@ -653,7 +653,7 @@
           
 
             i = 127;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals		subgoal 1 (ID 100) is:	 {g : G $-> A & f $o g == grp_homo_const} -> G $-> grp_kernel f	subgoal 2 (ID 102) is:	 Sect ?g	   (fun k : G $-> grp_kernel f =>	    (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2))	subgoal 3 (ID 104) is:	 Sect	   (fun k : G $-> grp_kernel f =>	    (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2)) 	   ?g	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	3 subgoals		subgoal 1 (ID 100) is:	 {g : G $-> A & f $o g == grp_homo_const} -> G $-> grp_kernel f	subgoal 2 (ID 102) is:	 (fun k : G $-> grp_kernel f =>	  (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2)) o 	 ?g == idmap	subgoal 3 (ID 104) is:	 ?g	 o (fun k : G $-> grp_kernel f =>	    (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2)) == idmap	";
             responses[i]=data;
           
 
@@ -663,12 +663,12 @@
           
 
             i = 129;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 102) is:	 Sect	   (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	    (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	      X.1 X.2)	   (fun k : G $-> grp_kernel f =>	    (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2))	subgoal 2 (ID 104) is:	 Sect	   (fun k : G $-> grp_kernel f =>	    (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2))	   (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	    (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	      X.1 X.2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 102) is:	 (fun k : G $-> grp_kernel f =>	  (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2))	 o (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	    (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	      X.1 X.2) == idmap	subgoal 2 (ID 104) is:	 (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	  (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	    X.1 X.2)	 o (fun k : G $-> grp_kernel f =>	    (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2)) == idmap	";
             responses[i]=data;
           
 
             i = 130;
-            data = "1 subgoal (ID 102)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  ============================	  Sect	    (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	     (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	       X.1 X.2)	    (fun k : G $-> grp_kernel f =>	     (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2))	1 subgoal (ID 143)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  g : G $-> A	  p : f $o g == grp_homo_const	  ============================	  (subgrp_incl (grp_kernel f) A $o grp_kernel_corec p;	  fun x : G => (grp_kernel_corec p x).2) = (g; p)	";
+            data = "1 subgoal (ID 102)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  ============================	  (fun k : G $-> grp_kernel f =>	   (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2))	  o (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	     (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	       X.1 X.2) == idmap	1 subgoal (ID 143)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  g : G $-> A	  p : f $o g == grp_homo_const	  ============================	  (subgrp_incl (grp_kernel f) A $o grp_kernel_corec p;	  fun x : G => (grp_kernel_corec p x).2) = (g; p)	";
             responses[i]=data;
           
 
@@ -678,12 +678,12 @@
           
 
             i = 132;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 104) is:	 Sect	   (fun k : G $-> grp_kernel f =>	    (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2))	   (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	    (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	      X.1 X.2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 104) is:	 (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	  (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	    X.1 X.2)	 o (fun k : G $-> grp_kernel f =>	    (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2)) == idmap	";
             responses[i]=data;
           
 
             i = 133;
-            data = "1 subgoal (ID 104)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  ============================	  Sect	    (fun k : G $-> grp_kernel f =>	     (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2))	    (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	     (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	       X.1 X.2)	1 subgoal (ID 409)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  k : G $-> grp_kernel f	  ============================	  grp_kernel_corec (fun x : G => (k x).2) = k	";
+            data = "1 subgoal (ID 104)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  ============================	  (fun X : {g : G $-> A & f $o g == grp_homo_const} =>	   (fun (g : G $-> A) (p : f $o g == grp_homo_const) => grp_kernel_corec p)	     X.1 X.2)	  o (fun k : G $-> grp_kernel f =>	     (subgrp_incl (grp_kernel f) A $o k; fun x : G => (k x).2)) == idmap	1 subgoal (ID 409)	  	  H : Funext	  A, B, G : Group	  f : A $-> B	  k : G $-> grp_kernel f	  ============================	  grp_kernel_corec (fun x : G => (k x).2) = k	";
             responses[i]=data;
           
 
@@ -808,12 +808,12 @@
           
 
             i = 158;
-            data = "1 subgoal (ID 520)	  	  H : Univalence	  A, B : Group	  f : A $-> B	  isemb_f : IsEmbedding f	  ============================	  IsEquiv grp_homo_const	3 subgoals (ID 619)	  	  H : Univalence	  A, B : Group	  f : A $-> B	  isemb_f : IsEmbedding f	  ============================	  grp_kernel f -> trivial_subgroup		subgoal 2 (ID 621) is:	 Sect ?g grp_homo_const	subgoal 3 (ID 623) is:	 Sect grp_homo_const ?g	";
+            data = "1 subgoal (ID 520)	  	  H : Univalence	  A, B : Group	  f : A $-> B	  isemb_f : IsEmbedding f	  ============================	  IsEquiv grp_homo_const	3 subgoals (ID 619)	  	  H : Univalence	  A, B : Group	  f : A $-> B	  isemb_f : IsEmbedding f	  ============================	  grp_kernel f -> trivial_subgroup		subgoal 2 (ID 621) is:	 grp_homo_const o ?g == idmap	subgoal 3 (ID 623) is:	 ?g o grp_homo_const == idmap	";
             responses[i]=data;
           
 
             i = 159;
-            data = "2 subgoals (ID 621)	  	  H : Univalence	  A, B : Group	  f : A $-> B	  isemb_f : IsEmbedding f	  ============================	  Sect grp_homo_const grp_homo_const		subgoal 2 (ID 623) is:	 Sect grp_homo_const grp_homo_const	";
+            data = "2 subgoals (ID 621)	  	  H : Univalence	  A, B : Group	  f : A $-> B	  isemb_f : IsEmbedding f	  ============================	  grp_homo_const o grp_homo_const == idmap		subgoal 2 (ID 623) is:	 grp_homo_const o grp_homo_const == idmap	";
             responses[i]=data;
           
 

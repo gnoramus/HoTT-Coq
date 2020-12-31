@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: ne_list.v
 Line: 1
-Time: 0.093s">
+Time: 0.115s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   Coq.Unicode.Utf8
@@ -106,8 +106,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ne_list.v
 Line: 22
-Time: 0.001s">
-<div class="time" style="width: 1.0752688172043%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Inductive ne_list : Type
     := one: T → ne_list | cons: T → ne_list → ne_list.</pre>
 </div>
@@ -170,8 +170,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ne_list.v
 Line: 50
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
 
   Fixpoint from_list (x: T) (xs: list T): ne_list :=
@@ -214,7 +214,7 @@ Time: 0s">
 <div class="code" title="File: ne_list.v
 Line: 63
 Time: 0.001s">
-<div class="time" style="width: 1.0752688172043%"></div>
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
     destruct l...</pre>
 </div>
@@ -234,8 +234,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ne_list.v
 Line: 66
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -273,8 +273,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ne_list.v
 Line: 81
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
 
   Fixpoint front (l: ne_list) : list T :=
@@ -285,8 +285,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ne_list.v
 Line: 87
-Time: 0.001s">
-<div class="time" style="width: 1.0752688172043%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma two_level_rect (P: ne_list → Type)
@@ -338,7 +338,7 @@ Time: 0s">
 <div class="code" title="File: ne_list.v
 Line: 97
 Time: 0.001s">
-<div class="time" style="width: 1.0752688172043%"></div>
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre> destruct l...</pre>
 </div>
 <div class="code" title="File: ne_list.v
@@ -350,8 +350,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ne_list.v
 Line: 98
-Time: 0.001s">
-<div class="time" style="width: 1.0752688172043%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre>
      induction l...</pre>
 </div>
@@ -426,8 +426,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ne_list.v
 Line: 108
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre> destruct l; reflexivity.</pre>
 </div>
 <div class="code" title="File: ne_list.v
@@ -439,7 +439,7 @@ Time: 0s">
 <div class="code" title="File: ne_list.v
 Line: 108
 Time: 0.001s">
-<div class="time" style="width: 1.0752688172043%"></div>
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
 End with_type.</pre>
 </div>
@@ -453,8 +453,8 @@ Arguments ne_list : clear implicits.</pre>
 </div>
 <div class="code" title="File: ne_list.v
 Line: 111
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
 
 Fixpoint tails {T} (l: ne_list T): ne_list (ne_list T) :=
@@ -482,8 +482,8 @@ Proof with auto.</pre>
 </div>
 <div class="code" title="File: ne_list.v
 Line: 122
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
  induction y; cbn.</pre>
 </div>
@@ -536,13 +536,13 @@ Time: 0s">
 <div class="code" title="File: ne_list.v
 Line: 127
 Time: 0.001s">
-<div class="time" style="width: 1.0752688172043%"></div>
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre> intros [[] | C]...</pre>
 </div>
 <div class="code" title="File: ne_list.v
 Line: 127
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -560,8 +560,8 @@ Fixpoint map {A B} (f: A → B) (l: ne_list A): ne_list B :=
 </div>
 <div class="code" title="File: ne_list.v
 Line: 134
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
 
 Lemma list_map {A B} (f: A → B) (l: ne_list A)
@@ -628,8 +628,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: ne_list.v
 Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
 
 Fixpoint inits {A} (l: ne_list A): ne_list (ne_list A) :=
@@ -640,8 +640,8 @@ Fixpoint inits {A} (l: ne_list A): ne_list (ne_list A) :=
 </div>
 <div class="code" title="File: ne_list.v
 Line: 148
-Time: 0.001s">
-<div class="time" style="width: 1.0752688172043%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre>
 
 Fixpoint zip {A B: Type} (l: ne_list A) (m: ne_list B)

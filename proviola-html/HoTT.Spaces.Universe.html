@@ -398,12 +398,12 @@
           
 
             i = 76;
-            data = "1 subgoal (ID 290)	  	  H : Funext	  H0 : ExcludedMiddle	  A : Type	  B : Type	  ne : ~ (A <~> B)	  e : BAut A <~> BAut B	  ea : (e (A; tr 1)).1 = B	  ne' : ~ merely (B = A)	  ============================	  inr	    ((e (A; tr 1)).1;	    fun q : Trunc (-1) ((e (A; tr 1)).1 = A) =>	    Trunc_ind (fun _ : Trunc (-1) ((e (A; tr 1)).1 = A) => Empty)	      (fun q0 : (e (A; tr 1)).1 = A =>	       Trunc_ind (fun _ : Trunc (-1) ((e (A; tr 1)).1 = B) => Empty)	         (fun p : (e (A; tr 1)).1 = B =>	          match	            q0 in (_ = y)	            return	              (~ (y <~> B) ->	               {Z : Type & Trunc (-1) (Z = y)} <~>	               {Z : Type & Trunc (-1) (Z = B)} -> Empty)	          with	          | 1 =>	              fun (ne0 : ~ ((e (A; tr 1)).1 <~> B))	                (_ : {Z : Type & Trunc (-1) (Z = (e (A; tr 1)).1)} <~>	                     {Z : Type & Trunc (-1) (Z = B)}) =>	              ne0 (equiv_path (e (A; tr 1)).1 B p)	          end ne e) (e (A; tr 1)).2) q) = inr (B; ne')	1 subgoal (ID 334)	  	  H : Funext	  H0 : ExcludedMiddle	  A : Type	  B : Type	  ne : ~ (A <~> B)	  e : BAut A <~> BAut B	  ea : (e (A; tr 1)).1 = B	  ne' : ~ merely (B = A)	  ============================	  (e (A; tr 1)).1 = B	";
+            data = "";
             responses[i]=data;
           
 
             i = 77;
-            data = "No more subgoals.	";
+            data = "1 subgoal (ID 290)	  	  H : Funext	  H0 : ExcludedMiddle	  A : Type	  B : Type	  ne : ~ (A <~> B)	  e : BAut A <~> BAut B	  ea : (e (A; tr 1)).1 = B	  ne' : ~ merely (B = A)	  ============================	  inr	    ((e (A; tr 1)).1;	    fun q : Trunc (-1) ((e (A; tr 1)).1 = A) =>	    Trunc_ind (fun _ : Trunc (-1) ((e (A; tr 1)).1 = A) => Empty)	      (fun q0 : (e (A; tr 1)).1 = A =>	       Trunc_ind (fun _ : Trunc (-1) ((e (A; tr 1)).1 = B) => Empty)	         (fun p : (e (A; tr 1)).1 = B =>	          match	            q0 in (_ = y)	            return	              (~ (y <~> B) ->	               {Z : Type & Trunc (-1) (Z = y)} <~>	               {Z : Type & Trunc (-1) (Z = B)} -> Empty)	          with	          | 1 =>	              fun (ne0 : ~ ((e (A; tr 1)).1 <~> B))	                (_ : {Z : Type & Trunc (-1) (Z = (e (A; tr 1)).1)} <~>	                     {Z : Type & Trunc (-1) (Z = B)}) =>	              ne0 (equiv_path (e (A; tr 1)).1 B p)	          end ne e) (e (A; tr 1)).2) q) = inr (B; ne')	1 subgoal (ID 334)	  	  H : Funext	  H0 : ExcludedMiddle	  A : Type	  B : Type	  ne : ~ (A <~> B)	  e : BAut A <~> BAut B	  ea : (e (A; tr 1)).1 = B	  ne' : ~ merely (B = A)	  ============================	  (e (A; tr 1)).1 = B	No more subgoals.	";
             responses[i]=data;
           
 
@@ -813,17 +813,17 @@
           
 
             i = 159;
-            data = "2 subgoals (ID 90)	  	  H : Univalence	  A : Type	  P : Type	  a : merely A	  IsHProp0 : IsHProp P	  p : P	  ============================	  Sect (fun a0 : A => (p, a0)) snd		subgoal 2 (ID 91) is:	 Sect snd (fun a0 : A => (p, a0))	";
+            data = "2 subgoals (ID 90)	  	  H : Univalence	  A : Type	  P : Type	  a : merely A	  IsHProp0 : IsHProp P	  p : P	  ============================	  (fun x : A => snd (p, x)) == idmap		subgoal 2 (ID 91) is:	 (fun x : P * A => (p, snd x)) == idmap	";
             responses[i]=data;
           
 
             i = 160;
-            data = "1 subgoal (ID 90)	  	  H : Univalence	  A : Type	  P : Type	  a : merely A	  IsHProp0 : IsHProp P	  p : P	  ============================	  Sect (fun a0 : A => (p, a0)) snd	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 91) is:	 Sect snd (fun a0 : A => (p, a0))	subgoal 2 (ID 76) is:	 P * A = A -> P	";
+            data = "1 subgoal (ID 90)	  	  H : Univalence	  A : Type	  P : Type	  a : merely A	  IsHProp0 : IsHProp P	  p : P	  ============================	  (fun x : A => snd (p, x)) == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 91) is:	 (fun x : P * A => (p, snd x)) == idmap	subgoal 2 (ID 76) is:	 P * A = A -> P	";
             responses[i]=data;
           
 
             i = 161;
-            data = "1 subgoal (ID 91)	  	  H : Univalence	  A : Type	  P : Type	  a : merely A	  IsHProp0 : IsHProp P	  p : P	  ============================	  Sect snd (fun a0 : A => (p, a0))	1 subgoal (ID 100)	  	  H : Univalence	  A : Type	  P : Type	  a : merely A	  IsHProp0 : IsHProp P	  p, p' : P	  x : A	  ============================	  (p, snd (p', x)) = (p', x)	";
+            data = "1 subgoal (ID 91)	  	  H : Univalence	  A : Type	  P : Type	  a : merely A	  IsHProp0 : IsHProp P	  p : P	  ============================	  (fun x : P * A => (p, snd x)) == idmap	1 subgoal (ID 100)	  	  H : Univalence	  A : Type	  P : Type	  a : merely A	  IsHProp0 : IsHProp P	  p, p' : P	  x : A	  ============================	  (p, snd (p', x)) = (p', x)	";
             responses[i]=data;
           
 

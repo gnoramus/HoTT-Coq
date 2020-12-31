@@ -1588,7 +1588,7 @@
           
 
             i = 314;
-            data = "4 subgoals (ID 176)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Tr n X -> Tr n (Tr m X)		subgoal 2 (ID 178) is:	 Tr n (Tr m X) -> Tr n X	subgoal 3 (ID 180) is:	 Sect ?g ?f	subgoal 4 (ID 182) is:	 Sect ?f ?g	";
+            data = "4 subgoals (ID 176)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Tr n X -> Tr n (Tr m X)		subgoal 2 (ID 178) is:	 Tr n (Tr m X) -> Tr n X	subgoal 3 (ID 180) is:	 ?f o ?g == idmap	subgoal 4 (ID 182) is:	 ?g o ?f == idmap	";
             responses[i]=data;
           
 
@@ -1598,12 +1598,12 @@
           
 
             i = 316;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals		subgoal 1 (ID 178) is:	 Tr n (Tr m X) -> Tr n X	subgoal 2 (ID 180) is:	 Sect ?g (Trunc_rec (fun x : X => tr (tr x)))	subgoal 3 (ID 182) is:	 Sect (Trunc_rec (fun x : X => tr (tr x))) ?g	subgoal 4 (ID 119) is:	 Tr n (Tr m X) <~> Tr (trunc_index_min n m) X	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 subgoals		subgoal 1 (ID 178) is:	 Tr n (Tr m X) -> Tr n X	subgoal 2 (ID 180) is:	 Trunc_rec (fun x : X => tr (tr x)) o ?g == idmap	subgoal 3 (ID 182) is:	 ?g o Trunc_rec (fun x : X => tr (tr x)) == idmap	subgoal 4 (ID 119) is:	 Tr n (Tr m X) <~> Tr (trunc_index_min n m) X	";
             responses[i]=data;
           
 
             i = 317;
-            data = "3 subgoals (ID 178)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Tr n (Tr m X) -> Tr n X		subgoal 2 (ID 180) is:	 Sect ?g (Trunc_rec (fun x : X => tr (tr x)))	subgoal 3 (ID 182) is:	 Sect (Trunc_rec (fun x : X => tr (tr x))) ?g	1 subgoal (ID 178)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Tr n (Tr m X) -> Tr n X	1 subgoal (ID 219)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Tr m X -> Tr n X	";
+            data = "3 subgoals (ID 178)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Tr n (Tr m X) -> Tr n X		subgoal 2 (ID 180) is:	 Trunc_rec (fun x : X => tr (tr x)) o ?g == idmap	subgoal 3 (ID 182) is:	 ?g o Trunc_rec (fun x : X => tr (tr x)) == idmap	1 subgoal (ID 178)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Tr n (Tr m X) -> Tr n X	1 subgoal (ID 219)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Tr m X -> Tr n X	";
             responses[i]=data;
           
 
@@ -1618,7 +1618,7 @@
           
 
             i = 320;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 subgoals		subgoal 1 (ID 180) is:	 Sect (Trunc_rec (Trunc_rec tr)) (Trunc_rec (fun x : X => tr (tr x)))	subgoal 2 (ID 182) is:	 Sect (Trunc_rec (fun x : X => tr (tr x))) (Trunc_rec (Trunc_rec tr))	subgoal 3 (ID 119) is:	 Tr n (Tr m X) <~> Tr (trunc_index_min n m) X	2 subgoals (ID 180)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Sect (Trunc_rec (Trunc_rec tr)) (Trunc_rec (fun x : X => tr (tr x)))		subgoal 2 (ID 182) is:	 Sect (Trunc_rec (fun x : X => tr (tr x))) (Trunc_rec (Trunc_rec tr))	1 subgoal (ID 180)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Sect (Trunc_rec (Trunc_rec tr)) (Trunc_rec (fun x : X => tr (tr x)))	1 subgoal (ID 297)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  forall a : Tr m X,	  (fun aa : Trunc n (Tr m X) =>	   Trunc_rec (fun x : X => tr (tr x)) (Trunc_rec (Trunc_rec tr) aa) = aa)	    (tr a)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 subgoals		subgoal 1 (ID 180) is:	 Trunc_rec (fun x : X => tr (tr x)) o Trunc_rec (Trunc_rec tr) == idmap	subgoal 2 (ID 182) is:	 Trunc_rec (Trunc_rec tr) o Trunc_rec (fun x : X => tr (tr x)) == idmap	subgoal 3 (ID 119) is:	 Tr n (Tr m X) <~> Tr (trunc_index_min n m) X	2 subgoals (ID 180)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Trunc_rec (fun x : X => tr (tr x)) o Trunc_rec (Trunc_rec tr) == idmap		subgoal 2 (ID 182) is:	 Trunc_rec (Trunc_rec tr) o Trunc_rec (fun x : X => tr (tr x)) == idmap	1 subgoal (ID 180)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Trunc_rec (fun x : X => tr (tr x)) o Trunc_rec (Trunc_rec tr) == idmap	1 subgoal (ID 297)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  forall a : Tr m X,	  (fun aa : Trunc n (Tr m X) =>	   (Trunc_rec (fun x : X => tr (tr x)) o Trunc_rec (Trunc_rec tr)) aa =	   idmap aa) (tr a)	";
             responses[i]=data;
           
 
@@ -1653,7 +1653,7 @@
           
 
             i = 327;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals		subgoal 1 (ID 182) is:	 Sect (Trunc_rec (fun x : X => tr (tr x))) (Trunc_rec (Trunc_rec tr))	subgoal 2 (ID 119) is:	 Tr n (Tr m X) <~> Tr (trunc_index_min n m) X	1 subgoal (ID 182)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Sect (Trunc_rec (fun x : X => tr (tr x))) (Trunc_rec (Trunc_rec tr))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 119) is:	 Tr n (Tr m X) <~> Tr (trunc_index_min n m) X	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals		subgoal 1 (ID 182) is:	 Trunc_rec (Trunc_rec tr) o Trunc_rec (fun x : X => tr (tr x)) == idmap	subgoal 2 (ID 119) is:	 Tr n (Tr m X) <~> Tr (trunc_index_min n m) X	1 subgoal (ID 182)	  	  n, m : trunc_index	  X : Type	  l : n <= m	  ============================	  Trunc_rec (Trunc_rec tr) o Trunc_rec (fun x : X => tr (tr x)) == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 119) is:	 Tr n (Tr m X) <~> Tr (trunc_index_min n m) X	";
             responses[i]=data;
           
 

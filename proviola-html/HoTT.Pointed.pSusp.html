@@ -388,17 +388,17 @@
           
 
             i = 74;
-            data = "4 subgoals (ID 107)	  	  X : pType	  Y : pType	  f : X <~>* Y	  ============================	  psusp X ->* psusp Y		subgoal 2 (ID 109) is:	 psusp Y ->* psusp X	subgoal 3 (ID 111) is:	 pSect ?f' ?f	subgoal 4 (ID 113) is:	 pSect ?f ?f'	";
+            data = "4 subgoals (ID 107)	  	  X : pType	  Y : pType	  f : X <~>* Y	  ============================	  psusp X ->* psusp Y		subgoal 2 (ID 109) is:	 psusp Y ->* psusp X	subgoal 3 (ID 111) is:	 ?f o* ?f' ==* pmap_idmap	subgoal 4 (ID 113) is:	 ?f' o* ?f == pmap_idmap	";
             responses[i]=data;
           
 
             i = 75;
-            data = "3 subgoals (ID 109)	  	  X : pType	  Y : pType	  f : X <~>* Y	  ============================	  psusp Y ->* psusp X		subgoal 2 (ID 111) is:	 pSect ?f' (psusp_functor (let X0 := pointed_equiv_fun X Y f in X0))	subgoal 3 (ID 113) is:	 pSect (psusp_functor (let X0 := pointed_equiv_fun X Y f in X0)) ?f'	";
+            data = "3 subgoals (ID 109)	  	  X : pType	  Y : pType	  f : X <~>* Y	  ============================	  psusp Y ->* psusp X		subgoal 2 (ID 111) is:	 psusp_functor (let X0 := pointed_equiv_fun X Y f in X0) o* ?f' ==*	 pmap_idmap	subgoal 3 (ID 113) is:	 ?f' o* psusp_functor (let X0 := pointed_equiv_fun X Y f in X0) == pmap_idmap	";
             responses[i]=data;
           
 
             i = 76;
-            data = "2 subgoals (ID 111)	  	  X : pType	  Y : pType	  f : X <~>* Y	  ============================	  pSect (psusp_functor (let X0 := pointed_equiv_fun Y X f^-1* in X0))	    (psusp_functor (let X0 := pointed_equiv_fun X Y f in X0))		subgoal 2 (ID 113) is:	 pSect (psusp_functor (let X0 := pointed_equiv_fun X Y f in X0))	   (psusp_functor (let X0 := pointed_equiv_fun Y X f^-1* in X0))	";
+            data = "2 subgoals (ID 111)	  	  X : pType	  Y : pType	  f : X <~>* Y	  ============================	  psusp_functor (let X0 := pointed_equiv_fun X Y f in X0)	  o* psusp_functor (let X0 := pointed_equiv_fun Y X f^-1* in X0) ==*	  pmap_idmap		subgoal 2 (ID 113) is:	 psusp_functor (let X0 := pointed_equiv_fun Y X f^-1* in X0)	 o* psusp_functor (let X0 := pointed_equiv_fun X Y f in X0) == pmap_idmap	";
             responses[i]=data;
           
 
@@ -858,12 +858,12 @@
           
 
             i = 168;
-            data = "<infomsg>loop_susp_counit is defined</infomsg>	1 subgoal (ID 168)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  f o* loop_susp_counit X ==*	  loop_susp_counit Y o* psusp_functor (loops_functor f)	1 subgoal (ID 203)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  ============================	  {| pointed_fun := f; dpoint_eq := 1 |}	  o* loop_susp_counit {| pointed_type := X; ispointed_type := point0 |} ==*	  loop_susp_counit {| pointed_type := Y; ispointed_type := f point0 |}	  o* psusp_functor (loops_functor {| pointed_fun := f; dpoint_eq := 1 |})	2 subgoals (ID 212)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  ============================	  (fun x : Susp (point X = point X) =>	   f (Susp_rec (point X) (point X) idmap x)) ==	  (fun x : Susp (point X = point X) =>	   Susp_rec (point Y) (point Y) idmap	     (functor_susp (fun p : point X = point X => 1 @ (ap f p @ 1)) x))		subgoal 2 (ID 213) is:	 ?Goal (point (Susp (point X = point X))) = 1	1 subgoal (ID 212)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  ============================	  (fun x : Susp (point X = point X) =>	   f (Susp_rec (point X) (point X) idmap x)) ==	  (fun x : Susp (point X = point X) =>	   Susp_rec (point Y) (point Y) idmap	     (functor_susp (fun p : point X = point X => 1 @ (ap f p @ 1)) x))	1 subgoal (ID 238)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  p : point X = point X	  ============================	  transport	    (fun y : Susp (point X = point X) =>	     f (Susp_rec (point X) (point X) idmap y) =	     Susp_rec (point Y) (point Y) idmap	       (functor_susp (fun p0 : point X = point X => 1 @ (ap f p0 @ 1)) y))	    (merid p) 1 = 1	";
+            data = "";
             responses[i]=data;
           
 
             i = 169;
-            data = "1 subgoal (ID 262)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  p : point X = point X	  ============================	  (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))^ @	  ap	    (fun x : Susp (point X = point X) =>	     Susp_rec (point Y) (point Y) idmap	       (functor_susp (fun p0 : point X = point X => 1 @ (ap f p0 @ 1)) x))	    (merid p) = 1	";
+            data = "<infomsg>loop_susp_counit is defined</infomsg>	1 subgoal (ID 168)	  	  X : pType	  Y : pType	  f : X ->* Y	  ============================	  f o* loop_susp_counit X ==*	  loop_susp_counit Y o* psusp_functor (loops_functor f)	1 subgoal (ID 203)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  ============================	  {| pointed_fun := f; dpoint_eq := 1 |}	  o* loop_susp_counit {| pointed_type := X; ispointed_type := point0 |} ==*	  loop_susp_counit {| pointed_type := Y; ispointed_type := f point0 |}	  o* psusp_functor (loops_functor {| pointed_fun := f; dpoint_eq := 1 |})	2 subgoals (ID 212)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  ============================	  (fun x : Susp (point X = point X) =>	   f (Susp_rec (point X) (point X) idmap x)) ==	  (fun x : Susp (point X = point X) =>	   Susp_rec (point Y) (point Y) idmap	     (functor_susp (fun p : point X = point X => 1 @ (ap f p @ 1)) x))		subgoal 2 (ID 213) is:	 ?Goal (point (Susp (point X = point X))) = 1	1 subgoal (ID 212)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  ============================	  (fun x : Susp (point X = point X) =>	   f (Susp_rec (point X) (point X) idmap x)) ==	  (fun x : Susp (point X = point X) =>	   Susp_rec (point Y) (point Y) idmap	     (functor_susp (fun p : point X = point X => 1 @ (ap f p @ 1)) x))	1 subgoal (ID 238)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  p : point X = point X	  ============================	  transport	    (fun y : Susp (point X = point X) =>	     f (Susp_rec (point X) (point X) idmap y) =	     Susp_rec (point Y) (point Y) idmap	       (functor_susp (fun p0 : point X = point X => 1 @ (ap f p0 @ 1)) y))	    (merid p) 1 = 1	1 subgoal (ID 262)	  	  X : Type	  point0 : IsPointed X	  Y : Type	  f : X -> Y	  p : point X = point X	  ============================	  (ap f (ap (Susp_rec (point X) (point X) idmap) (merid p)))^ @	  ap	    (fun x : Susp (point X = point X) =>	     Susp_rec (point Y) (point Y) idmap	       (functor_susp (fun p0 : point X = point X => 1 @ (ap f p0 @ 1)) x))	    (merid p) = 1	";
             responses[i]=data;
           
 
@@ -938,12 +938,12 @@
           
 
             i = 184;
-            data = "1 subgoal (ID 178)	  	  X : pType	  ============================	  loops_functor (loop_susp_counit X) o* loop_susp_unit (loops X) ==*	  pmap_idmap	";
+            data = "";
             responses[i]=data;
           
 
             i = 185;
-            data = "";
+            data = "1 subgoal (ID 178)	  	  X : pType	  ============================	  loops_functor (loop_susp_counit X) o* loop_susp_unit (loops X) ==*	  pmap_idmap	";
             responses[i]=data;
           
 
@@ -1113,12 +1113,12 @@
           
 
             i = 219;
-            data = "2 subgoals (ID 215)	  	  H : Funext	  A : pType	  B : pType	  ============================	  Sect (fun g : A ->* loops B => loop_susp_counit B o* psusp_functor g)	    (fun f : psusp A ->* B => loops_functor f o* loop_susp_unit A)		subgoal 2 (ID 216) is:	 Sect (fun f : psusp A ->* B => loops_functor f o* loop_susp_unit A)	   (fun g : A ->* loops B => loop_susp_counit B o* psusp_functor g)	";
+            data = "2 subgoals (ID 215)	  	  H : Funext	  A : pType	  B : pType	  ============================	  (fun x : A ->* loops B =>	   loops_functor (loop_susp_counit B o* psusp_functor x) o* loop_susp_unit A) ==	  idmap		subgoal 2 (ID 216) is:	 (fun x : psusp A ->* B =>	  loop_susp_counit B o* psusp_functor (loops_functor x o* loop_susp_unit A)) ==	 idmap	";
             responses[i]=data;
           
 
             i = 220;
-            data = "1 subgoal (ID 215)	  	  H : Funext	  A : pType	  B : pType	  ============================	  Sect (fun g : A ->* loops B => loop_susp_counit B o* psusp_functor g)	    (fun f : psusp A ->* B => loops_functor f o* loop_susp_unit A)	1 subgoal (ID 218)	  	  H : Funext	  A : pType	  B : pType	  g : A ->* loops B	  ============================	  loops_functor (loop_susp_counit B o* psusp_functor g) o* loop_susp_unit A =	  g	";
+            data = "1 subgoal (ID 215)	  	  H : Funext	  A : pType	  B : pType	  ============================	  (fun x : A ->* loops B =>	   loops_functor (loop_susp_counit B o* psusp_functor x) o* loop_susp_unit A) ==	  idmap	1 subgoal (ID 218)	  	  H : Funext	  A : pType	  B : pType	  g : A ->* loops B	  ============================	  loops_functor (loop_susp_counit B o* psusp_functor g) o* loop_susp_unit A =	  g	";
             responses[i]=data;
           
 
@@ -1153,12 +1153,12 @@
           
 
             i = 227;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 216) is:	 Sect (fun f : psusp A ->* B => loops_functor f o* loop_susp_unit A)	   (fun g : A ->* loops B => loop_susp_counit B o* psusp_functor g)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 216) is:	 (fun x : psusp A ->* B =>	  loop_susp_counit B o* psusp_functor (loops_functor x o* loop_susp_unit A)) ==	 idmap	";
             responses[i]=data;
           
 
             i = 228;
-            data = "1 subgoal (ID 216)	  	  H : Funext	  A : pType	  B : pType	  ============================	  Sect (fun f : psusp A ->* B => loops_functor f o* loop_susp_unit A)	    (fun g : A ->* loops B => loop_susp_counit B o* psusp_functor g)	1 subgoal (ID 338)	  	  H : Funext	  A : pType	  B : pType	  f : psusp A ->* B	  ============================	  loop_susp_counit B o* psusp_functor (loops_functor f o* loop_susp_unit A) =	  f	";
+            data = "1 subgoal (ID 216)	  	  H : Funext	  A : pType	  B : pType	  ============================	  (fun x : psusp A ->* B =>	   loop_susp_counit B o* psusp_functor (loops_functor x o* loop_susp_unit A)) ==	  idmap	1 subgoal (ID 338)	  	  H : Funext	  A : pType	  B : pType	  f : psusp A ->* B	  ============================	  loop_susp_counit B o* psusp_functor (loops_functor f o* loop_susp_unit A) =	  f	";
             responses[i]=data;
           
 

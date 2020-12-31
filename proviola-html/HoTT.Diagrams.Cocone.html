@@ -1198,17 +1198,17 @@
           
 
             i = 236;
-            data = "3 subgoals (ID 165)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Cocone D1 X -> Cocone D2 X		subgoal 2 (ID 167) is:	 Sect ?g (cocone_precompose m)	subgoal 3 (ID 169) is:	 Sect (cocone_precompose m) ?g	";
+            data = "3 subgoals (ID 165)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Cocone D1 X -> Cocone D2 X		subgoal 2 (ID 167) is:	 cocone_precompose m o ?g == idmap	subgoal 3 (ID 169) is:	 ?g o cocone_precompose m == idmap	";
             responses[i]=data;
           
 
             i = 237;
-            data = "2 subgoals (ID 167)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Sect (cocone_precompose (diagram_equiv_inv m)) (cocone_precompose m)		subgoal 2 (ID 169) is:	 Sect (cocone_precompose m) (cocone_precompose (diagram_equiv_inv m))	";
+            data = "2 subgoals (ID 167)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  cocone_precompose m o cocone_precompose (diagram_equiv_inv m) == idmap		subgoal 2 (ID 169) is:	 cocone_precompose (diagram_equiv_inv m) o cocone_precompose m == idmap	";
             responses[i]=data;
           
 
             i = 238;
-            data = "1 subgoal (ID 167)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Sect (cocone_precompose (diagram_equiv_inv m)) (cocone_precompose m)	1 subgoal (ID 184)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cocone D1 X	  ============================	  cocone_precompose m (cocone_precompose (diagram_equiv_inv m) C) = C	";
+            data = "1 subgoal (ID 167)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  cocone_precompose m o cocone_precompose (diagram_equiv_inv m) == idmap	1 subgoal (ID 184)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cocone D1 X	  ============================	  cocone_precompose m (cocone_precompose (diagram_equiv_inv m) C) = C	";
             responses[i]=data;
           
 
@@ -1218,7 +1218,7 @@
           
 
             i = 240;
-            data = "1 focused subgoal	(shelved: 1) (ID 201)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cocone D1 X	  ============================	  cocone_precompose m (cocone_precompose (diagram_equiv_inv m) C) = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 202) is:	 cocone_precompose (diagram_comp (diagram_equiv_inv m) m) C = C	subgoal 2 (ID 169) is:	 Sect (cocone_precompose m) (cocone_precompose (diagram_equiv_inv m))	";
+            data = "1 focused subgoal	(shelved: 1) (ID 201)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cocone D1 X	  ============================	  cocone_precompose m (cocone_precompose (diagram_equiv_inv m) C) = ?Goal	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 202) is:	 cocone_precompose (diagram_comp (diagram_equiv_inv m) m) C = C	subgoal 2 (ID 169) is:	 cocone_precompose (diagram_equiv_inv m) o cocone_precompose m == idmap	";
             responses[i]=data;
           
 
@@ -1228,12 +1228,12 @@
           
 
             i = 242;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 169) is:	 Sect (cocone_precompose m) (cocone_precompose (diagram_equiv_inv m))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 169) is:	 cocone_precompose (diagram_equiv_inv m) o cocone_precompose m == idmap	";
             responses[i]=data;
           
 
             i = 243;
-            data = "1 subgoal (ID 169)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  Sect (cocone_precompose m) (cocone_precompose (diagram_equiv_inv m))	1 subgoal (ID 216)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cocone D2 X	  ============================	  cocone_precompose (diagram_equiv_inv m) (cocone_precompose m C) = C	";
+            data = "1 subgoal (ID 169)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  ============================	  cocone_precompose (diagram_equiv_inv m) o cocone_precompose m == idmap	1 subgoal (ID 216)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  X : Type	  C : Cocone D2 X	  ============================	  cocone_precompose (diagram_equiv_inv m) (cocone_precompose m C) = C	";
             responses[i]=data;
           
 
@@ -1293,17 +1293,17 @@
           
 
             i = 255;
-            data = "3 subgoals (ID 179)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  Cocone D Y -> Cocone D X		subgoal 2 (ID 181) is:	 Sect ?g (fun C : Cocone D X => cocone_postcompose C f)	subgoal 3 (ID 183) is:	 Sect (fun C : Cocone D X => cocone_postcompose C f) ?g	";
+            data = "3 subgoals (ID 179)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  Cocone D Y -> Cocone D X		subgoal 2 (ID 181) is:	 (fun C : Cocone D X => cocone_postcompose C f) o ?g == idmap	subgoal 3 (ID 183) is:	 ?g o (fun C : Cocone D X => cocone_postcompose C f) == idmap	";
             responses[i]=data;
           
 
             i = 256;
-            data = "2 subgoals (ID 181)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  Sect (fun C : Cocone D Y => cocone_postcompose C f^-1)	    (fun C : Cocone D X => cocone_postcompose C f)		subgoal 2 (ID 183) is:	 Sect (fun C : Cocone D X => cocone_postcompose C f)	   (fun C : Cocone D Y => cocone_postcompose C f^-1)	";
+            data = "2 subgoals (ID 181)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  (fun C : Cocone D X => cocone_postcompose C f)	  o (fun C : Cocone D Y => cocone_postcompose C f^-1) == idmap		subgoal 2 (ID 183) is:	 (fun C : Cocone D Y => cocone_postcompose C f^-1)	 o (fun C : Cocone D X => cocone_postcompose C f) == idmap	";
             responses[i]=data;
           
 
             i = 257;
-            data = "1 subgoal (ID 181)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  Sect (fun C : Cocone D Y => cocone_postcompose C f^-1)	    (fun C : Cocone D X => cocone_postcompose C f)	1 subgoal (ID 205)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : Cocone D Y	  ============================	  cocone_postcompose (cocone_postcompose C f^-1) f = C	";
+            data = "1 subgoal (ID 181)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  (fun C : Cocone D X => cocone_postcompose C f)	  o (fun C : Cocone D Y => cocone_postcompose C f^-1) == idmap	1 subgoal (ID 205)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : Cocone D Y	  ============================	  cocone_postcompose (cocone_postcompose C f^-1) f = C	";
             responses[i]=data;
           
 
@@ -1318,7 +1318,7 @@
           
 
             i = 260;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 223) is:	 cocone_postcompose C (fun x : Y => f (f^-1 x)) = C	subgoal 2 (ID 183) is:	 Sect (fun C : Cocone D X => cocone_postcompose C f)	   (fun C : Cocone D Y => cocone_postcompose C f^-1)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 223) is:	 cocone_postcompose C (fun x : Y => f (f^-1 x)) = C	subgoal 2 (ID 183) is:	 (fun C : Cocone D Y => cocone_postcompose C f^-1)	 o (fun C : Cocone D X => cocone_postcompose C f) == idmap	";
             responses[i]=data;
           
 
@@ -1338,12 +1338,12 @@
           
 
             i = 264;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 183) is:	 Sect (fun C : Cocone D X => cocone_postcompose C f)	   (fun C : Cocone D Y => cocone_postcompose C f^-1)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 183) is:	 (fun C : Cocone D Y => cocone_postcompose C f^-1)	 o (fun C : Cocone D X => cocone_postcompose C f) == idmap	";
             responses[i]=data;
           
 
             i = 265;
-            data = "1 subgoal (ID 183)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  Sect (fun C : Cocone D X => cocone_postcompose C f)	    (fun C : Cocone D Y => cocone_postcompose C f^-1)	1 subgoal (ID 269)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : Cocone D X	  ============================	  cocone_postcompose (cocone_postcompose C f) f^-1 = C	";
+            data = "1 subgoal (ID 183)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  ============================	  (fun C : Cocone D Y => cocone_postcompose C f^-1)	  o (fun C : Cocone D X => cocone_postcompose C f) == idmap	1 subgoal (ID 269)	  	  H : Funext	  G : Graph	  D : Diagram G	  X : Type	  Y : Type	  f : X <~> Y	  C : Cocone D X	  ============================	  cocone_postcompose (cocone_postcompose C f) f^-1 = C	";
             responses[i]=data;
           
 

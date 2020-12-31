@@ -1933,17 +1933,17 @@
           
 
             i = 383;
-            data = "3 subgoals (ID 885)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  ============================	  P (center A) -> forall a : A, P a		subgoal 2 (ID 887) is:	 Sect ?g (fun f : forall a : A, P a => f (center A))	subgoal 3 (ID 889) is:	 Sect (fun f : forall a : A, P a => f (center A)) ?g	";
+            data = "3 subgoals (ID 885)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  ============================	  P (center A) -> forall a : A, P a		subgoal 2 (ID 887) is:	 (fun f : forall a : A, P a => f (center A)) o ?g == idmap	subgoal 3 (ID 889) is:	 ?g o (fun f : forall a : A, P a => f (center A)) == idmap	";
             responses[i]=data;
           
 
             i = 384;
-            data = "1 subgoal (ID 885)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  ============================	  P (center A) -> forall a : A, P a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 887) is:	 Sect	   (fun (p : P (center A)) (a : A) => transport P (path_contr (center A) a) p)	   (fun f : forall a : A, P a => f (center A))	subgoal 2 (ID 889) is:	 Sect (fun f : forall a : A, P a => f (center A))	   (fun (p : P (center A)) (a : A) => transport P (path_contr (center A) a) p)	";
+            data = "1 subgoal (ID 885)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  ============================	  P (center A) -> forall a : A, P a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 887) is:	 (fun f : forall a : A, P a => f (center A))	 o (fun (p : P (center A)) (a : A) => transport P (path_contr (center A) a) p) ==	 idmap	subgoal 2 (ID 889) is:	 (fun (p : P (center A)) (a : A) => transport P (path_contr (center A) a) p)	 o (fun f : forall a : A, P a => f (center A)) == idmap	";
             responses[i]=data;
           
 
             i = 385;
-            data = "1 subgoal (ID 887)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  ============================	  Sect	    (fun (p : P (center A)) (a : A) =>	     transport P (path_contr (center A) a) p)	    (fun f : forall a : A, P a => f (center A))	1 subgoal (ID 902)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  p : P (center A)	  ============================	  transport P (path_contr (center A) (center A)) p = p	";
+            data = "1 subgoal (ID 887)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  ============================	  (fun f : forall a : A, P a => f (center A))	  o (fun (p : P (center A)) (a : A) =>	     transport P (path_contr (center A) a) p) == idmap	1 subgoal (ID 902)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  p : P (center A)	  ============================	  transport P (path_contr (center A) (center A)) p = p	";
             responses[i]=data;
           
 
@@ -1953,12 +1953,12 @@
           
 
             i = 387;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 889) is:	 Sect (fun f : forall a : A, P a => f (center A))	   (fun (p : P (center A)) (a : A) => transport P (path_contr (center A) a) p)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 889) is:	 (fun (p : P (center A)) (a : A) => transport P (path_contr (center A) a) p)	 o (fun f : forall a : A, P a => f (center A)) == idmap	";
             responses[i]=data;
           
 
             i = 388;
-            data = "1 subgoal (ID 889)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  ============================	  Sect (fun f : forall a : A, P a => f (center A))	    (fun (p : P (center A)) (a : A) =>	     transport P (path_contr (center A) a) p)	1 subgoal (ID 931)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  f : forall a : A, P a	  a : A	  ============================	  transport P (path_contr (center A) a) (f (center A)) = f a	";
+            data = "1 subgoal (ID 889)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  ============================	  (fun (p : P (center A)) (a : A) => transport P (path_contr (center A) a) p)	  o (fun f : forall a : A, P a => f (center A)) == idmap	1 subgoal (ID 931)	  	  H : Funext	  A : Type	  Contr0 : Contr A	  P : A -> Type	  f : forall a : A, P a	  a : A	  ============================	  transport P (path_contr (center A) a) (f (center A)) = f a	";
             responses[i]=data;
           
 
@@ -2063,22 +2063,22 @@
           
 
             i = 409;
-            data = "1 subgoal (ID 921)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  flip_P := flip	   : (forall (a : A) (b : B), P a b) -> forall (b : B) (a : A), P a b	  flip_P_inv := flip	   : (forall (a : B) (b : A), flip P a b) ->	     forall (b : A) (a : B), flip P a b	  flip_P_is_sect := ((fun f : forall (a : A) (b : B), P a b => 1)	                     :	                     Sect flip_P flip_P_inv) : Sect flip_P flip_P_inv	  ============================	  IsEquiv flip_P	";
+            data = "1 subgoal (ID 931)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  flip_P := flip	   : (forall (a : A) (b : B), P a b) -> forall (b : B) (a : A), P a b	  flip_P_inv := flip	   : (forall (a : B) (b : A), flip P a b) ->	     forall (b : A) (a : B), flip P a b	  flip_P_is_sect := ((fun f : forall (a : A) (b : B), P a b => 1)	                     :	                     flip_P_inv o flip_P == idmap)	   : flip_P_inv o flip_P == idmap	  ============================	  IsEquiv flip_P	";
             responses[i]=data;
           
 
             i = 410;
-            data = "1 subgoal (ID 928)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  flip_P := flip	   : (forall (a : A) (b : B), P a b) -> forall (b : B) (a : A), P a b	  flip_P_inv := flip	   : (forall (a : B) (b : A), flip P a b) ->	     forall (b : A) (a : B), flip P a b	  flip_P_is_sect := ((fun f : forall (a : A) (b : B), P a b => 1)	                     :	                     Sect flip_P flip_P_inv) : Sect flip_P flip_P_inv	  flip_P_is_retr := ((fun g : forall (a : B) (b : A), flip P a b => 1)	                     :	                     Sect flip_P_inv flip_P) : Sect flip_P_inv flip_P	  ============================	  IsEquiv flip_P	";
+            data = "1 subgoal (ID 948)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  flip_P := flip	   : (forall (a : A) (b : B), P a b) -> forall (b : B) (a : A), P a b	  flip_P_inv := flip	   : (forall (a : B) (b : A), flip P a b) ->	     forall (b : A) (a : B), flip P a b	  flip_P_is_sect := ((fun f : forall (a : A) (b : B), P a b => 1)	                     :	                     flip_P_inv o flip_P == idmap)	   : flip_P_inv o flip_P == idmap	  flip_P_is_retr := ((fun g : forall (a : B) (b : A), flip P a b => 1)	                     :	                     flip_P o flip_P_inv == idmap)	   : flip_P o flip_P_inv == idmap	  ============================	  IsEquiv flip_P	";
             responses[i]=data;
           
 
             i = 411;
-            data = "1 subgoal (ID 933)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  flip_P := flip	   : (forall (a : A) (b : B), P a b) -> forall (b : B) (a : A), P a b	  flip_P_inv := flip	   : (forall (a : B) (b : A), flip P a b) ->	     forall (b : A) (a : B), flip P a b	  flip_P_is_sect := ((fun f : forall (a : A) (b : B), P a b => 1)	                     :	                     Sect flip_P flip_P_inv) : Sect flip_P flip_P_inv	  flip_P_is_retr := ((fun g : forall (a : B) (b : A), flip P a b => 1)	                     :	                     Sect flip_P_inv flip_P) : Sect flip_P_inv flip_P	  ============================	  forall x : forall (b : A) (a : B), flip P a b,	  flip_P_is_retr (flip_P x) = ap flip_P (flip_P_is_sect x)	";
+            data = "1 subgoal (ID 953)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  flip_P := flip	   : (forall (a : A) (b : B), P a b) -> forall (b : B) (a : A), P a b	  flip_P_inv := flip	   : (forall (a : B) (b : A), flip P a b) ->	     forall (b : A) (a : B), flip P a b	  flip_P_is_sect := ((fun f : forall (a : A) (b : B), P a b => 1)	                     :	                     flip_P_inv o flip_P == idmap)	   : flip_P_inv o flip_P == idmap	  flip_P_is_retr := ((fun g : forall (a : B) (b : A), flip P a b => 1)	                     :	                     flip_P o flip_P_inv == idmap)	   : flip_P o flip_P_inv == idmap	  ============================	  forall x : forall (b : A) (a : B), flip P a b,	  flip_P_is_retr (flip_P x) = ap flip_P (flip_P_is_sect x)	";
             responses[i]=data;
           
 
             i = 412;
-            data = "1 subgoal (ID 934)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  flip_P := flip	   : (forall (a : A) (b : B), P a b) -> forall (b : B) (a : A), P a b	  flip_P_inv := flip	   : (forall (a : B) (b : A), flip P a b) ->	     forall (b : A) (a : B), flip P a b	  flip_P_is_sect := ((fun f : forall (a : A) (b : B), P a b => 1)	                     :	                     Sect flip_P flip_P_inv) : Sect flip_P flip_P_inv	  flip_P_is_retr := ((fun g : forall (a : B) (b : A), flip P a b => 1)	                     :	                     Sect flip_P_inv flip_P) : Sect flip_P_inv flip_P	  g : forall (b : A) (a : B), flip P a b	  ============================	  flip_P_is_retr (flip_P g) = ap flip_P (flip_P_is_sect g)	";
+            data = "1 subgoal (ID 954)	  	  H : Funext	  A : Type	  B : Type	  P : A -> B -> Type	  flip_P := flip	   : (forall (a : A) (b : B), P a b) -> forall (b : B) (a : A), P a b	  flip_P_inv := flip	   : (forall (a : B) (b : A), flip P a b) ->	     forall (b : A) (a : B), flip P a b	  flip_P_is_sect := ((fun f : forall (a : A) (b : B), P a b => 1)	                     :	                     flip_P_inv o flip_P == idmap)	   : flip_P_inv o flip_P == idmap	  flip_P_is_retr := ((fun g : forall (a : B) (b : A), flip P a b => 1)	                     :	                     flip_P o flip_P_inv == idmap)	   : flip_P o flip_P_inv == idmap	  g : forall (b : A) (a : B), flip P a b	  ============================	  flip_P_is_retr (flip_P g) = ap flip_P (flip_P_is_sect g)	";
             responses[i]=data;
           
 
@@ -3397,12 +3397,12 @@ Note: not sure if <span class="inlinecode"><a class="idref" href="HoTT.Categorie
       " onmouseover="
       mouseover(409, '0_3_83');
       "><br>
-  <span class="id" title="tactic">set</span> (<span class="id" title="var">flip_P_is_sect</span> := (<span class="id" title="keyword">fun</span> <a id="f:382" class="idref" href="#f:382"><span class="id" title="binder">f</span></a> ⇒ 1) : <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> <span class="id" title="var">flip_P</span> <span class="id" title="var">flip_P_inv</span>).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">set</span> (<span class="id" title="var">flip_P_is_sect</span> := (<span class="id" title="keyword">fun</span> <a id="f:382" class="idref" href="#f:382"><span class="id" title="binder">f</span></a> ⇒ 1) : <span class="id" title="var">flip_P_inv</span> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <span class="id" title="var">flip_P</span> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_83');
       " onmouseover="
       mouseover(410, '0_3_83');
       "><br>
-  <span class="id" title="tactic">set</span> (<span class="id" title="var">flip_P_is_retr</span> := (<span class="id" title="keyword">fun</span> <a id="g:384" class="idref" href="#g:384"><span class="id" title="binder">g</span></a> ⇒ 1) : <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> <span class="id" title="var">flip_P_inv</span> <span class="id" title="var">flip_P</span>).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">set</span> (<span class="id" title="var">flip_P_is_retr</span> := (<span class="id" title="keyword">fun</span> <a id="g:384" class="idref" href="#g:384"><span class="id" title="binder">g</span></a> ⇒ 1) : <span class="id" title="var">flip_P</span> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <span class="id" title="var">flip_P_inv</span> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_83');
       " onmouseover="
       mouseover(411, '0_3_83');

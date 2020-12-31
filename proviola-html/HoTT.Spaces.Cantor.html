@@ -198,12 +198,12 @@
           
 
             i = 36;
-            data = "2 subgoals (ID 15)	  	  H : Funext	  ============================	  Sect cantor_unfold cantor_fold		subgoal 2 (ID 16) is:	 Sect cantor_fold cantor_unfold	";
+            data = "2 subgoals (ID 15)	  	  H : Funext	  ============================	  (fun x : Cantor => cantor_fold (cantor_unfold x)) == idmap		subgoal 2 (ID 16) is:	 (fun x : Cantor + Cantor => cantor_unfold (cantor_fold x)) == idmap	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 15)	  	  H : Funext	  ============================	  Sect cantor_unfold cantor_fold	1 subgoal (ID 24)	  	  H : Funext	  c : Cantor	  n : nat	  ============================	  cantor_fold (cantor_unfold c) n = c n	";
+            data = "1 subgoal (ID 15)	  	  H : Funext	  ============================	  (fun x : Cantor => cantor_fold (cantor_unfold x)) == idmap	1 subgoal (ID 24)	  	  H : Funext	  c : Cantor	  n : nat	  ============================	  cantor_fold (cantor_unfold c) n = c n	";
             responses[i]=data;
           
 
@@ -218,7 +218,7 @@
           
 
             i = 40;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 31) is:	 cantor_fold (cantor_unfold c) n.+1 = c n.+1	subgoal 2 (ID 16) is:	 Sect cantor_fold cantor_unfold	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 31) is:	 cantor_fold (cantor_unfold c) n.+1 = c n.+1	subgoal 2 (ID 16) is:	 (fun x : Cantor + Cantor => cantor_unfold (cantor_fold x)) == idmap	";
             responses[i]=data;
           
 
@@ -228,12 +228,12 @@
           
 
             i = 42;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 16) is:	 Sect cantor_fold cantor_unfold	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 16) is:	 (fun x : Cantor + Cantor => cantor_unfold (cantor_fold x)) == idmap	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 16)	  	  H : Funext	  ============================	  Sect cantor_fold cantor_unfold	No more subgoals.	";
+            data = "1 subgoal (ID 16)	  	  H : Funext	  ============================	  (fun x : Cantor + Cantor => cantor_unfold (cantor_fold x)) == idmap	No more subgoals.	";
             responses[i]=data;
           
 

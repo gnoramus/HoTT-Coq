@@ -268,12 +268,12 @@
           
 
             i = 50;
-            data = "1 subgoal (ID 137)	  	  H : Funext	  ============================	  Sect t2c c2t	1 subgoal (ID 138)	  	  H : Funext	  ============================	  forall x : Torus, c2t (t2c x) = x	1 focused subgoal	(shelved: 2) (ID 151)	  	  H : Funext	  ============================	  DPathSquare (fun x : Torus => c2t (t2c x) = x) surf 	    ?Goal ?Goal ?Goal0 ?Goal0	1 focused subgoal	(shelved: 2) (ID 181)	  	  H : Funext	  ============================	  PathCube (sq_dp ?Goal) (sq_dp ?Goal) (sq_dp ?Goal0) 	    (sq_dp ?Goal0) (sq_ap (fun x : Torus => c2t (t2c x)) surf)	    (sq_ap idmap surf)	1 focused subgoal	(shelved: 2) (ID 260)	  	  H : Funext	  ============================	  PathCube ?Goal ?Goal ?Goal0 ?Goal0	    (sq_ap (fun x : Torus => c2t (t2c x)) surf) (sq_ap idmap surf)	1 focused subgoal	(shelved: 2) (ID 291)	  	  H : Funext	  ============================	  PathCube (sq_ap (fun x : Torus => c2t (t2c x)) surf) 	    (sq_ap idmap surf) (sq_tr ?Goal) (sq_tr ?Goal) 	    (sq_tr ?Goal0) (sq_tr ?Goal0)	";
+            data = "";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 focused subgoal	(shelved: 2) (ID 370)	  	  H : Funext	  ============================	  PathCube (sq_ap (fun x : Torus => c2t (t2c x)) surf) 	    (sq_ap idmap surf) ?Goal ?Goal ?Goal0 ?Goal0	";
+            data = "1 subgoal (ID 147)	  	  H : Funext	  ============================	  c2t o t2c == idmap	1 focused subgoal	(shelved: 2) (ID 160)	  	  H : Funext	  ============================	  DPathSquare (fun x : Torus => c2t (t2c x) = x) surf 	    ?Goal ?Goal ?Goal0 ?Goal0	1 focused subgoal	(shelved: 2) (ID 190)	  	  H : Funext	  ============================	  PathCube (sq_dp ?Goal) (sq_dp ?Goal) (sq_dp ?Goal0) 	    (sq_dp ?Goal0) (sq_ap (fun x : Torus => c2t (t2c x)) surf)	    (sq_ap idmap surf)	1 focused subgoal	(shelved: 2) (ID 269)	  	  H : Funext	  ============================	  PathCube ?Goal ?Goal ?Goal0 ?Goal0	    (sq_ap (fun x : Torus => c2t (t2c x)) surf) (sq_ap idmap surf)	1 focused subgoal	(shelved: 2) (ID 300)	  	  H : Funext	  ============================	  PathCube (sq_ap (fun x : Torus => c2t (t2c x)) surf) 	    (sq_ap idmap surf) (sq_tr ?Goal) (sq_tr ?Goal) 	    (sq_tr ?Goal0) (sq_tr ?Goal0)	1 focused subgoal	(shelved: 2) (ID 379)	  	  H : Funext	  ============================	  PathCube (sq_ap (fun x : Torus => c2t (t2c x)) surf) 	    (sq_ap idmap surf) ?Goal ?Goal ?Goal0 ?Goal0	No more subgoals.	";
             responses[i]=data;
           
 
@@ -283,7 +283,7 @@
           
 
             i = 53;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -333,57 +333,57 @@
           
 
             i = 63;
-            data = "";
+            data = "1 subgoal (ID 255)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B -> C	  g : C -> D	  a, a' : A	  p : a = a'	  b, b' : B	  q : b = b'	  ============================	  PathCube (sq_ap011 (fun (x : A) (y : B) => g (f x y)) p q)	    (sq_ap g (sq_ap011 f p q)) apcs apcs apcs apcs	No more subgoals.	1 subgoal (ID 268)	  	  H : Funext	  ============================	  t2c o c2t == idmap	1 subgoal (ID 281)	  	  H : Funext	  ============================	  forall fst snd : Circle, t2c (c2t (fst, snd)) = (fst, snd)	2 subgoals (ID 289)	  	  H : Funext	  ============================	  DPath (fun x : Circle => t2c (c2t (base, x)) = (base, x)) loop 1 1		subgoal 2 (ID 291) is:	 DPath (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	   loop	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	1 focused subgoal	(shelved: 1) (ID 291)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	    loop	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	1 focused subgoal	(shelved: 1) (ID 340)	  	  H : Funext	  ============================	  forall x : Circle,	  DPath (fun t : Circle => t2c (c2t (t, x)) = (t, x)) loop	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	";
             responses[i]=data;
           
 
             i = 64;
-            data = "";
+            data = "1 focused subgoal	(shelved: 1) (ID 361)	  	  H : Funext	  ============================	  forall x : Circle,	  PathSquare	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	    (ap (fun x0 : Circle => (x0, x)) loop)	";
             responses[i]=data;
           
 
             i = 65;
-            data = "";
+            data = "2 focused subgoals	(shelved: 1) (ID 365)	  	  H : Funext	  ============================	  (fun x : Circle =>	   PathSquare	     (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	        (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	     (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	        (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	     (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	     (ap (fun x0 : Circle => (x0, x)) loop)) base		subgoal 2 (ID 367) is:	 DPath	   (fun x : Circle =>	    PathSquare	      (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	      (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	      (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	      (ap (fun x0 : Circle => (x0, x)) loop)) loop 	   ?b ?b	";
             responses[i]=data;
           
 
             i = 66;
-            data = "";
+            data = "1 focused subgoal	(shelved: 2) (ID 367)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle =>	     PathSquare	       (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0))	          1 (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	       (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0))	          1 (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	       (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	       (ap (fun x0 : Circle => (x0, x)) loop)) loop 	    (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0)	";
             responses[i]=data;
           
 
             i = 67;
-            data = "";
+            data = "1 focused subgoal	(shelved: 2) (ID 404)	  	  H : Funext	  ============================	  PathCube (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0)	    (sq_dp	       (dp_apD	          (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x))	             1 (sq_dp^-1 (sq_tr^-1 ?Goal))) loop))	    (sq_dp	       (dp_apD	          (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x))	             1 (sq_dp^-1 (sq_tr^-1 ?Goal))) loop))	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	";
             responses[i]=data;
           
 
             i = 68;
-            data = "";
+            data = "3 focused subgoals	(shelved: 4) (ID 441)	  	  H : Funext	  ============================	  ?Goal1 =	  sq_dp	    (dp_apD	       (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	          (sq_dp^-1 (sq_tr^-1 ?Goal))) loop)		subgoal 2 (ID 442) is:	 ?Goal2 =	 sq_dp	   (dp_apD	      (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal))) loop)	subgoal 3 (ID 443) is:	 PathCube (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0) ?Goal1 	   ?Goal2	   (sq_dp	      (dp_apD	         (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	         loop))	   (sq_dp	      (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 245)	  	  H : Funext	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B -> C	  g : C -> D	  a, a' : A	  p : a = a'	  b, b' : B	  q : b = b'	  ============================	  PathCube (sq_ap011 (fun (x : A) (y : B) => g (f x y)) p q)	    (sq_ap g (sq_ap011 f p q)) apcs apcs apcs apcs	No more subgoals.	1 subgoal (ID 248)	  	  H : Funext	  ============================	  Sect c2t t2c	1 subgoal (ID 252)	  	  H : Funext	  ============================	  forall fst snd : Circle, t2c (c2t (fst, snd)) = (fst, snd)	2 subgoals (ID 260)	  	  H : Funext	  ============================	  DPath (fun x : Circle => t2c (c2t (base, x)) = (base, x)) loop 1 1		subgoal 2 (ID 262) is:	 DPath (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	   loop	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	   (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1 ?bl)	1 focused subgoal	(shelved: 1) (ID 262)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle => forall snd : Circle, t2c (c2t (x, snd)) = (x, snd))	    loop	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	    (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)))	1 focused subgoal	(shelved: 1) (ID 311)	  	  H : Funext	  ============================	  forall x : Circle,	  DPath (fun t : Circle => t2c (c2t (t, x)) = (t, x)) loop	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	1 focused subgoal	(shelved: 1) (ID 332)	  	  H : Funext	  ============================	  forall x : Circle,	  PathSquare	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	       (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	    (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	    (ap (fun x0 : Circle => (x0, x)) loop)	2 focused subgoals	(shelved: 1) (ID 336)	  	  H : Funext	  ============================	  (fun x : Circle =>	   PathSquare	     (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	        (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	     (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	        (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	     (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	     (ap (fun x0 : Circle => (x0, x)) loop)) base		subgoal 2 (ID 338) is:	 DPath	   (fun x : Circle =>	    PathSquare	      (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	      (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	      (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	      (ap (fun x0 : Circle => (x0, x)) loop)) loop 	   ?b ?b	1 focused subgoal	(shelved: 2) (ID 338)	  	  H : Funext	  ============================	  DPath	    (fun x : Circle =>	     PathSquare	       (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0))	          1 (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	       (Circle_ind_dp (fun x0 : Circle => t2c (c2t (base, x0)) = (base, x0))	          1 (sq_dp^-1 (sq_tr^-1 ?Goal)) x)	       (ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	       (ap (fun x0 : Circle => (x0, x)) loop)) loop 	    (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0)	1 focused subgoal	(shelved: 2) (ID 375)	  	  H : Funext	  ============================	  PathCube (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0)	    (sq_dp	       (dp_apD	          (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x))	             1 (sq_dp^-1 (sq_tr^-1 ?Goal))) loop))	    (sq_dp	       (dp_apD	          (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x))	             1 (sq_dp^-1 (sq_tr^-1 ?Goal))) loop))	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	3 focused subgoals	(shelved: 4) (ID 412)	  	  H : Funext	  ============================	  ?Goal1 =	  sq_dp	    (dp_apD	       (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	          (sq_dp^-1 (sq_tr^-1 ?Goal))) loop)		subgoal 2 (ID 413) is:	 ?Goal2 =	 sq_dp	   (dp_apD	      (Circle_ind_dp (fun x : Circle => t2c (c2t (base, x)) = (base, x)) 1	         (sq_dp^-1 (sq_tr^-1 ?Goal))) loop)	subgoal 3 (ID 414) is:	 PathCube (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0) ?Goal1 	   ?Goal2	   (sq_dp	      (dp_apD	         (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	         loop))	   (sq_dp	      (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	";
+            data = "1 focused subgoal	(shelved: 2) (ID 443)	  	  H : Funext	  ============================	  PathCube (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal)	    (sq_tr^-1 ?Goal)	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	";
             responses[i]=data;
           
 
             i = 70;
-            data = "1 focused subgoal	(shelved: 2) (ID 414)	  	  H : Funext	  ============================	  PathCube (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal0) (sq_tr^-1 ?Goal)	    (sq_tr^-1 ?Goal)	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	";
+            data = "1 focused subgoal	(shelved: 2) (ID 540)	  	  H : Funext	  ============================	  PathCube	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	    (sq_tr (sq_tr^-1 ?Goal0)) (sq_tr (sq_tr^-1 ?Goal0))	    (sq_tr (sq_tr^-1 ?Goal)) (sq_tr (sq_tr^-1 ?Goal))	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 focused subgoal	(shelved: 2) (ID 511)	  	  H : Funext	  ============================	  PathCube	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	    (sq_tr (sq_tr^-1 ?Goal0)) (sq_tr (sq_tr^-1 ?Goal0))	    (sq_tr (sq_tr^-1 ?Goal)) (sq_tr (sq_tr^-1 ?Goal))	";
+            data = "5 focused subgoals	(shelved: 6) (ID 585)	  	  H : Funext	  ============================	  ?Goal1 = sq_tr (sq_tr^-1 ?Goal0)		subgoal 2 (ID 586) is:	 ?Goal2 = sq_tr (sq_tr^-1 ?Goal0)	subgoal 3 (ID 587) is:	 ?Goal3 = sq_tr (sq_tr^-1 ?Goal)	subgoal 4 (ID 588) is:	 ?Goal4 = sq_tr (sq_tr^-1 ?Goal)	subgoal 5 (ID 589) is:	 PathCube	   (sq_dp	      (dp_apD	         (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	         loop))	   (sq_dp	      (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	   ?Goal1 ?Goal2 ?Goal3 ?Goal4	";
             responses[i]=data;
           
 
             i = 72;
-            data = "5 focused subgoals	(shelved: 6) (ID 556)	  	  H : Funext	  ============================	  ?Goal1 = sq_tr (sq_tr^-1 ?Goal0)		subgoal 2 (ID 557) is:	 ?Goal2 = sq_tr (sq_tr^-1 ?Goal0)	subgoal 3 (ID 558) is:	 ?Goal3 = sq_tr (sq_tr^-1 ?Goal)	subgoal 4 (ID 559) is:	 ?Goal4 = sq_tr (sq_tr^-1 ?Goal)	subgoal 5 (ID 560) is:	 PathCube	   (sq_dp	      (dp_apD	         (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	         loop))	   (sq_dp	      (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	   ?Goal1 ?Goal2 ?Goal3 ?Goal4	";
+            data = "1 focused subgoal	(shelved: 2) (ID 589)	  	  H : Funext	  ============================	  PathCube	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	    ?Goal0 ?Goal0 ?Goal ?Goal	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 focused subgoal	(shelved: 2) (ID 560)	  	  H : Funext	  ============================	  PathCube	    (sq_dp	       (dp_apD	          (fun x : Circle => ap (fun x0 : Circle => t2c (c2t (x0, x))) loop)	          loop))	    (sq_dp	       (dp_apD (fun x : Circle => ap (fun x0 : Circle => (x0, x)) loop) loop))	    ?Goal0 ?Goal0 ?Goal ?Goal	";
+            data = "";
             responses[i]=data;
           
 
@@ -453,11 +453,6 @@
           
 
             i = 87;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 88;
             data = "";
             responses[i]=data;
           
@@ -699,7 +694,7 @@
       mouseover(44, '0_3_3');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a id="t2c2t" class="idref" href="#t2c2t"><span class="id" title="definition">t2c2t</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#t2c"><span class="id" title="definition">t2c</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t"><span class="id" title="definition">c2t</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a id="t2c2t" class="idref" href="#t2c2t"><span class="id" title="definition">t2c2t</span></a> : <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t"><span class="id" title="definition">c2t</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#t2c"><span class="id" title="definition">t2c</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(45, '0_3_3');
@@ -709,37 +704,32 @@
       " onmouseover="
       mouseover(46, '0_3_3');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Spaces.Torus.Torus.html#Torus.Torus_ind"><span class="id" title="definition">Torus_ind</span></a> <span class="id" title="var">_</span> 1 <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(47, '0_3_3');
       "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Spaces.Torus.Torus.html#Torus.Torus_ind"><span class="id" title="definition">Torus_ind</span></a> <span class="id" title="var">_</span> 1 <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
-      mouseout('0_3_3');
-      " onmouseover="
-      mouseover(48, '0_3_3');
-      "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Cubical.PathCube.html#cu_ds"><span class="id" title="abbreviation">cu_ds</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(49, '0_3_3');
+      mouseover(48, '0_3_3');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Cubical.PathCube.html#cu_GGGGcc"><span class="id" title="abbreviation">cu_GGGGcc</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a><br>
       <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(50, '0_3_3');
+      mouseover(49, '0_3_3');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Cubical.PathCube.html#cu_rot_tb_fb"><span class="id" title="abbreviation">cu_rot_tb_fb</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(51, '0_3_3');
+      mouseover(50, '0_3_3');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Cubical.PathCube.html#cu_ccGGGG"><span class="id" title="abbreviation">cu_ccGGGG</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a><br>
       <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(52, '0_3_3');
+      mouseover(51, '0_3_3');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#sq_ap_compose"><span class="id" title="definition">sq_ap_compose</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#t2c"><span class="id" title="definition">t2c</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t"><span class="id" title="definition">c2t</span></a> <a class="idref" href="HoTT.Spaces.Torus.Torus.html#Torus.surf"><span class="id" title="axiom">surf</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">)</span></a><br>
       <a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">@</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">lr</span></a> <a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#cu_ap"><span class="id" title="definition">cu_ap</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t"><span class="id" title="definition">c2t</span></a> (<a class="idref" href="HoTT.Spaces.Torus.Torus.html#Torus_rec_beta_surf"><span class="id" title="axiom">Torus_rec_beta_surf</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> )<a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">)</span></a><br>
@@ -748,19 +738,19 @@
       <a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">@</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">lr</span></a> <a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#cu_flip_lr"><span class="id" title="abbreviation">cu_flip_lr</span></a> (<a class="idref" href="HoTT.Cubical.PathCube.html#sq_ap_idmap"><span class="id" title="definition">sq_ap_idmap</span></a> <span class="id" title="var">_</span>)<a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(53, '0_3_3');
+      mouseover(52, '0_3_3');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(54, '0_3_3');
+      mouseover(53, '0_3_3');
       "><br>
 <br>
 <br>
   <span class="id" title="keyword">Local</span> <span class="id" title="keyword">Notation</span> <a id="apcs" class="idref" href="#apcs"><span class="id" title="abbreviation">apcs</span></a> := (<a class="idref" href="HoTT.Cubical.PathSquare.html#ap_compose_sq"><span class="id" title="definition">ap_compose_sq</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(55, '0_3_3');
+      mouseover(54, '0_3_3');
       "><br>
 <br>
   <span class="id" title="keyword">Definition</span> <a id="sq_ap011_compose" class="idref" href="#sq_ap011_compose"><span class="id" title="definition">sq_ap011_compose</span></a> {<a id="A:13" class="idref" href="#A:13"><span class="id" title="binder">A</span></a> <a id="B:14" class="idref" href="#B:14"><span class="id" title="binder">B</span></a> <a id="C:15" class="idref" href="#C:15"><span class="id" title="binder">C</span></a> <a id="D:16" class="idref" href="#D:16"><span class="id" title="binder">D</span></a> : <span class="id" title="keyword">Type</span>} (<a id="f:17" class="idref" href="#f:17"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#A:13"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#B:14"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#C:15"><span class="id" title="variable">C</span></a>) (<a id="g:18" class="idref" href="#g:18"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#C:15"><span class="id" title="variable">C</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#D:16"><span class="id" title="variable">D</span></a>)<br>
@@ -769,99 +759,99 @@
         <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#apcs"><span class="id" title="abbreviation">apcs</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#apcs"><span class="id" title="abbreviation">apcs</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#apcs"><span class="id" title="abbreviation">apcs</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#apcs"><span class="id" title="abbreviation">apcs</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(56, '0_3_3');
+      mouseover(55, '0_3_3');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(57, '0_3_3');
+      mouseover(56, '0_3_3');
       "><br>
     <span class="id" title="tactic">by</span> <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>, <span class="id" title="var">q</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(58, '0_3_3');
+      mouseover(57, '0_3_3');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(59, '0_3_3');
+      mouseover(58, '0_3_3');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a id="c2t2c" class="idref" href="#c2t2c"><span class="id" title="definition">c2t2c</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t"><span class="id" title="definition">c2t</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#t2c"><span class="id" title="definition">t2c</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a id="c2t2c" class="idref" href="#c2t2c"><span class="id" title="definition">c2t2c</span></a> : <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#t2c"><span class="id" title="definition">t2c</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t"><span class="id" title="definition">c2t</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(60, '0_3_3');
+      mouseover(59, '0_3_3');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(61, '0_3_3');
+      mouseover(60, '0_3_3');
       "><br>
-    <span class="id" title="tactic">unfold</span> <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Prod.html#prod_ind"><span class="id" title="definition">prod_ind</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Types.Prod.html#prod_ind"><span class="id" title="definition">prod_ind</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(62, '0_3_3');
+      mouseover(61, '0_3_3');
       "><br>
     <span class="id" title="var">srefine</span> (<a class="idref" href="HoTT.Spaces.Circle.html#Circle_ind_dp"><span class="id" title="definition">Circle_ind_dp</span></a> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Spaces.Circle.html#Circle_ind_dp"><span class="id" title="definition">Circle_ind_dp</span></a> <span class="id" title="var">_</span> 1 <span class="id" title="var">_</span>) <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(63, '0_3_3');
+      mouseover(62, '0_3_3');
       "><br>
     1: <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Cubical.PathSquare.html#sq_dp"><span class="id" title="abbreviation">sq_dp</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>, <a class="idref" href="HoTT.Cubical.PathSquare.html#sq_tr"><span class="id" title="abbreviation">sq_tr</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>; <span class="id" title="var">shelve</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(64, '0_3_3');
+      mouseover(63, '0_3_3');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Cubical.DPath.html#dp_forall_domain"><span class="id" title="abbreviation">dp_forall_domain</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(65, '0_3_3');
+      mouseover(64, '0_3_3');
       "><br>
     <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>; <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Cubical.PathSquare.html#sq_dp"><span class="id" title="abbreviation">sq_dp</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>; <span class="id" title="var">revert</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(66, '0_3_3');
+      mouseover(65, '0_3_3');
       "><br>
     <span class="id" title="var">srefine</span> (<a class="idref" href="HoTT.Spaces.Circle.html#Circle_ind_dp"><span class="id" title="definition">Circle_ind_dp</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(67, '0_3_3');
+      mouseover(66, '0_3_3');
       "><br>
     1: <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Cubical.PathSquare.html#sq_tr"><span class="id" title="abbreviation">sq_tr</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">^-1</span></a>; <span class="id" title="var">shelve</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(68, '0_3_3');
+      mouseover(67, '0_3_3');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Cubical.PathCube.html#dp_cu"><span class="id" title="abbreviation">dp_cu</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(69, '0_3_3');
+      mouseover(68, '0_3_3');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Cubical.PathCube.html#cu_ccGGcc"><span class="id" title="abbreviation">cu_ccGGcc</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(70, '0_3_3');
+      mouseover(69, '0_3_3');
       "><br>
     1,2: <span class="id" title="tactic">refine</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.Cubical.PathSquare.html#sq_dp"><span class="id" title="abbreviation">sq_dp</span></a> (<a class="idref" href="HoTT.Spaces.Circle.html#Circle_ind_dp_beta_loop"><span class="id" title="definition">Circle_ind_dp_beta_loop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br>
       <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(71, '0_3_3');
+      mouseover(70, '0_3_3');
       "><br>
     <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Cubical.PathCube.html#cu_rot_tb_fb"><span class="id" title="abbreviation">cu_rot_tb_fb</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(72, '0_3_3');
+      mouseover(71, '0_3_3');
       "><br>
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Cubical.PathCube.html#cu_ccGGGG"><span class="id" title="abbreviation">cu_ccGGGG</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(73, '0_3_3');
+      mouseover(72, '0_3_3');
       "><br>
     1,2,3,4: <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#eisretr"><span class="id" title="method">eisretr</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Overture.html#6bc2e8b4a6e295632a90f5f35132db8d"><span class="id" title="notation">)^</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(74, '0_3_3');
+      mouseover(73, '0_3_3');
       "><br>
     <span class="id" title="tactic">refine</span>(<a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#sq_ap011_compose"><span class="id" title="definition">sq_ap011_compose</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t'"><span class="id" title="definition">c2t'</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#t2c"><span class="id" title="definition">t2c</span></a> <a class="idref" href="HoTT.Spaces.Circle.html#loop"><span class="id" title="definition">loop</span></a> <a class="idref" href="HoTT.Spaces.Circle.html#loop"><span class="id" title="definition">loop</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">)</span></a><br>
       <a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">@</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">lr</span></a> <a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#cu_ap"><span class="id" title="definition">cu_ap</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#t2c"><span class="id" title="definition">t2c</span></a> (<a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t'_beta"><span class="id" title="definition">c2t'_beta</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.2'"><span class="id" title="notation">.2.2</span></a>)<a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">)</span></a><br>
@@ -870,12 +860,12 @@
       <a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">@</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">lr</span></a> <a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Cubical.PathCube.html#sq_ap_uncurry"><span class="id" title="definition">sq_ap_uncurry</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Cubical.PathCube.html#cff484b6329f0520345912661c737146"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(75, '0_3_3');
+      mouseover(74, '0_3_3');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(76, '0_3_3');
+      mouseover(75, '0_3_3');
       "><br>
 <br>
 <br>
@@ -883,13 +873,13 @@
     := <a class="idref" href="HoTT.Basics.Equivalences.html#equiv_adjointify"><span class="id" title="definition">equiv_adjointify</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#t2c"><span class="id" title="definition">t2c</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t"><span class="id" title="definition">c2t</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#c2t2c"><span class="id" title="definition">c2t2c</span></a> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#t2c2t"><span class="id" title="definition">t2c2t</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(77, '0_3_3');
+      mouseover(76, '0_3_3');
       "><br>
 <br>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Spaces.Torus.TorusEquivCircles.html#TorusEquivCircle"><span class="id" title="section">TorusEquivCircle</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
-      mouseover(78, '0_3_3');
+      mouseover(77, '0_3_3');
       "><br>
 </span>
 </div>

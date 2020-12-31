@@ -148,62 +148,62 @@
           
 
             i = 26;
-            data = "1 subgoal (ID 52)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  k : forall x y : A, PathSplit n.+1 (ap f)	  h := fun (x y : A) (p : f x = f y) => (fst (k x y) p).1	   : forall x y : A, f x = f y -> x = y	  hs := fun x y : A =>	        (fun p : f x = f y => (fst (k x y) p).2) : Sect (h x y) (ap f)	   : forall x y : A, Sect (h x y) (ap f)	  ============================	  IsEquiv f	";
+            data = "1 subgoal (ID 62)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  k : forall x y : A, PathSplit n.+1 (ap f)	  h := fun (x y : A) (p : f x = f y) => (fst (k x y) p).1	   : forall x y : A, f x = f y -> x = y	  hs := fun x y : A =>	        (fun p : f x = f y => (fst (k x y) p).2) : ap f o h x y == idmap	   : forall x y : A, ap f o h x y == idmap	  ============================	  IsEquiv f	";
             responses[i]=data;
           
 
             i = 27;
-            data = "1 subgoal (ID 55)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  ============================	  IsEquiv f	";
+            data = "1 subgoal (ID 65)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  ============================	  IsEquiv f	";
             responses[i]=data;
           
 
             i = 28;
-            data = "1 subgoal (ID 60)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  ============================	  Contr (hfiber f b)	";
+            data = "1 subgoal (ID 70)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  ============================	  Contr (hfiber f b)	";
             responses[i]=data;
           
 
             i = 29;
-            data = "2 subgoals (ID 61)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  ============================	  IsHProp (hfiber f b)		subgoal 2 (ID 62) is:	 hfiber f b	";
+            data = "2 subgoals (ID 71)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  ============================	  IsHProp (hfiber f b)		subgoal 2 (ID 72) is:	 hfiber f b	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 61)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  ============================	  IsHProp (hfiber f b)	";
+            data = "1 subgoal (ID 71)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  ============================	  IsHProp (hfiber f b)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 73)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (a; p) = (a'; p')	";
+            data = "1 subgoal (ID 83)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (a; p) = (a'; p')	";
             responses[i]=data;
           
 
             i = 32;
-            data = "1 subgoal (ID 90)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  transport (fun x : A => f x = b) (h a a' (p @ p'^)) p = p'	";
+            data = "1 subgoal (ID 100)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  transport (fun x : A => f x = b) (h a a' (p @ p'^)) p = p'	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 107)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (ap f (h a a' (p @ p'^)))^ @ p = p'	";
+            data = "1 subgoal (ID 117)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (ap f (h a a' (p @ p'^)))^ @ p = p'	";
             responses[i]=data;
           
 
             i = 34;
-            data = "1 subgoal (ID 136)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (p @ p'^)^ @ p = p'	";
+            data = "1 subgoal (ID 146)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (p @ p'^)^ @ p = p'	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 160)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  ((p'^)^ @ p^) @ p = p'	";
+            data = "1 subgoal (ID 170)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  ((p'^)^ @ p^) @ p = p'	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 178)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (p'^)^ @ (p^ @ p) = p'	";
+            data = "1 subgoal (ID 188)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (p'^)^ @ (p^ @ p) = p'	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 200)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, Sect (h x y) (ap f)	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (p'^)^ @ 1 = p'	";
+            data = "1 subgoal (ID 210)	  	  H : Funext	  n : nat	  A : Type	  B : Type	  f : A -> B	  g : forall a : B, hfiber f a	  h : forall x y : A, f x = f y -> x = y	  hs : forall x y : A, ap f o h x y == idmap	  b : B	  a : A	  p : f a = b	  a' : A	  p' : f a' = b	  ============================	  (p'^)^ @ 1 = p'	";
             responses[i]=data;
           
 
@@ -702,7 +702,7 @@ A map is n-path-split if its induced maps on the first n iterated path-spaces ar
       mouseover(26, '0_3_7');
       "><br>
   <span class="id" title="tactic">pose</span> (<span class="id" title="var">hs</span> := <span class="id" title="keyword">fun</span> <a id="x:24" class="idref" href="#x:24"><span class="id" title="binder">x</span></a> <a id="y:25" class="idref" href="#y:25"><span class="id" title="binder">y</span></a> ⇒ (<span class="id" title="keyword">fun</span> <a id="p:26" class="idref" href="#p:26"><span class="id" title="binder">p</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.2'"><span class="id" title="notation">(</span></a><a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<span class="id" title="var">k</span> <a class="idref" href="HoTT.Equiv.PathSplit.html#x:21"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Equiv.PathSplit.html#y:22"><span class="id" title="variable">y</span></a>) <a class="idref" href="HoTT.Equiv.PathSplit.html#p:23"><span class="id" title="variable">p</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.2'"><span class="id" title="notation">).2</span></a>)<br>
-                         : <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> (<span class="id" title="var">h</span> <a class="idref" href="HoTT.Equiv.PathSplit.html#x:21"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Equiv.PathSplit.html#y:22"><span class="id" title="variable">y</span></a>) (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">f</span>)).</span><span class="command" onmouseout="
+                         : <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">f</span><a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">(</span></a><span class="id" title="var">h</span> <a class="idref" href="HoTT.Equiv.PathSplit.html#x:21"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Equiv.PathSplit.html#y:22"><span class="id" title="variable">y</span></a><a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(27, '0_3_7');

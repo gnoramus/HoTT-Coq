@@ -95,7 +95,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 59
-Time: 0.263s">
+Time: 0.316s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.</pre>
 </div>
@@ -108,15 +108,15 @@ Require Import HoTT.Metatheory.Core HoTT.Metatheory.IntervalImpliesFunext HoTT.M
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 60
-Time: 0.186s">
-<div class="time" style="width: 70.722433460076%"></div>
+Time: 0.224s">
+<div class="time" style="width: 70.886075949367%"></div>
 <pre>
 Require HoTT.Categories.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 61
-Time: 0.034s">
-<div class="time" style="width: 12.927756653992%"></div>
+Time: 0.044s">
+<div class="time" style="width: 13.924050632911%"></div>
 <pre>
 From HoTT.Classes Require
   interfaces.abstract_algebra
@@ -1727,10 +1727,17 @@ Time: 0s">
 Line: 474
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Definition Book_4_2_7 := @HoTT.Basics.Overture.Sect.</pre>
+<pre>Definition Book_4_2_7_i {A B} (f : A -&gt; B) := {g : B -&gt; A &amp; g o f == idmap }.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 474
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Definition Book_4_2_7_ii {A B} (f : A -&gt; B) := {g : B -&gt; A &amp; f o g == idmap }.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 475
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1741,20 +1748,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 478
+Line: 479
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_2_8_i  := @HoTT.Basics.Equivalences.isequiv_postcompose.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 478
+Line: 479
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition Book_4_2_8_ii := @HoTT.Basics.Equivalences.isequiv_precompose.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 479
+Line: 480
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1765,20 +1772,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 483
+Line: 484
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_2_9_i  := @HoTT.Types.Equiv.contr_sect_equiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 483
+Line: 484
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition Book_4_2_9_ii := @HoTT.Types.Equiv.contr_retr_equiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 484
+Line: 485
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1804,13 +1811,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 503
+Line: 504
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_2_13 := @HoTT.Types.Equiv.hprop_isequiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 503
+Line: 504
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1821,13 +1828,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 507
+Line: 508
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_3_1  := @HoTT.Equiv.BiInv.BiInv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 507
+Line: 508
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1838,13 +1845,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 511
+Line: 512
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_3_2  := @HoTT.Equiv.BiInv.isprop_biinv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 511
+Line: 512
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1855,13 +1862,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 515
+Line: 516
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_3_3  := @HoTT.Equiv.BiInv.equiv_biinv_isequiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 515
+Line: 516
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1872,13 +1879,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 519
+Line: 520
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_4_1 := @HoTT.Basics.Trunc.IsTruncMap (-2).</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 519
+Line: 520
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1889,13 +1896,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 523
+Line: 524
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_4_3 := @HoTT.Types.Equiv.isequiv_contr_map.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 523
+Line: 524
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1906,13 +1913,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 527
+Line: 528
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_4_4 := @HoTT.Basics.Trunc.ishprop_istrunc.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 527
+Line: 528
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1923,13 +1930,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 531
+Line: 532
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_4_5 := @HoTT.Types.Equiv.equiv_contr_map_isequiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 531
+Line: 532
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1940,13 +1947,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 535
+Line: 536
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_4_6 := @HoTT.Types.Equiv.isequiv_inhab_codomain.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 535
+Line: 536
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1957,13 +1964,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 539
+Line: 540
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_6_1 := @HoTT.Basics.Trunc.IsTruncMap (-1).</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 539
+Line: 540
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1974,13 +1981,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 543
+Line: 544
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_6_3 := @HoTT.Modalities.ReflectiveSubuniverse.isequiv_conn_ino_map.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 543
+Line: 544
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1991,27 +1998,27 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 547
+Line: 548
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_7_1_part_i   := @HoTT.Basics.Equivalences.isequiv_compose.</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 547
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Definition Book_4_7_1_part_ii  := @HoTT.Basics.Equivalences.cancelR_isequiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 548
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition Book_4_7_1_part_iii := @HoTT.Basics.Equivalences.cancelL_isequiv.</pre>
+Definition Book_4_7_1_part_ii  := @HoTT.Basics.Equivalences.cancelR_isequiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 549
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Definition Book_4_7_1_part_iii := @HoTT.Basics.Equivalences.cancelL_isequiv.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 550
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2037,13 +2044,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 568
+Line: 569
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_7_5 := @HoTT.Types.Sigma.functor_sigma.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 568
+Line: 569
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2054,13 +2061,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 572
+Line: 573
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_7_6 := @HoTT.Types.Sigma.hfiber_functor_sigma.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 572
+Line: 573
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2071,13 +2078,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 576
+Line: 577
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_7_7 := @HoTT.Types.Equiv.equiv_total_iff_equiv_fiberwise.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 576
+Line: 577
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2088,13 +2095,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 580
+Line: 581
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_8_1 := @HoTT.HFiber.hfiber_fibration.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 580
+Line: 581
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2105,13 +2112,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 584
+Line: 585
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_8_2 := @HoTT.HFiber.equiv_fibration_replacement.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 584
+Line: 585
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2122,13 +2129,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 588
+Line: 589
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_8_3 := @HoTT.ObjectClassifier.FamequivPow.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 588
+Line: 589
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2139,13 +2146,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 592
+Line: 593
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_8_4 := @HoTT.ObjectClassifier.objclasspb_is_fibrantreplacement.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 592
+Line: 593
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2156,13 +2163,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 596
+Line: 597
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_9_1 := @HoTT.Metatheory.FunextVarieties.WeakFunext.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 596
+Line: 597
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2173,13 +2180,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 600
+Line: 601
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_9_2 := @HoTT.Metatheory.UnivalenceImpliesFunext.univalence_isequiv_postcompose.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 600
+Line: 601
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2195,13 +2202,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 609
+Line: 610
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_9_4 := @HoTT.Metatheory.UnivalenceImpliesFunext.Univalence_implies_WeakFunext.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 609
+Line: 610
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2212,13 +2219,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 613
+Line: 614
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_4_9_5 := @HoTT.Metatheory.FunextVarieties.WeakFunext_implies_Funext.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 613
+Line: 614
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2269,13 +2276,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 657
+Line: 658
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_5_8_2_iv_implies_iii := @HoTT.PathAny.equiv_path_from_contr.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 657
+Line: 658
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2291,20 +2298,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 666
+Line: 667
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_5_8_5 := @HoTT.Types.Universe.equiv_induction'.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 666
+Line: 667
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition Book_5_8_5_comp := @HoTT.Types.Universe.equiv_induction'_comp.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 667
+Line: 668
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2320,13 +2327,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 676
+Line: 677
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_2_5 := @HoTT.Spaces.Circle.Circle_rec.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 676
+Line: 677
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2347,13 +2354,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 690
+Line: 691
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_3_1 := @HoTT.HIT.Interval.contr_interval.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 690
+Line: 691
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2364,13 +2371,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 694
+Line: 695
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_3_2 := @HoTT.Metatheory.IntervalImpliesFunext.funext_type_from_interval.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 694
+Line: 695
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2391,13 +2398,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 708
+Line: 709
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_4_4 := @HoTT.Basics.PathGroupoids.ap02.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 708
+Line: 709
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2408,13 +2415,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 712
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 713
+Time: 0.001s">
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>Definition Book_6_4_5 := @HoTT.Basics.PathGroupoids.transport2.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 712
+Line: 713
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2425,13 +2432,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 716
+Line: 717
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_4_6 := @HoTT.Basics.PathGroupoids.apD02.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 716
+Line: 717
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2442,13 +2449,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 720
+Line: 721
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_5_1 := @HoTT.Spaces.Spheres.isequiv_S1_to_Circle.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 720
+Line: 721
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2459,13 +2466,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 724
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 725
+Time: 0.001s">
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>Definition Book_6_5_4 := @HoTT.Pointed.pSusp.loop_susp_adjoint.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 724
+Line: 725
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2486,13 +2493,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 738
+Line: 739
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_9_1 := @HoTT.Truncations.Core.Trunc.Trunc_ind 0.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 738
+Line: 739
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2503,13 +2510,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 742
+Line: 743
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_9_2 := @HoTT.Modalities.ReflectiveSubuniverse.isequiv_o_to_O.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 742
+Line: 743
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2525,13 +2532,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 751
+Line: 752
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_10_2 := @HoTT.HIT.quotient.quotient_surjective.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 751
+Line: 752
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2542,13 +2549,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 755
+Line: 756
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_10_3 := @HoTT.HIT.quotient.quotient_ump.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 755
+Line: 756
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2594,13 +2601,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 794
+Line: 795
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_12_1 := @HoTT.Types.Universe.transport_path_universe'.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 794
+Line: 795
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2611,13 +2618,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 798
+Line: 799
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_12_2 := @HoTT.HIT.Flattening.equiv_flattening.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 798
+Line: 799
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2633,13 +2640,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 807
+Line: 808
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_12_4 := @HoTT.HIT.Flattening.sWtil_ind.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 807
+Line: 808
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2650,13 +2657,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 811
+Line: 812
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_12_5 := @HoTT.HIT.Flattening.sWtil_rec.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 811
+Line: 812
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2667,13 +2674,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 815
+Line: 816
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_12_7 := @HoTT.Types.Sigma.ap_sigT_rec_path_sigma.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 815
+Line: 816
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2684,13 +2691,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 819
+Line: 820
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_6_12_8 := @HoTT.HIT.Flattening.sWtil_rec_beta_ppt.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 819
+Line: 820
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2736,13 +2743,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 858
+Line: 859
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_7_1_9 := @HoTT.Types.Forall.trunc_forall.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 858
+Line: 859
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2758,13 +2765,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 867
+Line: 868
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book7_1_11 := @HoTT.TruncType.istrunc_trunctype.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 867
+Line: 868
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2780,13 +2787,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 876
+Line: 877
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_7_2_2 := @HoTT.HSet.ishset_hrel_subpaths.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 876
+Line: 877
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2862,13 +2869,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 945
+Line: 946
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_7_3_12 := @HoTT.Truncations.Core.equiv_path_Tr.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 945
+Line: 946
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2904,13 +2911,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 974
+Line: 975
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_7_5_8 := @HoTT.Modalities.Modality.conn_map_to_O.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 974
+Line: 975
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2956,13 +2963,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1013
+Line: 1014
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_7_6_2 := @HoTT.HFiber.equiv_istruncmap_ap.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1013
+Line: 1014
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3248,13 +3255,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1292
+Line: 1293
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_8_8_1 := @HoTT.Homotopy.WhiteheadsPrinciple.isequiv_issurj_tr0_isequiv_ap.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1292
+Line: 1293
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3265,13 +3272,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1296
+Line: 1297
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_8_8_2 := @HoTT.Homotopy.WhiteheadsPrinciple.isequiv_isbij_tr0_isequiv_loops.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1296
+Line: 1297
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3282,13 +3289,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1300
+Line: 1301
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_8_8_3 := @HoTT.Homotopy.WhiteheadsPrinciple.whiteheads_principle.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1300
+Line: 1301
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3329,13 +3336,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1334
+Line: 1335
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_1 := @HoTT.Categories.Category.Core.PreCategory.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1334
+Line: 1335
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3346,13 +3353,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1338
+Line: 1339
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_2 := @HoTT.Categories.Category.Morphisms.Isomorphic.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1338
+Line: 1339
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3363,13 +3370,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1342
+Line: 1343
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_3 := @HoTT.Categories.Category.Morphisms.trunc_isisomorphism.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1342
+Line: 1343
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3380,13 +3387,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1346
+Line: 1347
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_4 := @HoTT.Categories.Category.Morphisms.idtoiso.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1346
+Line: 1347
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3397,13 +3404,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1350
+Line: 1351
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_5 := @HoTT.Categories.SetCategory.Core.set_cat.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1350
+Line: 1351
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3414,13 +3421,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1354
+Line: 1355
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_6 C := (HoTT.Categories.Category.Univalent.IsCategory C).</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1354
+Line: 1355
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3440,13 +3447,13 @@ Definition Book_9_1_7 := @HoTT.Categories.SetCategory.Morphisms.iscategory_set_c
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1367
+Line: 1368
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_8 := @HoTT.Categories.Category.Univalent.trunc_category.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1367
+Line: 1368
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3467,59 +3474,46 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1381
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 1382
+Time: 0.001s">
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>Definition Book_9_1_15 A `{H : HoTT.Categories.Category.Univalent.IsCategory A}
 : IsHSet (HoTT.Categories.Category.Core.object A)
   &lt;-&gt; (forall a b, IsHProp (@HoTT.Categories.Category.Morphisms.Isomorphic A a b)).</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1383
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1384
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  split.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1385
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1386
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros H' a b.</pre>
+  split.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1386
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    eapply trunc_equiv.</pre>
+  -</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1387
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros H' a b.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1387
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    +</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1388
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> refine (H' a b).</pre>
+    eapply trunc_equiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1388
@@ -3532,40 +3526,40 @@ Time: 0s">
 Line: 1389
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply H.</pre>
+<pre> refine (H' a b).</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1389
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1390
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply H.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1390
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1390
+Line: 1391
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros H' a b.</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1390
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    eapply trunc_equiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1391
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    +</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1392
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply (H' a b).</pre>
+    eapply trunc_equiv.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1392
@@ -3578,17 +3572,30 @@ Time: 0s">
 Line: 1393
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply (@isequiv_inverse _ _ _ (H _ _)).</pre>
+<pre> apply (H' a b).</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1393
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    +</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1394
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply (@isequiv_inverse _ _ _ (H _ _)).</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1394
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1394
+Line: 1395
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3599,13 +3606,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1398
+Line: 1399
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_16 := @HoTT.Categories.GroupoidCategory.Core.groupoid_category.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1398
+Line: 1399
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3616,13 +3623,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1402
+Line: 1403
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_17 := @HoTT.Categories.FundamentalPreGroupoidCategory.fundamental_pregroupoid_category.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1402
+Line: 1403
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3633,13 +3640,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1406
+Line: 1407
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_1_18 := @HoTT.Categories.HomotopyPreCategory.homotopy_precategory.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1406
+Line: 1407
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3655,13 +3662,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1415
+Line: 1416
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_2_1 := @HoTT.Categories.Functor.Core.Functor.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1415
+Line: 1416
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3672,13 +3679,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1419
+Line: 1420
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_2_2 := @HoTT.Categories.NaturalTransformation.Core.NaturalTransformation.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1419
+Line: 1420
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3689,13 +3696,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1423
+Line: 1424
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_2_3 := @HoTT.Categories.FunctorCategory.Core.functor_category.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1423
+Line: 1424
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3706,13 +3713,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1427
+Line: 1428
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_2_4 := @HoTT.Categories.FunctorCategory.Morphisms.isisomorphism_natural_transformation.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1427
+Line: 1428
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3732,13 +3739,13 @@ Definition Book_9_2_5 := @HoTT.Categories.FunctorCategory.Morphisms.iscategory_f
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1440
+Line: 1441
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_2_6 := @HoTT.Categories.Functor.Composition.Core.compose.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1440
+Line: 1441
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3749,20 +3756,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1444
+Line: 1445
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_2_7_l := @HoTT.Categories.NaturalTransformation.Composition.Core.whisker_l.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1444
+Line: 1445
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition Book_9_2_7_r := @HoTT.Categories.NaturalTransformation.Composition.Core.whisker_r.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1445
+Line: 1446
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3773,13 +3780,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1449
+Line: 1450
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_2_8 := @HoTT.Categories.NaturalTransformation.Composition.Laws.exchange_whisker.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1449
+Line: 1450
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3790,13 +3797,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1453
+Line: 1454
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_2_9 := @HoTT.Categories.Functor.Composition.Laws.associativity.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1453
+Line: 1454
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3812,27 +3819,27 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1462
+Line: 1463
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_2_11_l := @HoTT.Categories.Functor.Composition.Laws.left_identity.</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1462
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Definition Book_9_2_11_r := @HoTT.Categories.Functor.Composition.Laws.right_identity.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1463
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition Book_9_2_11 := @HoTT.Categories.Functor.Composition.Laws.triangle.</pre>
+Definition Book_9_2_11_r := @HoTT.Categories.Functor.Composition.Laws.right_identity.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1464
+Time: 0.001s">
+<div class="time" style="width: 0.31645569620253%"></div>
+<pre>
+Definition Book_9_2_11 := @HoTT.Categories.Functor.Composition.Laws.triangle.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1465
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3843,13 +3850,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1468
+Line: 1469
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_3_1 := @HoTT.Categories.Adjoint.UnitCounit.AdjunctionUnitCounit.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1468
+Line: 1469
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3870,27 +3877,27 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1482
+Line: 1483
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_4_2a := @HoTT.Categories.Functor.Attributes.IsFaithful.</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1482
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Definition Book_9_4_2b := @HoTT.Categories.Functor.Attributes.IsFull.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1483
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition Book_9_4_2c := @HoTT.Categories.Functor.Attributes.IsFullyFaithful.</pre>
+Definition Book_9_4_2b := @HoTT.Categories.Functor.Attributes.IsFull.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1484
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Definition Book_9_4_2c := @HoTT.Categories.Functor.Attributes.IsFullyFaithful.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1485
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3906,13 +3913,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1493
+Line: 1494
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_4_4 := @HoTT.Categories.Functor.Attributes.IsSplitEssentiallySurjective.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1493
+Line: 1494
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3928,20 +3935,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1502
+Line: 1503
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_4_6_ess := @HoTT.Categories.Functor.Attributes.IsEssentiallySurjective.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1502
+Line: 1503
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition Book_9_4_6_weq := @HoTT.Categories.Functor.Attributes.IsWeakEquivalence.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1503
+Line: 1504
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3967,13 +3974,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1522
+Line: 1523
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_4_13 := @HoTT.Categories.IndiscreteCategory.Core.indiscrete_category.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1522
+Line: 1523
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3999,13 +4006,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1541
+Line: 1542
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_5_1 := @HoTT.Categories.Category.Dual.opposite.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1541
+Line: 1542
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4016,13 +4023,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1545
+Line: 1546
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_5_2 := @HoTT.Categories.Category.Prod.prod.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1545
+Line: 1546
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4033,13 +4040,13 @@ Time: 0s">
 (** When we prove it, this should be mapped to the law, not the functor. *)</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1550
+Line: 1551
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_5_3 := @HoTT.Categories.ExponentialLaws.Law4.Functors.functor.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1550
+Line: 1551
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4050,13 +4057,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1554
+Line: 1555
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_5_4 := @HoTT.Categories.Yoneda.yoneda_lemma.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1554
+Line: 1555
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4067,13 +4074,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1558
+Line: 1559
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_5_6 := @HoTT.Categories.Yoneda.yoneda_embedding.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1558
+Line: 1559
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4109,13 +4116,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1587
+Line: 1588
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_6_1 C := HoTT.Categories.Category.Strict.IsStrictCategory C.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1587
+Line: 1588
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4171,13 +4178,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1636
+Line: 1637
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_8_1 := @HoTT.Categories.Structure.Core.NotionOfStructure.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1636
+Line: 1637
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4188,13 +4195,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1640
+Line: 1641
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_9_8_2 := @HoTT.Categories.Structure.IdentityPrinciple.structure_identity_principle.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1640
+Line: 1641
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4250,13 +4257,13 @@ Time: 0s">
 (** The third notion in the book is called embedding. No complete equivalence yet, but see:*)</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1690
+Line: 1691
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_10_1_1_iii := @HSet.isinj_embedding.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1690
+Line: 1691
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4267,20 +4274,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1694
+Line: 1695
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_10_1_2rl := @HSet.isinj_ismono.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1694
+Line: 1695
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition Book_10_1_2lr := @HSet.ismono_isinj.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1695
+Line: 1696
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4293,27 +4300,27 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1701
+Line: 1702
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_10_1_4_i_iii := @HIT.epi.isepi_issurj.</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1701
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Definition Book_10_1_4_i_ii := @HIT.epi.isepi'_contr_cone.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1702
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition Book_10_1_4_iii_i := @HIT.epi.issurj_isepi.</pre>
+Definition Book_10_1_4_i_ii := @HIT.epi.isepi'_contr_cone.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1703
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Definition Book_10_1_4_iii_i := @HIT.epi.issurj_isepi.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1704
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4339,13 +4346,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1722
+Line: 1723
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_10_1_8 := @HIT.quotient.sets_exact.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1722
+Line: 1723
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4463,13 +4470,13 @@ Apparently closure under Pi and Sigma are still missing ? *)
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1833
+Line: 1834
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_10_5_1 := @HoTT.HIT.V.CumulativeHierarchy.V.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1833
+Line: 1834
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4480,13 +4487,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1837
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 1838
+Time: 0.001s">
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>Definition Book_10_5_4 := @HoTT.HIT.V.bisimulation.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1837
+Line: 1838
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4497,13 +4504,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1841
-Time: 0.001s">
-<div class="time" style="width: 0.38022813688213%"></div>
+Line: 1842
+Time: 0.002s">
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>Definition Book_10_5_5 := @HoTT.HIT.V.bisimulation_equiv_id.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1841
+Line: 1842
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4514,13 +4521,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1845
-Time: 0.003s">
-<div class="time" style="width: 1.1406844106464%"></div>
+Line: 1846
+Time: 0.004s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>Definition Book_10_5_6 := @HoTT.HIT.V.monic_set_present.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1845
+Line: 1846
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4531,13 +4538,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1849
-Time: 0.003s">
-<div class="time" style="width: 1.1406844106464%"></div>
+Line: 1850
+Time: 0.004s">
+<div class="time" style="width: 1.2658227848101%"></div>
 <pre>Definition Book_10_5_7 := @HoTT.HIT.V.type_of_members.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1849
+Line: 1850
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4548,69 +4555,69 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1853
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 1854
+Time: 0.001s">
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>Definition Book_10_5_8_item_i := @HoTT.HIT.V.extensionality.</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1853
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Definition Book_10_5_8_item_ii := @HoTT.HIT.V.not_mem_Vempty.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1854
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition Book_10_5_8_item_iii := @HoTT.HIT.V.pairing.</pre>
+Definition Book_10_5_8_item_ii := @HoTT.HIT.V.not_mem_Vempty.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1855
-Time: 0.021s">
-<div class="time" style="width: 7.9847908745247%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Definition Book_10_5_8_item_iii := @HoTT.HIT.V.pairing.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1856
+Time: 0.023s">
+<div class="time" style="width: 7.2784810126582%"></div>
 <pre>
 Definition Book_10_5_8_item_iv := @HoTT.HIT.V.infinity.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1856
+Line: 1857
 Time: 0.001s">
-<div class="time" style="width: 0.38022813688213%"></div>
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>
 Definition Book_10_5_8_item_v := @HoTT.HIT.V.union.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1857
-Time: 0.043s">
-<div class="time" style="width: 16.349809885932%"></div>
+Line: 1858
+Time: 0.05s">
+<div class="time" style="width: 15.822784810127%"></div>
 <pre>
 Definition Book_10_5_8_item_vi := @HoTT.HIT.V.function.</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 1858
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Definition Book_10_5_8_item_vii := @HoTT.HIT.V.mem_induction.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1859
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition Book_10_5_8_item_viii := @HoTT.HIT.V.replacement.</pre>
+Definition Book_10_5_8_item_vii := @HoTT.HIT.V.mem_induction.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 1860
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.31645569620253%"></div>
+<pre>
+Definition Book_10_5_8_item_viii := @HoTT.HIT.V.replacement.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 1861
+Time: 0.001s">
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>
 Definition Book_10_5_8_item_ix := @HoTT.HIT.V.separation.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1861
+Line: 1862
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4656,20 +4663,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1900
+Line: 1901
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_11_2_7 := @HoTT.Classes.interfaces.abstract_algebra.IsField.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1900
+Line: 1901
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Definition Book_11_2_7' := @HoTT.Classes.interfaces.orders.FullPseudoSemiRingOrder.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1901
+Line: 1902
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4685,13 +4692,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1910
+Line: 1911
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_11_2_10 := @HoTT.Classes.theory.premetric.Approximation.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1910
+Line: 1911
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4752,13 +4759,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1964
+Line: 1965
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_11_3_14 := @HoTT.Classes.theory.premetric.Lipschitz.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 1964
+Line: 1965
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4909,13 +4916,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2108
+Line: 2109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_11_6_1 := @HoTT.Spaces.No.Core.No.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2108
+Line: 2109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4931,27 +4938,27 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2117
+Line: 2118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_11_6_4_i := @HoTT.Spaces.No.Core.le_reflexive.</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 2117
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Definition Book_11_6_4_ii_l := @HoTT.Spaces.No.Core.lt_lopt.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 2118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition Book_11_6_4_ii_r := @HoTT.Spaces.No.Core.lt_ropt.</pre>
+Definition Book_11_6_4_ii_l := @HoTT.Spaces.No.Core.lt_lopt.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 2119
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Definition Book_11_6_4_ii_r := @HoTT.Spaces.No.Core.lt_ropt.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 2120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4962,13 +4969,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2123
+Line: 2124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_11_6_5 := @HoTT.Spaces.No.Core.isset_No.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2123
+Line: 2124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4979,13 +4986,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2127
+Line: 2128
 Time: 0.001s">
-<div class="time" style="width: 0.38022813688213%"></div>
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>Definition Book_11_6_7 := @HoTT.Spaces.No.Core.No_codes_package.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2127
+Line: 2128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4996,20 +5003,20 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2131
+Line: 2132
 Time: 0.001s">
-<div class="time" style="width: 0.38022813688213%"></div>
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>Definition Book_11_6_16_i := @HoTT.Spaces.No.Core.No_encode_le_lt.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2131
+Line: 2132
 Time: 0.001s">
-<div class="time" style="width: 0.38022813688213%"></div>
+<div class="time" style="width: 0.31645569620253%"></div>
 <pre>
 Definition Book_11_6_16_ii := @HoTT.Spaces.No.Core.No_decode_le_lt.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2132
+Line: 2133
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -5020,34 +5027,34 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2136
+Line: 2137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition Book_11_6_17_i := @HoTT.Spaces.No.Core.lt_le.</pre>
-</div>
-<div class="code" title="File: HoTTBook.v
-Line: 2136
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Definition Book_11_6_17_ii := @HoTT.Spaces.No.Core.le_le_trans.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 2137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition Book_11_6_17_iii := @HoTT.Spaces.No.Core.le_lt_trans.</pre>
+Definition Book_11_6_17_ii := @HoTT.Spaces.No.Core.le_le_trans.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 2138
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Definition Book_11_6_17_iv := @HoTT.Spaces.No.Core.lt_le_trans.</pre>
+Definition Book_11_6_17_iii := @HoTT.Spaces.No.Core.le_lt_trans.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
 Line: 2139
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Definition Book_11_6_17_iv := @HoTT.Spaces.No.Core.lt_le_trans.</pre>
+</div>
+<div class="code" title="File: HoTTBook.v
+Line: 2140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -5058,13 +5065,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2143
+Line: 2144
 Time: 0.002s">
-<div class="time" style="width: 0.76045627376426%"></div>
+<div class="time" style="width: 0.63291139240506%"></div>
 <pre>Definition Book_11_6_18 := @HoTT.Spaces.No.Addition.plus.</pre>
 </div>
 <div class="code" title="File: HoTTBook.v
-Line: 2144
+Line: 2145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

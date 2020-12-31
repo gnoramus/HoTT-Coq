@@ -773,17 +773,17 @@
           
 
             i = 151;
-            data = "3 subgoals (ID 566)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  p @ q = p @ r -> q = r		subgoal 2 (ID 568) is:	 Sect ?g (whiskerL p)	subgoal 3 (ID 570) is:	 Sect (whiskerL p) ?g	";
+            data = "3 subgoals (ID 566)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  p @ q = p @ r -> q = r		subgoal 2 (ID 568) is:	 whiskerL p o ?g == idmap	subgoal 3 (ID 570) is:	 ?g o whiskerL p == idmap	";
             responses[i]=data;
           
 
             i = 152;
-            data = "1 subgoal (ID 566)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  p @ q = p @ r -> q = r	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 568) is:	 Sect (cancelL p q r) (whiskerL p)	subgoal 2 (ID 570) is:	 Sect (whiskerL p) (cancelL p q r)	";
+            data = "1 subgoal (ID 566)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  p @ q = p @ r -> q = r	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 568) is:	 whiskerL p o cancelL p q r == idmap	subgoal 2 (ID 570) is:	 cancelL p q r o whiskerL p == idmap	";
             responses[i]=data;
           
 
             i = 153;
-            data = "1 subgoal (ID 568)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  Sect (cancelL p q r) (whiskerL p)	1 subgoal (ID 576)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  k : p @ q = p @ r	  ============================	  whiskerL p (cancelL p q r k) = k	";
+            data = "1 subgoal (ID 568)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  whiskerL p o cancelL p q r == idmap	1 subgoal (ID 576)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  k : p @ q = p @ r	  ============================	  whiskerL p (cancelL p q r k) = k	";
             responses[i]=data;
           
 
@@ -803,17 +803,17 @@
           
 
             i = 157;
-            data = "1 subgoal (ID 628)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  k : p @ q = p @ r	  ============================	  whiskerL p (concat_V_pp p q)^ = (concat_p_Vp p (p @ q))^	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 629) is:	 whiskerL p (concat_V_pp p r) = concat_p_Vp p (p @ r)	subgoal 2 (ID 570) is:	 Sect (whiskerL p) (cancelL p q r)	";
+            data = "1 subgoal (ID 628)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  k : p @ q = p @ r	  ============================	  whiskerL p (concat_V_pp p q)^ = (concat_p_Vp p (p @ q))^	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 629) is:	 whiskerL p (concat_V_pp p r) = concat_p_Vp p (p @ r)	subgoal 2 (ID 570) is:	 cancelL p q r o whiskerL p == idmap	";
             responses[i]=data;
           
 
             i = 158;
-            data = "1 subgoal (ID 629)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  k : p @ q = p @ r	  ============================	  whiskerL p (concat_V_pp p r) = concat_p_Vp p (p @ r)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 570) is:	 Sect (whiskerL p) (cancelL p q r)	";
+            data = "1 subgoal (ID 629)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  k : p @ q = p @ r	  ============================	  whiskerL p (concat_V_pp p r) = concat_p_Vp p (p @ r)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 570) is:	 cancelL p q r o whiskerL p == idmap	";
             responses[i]=data;
           
 
             i = 159;
-            data = "1 subgoal (ID 570)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  Sect (whiskerL p) (cancelL p q r)	1 subgoal (ID 674)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  k : q = r	  ============================	  cancelL p q r (whiskerL p k) = k	";
+            data = "1 subgoal (ID 570)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  ============================	  cancelL p q r o whiskerL p == idmap	1 subgoal (ID 674)	  	  A : Type	  x, y, z : A	  p : x = y	  q, r : y = z	  k : q = r	  ============================	  cancelL p q r (whiskerL p k) = k	";
             responses[i]=data;
           
 
@@ -883,17 +883,17 @@
           
 
             i = 173;
-            data = "3 subgoals (ID 661)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  p @ r = q @ r -> p = q		subgoal 2 (ID 663) is:	 Sect ?g (fun h : p = q => whiskerR h r)	subgoal 3 (ID 665) is:	 Sect (fun h : p = q => whiskerR h r) ?g	";
+            data = "3 subgoals (ID 661)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  p @ r = q @ r -> p = q		subgoal 2 (ID 663) is:	 (fun h : p = q => whiskerR h r) o ?g == idmap	subgoal 3 (ID 665) is:	 ?g o (fun h : p = q => whiskerR h r) == idmap	";
             responses[i]=data;
           
 
             i = 174;
-            data = "1 subgoal (ID 661)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  p @ r = q @ r -> p = q	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 663) is:	 Sect (cancelR p q r) (fun h : p = q => whiskerR h r)	subgoal 2 (ID 665) is:	 Sect (fun h : p = q => whiskerR h r) (cancelR p q r)	";
+            data = "1 subgoal (ID 661)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  p @ r = q @ r -> p = q	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 663) is:	 (fun h : p = q => whiskerR h r) o cancelR p q r == idmap	subgoal 2 (ID 665) is:	 cancelR p q r o (fun h : p = q => whiskerR h r) == idmap	";
             responses[i]=data;
           
 
             i = 175;
-            data = "1 subgoal (ID 663)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  Sect (cancelR p q r) (fun h : p = q => whiskerR h r)	1 subgoal (ID 671)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  k : p @ r = q @ r	  ============================	  whiskerR (cancelR p q r k) r = k	";
+            data = "1 subgoal (ID 663)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  (fun h : p = q => whiskerR h r) o cancelR p q r == idmap	1 subgoal (ID 671)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  k : p @ r = q @ r	  ============================	  whiskerR (cancelR p q r k) r = k	";
             responses[i]=data;
           
 
@@ -913,17 +913,17 @@
           
 
             i = 179;
-            data = "1 subgoal (ID 735)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  k : p @ r = q @ r	  ============================	  whiskerR (concat_pp_V p r)^ r = (concat_pV_p (p @ r) r)^	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 736) is:	 whiskerR (concat_pp_V q r) r = concat_pV_p (q @ r) r	subgoal 2 (ID 665) is:	 Sect (fun h : p = q => whiskerR h r) (cancelR p q r)	";
+            data = "1 subgoal (ID 735)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  k : p @ r = q @ r	  ============================	  whiskerR (concat_pp_V p r)^ r = (concat_pV_p (p @ r) r)^	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 736) is:	 whiskerR (concat_pp_V q r) r = concat_pV_p (q @ r) r	subgoal 2 (ID 665) is:	 cancelR p q r o (fun h : p = q => whiskerR h r) == idmap	";
             responses[i]=data;
           
 
             i = 180;
-            data = "1 subgoal (ID 736)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  k : p @ r = q @ r	  ============================	  whiskerR (concat_pp_V q r) r = concat_pV_p (q @ r) r	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 665) is:	 Sect (fun h : p = q => whiskerR h r) (cancelR p q r)	";
+            data = "1 subgoal (ID 736)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  k : p @ r = q @ r	  ============================	  whiskerR (concat_pp_V q r) r = concat_pV_p (q @ r) r	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 665) is:	 cancelR p q r o (fun h : p = q => whiskerR h r) == idmap	";
             responses[i]=data;
           
 
             i = 181;
-            data = "1 subgoal (ID 665)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  Sect (fun h : p = q => whiskerR h r) (cancelR p q r)	1 subgoal (ID 777)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  k : p = q	  ============================	  cancelR p q r (whiskerR k r) = k	";
+            data = "1 subgoal (ID 665)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  ============================	  cancelR p q r o (fun h : p = q => whiskerR h r) == idmap	1 subgoal (ID 777)	  	  A : Type	  x, y, z : A	  p, q : x = y	  r : y = z	  k : p = q	  ============================	  cancelR p q r (whiskerR k r) = k	";
             responses[i]=data;
           
 
@@ -1568,22 +1568,22 @@
           
 
             i = 310;
-            data = "3 subgoals (ID 1384)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  transport P p u = v -> u = transport P p^ v		subgoal 2 (ID 1386) is:	 Sect ?g (moveR_transport_p P p u v)	subgoal 3 (ID 1388) is:	 Sect (moveR_transport_p P p u v) ?g	";
+            data = "3 subgoals (ID 1384)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  transport P p u = v -> u = transport P p^ v		subgoal 2 (ID 1386) is:	 moveR_transport_p P p u v o ?g == idmap	subgoal 3 (ID 1388) is:	 ?g o moveR_transport_p P p u v == idmap	";
             responses[i]=data;
           
 
             i = 311;
-            data = "1 subgoal (ID 1384)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  transport P p u = v -> u = transport P p^ v	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1386) is:	 Sect (moveL_transport_V P p u v) (moveR_transport_p P p u v)	subgoal 2 (ID 1388) is:	 Sect (moveR_transport_p P p u v) (moveL_transport_V P p u v)	";
+            data = "1 subgoal (ID 1384)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  transport P p u = v -> u = transport P p^ v	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1386) is:	 moveR_transport_p P p u v o moveL_transport_V P p u v == idmap	subgoal 2 (ID 1388) is:	 moveL_transport_V P p u v o moveR_transport_p P p u v == idmap	";
             responses[i]=data;
           
 
             i = 312;
-            data = "1 subgoal (ID 1386)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  Sect (moveL_transport_V P p u v) (moveR_transport_p P p u v)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1388) is:	 Sect (moveR_transport_p P p u v) (moveL_transport_V P p u v)	";
+            data = "1 subgoal (ID 1386)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  moveR_transport_p P p u v o moveL_transport_V P p u v == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1388) is:	 moveL_transport_V P p u v o moveR_transport_p P p u v == idmap	";
             responses[i]=data;
           
 
             i = 313;
-            data = "1 subgoal (ID 1388)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  Sect (moveR_transport_p P p u v) (moveL_transport_V P p u v)	No more subgoals.	";
+            data = "1 subgoal (ID 1388)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  moveL_transport_V P p u v o moveR_transport_p P p u v == idmap	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1648,22 +1648,22 @@
           
 
             i = 326;
-            data = "3 subgoals (ID 1474)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  transport P p^ u = v -> u = transport P p v		subgoal 2 (ID 1476) is:	 Sect ?g (moveR_transport_V P p u v)	subgoal 3 (ID 1478) is:	 Sect (moveR_transport_V P p u v) ?g	";
+            data = "3 subgoals (ID 1474)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  transport P p^ u = v -> u = transport P p v		subgoal 2 (ID 1476) is:	 moveR_transport_V P p u v o ?g == idmap	subgoal 3 (ID 1478) is:	 ?g o moveR_transport_V P p u v == idmap	";
             responses[i]=data;
           
 
             i = 327;
-            data = "1 subgoal (ID 1474)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  transport P p^ u = v -> u = transport P p v	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1476) is:	 Sect (moveL_transport_p P p u v) (moveR_transport_V P p u v)	subgoal 2 (ID 1478) is:	 Sect (moveR_transport_V P p u v) (moveL_transport_p P p u v)	";
+            data = "1 subgoal (ID 1474)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  transport P p^ u = v -> u = transport P p v	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1476) is:	 moveR_transport_V P p u v o moveL_transport_p P p u v == idmap	subgoal 2 (ID 1478) is:	 moveL_transport_p P p u v o moveR_transport_V P p u v == idmap	";
             responses[i]=data;
           
 
             i = 328;
-            data = "1 subgoal (ID 1476)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  Sect (moveL_transport_p P p u v) (moveR_transport_V P p u v)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1478) is:	 Sect (moveR_transport_V P p u v) (moveL_transport_p P p u v)	";
+            data = "1 subgoal (ID 1476)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  moveR_transport_V P p u v o moveL_transport_p P p u v == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1478) is:	 moveL_transport_p P p u v o moveR_transport_V P p u v == idmap	";
             responses[i]=data;
           
 
             i = 329;
-            data = "1 subgoal (ID 1478)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  Sect (moveR_transport_V P p u v) (moveL_transport_p P p u v)	No more subgoals.	";
+            data = "1 subgoal (ID 1478)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  moveL_transport_p P p u v o moveR_transport_V P p u v == idmap	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1688,22 +1688,22 @@
           
 
             i = 334;
-            data = "3 subgoals (ID 1513)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  u = transport P p^ v -> transport P p u = v		subgoal 2 (ID 1515) is:	 Sect ?g (moveL_transport_V P p u v)	subgoal 3 (ID 1517) is:	 Sect (moveL_transport_V P p u v) ?g	";
+            data = "3 subgoals (ID 1513)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  u = transport P p^ v -> transport P p u = v		subgoal 2 (ID 1515) is:	 moveL_transport_V P p u v o ?g == idmap	subgoal 3 (ID 1517) is:	 ?g o moveL_transport_V P p u v == idmap	";
             responses[i]=data;
           
 
             i = 335;
-            data = "1 subgoal (ID 1513)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  u = transport P p^ v -> transport P p u = v	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1515) is:	 Sect (moveR_transport_p P p u v) (moveL_transport_V P p u v)	subgoal 2 (ID 1517) is:	 Sect (moveL_transport_V P p u v) (moveR_transport_p P p u v)	";
+            data = "1 subgoal (ID 1513)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  u = transport P p^ v -> transport P p u = v	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1515) is:	 moveL_transport_V P p u v o moveR_transport_p P p u v == idmap	subgoal 2 (ID 1517) is:	 moveR_transport_p P p u v o moveL_transport_V P p u v == idmap	";
             responses[i]=data;
           
 
             i = 336;
-            data = "1 subgoal (ID 1515)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  Sect (moveR_transport_p P p u v) (moveL_transport_V P p u v)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1517) is:	 Sect (moveL_transport_V P p u v) (moveR_transport_p P p u v)	";
+            data = "1 subgoal (ID 1515)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  moveL_transport_V P p u v o moveR_transport_p P p u v == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1517) is:	 moveR_transport_p P p u v o moveL_transport_V P p u v == idmap	";
             responses[i]=data;
           
 
             i = 337;
-            data = "1 subgoal (ID 1517)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  Sect (moveL_transport_V P p u v) (moveR_transport_p P p u v)	No more subgoals.	";
+            data = "1 subgoal (ID 1517)	  	  A : Type	  P : A -> Type	  x, y : A	  p : x = y	  u : P x	  v : P y	  ============================	  moveR_transport_p P p u v o moveL_transport_V P p u v == idmap	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1728,22 +1728,22 @@
           
 
             i = 342;
-            data = "3 subgoals (ID 1552)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  u = transport P p v -> transport P p^ u = v		subgoal 2 (ID 1554) is:	 Sect ?g (moveL_transport_p P p u v)	subgoal 3 (ID 1556) is:	 Sect (moveL_transport_p P p u v) ?g	";
+            data = "3 subgoals (ID 1552)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  u = transport P p v -> transport P p^ u = v		subgoal 2 (ID 1554) is:	 moveL_transport_p P p u v o ?g == idmap	subgoal 3 (ID 1556) is:	 ?g o moveL_transport_p P p u v == idmap	";
             responses[i]=data;
           
 
             i = 343;
-            data = "1 subgoal (ID 1552)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  u = transport P p v -> transport P p^ u = v	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1554) is:	 Sect (moveR_transport_V P p u v) (moveL_transport_p P p u v)	subgoal 2 (ID 1556) is:	 Sect (moveL_transport_p P p u v) (moveR_transport_V P p u v)	";
+            data = "1 subgoal (ID 1552)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  u = transport P p v -> transport P p^ u = v	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 1554) is:	 moveL_transport_p P p u v o moveR_transport_V P p u v == idmap	subgoal 2 (ID 1556) is:	 moveR_transport_V P p u v o moveL_transport_p P p u v == idmap	";
             responses[i]=data;
           
 
             i = 344;
-            data = "1 subgoal (ID 1554)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  Sect (moveR_transport_V P p u v) (moveL_transport_p P p u v)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1556) is:	 Sect (moveL_transport_p P p u v) (moveR_transport_V P p u v)	";
+            data = "1 subgoal (ID 1554)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  moveL_transport_p P p u v o moveR_transport_V P p u v == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1556) is:	 moveR_transport_V P p u v o moveL_transport_p P p u v == idmap	";
             responses[i]=data;
           
 
             i = 345;
-            data = "1 subgoal (ID 1556)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  Sect (moveL_transport_p P p u v) (moveR_transport_V P p u v)	No more subgoals.	";
+            data = "1 subgoal (ID 1556)	  	  A : Type	  P : A -> Type	  x, y : A	  p : y = x	  u : P x	  v : P y	  ============================	  moveR_transport_V P p u v o moveL_transport_p P p u v == idmap	No more subgoals.	";
             responses[i]=data;
           
 
@@ -2418,12 +2418,12 @@
           
 
             i = 480;
-            data = "2 subgoals (ID 2073)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  ============================	  Sect (fun f : forall (y : A) (p : a = y), P y p => f a 1) (paths_ind a P)		subgoal 2 (ID 2074) is:	 Sect (paths_ind a P) (fun f : forall (y : A) (p : a = y), P y p => f a 1)	";
+            data = "2 subgoals (ID 2073)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  ============================	  (fun x : forall (y : A) (p : a = y), P y p => paths_ind a P (x a 1)) ==	  idmap		subgoal 2 (ID 2074) is:	 (fun x : P a 1 => paths_ind a P x a 1) == idmap	";
             responses[i]=data;
           
 
             i = 481;
-            data = "1 subgoal (ID 2073)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  ============================	  Sect (fun f : forall (y : A) (p : a = y), P y p => f a 1) (paths_ind a P)	1 subgoal (ID 2076)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  f : forall (y : A) (p : a = y), P y p	  ============================	  paths_ind a P (f a 1) = f	";
+            data = "1 subgoal (ID 2073)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  ============================	  (fun x : forall (y : A) (p : a = y), P y p => paths_ind a P (x a 1)) ==	  idmap	1 subgoal (ID 2076)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  f : forall (y : A) (p : a = y), P y p	  ============================	  paths_ind a P (f a 1) = f	";
             responses[i]=data;
           
 
@@ -2438,12 +2438,12 @@
           
 
             i = 484;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 2074) is:	 Sect (paths_ind a P) (fun f : forall (y : A) (p : a = y), P y p => f a 1)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 2074) is:	 (fun x : P a 1 => paths_ind a P x a 1) == idmap	";
             responses[i]=data;
           
 
             i = 485;
-            data = "1 subgoal (ID 2074)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  ============================	  Sect (paths_ind a P) (fun f : forall (y : A) (p : a = y), P y p => f a 1)	1 subgoal (ID 2095)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  u : P a 1	  ============================	  paths_ind a P u a 1 = u	";
+            data = "1 subgoal (ID 2074)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  ============================	  (fun x : P a 1 => paths_ind a P x a 1) == idmap	1 subgoal (ID 2095)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, a = x -> Type	  u : P a 1	  ============================	  paths_ind a P u a 1 = u	";
             responses[i]=data;
           
 
@@ -2473,12 +2473,12 @@
           
 
             i = 491;
-            data = "2 subgoals (ID 2100)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  ============================	  Sect (fun f : forall (y : A) (p : y = a), P y p => f a 1) (paths_ind_r a P)		subgoal 2 (ID 2101) is:	 Sect (paths_ind_r a P) (fun f : forall (y : A) (p : y = a), P y p => f a 1)	";
+            data = "2 subgoals (ID 2100)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  ============================	  (fun x : forall (y : A) (p : y = a), P y p => paths_ind_r a P (x a 1)) ==	  idmap		subgoal 2 (ID 2101) is:	 (fun x : P a 1 => paths_ind_r a P x a 1) == idmap	";
             responses[i]=data;
           
 
             i = 492;
-            data = "1 subgoal (ID 2100)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  ============================	  Sect (fun f : forall (y : A) (p : y = a), P y p => f a 1) (paths_ind_r a P)	1 subgoal (ID 2103)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  f : forall (y : A) (p : y = a), P y p	  ============================	  paths_ind_r a P (f a 1) = f	";
+            data = "1 subgoal (ID 2100)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  ============================	  (fun x : forall (y : A) (p : y = a), P y p => paths_ind_r a P (x a 1)) ==	  idmap	1 subgoal (ID 2103)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  f : forall (y : A) (p : y = a), P y p	  ============================	  paths_ind_r a P (f a 1) = f	";
             responses[i]=data;
           
 
@@ -2493,12 +2493,12 @@
           
 
             i = 495;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 2101) is:	 Sect (paths_ind_r a P) (fun f : forall (y : A) (p : y = a), P y p => f a 1)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 2101) is:	 (fun x : P a 1 => paths_ind_r a P x a 1) == idmap	";
             responses[i]=data;
           
 
             i = 496;
-            data = "1 subgoal (ID 2101)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  ============================	  Sect (paths_ind_r a P) (fun f : forall (y : A) (p : y = a), P y p => f a 1)	1 subgoal (ID 2129)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  u : P a 1	  ============================	  paths_ind_r a P u a 1 = u	";
+            data = "1 subgoal (ID 2101)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  ============================	  (fun x : P a 1 => paths_ind_r a P x a 1) == idmap	1 subgoal (ID 2129)	  	  H : Funext	  A : Type	  a : A	  P : forall x : A, x = a -> Type	  u : P a 1	  ============================	  paths_ind_r a P u a 1 = u	";
             responses[i]=data;
           
 

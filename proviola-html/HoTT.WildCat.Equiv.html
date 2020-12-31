@@ -1153,22 +1153,22 @@
           
 
             i = 227;
-            data = "4 subgoals (ID 1602)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (y $-> z) -> x $-> z		subgoal 2 (ID 1604) is:	 (x $-> z) -> y $-> z	subgoal 3 (ID 1606) is:	 Sect ?g ?f	subgoal 4 (ID 1608) is:	 Sect ?f ?g	";
+            data = "4 subgoals (ID 1602)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (y $-> z) -> x $-> z		subgoal 2 (ID 1604) is:	 (x $-> z) -> y $-> z	subgoal 3 (ID 1606) is:	 ?f o ?g == idmap	subgoal 4 (ID 1608) is:	 ?g o ?f == idmap	";
             responses[i]=data;
           
 
             i = 228;
-            data = "3 subgoals (ID 1604)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (x $-> z) -> y $-> z		subgoal 2 (ID 1606) is:	 Sect ?g (fun g : y $-> z => g $o f)	subgoal 3 (ID 1608) is:	 Sect (fun g : y $-> z => g $o f) ?g	";
+            data = "3 subgoals (ID 1604)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (x $-> z) -> y $-> z		subgoal 2 (ID 1606) is:	 (fun g : y $-> z => g $o f) o ?g == idmap	subgoal 3 (ID 1608) is:	 ?g o (fun g : y $-> z => g $o f) == idmap	";
             responses[i]=data;
           
 
             i = 229;
-            data = "2 subgoals (ID 1606)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  Sect (fun h : x $-> z => h $o f^-1$) (fun g : y $-> z => g $o f)		subgoal 2 (ID 1608) is:	 Sect (fun g : y $-> z => g $o f) (fun h : x $-> z => h $o f^-1$)	";
+            data = "2 subgoals (ID 1606)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (fun g : y $-> z => g $o f) o (fun h : x $-> z => h $o f^-1$) == idmap		subgoal 2 (ID 1608) is:	 (fun h : x $-> z => h $o f^-1$) o (fun g : y $-> z => g $o f) == idmap	";
             responses[i]=data;
           
 
             i = 230;
-            data = "1 subgoal (ID 1606)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  Sect (fun h : x $-> z => h $o f^-1$) (fun g : y $-> z => g $o f)	1 subgoal (ID 1631)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  (h $o f^-1$) $o f = h	";
+            data = "1 subgoal (ID 1606)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (fun g : y $-> z => g $o f) o (fun h : x $-> z => h $o f^-1$) == idmap	1 subgoal (ID 1631)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  (h $o f^-1$) $o f = h	";
             responses[i]=data;
           
 
@@ -1193,7 +1193,7 @@
           
 
             i = 235;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals		subgoal 1 (ID 1676) is:	 h $o Id x $== h	subgoal 2 (ID 1608) is:	 Sect (fun g : y $-> z => g $o f) (fun h : x $-> z => h $o f^-1$)	1 subgoal (ID 1676)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  h $o Id x $== h	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 1608) is:	 Sect (fun g : y $-> z => g $o f) (fun h : x $-> z => h $o f^-1$)	1 subgoal (ID 1608)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  Sect (fun g : y $-> z => g $o f) (fun h : x $-> z => h $o f^-1$)	1 subgoal (ID 1726)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  g : y $-> z	  ============================	  (g $o f) $o f^-1$ = g	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals		subgoal 1 (ID 1676) is:	 h $o Id x $== h	subgoal 2 (ID 1608) is:	 (fun h : x $-> z => h $o f^-1$) o (fun g : y $-> z => g $o f) == idmap	1 subgoal (ID 1676)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  h : x $-> z	  ============================	  h $o Id x $== h	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 1608) is:	 (fun h : x $-> z => h $o f^-1$) o (fun g : y $-> z => g $o f) == idmap	1 subgoal (ID 1608)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  ============================	  (fun h : x $-> z => h $o f^-1$) o (fun g : y $-> z => g $o f) == idmap	1 subgoal (ID 1726)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : x $<~> y	  g : y $-> z	  ============================	  (g $o f) $o f^-1$ = g	";
             responses[i]=data;
           
 
@@ -1258,22 +1258,22 @@
           
 
             i = 248;
-            data = "4 subgoals (ID 1628)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (x $-> y) -> x $-> z		subgoal 2 (ID 1630) is:	 (x $-> z) -> x $-> y	subgoal 3 (ID 1632) is:	 Sect ?g ?f	subgoal 4 (ID 1634) is:	 Sect ?f ?g	";
+            data = "4 subgoals (ID 1628)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (x $-> y) -> x $-> z		subgoal 2 (ID 1630) is:	 (x $-> z) -> x $-> y	subgoal 3 (ID 1632) is:	 ?f o ?g == idmap	subgoal 4 (ID 1634) is:	 ?g o ?f == idmap	";
             responses[i]=data;
           
 
             i = 249;
-            data = "3 subgoals (ID 1630)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (x $-> z) -> x $-> y		subgoal 2 (ID 1632) is:	 Sect ?g (fun g : x $-> y => f $o g)	subgoal 3 (ID 1634) is:	 Sect (fun g : x $-> y => f $o g) ?g	";
+            data = "3 subgoals (ID 1630)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (x $-> z) -> x $-> y		subgoal 2 (ID 1632) is:	 (fun g : x $-> y => f $o g) o ?g == idmap	subgoal 3 (ID 1634) is:	 ?g o (fun g : x $-> y => f $o g) == idmap	";
             responses[i]=data;
           
 
             i = 250;
-            data = "2 subgoals (ID 1632)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  Sect (fun h : x $-> z => f^-1$ $o h) (fun g : x $-> y => f $o g)		subgoal 2 (ID 1634) is:	 Sect (fun g : x $-> y => f $o g) (fun h : x $-> z => f^-1$ $o h)	";
+            data = "2 subgoals (ID 1632)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (fun g : x $-> y => f $o g) o (fun h : x $-> z => f^-1$ $o h) == idmap		subgoal 2 (ID 1634) is:	 (fun h : x $-> z => f^-1$ $o h) o (fun g : x $-> y => f $o g) == idmap	";
             responses[i]=data;
           
 
             i = 251;
-            data = "1 subgoal (ID 1632)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  Sect (fun h : x $-> z => f^-1$ $o h) (fun g : x $-> y => f $o g)	1 subgoal (ID 1657)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  f $o (f^-1$ $o h) = h	";
+            data = "1 subgoal (ID 1632)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (fun g : x $-> y => f $o g) o (fun h : x $-> z => f^-1$ $o h) == idmap	1 subgoal (ID 1657)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  f $o (f^-1$ $o h) = h	";
             responses[i]=data;
           
 
@@ -1298,7 +1298,7 @@
           
 
             i = 256;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals		subgoal 1 (ID 1708) is:	 Id z $o h $== h	subgoal 2 (ID 1634) is:	 Sect (fun g : x $-> y => f $o g) (fun h : x $-> z => f^-1$ $o h)	1 subgoal (ID 1708)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  Id z $o h $== h	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 1634) is:	 Sect (fun g : x $-> y => f $o g) (fun h : x $-> z => f^-1$ $o h)	1 subgoal (ID 1634)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  Sect (fun g : x $-> y => f $o g) (fun h : x $-> z => f^-1$ $o h)	1 subgoal (ID 1758)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  g : x $-> y	  ============================	  f^-1$ $o (f $o g) = g	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals		subgoal 1 (ID 1708) is:	 Id z $o h $== h	subgoal 2 (ID 1634) is:	 (fun h : x $-> z => f^-1$ $o h) o (fun g : x $-> y => f $o g) == idmap	1 subgoal (ID 1708)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  h : x $-> z	  ============================	  Id z $o h $== h	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 1634) is:	 (fun h : x $-> z => f^-1$ $o h) o (fun g : x $-> y => f $o g) == idmap	1 subgoal (ID 1634)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  ============================	  (fun h : x $-> z => f^-1$ $o h) o (fun g : x $-> y => f $o g) == idmap	1 subgoal (ID 1758)	  	  A : Type	  IsGraph0 : IsGraph A	  Is01Cat0 : Is01Cat A	  H : Is1Cat A	  H0 : HasEquivs A	  HasMorExt0 : HasMorExt A	  x, y, z : A	  f : y $<~> z	  g : x $-> y	  ============================	  f^-1$ $o (f $o g) = g	";
             responses[i]=data;
           
 

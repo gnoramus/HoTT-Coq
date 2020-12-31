@@ -673,12 +673,12 @@
           
 
             i = 131;
-            data = "2 subgoals (ID 982)	  	  B : Type	  C : Type	  f : C -> B	  ============================	  Sect (fun c : {y : B & {x : C & f x = y}} => (c.2).1)	    (fun c : C => (f c; c; 1))		subgoal 2 (ID 987) is:	 forall x : C,	 ?eisretr ((fun c : C => (f c; c; 1)) x) =	 ap (fun c : C => (f c; c; 1)) ((fun c : C => 1) x)	";
+            data = "2 subgoals (ID 982)	  	  B : Type	  C : Type	  f : C -> B	  ============================	  (fun c : C => (f c; c; 1))	  o (fun c : {y : B & {x : C & f x = y}} => (c.2).1) == idmap		subgoal 2 (ID 987) is:	 forall x : C,	 ?eisretr ((fun c : C => (f c; c; 1)) x) =	 ap (fun c : C => (f c; c; 1)) ((fun c : C => 1) x)	";
             responses[i]=data;
           
 
             i = 132;
-            data = "1 subgoal (ID 982)	  	  B : Type	  C : Type	  f : C -> B	  ============================	  Sect (fun c : {y : B & {x : C & f x = y}} => (c.2).1)	    (fun c : C => (f c; c; 1))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 987) is:	 forall x : C,	 (fun x0 : {y : B & {x0 : C & f x0 = y}} =>	  (fun (proj1_sig : B) (proj2_sig : {x1 : C & f x1 = proj1_sig}) =>	   (fun (proj1_sig0 : C) (proj2_sig0 : f proj1_sig0 = proj1_sig) =>	    match	      proj2_sig0 as p in (_ = y)	      return	        ((f ((y; proj1_sig0; p).2).1; ((y; proj1_sig0; p).2).1; 1) =	         (y; proj1_sig0; p))	    with	    | 1 => 1	    end) proj2_sig.1 proj2_sig.2) x0.1 x0.2) ((fun c : C => (f c; c; 1)) x) =	 ap (fun c : C => (f c; c; 1)) ((fun c : C => 1) x)	";
+            data = "1 subgoal (ID 982)	  	  B : Type	  C : Type	  f : C -> B	  ============================	  (fun c : C => (f c; c; 1))	  o (fun c : {y : B & {x : C & f x = y}} => (c.2).1) == idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 987) is:	 forall x : C,	 (fun x0 : {y : B & {x0 : C & f x0 = y}} =>	  (fun (proj1_sig : B) (proj2_sig : {x1 : C & f x1 = proj1_sig}) =>	   (fun (proj1_sig0 : C) (proj2_sig0 : f proj1_sig0 = proj1_sig) =>	    match	      proj2_sig0 as p in (_ = y)	      return	        ((f ((y; proj1_sig0; p).2).1; ((y; proj1_sig0; p).2).1; 1) =	         (y; proj1_sig0; p))	    with	    | 1 => 1	    end) proj2_sig.1 proj2_sig.2) x0.1 x0.2) ((fun c : C => (f c; c; 1)) x) =	 ap (fun c : C => (f c; c; 1)) ((fun c : C => 1) x)	";
             responses[i]=data;
           
 
@@ -703,12 +703,12 @@
           
 
             i = 137;
-            data = "2 subgoals (ID 997)	  	  X : Type	  x : X	  P : X -> Type	  ============================	  Sect (fun Px : {z : {x : _ & P x} & z.1 = x} => transport P Px.2 (Px.1).2)	    (fun Px : P x => ((x; Px); 1))		subgoal 2 (ID 1002) is:	 forall x0 : P x,	 ?eisretr ((fun Px : P x => ((x; Px); 1)) x0) =	 ap (fun Px : P x => ((x; Px); 1)) ((fun Px : P x => 1) x0)	";
+            data = "2 subgoals (ID 997)	  	  X : Type	  x : X	  P : X -> Type	  ============================	  (fun Px : P x => ((x; Px); 1))	  o (fun Px : {z : {x : _ & P x} & z.1 = x} => transport P Px.2 (Px.1).2) ==	  idmap		subgoal 2 (ID 1002) is:	 forall x0 : P x,	 ?eisretr ((fun Px : P x => ((x; Px); 1)) x0) =	 ap (fun Px : P x => ((x; Px); 1)) ((fun Px : P x => 1) x0)	";
             responses[i]=data;
           
 
             i = 138;
-            data = "1 subgoal (ID 997)	  	  X : Type	  x : X	  P : X -> Type	  ============================	  Sect (fun Px : {z : {x : _ & P x} & z.1 = x} => transport P Px.2 (Px.1).2)	    (fun Px : P x => ((x; Px); 1))	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1002) is:	 forall x0 : P x,	 (fun x1 : {z : {x : _ & P x} & z.1 = x} =>	  (fun proj1_sig : {x : _ & P x} =>	   (fun (proj1_sig0 : X) (proj2_sig : P proj1_sig0)	      (proj2_sig0 : (proj1_sig0; proj2_sig).1 = x) =>	    match	      proj2_sig0 as p in (_ = y)	      return	        (((y;	          transport P ((proj1_sig0; proj2_sig); p).2	            (((proj1_sig0; proj2_sig); p).1).2); 1) =	         ((proj1_sig0; proj2_sig); p))	    with	    | 1 => 1	    end) proj1_sig.1 proj1_sig.2) x1.1 x1.2)	   ((fun Px : P x => ((x; Px); 1)) x0) =	 ap (fun Px : P x => ((x; Px); 1)) ((fun Px : P x => 1) x0)	";
+            data = "1 subgoal (ID 997)	  	  X : Type	  x : X	  P : X -> Type	  ============================	  (fun Px : P x => ((x; Px); 1))	  o (fun Px : {z : {x : _ & P x} & z.1 = x} => transport P Px.2 (Px.1).2) ==	  idmap	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 1002) is:	 forall x0 : P x,	 (fun x1 : {z : {x : _ & P x} & z.1 = x} =>	  (fun proj1_sig : {x : _ & P x} =>	   (fun (proj1_sig0 : X) (proj2_sig : P proj1_sig0)	      (proj2_sig0 : (proj1_sig0; proj2_sig).1 = x) =>	    match	      proj2_sig0 as p in (_ = y)	      return	        (((y;	          transport P ((proj1_sig0; proj2_sig); p).2	            (((proj1_sig0; proj2_sig); p).1).2); 1) =	         ((proj1_sig0; proj2_sig); p))	    with	    | 1 => 1	    end) proj1_sig.1 proj1_sig.2) x1.1 x1.2)	   ((fun Px : P x => ((x; Px); 1)) x0) =	 ap (fun Px : P x => ((x; Px); 1)) ((fun Px : P x => 1) x0)	";
             responses[i]=data;
           
 

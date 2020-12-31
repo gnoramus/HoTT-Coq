@@ -2123,12 +2123,12 @@
           
 
             i = 421;
-            data = "1 subgoal (ID 62)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G -> A	1 subgoal (ID 257)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  forall x y z : G, h (x * (y * z)) = h (x * (z * y))	";
+            data = "1 subgoal (ID 62)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G -> A	";
             responses[i]=data;
           
 
             i = 422;
-            data = "1 subgoal (ID 441)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h (x * (y * z)) = h (x * (z * y))	";
+            data = "1 subgoal (ID 257)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  forall x y z : G, h (x * (y * z)) = h (x * (z * y))	1 subgoal (ID 441)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h (x * (y * z)) = h (x * (z * y))	";
             responses[i]=data;
           
 
@@ -2153,12 +2153,12 @@
           
 
             i = 427;
-            data = "1 subgoal (ID 882)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  ============================	  forall y : abel G,	  (fun x0 : Abel G =>	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) 	     (y * x0) =	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) y *	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) x0) 	    (ab x)	";
+            data = "";
             responses[i]=data;
           
 
             i = 428;
-            data = "1 subgoal (ID 1115)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  y : G	  ============================	  (fun x0 : Abel G =>	   (fun x1 : Abel G =>	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) 	      (x0 * x1) =	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x0 *	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x1) 	     (ab x)) (ab y)	";
+            data = "1 subgoal (ID 882)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  ============================	  forall y : abel G,	  (fun x0 : Abel G =>	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) 	     (y * x0) =	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) y *	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) x0) 	    (ab x)	1 subgoal (ID 1115)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  y : G	  ============================	  (fun x0 : Abel G =>	   (fun x1 : Abel G =>	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) 	      (x0 * x1) =	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x0 *	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x1) 	     (ab x)) (ab y)	";
             responses[i]=data;
           
 
@@ -2213,12 +2213,12 @@
           
 
             i = 439;
-            data = "2 subgoals (ID 133)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  Sect b a		subgoal 2 (ID 135) is:	 Sect a b	";
+            data = "2 subgoals (ID 133)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  a o b == idmap		subgoal 2 (ID 135) is:	 b o a == idmap	";
             responses[i]=data;
           
 
             i = 440;
-            data = "1 subgoal (ID 133)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  Sect b a	1 subgoal (ID 161)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  group_precomp B eta2 (a $o b) $== group_precomp B eta2 (Id B)	";
+            data = "1 subgoal (ID 133)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  a o b == idmap	1 subgoal (ID 161)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  group_precomp B eta2 (a $o b) $== group_precomp B eta2 (Id B)	";
             responses[i]=data;
           
 
@@ -2233,7 +2233,7 @@
           
 
             i = 443;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 135) is:	 Sect a b	1 subgoal (ID 135)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  Sect a b	1 subgoal (ID 135)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  Sect a b	1 subgoal (ID 201)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  group_precomp A eta1 (b $o a) $== group_precomp A eta1 (Id A)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 135) is:	 b o a == idmap	1 subgoal (ID 135)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  b o a == idmap	1 subgoal (ID 135)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  b o a == idmap	1 subgoal (ID 201)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  group_precomp A eta1 (b $o a) $== group_precomp A eta1 (Id A)	";
             responses[i]=data;
           
 

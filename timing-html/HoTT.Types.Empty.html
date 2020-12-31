@@ -39,7 +39,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Empty.v
 Line: 3
-Time: 0.013s">
+Time: 0.014s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
@@ -130,8 +130,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Empty.v
 Line: 21
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0.002s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
 
 Global Instance isequiv_empty_rec `{Funext} (A : Type)
@@ -209,13 +209,13 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Empty.v
 Line: 39
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
   refine (Build_IsEquiv _ _ _ 
     (Empty_ind (fun _ =&gt; T))                (* := equiv_inf *)
-    (fun fals:Empty =&gt; match fals with end) (* : Sect equiv_inf f *)
-    (fun t:T =&gt; match (f t) with end)       (* : Sect f equiv_inf *)
+    (fun fals:Empty =&gt; match fals with end) (* : f o equiv_inf == idmap *)
+    (fun t:T =&gt; match (f t) with end)       (* : equiv_inf o f == idmap *)
     (_)                                     (* adjointify part *)  ).</pre>
 </div>
 <div class="code" title="File: Empty.v

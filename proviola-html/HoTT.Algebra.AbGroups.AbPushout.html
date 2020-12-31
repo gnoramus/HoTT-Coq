@@ -343,12 +343,12 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 260)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  IsEquiv (ab_pushout_rec_uncurried f g Y)	3 subgoals (ID 286)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  (ab_pushout f g $-> Y) -> {b : B $-> Y & {c : C $-> Y & b o f == c o g}}		subgoal 2 (ID 288) is:	 Sect ?g (ab_pushout_rec_uncurried f g Y)	subgoal 3 (ID 290) is:	 Sect (ab_pushout_rec_uncurried f g Y) ?g	";
+            data = "";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 subgoal (ID 286)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  (ab_pushout f g $-> Y) -> {b : B $-> Y & {c : C $-> Y & b o f == c o g}}	1 subgoal (ID 291)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  ============================	  {b : B $-> Y & {c : C $-> Y & b o f == c o g}}	";
+            data = "1 subgoal (ID 260)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  IsEquiv (ab_pushout_rec_uncurried f g Y)	3 subgoals (ID 286)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  (ab_pushout f g $-> Y) -> {b : B $-> Y & {c : C $-> Y & b o f == c o g}}		subgoal 2 (ID 288) is:	 ab_pushout_rec_uncurried f g Y o ?g == idmap	subgoal 3 (ID 290) is:	 ?g o ab_pushout_rec_uncurried f g Y == idmap	1 subgoal (ID 286)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  (ab_pushout f g $-> Y) -> {b : B $-> Y & {c : C $-> Y & b o f == c o g}}	1 subgoal (ID 291)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  ============================	  {b : B $-> Y & {c : C $-> Y & b o f == c o g}}	";
             responses[i]=data;
           
 
@@ -368,22 +368,22 @@
           
 
             i = 70;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 288) is:	 Sect	   (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)))	   (ab_pushout_rec_uncurried f g Y)	subgoal 2 (ID 290) is:	 Sect (ab_pushout_rec_uncurried f g Y)	   (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 288) is:	 ab_pushout_rec_uncurried f g Y	 o (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a))) == idmap	subgoal 2 (ID 290) is:	 (fun phi : ab_pushout f g $-> Y =>	  (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	  fun a : A => ap phi (ab_pushout_commsq a)))	 o ab_pushout_rec_uncurried f g Y == idmap	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 288)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  Sect	    (fun phi : ab_pushout f g $-> Y =>	     (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	     fun a : A => ap phi (ab_pushout_commsq a)))	    (ab_pushout_rec_uncurried f g Y)	1 subgoal (ID 336)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  ============================	  ab_pushout_rec_uncurried f g Y	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)) = phi	";
+            data = "1 subgoal (ID 288)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  ab_pushout_rec_uncurried f g Y	  o (fun phi : ab_pushout f g $-> Y =>	     (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	     fun a : A => ap phi (ab_pushout_commsq a))) == idmap	1 subgoal (ID 336)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  phi : ab_pushout f g $-> Y	  ============================	  ab_pushout_rec_uncurried f g Y	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)) = phi	";
             responses[i]=data;
           
 
             i = 72;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 290) is:	 Sect (ab_pushout_rec_uncurried f g Y)	   (fun phi : ab_pushout f g $-> Y =>	    (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	    fun a : A => ap phi (ab_pushout_commsq a)))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 290) is:	 (fun phi : ab_pushout f g $-> Y =>	  (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	  fun a : A => ap phi (ab_pushout_commsq a)))	 o ab_pushout_rec_uncurried f g Y == idmap	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 subgoal (ID 290)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  Sect (ab_pushout_rec_uncurried f g Y)	    (fun phi : ab_pushout f g $-> Y =>	     (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	     fun a : A => ap phi (ab_pushout_commsq a)))	1 subgoal (ID 353)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  b : B $-> Y	  c : C $-> Y	  p : (fun x : A => b (f x)) == (fun x : A => c (g x))	  ============================	  (ab_pushout_rec_uncurried f g Y (b; c; p) $o ab_pushout_inl;	  ab_pushout_rec_uncurried f g Y (b; c; p) $o ab_pushout_inr;	  fun a : A =>	  ap (ab_pushout_rec_uncurried f g Y (b; c; p)) (ab_pushout_commsq a)) =	  (b; c; p)	";
+            data = "1 subgoal (ID 290)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  ============================	  (fun phi : ab_pushout f g $-> Y =>	   (phi $o ab_pushout_inl; phi $o ab_pushout_inr;	   fun a : A => ap phi (ab_pushout_commsq a)))	  o ab_pushout_rec_uncurried f g Y == idmap	1 subgoal (ID 353)	  	  H : Funext	  A, B, C, Y : AbGroup	  f : A $-> B	  g : A $-> C	  b : B $-> Y	  c : C $-> Y	  p : (fun x : A => b (f x)) == (fun x : A => c (g x))	  ============================	  (ab_pushout_rec_uncurried f g Y (b; c; p) $o ab_pushout_inl;	  ab_pushout_rec_uncurried f g Y (b; c; p) $o ab_pushout_inr;	  fun a : A =>	  ap (ab_pushout_rec_uncurried f g Y (b; c; p)) (ab_pushout_commsq a)) =	  (b; c; p)	";
             responses[i]=data;
           
 

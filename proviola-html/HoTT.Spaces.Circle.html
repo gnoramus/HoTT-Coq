@@ -1258,22 +1258,22 @@
           
 
             i = 248;
-            data = "2 subgoals (ID 121)	  	  H : Univalence	  x : Circle	  ============================	  Sect (Circle_decode x) (Circle_encode x)		subgoal 2 (ID 122) is:	 Sect (Circle_encode x) (Circle_decode x)	";
+            data = "2 subgoals (ID 121)	  	  H : Univalence	  x : Circle	  ============================	  (fun x0 : Circle_code x => Circle_encode x (Circle_decode x x0)) == idmap		subgoal 2 (ID 122) is:	 (fun x0 : base = x => Circle_decode x (Circle_encode x x0)) == idmap	";
             responses[i]=data;
           
 
             i = 249;
-            data = "1 subgoal (ID 121)	  	  H : Univalence	  x : Circle	  ============================	  Sect (Circle_decode x) (Circle_encode x)	1 subgoal (ID 130)	  	  H : Univalence	  x : Circle	  ============================	  transport (fun x0 : Circle => Sect (Circle_decode x0) (Circle_encode x0))	    loop Circle_encode_loopexp = Circle_encode_loopexp	";
+            data = "1 subgoal (ID 121)	  	  H : Univalence	  x : Circle	  ============================	  (fun x0 : Circle_code x => Circle_encode x (Circle_decode x x0)) == idmap	1 subgoal (ID 140)	  	  H : Univalence	  x : Circle	  ============================	  transport	    (fun x0 : Circle =>	     (fun x1 : Circle_code x0 => Circle_encode x0 (Circle_decode x0 x1)) ==	     idmap) loop Circle_encode_loopexp = Circle_encode_loopexp	";
             responses[i]=data;
           
 
             i = 250;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 122) is:	 Sect (Circle_encode x) (Circle_decode x)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 122) is:	 (fun x0 : base = x => Circle_decode x (Circle_encode x x0)) == idmap	";
             responses[i]=data;
           
 
             i = 251;
-            data = "1 subgoal (ID 122)	  	  H : Univalence	  x : Circle	  ============================	  Sect (Circle_encode x) (Circle_decode x)	No more subgoals.	";
+            data = "1 subgoal (ID 122)	  	  H : Univalence	  x : Circle	  ============================	  (fun x0 : base = x => Circle_decode x (Circle_encode x x0)) == idmap	No more subgoals.	";
             responses[i]=data;
           
 
@@ -2690,7 +2690,7 @@ Now we put it together.
       " onmouseover="
       mouseover(249, '0_3_83');
       "><br>
-    - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Spaces.Circle.html#Circle_ind"><span class="id" title="definition">Circle_ind</span></a> (<span class="id" title="keyword">fun</span> <a id="x:27" class="idref" href="#x:27"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> (<a class="idref" href="HoTT.Spaces.Circle.html#Circle_decode"><span class="id" title="definition">Circle_decode</span></a> <a class="idref" href="HoTT.Spaces.Circle.html#x:26"><span class="id" title="variable">x</span></a>) (<a class="idref" href="HoTT.Spaces.Circle.html#Circle_encode"><span class="id" title="definition">Circle_encode</span></a> <a class="idref" href="HoTT.Spaces.Circle.html#x:26"><span class="id" title="variable">x</span></a>))<br>
+    - <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Spaces.Circle.html#Circle_ind"><span class="id" title="definition">Circle_ind</span></a> (<span class="id" title="keyword">fun</span> <a id="x:27" class="idref" href="#x:27"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Circle.html#Circle_encode"><span class="id" title="definition">Circle_encode</span></a> <a class="idref" href="HoTT.Spaces.Circle.html#x:26"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Spaces.Circle.html#Circle_decode"><span class="id" title="definition">Circle_decode</span></a> <a class="idref" href="HoTT.Spaces.Circle.html#x:26"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>)<br>
         <a class="idref" href="HoTT.Spaces.Circle.html#Circle_encode_loopexp"><span class="id" title="definition">Circle_encode_loopexp</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_83');
       " onmouseover="

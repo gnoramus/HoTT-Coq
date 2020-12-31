@@ -998,12 +998,12 @@
           
 
             i = 196;
-            data = "1 subgoal (ID 421)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	         pointed_type := image (Tr n.+1) f;	         ispointed_type := factor1 (image (Tr n.+1) f) (point A)	       |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  ============================	  Factorization (@IsConnMap (Tr n)) (@MapIn (Tr n)) (loops_functor f)	1 subgoal (ID 604)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	         pointed_type := image (Tr n.+1) f;	         ispointed_type := factor1 (image (Tr n.+1) f) (point A)	       |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  ============================	  (fun x : loops A => loops_functor h (loops_functor g x)) == loops_functor f	";
+            data = "1 subgoal (ID 421)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	         pointed_type := image (Tr n.+1) f;	         ispointed_type := factor1 (image (Tr n.+1) f) (point A)	       |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  ============================	  Factorization (@IsConnMap (Tr n)) (@MapIn (Tr n)) (loops_functor f)	";
             responses[i]=data;
           
 
             i = 197;
-            data = "1 subgoal (ID 616)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	         pointed_type := image (Tr n.+1) f;	         ispointed_type := factor1 (image (Tr n.+1) f) (point A)	       |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  x : loops A	  ============================	  loops_functor f x = loops_functor h (loops_functor g x)	";
+            data = "1 subgoal (ID 604)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	         pointed_type := image (Tr n.+1) f;	         ispointed_type := factor1 (image (Tr n.+1) f) (point A)	       |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  ============================	  (fun x : loops A => loops_functor h (loops_functor g x)) == loops_functor f	1 subgoal (ID 616)	  	  H : Univalence	  n : trunc_index	  A : pType	  B : pType	  f : A ->* B	  C := {|	         pointed_type := image (Tr n.+1) f;	         ispointed_type := factor1 (image (Tr n.+1) f) (point A)	       |} : pType	  g := Build_pMap A C (factor1 (image (Tr n.+1) f)) 1 : A ->* C	  h := Build_pMap C B (factor2 (image (Tr n.+1) f)) (point_eq f) : C ->* B	  x : loops A	  ============================	  loops_functor f x = loops_functor h (loops_functor g x)	";
             responses[i]=data;
           
 
@@ -1118,17 +1118,17 @@
           
 
             i = 220;
-            data = "4 subgoals (ID 414)	  	  A : pType	  B : pType	  f : A <~>* B	  ============================	  loops A ->* loops B		subgoal 2 (ID 416) is:	 loops B ->* loops A	subgoal 3 (ID 418) is:	 pSect ?f' ?f	subgoal 4 (ID 420) is:	 pSect ?f ?f'	";
+            data = "4 subgoals (ID 414)	  	  A : pType	  B : pType	  f : A <~>* B	  ============================	  loops A ->* loops B		subgoal 2 (ID 416) is:	 loops B ->* loops A	subgoal 3 (ID 418) is:	 ?f o* ?f' ==* pmap_idmap	subgoal 4 (ID 420) is:	 ?f' o* ?f == pmap_idmap	";
             responses[i]=data;
           
 
             i = 221;
-            data = "3 subgoals (ID 416)	  	  A : pType	  B : pType	  f : A <~>* B	  ============================	  loops B ->* loops A		subgoal 2 (ID 418) is:	 pSect ?f' (loops_functor (let X := pointed_equiv_fun A B f in X))	subgoal 3 (ID 420) is:	 pSect (loops_functor (let X := pointed_equiv_fun A B f in X)) ?f'	";
+            data = "3 subgoals (ID 416)	  	  A : pType	  B : pType	  f : A <~>* B	  ============================	  loops B ->* loops A		subgoal 2 (ID 418) is:	 loops_functor (let X := pointed_equiv_fun A B f in X) o* ?f' ==* pmap_idmap	subgoal 3 (ID 420) is:	 ?f' o* loops_functor (let X := pointed_equiv_fun A B f in X) == pmap_idmap	";
             responses[i]=data;
           
 
             i = 222;
-            data = "2 subgoals (ID 418)	  	  A : pType	  B : pType	  f : A <~>* B	  ============================	  pSect	    (loops_functor (let X := pointed_equiv_fun B A (pequiv_inverse f) in X))	    (loops_functor (let X := pointed_equiv_fun A B f in X))		subgoal 2 (ID 420) is:	 pSect (loops_functor (let X := pointed_equiv_fun A B f in X))	   (loops_functor (let X := pointed_equiv_fun B A (pequiv_inverse f) in X))	";
+            data = "2 subgoals (ID 418)	  	  A : pType	  B : pType	  f : A <~>* B	  ============================	  loops_functor (let X := pointed_equiv_fun A B f in X)	  o* loops_functor (let X := pointed_equiv_fun B A (pequiv_inverse f) in X) ==*	  pmap_idmap		subgoal 2 (ID 420) is:	 loops_functor (let X := pointed_equiv_fun B A (pequiv_inverse f) in X)	 o* loops_functor (let X := pointed_equiv_fun A B f in X) == pmap_idmap	";
             responses[i]=data;
           
 

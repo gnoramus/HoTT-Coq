@@ -163,12 +163,12 @@
           
 
             i = 29;
-            data = "2 subgoals (ID 12)	  	  H : Funext	  A : Type	  ============================	  Sect (hprop_inhabited_contr A) (@contr_inhabited_hprop A)		subgoal 2 (ID 13) is:	 Sect (@contr_inhabited_hprop A) (hprop_inhabited_contr A)	";
+            data = "2 subgoals (ID 12)	  	  H : Funext	  A : Type	  ============================	  (fun x : A -> Contr A => contr_inhabited_hprop A) == idmap		subgoal 2 (ID 13) is:	 (fun x : IsHProp A => hprop_inhabited_contr A (contr_inhabited_hprop A)) ==	 idmap	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 12)	  	  H : Funext	  A : Type	  ============================	  Sect (hprop_inhabited_contr A) (@contr_inhabited_hprop A)	1 subgoal (ID 15)	  	  H : Funext	  A : Type	  ic : A -> Contr A	  ============================	  contr_inhabited_hprop A = ic	";
+            data = "1 subgoal (ID 12)	  	  H : Funext	  A : Type	  ============================	  (fun x : A -> Contr A => contr_inhabited_hprop A) == idmap	1 subgoal (ID 15)	  	  H : Funext	  A : Type	  ic : A -> Contr A	  ============================	  contr_inhabited_hprop A = ic	";
             responses[i]=data;
           
 
@@ -188,12 +188,12 @@
           
 
             i = 34;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 13) is:	 Sect (@contr_inhabited_hprop A) (hprop_inhabited_contr A)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 13) is:	 (fun x : IsHProp A => hprop_inhabited_contr A (contr_inhabited_hprop A)) ==	 idmap	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 13)	  	  H : Funext	  A : Type	  ============================	  Sect (@contr_inhabited_hprop A) (hprop_inhabited_contr A)	1 subgoal (ID 32)	  	  H : Funext	  A : Type	  hp : IsHProp A	  ============================	  hprop_inhabited_contr A (contr_inhabited_hprop A) = hp	";
+            data = "1 subgoal (ID 13)	  	  H : Funext	  A : Type	  ============================	  (fun x : IsHProp A => hprop_inhabited_contr A (contr_inhabited_hprop A)) ==	  idmap	1 subgoal (ID 32)	  	  H : Funext	  A : Type	  hp : IsHProp A	  ============================	  hprop_inhabited_contr A (contr_inhabited_hprop A) = hp	";
             responses[i]=data;
           
 
@@ -308,12 +308,12 @@
           
 
             i = 58;
-            data = "2 subgoals (ID 38)	  	  A : Type	  IsHProp0 : IsHProp A	  ============================	  Sect fst (fun a : A => (a, a))		subgoal 2 (ID 39) is:	 Sect (fun a : A => (a, a)) fst	";
+            data = "2 subgoals (ID 38)	  	  A : Type	  IsHProp0 : IsHProp A	  ============================	  (fun x : A * A => (fst x, fst x)) == idmap		subgoal 2 (ID 39) is:	 (fun x : A => fst (x, x)) == idmap	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 38)	  	  A : Type	  IsHProp0 : IsHProp A	  ============================	  Sect fst (fun a : A => (a, a))	1 subgoal (ID 45)	  	  A : Type	  IsHProp0 : IsHProp A	  x, y : A	  ============================	  (fst (x, y), fst (x, y)) = (x, y)	";
+            data = "1 subgoal (ID 38)	  	  A : Type	  IsHProp0 : IsHProp A	  ============================	  (fun x : A * A => (fst x, fst x)) == idmap	1 subgoal (ID 45)	  	  A : Type	  IsHProp0 : IsHProp A	  x, y : A	  ============================	  (fst (x, y), fst (x, y)) = (x, y)	";
             responses[i]=data;
           
 
@@ -323,17 +323,17 @@
           
 
             i = 61;
-            data = "1 subgoal (ID 50)	  	  A : Type	  IsHProp0 : IsHProp A	  x, y : A	  ============================	  x = x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 51) is:	 x = y	subgoal 2 (ID 39) is:	 Sect (fun a : A => (a, a)) fst	";
+            data = "1 subgoal (ID 50)	  	  A : Type	  IsHProp0 : IsHProp A	  x, y : A	  ============================	  x = x	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 51) is:	 x = y	subgoal 2 (ID 39) is:	 (fun x : A => fst (x, x)) == idmap	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 51)	  	  A : Type	  IsHProp0 : IsHProp A	  x, y : A	  ============================	  x = y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 39) is:	 Sect (fun a : A => (a, a)) fst	";
+            data = "1 subgoal (ID 51)	  	  A : Type	  IsHProp0 : IsHProp A	  x, y : A	  ============================	  x = y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 39) is:	 (fun x : A => fst (x, x)) == idmap	";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 39)	  	  A : Type	  IsHProp0 : IsHProp A	  ============================	  Sect (fun a : A => (a, a)) fst	1 subgoal (ID 57)	  	  A : Type	  IsHProp0 : IsHProp A	  a : A	  ============================	  a = a	";
+            data = "1 subgoal (ID 39)	  	  A : Type	  IsHProp0 : IsHProp A	  ============================	  (fun x : A => fst (x, x)) == idmap	1 subgoal (ID 57)	  	  A : Type	  IsHProp0 : IsHProp A	  a : A	  ============================	  a = a	";
             responses[i]=data;
           
 
@@ -383,7 +383,7 @@
           
 
             i = 73;
-            data = "1 subgoal (ID 47)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, Sect (s x1 x2) (ap f)	  ============================	  IsEmbedding f	";
+            data = "1 subgoal (ID 57)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, ap f o s x1 x2 == idmap	  ============================	  IsEmbedding f	";
             responses[i]=data;
           
 
@@ -393,22 +393,22 @@
           
 
             i = 75;
-            data = "1 subgoal (ID 49)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, Sect (s x1 x2) (ap f)	  y : Y	  ============================	  IsHProp (hfiber f y)	";
+            data = "1 subgoal (ID 59)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, ap f o s x1 x2 == idmap	  y : Y	  ============================	  IsHProp (hfiber f y)	";
             responses[i]=data;
           
 
             i = 76;
-            data = "1 subgoal (ID 50)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, Sect (s x1 x2) (ap f)	  y : Y	  ============================	  forall x y0 : hfiber f y, x = y0	";
+            data = "1 subgoal (ID 60)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, ap f o s x1 x2 == idmap	  y : Y	  ============================	  forall x y0 : hfiber f y, x = y0	";
             responses[i]=data;
           
 
             i = 77;
-            data = "1 subgoal (ID 60)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, Sect (s x1 x2) (ap f)	  y : Y	  x1 : X	  p1 : f x1 = y	  x2 : X	  p2 : f x2 = y	  ============================	  (x1; p1) = (x2; p2)	";
+            data = "1 subgoal (ID 70)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, ap f o s x1 x2 == idmap	  y : Y	  x1 : X	  p1 : f x1 = y	  x2 : X	  p2 : f x2 = y	  ============================	  (x1; p1) = (x2; p2)	";
             responses[i]=data;
           
 
             i = 78;
-            data = "1 subgoal (ID 72)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, Sect (s x1 x2) (ap f)	  y : Y	  x1 : X	  p1 : f x1 = y	  x2 : X	  p2 : f x2 = y	  ============================	  transport (fun x : X => f x = y) (s x1 x2 (p1 @ p2^)) (x1; p1).2 =	  (x2; p2).2	";
+            data = "1 subgoal (ID 82)	  	  X : Type	  Y : Type	  f : X -> Y	  s : forall x1 x2 : X, f x1 = f x2 -> x1 = x2	  H : forall x1 x2 : X, ap f o s x1 x2 == idmap	  y : Y	  x1 : X	  p1 : f x1 = y	  x2 : X	  p2 : f x2 = y	  ============================	  transport (fun x : X => f x = y) (s x1 x2 (p1 @ p2^)) (x1; p1).2 =	  (x2; p2).2	";
             responses[i]=data;
           
 
@@ -458,7 +458,7 @@
           
 
             i = 88;
-            data = "1 subgoal (ID 51)	  	  H : Funext	  A : Type	  ============================	  Contr A <~> A * IsHProp A	";
+            data = "1 subgoal (ID 61)	  	  H : Funext	  A : Type	  ============================	  Contr A <~> A * IsHProp A	";
             responses[i]=data;
           
 
@@ -468,72 +468,72 @@
           
 
             i = 90;
-            data = "2 subgoals (ID 52)	  	  H : Funext	  A : Type	  ============================	  Contr A -> A * IsHProp A		subgoal 2 (ID 54) is:	 Contr A <~> A * IsHProp A	";
+            data = "2 subgoals (ID 62)	  	  H : Funext	  A : Type	  ============================	  Contr A -> A * IsHProp A		subgoal 2 (ID 64) is:	 Contr A <~> A * IsHProp A	";
             responses[i]=data;
           
 
             i = 91;
-            data = "1 subgoal (ID 52)	  	  H : Funext	  A : Type	  ============================	  Contr A -> A * IsHProp A	1 subgoal (ID 55)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  A * IsHProp A	";
+            data = "1 subgoal (ID 62)	  	  H : Funext	  A : Type	  ============================	  Contr A -> A * IsHProp A	1 subgoal (ID 65)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  A * IsHProp A	";
             responses[i]=data;
           
 
             i = 92;
-            data = "2 subgoals (ID 57)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  A		subgoal 2 (ID 58) is:	 IsHProp A	";
+            data = "2 subgoals (ID 67)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  A		subgoal 2 (ID 68) is:	 IsHProp A	";
             responses[i]=data;
           
 
             i = 93;
-            data = "1 subgoal (ID 57)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 58) is:	 IsHProp A	subgoal 2 (ID 54) is:	 Contr A <~> A * IsHProp A	";
+            data = "1 subgoal (ID 67)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 68) is:	 IsHProp A	subgoal 2 (ID 64) is:	 Contr A <~> A * IsHProp A	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 58)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  IsHProp A	1 subgoal (ID 61)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  Contr A	";
+            data = "1 subgoal (ID 68)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  IsHProp A	1 subgoal (ID 71)	  	  H : Funext	  A : Type	  P : Contr A	  ============================	  Contr A	";
             responses[i]=data;
           
 
             i = 95;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 54) is:	 Contr A <~> A * IsHProp A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 64) is:	 Contr A <~> A * IsHProp A	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 subgoal (ID 54)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  ============================	  Contr A <~> A * IsHProp A	2 subgoals (ID 62)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  ============================	  A * IsHProp A -> Contr A		subgoal 2 (ID 64) is:	 Contr A <~> A * IsHProp A	";
+            data = "1 subgoal (ID 64)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  ============================	  Contr A <~> A * IsHProp A	2 subgoals (ID 72)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  ============================	  A * IsHProp A -> Contr A		subgoal 2 (ID 74) is:	 Contr A <~> A * IsHProp A	";
             responses[i]=data;
           
 
             i = 97;
-            data = "1 subgoal (ID 62)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  ============================	  A * IsHProp A -> Contr A	1 subgoal (ID 69)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  a : A	  P : IsHProp A	  ============================	  Contr A	";
+            data = "1 subgoal (ID 72)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  ============================	  A * IsHProp A -> Contr A	1 subgoal (ID 79)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  a : A	  P : IsHProp A	  ============================	  Contr A	";
             responses[i]=data;
           
 
             i = 98;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 64) is:	 Contr A <~> A * IsHProp A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 74) is:	 Contr A <~> A * IsHProp A	";
             responses[i]=data;
           
 
             i = 99;
-            data = "1 subgoal (ID 64)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  ============================	  Contr A <~> A * IsHProp A	1 subgoal (ID 232)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  ============================	  IsHProp (A * IsHProp A)	";
+            data = "1 subgoal (ID 74)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  ============================	  Contr A <~> A * IsHProp A	1 subgoal (ID 242)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  ============================	  IsHProp (A * IsHProp A)	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 subgoal (ID 234)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  p : A * IsHProp A	  ============================	  Contr (A * IsHProp A)	";
+            data = "1 subgoal (ID 244)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  p : A * IsHProp A	  ============================	  Contr (A * IsHProp A)	";
             responses[i]=data;
           
 
             i = 101;
-            data = "2 subgoals (ID 235)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  p : A * IsHProp A	  ============================	  Contr A		subgoal 2 (ID 236) is:	 Contr (IsHProp A)	";
+            data = "2 subgoals (ID 245)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  p : A * IsHProp A	  ============================	  Contr A		subgoal 2 (ID 246) is:	 Contr (IsHProp A)	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 235)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  p : A * IsHProp A	  ============================	  Contr A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal		subgoal 1 (ID 236) is:	 Contr (IsHProp A)	";
+            data = "1 subgoal (ID 245)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  p : A * IsHProp A	  ============================	  Contr A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet *.	</infomsg>	1 subgoal		subgoal 1 (ID 246) is:	 Contr (IsHProp A)	";
             responses[i]=data;
           
 
             i = 103;
-            data = "1 subgoal (ID 236)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  p : A * IsHProp A	  ============================	  Contr (IsHProp A)	No more subgoals.	";
+            data = "1 subgoal (ID 246)	  	  H : Funext	  A : Type	  f : Contr A -> A * IsHProp A	  g : A * IsHProp A -> Contr A	  p : A * IsHProp A	  ============================	  Contr (IsHProp A)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -543,7 +543,7 @@
           
 
             i = 105;
-            data = "1 subgoal (ID 57)	  	  H : Funext	  A : Type	  ============================	  Contr A <~> A * (forall x y : A, x = y)	";
+            data = "1 subgoal (ID 67)	  	  H : Funext	  A : Type	  ============================	  Contr A <~> A * (forall x y : A, x = y)	";
             responses[i]=data;
           
 
@@ -553,17 +553,17 @@
           
 
             i = 107;
-            data = "2 subgoals (ID 66)	  	  H : Funext	  A : Type	  ============================	  Contr A <~> A * IsHProp A		subgoal 2 (ID 67) is:	 A * IsHProp A <~> A * (forall x y : A, x = y)	";
+            data = "2 subgoals (ID 76)	  	  H : Funext	  A : Type	  ============================	  Contr A <~> A * IsHProp A		subgoal 2 (ID 77) is:	 A * IsHProp A <~> A * (forall x y : A, x = y)	";
             responses[i]=data;
           
 
             i = 108;
-            data = "1 subgoal (ID 66)	  	  H : Funext	  A : Type	  ============================	  Contr A <~> A * IsHProp A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 67) is:	 A * IsHProp A <~> A * (forall x y : A, x = y)	";
+            data = "1 subgoal (ID 76)	  	  H : Funext	  A : Type	  ============================	  Contr A <~> A * IsHProp A	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 77) is:	 A * IsHProp A <~> A * (forall x y : A, x = y)	";
             responses[i]=data;
           
 
             i = 109;
-            data = "1 subgoal (ID 67)	  	  H : Funext	  A : Type	  ============================	  A * IsHProp A <~> A * (forall x y : A, x = y)	No more subgoals.	";
+            data = "1 subgoal (ID 77)	  	  H : Funext	  A : Type	  ============================	  A * IsHProp A <~> A * (forall x y : A, x = y)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -618,7 +618,7 @@
           
 
             i = 120;
-            data = "1 subgoal (ID 71)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  IsEquiv equiv_iff_hprop_uncurried	";
+            data = "1 subgoal (ID 81)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  ============================	  IsEquiv equiv_iff_hprop_uncurried	";
             responses[i]=data;
           
 
@@ -628,7 +628,7 @@
           
 
             i = 122;
-            data = "1 subgoal (ID 72)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  i := @istrunc_equiv	   : Funext ->	     forall (n : trunc_index) (A B : Type),	     IsTrunc n.+1 B -> IsTrunc n.+1 (A <~> B)	  ============================	  IsEquiv equiv_iff_hprop_uncurried	";
+            data = "1 subgoal (ID 82)	  	  H : Funext	  A : Type	  B : Type	  IsHProp0 : IsHProp A	  IsHProp1 : IsHProp B	  i := @istrunc_equiv	   : Funext ->	     forall (n : trunc_index) (A B : Type),	     IsTrunc n.+1 B -> IsTrunc n.+1 (A <~> B)	  ============================	  IsEquiv equiv_iff_hprop_uncurried	";
             responses[i]=data;
           
 
@@ -703,7 +703,7 @@
           
 
             i = 137;
-            data = "1 subgoal (ID 85)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  ============================	  hprop -> hprop <~> Unit	";
+            data = "1 subgoal (ID 95)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  ============================	  hprop -> hprop <~> Unit	";
             responses[i]=data;
           
 
@@ -713,22 +713,22 @@
           
 
             i = 139;
-            data = "1 subgoal (ID 86)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  p : hprop	  ============================	  hprop <~> Unit	";
+            data = "1 subgoal (ID 96)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  p : hprop	  ============================	  hprop <~> Unit	";
             responses[i]=data;
           
 
             i = 140;
-            data = "2 subgoals (ID 96)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  p : hprop	  ============================	  hprop -> Unit		subgoal 2 (ID 97) is:	 Unit -> hprop	";
+            data = "2 subgoals (ID 106)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  p : hprop	  ============================	  hprop -> Unit		subgoal 2 (ID 107) is:	 Unit -> hprop	";
             responses[i]=data;
           
 
             i = 141;
-            data = "1 subgoal (ID 96)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  p : hprop	  ============================	  hprop -> Unit	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 97) is:	 Unit -> hprop	";
+            data = "1 subgoal (ID 106)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  p : hprop	  ============================	  hprop -> Unit	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 107) is:	 Unit -> hprop	";
             responses[i]=data;
           
 
             i = 142;
-            data = "1 subgoal (ID 97)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  p : hprop	  ============================	  Unit -> hprop	No more subgoals.	";
+            data = "1 subgoal (ID 107)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  p : hprop	  ============================	  Unit -> hprop	No more subgoals.	";
             responses[i]=data;
           
 
@@ -768,7 +768,7 @@
           
 
             i = 150;
-            data = "1 subgoal (ID 88)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  ============================	  ~ hprop -> hprop <~> Empty	";
+            data = "1 subgoal (ID 98)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  ============================	  ~ hprop -> hprop <~> Empty	";
             responses[i]=data;
           
 
@@ -778,7 +778,7 @@
           
 
             i = 152;
-            data = "1 subgoal (ID 89)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  np : ~ hprop	  ============================	  hprop <~> Empty	";
+            data = "1 subgoal (ID 99)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  np : ~ hprop	  ============================	  hprop <~> Empty	";
             responses[i]=data;
           
 
@@ -833,7 +833,7 @@
           
 
             i = 163;
-            data = "1 subgoal (ID 92)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  H : Decidable hprop	  ============================	  (hprop <~> Unit) + (hprop <~> Empty)	";
+            data = "1 subgoal (ID 102)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  H : Decidable hprop	  ============================	  (hprop <~> Unit) + (hprop <~> Empty)	";
             responses[i]=data;
           
 
@@ -843,17 +843,17 @@
           
 
             i = 165;
-            data = "2 subgoals (ID 100)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  H : Decidable hprop	  x : hprop	  ============================	  (hprop <~> Unit) + (hprop <~> Empty)		subgoal 2 (ID 101) is:	 (hprop <~> Unit) + (hprop <~> Empty)	";
+            data = "2 subgoals (ID 110)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  H : Decidable hprop	  x : hprop	  ============================	  (hprop <~> Unit) + (hprop <~> Empty)		subgoal 2 (ID 111) is:	 (hprop <~> Unit) + (hprop <~> Empty)	";
             responses[i]=data;
           
 
             i = 166;
-            data = "1 subgoal (ID 100)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  H : Decidable hprop	  x : hprop	  ============================	  (hprop <~> Unit) + (hprop <~> Empty)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 101) is:	 (hprop <~> Unit) + (hprop <~> Empty)	";
+            data = "1 subgoal (ID 110)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  H : Decidable hprop	  x : hprop	  ============================	  (hprop <~> Unit) + (hprop <~> Empty)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 111) is:	 (hprop <~> Unit) + (hprop <~> Empty)	";
             responses[i]=data;
           
 
             i = 167;
-            data = "1 subgoal (ID 101)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  H : Decidable hprop	  nx : ~ hprop	  ============================	  (hprop <~> Unit) + (hprop <~> Empty)	No more subgoals.	";
+            data = "1 subgoal (ID 111)	  	  hprop : Type	  IsHProp0 : IsHProp hprop	  H : Decidable hprop	  nx : ~ hprop	  ============================	  (hprop <~> Unit) + (hprop <~> Empty)	No more subgoals.	";
             responses[i]=data;
           
 
@@ -1218,7 +1218,7 @@ Being an hprop is also equivalent to the diagonal being an equivalence.
 <br>
 <span class="id" title="keyword">Definition</span> <a id="isembedding_sect_ap" class="idref" href="#isembedding_sect_ap"><span class="id" title="definition">isembedding_sect_ap</span></a> {<a id="X:15" class="idref" href="#X:15"><span class="id" title="binder">X</span></a> <a id="Y:16" class="idref" href="#Y:16"><span class="id" title="binder">Y</span></a>} (<a id="f:17" class="idref" href="#f:17"><span class="id" title="binder">f</span></a> : <a class="idref" href="HoTT.HProp.html#X:15"><span class="id" title="variable">X</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.HProp.html#Y:16"><span class="id" title="variable">Y</span></a>)<br>
            (<a id="s:20" class="idref" href="#s:20"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x1:18" class="idref" href="#x1:18"><span class="id" title="binder">x1</span></a> <a id="x2:19" class="idref" href="#x2:19"><span class="id" title="binder">x2</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.HProp.html#f:17"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.HProp.html#x1:18"><span class="id" title="variable">x1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.HProp.html#f:17"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.HProp.html#x2:19"><span class="id" title="variable">x2</span></a><a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.HProp.html#x1:18"><span class="id" title="variable">x1</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.HProp.html#x2:19"><span class="id" title="variable">x2</span></a><a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a>)<br>
-           (<a id="H:23" class="idref" href="#H:23"><span class="id" title="binder">H</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x1:21" class="idref" href="#x1:21"><span class="id" title="binder">x1</span></a> <a id="x2:22" class="idref" href="#x2:22"><span class="id" title="binder">x2</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> (<a class="idref" href="HoTT.HProp.html#s:20"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.HProp.html#x1:21"><span class="id" title="variable">x1</span></a> <a class="idref" href="HoTT.HProp.html#x2:22"><span class="id" title="variable">x2</span></a>) (@<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.HProp.html#X:15"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.HProp.html#Y:16"><span class="id" title="variable">Y</span></a> <a class="idref" href="HoTT.HProp.html#f:17"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.HProp.html#x1:21"><span class="id" title="variable">x1</span></a> <a class="idref" href="HoTT.HProp.html#x2:22"><span class="id" title="variable">x2</span></a>))<br>
+           (<a id="H:23" class="idref" href="#H:23"><span class="id" title="binder">H</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x1:21" class="idref" href="#x1:21"><span class="id" title="binder">x1</span></a> <a id="x2:22" class="idref" href="#x2:22"><span class="id" title="binder">x2</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">(</span></a>@<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <a class="idref" href="HoTT.HProp.html#X:15"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.HProp.html#Y:16"><span class="id" title="variable">Y</span></a> <a class="idref" href="HoTT.HProp.html#f:17"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.HProp.html#x1:21"><span class="id" title="variable">x1</span></a> <a class="idref" href="HoTT.HProp.html#x2:22"><span class="id" title="variable">x2</span></a><a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.HProp.html#s:20"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.HProp.html#x1:21"><span class="id" title="variable">x1</span></a> <a class="idref" href="HoTT.HProp.html#x2:22"><span class="id" title="variable">x2</span></a><a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>)<br>
   : <a class="idref" href="HoTT.Basics.Trunc.html#IsEmbedding"><span class="id" title="abbreviation">IsEmbedding</span></a> <a class="idref" href="HoTT.HProp.html#f:17"><span class="id" title="variable">f</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="

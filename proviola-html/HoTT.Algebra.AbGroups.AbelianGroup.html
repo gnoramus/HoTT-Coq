@@ -1233,7 +1233,7 @@
           
 
             i = 243;
-            data = "3 subgoals (ID 322)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  (ab_biprod A B $-> Y) -> (A $-> Y) * (B $-> Y)		subgoal 2 (ID 324) is:	 Sect ?g ab_biprod_rec_uncurried	subgoal 3 (ID 326) is:	 Sect ab_biprod_rec_uncurried ?g	";
+            data = "3 subgoals (ID 322)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  (ab_biprod A B $-> Y) -> (A $-> Y) * (B $-> Y)		subgoal 2 (ID 324) is:	 ab_biprod_rec_uncurried o ?g == idmap	subgoal 3 (ID 326) is:	 ?g o ab_biprod_rec_uncurried == idmap	";
             responses[i]=data;
           
 
@@ -1243,22 +1243,22 @@
           
 
             i = 245;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 324) is:	 Sect	   (fun phi : ab_biprod A B $-> Y =>	    (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) ab_biprod_rec_uncurried	subgoal 2 (ID 326) is:	 Sect ab_biprod_rec_uncurried	   (fun phi : ab_biprod A B $-> Y =>	    (phi $o ab_biprod_inl, phi $o ab_biprod_inr))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 324) is:	 ab_biprod_rec_uncurried	 o (fun phi : ab_biprod A B $-> Y =>	    (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) == idmap	subgoal 2 (ID 326) is:	 (fun phi : ab_biprod A B $-> Y =>	  (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) o ab_biprod_rec_uncurried ==	 idmap	";
             responses[i]=data;
           
 
             i = 246;
-            data = "1 subgoal (ID 324)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  Sect	    (fun phi : ab_biprod A B $-> Y =>	     (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) ab_biprod_rec_uncurried	1 subgoal (ID 347)	  	  H : Funext	  A, B, Y : AbGroup	  phi : ab_biprod A B $-> Y	  ============================	  ab_biprod_rec_uncurried (phi $o ab_biprod_inl, phi $o ab_biprod_inr) = phi	";
+            data = "1 subgoal (ID 324)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  ab_biprod_rec_uncurried	  o (fun phi : ab_biprod A B $-> Y =>	     (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) == idmap	1 subgoal (ID 347)	  	  H : Funext	  A, B, Y : AbGroup	  phi : ab_biprod A B $-> Y	  ============================	  ab_biprod_rec_uncurried (phi $o ab_biprod_inl, phi $o ab_biprod_inr) = phi	";
             responses[i]=data;
           
 
             i = 247;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 326) is:	 Sect ab_biprod_rec_uncurried	   (fun phi : ab_biprod A B $-> Y =>	    (phi $o ab_biprod_inl, phi $o ab_biprod_inr))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 326) is:	 (fun phi : ab_biprod A B $-> Y =>	  (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) o ab_biprod_rec_uncurried ==	 idmap	";
             responses[i]=data;
           
 
             i = 248;
-            data = "1 subgoal (ID 326)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  Sect ab_biprod_rec_uncurried	    (fun phi : ab_biprod A B $-> Y =>	     (phi $o ab_biprod_inl, phi $o ab_biprod_inr))	1 subgoal (ID 357)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  (ab_biprod_rec_uncurried (a, b) $o ab_biprod_inl,	  ab_biprod_rec_uncurried (a, b) $o ab_biprod_inr) = 	  (a, b)	";
+            data = "1 subgoal (ID 326)	  	  H : Funext	  A, B, Y : AbGroup	  ============================	  (fun phi : ab_biprod A B $-> Y =>	   (phi $o ab_biprod_inl, phi $o ab_biprod_inr)) o ab_biprod_rec_uncurried ==	  idmap	1 subgoal (ID 357)	  	  H : Funext	  A, B, Y : AbGroup	  a : A $-> Y	  b : B $-> Y	  ============================	  (ab_biprod_rec_uncurried (a, b) $o ab_biprod_inl,	  ab_biprod_rec_uncurried (a, b) $o ab_biprod_inr) = 	  (a, b)	";
             responses[i]=data;
           
 
@@ -1278,7 +1278,7 @@
           
 
             i = 252;
-            data = "No more subgoals.	";
+            data = "";
             responses[i]=data;
           
 
@@ -1303,7 +1303,7 @@
           
 
             i = 257;
-            data = "<infomsg>ab_biprod_corec is defined</infomsg>	";
+            data = "No more subgoals.	<infomsg>ab_biprod_corec is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1358,12 +1358,12 @@
           
 
             i = 268;
-            data = "1 subgoal (ID 327)	  	  A : AbGroup	  ============================	  IsEquiv (Build_GroupHomomorphism (fun a : A => - a))	3 subgoals (ID 373)	  	  A : AbGroup	  ============================	  A -> A		subgoal 2 (ID 375) is:	 Sect ?g (Build_GroupHomomorphism (fun a : A => - a))	subgoal 3 (ID 377) is:	 Sect (Build_GroupHomomorphism (fun a : A => - a)) ?g	";
+            data = "1 subgoal (ID 327)	  	  A : AbGroup	  ============================	  IsEquiv (Build_GroupHomomorphism (fun a : A => - a))	3 subgoals (ID 373)	  	  A : AbGroup	  ============================	  A -> A		subgoal 2 (ID 375) is:	 Build_GroupHomomorphism (fun a : A => - a) o ?g == idmap	subgoal 3 (ID 377) is:	 ?g o Build_GroupHomomorphism (fun a : A => - a) == idmap	";
             responses[i]=data;
           
 
             i = 269;
-            data = "2 subgoals (ID 375)	  	  A : AbGroup	  ============================	  Sect (fun a : A => - a) (Build_GroupHomomorphism (fun a : A => - a))		subgoal 2 (ID 377) is:	 Sect (Build_GroupHomomorphism (fun a : A => - a)) (fun a : A => - a)	";
+            data = "2 subgoals (ID 375)	  	  A : AbGroup	  ============================	  Build_GroupHomomorphism (fun a : A => - a) o (fun a : A => - a) == idmap		subgoal 2 (ID 377) is:	 (fun a : A => - a) o Build_GroupHomomorphism (fun a : A => - a) == idmap	";
             responses[i]=data;
           
 

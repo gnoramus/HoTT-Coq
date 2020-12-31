@@ -133,7 +133,7 @@
           
 
             i = 23;
-            data = "1 subgoal (ID 18)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f -> IsEquiv f	";
+            data = "1 subgoal (ID 38)	  	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f -> IsEquiv f	";
             responses[i]=data;
           
 
@@ -143,7 +143,7 @@
           
 
             i = 25;
-            data = "1 subgoal (ID 31)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  s : Sect f g	  h : B -> A	  r : Sect h f	  ============================	  IsEquiv f	";
+            data = "1 subgoal (ID 51)	  	  A : Type	  B : Type	  f : A -> B	  g : B -> A	  s : (fun x : A => g (f x)) == idmap	  h : B -> A	  r : (fun x : B => f (h x)) == idmap	  ============================	  IsEquiv f	";
             responses[i]=data;
           
 
@@ -158,7 +158,7 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 27)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  IsHProp (BiInv f)	";
+            data = "1 subgoal (ID 47)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  IsHProp (BiInv f)	";
             responses[i]=data;
           
 
@@ -168,27 +168,27 @@
           
 
             i = 30;
-            data = "1 subgoal (ID 28)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f -> Contr (BiInv f)	";
+            data = "1 subgoal (ID 48)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f -> Contr (BiInv f)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 32)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  bif : BiInv f	  fe := isequiv_biinv f bif : IsEquiv f	  ============================	  Contr (BiInv f)	";
+            data = "1 subgoal (ID 52)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  bif : BiInv f	  fe := isequiv_biinv f bif : IsEquiv f	  ============================	  Contr (BiInv f)	";
             responses[i]=data;
           
 
             i = 32;
-            data = "2 subgoals (ID 33)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  bif : BiInv f	  fe := isequiv_biinv f bif : IsEquiv f	  ============================	  Contr {g : B -> A & Sect f g}		subgoal 2 (ID 34) is:	 Contr {h : B -> A & Sect h f}	";
+            data = "2 subgoals (ID 53)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  bif : BiInv f	  fe := isequiv_biinv f bif : IsEquiv f	  ============================	  Contr {g : B -> A & (fun x : A => g (f x)) == idmap}		subgoal 2 (ID 54) is:	 Contr {h : B -> A & (fun x : B => f (h x)) == idmap}	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 33)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  bif : BiInv f	  fe := isequiv_biinv f bif : IsEquiv f	  ============================	  Contr {g : B -> A & Sect f g}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 34) is:	 Contr {h : B -> A & Sect h f}	";
+            data = "1 subgoal (ID 53)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  bif : BiInv f	  fe := isequiv_biinv f bif : IsEquiv f	  ============================	  Contr {g : B -> A & (fun x : A => g (f x)) == idmap}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 54) is:	 Contr {h : B -> A & (fun x : B => f (h x)) == idmap}	";
             responses[i]=data;
           
 
             i = 34;
-            data = "1 subgoal (ID 34)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  bif : BiInv f	  fe := isequiv_biinv f bif : IsEquiv f	  ============================	  Contr {h : B -> A & Sect h f}	No more subgoals.	";
+            data = "1 subgoal (ID 54)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  bif : BiInv f	  fe := isequiv_biinv f bif : IsEquiv f	  ============================	  Contr {h : B -> A & (fun x : B => f (h x)) == idmap}	No more subgoals.	";
             responses[i]=data;
           
 
@@ -198,7 +198,7 @@
           
 
             i = 36;
-            data = "1 subgoal (ID 38)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f <~> IsEquiv f	";
+            data = "1 subgoal (ID 58)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f <~> IsEquiv f	";
             responses[i]=data;
           
 
@@ -208,32 +208,32 @@
           
 
             i = 38;
-            data = "2 subgoals (ID 49)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f -> IsEquiv f		subgoal 2 (ID 50) is:	 IsEquiv f -> BiInv f	";
+            data = "2 subgoals (ID 69)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f -> IsEquiv f		subgoal 2 (ID 70) is:	 IsEquiv f -> BiInv f	";
             responses[i]=data;
           
 
             i = 39;
-            data = "1 subgoal (ID 49)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f -> IsEquiv f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 50) is:	 IsEquiv f -> BiInv f	";
+            data = "1 subgoal (ID 69)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  BiInv f -> IsEquiv f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 70) is:	 IsEquiv f -> BiInv f	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 50)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  IsEquiv f -> BiInv f	1 subgoal (ID 53)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  ============================	  BiInv f	";
+            data = "1 subgoal (ID 70)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  ============================	  IsEquiv f -> BiInv f	1 subgoal (ID 73)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  ============================	  BiInv f	";
             responses[i]=data;
           
 
             i = 41;
-            data = "2 subgoals (ID 55)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  ============================	  {g : B -> A & Sect f g}		subgoal 2 (ID 56) is:	 {h : B -> A & Sect h f}	";
+            data = "2 subgoals (ID 75)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  ============================	  {g : B -> A & (fun x : A => g (f x)) == idmap}		subgoal 2 (ID 76) is:	 {h : B -> A & (fun x : B => f (h x)) == idmap}	";
             responses[i]=data;
           
 
             i = 42;
-            data = "1 subgoal (ID 55)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  ============================	  {g : B -> A & Sect f g}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 56) is:	 {h : B -> A & Sect h f}	";
+            data = "1 subgoal (ID 75)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  ============================	  {g : B -> A & (fun x : A => g (f x)) == idmap}	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 76) is:	 {h : B -> A & (fun x : B => f (h x)) == idmap}	";
             responses[i]=data;
           
 
             i = 43;
-            data = "1 subgoal (ID 56)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  ============================	  {h : B -> A & Sect h f}	No more subgoals.	";
+            data = "1 subgoal (ID 76)	  	  H : Funext	  A : Type	  B : Type	  f : A -> B	  X : IsEquiv f	  ============================	  {h : B -> A & (fun x : B => f (h x)) == idmap}	No more subgoals.	";
             responses[i]=data;
           
 
@@ -358,7 +358,7 @@
       ">
 <br>
 <span class="id" title="keyword">Definition</span> <a id="BiInv" class="idref" href="#BiInv"><span class="id" title="definition">BiInv</span></a> `(<a id="f:3" class="idref" href="#f:3"><span class="id" title="binder">f</span></a> : <a id="A:1" class="idref" href="#A:1"><span class="id" title="binder">A</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a id="B:2" class="idref" href="#B:2"><span class="id" title="binder">B</span></a>) : <span class="id" title="keyword">Type</span><br>
-  := <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a><a id="g:4" class="idref" href="#g:4"><span class="id" title="binder">g</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#B:2"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#A:1"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#f:3"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#g:4"><span class="id" title="variable">g</span></a><a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a><a id="h:5" class="idref" href="#h:5"><span class="id" title="binder">h</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#B:2"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#A:1"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Sect"><span class="id" title="definition">Sect</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#h:5"><span class="id" title="variable">h</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#f:3"><span class="id" title="variable">f</span></a><a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a>.</span><span class="command" onmouseout="
+  := <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a><a id="g:4" class="idref" href="#g:4"><span class="id" title="binder">g</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#B:2"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#A:1"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#g:4"><span class="id" title="variable">g</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#f:3"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a><a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a><a id="h:5" class="idref" href="#h:5"><span class="id" title="binder">h</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#B:2"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#A:1"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#f:3"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Basics.Overture.html#::function_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Equiv.BiInv.html#h:5"><span class="id" title="variable">h</span></a> <a class="idref" href="HoTT.Basics.Overture.html#2596316c6f2ff161cb03e25fd8914390"><span class="id" title="notation">==</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a><a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(19, '0_3_7');
