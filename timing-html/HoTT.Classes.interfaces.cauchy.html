@@ -30,8 +30,8 @@ pre {
 
 <div class="code" title="File: cauchy.v
 Line: 1
-Time: 0.167s">
-<div class="time" style="width: 63.498098859316%"></div>
+Time: 0.164s">
+<div class="time" style="width: 62.357414448669%"></div>
 <pre>From HoTT.Classes Require Import
      interfaces.abstract_algebra
      interfaces.rationals
@@ -62,8 +62,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.38022813688213%"></div>
 <pre>
   Context `{Rationals Q}.</pre>
 </div>
@@ -97,8 +97,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 20
-Time: 0.019s">
-<div class="time" style="width: 7.2243346007605%"></div>
+Time: 0.018s">
+<div class="time" style="width: 6.8441064638783%"></div>
 <pre>
   Let qinc : Cast Q F := rationals_to_field Q F.</pre>
 </div>
@@ -148,8 +148,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 29
-Time: 0.009s">
-<div class="time" style="width: 3.4220532319392%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.6615969581749%"></div>
 <pre>
 
     Class CauchyModulus (M : Qpos Q -&gt; nat) :=
@@ -159,8 +159,8 @@ Time: 0.009s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 34
-Time: 0.008s">
-<div class="time" style="width: 3.041825095057%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.6615969581749%"></div>
 <pre>
 
     Class IsLimit (l : F) := is_limit
@@ -170,8 +170,8 @@ Time: 0.008s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 39
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.38022813688213%"></div>
 <pre>
   End sequence.</pre>
 </div>
@@ -194,15 +194,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 45
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.38022813688213%"></div>
 <pre>
     Context (x : nat -&gt; F) {M} `{CauchyModulus x M}.</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 46
-Time: 0.03s">
-<div class="time" style="width: 11.406844106464%"></div>
+Time: 0.031s">
+<div class="time" style="width: 11.787072243346%"></div>
 <pre>
 
     Lemma modulus_close_limit
@@ -237,8 +237,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 58
-Time: 0.019s">
-<div class="time" style="width: 7.2243346007605%"></div>
+Time: 0.018s">
+<div class="time" style="width: 6.8441064638783%"></div>
 <pre>
       set (n := Peano.max (M (epsilon / 2)) N).</pre>
 </div>
@@ -265,15 +265,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 62
-Time: 0.003s">
-<div class="time" style="width: 1.1406844106464%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2.2813688212928%"></div>
 <pre>
       assert (leMn := le_nat_max_l (M (epsilon / 2)) N : M (epsilon / 2) ≤ n).</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 63
-Time: 0.025s">
-<div class="time" style="width: 9.5057034220532%"></div>
+Time: 0.027s">
+<div class="time" style="width: 10.266159695817%"></div>
 <pre>
       assert (leMM : M (epsilon / 2) ≤ M (epsilon / 2) ) by apply (Peano.le_n).</pre>
 </div>
@@ -293,8 +293,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 66
-Time: 0.008s">
-<div class="time" style="width: 3.041825095057%"></div>
+Time: 0.007s">
+<div class="time" style="width: 2.6615969581749%"></div>
 <pre>
       rewrite (@preserves_mult Q F _ _ _ _ _ _ _ _ _ _ _ _) in isclose, x_close.</pre>
 </div>
@@ -342,15 +342,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 73
-Time: 0.095s">
-<div class="time" style="width: 36.121673003802%"></div>
+Time: 0.085s">
+<div class="time" style="width: 32.319391634981%"></div>
 <pre>
       set (ap20 := positive_apart_zero 2 lt_0_2 : 2 ≶ 0).</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 74
-Time: 0.005s">
-<div class="time" style="width: 1.9011406844106%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.5209125475285%"></div>
 <pre>
       assert (ap20' : ' 2 ≶ 0).</pre>
 </div>
@@ -377,8 +377,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 78
-Time: 0.017s">
-<div class="time" style="width: 6.4638783269962%"></div>
+Time: 0.016s">
+<div class="time" style="width: 6.0836501901141%"></div>
 <pre>
       rewrite (dec_recip_to_recip 2 ap20') in isclose, x_close.</pre>
 </div>
@@ -447,8 +447,8 @@ Time: 0.015s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 88
-Time: 0.032s">
-<div class="time" style="width: 12.167300380228%"></div>
+Time: 0.026s">
+<div class="time" style="width: 9.8859315589354%"></div>
 <pre>
       set (eps_recip_2 := (' (' epsilon) * recip' 2 ap20)).</pre>
 </div>
@@ -461,8 +461,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 90
-Time: 0.001s">
-<div class="time" style="width: 0.38022813688213%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.76045627376426%"></div>
 <pre>
       change (' (' epsilon) * recip' 2 ap20) with eps_recip_2.</pre>
 </div>
@@ -489,8 +489,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 94
-Time: 0.016s">
-<div class="time" style="width: 6.0836501901141%"></div>
+Time: 0.024s">
+<div class="time" style="width: 9.1254752851711%"></div>
 <pre>
       rewrite negate_plus_distr.</pre>
 </div>
@@ -565,29 +565,29 @@ Time: 0.027s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 104
-Time: 0.043s">
-<div class="time" style="width: 16.349809885932%"></div>
+Time: 0.039s">
+<div class="time" style="width: 14.828897338403%"></div>
 <pre>
         rewrite plus_comm in x_close.</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 105
-Time: 0.029s">
-<div class="time" style="width: 11.026615969582%"></div>
+Time: 0.028s">
+<div class="time" style="width: 10.6463878327%"></div>
 <pre>
         apply flip_lt_minus_l in x_close.</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 106
-Time: 0.019s">
-<div class="time" style="width: 7.2243346007605%"></div>
+Time: 0.018s">
+<div class="time" style="width: 6.8441064638783%"></div>
 <pre>
         rewrite &lt;-(plus_assoc xMeps2 _ (- x n)).</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 107
-Time: 0.019s">
-<div class="time" style="width: 7.2243346007605%"></div>
+Time: 0.018s">
+<div class="time" style="width: 6.8441064638783%"></div>
 <pre>
         rewrite (plus_comm _ (- x n)).</pre>
 </div>
@@ -600,8 +600,8 @@ Time: 0.019s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 109
-Time: 0.036s">
-<div class="time" style="width: 13.688212927757%"></div>
+Time: 0.032s">
+<div class="time" style="width: 12.167300380228%"></div>
 <pre>
         apply (strictly_order_reflecting (+ eps_recip_2)).</pre>
 </div>
@@ -614,43 +614,43 @@ Time: 0.037s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 111
-Time: 0.053s">
-<div class="time" style="width: 20.152091254753%"></div>
+Time: 0.06s">
+<div class="time" style="width: 22.813688212928%"></div>
 <pre>
         rewrite plus_negate_l, plus_0_l.</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 112
-Time: 0.02s">
-<div class="time" style="width: 7.6045627376426%"></div>
-<pre>
-        rewrite &lt;- (plus_assoc (xMeps2 - x n) _ _).</pre>
-</div>
-<div class="code" title="File: cauchy.v
-Line: 113
-Time: 0.02s">
-<div class="time" style="width: 7.6045627376426%"></div>
-<pre>
-        rewrite &lt;- (plus_assoc (-eps_recip_2) _ _).</pre>
-</div>
-<div class="code" title="File: cauchy.v
-Line: 114
-Time: 0.054s">
-<div class="time" style="width: 20.532319391635%"></div>
-<pre>
-        rewrite plus_negate_l, plus_0_r.</pre>
-</div>
-<div class="code" title="File: cauchy.v
-Line: 115
 Time: 0.019s">
 <div class="time" style="width: 7.2243346007605%"></div>
 <pre>
         rewrite &lt;- (plus_assoc (xMeps2 - x n) _ _).</pre>
 </div>
 <div class="code" title="File: cauchy.v
-Line: 116
+Line: 113
+Time: 0.018s">
+<div class="time" style="width: 6.8441064638783%"></div>
+<pre>
+        rewrite &lt;- (plus_assoc (-eps_recip_2) _ _).</pre>
+</div>
+<div class="code" title="File: cauchy.v
+Line: 114
 Time: 0.055s">
 <div class="time" style="width: 20.912547528517%"></div>
+<pre>
+        rewrite plus_negate_l, plus_0_r.</pre>
+</div>
+<div class="code" title="File: cauchy.v
+Line: 115
+Time: 0.018s">
+<div class="time" style="width: 6.8441064638783%"></div>
+<pre>
+        rewrite &lt;- (plus_assoc (xMeps2 - x n) _ _).</pre>
+</div>
+<div class="code" title="File: cauchy.v
+Line: 116
+Time: 0.054s">
+<div class="time" style="width: 20.532319391635%"></div>
 <pre>
         rewrite plus_negate_l, plus_0_r.</pre>
 </div>
@@ -670,14 +670,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 119
-Time: 0.042s">
-<div class="time" style="width: 15.969581749049%"></div>
+Time: 0.034s">
+<div class="time" style="width: 12.927756653992%"></div>
 <pre> apply (strictly_order_reflecting (+ (- x n))).</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 119
-Time: 0.017s">
-<div class="time" style="width: 6.4638783269962%"></div>
+Time: 0.016s">
+<div class="time" style="width: 6.0836501901141%"></div>
 <pre>
         refine (transitivity (snd isclose) _).</pre>
 </div>
@@ -711,36 +711,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 124
-Time: 0.029s">
-<div class="time" style="width: 11.026615969582%"></div>
+Time: 0.028s">
+<div class="time" style="width: 10.6463878327%"></div>
 <pre>
         apply flip_lt_minus_l in x_close.</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 125
-Time: 0.036s">
-<div class="time" style="width: 13.688212927757%"></div>
+Time: 0.035s">
+<div class="time" style="width: 13.307984790875%"></div>
 <pre>
         rewrite plus_comm in x_close.</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 126
-Time: 0.038s">
-<div class="time" style="width: 14.448669201521%"></div>
+Time: 0.036s">
+<div class="time" style="width: 13.688212927757%"></div>
 <pre>
         apply (strictly_order_reflecting (+ x n)).</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 127
-Time: 0.02s">
-<div class="time" style="width: 7.6045627376426%"></div>
+Time: 0.019s">
+<div class="time" style="width: 7.2243346007605%"></div>
 <pre>
         rewrite &lt;- (plus_assoc _ (-x n) (x n)).</pre>
 </div>
 <div class="code" title="File: cauchy.v
 Line: 128
-Time: 0.058s">
-<div class="time" style="width: 22.053231939163%"></div>
+Time: 0.051s">
+<div class="time" style="width: 19.391634980989%"></div>
 <pre>
         rewrite plus_negate_l, plus_0_r.</pre>
 </div>
@@ -760,8 +760,8 @@ Time: 0.018s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 131
-Time: 0.035s">
-<div class="time" style="width: 13.307984790875%"></div>
+Time: 0.032s">
+<div class="time" style="width: 12.167300380228%"></div>
 <pre>
         apply (strictly_order_preserving (+ eps_recip_2)).</pre>
 </div>
@@ -774,8 +774,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 133
-Time: 0.03s">
-<div class="time" style="width: 11.406844106464%"></div>
+Time: 0.031s">
+<div class="time" style="width: 11.787072243346%"></div>
 <pre>
     Qed.</pre>
 </div>
@@ -789,8 +789,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: cauchy.v
 Line: 136
-Time: 0.005s">
-<div class="time" style="width: 1.9011406844106%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.5209125475285%"></div>
 <pre>
 
 End cauchy.</pre>

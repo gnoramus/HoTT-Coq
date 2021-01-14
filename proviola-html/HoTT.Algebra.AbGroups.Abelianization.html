@@ -1348,12 +1348,12 @@
           
 
             i = 266;
-            data = "1 subgoal (ID 1033)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * (b * (c * d))) = ab (a * (b * (d * c)))	";
+            data = "";
             responses[i]=data;
           
 
             i = 267;
-            data = "1 subgoal (ID 1203)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * b * (c * d)) = ab (a * (b * (d * c)))	";
+            data = "1 subgoal (ID 1033)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * (b * (c * d))) = ab (a * (b * (d * c)))	1 subgoal (ID 1203)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * b * (c * d)) = ab (a * (b * (d * c)))	";
             responses[i]=data;
           
 
@@ -2123,12 +2123,12 @@
           
 
             i = 421;
-            data = "1 subgoal (ID 62)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G -> A	";
+            data = "1 subgoal (ID 62)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G -> A	1 subgoal (ID 257)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  forall x y z : G, h (x * (y * z)) = h (x * (z * y))	";
             responses[i]=data;
           
 
             i = 422;
-            data = "1 subgoal (ID 257)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  forall x y z : G, h (x * (y * z)) = h (x * (z * y))	1 subgoal (ID 441)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h (x * (y * z)) = h (x * (z * y))	";
+            data = "1 subgoal (ID 441)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h (x * (y * z)) = h (x * (z * y))	";
             responses[i]=data;
           
 
@@ -2153,12 +2153,12 @@
           
 
             i = 427;
-            data = "";
+            data = "1 subgoal (ID 882)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  ============================	  forall y : abel G,	  (fun x0 : Abel G =>	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) 	     (y * x0) =	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) y *	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) x0) 	    (ab x)	";
             responses[i]=data;
           
 
             i = 428;
-            data = "1 subgoal (ID 882)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  ============================	  forall y : abel G,	  (fun x0 : Abel G =>	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) 	     (y * x0) =	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) y *	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) x0) 	    (ab x)	1 subgoal (ID 1115)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  y : G	  ============================	  (fun x0 : Abel G =>	   (fun x1 : Abel G =>	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) 	      (x0 * x1) =	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x0 *	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x1) 	     (ab x)) (ab y)	";
+            data = "1 subgoal (ID 1115)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  y : G	  ============================	  (fun x0 : Abel G =>	   (fun x1 : Abel G =>	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) 	      (x0 * x1) =	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x0 *	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x1) 	     (ab x)) (ab y)	";
             responses[i]=data;
           
 
