@@ -36,21 +36,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Aut.v
 Line: 1
-Time: 0.018s">
-<div class="time" style="width: 23.376623376623%"></div>
+Time: 0.017s">
+<div class="time" style="width: 24.285714285714%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 1
-Time: 0.019s">
-<div class="time" style="width: 24.675324675325%"></div>
+Time: 0.016s">
+<div class="time" style="width: 22.857142857143%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 2
-Time: 0.065s">
-<div class="time" style="width: 84.415584415584%"></div>
+Time: 0.055s">
+<div class="time" style="width: 78.571428571429%"></div>
 <pre>
 Require Import Truncations.</pre>
 </div>
@@ -63,7 +63,7 @@ Require Import Factorization.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 4
-Time: 0.077s">
+Time: 0.07s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Algebra.ooGroup.</pre>
@@ -118,8 +118,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Aut.v
 Line: 17
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>Definition equiv_baut_image_unit X
 : BAut X &lt;~&gt; image (Tr (-1)) (unit_name X).</pre>
 </div>
@@ -153,8 +153,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Aut.v
 Line: 22
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
   refine ((equiv_contr_sigma _)^-1 oE _).</pre>
 </div>
@@ -168,7 +168,7 @@ Time: 0s">
 <div class="code" title="File: Aut.v
 Line: 24
 Time: 0.002s">
-<div class="time" style="width: 2.5974025974026%"></div>
+<div class="time" style="width: 2.8571428571429%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -195,23 +195,23 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 28
-Time: 0.023s">
-<div class="time" style="width: 29.87012987013%"></div>
+Time: 0.02s">
+<div class="time" style="width: 28.571428571429%"></div>
 <pre>
   refine (Build_ooGroup
             (Build_pType { Z : Type &amp; merely (Z = X) } (X ; tr 1)) _).</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 30
-Time: 0.051s">
-<div class="time" style="width: 66.233766233766%"></div>
+Time: 0.042s">
+<div class="time" style="width: 60%"></div>
 <pre>
   refine (conn_pointed_type (point _)); try exact _.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 31
-Time: 0.039s">
-<div class="time" style="width: 50.649350649351%"></div>
+Time: 0.033s">
+<div class="time" style="width: 47.142857142857%"></div>
 <pre>
   pose (c := conn_map_compose (Tr (-1))
                               (factor1 (image (Tr (-1)) (unit_name X)))
@@ -219,22 +219,22 @@ Time: 0.039s">
 </div>
 <div class="code" title="File: Aut.v
 Line: 34
-Time: 0.02s">
-<div class="time" style="width: 25.974025974026%"></div>
+Time: 0.018s">
+<div class="time" style="width: 25.714285714286%"></div>
 <pre>
   refine (conn_map_homotopic _ _ _ _ c); intros []; reflexivity.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 35
-Time: 0.01s">
-<div class="time" style="width: 12.987012987013%"></div>
+Time: 0.009s">
+<div class="time" style="width: 12.857142857143%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Aut.v
 Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.4285714285714%"></div>
 <pre>
 
 Definition BAut X : Type := classifying_space (Aut X).</pre>

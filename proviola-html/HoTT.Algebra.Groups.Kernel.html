@@ -293,12 +293,12 @@
           
 
             i = 55;
-            data = "";
+            data = "1 subgoal (ID 1334)	  	  A : Group	  B : Group	  f : GroupHomomorphism A B	  a : A	  p : f a = group_unit	  b : A	  q : f b = group_unit	  c : A	  r : f c = group_unit	  ============================	  ((a; p) * ((b; q) * (c; r))).1 = ((a; p) * (b; q) * (c; r)).1	";
             responses[i]=data;
           
 
             i = 56;
-            data = "1 subgoal (ID 1334)	  	  A : Group	  B : Group	  f : GroupHomomorphism A B	  a : A	  p : f a = group_unit	  b : A	  q : f b = group_unit	  c : A	  r : f c = group_unit	  ============================	  ((a; p) * ((b; q) * (c; r))).1 = ((a; p) * (b; q) * (c; r)).1	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	5 subgoals		subgoal 1 (ID 224) is:	 LeftIdentity sg_op mon_unit	subgoal 2 (ID 225) is:	 RightIdentity sg_op mon_unit	subgoal 3 (ID 220) is:	 LeftInverse sg_op negate mon_unit	subgoal 4 (ID 221) is:	 RightInverse sg_op negate mon_unit	subgoal 5 (ID 28) is:	 IsSubgroup	   {|	     group_type := hfiber f group_unit;	     group_sgop :=	       fun X : hfiber f group_unit =>	       (fun (a : A) (p : f a = group_unit) (X0 : hfiber f group_unit) =>	        (fun (b : A) (q : f b = group_unit) =>	         (a * b;	         internal_paths_rew_r B (f (a * b)) (f a * f b)	           (fun g : B => g = group_unit)	           (internal_paths_rew_r B (f a) group_unit	              (fun g : B => g * f b = group_unit)	              (internal_paths_rew_r B (f b) group_unit	                 (fun g : B => group_unit * g = group_unit)	                 (left_identity group_unit) q) p) 	           (grp_homo_op f a b))) X0.1 X0.2) X.1 X.2;	     group_unit := (mon_unit; grp_homo_unit f);	     group_inverse :=	       fun X : hfiber f group_unit =>	       (fun (a : A) (p : f a = group_unit) =>	        (- a;	        internal_paths_rew_r B (f (- a)) (- f a)	          (fun g : B => g = group_unit)	          (internal_paths_rew_r B (f a) group_unit	             (fun g : B => - g = group_unit) negate_mon_unit p)	          (grp_homo_inv f a))) X.1 X.2;	     group_isgroup :=	       {|	         group_monoid :=	           {|	             monoid_semigroup :=	               {|	                 sg_set := trunc_sigma;	                 sg_ass :=	                   fun x : hfiber f group_unit =>	                   (fun (a : A) (p : f a = group_unit)	                      (y : hfiber f group_unit) =>	                    (fun (b : A) (q : f b = group_unit)	                       (z : hfiber f group_unit) =>	                     (fun (c : A) (r : f c = group_unit) =>	                      path_sigma_hprop ((a; p) * ((b; q) * (c; r)))	                        ((a; p) * (b; q) * (c; r)) 	                        (associativity a b c)) z.1 z.2) y.1 y.2) x.1 x.2	               |};	             monoid_left_id := ?Goal1;	             monoid_right_id := ?Goal2	           |};	         negate_l := ?Goal;	         negate_r := ?Goal0	       |}	   |} A	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	5 subgoals		subgoal 1 (ID 224) is:	 LeftIdentity sg_op mon_unit	subgoal 2 (ID 225) is:	 RightIdentity sg_op mon_unit	subgoal 3 (ID 220) is:	 LeftInverse sg_op negate mon_unit	subgoal 4 (ID 221) is:	 RightInverse sg_op negate mon_unit	subgoal 5 (ID 28) is:	 IsSubgroup	   {|	     group_type := hfiber f group_unit;	     group_sgop :=	       fun X : hfiber f group_unit =>	       (fun (a : A) (p : f a = group_unit) (X0 : hfiber f group_unit) =>	        (fun (b : A) (q : f b = group_unit) =>	         (a * b;	         internal_paths_rew_r B (f (a * b)) (f a * f b)	           (fun g : B => g = group_unit)	           (internal_paths_rew_r B (f a) group_unit	              (fun g : B => g * f b = group_unit)	              (internal_paths_rew_r B (f b) group_unit	                 (fun g : B => group_unit * g = group_unit)	                 (left_identity group_unit) q) p) 	           (grp_homo_op f a b))) X0.1 X0.2) X.1 X.2;	     group_unit := (mon_unit; grp_homo_unit f);	     group_inverse :=	       fun X : hfiber f group_unit =>	       (fun (a : A) (p : f a = group_unit) =>	        (- a;	        internal_paths_rew_r B (f (- a)) (- f a)	          (fun g : B => g = group_unit)	          (internal_paths_rew_r B (f a) group_unit	             (fun g : B => - g = group_unit) negate_mon_unit p)	          (grp_homo_inv f a))) X.1 X.2;	     group_isgroup :=	       {|	         group_monoid :=	           {|	             monoid_semigroup :=	               {|	                 sg_set := trunc_sigma;	                 sg_ass :=	                   fun x : hfiber f group_unit =>	                   (fun (a : A) (p : f a = group_unit)	                      (y : hfiber f group_unit) =>	                    (fun (b : A) (q : f b = group_unit)	                       (z : hfiber f group_unit) =>	                     (fun (c : A) (r : f c = group_unit) =>	                      path_sigma_hprop ((a; p) * ((b; q) * (c; r)))	                        ((a; p) * (b; q) * (c; r)) 	                        (associativity a b c)) z.1 z.2) y.1 y.2) x.1 x.2	               |};	             monoid_left_id := ?Goal1;	             monoid_right_id := ?Goal2	           |};	         negate_l := ?Goal;	         negate_r := ?Goal0	       |}	   |} A	";
             responses[i]=data;
           
 
@@ -493,12 +493,12 @@
           
 
             i = 95;
-            data = "";
+            data = "1 subgoal (ID 24)	  	  A : Group	  B : Group	  f : GroupHomomorphism A B	  ============================	  IsNormalSubgroup (grp_kernel f)	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 subgoal (ID 24)	  	  A : Group	  B : Group	  f : GroupHomomorphism A B	  ============================	  IsNormalSubgroup (grp_kernel f)	1 subgoal (ID 26)	  	  A : Group	  B : Group	  f : GroupHomomorphism A B	  ============================	  forall (g : A) (n : grp_kernel f),	  {m : grp_kernel f & - g * issubgroup_incl n * g = issubgroup_incl m}	";
+            data = "1 subgoal (ID 26)	  	  A : Group	  B : Group	  f : GroupHomomorphism A B	  ============================	  forall (g : A) (n : grp_kernel f),	  {m : grp_kernel f & - g * issubgroup_incl n * g = issubgroup_incl m}	";
             responses[i]=data;
           
 
@@ -948,7 +948,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab723"></a><h1 class="section">Kernels of group homomorphisms</h1>
+<a id="lab724"></a><h1 class="section">Kernels of group homomorphisms</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -1332,7 +1332,7 @@ The kernel is a subgroup of the source of the map
 </div>
 <div class="goal" id="goal0_3_47"><pre><span></span></pre></div>
 <div class="doc" scenenumber="49">
-<a id="lab724"></a><h2 class="section">Corecursion principle for group kernels</h2>
+<a id="lab725"></a><h2 class="section">Corecursion principle for group kernels</h2>
 </div>
 <div scenenumber="51" class="code">
 <span class="command" onmouseout="
@@ -1468,7 +1468,7 @@ The kernel is a subgroup of the source of the map
 </div>
 <div class="goal" id="goal0_3_51"><pre><span></span></pre></div>
 <div class="doc" scenenumber="53">
-<a id="lab725"></a><h2 class="section">Characterisation of group embeddings</h2>
+<a id="lab726"></a><h2 class="section">Characterisation of group embeddings</h2>
 </div>
 <div scenenumber="55" class="code">
 <span class="command" onmouseout="

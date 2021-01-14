@@ -36,21 +36,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 1
-Time: 0.033s">
-<div class="time" style="width: 13.253012048193%"></div>
+Time: 0.028s">
+<div class="time" style="width: 13.461538461538%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 1
-Time: 0.018s">
-<div class="time" style="width: 7.2289156626506%"></div>
+Time: 0.017s">
+<div class="time" style="width: 8.1730769230769%"></div>
 <pre>
 Require Import HFiber Extensions Pullback NullHomotopy Factorization PathAny.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 2
-Time: 0.046s">
-<div class="time" style="width: 18.473895582329%"></div>
+Time: 0.041s">
+<div class="time" style="width: 19.711538461538%"></div>
 <pre>
 Require Import Modality Accessible Localization Descent Separated.</pre>
 </div>
@@ -124,7 +124,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 22
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>Definition isconnected_paths
              {A : Type} `{IsConnected O A} (x y : A)
     : IsConnected O (x = y)
@@ -142,7 +142,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 28
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>Definition conn_map_lex
              {Y X : Type} `{IsConnected O Y, IsConnected O X} (f : Y -&gt; X)
     : IsConnMap O f
@@ -159,8 +159,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 34
-Time: 0.003s">
-<div class="time" style="width: 1.2048192771084%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>Global Instance isequiv_mapino_isconnected
          {Y X : Type} `{IsConnected O Y, IsConnected O X}
          (f : Y -&gt; X) `{MapIn O _ _ f}
@@ -178,8 +178,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 41
-Time: 0.004s">
-<div class="time" style="width: 1.6064257028112%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.4423076923077%"></div>
 <pre>Definition conn_map_functor_hfiber {A B C D : Type}
              {f : A -&gt; B} {g : C -&gt; D} {h : A -&gt; C} {k : B -&gt; D}
              `{IsConnMap O _ _ h, IsConnMap O _ _ k}
@@ -198,8 +198,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 49
-Time: 0.007s">
-<div class="time" style="width: 2.8112449799197%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2.8846153846154%"></div>
 <pre>Definition ispullback_connmap_mapino_commsq
              {A B C D : Type} {f : A -&gt; B} {g : C -&gt; D} {h : A -&gt; C} {k : B -&gt; D}
              (p : k o f == g o h)
@@ -218,8 +218,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 57
-Time: 0.004s">
-<div class="time" style="width: 1.6064257028112%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.4423076923077%"></div>
 <pre>Global Instance conn_map_functor_hfiber_to_O
          {Y X : Type} (f : Y -&gt; X) (x : X)
     : IsConnMap O (functor_hfiber (fun y =&gt; (to_O_natural O f y)^) x)
@@ -258,8 +258,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 67
-Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     refine (conn_map_homotopic
               O (functor_hfiber (fun x =&gt; (to_O_natural O f x)^) b)
@@ -267,8 +267,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 70
-Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     intros [a p].</pre>
 </div>
@@ -282,27 +282,27 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 72
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre> apply ap.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 72
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     apply whiskerR, inv_V.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 73
-Time: 0.006s">
-<div class="time" style="width: 2.4096385542169%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 74
 Time: 0.003s">
-<div class="time" style="width: 1.2048192771084%"></div>
+<div class="time" style="width: 1.4423076923077%"></div>
 <pre>
 
   Definition equiv_O_functor_hfiber
@@ -321,8 +321,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 82
-Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>Global Instance isequiv_path_O
          {X : Type@{i}} (x y : X)
     : IsEquiv (path_OO O O x y)
@@ -331,7 +331,7 @@ Time: 0.002s">
 <div class="code" title="File: Lex.v
 Line: 85
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
 
   Definition equiv_path_O {X : Type@{i}} (x y : X)
@@ -349,8 +349,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 92
-Time: 0.006s">
-<div class="time" style="width: 2.4096385542169%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
 <pre>Global Instance O_inverts_functor_pullback_to_O
          {A B C : Type} (f : B -&gt; A) (g : C -&gt; A)
     : O_inverts O (functor_pullback f g (O_functor O f) (O_functor O g)
@@ -361,7 +361,7 @@ Time: 0.006s">
 <div class="code" title="File: Lex.v
 Line: 97
 Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
 
   Definition equiv_O_pullback {A B C : Type} (f : B -&gt; A) (g : C -&gt; A)
@@ -370,8 +370,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 101
-Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
 
   Definition O_functor_pullback
@@ -395,7 +395,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 107
 Time: 0.003s">
-<div class="time" style="width: 1.2048192771084%"></div>
+<div class="time" style="width: 1.4423076923077%"></div>
 <pre>
     nrapply (isequiv_homotopic
                (O_rec (functor_pullback _ _ _ _ _ _ _
@@ -404,14 +404,14 @@ Time: 0.003s">
 <div class="code" title="File: Lex.v
 Line: 110
 Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
     1:apply isequiv_O_rec_O_inverts; exact _.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 111
-Time: 0.063s">
-<div class="time" style="width: 25.301204819277%"></div>
+Time: 0.054s">
+<div class="time" style="width: 25.961538461538%"></div>
 <pre>
     apply O_indpaths; intros [b [c e]].</pre>
 </div>
@@ -433,41 +433,41 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 115
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>unfold functor_pullback, functor_sigma, pullback_corec; simpl.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 115
-Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     refine (path_sigma' _ (to_O_natural O pullback_pr1 (b;(c;e)))^ _).</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 116
-Time: 0.087s">
-<div class="time" style="width: 34.939759036145%"></div>
+Time: 0.074s">
+<div class="time" style="width: 35.576923076923%"></div>
 <pre>
     rewrite transport_sigma'; simpl.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 117
-Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     refine (path_sigma' _ (to_O_natural O pullback_pr2 (b;(c;e)))^ _).</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 118
-Time: 0.006s">
-<div class="time" style="width: 2.4096385542169%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
 <pre>
     rewrite transport_paths_Fl.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 119
-Time: 0.006s">
-<div class="time" style="width: 2.4096385542169%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
 <pre>
     rewrite transport_paths_Fr.</pre>
 </div>
@@ -487,50 +487,50 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 122
-Time: 0.108s">
-<div class="time" style="width: 43.373493975904%"></div>
+Time: 0.085s">
+<div class="time" style="width: 40.865384615385%"></div>
 <pre>
     rewrite ap_V, inv_V, O_functor_homotopy_beta, !concat_p_pp.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 123
-Time: 0.004s">
-<div class="time" style="width: 1.6064257028112%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.4423076923077%"></div>
 <pre>
     unfold pullback_commsq; simpl.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 124
-Time: 0.105s">
-<div class="time" style="width: 42.168674698795%"></div>
+Time: 0.088s">
+<div class="time" style="width: 42.307692307692%"></div>
 <pre>
     rewrite to_O_natural_compose, !concat_pp_p.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 125
-Time: 0.006s">
-<div class="time" style="width: 2.4096385542169%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
 <pre>
     do 3 apply whiskerL.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 126
-Time: 0.01s">
-<div class="time" style="width: 4.0160642570281%"></div>
+Time: 0.008s">
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
     rewrite ap_V, &lt;- inv_pp.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 127
-Time: 0.013s">
-<div class="time" style="width: 5.2208835341365%"></div>
+Time: 0.011s">
+<div class="time" style="width: 5.2884615384615%"></div>
 <pre>
     rewrite &lt;- (inv_V (O_functor_compose _ _ _ _)), &lt;- inv_pp.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 128
-Time: 0.003s">
-<div class="time" style="width: 1.2048192771084%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
     apply inverse2, to_O_natural_compose.</pre>
 </div>
@@ -570,7 +570,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 139
-Time: 0.249s">
+Time: 0.208s">
 <div class="time" style="width: 100%"></div>
 <pre>
   Qed.</pre>
@@ -587,7 +587,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 143
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>Definition cancelL_conn_map
              {Y X Z : Type} (f : Y -&gt; X) (g : X -&gt; Z)
              `{IsConnMap O _ _ (g o f)} `{IsConnMap O _ _ g}
@@ -606,7 +606,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 150
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>Global Instance conn_map_O_inverts
          {A B : Type} (f : A -&gt; B) `{O_inverts O f}
     : IsConnMap O f
@@ -647,7 +647,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 161
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     exists (OO_descend_O_inverts O O (fun _:A =&gt; tt) P tt); split.</pre>
 </div>
@@ -673,8 +673,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 164
-Time: 0.031s">
-<div class="time" style="width: 12.449799196787%"></div>
+Time: 0.024s">
+<div class="time" style="width: 11.538461538462%"></div>
 <pre> intros; rapply OO_descend_O_inverts_beta.</pre>
 </div>
 <div class="code" title="File: Lex.v
@@ -695,8 +695,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 168
-Time: 0.007s">
-<div class="time" style="width: 2.8112449799197%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
 <pre>Global Instance inO_typeO_lex `{Univalence} `{IsAccRSU O}
     : In (lift_accrsu O) (Type_ O)
     := _.</pre>
@@ -760,35 +760,35 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 179
-Time: 0.039s">
-<div class="time" style="width: 15.66265060241%"></div>
+Time: 0.027s">
+<div class="time" style="width: 12.980769230769%"></div>
 <pre> refine (O_ind (fun x =&gt; forall y, IsTrunc n (x = y)) _); intros x.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 179
-Time: 0.027s">
-<div class="time" style="width: 10.843373493976%"></div>
+Time: 0.02s">
+<div class="time" style="width: 9.6153846153846%"></div>
 <pre>
       refine (O_ind (fun y =&gt; IsTrunc n (to O A x = y)) _); intros y.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 180
-Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
       refine (trunc_equiv _ (equiv_path_O x y)).</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 181
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 182
-Time: 0.008s">
-<div class="time" style="width: 3.2128514056225%"></div>
+Time: 0.007s">
+<div class="time" style="width: 3.3653846153846%"></div>
 <pre>
 
 End LexModality.</pre>
@@ -829,8 +829,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 193
-Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition lex_from_modal_over_connected_isconst
              (H : forall (A : Type) (A_isC : IsConnected O A)
                          (P : A -&gt; Type) (P_inO : forall x, In O (P x)),
@@ -853,8 +853,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 199
-Time: 0.014s">
-<div class="time" style="width: 5.6224899598394%"></div>
+Time: 0.01s">
+<div class="time" style="width: 4.8076923076923%"></div>
 <pre>
     all:pose (Q := fun z:O A =&gt; H (hfiber (to O A) z) _ (P o pr1) _).</pre>
 </div>
@@ -880,8 +880,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 202
-Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (fun z =&gt; fst (Q z).2).</pre>
 </div>
 <div class="code" title="File: Lex.v
@@ -906,8 +906,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 204
-Time: 0.003s">
-<div class="time" style="width: 1.2048192771084%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -984,14 +984,14 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 221
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     exists (O {x:A &amp; P x}); split; [ exact _ | intros x; symmetry ].</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 222
-Time: 0.037s">
-<div class="time" style="width: 14.859437751004%"></div>
+Time: 0.031s">
+<div class="time" style="width: 14.903846153846%"></div>
 <pre>
     refine (Build_Equiv _ _ (fun p =&gt; to O _ (x ; p)) _).</pre>
 </div>
@@ -1004,8 +1004,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 224
-Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> 1-2:exact _.</pre>
 </div>
 <div class="code" title="File: Lex.v
@@ -1053,7 +1053,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 230
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     refine (equiv_adjointify (fun x =&gt; ((x ; z) ; 1))
                              (fun y =&gt; y.1.1) _ _).</pre>
@@ -1067,8 +1067,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 233
-Time: 0.005s">
-<div class="time" style="width: 2.0080321285141%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.9230769230769%"></div>
 <pre> intros [[x y] []]; reflexivity.</pre>
 </div>
 <div class="code" title="File: Lex.v
@@ -1087,7 +1087,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 234
 Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1190,7 +1190,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 253
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     2:intros; symmetry; apply equiv_path_sigma.</pre>
 </div>
@@ -1217,15 +1217,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 257
-Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     destruct p; cbn.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 258
-Time: 0.004s">
-<div class="time" style="width: 1.6064257028112%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.4423076923077%"></div>
 <pre>
     refine (contr_equiv' { p : g (f y) = g (f y) &amp; p = 1%path } _).</pre>
 </div>
@@ -1245,15 +1245,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 261
-Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     exact (concat_1p _ @ ap_idmap _).</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 262
-Time: 0.008s">
-<div class="time" style="width: 3.2128514056225%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.9230769230769%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1298,8 +1298,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 272
-Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     rapply isconnected_sigma.</pre>
 </div>
@@ -1321,8 +1321,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 277
-Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition lex_from_isequiv_ismodal_isconnected_types
              (H : forall A B (f : A -&gt; B),
                  (IsConnected O A) -&gt; (IsConnected O B) -&gt; 
@@ -1359,8 +1359,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 285
-Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply conn_map_compose; [ exact _ | ].</pre>
 </div>
@@ -1387,8 +1387,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 289
-Time: 0.003s">
-<div class="time" style="width: 1.2048192771084%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
     apply (cancelR_conn_map O (factor1 (image O f)) (const tt)).</pre>
 </div>
@@ -1410,8 +1410,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 294
-Time: 0.002s">
-<div class="time" style="width: 0.80321285140562%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>Definition lex_from_ispullback_connmap_mapino_commsq
              (H : forall {A B C D}
                          (f : A -&gt; B) (g : C -&gt; D) (h : A -&gt; C) (k : B -&gt; D),
@@ -1444,7 +1444,7 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 303
 Time: 0.004s">
-<div class="time" style="width: 1.6064257028112%"></div>
+<div class="time" style="width: 1.9230769230769%"></div>
 <pre>
     specialize (H A Unit B Unit (const tt) (const tt) f idmap _ _ _ _
                   (fun _ =&gt; 1)).</pre>
@@ -1458,8 +1458,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 306
-Time: 0.019s">
-<div class="time" style="width: 7.6305220883534%"></div>
+Time: 0.016s">
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
     refine (@isequiv_compose _ _ _ H _ (fun x =&gt; x.2.1) _).</pre>
 </div>
@@ -1472,8 +1472,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 308
-Time: 0.046s">
-<div class="time" style="width: 18.473895582329%"></div>
+Time: 0.035s">
+<div class="time" style="width: 16.826923076923%"></div>
 <pre>
     refine (@isequiv_compose _ {b:Unit &amp; B}
                              (functor_sigma idmap (fun a =&gt; pr1))
@@ -1481,8 +1481,8 @@ Time: 0.046s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 311
-Time: 0.013s">
-<div class="time" style="width: 5.2208835341365%"></div>
+Time: 0.01s">
+<div class="time" style="width: 4.8076923076923%"></div>
 <pre>
     refine (@isequiv_compose _ _ (equiv_sigma_prod0 Unit B)
                              _ _ snd _).</pre>
@@ -1497,14 +1497,14 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 314
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 315
-Time: 0.008s">
-<div class="time" style="width: 3.2128514056225%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2.8846153846154%"></div>
 <pre>
 
 End ImpliesLex.</pre>
@@ -1537,8 +1537,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 325
-Time: 0.012s">
-<div class="time" style="width: 4.8192771084337%"></div>
+Time: 0.009s">
+<div class="time" style="width: 4.3269230769231%"></div>
 <pre>
   intros A'; rapply reflectsD_from_inO_sigma.</pre>
 </div>
@@ -1559,14 +1559,14 @@ Time: 0s">
 <div class="code" title="File: Lex.v
 Line: 328
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
   pose (g := O_rec pr1 : O {x : A &amp; B x} -&gt; A).</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 329
-Time: 0.018s">
-<div class="time" style="width: 7.2289156626506%"></div>
+Time: 0.015s">
+<div class="time" style="width: 7.2115384615385%"></div>
 <pre>
   transparent assert (p : (forall x, g (to O _ x) = x.1)).</pre>
 </div>
@@ -1626,8 +1626,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 336
-Time: 0.15s">
-<div class="time" style="width: 60.240963855422%"></div>
+Time: 0.11s">
+<div class="time" style="width: 52.884615384615%"></div>
 <pre>
   transparent assert (h : (hfiber (@pr1 A B) (g x) &lt;~&gt; hfiber g (g x))).</pre>
 </div>
@@ -1640,14 +1640,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 338
-Time: 0.07s">
-<div class="time" style="width: 28.112449799197%"></div>
+Time: 0.055s">
+<div class="time" style="width: 26.442307692308%"></div>
 <pre> refine (_ oE equiv_to_O O _).</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 338
 Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+<div class="time" style="width: 0.48076923076923%"></div>
 <pre>
     refine (_ oE Build_Equiv _ _
               (O_functor_hfiber O (@pr1 A B) (g x)) _).</pre>
@@ -1674,8 +1674,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 342
-Time: 0.009s">
-<div class="time" style="width: 3.6144578313253%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2.8846153846154%"></div>
 <pre>
     refine (_ oE (equiv_moveR_equiv_V _ _)).</pre>
 </div>
@@ -1702,15 +1702,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 346
-Time: 0.003s">
-<div class="time" style="width: 1.2048192771084%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
     revert y; apply O_indpaths; intros [a q]; cbn.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 347
-Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     refine (_ @ (O_rec_beta _ _)^).</pre>
 </div>
@@ -1729,15 +1729,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 349
-Time: 0.011s">
-<div class="time" style="width: 4.4176706827309%"></div>
+Time: 0.007s">
+<div class="time" style="width: 3.3653846153846%"></div>
 <pre>
   refine (isequiv_homotopic (h oE equiv_hfiber_homotopic _ _ p (g x)) _).</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 350
-Time: 0.011s">
-<div class="time" style="width: 4.4176706827309%"></div>
+Time: 0.008s">
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
   intros [[a b] q]; cbn.</pre>
 </div>
@@ -1756,29 +1756,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 352
-Time: 0.008s">
-<div class="time" style="width: 3.2128514056225%"></div>
+Time: 0.006s">
+<div class="time" style="width: 2.8846153846154%"></div>
 <pre>
   rewrite O_rec_beta.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 353
-Time: 0.006s">
-<div class="time" style="width: 2.4096385542169%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
 <pre>
   unfold functor_sigma; cbn.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 354
-Time: 0.001s">
-<div class="time" style="width: 0.40160642570281%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (path_sigma' _ 1 _).</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 355
-Time: 0.012s">
-<div class="time" style="width: 4.8192771084337%"></div>
+Time: 0.009s">
+<div class="time" style="width: 4.3269230769231%"></div>
 <pre>
   rewrite O_indpaths_beta; cbn.</pre>
 </div>
@@ -1812,8 +1812,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 360
-Time: 0.111s">
-<div class="time" style="width: 44.578313253012%"></div>
+Time: 0.089s">
+<div class="time" style="width: 42.788461538462%"></div>
 <pre>rewrite !ap_pp, !concat_p_pp, !ap_V.</pre>
 </div>
 <div class="code" title="File: Lex.v
@@ -1825,8 +1825,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 361
-Time: 0.007s">
-<div class="time" style="width: 2.8112449799197%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
 <pre>
   rewrite concat_pV_p.</pre>
 </div>
@@ -1839,29 +1839,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 363
-Time: 0.005s">
-<div class="time" style="width: 2.0080321285141%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.4423076923077%"></div>
 <pre>
   rewrite concat_pp_V.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 364
-Time: 0.003s">
-<div class="time" style="width: 1.2048192771084%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.96153846153846%"></div>
 <pre>
   rewrite concat_pp_p; apply moveR_Vp.</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 365
-Time: 0.006s">
-<div class="time" style="width: 2.4096385542169%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
 <pre>
   rewrite &lt;- !(ap_compose (to O A) (to O A)^-1).</pre>
 </div>
 <div class="code" title="File: Lex.v
 Line: 366
-Time: 0.005s">
-<div class="time" style="width: 2.0080321285141%"></div>
+Time: 0.004s">
+<div class="time" style="width: 1.9230769230769%"></div>
 <pre>
   rapply @concat_A1p.</pre>
 </div>
@@ -1934,13 +1934,161 @@ Time: 0s">
 </div>
 <div class="code" title="File: Lex.v
 Line: 380
-Time: 0.151s">
-<div class="time" style="width: 60.642570281124%"></div>
+Time: 0.116s">
+<div class="time" style="width: 55.769230769231%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Lex.v
-Line: 382
+Line: 381
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** ** Lexness via generators *)
+
+(** Here the characterization of when an accessible presentation yields a lex modality from Anel-Biederman-Finster-Joyal ("Higher Sheaves and Left-Exact Localizations of ∞-Topoi", arXiv:2101.02791): it's enough for path spaces of the generators to be connected. *)</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 385
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
+<pre>Definition lex_gen `{Univalence} (O : Modality) `{IsAccModality O}
+           (lexgen : forall (i : ngen_indices (acc_ngen O)) (x y : ngen_type (acc_ngen O) i),
+               IsConnected O (x = y))
+  : Lex O.</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 388
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 389
+Time: 0.01s">
+<div class="time" style="width: 4.8076923076923%"></div>
+<pre>
+  srapply lex_from_inO_typeO; [ exact _ | intros i ].</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 390
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
+<pre>
+  rapply ooextendable_TypeO_from_extension; intros P; srefine (_;_).</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 391
+Time: 0.011s">
+<div class="time" style="width: 5.2884615384615%"></div>
+<pre>
+  1:intros; exists (forall x, P x); exact _.</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 392
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  assert (wc : forall y z, P y &lt;~&gt; P z).</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 393
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  {</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 394
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros y z.</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 394
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    (** Here we use the hypothesis [lexgen] (typeclass inference finds it automatically). *)
+   </pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 396
+Time: 0.007s">
+<div class="time" style="width: 3.3653846153846%"></div>
+<pre>refine (pr1 (isconnected_elim O _ (equiv_transport P y z))).</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 396
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> }</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 396
+Time: 0.001s">
+<div class="time" style="width: 0.48076923076923%"></div>
+<pre>
+  intros x; apply path_TypeO, path_universe_uncurried.</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 397
+Time: 0.004s">
+<div class="time" style="width: 1.9230769230769%"></div>
+<pre>
+  refine (equiv_adjointify (fun f =&gt; f x) (fun u y =&gt; wc x y ((wc x x)^-1 u)) _ _).</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 398
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 399
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros u; apply eisretr.</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 399
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 400
+Time: 0.005s">
+<div class="time" style="width: 2.4038461538462%"></div>
+<pre> intros f; apply path_forall; intros y; apply moveR_equiv_M.</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 400
+Time: 0.007s">
+<div class="time" style="width: 3.3653846153846%"></div>
+<pre>
+    destruct (isconnected_elim O _ (fun y =&gt; (wc x y)^-1 (f y))) as [z p].</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 401
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+    exact (p x @ (p y)^).</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 402
+Time: 0.003s">
+<div class="time" style="width: 1.4423076923077%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Lex.v
+Line: 404
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
