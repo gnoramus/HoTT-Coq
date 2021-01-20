@@ -37,20 +37,20 @@ Time: 0s">
 <div class="code" title="File: Laws.v
 Line: 1
 Time: 0.005s">
-<div class="time" style="width: 3.2258064516129%"></div>
+<div class="time" style="width: 3.4965034965035%"></div>
 <pre>Require Import Category.Core Functor.Core Functor.Composition.Core Functor.Identity.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 1
-Time: 0.022s">
-<div class="time" style="width: 14.193548387097%"></div>
+Time: 0.02s">
+<div class="time" style="width: 13.986013986014%"></div>
 <pre>
 Require Import Functor.Paths.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 2
 Time: 0.001s">
-<div class="time" style="width: 0.64516129032258%"></div>
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
 Require Import Basics.PathGroupoids HoTT.Tactics.</pre>
 </div>
@@ -148,7 +148,7 @@ Time: 0s">
 <div class="code" title="File: Laws.v
 Line: 22
 Time: 0.002s">
-<div class="time" style="width: 1.2903225806452%"></div>
+<div class="time" style="width: 1.3986013986014%"></div>
 <pre>
     by path_functor.</pre>
 </div>
@@ -184,7 +184,7 @@ Time: 0s">
 <div class="code" title="File: Laws.v
 Line: 28
 Time: 0.002s">
-<div class="time" style="width: 1.2903225806452%"></div>
+<div class="time" style="width: 1.3986013986014%"></div>
 <pre>
     by path_functor.</pre>
 </div>
@@ -207,7 +207,7 @@ Time: 0s">
 <div class="code" title="File: Laws.v
 Line: 33
 Time: 0.003s">
-<div class="time" style="width: 1.9354838709677%"></div>
+<div class="time" style="width: 2.0979020979021%"></div>
 <pre>Definition left_identity_fst F
   : ap object_of (left_identity F) = idpath
     := @path_functor_uncurried_fst _ _ _ (1 o F) F 1 1.</pre>
@@ -215,7 +215,7 @@ Time: 0.003s">
 <div class="code" title="File: Laws.v
 Line: 35
 Time: 0.003s">
-<div class="time" style="width: 1.9354838709677%"></div>
+<div class="time" style="width: 2.0979020979021%"></div>
 <pre>
 
   Definition right_identity_fst F
@@ -246,13 +246,14 @@ Hint Rewrite @left_identity @right_identity : functor.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 43
-Time: 0.001s">
-<div class="time" style="width: 0.64516129032258%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
+#[export]
 Hint Immediate left_identity right_identity : category functor.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 44
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -260,14 +261,14 @@ Time: 0s">
 Section composition_lemmas.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 46
+Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{fs : Funext}.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 47
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -275,7 +276,7 @@ Time: 0s">
   Variables B C D E : PreCategory.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 49
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -283,7 +284,7 @@ Time: 0s">
   Local Open Scope functor_scope.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 51
+Line: 52
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -292,36 +293,36 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 54
-Time: 0.001s">
-<div class="time" style="width: 0.64516129032258%"></div>
+Line: 55
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma associativity
         (F : Functor B C) (G : Functor C D) (H : Functor D E)
   : (H o G) o F = H o (G o F).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 56
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 57
-Time: 0.003s">
-<div class="time" style="width: 1.9354838709677%"></div>
+Line: 58
+Time: 0.002s">
+<div class="time" style="width: 1.3986013986014%"></div>
 <pre>
     by path_functor.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 58
+Line: 59
 Time: 0.001s">
-<div class="time" style="width: 0.64516129032258%"></div>
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 59
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -330,30 +331,31 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 62
-Time: 0.006s">
-<div class="time" style="width: 3.8709677419355%"></div>
+Line: 63
+Time: 0.005s">
+<div class="time" style="width: 3.4965034965035%"></div>
 <pre>Definition associativity_fst F G H
   : ap object_of (associativity F G H) = idpath
     := @path_functor_uncurried_fst _ _ _ ((H o G) o F) (H o (G o F)) 1%path 1%path.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 64
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 65
+Time: 0.001s">
+<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
 End composition_lemmas.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 65
-Time: 0.001s">
-<div class="time" style="width: 0.64516129032258%"></div>
+Line: 66
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
+#[export]
 Hint Resolve associativity : category functor.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 67
+Line: 69
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -361,14 +363,14 @@ Time: 0s">
 Section coherence.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 69
+Line: 71
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{fs : Funext}.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 70
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -376,14 +378,14 @@ Time: 0s">
   Local Open Scope path_scope.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 72
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Local Open Scope functor_scope.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 73
+Line: 75
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -398,7 +400,7 @@ Time: 0s">
            end.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 82
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -418,36 +420,36 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 96
+Line: 98
 Time: 0.003s">
-<div class="time" style="width: 1.9354838709677%"></div>
+<div class="time" style="width: 2.0979020979021%"></div>
 <pre>Lemma triangle C D E (F : Functor C D) (G : Functor D E)
   : (associativity F 1 G @ ap (compose G) (left_identity F))
     = (ap (fun G' : Functor D E =&gt; G' o F) (right_identity G)).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 98
+Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 99
-Time: 0.11s">
-<div class="time" style="width: 70.967741935484%"></div>
+Line: 101
+Time: 0.101s">
+<div class="time" style="width: 70.629370629371%"></div>
 <pre>
     coherence_t.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 100
-Time: 0.014s">
-<div class="time" style="width: 9.0322580645161%"></div>
+Line: 102
+Time: 0.013s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 101
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -472,44 +474,44 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 120
+Line: 122
 Time: 0.009s">
-<div class="time" style="width: 5.8064516129032%"></div>
+<div class="time" style="width: 6.2937062937063%"></div>
 <pre>Lemma pentagon A B C D E
         (F : Functor A B) (G : Functor B C) (H : Functor C D) (K : Functor D E)
   : (associativity F G (K o H) @ associativity (G o F) H K)
     = (ap (fun KHG =&gt; KHG o F) (associativity G H K) @ associativity F (H o G) K @ ap (compose K) (associativity F G H)).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 123
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 124
-Time: 0.155s">
+Line: 126
+Time: 0.143s">
 <div class="time" style="width: 100%"></div>
 <pre>
     coherence_t.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 125
-Time: 0.025s">
-<div class="time" style="width: 16.129032258065%"></div>
+Line: 127
+Time: 0.023s">
+<div class="time" style="width: 16.083916083916%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 126
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End coherence.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 127
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -517,21 +519,21 @@ Time: 0s">
 Arguments associativity : simpl never.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 129
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments left_identity : simpl never.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 130
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments right_identity : simpl never.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 132
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

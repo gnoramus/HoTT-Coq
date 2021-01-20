@@ -123,7 +123,7 @@
           
 
             i = 21;
-            data = "1 subgoal (ID 9)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  ============================	  x = x	";
+            data = "1 goal (ID 9)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  ============================	  x = x	";
             responses[i]=data;
           
 
@@ -133,27 +133,27 @@
           
 
             i = 23;
-            data = "1 subgoal (ID 11)	  	  A : Type	  x : A	  p : x = x	  ============================	  Pos -> x = x	";
+            data = "1 goal (ID 11)	  	  A : Type	  x : A	  p : x = x	  ============================	  Pos -> x = x	";
             responses[i]=data;
           
 
             i = 24;
-            data = "2 subgoals (ID 21)	  	  A : Type	  x : A	  p : x = x	  ============================	  (fun _ : Pos => x = x) 1%pos		subgoal 2 (ID 23) is:	 forall p0 : Pos,	 (fun _ : Pos => x = x) p0 -> (fun _ : Pos => x = x) (pos_succ p0)	";
+            data = "2 goals (ID 21)	  	  A : Type	  x : A	  p : x = x	  ============================	  (fun _ : Pos => x = x) 1%pos		goal 2 (ID 23) is:	 forall p0 : Pos,	 (fun _ : Pos => x = x) p0 -> (fun _ : Pos => x = x) (pos_succ p0)	";
             responses[i]=data;
           
 
             i = 25;
-            data = "1 subgoal (ID 21)	  	  A : Type	  x : A	  p : x = x	  ============================	  (fun _ : Pos => x = x) 1%pos	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 23) is:	 forall p0 : Pos,	 (fun _ : Pos => x = x) p0 -> (fun _ : Pos => x = x) (pos_succ p0)	";
+            data = "1 goal (ID 21)	  	  A : Type	  x : A	  p : x = x	  ============================	  (fun _ : Pos => x = x) 1%pos	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 23) is:	 forall p0 : Pos,	 (fun _ : Pos => x = x) p0 -> (fun _ : Pos => x = x) (pos_succ p0)	";
             responses[i]=data;
           
 
             i = 26;
-            data = "1 subgoal (ID 23)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  (fun _ : Pos => x = x) p0 -> (fun _ : Pos => x = x) (pos_succ p0)	1 subgoal (ID 25)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : (fun _ : Pos => x = x) n	  ============================	  (fun _ : Pos => x = x) (pos_succ n)	";
+            data = "1 goal (ID 23)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  (fun _ : Pos => x = x) p0 -> (fun _ : Pos => x = x) (pos_succ p0)	1 goal (ID 25)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : (fun _ : Pos => x = x) n	  ============================	  (fun _ : Pos => x = x) (pos_succ n)	";
             responses[i]=data;
           
 
             i = 27;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -168,7 +168,7 @@
           
 
             i = 30;
-            data = "1 subgoal (ID 41)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  ============================	  loopexp_pos p^ n = (loopexp_pos p n)^	";
+            data = "1 goal (ID 41)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  ============================	  loopexp_pos p^ n = (loopexp_pos p n)^	";
             responses[i]=data;
           
 
@@ -178,62 +178,62 @@
           
 
             i = 32;
-            data = "1 subgoal (ID 43)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall n : Pos, loopexp_pos p^ n = (loopexp_pos p n)^	";
+            data = "1 goal (ID 43)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall n : Pos, loopexp_pos p^ n = (loopexp_pos p n)^	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 57)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  loopexp_pos p^ p0 = (loopexp_pos p p0)^ ->	  loopexp_pos p^ (pos_succ p0) = (loopexp_pos p (pos_succ p0))^	";
+            data = "1 goal (ID 57)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  loopexp_pos p^ p0 = (loopexp_pos p p0)^ ->	  loopexp_pos p^ (pos_succ p0) = (loopexp_pos p (pos_succ p0))^	";
             responses[i]=data;
           
 
             i = 34;
-            data = "1 subgoal (ID 60)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) p0 =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) p0)^ ->	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ p0) =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) (pos_succ p0))^	";
+            data = "1 goal (ID 60)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) p0 =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) p0)^ ->	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ p0) =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) (pos_succ p0))^	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 62)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : pos_peano_ind (fun _ : Pos => x = x) p^	        (fun (_ : Pos) (q : x = x) => q @ p^) n =	      (pos_peano_ind (fun _ : Pos => x = x) p	         (fun (_ : Pos) (q : x = x) => q @ p) n)^	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q0 : x = x) => q0 @ p^) (pos_succ n) =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) (pos_succ n))^	";
+            data = "1 goal (ID 62)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : pos_peano_ind (fun _ : Pos => x = x) p^	        (fun (_ : Pos) (q : x = x) => q @ p^) n =	      (pos_peano_ind (fun _ : Pos => x = x) p	         (fun (_ : Pos) (q : x = x) => q @ p) n)^	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q0 : x = x) => q0 @ p^) (pos_succ n) =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) (pos_succ n))^	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 65)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : pos_peano_ind (fun _ : Pos => x = x) p^	        (fun (_ : Pos) (q : x = x) => q @ p^) n =	      (pos_peano_ind (fun _ : Pos => x = x) p	         (fun (_ : Pos) (q : x = x) => q @ p) n)^	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) n)^ @ p^ =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) n @ p)^	";
+            data = "1 goal (ID 65)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : pos_peano_ind (fun _ : Pos => x = x) p^	        (fun (_ : Pos) (q : x = x) => q @ p^) n =	      (pos_peano_ind (fun _ : Pos => x = x) p	         (fun (_ : Pos) (q : x = x) => q @ p) n)^	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) n)^ @ p^ =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) n @ p)^	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 83)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : pos_peano_ind (fun _ : Pos => x = x) p^	        (fun (_ : Pos) (q : x = x) => q @ p^) n =	      (pos_peano_ind (fun _ : Pos => x = x) p	         (fun (_ : Pos) (q : x = x) => q @ p) n)^	  ============================	  (p @	   pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) n)^ =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) n @ p)^	";
+            data = "1 goal (ID 83)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : pos_peano_ind (fun _ : Pos => x = x) p^	        (fun (_ : Pos) (q : x = x) => q @ p^) n =	      (pos_peano_ind (fun _ : Pos => x = x) p	         (fun (_ : Pos) (q : x = x) => q @ p) n)^	  ============================	  (p @	   pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) n)^ =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q0 : x = x) => q0 @ p) n @ p)^	";
             responses[i]=data;
           
 
             i = 38;
-            data = "1 subgoal (ID 86)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : pos_peano_ind (fun _ : Pos => x = x) p^	        (fun (_ : Pos) (q : x = x) => q @ p^) n =	      (pos_peano_ind (fun _ : Pos => x = x) p	         (fun (_ : Pos) (q : x = x) => q @ p) n)^	  ============================	  p @	  pos_peano_ind (fun _ : Pos => x = x) p	    (fun (_ : Pos) (q0 : x = x) => q0 @ p) n =	  pos_peano_ind (fun _ : Pos => x = x) p	    (fun (_ : Pos) (q0 : x = x) => q0 @ p) n @ p	";
+            data = "1 goal (ID 86)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : pos_peano_ind (fun _ : Pos => x = x) p^	        (fun (_ : Pos) (q : x = x) => q @ p^) n =	      (pos_peano_ind (fun _ : Pos => x = x) p	         (fun (_ : Pos) (q : x = x) => q @ p) n)^	  ============================	  p @	  pos_peano_ind (fun _ : Pos => x = x) p	    (fun (_ : Pos) (q0 : x = x) => q0 @ p) n =	  pos_peano_ind (fun _ : Pos => x = x) p	    (fun (_ : Pos) (q0 : x = x) => q0 @ p) n @ p	";
             responses[i]=data;
           
 
             i = 39;
-            data = "1 subgoal (ID 87)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  ============================	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    n =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    n @ p	";
+            data = "1 goal (ID 87)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  ============================	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    n =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    n @ p	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 89)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall n : Pos,	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    n =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    n @ p	";
+            data = "1 goal (ID 89)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall n : Pos,	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    n =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    n @ p	";
             responses[i]=data;
           
 
             i = 41;
-            data = "1 subgoal (ID 103)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    p0 =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    p0 @ p ->	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ p0) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ p0) @ p	";
+            data = "1 goal (ID 103)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    p0 =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    p0 @ p ->	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ p0) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ p0) @ p	";
             responses[i]=data;
           
 
             i = 42;
-            data = "1 subgoal (ID 107)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : p @	      pos_peano_ind (fun _ : Pos => x = x) p	        (fun (_ : Pos) (q : x = x) => q @ p) n =	      pos_peano_ind (fun _ : Pos => x = x) p	        (fun (_ : Pos) (q : x = x) => q @ p) n @ p	  ============================	  p @	  pos_peano_ind (fun _ : Pos => x = x) p	    (fun (_ : Pos) (q0 : x = x) => q0 @ p) (pos_succ n) =	  pos_peano_ind (fun _ : Pos => x = x) p	    (fun (_ : Pos) (q0 : x = x) => q0 @ p) (pos_succ n) @ p	";
+            data = "1 goal (ID 107)	  	  A : Type	  x : A	  p : x = x	  n : Pos	  q : p @	      pos_peano_ind (fun _ : Pos => x = x) p	        (fun (_ : Pos) (q : x = x) => q @ p) n =	      pos_peano_ind (fun _ : Pos => x = x) p	        (fun (_ : Pos) (q : x = x) => q @ p) n @ p	  ============================	  p @	  pos_peano_ind (fun _ : Pos => x = x) p	    (fun (_ : Pos) (q0 : x = x) => q0 @ p) (pos_succ n) =	  pos_peano_ind (fun _ : Pos => x = x) p	    (fun (_ : Pos) (q0 : x = x) => q0 @ p) (pos_succ n) @ p	";
             responses[i]=data;
           
 
             i = 43;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 66)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp_pos p n) = loopexp_pos (ap f p) n	";
+            data = "1 goal (ID 66)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp_pos p n) = loopexp_pos (ap f p) n	";
             responses[i]=data;
           
 
@@ -253,32 +253,32 @@
           
 
             i = 47;
-            data = "1 subgoal (ID 68)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  ============================	  forall n : Pos, ap f (loopexp_pos p n) = loopexp_pos (ap f p) n	";
+            data = "1 goal (ID 68)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  ============================	  forall n : Pos, ap f (loopexp_pos p n) = loopexp_pos (ap f p) n	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 82)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  ap f (loopexp_pos p p0) = loopexp_pos (ap f p) p0 ->	  ap f (loopexp_pos p (pos_succ p0)) = loopexp_pos (ap f p) (pos_succ p0)	";
+            data = "1 goal (ID 82)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  ap f (loopexp_pos p p0) = loopexp_pos (ap f p) p0 ->	  ap f (loopexp_pos p (pos_succ p0)) = loopexp_pos (ap f p) (pos_succ p0)	";
             responses[i]=data;
           
 
             i = 49;
-            data = "1 subgoal (ID 85)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  ap f	    (pos_peano_ind (fun _ : Pos => x = x) p	       (fun (_ : Pos) (q : x = x) => q @ p) p0) =	  pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	    (fun (_ : Pos) (q : f x = f x) => q @ ap f p) p0 ->	  ap f	    (pos_peano_ind (fun _ : Pos => x = x) p	       (fun (_ : Pos) (q : x = x) => q @ p) (pos_succ p0)) =	  pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	    (fun (_ : Pos) (q : f x = f x) => q @ ap f p) 	    (pos_succ p0)	";
+            data = "1 goal (ID 85)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  ============================	  forall p0 : Pos,	  ap f	    (pos_peano_ind (fun _ : Pos => x = x) p	       (fun (_ : Pos) (q : x = x) => q @ p) p0) =	  pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	    (fun (_ : Pos) (q : f x = f x) => q @ ap f p) p0 ->	  ap f	    (pos_peano_ind (fun _ : Pos => x = x) p	       (fun (_ : Pos) (q : x = x) => q @ p) (pos_succ p0)) =	  pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	    (fun (_ : Pos) (q : f x = f x) => q @ ap f p) 	    (pos_succ p0)	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 87)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  q : ap f	        (pos_peano_ind (fun _ : Pos => x = x) p	           (fun (_ : Pos) (q : x = x) => q @ p) n) =	      pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	        (fun (_ : Pos) (q : f x = f x) => q @ ap f p) n	  ============================	  ap f	    (pos_peano_ind (fun _ : Pos => x = x) p	       (fun (_ : Pos) (q0 : x = x) => q0 @ p) (pos_succ n)) =	  pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	    (fun (_ : Pos) (q0 : f x = f x) => q0 @ ap f p) 	    (pos_succ n)	";
+            data = "1 goal (ID 87)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  q : ap f	        (pos_peano_ind (fun _ : Pos => x = x) p	           (fun (_ : Pos) (q : x = x) => q @ p) n) =	      pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	        (fun (_ : Pos) (q : f x = f x) => q @ ap f p) n	  ============================	  ap f	    (pos_peano_ind (fun _ : Pos => x = x) p	       (fun (_ : Pos) (q0 : x = x) => q0 @ p) (pos_succ n)) =	  pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	    (fun (_ : Pos) (q0 : f x = f x) => q0 @ ap f p) 	    (pos_succ n)	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 89)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  q : ap f	        (pos_peano_ind (fun _ : Pos => x = x) p	           (fun (_ : Pos) (q : x = x) => q @ p) n) =	      pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	        (fun (_ : Pos) (q : f x = f x) => q @ ap f p) n	  ============================	  ap f	    (pos_peano_ind (fun _ : Pos => x = x) p	       (fun (_ : Pos) (q0 : x = x) => q0 @ p) n @ p) =	  pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	    (fun (_ : Pos) (q0 : f x = f x) => q0 @ ap f p) n @ 	  ap f p	";
+            data = "1 goal (ID 89)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  q : ap f	        (pos_peano_ind (fun _ : Pos => x = x) p	           (fun (_ : Pos) (q : x = x) => q @ p) n) =	      pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	        (fun (_ : Pos) (q : f x = f x) => q @ ap f p) n	  ============================	  ap f	    (pos_peano_ind (fun _ : Pos => x = x) p	       (fun (_ : Pos) (q0 : x = x) => q0 @ p) n @ p) =	  pos_peano_ind (fun _ : Pos => f x = f x) (ap f p)	    (fun (_ : Pos) (q0 : f x = f x) => q0 @ ap f p) n @ 	  ap f p	";
             responses[i]=data;
           
 
             i = 52;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -288,7 +288,7 @@
           
 
             i = 54;
-            data = "1 subgoal (ID 91)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  z : Int	  ============================	  ap f (loopexp p z) = loopexp (ap f p) z	";
+            data = "1 goal (ID 91)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  z : Int	  ============================	  ap f (loopexp p z) = loopexp (ap f p) z	";
             responses[i]=data;
           
 
@@ -298,32 +298,32 @@
           
 
             i = 56;
-            data = "2 subgoals (ID 99)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp p (neg n)) = loopexp (ap f p) (neg n)		subgoal 2 (ID 100) is:	 ap f (loopexp p (pos n)) = loopexp (ap f p) (pos n)	";
+            data = "2 goals (ID 99)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp p (neg n)) = loopexp (ap f p) (neg n)		goal 2 (ID 100) is:	 ap f (loopexp p (pos n)) = loopexp (ap f p) (pos n)	";
             responses[i]=data;
           
 
             i = 57;
-            data = "1 subgoal (ID 99)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp p (neg n)) = loopexp (ap f p) (neg n)	1 subgoal (ID 101)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp_pos p^ n) = loopexp_pos (ap f p)^ n	";
+            data = "1 goal (ID 99)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp p (neg n)) = loopexp (ap f p) (neg n)	1 goal (ID 101)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp_pos p^ n) = loopexp_pos (ap f p)^ n	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 subgoal (ID 114)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  (ap f (loopexp_pos p n))^ = (loopexp_pos (ap f p) n)^	";
+            data = "1 goal (ID 114)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  (ap f (loopexp_pos p n))^ = (loopexp_pos (ap f p) n)^	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 119)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp_pos p n) = loopexp_pos (ap f p) n	";
+            data = "1 goal (ID 119)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp_pos p n) = loopexp_pos (ap f p) n	";
             responses[i]=data;
           
 
             i = 60;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 100) is:	 ap f (loopexp p (pos n)) = loopexp (ap f p) (pos n)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 100) is:	 ap f (loopexp p (pos n)) = loopexp (ap f p) (pos n)	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 100)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp p (pos n)) = loopexp (ap f p) (pos n)	No more subgoals.	";
+            data = "1 goal (ID 100)	  	  A : Type	  B : Type	  f : A -> B	  x : A	  p : x = x	  n : Pos	  ============================	  ap f (loopexp p (pos n)) = loopexp (ap f p) (pos n)	No more goals.	";
             responses[i]=data;
           
 
@@ -333,7 +333,7 @@
           
 
             i = 63;
-            data = "1 subgoal (ID 98)	  	  a, b : Int	  ============================	  int_succ a + b = int_succ (a + b)	";
+            data = "1 goal (ID 98)	  	  a, b : Int	  ============================	  int_succ a + b = int_succ (a + b)	";
             responses[i]=data;
           
 
@@ -343,12 +343,12 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 100)	  	  a, b : Int	  ============================	  a + (b + 1) = int_succ (a + b)	";
+            data = "1 goal (ID 100)	  	  a, b : Int	  ============================	  a + (b + 1) = int_succ (a + b)	";
             responses[i]=data;
           
 
             i = 66;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -358,7 +358,7 @@
           
 
             i = 68;
-            data = "1 subgoal (ID 105)	  	  a, b : Int	  ============================	  a + int_succ b = int_succ (a + b)	";
+            data = "1 goal (ID 105)	  	  a, b : Int	  ============================	  a + int_succ b = int_succ (a + b)	";
             responses[i]=data;
           
 
@@ -368,7 +368,7 @@
           
 
             i = 70;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -378,7 +378,7 @@
           
 
             i = 72;
-            data = "1 subgoal (ID 112)	  	  a, b : Int	  ============================	  int_pred a + b = int_pred (a + b)	";
+            data = "1 goal (ID 112)	  	  a, b : Int	  ============================	  int_pred a + b = int_pred (a + b)	";
             responses[i]=data;
           
 
@@ -388,12 +388,12 @@
           
 
             i = 74;
-            data = "1 subgoal (ID 114)	  	  a, b : Int	  ============================	  a + (b + -1) = int_pred (a + b)	";
+            data = "1 goal (ID 114)	  	  a, b : Int	  ============================	  a + (b + -1) = int_pred (a + b)	";
             responses[i]=data;
           
 
             i = 75;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -403,7 +403,7 @@
           
 
             i = 77;
-            data = "1 subgoal (ID 119)	  	  a, b : Int	  ============================	  a + int_pred b = int_pred (a + b)	";
+            data = "1 goal (ID 119)	  	  a, b : Int	  ============================	  a + int_pred b = int_pred (a + b)	";
             responses[i]=data;
           
 
@@ -413,7 +413,7 @@
           
 
             i = 79;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -423,7 +423,7 @@
           
 
             i = 81;
-            data = "1 subgoal (ID 140)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  ============================	  loopexp_pos p a @ p = p @ loopexp_pos p a	";
+            data = "1 goal (ID 140)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  ============================	  loopexp_pos p a @ p = p @ loopexp_pos p a	";
             responses[i]=data;
           
 
@@ -433,27 +433,27 @@
           
 
             i = 83;
-            data = "1 subgoal (ID 150)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : loopexp_pos p a @ p = p @ loopexp_pos p a	  ============================	  loopexp_pos p (pos_succ a) @ p = p @ loopexp_pos p (pos_succ a)	";
+            data = "1 goal (ID 150)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : loopexp_pos p a @ p = p @ loopexp_pos p a	  ============================	  loopexp_pos p (pos_succ a) @ p = p @ loopexp_pos p (pos_succ a)	";
             responses[i]=data;
           
 
             i = 84;
-            data = "1 subgoal (ID 151)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : loopexp_pos p a @ p = p @ loopexp_pos p a	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @ p =	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a)	";
+            data = "1 goal (ID 151)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : loopexp_pos p a @ p = p @ loopexp_pos p a	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @ p =	  p @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a)	";
             responses[i]=data;
           
 
             i = 85;
-            data = "1 subgoal (ID 152)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : loopexp_pos p a @ p = p @ loopexp_pos p a	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) @ p =	  p @	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p)	";
+            data = "1 goal (ID 152)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : loopexp_pos p a @ p = p @ loopexp_pos p a	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) @ p =	  p @	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 175)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : loopexp_pos p a @ p = p @ loopexp_pos p a	  ============================	  (loopexp_pos p a @ p) @ p = p @ (loopexp_pos p a @ p)	";
+            data = "1 goal (ID 175)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : loopexp_pos p a @ p = p @ loopexp_pos p a	  ============================	  (loopexp_pos p a @ p) @ p = p @ (loopexp_pos p a @ p)	";
             responses[i]=data;
           
 
             i = 87;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -463,7 +463,7 @@
           
 
             i = 89;
-            data = "1 subgoal (ID 160)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	";
+            data = "1 goal (ID 160)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	";
             responses[i]=data;
           
 
@@ -473,82 +473,82 @@
           
 
             i = 91;
-            data = "1 subgoal (ID 162)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall a b : Pos,	  loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	";
+            data = "1 goal (ID 162)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall a b : Pos,	  loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	";
             responses[i]=data;
           
 
             i = 92;
-            data = "3 subgoals (ID 184)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (1 + b)%pos = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  loopexp_pos p (1 + pos_succ b)%pos =	  loopexp_pos p 1%pos @ loopexp_pos p (pos_succ b)		subgoal 2 (ID 192) is:	 loopexp_pos p (pos_succ a + 1)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p 1%pos	subgoal 3 (ID 195) is:	 loopexp_pos p (pos_succ a + pos_succ b)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	";
+            data = "3 goals (ID 184)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (1 + b)%pos = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  loopexp_pos p (1 + pos_succ b)%pos =	  loopexp_pos p 1%pos @ loopexp_pos p (pos_succ b)		goal 2 (ID 192) is:	 loopexp_pos p (pos_succ a + 1)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p 1%pos	goal 3 (ID 195) is:	 loopexp_pos p (pos_succ a + pos_succ b)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	";
             responses[i]=data;
           
 
             i = 93;
-            data = "1 subgoal (ID 184)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (1 + b)%pos = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  loopexp_pos p (1 + pos_succ b)%pos =	  loopexp_pos p 1%pos @ loopexp_pos p (pos_succ b)	1 subgoal (ID 198)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ (pos_succ b)) =	  loopexp_pos p 1%pos @ loopexp_pos p (pos_succ b)	";
+            data = "1 goal (ID 184)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (1 + b)%pos = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  loopexp_pos p (1 + pos_succ b)%pos =	  loopexp_pos p 1%pos @ loopexp_pos p (pos_succ b)	1 goal (ID 198)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ (pos_succ b)) =	  loopexp_pos p 1%pos @ loopexp_pos p (pos_succ b)	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 199)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ (pos_succ b)) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    1%pos @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b)	";
+            data = "1 goal (ID 199)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ (pos_succ b)) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    1%pos @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b)	";
             responses[i]=data;
           
 
             i = 95;
-            data = "1 subgoal (ID 200)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b) @ p =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    1%pos @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b)	";
+            data = "1 goal (ID 200)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b) @ p =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    1%pos @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b)	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 subgoal (ID 215)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ b) @ p = p @ loopexp_pos p (pos_succ b)	";
+            data = "1 goal (ID 215)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ b) @ p = p @ loopexp_pos p (pos_succ b)	";
             responses[i]=data;
           
 
             i = 97;
-            data = "1 subgoal (ID 217)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  (p @ loopexp_pos p b) @ p = p @ (p @ loopexp_pos p b)	";
+            data = "1 goal (ID 217)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p (pos_succ b) = loopexp_pos p 1%pos @ loopexp_pos p b	  ============================	  (p @ loopexp_pos p b) @ p = p @ (p @ loopexp_pos p b)	";
             responses[i]=data;
           
 
             i = 98;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 192) is:	 loopexp_pos p (pos_succ a + 1)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p 1%pos	subgoal 2 (ID 195) is:	 loopexp_pos p (pos_succ a + pos_succ b)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 192) is:	 loopexp_pos p (pos_succ a + 1)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p 1%pos	goal 2 (ID 195) is:	 loopexp_pos p (pos_succ a + pos_succ b)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	";
             responses[i]=data;
           
 
             i = 99;
-            data = "1 subgoal (ID 192)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ a + 1)%pos =	  loopexp_pos p (pos_succ a) @ loopexp_pos p 1%pos	1 subgoal (ID 234)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ (pos_succ a)) =	  loopexp_pos p (pos_succ a) @ loopexp_pos p 1%pos	";
+            data = "1 goal (ID 192)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ a + 1)%pos =	  loopexp_pos p (pos_succ a) @ loopexp_pos p 1%pos	1 goal (ID 234)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ (pos_succ a)) =	  loopexp_pos p (pos_succ a) @ loopexp_pos p 1%pos	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 subgoal (ID 235)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ (pos_succ a)) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    1%pos	";
+            data = "1 goal (ID 235)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ (pos_succ a)) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    1%pos	";
             responses[i]=data;
           
 
             i = 101;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 195) is:	 loopexp_pos p (pos_succ a + pos_succ b)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 195) is:	 loopexp_pos p (pos_succ a + pos_succ b)%pos =	 loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 195)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ a + pos_succ b)%pos =	  loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	1 subgoal (ID 237)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ (a + pos_succ b)%pos) =	  loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	";
+            data = "1 goal (ID 195)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ a + pos_succ b)%pos =	  loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	1 goal (ID 237)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  loopexp_pos p (pos_succ (a + pos_succ b)%pos) =	  loopexp_pos p (pos_succ a) @ loopexp_pos p (pos_succ b)	";
             responses[i]=data;
           
 
             i = 103;
-            data = "1 subgoal (ID 238)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ (a + pos_succ b)%pos) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b)	";
+            data = "1 goal (ID 238)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ (a + pos_succ b)%pos) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b)	";
             responses[i]=data;
           
 
             i = 104;
-            data = "1 subgoal (ID 240)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (a + pos_succ b)%pos @ p =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b)	";
+            data = "1 goal (ID 240)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (a + pos_succ b)%pos @ p =	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ b)	";
             responses[i]=data;
           
 
             i = 105;
-            data = "1 subgoal (ID 261)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  loopexp_pos p (a + pos_succ b)%pos @ p =	  (loopexp_pos p a @ p) @ loopexp_pos p (pos_succ b)	";
+            data = "1 goal (ID 261)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p (a + b)%pos = loopexp_pos p a @ loopexp_pos p b	  b : Pos	  bH : loopexp_pos p (pos_succ a + b)%pos =	       loopexp_pos p (pos_succ a) @ loopexp_pos p b	  ============================	  loopexp_pos p (a + pos_succ b)%pos @ p =	  (loopexp_pos p a @ p) @ loopexp_pos p (pos_succ b)	";
             responses[i]=data;
           
 
             i = 106;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -558,7 +558,7 @@
           
 
             i = 108;
-            data = "1 subgoal (ID 183)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub a b) = loopexp_pos p^ b @ loopexp_pos p a	";
+            data = "1 goal (ID 183)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub a b) = loopexp_pos p^ b @ loopexp_pos p a	";
             responses[i]=data;
           
 
@@ -568,107 +568,107 @@
           
 
             i = 110;
-            data = "1 subgoal (ID 193)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 193)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 111;
-            data = "1 subgoal (ID 195)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall a b : Pos,	  loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 195)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall a b : Pos,	  loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 112;
-            data = "4 subgoals (ID 214)	  	  A : Type	  x : A	  p : x = x	  ============================	  loopexp_pos p^ 1%pos @ loopexp_pos p 1%pos =	  loopexp p (int_pos_sub 1%pos 1%pos)		subgoal 2 (ID 217) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p 1%pos =	 loopexp p (int_pos_sub 1%pos (pos_succ b))	subgoal 3 (ID 225) is:	 loopexp_pos p^ 1%pos @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	subgoal 4 (ID 228) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
+            data = "4 goals (ID 214)	  	  A : Type	  x : A	  p : x = x	  ============================	  loopexp_pos p^ 1%pos @ loopexp_pos p 1%pos =	  loopexp p (int_pos_sub 1%pos 1%pos)		goal 2 (ID 217) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p 1%pos =	 loopexp p (int_pos_sub 1%pos (pos_succ b))	goal 3 (ID 225) is:	 loopexp_pos p^ 1%pos @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	goal 4 (ID 228) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
             responses[i]=data;
           
 
             i = 113;
-            data = "1 subgoal (ID 214)	  	  A : Type	  x : A	  p : x = x	  ============================	  loopexp_pos p^ 1%pos @ loopexp_pos p 1%pos =	  loopexp p (int_pos_sub 1%pos 1%pos)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals		subgoal 1 (ID 217) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p 1%pos =	 loopexp p (int_pos_sub 1%pos (pos_succ b))	subgoal 2 (ID 225) is:	 loopexp_pos p^ 1%pos @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	subgoal 3 (ID 228) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
+            data = "1 goal (ID 214)	  	  A : Type	  x : A	  p : x = x	  ============================	  loopexp_pos p^ 1%pos @ loopexp_pos p 1%pos =	  loopexp p (int_pos_sub 1%pos 1%pos)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 goals		goal 1 (ID 217) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p 1%pos =	 loopexp p (int_pos_sub 1%pos (pos_succ b))	goal 2 (ID 225) is:	 loopexp_pos p^ 1%pos @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	goal 3 (ID 228) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
             responses[i]=data;
           
 
             i = 114;
-            data = "1 subgoal (ID 217)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p 1%pos =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  loopexp_pos p^ (pos_succ b) @ loopexp_pos p 1%pos =	  loopexp p (int_pos_sub 1%pos (pos_succ b))	1 subgoal (ID 233)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p 1%pos =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  loopexp_pos p^ (pos_succ b) @ p = loopexp p (neg b)	";
+            data = "1 goal (ID 217)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p 1%pos =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  loopexp_pos p^ (pos_succ b) @ loopexp_pos p 1%pos =	  loopexp p (int_pos_sub 1%pos (pos_succ b))	1 goal (ID 233)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p 1%pos =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  loopexp_pos p^ (pos_succ b) @ p = loopexp p (neg b)	";
             responses[i]=data;
           
 
             i = 115;
-            data = "1 subgoal (ID 234)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p 1%pos =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ b) @ p =	  loopexp p (neg b)	";
+            data = "1 goal (ID 234)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p 1%pos =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ b) @ p =	  loopexp p (neg b)	";
             responses[i]=data;
           
 
             i = 116;
-            data = "1 subgoal (ID 235)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p 1%pos =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p^	     (fun (_ : Pos) (q : x = x) => q @ p^) b @ p^) @ p = 	  loopexp p (neg b)	";
+            data = "1 goal (ID 235)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p 1%pos =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p^	     (fun (_ : Pos) (q : x = x) => q @ p^) b @ p^) @ p = 	  loopexp p (neg b)	";
             responses[i]=data;
           
 
             i = 117;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 225) is:	 loopexp_pos p^ 1%pos @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	subgoal 2 (ID 228) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 225) is:	 loopexp_pos p^ 1%pos @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	goal 2 (ID 228) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
             responses[i]=data;
           
 
             i = 118;
-            data = "1 subgoal (ID 225)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  loopexp_pos p^ 1%pos @ loopexp_pos p (pos_succ a) =	  loopexp p (int_pos_sub (pos_succ a) 1%pos)	1 subgoal (ID 262)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  p^ @ loopexp_pos p (pos_succ a) = loopexp_pos p a	";
+            data = "1 goal (ID 225)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  loopexp_pos p^ 1%pos @ loopexp_pos p (pos_succ a) =	  loopexp p (int_pos_sub (pos_succ a) 1%pos)	1 goal (ID 262)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  p^ @ loopexp_pos p (pos_succ a) = loopexp_pos p a	";
             responses[i]=data;
           
 
             i = 119;
-            data = "1 subgoal (ID 263)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  p^ @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
+            data = "1 goal (ID 263)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  p^ @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
             responses[i]=data;
           
 
             i = 120;
-            data = "1 subgoal (ID 264)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  p^ @	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
+            data = "1 goal (ID 264)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  p^ @	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
             responses[i]=data;
           
 
             i = 121;
-            data = "1 subgoal (ID 267)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  p^ @ (p @ loopexp_pos p a) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
+            data = "1 goal (ID 267)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  ============================	  p^ @ (p @ loopexp_pos p a) =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
             responses[i]=data;
           
 
             i = 122;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 228) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 228) is:	 loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
             responses[i]=data;
           
 
             i = 123;
-            data = "1 subgoal (ID 228)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	  loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	1 subgoal (ID 295)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 228)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	  loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	1 goal (ID 295)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p^ (pos_succ b) @ loopexp_pos p (pos_succ a) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 124;
-            data = "1 subgoal (ID 296)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ b) @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) = loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 296)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ b) @	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) = loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 125;
-            data = "1 subgoal (ID 298)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p^	     (fun (_ : Pos) (q : x = x) => q @ p^) b @ p^) @	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 298)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p^	     (fun (_ : Pos) (q : x = x) => q @ p^) b @ p^) @	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 126;
-            data = "1 subgoal (ID 325)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (loopexp_pos p^ b @ p^) @ (loopexp_pos p a @ p) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 325)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (loopexp_pos p^ b @ p^) @ (loopexp_pos p a @ p) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 127;
-            data = "1 subgoal (ID 328)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (loopexp_pos p^ b @ p^) @ (p @ loopexp_pos p a) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 328)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (loopexp_pos p^ b @ p^) @ (p @ loopexp_pos p a) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 128;
-            data = "1 subgoal (ID 350)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p^ b @ ((p^ @ p) @ loopexp_pos p a) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 350)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p^ b @ ((p^ @ p) @ loopexp_pos p a) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 129;
-            data = "1 subgoal (ID 369)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 369)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p^ b @ loopexp_pos p (pos_succ a) =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p^ b @ loopexp_pos p a = loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 130;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -678,7 +678,7 @@
           
 
             i = 132;
-            data = "1 subgoal (ID 206)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	";
+            data = "1 goal (ID 206)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	";
             responses[i]=data;
           
 
@@ -688,117 +688,117 @@
           
 
             i = 134;
-            data = "1 subgoal (ID 216)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 216)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 subgoal (ID 218)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall a b : Pos,	  loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 218)	  	  A : Type	  x : A	  p : x = x	  ============================	  forall a b : Pos,	  loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 136;
-            data = "4 subgoals (ID 237)	  	  A : Type	  x : A	  p : x = x	  ============================	  loopexp_pos p 1%pos @ loopexp_pos p^ 1%pos =	  loopexp p (int_pos_sub 1%pos 1%pos)		subgoal 2 (ID 240) is:	 loopexp_pos p 1%pos @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub 1%pos (pos_succ b))	subgoal 3 (ID 248) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ 1%pos =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	subgoal 4 (ID 251) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
+            data = "4 goals (ID 237)	  	  A : Type	  x : A	  p : x = x	  ============================	  loopexp_pos p 1%pos @ loopexp_pos p^ 1%pos =	  loopexp p (int_pos_sub 1%pos 1%pos)		goal 2 (ID 240) is:	 loopexp_pos p 1%pos @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub 1%pos (pos_succ b))	goal 3 (ID 248) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ 1%pos =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	goal 4 (ID 251) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 237)	  	  A : Type	  x : A	  p : x = x	  ============================	  loopexp_pos p 1%pos @ loopexp_pos p^ 1%pos =	  loopexp p (int_pos_sub 1%pos 1%pos)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 subgoals		subgoal 1 (ID 240) is:	 loopexp_pos p 1%pos @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub 1%pos (pos_succ b))	subgoal 2 (ID 248) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ 1%pos =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	subgoal 3 (ID 251) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
+            data = "1 goal (ID 237)	  	  A : Type	  x : A	  p : x = x	  ============================	  loopexp_pos p 1%pos @ loopexp_pos p^ 1%pos =	  loopexp p (int_pos_sub 1%pos 1%pos)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	3 goals		goal 1 (ID 240) is:	 loopexp_pos p 1%pos @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub 1%pos (pos_succ b))	goal 2 (ID 248) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ 1%pos =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	goal 3 (ID 251) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
             responses[i]=data;
           
 
             i = 138;
-            data = "1 subgoal (ID 240)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  loopexp_pos p 1%pos @ loopexp_pos p^ (pos_succ b) =	  loopexp p (int_pos_sub 1%pos (pos_succ b))	1 subgoal (ID 256)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @ loopexp_pos p^ (pos_succ b) = loopexp p (neg b)	";
+            data = "1 goal (ID 240)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  loopexp_pos p 1%pos @ loopexp_pos p^ (pos_succ b) =	  loopexp p (int_pos_sub 1%pos (pos_succ b))	1 goal (ID 256)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @ loopexp_pos p^ (pos_succ b) = loopexp p (neg b)	";
             responses[i]=data;
           
 
             i = 139;
-            data = "1 subgoal (ID 257)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ b) = 	  loopexp p (neg b)	";
+            data = "1 goal (ID 257)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ b) = 	  loopexp p (neg b)	";
             responses[i]=data;
           
 
             i = 140;
-            data = "1 subgoal (ID 258)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @	  (pos_peano_ind (fun _ : Pos => x = x) p^	     (fun (_ : Pos) (q : x = x) => q @ p^) b @ p^) = 	  loopexp p (neg b)	";
+            data = "1 goal (ID 258)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @	  (pos_peano_ind (fun _ : Pos => x = x) p^	     (fun (_ : Pos) (q : x = x) => q @ p^) b @ p^) = 	  loopexp p (neg b)	";
             responses[i]=data;
           
 
             i = 141;
-            data = "1 subgoal (ID 279)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @ (loopexp_pos p^ b @ p^) = loopexp p (neg b)	";
+            data = "1 goal (ID 279)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @ (loopexp_pos p^ b @ p^) = loopexp p (neg b)	";
             responses[i]=data;
           
 
             i = 142;
-            data = "1 subgoal (ID 282)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @ (p^ @ loopexp_pos p^ b) = loopexp p (neg b)	";
+            data = "1 goal (ID 282)	  	  A : Type	  x : A	  p : x = x	  b : Pos	  bH : loopexp_pos p 1%pos @ loopexp_pos p^ b =	       loopexp p (int_pos_sub 1%pos b)	  ============================	  p @ (p^ @ loopexp_pos p^ b) = loopexp p (neg b)	";
             responses[i]=data;
           
 
             i = 143;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 248) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ 1%pos =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	subgoal 2 (ID 251) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 248) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ 1%pos =	 loopexp p (int_pos_sub (pos_succ a) 1%pos)	goal 2 (ID 251) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
             responses[i]=data;
           
 
             i = 144;
-            data = "1 subgoal (ID 248)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  loopexp_pos p (pos_succ a) @ loopexp_pos p^ 1%pos =	  loopexp p (int_pos_sub (pos_succ a) 1%pos)	1 subgoal (ID 311)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  loopexp_pos p (pos_succ a) @ p^ = loopexp_pos p a	";
+            data = "1 goal (ID 248)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  loopexp_pos p (pos_succ a) @ loopexp_pos p^ 1%pos =	  loopexp p (int_pos_sub (pos_succ a) 1%pos)	1 goal (ID 311)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  loopexp_pos p (pos_succ a) @ p^ = loopexp_pos p a	";
             responses[i]=data;
           
 
             i = 145;
-            data = "1 subgoal (ID 312)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @ p^ =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
+            data = "1 goal (ID 312)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @ p^ =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
             responses[i]=data;
           
 
             i = 146;
-            data = "1 subgoal (ID 313)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) @ p^ =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
+            data = "1 goal (ID 313)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) @ p^ =	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    a	";
             responses[i]=data;
           
 
             i = 147;
-            data = "1 subgoal (ID 331)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  (loopexp_pos p a @ p) @ p^ = loopexp_pos p a	";
+            data = "1 goal (ID 331)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  ============================	  (loopexp_pos p a @ p) @ p^ = loopexp_pos p a	";
             responses[i]=data;
           
 
             i = 148;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 251) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 251) is:	 loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	 loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	";
             responses[i]=data;
           
 
             i = 149;
-            data = "1 subgoal (ID 251)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	  loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	1 subgoal (ID 357)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 251)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	  loopexp p (int_pos_sub (pos_succ a) (pos_succ b))	1 goal (ID 357)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p (pos_succ a) @ loopexp_pos p^ (pos_succ b) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 150;
-            data = "1 subgoal (ID 358)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ b) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 358)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  pos_peano_ind (fun _ : Pos => x = x) p (fun (_ : Pos) (q : x = x) => q @ p)	    (pos_succ a) @	  pos_peano_ind (fun _ : Pos => x = x) p^	    (fun (_ : Pos) (q : x = x) => q @ p^) (pos_succ b) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 151;
-            data = "1 subgoal (ID 360)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) @	  (pos_peano_ind (fun _ : Pos => x = x) p^	     (fun (_ : Pos) (q : x = x) => q @ p^) b @ p^) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 360)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (pos_peano_ind (fun _ : Pos => x = x) p	     (fun (_ : Pos) (q : x = x) => q @ p) a @ p) @	  (pos_peano_ind (fun _ : Pos => x = x) p^	     (fun (_ : Pos) (q : x = x) => q @ p^) b @ p^) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 152;
-            data = "1 subgoal (ID 387)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (loopexp_pos p a @ p) @ (loopexp_pos p^ b @ p^) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 387)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (loopexp_pos p a @ p) @ (loopexp_pos p^ b @ p^) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 153;
-            data = "1 subgoal (ID 393)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (loopexp_pos p a @ p) @ (p^ @ loopexp_pos p^ b) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 393)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  (loopexp_pos p a @ p) @ (p^ @ loopexp_pos p^ b) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 154;
-            data = "1 subgoal (ID 418)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p a @ ((p @ p^) @ loopexp_pos p^ b) =	  loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 418)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p a @ ((p @ p^) @ loopexp_pos p^ b) =	  loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 155;
-            data = "1 subgoal (ID 437)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	";
+            data = "1 goal (ID 437)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  aH : forall b : Pos,	       loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	  b : Pos	  bH : loopexp_pos p (pos_succ a) @ loopexp_pos p^ b =	       loopexp p (int_pos_sub (pos_succ a) b)	  ============================	  loopexp_pos p a @ loopexp_pos p^ b = loopexp p (int_pos_sub a b)	";
             responses[i]=data;
           
 
             i = 156;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -808,7 +808,7 @@
           
 
             i = 158;
-            data = "1 subgoal (ID 228)	  	  A : Type	  x : A	  p : x = x	  a, b : Int	  ============================	  loopexp p (a + b) = loopexp p a @ loopexp p b	";
+            data = "1 goal (ID 228)	  	  A : Type	  x : A	  p : x = x	  a, b : Int	  ============================	  loopexp p (a + b) = loopexp p a @ loopexp p b	";
             responses[i]=data;
           
 
@@ -818,27 +818,27 @@
           
 
             i = 160;
-            data = "6 subgoals (ID 283)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  ============================	  loopexp_pos p^ a = loopexp_pos p^ a @ 1		subgoal 2 (ID 284) is:	 loopexp p (int_pos_sub b a) = loopexp_pos p^ a @ loopexp_pos p b	subgoal 3 (ID 285) is:	 loopexp_pos p^ b = 1 @ loopexp_pos p^ b	subgoal 4 (ID 286) is:	 loopexp_pos p b = 1 @ loopexp_pos p b	subgoal 5 (ID 287) is:	 loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	subgoal 6 (ID 288) is:	 loopexp_pos p a = loopexp_pos p a @ 1	";
+            data = "6 goals (ID 283)	  	  A : Type	  x : A	  p : x = x	  a : Pos	  ============================	  loopexp_pos p^ a = loopexp_pos p^ a @ 1		goal 2 (ID 284) is:	 loopexp p (int_pos_sub b a) = loopexp_pos p^ a @ loopexp_pos p b	goal 3 (ID 285) is:	 loopexp_pos p^ b = 1 @ loopexp_pos p^ b	goal 4 (ID 286) is:	 loopexp_pos p b = 1 @ loopexp_pos p b	goal 5 (ID 287) is:	 loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	goal 6 (ID 288) is:	 loopexp_pos p a = loopexp_pos p a @ 1	";
             responses[i]=data;
           
 
             i = 161;
-            data = "4 subgoals (ID 284)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub b a) = loopexp_pos p^ a @ loopexp_pos p b		subgoal 2 (ID 285) is:	 loopexp_pos p^ b = 1 @ loopexp_pos p^ b	subgoal 3 (ID 286) is:	 loopexp_pos p b = 1 @ loopexp_pos p b	subgoal 4 (ID 287) is:	 loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	";
+            data = "4 goals (ID 284)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub b a) = loopexp_pos p^ a @ loopexp_pos p b		goal 2 (ID 285) is:	 loopexp_pos p^ b = 1 @ loopexp_pos p^ b	goal 3 (ID 286) is:	 loopexp_pos p b = 1 @ loopexp_pos p b	goal 4 (ID 287) is:	 loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	";
             responses[i]=data;
           
 
             i = 162;
-            data = "2 subgoals (ID 284)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub b a) = loopexp_pos p^ a @ loopexp_pos p b		subgoal 2 (ID 287) is:	 loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	";
+            data = "2 goals (ID 284)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub b a) = loopexp_pos p^ a @ loopexp_pos p b		goal 2 (ID 287) is:	 loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	";
             responses[i]=data;
           
 
             i = 163;
-            data = "1 subgoal (ID 287)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	";
+            data = "1 goal (ID 287)	  	  A : Type	  x : A	  p : x = x	  a, b : Pos	  ============================	  loopexp p (int_pos_sub a b) = loopexp_pos p a @ loopexp_pos p^ b	";
             responses[i]=data;
           
 
             i = 164;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -868,7 +868,7 @@
           
 
             i = 170;
-            data = "1 subgoal (ID 242)	  	  H : Univalence	  A : Type	  p : A = A	  z : Int	  a : A	  ============================	  equiv_path A A (loopexp p z) a = int_iter (equiv_path A A p) z a	";
+            data = "1 goal (ID 242)	  	  H : Univalence	  A : Type	  p : A = A	  z : Int	  a : A	  ============================	  equiv_path A A (loopexp p z) a = int_iter (equiv_path A A p) z a	";
             responses[i]=data;
           
 
@@ -878,27 +878,27 @@
           
 
             i = 172;
-            data = "2 subgoals (ID 251)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  ============================	  equiv_path A A (loopexp p (neg n)) a =	  int_iter (equiv_path A A p) (neg n) a		subgoal 2 (ID 253) is:	 equiv_path A A (loopexp p (pos n)) a = int_iter (equiv_path A A p) (pos n) a	";
+            data = "2 goals (ID 251)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  ============================	  equiv_path A A (loopexp p (neg n)) a =	  int_iter (equiv_path A A p) (neg n) a		goal 2 (ID 253) is:	 equiv_path A A (loopexp p (pos n)) a = int_iter (equiv_path A A p) (pos n) a	";
             responses[i]=data;
           
 
             i = 173;
-            data = "2 subgoals (ID 295)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  IH : transport idmap (loopexp_pos p^ n) a =	       pos_iter (transport idmap p^) n a	  ============================	  transport idmap (loopexp_pos p^ (pos_succ n)) a =	  pos_iter (transport idmap p^) (pos_succ n) a		subgoal 2 (ID 297) is:	 transport idmap (loopexp_pos p (pos_succ n)) a =	 pos_iter (transport idmap p) (pos_succ n) a	";
+            data = "2 goals (ID 295)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  IH : transport idmap (loopexp_pos p^ n) a =	       pos_iter (transport idmap p^) n a	  ============================	  transport idmap (loopexp_pos p^ (pos_succ n)) a =	  pos_iter (transport idmap p^) (pos_succ n) a		goal 2 (ID 297) is:	 transport idmap (loopexp_pos p (pos_succ n)) a =	 pos_iter (transport idmap p) (pos_succ n) a	";
             responses[i]=data;
           
 
             i = 174;
-            data = "2 subgoals (ID 300)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  IH : transport idmap (loopexp_pos p^ n) a =	       pos_iter (transport idmap p^) n a	  ============================	  transport idmap	    (pos_peano_ind (fun _ : Pos => A = A) p^	       (fun (_ : Pos) (q : A = A) => q @ p^) n @ p^) a =	  pos_iter (transport idmap p^) (pos_succ n) a		subgoal 2 (ID 301) is:	 transport idmap	   (pos_peano_ind (fun _ : Pos => A = A) p	      (fun (_ : Pos) (q : A = A) => q @ p) n @ p) a =	 pos_iter (transport idmap p) (pos_succ n) a	";
+            data = "2 goals (ID 300)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  IH : transport idmap (loopexp_pos p^ n) a =	       pos_iter (transport idmap p^) n a	  ============================	  transport idmap	    (pos_peano_ind (fun _ : Pos => A = A) p^	       (fun (_ : Pos) (q : A = A) => q @ p^) n @ p^) a =	  pos_iter (transport idmap p^) (pos_succ n) a		goal 2 (ID 301) is:	 transport idmap	   (pos_peano_ind (fun _ : Pos => A = A) p	      (fun (_ : Pos) (q : A = A) => q @ p) n @ p) a =	 pos_iter (transport idmap p) (pos_succ n) a	";
             responses[i]=data;
           
 
             i = 175;
-            data = "2 subgoals (ID 304)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  IH : transport idmap (loopexp_pos p^ n) a =	       pos_iter (transport idmap p^) n a	  ============================	  transport idmap	    (pos_peano_ind (fun _ : Pos => A = A) p^	       (fun (_ : Pos) (q : A = A) => q @ p^) n @ p^) a =	  transport idmap p^	    (pos_peano_ind (fun _ : Pos => A -> A) (transport idmap p^)	       (fun (_ : Pos) (g : A -> A) (x : A) => transport idmap p^ (g x)) n a)		subgoal 2 (ID 305) is:	 transport idmap	   (pos_peano_ind (fun _ : Pos => A = A) p	      (fun (_ : Pos) (q : A = A) => q @ p) n @ p) a =	 transport idmap p	   (pos_peano_ind (fun _ : Pos => A -> A) (transport idmap p)	      (fun (_ : Pos) (g : A -> A) (x : A) => transport idmap p (g x)) n a)	";
+            data = "2 goals (ID 304)	  	  H : Univalence	  A : Type	  p : A = A	  n : Pos	  a : A	  IH : transport idmap (loopexp_pos p^ n) a =	       pos_iter (transport idmap p^) n a	  ============================	  transport idmap	    (pos_peano_ind (fun _ : Pos => A = A) p^	       (fun (_ : Pos) (q : A = A) => q @ p^) n @ p^) a =	  transport idmap p^	    (pos_peano_ind (fun _ : Pos => A -> A) (transport idmap p^)	       (fun (_ : Pos) (g : A -> A) (x : A) => transport idmap p^ (g x)) n a)		goal 2 (ID 305) is:	 transport idmap	   (pos_peano_ind (fun _ : Pos => A = A) p	      (fun (_ : Pos) (q : A = A) => q @ p) n @ p) a =	 transport idmap p	   (pos_peano_ind (fun _ : Pos => A -> A) (transport idmap p)	      (fun (_ : Pos) (g : A -> A) (x : A) => transport idmap p (g x)) n a)	";
             responses[i]=data;
           
 
             i = 176;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -908,7 +908,7 @@
           
 
             i = 178;
-            data = "1 subgoal (ID 266)	  	  H : Univalence	  A : Type	  f : A <~> A	  z : Int	  a : A	  ============================	  transport idmap (loopexp (path_universe f) z) a = int_iter f z a	";
+            data = "1 goal (ID 266)	  	  H : Univalence	  A : Type	  f : A <~> A	  z : Int	  a : A	  ============================	  transport idmap (loopexp (path_universe f) z) a = int_iter f z a	";
             responses[i]=data;
           
 
@@ -918,27 +918,27 @@
           
 
             i = 180;
-            data = "1 subgoal (ID 268)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  ============================	  forall f : A <~> A,	  transport idmap (loopexp (path_universe f) z) a = int_iter f z a	";
+            data = "1 goal (ID 268)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  ============================	  forall f : A <~> A,	  transport idmap (loopexp (path_universe f) z) a = int_iter f z a	";
             responses[i]=data;
           
 
             i = 181;
-            data = "1 subgoal (ID 277)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  transport idmap (loopexp (path_universe (equiv_path A A p)) z) a =	  int_iter (equiv_path A A p) z a	";
+            data = "1 goal (ID 277)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  transport idmap (loopexp (path_universe (equiv_path A A p)) z) a =	  int_iter (equiv_path A A p) z a	";
             responses[i]=data;
           
 
             i = 182;
-            data = "1 subgoal (ID 286)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  transport idmap (loopexp (path_universe (equiv_path A A p)) z) a =	  equiv_path A A (loopexp p z) a	";
+            data = "1 goal (ID 286)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  transport idmap (loopexp (path_universe (equiv_path A A p)) z) a =	  equiv_path A A (loopexp p z) a	";
             responses[i]=data;
           
 
             i = 183;
-            data = "1 subgoal (ID 298)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  path_universe (equiv_path A A p) = p	";
+            data = "1 goal (ID 298)	  	  H : Univalence	  A : Type	  z : Int	  a : A	  p : A = A	  ============================	  path_universe (equiv_path A A p) = p	";
             responses[i]=data;
           
 
             i = 184;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 

@@ -36,8 +36,8 @@ Time: 0.013s">
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import Spaces.Pos.</pre>
 </div>
@@ -84,8 +84,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 12
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>Inductive Int : Type0 :=
   | neg : Pos -&gt; Int
   | zero : Int
@@ -147,8 +147,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 26
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
 
 Definition pos_inj {z w : Pos} (p : pos z = pos w) : z = w
@@ -157,8 +157,8 @@ Definition pos_inj {z w : Pos} (p : pos z = pos w) : z = w
 </div>
 <div class="code" title="File: Core.v
 Line: 30
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition neg_neq_zero {z : Pos} : ~ (neg z = zero)
@@ -177,8 +177,8 @@ Definition pos_neq_zero {z : Pos} : ~ (pos z = zero)
 </div>
 <div class="code" title="File: Core.v
 Line: 38
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition neg_neq_pos {z w : Pos} : ~ (neg z = pos w)
@@ -187,16 +187,16 @@ Definition neg_neq_pos {z w : Pos} : ~ (neg z = pos w)
 </div>
 <div class="code" title="File: Core.v
 Line: 42
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>
 
 Definition zero_neq_neg {z : Pos} := @neg_neq_zero z o symmetry _ _.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 44
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition zero_neq_pos {z : Pos} := @pos_neq_zero z o symmetry _ _.</pre>
@@ -273,7 +273,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Numeral Notation Int int_of_decimal_int int_to_decimal_int : int_scope.</pre>
+Number Notation Int int_of_decimal_int int_to_decimal_int : int_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 83
@@ -521,8 +521,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 163
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition int_mul x y :=
   match x, y with
     | 0, _ =&gt; 0

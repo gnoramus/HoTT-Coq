@@ -118,7 +118,7 @@
           
 
             i = 20;
-            data = "1 subgoal (ID 85)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : Type	  spushl' : X -> R	  spushr' : Y -> R	  sglue' : forall (x : X) (y : Y), Q x y -> spushl' x = spushr' y	  ============================	  SPushout -> R	";
+            data = "1 goal (ID 85)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : Type	  spushl' : X -> R	  spushr' : Y -> R	  sglue' : forall (x : X) (y : Y), Q x y -> spushl' x = spushr' y	  ============================	  SPushout -> R	";
             responses[i]=data;
           
 
@@ -128,17 +128,17 @@
           
 
             i = 22;
-            data = "1 subgoal (ID 193)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : Type	  spushl' : X -> R	  spushr' : Y -> R	  sglue' : forall (x : X) (y : Y), Q x y -> spushl' x = spushr' y	  ============================	  forall a : {xy : X * Y & Q (fst xy) (snd xy)},	  spushl' ((fst o pr1) a) = spushr' ((snd o pr1) a)	";
+            data = "1 goal (ID 193)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : Type	  spushl' : X -> R	  spushr' : Y -> R	  sglue' : forall (x : X) (y : Y), Q x y -> spushl' x = spushr' y	  ============================	  forall a : {xy : X * Y & Q (fst xy) (snd xy)},	  spushl' ((fst o pr1) a) = spushr' ((snd o pr1) a)	";
             responses[i]=data;
           
 
             i = 23;
-            data = "1 subgoal (ID 204)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : Type	  spushl' : X -> R	  spushr' : Y -> R	  sglue' : forall (x : X) (y : Y), Q x y -> spushl' x = spushr' y	  x : X	  y : Y	  q : Q x y	  ============================	  spushl' x = spushr' y	";
+            data = "1 goal (ID 204)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : Type	  spushl' : X -> R	  spushr' : Y -> R	  sglue' : forall (x : X) (y : Y), Q x y -> spushl' x = spushr' y	  x : X	  y : Y	  q : Q x y	  ============================	  spushl' x = spushr' y	";
             responses[i]=data;
           
 
             i = 24;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -148,7 +148,7 @@
           
 
             i = 26;
-            data = "1 subgoal (ID 102)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : SPushout -> Type	  spushl' : forall x : X, R (spushl x)	  spushr' : forall y : Y, R (spushr y)	  sglue' : forall (x : X) (y : Y) (q : Q x y),	           transport R (spglue q) (spushl' x) = spushr' y	  ============================	  forall p : SPushout, R p	";
+            data = "1 goal (ID 102)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : SPushout -> Type	  spushl' : forall x : X, R (spushl x)	  spushr' : forall y : Y, R (spushr y)	  sglue' : forall (x : X) (y : Y) (q : Q x y),	           transport R (spglue q) (spushl' x) = spushr' y	  ============================	  forall p : SPushout, R p	";
             responses[i]=data;
           
 
@@ -158,17 +158,17 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 210)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : SPushout -> Type	  spushl' : forall x : X, R (spushl x)	  spushr' : forall y : Y, R (spushr y)	  sglue' : forall (x : X) (y : Y) (q : Q x y),	           transport R (spglue q) (spushl' x) = spushr' y	  ============================	  forall a : {xy : X * Y & Q (fst xy) (snd xy)},	  transport R (pglue a) (spushl' ((fst o pr1) a)) = spushr' ((snd o pr1) a)	";
+            data = "1 goal (ID 210)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : SPushout -> Type	  spushl' : forall x : X, R (spushl x)	  spushr' : forall y : Y, R (spushr y)	  sglue' : forall (x : X) (y : Y) (q : Q x y),	           transport R (spglue q) (spushl' x) = spushr' y	  ============================	  forall a : {xy : X * Y & Q (fst xy) (snd xy)},	  transport R (pglue a) (spushl' ((fst o pr1) a)) = spushr' ((snd o pr1) a)	";
             responses[i]=data;
           
 
             i = 29;
-            data = "1 subgoal (ID 221)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : SPushout -> Type	  spushl' : forall x : X, R (spushl x)	  spushr' : forall y : Y, R (spushr y)	  sglue' : forall (x : X) (y : Y) (q : Q x y),	           transport R (spglue q) (spushl' x) = spushr' y	  x : X	  y : Y	  q : Q x y	  ============================	  transport R (pglue ((x, y); q)) (spushl' x) = spushr' y	";
+            data = "1 goal (ID 221)	  	  X : Type	  Y : Type	  Q : X -> Y -> Type	  R : SPushout -> Type	  spushl' : forall x : X, R (spushl x)	  spushr' : forall y : Y, R (spushr y)	  sglue' : forall (x : X) (y : Y) (q : Q x y),	           transport R (spglue q) (spushl' x) = spushr' y	  x : X	  y : Y	  q : Q x y	  ============================	  transport R (pglue ((x, y); q)) (spushl' x) = spushr' y	";
             responses[i]=data;
           
 
             i = 30;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 

@@ -183,7 +183,7 @@
           
 
             i = 33;
-            data = "1 subgoal (ID 16)	  	  n : nat	  A : Type	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n (const tt) (fun u : Unit => D u (c u))	  ============================	  ExtendableAlong_Over n (const tt) C D ext	";
+            data = "1 goal (ID 16)	  	  n : nat	  A : Type	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n (const tt) (fun u : Unit => D u (c u))	  ============================	  ExtendableAlong_Over n (const tt) C D ext	";
             responses[i]=data;
           
 
@@ -193,42 +193,42 @@
           
 
             i = 35;
-            data = "2 subgoals (ID 41)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  ============================	  forall (g : forall a : A, C (const tt a))	  (g' : forall a : A, D (const tt a) (g a)),	  {rec : forall b : Unit, D b ((fst ext g).1 b) &	  forall a : A,	  transport (D (const tt a)) ((fst ext g).2 a) (rec (const tt a)) = g' a}		subgoal 2 (ID 42) is:	 forall (h k : forall b : Unit, C b) (h' : forall b : Unit, D b (h b))	 (k' : forall b : Unit, D b (k b)),	 ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	   (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	   (snd ext h k)	";
+            data = "2 goals (ID 41)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  ============================	  forall (g : forall a : A, C (const tt a))	  (g' : forall a : A, D (const tt a) (g a)),	  {rec : forall b : Unit, D b ((fst ext g).1 b) &	  forall a : A,	  transport (D (const tt a)) ((fst ext g).2 a) (rec (const tt a)) = g' a}		goal 2 (ID 42) is:	 forall (h k : forall b : Unit, C b) (h' : forall b : Unit, D b (h b))	 (k' : forall b : Unit, D b (k b)),	 ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	   (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	   (snd ext h k)	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 41)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  ============================	  forall (g : forall a : A, C (const tt a))	  (g' : forall a : A, D (const tt a) (g a)),	  {rec : forall b : Unit, D b ((fst ext g).1 b) &	  forall a : A,	  transport (D (const tt a)) ((fst ext g).2 a) (rec (const tt a)) = g' a}	1 subgoal (ID 44)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  ============================	  {rec : forall b : Unit, D b ((fst ext g).1 b) &	  forall a : A,	  transport (D (const tt a)) ((fst ext g).2 a) (rec (const tt a)) = g' a}	";
+            data = "1 goal (ID 41)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  ============================	  forall (g : forall a : A, C (const tt a))	  (g' : forall a : A, D (const tt a) (g a)),	  {rec : forall b : Unit, D b ((fst ext g).1 b) &	  forall a : A,	  transport (D (const tt a)) ((fst ext g).2 a) (rec (const tt a)) = g' a}	1 goal (ID 44)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  ============================	  {rec : forall b : Unit, D b ((fst ext g).1 b) &	  forall a : A,	  transport (D (const tt a)) ((fst ext g).2 a) (rec (const tt a)) = g' a}	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 69)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  a : A	  ============================	  transport (D (const tt a)) ((fst ext g).2 a)	    ((fst (ext' (fst ext g).1)	        (fun a0 : A =>	         transport (D (const tt a0)) ((fst ext g).2 a0)^ (g' a0))).1	       (const tt a)) = g' a	";
+            data = "1 goal (ID 69)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  a : A	  ============================	  transport (D (const tt a)) ((fst ext g).2 a)	    ((fst (ext' (fst ext g).1)	        (fun a0 : A =>	         transport (D (const tt a0)) ((fst ext g).2 a0)^ (g' a0))).1	       (const tt a)) = g' a	";
             responses[i]=data;
           
 
             i = 38;
-            data = "1 subgoal (ID 71)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  a : A	  ============================	  (fst (ext' (fst ext g).1)	     (fun a0 : A => transport (D (const tt a0)) ((fst ext g).2 a0)^ (g' a0))).1	    (const tt a) = transport (D (const tt a)) ((fst ext g).2 a)^ (g' a)	";
+            data = "1 goal (ID 71)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  g : forall a : A, C (const tt a)	  g' : forall a : A, D (const tt a) (g a)	  a : A	  ============================	  (fst (ext' (fst ext g).1)	     (fun a0 : A => transport (D (const tt a0)) ((fst ext g).2 a0)^ (g' a0))).1	    (const tt a) = transport (D (const tt a)) ((fst ext g).2 a)^ (g' a)	";
             responses[i]=data;
           
 
             i = 39;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 42) is:	 forall (h k : forall b : Unit, C b) (h' : forall b : Unit, D b (h b))	 (k' : forall b : Unit, D b (k b)),	 ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	   (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	   (snd ext h k)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 42) is:	 forall (h k : forall b : Unit, C b) (h' : forall b : Unit, D b (h b))	 (k' : forall b : Unit, D b (k b)),	 ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	   (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	   (snd ext h k)	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 42)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  ============================	  forall (h k : forall b : Unit, C b) (h' : forall b : Unit, D b (h b))	  (k' : forall b : Unit, D b (k b)),	  ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	    (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	    (snd ext h k)	1 subgoal (ID 96)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  h, k : forall b : Unit, C b	  h' : forall b : Unit, D b (h b)	  k' : forall b : Unit, D b (k b)	  ============================	  ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	    (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	    (snd ext h k)	";
+            data = "1 goal (ID 42)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  ============================	  forall (h k : forall b : Unit, C b) (h' : forall b : Unit, D b (h b))	  (k' : forall b : Unit, D b (k b)),	  ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	    (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	    (snd ext h k)	1 goal (ID 96)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  h, k : forall b : Unit, C b	  h' : forall b : Unit, D b (h b)	  k' : forall b : Unit, D b (k b)	  ============================	  ExtendableAlong_Over n (const tt) (fun b : Unit => h b = k b)	    (fun (b : Unit) (c : h b = k b) => transport (D b) c (h' b) = k' b)	    (snd ext h k)	";
             responses[i]=data;
           
 
             i = 41;
-            data = "1 subgoal (ID 98)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  h, k : forall b : Unit, C b	  h' : forall b : Unit, D b (h b)	  k' : forall b : Unit, D b (k b)	  g : forall u : Unit, h u = k u	  ============================	  ExtendableAlong n (const tt)	    (fun u : Unit => transport (D u) (g u) (h' u) = k' u)	";
+            data = "1 goal (ID 98)	  	  A : Type	  n : nat	  IH : forall (C : Unit -> Type) (D : forall u : Unit, C u -> Type)	       (ext : ExtendableAlong n (const tt) C),	       (forall c : forall u : Unit, C u,	        ExtendableAlong n (const tt) (fun u : Unit => D u (c u))) ->	       ExtendableAlong_Over n (const tt) C D ext	  C : Unit -> Type	  D : forall u : Unit, C u -> Type	  ext : ExtendableAlong n.+1 (const tt) C	  ext' : forall c : forall u : Unit, C u,	         ExtendableAlong n.+1 (const tt) (fun u : Unit => D u (c u))	  h, k : forall b : Unit, C b	  h' : forall b : Unit, D b (h b)	  k' : forall b : Unit, D b (k b)	  g : forall u : Unit, h u = k u	  ============================	  ExtendableAlong n (const tt)	    (fun u : Unit => transport (D u) (g u) (h' u) = k' u)	";
             responses[i]=data;
           
 
             i = 42;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 29)	  	  S : NullGenerators	  ============================	  Modality	";
+            data = "1 goal (ID 29)	  	  S : NullGenerators	  ============================	  Modality	";
             responses[i]=data;
           
 
@@ -273,17 +273,17 @@
           
 
             i = 51;
-            data = "2 subgoals (ID 31)	  	  S : NullGenerators	  ============================	  forall T : Type, PreReflects (Loc (null_to_local_generators S)) T		subgoal 2 (ID 33) is:	 forall T : Type,	 ReflectsD (Loc (null_to_local_generators S))	   (Loc (null_to_local_generators S)) T	";
+            data = "2 goals (ID 31)	  	  S : NullGenerators	  ============================	  forall T : Type, PreReflects (Loc (null_to_local_generators S)) T		goal 2 (ID 33) is:	 forall T : Type,	 ReflectsD (Loc (null_to_local_generators S))	   (Loc (null_to_local_generators S)) T	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 31)	  	  S : NullGenerators	  ============================	  forall T : Type, PreReflects (Loc (null_to_local_generators S)) T	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 33) is:	 forall T : Type,	 ReflectsD (Loc (null_to_local_generators S))	   (Loc (null_to_local_generators S)) T	";
+            data = "1 goal (ID 31)	  	  S : NullGenerators	  ============================	  forall T : Type, PreReflects (Loc (null_to_local_generators S)) T	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 33) is:	 forall T : Type,	 ReflectsD (Loc (null_to_local_generators S))	   (Loc (null_to_local_generators S)) T	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 33)	  	  S : NullGenerators	  ============================	  forall T : Type,	  ReflectsD (Loc (null_to_local_generators S))	    (Loc (null_to_local_generators S)) T	1 subgoal (ID 75)	  	  S : NullGenerators	  A : Type	  ============================	  ReflectsD (Loc (null_to_local_generators S))	    (Loc (null_to_local_generators S)) A	";
+            data = "1 goal (ID 33)	  	  S : NullGenerators	  ============================	  forall T : Type,	  ReflectsD (Loc (null_to_local_generators S))	    (Loc (null_to_local_generators S)) T	1 goal (ID 75)	  	  S : NullGenerators	  A : Type	  ============================	  ReflectsD (Loc (null_to_local_generators S))	    (Loc (null_to_local_generators S)) A	";
             responses[i]=data;
           
 
@@ -308,42 +308,42 @@
           
 
             i = 58;
-            data = "3 subgoals (ID 81)	  	  S : NullGenerators	  A : Type	  ============================	  forall B : O_reflector (Loc (null_to_local_generators S)) A -> Type,	  (forall oa : O_reflector (Loc (null_to_local_generators S)) A,	   In (Loc (null_to_local_generators S)) (B oa)) ->	  (forall a : A, B (to (Loc (null_to_local_generators S)) A a)) ->	  forall oa : O_reflector (Loc (null_to_local_generators S)) A, B oa		subgoal 2 (ID 83) is:	 forall (B : O_reflector (Loc (null_to_local_generators S)) A -> Type)	 (B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa))	 (f : forall a : A, B (to (Loc (null_to_local_generators S)) A a)) 	 (a : A),	 ?OO_ind' B B_inO f (to (Loc (null_to_local_generators S)) A a) = f a	subgoal 3 (ID 85) is:	 forall B : Type,	 In (Loc (null_to_local_generators S)) B ->	 forall z z' : B, In (Loc (null_to_local_generators S)) (z = z')	";
+            data = "3 goals (ID 81)	  	  S : NullGenerators	  A : Type	  ============================	  forall B : O_reflector (Loc (null_to_local_generators S)) A -> Type,	  (forall oa : O_reflector (Loc (null_to_local_generators S)) A,	   In (Loc (null_to_local_generators S)) (B oa)) ->	  (forall a : A, B (to (Loc (null_to_local_generators S)) A a)) ->	  forall oa : O_reflector (Loc (null_to_local_generators S)) A, B oa		goal 2 (ID 83) is:	 forall (B : O_reflector (Loc (null_to_local_generators S)) A -> Type)	 (B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa))	 (f : forall a : A, B (to (Loc (null_to_local_generators S)) A a)) 	 (a : A),	 ?OO_ind' B B_inO f (to (Loc (null_to_local_generators S)) A a) = f a	goal 3 (ID 85) is:	 forall B : Type,	 In (Loc (null_to_local_generators S)) B ->	 forall z z' : B, In (Loc (null_to_local_generators S)) (z = z')	";
             responses[i]=data;
           
 
             i = 59;
-            data = "1 subgoal (ID 81)	  	  S : NullGenerators	  A : Type	  ============================	  forall B : O_reflector (Loc (null_to_local_generators S)) A -> Type,	  (forall oa : O_reflector (Loc (null_to_local_generators S)) A,	   In (Loc (null_to_local_generators S)) (B oa)) ->	  (forall a : A, B (to (Loc (null_to_local_generators S)) A a)) ->	  forall oa : O_reflector (Loc (null_to_local_generators S)) A, B oa	1 subgoal (ID 88)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  ============================	  forall oa : O_reflector (Loc (null_to_local_generators S)) A, B oa	";
+            data = "1 goal (ID 81)	  	  S : NullGenerators	  A : Type	  ============================	  forall B : O_reflector (Loc (null_to_local_generators S)) A -> Type,	  (forall oa : O_reflector (Loc (null_to_local_generators S)) A,	   In (Loc (null_to_local_generators S)) (B oa)) ->	  (forall a : A, B (to (Loc (null_to_local_generators S)) A a)) ->	  forall oa : O_reflector (Loc (null_to_local_generators S)) A, B oa	1 goal (ID 88)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  ============================	  forall oa : O_reflector (Loc (null_to_local_generators S)) A, B oa	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 92)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  ============================	  ooExtendableAlong_Over (null_to_local_generators S i)	    (fun _ : lgen_codomain (null_to_local_generators S) i =>	     Localize (null_to_local_generators S) A)	    (fun _ : lgen_codomain (null_to_local_generators S) i => B)	    (islocal_localize (null_to_local_generators S) A i)	";
+            data = "1 goal (ID 92)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  ============================	  ooExtendableAlong_Over (null_to_local_generators S i)	    (fun _ : lgen_codomain (null_to_local_generators S) i =>	     Localize (null_to_local_generators S) A)	    (fun _ : lgen_codomain (null_to_local_generators S) i => B)	    (islocal_localize (null_to_local_generators S) A i)	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 94)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  c : Unit -> Localize (null_to_local_generators S) A	  ============================	  ooExtendableAlong (const tt) (fun u : Unit => B (c u))	";
+            data = "1 goal (ID 94)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  c : Unit -> Localize (null_to_local_generators S) A	  ============================	  ooExtendableAlong (const tt) (fun u : Unit => B (c u))	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 118)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  c : Unit -> Localize (null_to_local_generators S) A	  ============================	  ooExtendableAlong (const tt) (unit_name (B (c tt)))	";
+            data = "1 goal (ID 120)	  	  S : NullGenerators	  A : Type	  B : O_reflector (Loc (null_to_local_generators S)) A -> Type	  B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa)	  g : forall a : A, B (to (Loc (null_to_local_generators S)) A a)	  i : lgen_indices (null_to_local_generators S)	  c : Unit -> Localize (null_to_local_generators S) A	  ============================	  ooExtendableAlong (const tt) (unit_name (B (c tt)))	";
             responses[i]=data;
           
 
             i = 63;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 83) is:	 forall (B : O_reflector (Loc (null_to_local_generators S)) A -> Type)	 (B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa))	 (f : forall a : A, B (to (Loc (null_to_local_generators S)) A a)) 	 (a : A),	 (fun (B0 : O_reflector (Loc (null_to_local_generators S)) A -> Type)	    (B_inO0 : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	              In (Loc (null_to_local_generators S)) (B0 oa))	    (g : forall a0 : A, B0 (to (Loc (null_to_local_generators S)) A a0)) =>	  Localize_ind (null_to_local_generators S) A B0 g	    (fun i : lgen_indices (null_to_local_generators S) =>	     ooextendable_over_unit (lgen_domain (null_to_local_generators S) i)	       (fun _ : lgen_codomain (null_to_local_generators S) i =>	        Localize (null_to_local_generators S) A)	       (fun _ : lgen_codomain (null_to_local_generators S) i => B0)	       (islocal_localize (null_to_local_generators S) A i)	       (fun c : Unit -> Localize (null_to_local_generators S) A =>	        ooextendable_postcompose (unit_name (B0 (c tt)))	          (fun u : Unit => B0 (c u)) (const tt)	          (fun u : Unit => transport B0 (ap c (path_unit tt u)))	          (ooextendable_islocal (null_to_local_generators S) i)))) B B_inO f	   (to (Loc (null_to_local_generators S)) A a) = f a	subgoal 2 (ID 85) is:	 forall B : Type,	 In (Loc (null_to_local_generators S)) B ->	 forall z z' : B, In (Loc (null_to_local_generators S)) (z = z')	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 83) is:	 forall (B : O_reflector (Loc (null_to_local_generators S)) A -> Type)	 (B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	          In (Loc (null_to_local_generators S)) (B oa))	 (f : forall a : A, B (to (Loc (null_to_local_generators S)) A a)) 	 (a : A),	 (fun (B0 : O_reflector (Loc (null_to_local_generators S)) A -> Type)	    (B_inO0 : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	              In (Loc (null_to_local_generators S)) (B0 oa))	    (g : forall a0 : A, B0 (to (Loc (null_to_local_generators S)) A a0)) =>	  Localize_ind (null_to_local_generators S) A B0 g	    (fun i : lgen_indices (null_to_local_generators S) =>	     ooextendable_over_unit (lgen_domain (null_to_local_generators S) i)	       (fun _ : lgen_codomain (null_to_local_generators S) i =>	        Localize (null_to_local_generators S) A)	       (fun _ : lgen_codomain (null_to_local_generators S) i => B0)	       (islocal_localize (null_to_local_generators S) A i)	       (fun c : Unit -> Localize (null_to_local_generators S) A =>	        ooextendable_postcompose (unit_name (B0 (c tt)))	          (fun u : Unit => B0 (c u)) (const tt)	          (fun u : Unit => transport B0 (ap c (path_unit tt u)))	          (ooextendable_islocal (null_to_local_generators S) i)))) B B_inO f	   (to (Loc (null_to_local_generators S)) A a) = f a	goal 2 (ID 85) is:	 forall B : Type,	 In (Loc (null_to_local_generators S)) B ->	 forall z z' : B, In (Loc (null_to_local_generators S)) (z = z')	";
             responses[i]=data;
           
 
             i = 64;
-            data = "1 subgoal (ID 83)	  	  S : NullGenerators	  A : Type	  ============================	  forall (B : O_reflector (Loc (null_to_local_generators S)) A -> Type)	  (B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	           In (Loc (null_to_local_generators S)) (B oa))	  (f : forall a : A, B (to (Loc (null_to_local_generators S)) A a)) 	  (a : A),	  (fun (B0 : O_reflector (Loc (null_to_local_generators S)) A -> Type)	     (B_inO0 : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	               In (Loc (null_to_local_generators S)) (B0 oa))	     (g : forall a0 : A, B0 (to (Loc (null_to_local_generators S)) A a0)) =>	   Localize_ind (null_to_local_generators S) A B0 g	     (fun i : lgen_indices (null_to_local_generators S) =>	      ooextendable_over_unit (lgen_domain (null_to_local_generators S) i)	        (fun _ : lgen_codomain (null_to_local_generators S) i =>	         Localize (null_to_local_generators S) A)	        (fun _ : lgen_codomain (null_to_local_generators S) i => B0)	        (islocal_localize (null_to_local_generators S) A i)	        (fun c : Unit -> Localize (null_to_local_generators S) A =>	         ooextendable_postcompose (unit_name (B0 (c tt)))	           (fun u : Unit => B0 (c u)) (const tt)	           (fun u : Unit => transport B0 (ap c (path_unit tt u)))	           (ooextendable_islocal (null_to_local_generators S) i)))) B B_inO f	    (to (Loc (null_to_local_generators S)) A a) = 	  f a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 85) is:	 forall B : Type,	 In (Loc (null_to_local_generators S)) B ->	 forall z z' : B, In (Loc (null_to_local_generators S)) (z = z')	";
+            data = "1 goal (ID 83)	  	  S : NullGenerators	  A : Type	  ============================	  forall (B : O_reflector (Loc (null_to_local_generators S)) A -> Type)	  (B_inO : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	           In (Loc (null_to_local_generators S)) (B oa))	  (f : forall a : A, B (to (Loc (null_to_local_generators S)) A a)) 	  (a : A),	  (fun (B0 : O_reflector (Loc (null_to_local_generators S)) A -> Type)	     (B_inO0 : forall oa : O_reflector (Loc (null_to_local_generators S)) A,	               In (Loc (null_to_local_generators S)) (B0 oa))	     (g : forall a0 : A, B0 (to (Loc (null_to_local_generators S)) A a0)) =>	   Localize_ind (null_to_local_generators S) A B0 g	     (fun i : lgen_indices (null_to_local_generators S) =>	      ooextendable_over_unit (lgen_domain (null_to_local_generators S) i)	        (fun _ : lgen_codomain (null_to_local_generators S) i =>	         Localize (null_to_local_generators S) A)	        (fun _ : lgen_codomain (null_to_local_generators S) i => B0)	        (islocal_localize (null_to_local_generators S) A i)	        (fun c : Unit -> Localize (null_to_local_generators S) A =>	         ooextendable_postcompose (unit_name (B0 (c tt)))	           (fun u : Unit => B0 (c u)) (const tt)	           (fun u : Unit => transport B0 (ap c (path_unit tt u)))	           (ooextendable_islocal (null_to_local_generators S) i)))) B B_inO f	    (to (Loc (null_to_local_generators S)) A a) = 	  f a	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 85) is:	 forall B : Type,	 In (Loc (null_to_local_generators S)) B ->	 forall z z' : B, In (Loc (null_to_local_generators S)) (z = z')	";
             responses[i]=data;
           
 
             i = 65;
-            data = "1 subgoal (ID 85)	  	  S : NullGenerators	  A : Type	  ============================	  forall B : Type,	  In (Loc (null_to_local_generators S)) B ->	  forall z z' : B, In (Loc (null_to_local_generators S)) (z = z')	No more subgoals.	";
+            data = "1 goal (ID 85)	  	  S : NullGenerators	  A : Type	  ============================	  forall B : Type,	  In (Loc (null_to_local_generators S)) B ->	  forall z z' : B, In (Loc (null_to_local_generators S)) (z = z')	No more goals.	";
             responses[i]=data;
           
 
@@ -433,7 +433,7 @@
           
 
             i = 83;
-            data = "1 subgoal (ID 31)	  	  S : NullGenerators	  ============================	  IsAccModality (Nul S)	";
+            data = "1 goal (ID 31)	  	  S : NullGenerators	  ============================	  IsAccModality (Nul S)	";
             responses[i]=data;
           
 
@@ -443,17 +443,17 @@
           
 
             i = 85;
-            data = "2 subgoals (ID 33)	  	  S : NullGenerators	  ============================	  NullGenerators		subgoal 2 (ID 34) is:	 forall X : Type, In (Nul S) X <-> IsNull_Internal.IsNull ?acc_ngen X	";
+            data = "2 goals (ID 33)	  	  S : NullGenerators	  ============================	  NullGenerators		goal 2 (ID 34) is:	 forall X : Type, In (Nul S) X <-> IsNull_Internal.IsNull ?acc_ngen X	";
             responses[i]=data;
           
 
             i = 86;
-            data = "1 subgoal (ID 33)	  	  S : NullGenerators	  ============================	  NullGenerators	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 34) is:	 forall X : Type, In (Nul S) X <-> IsNull_Internal.IsNull S X	";
+            data = "1 goal (ID 33)	  	  S : NullGenerators	  ============================	  NullGenerators	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 34) is:	 forall X : Type, In (Nul S) X <-> IsNull_Internal.IsNull S X	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 subgoal (ID 34)	  	  S : NullGenerators	  ============================	  forall X : Type, In (Nul S) X <-> IsNull_Internal.IsNull S X	No more subgoals.	";
+            data = "1 goal (ID 34)	  	  S : NullGenerators	  ============================	  forall X : Type, In (Nul S) X <-> IsNull_Internal.IsNull S X	No more goals.	";
             responses[i]=data;
           
 
@@ -488,7 +488,7 @@
           
 
             i = 94;
-            data = "1 subgoal (ID 36)	  	  O : Subuniverse	  H : IsAccModality O	  ============================	  O <=> lift_accmodality O	";
+            data = "1 goal (ID 36)	  	  O : Subuniverse	  H : IsAccModality O	  ============================	  O <=> lift_accmodality O	";
             responses[i]=data;
           
 
@@ -498,7 +498,7 @@
           
 
             i = 96;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 

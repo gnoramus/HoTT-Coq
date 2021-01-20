@@ -88,7 +88,7 @@
           
 
             i = 14;
-            data = "1 subgoal (ID 1)	  	  ============================	  Graph	";
+            data = "1 goal (ID 1)	  	  ============================	  Graph	";
             responses[i]=data;
           
 
@@ -98,22 +98,22 @@
           
 
             i = 16;
-            data = "1 subgoal (ID 3)	  	  ============================	  Unit + Bool -> Unit + Bool -> Type	";
+            data = "1 goal (ID 3)	  	  ============================	  Unit + Bool -> Unit + Bool -> Type	";
             responses[i]=data;
           
 
             i = 17;
-            data = "4 subgoals (ID 15)	  	  i, j : Unit	  ============================	  Type		subgoal 2 (ID 16) is:	 Type	subgoal 3 (ID 23) is:	 Type	subgoal 4 (ID 24) is:	 Type	";
+            data = "4 goals (ID 15)	  	  i, j : Unit	  ============================	  Type		goal 2 (ID 16) is:	 Type	goal 3 (ID 23) is:	 Type	goal 4 (ID 24) is:	 Type	";
             responses[i]=data;
           
 
             i = 18;
-            data = "3 subgoals (ID 15)	  	  i, j : Unit	  ============================	  Type		subgoal 2 (ID 23) is:	 Type	subgoal 3 (ID 24) is:	 Type	";
+            data = "3 goals (ID 15)	  	  i, j : Unit	  ============================	  Type		goal 2 (ID 23) is:	 Type	goal 3 (ID 24) is:	 Type	";
             responses[i]=data;
           
 
             i = 19;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -153,7 +153,7 @@
           
 
             i = 27;
-            data = "1 subgoal (ID 4)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  Diagram span_graph	";
+            data = "1 goal (ID 4)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  Diagram span_graph	";
             responses[i]=data;
           
 
@@ -163,42 +163,42 @@
           
 
             i = 29;
-            data = "2 subgoals (ID 14)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  span_graph -> Type		subgoal 2 (ID 16) is:	 forall i j : span_graph, span_graph i j -> ?obj i -> ?obj j	";
+            data = "2 goals (ID 14)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  span_graph -> Type		goal 2 (ID 16) is:	 forall i j : span_graph, span_graph i j -> ?obj i -> ?obj j	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 14)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  span_graph -> Type	2 subgoals (ID 22)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  ============================	  Type		subgoal 2 (ID 23) is:	 Type	";
+            data = "1 goal (ID 14)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  span_graph -> Type	2 goals (ID 22)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  ============================	  Type		goal 2 (ID 23) is:	 Type	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 22)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  ============================	  Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 subgoals		subgoal 1 (ID 23) is:	 Type	subgoal 2 (ID 16) is:	 forall i j : span_graph,	 span_graph i j ->	 (fun X : span_graph =>	  match X with	  | inl a => unit_name A a	  | inr b => (fun i0 : Bool => ?Goal@{i:=i0}) b	  end) i ->	 (fun X : span_graph =>	  match X with	  | inl a => unit_name A a	  | inr b => (fun i0 : Bool => ?Goal@{i:=i0}) b	  end) j	";
+            data = "1 goal (ID 22)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  ============================	  Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	2 goals		goal 1 (ID 23) is:	 Type	goal 2 (ID 16) is:	 forall i j : span_graph,	 span_graph i j ->	 (fun X : span_graph =>	  match X with	  | inl a => unit_name A a	  | inr b => (fun i0 : Bool => ?Goal@{i:=i0}) b	  end) i ->	 (fun X : span_graph =>	  match X with	  | inl a => unit_name A a	  | inr b => (fun i0 : Bool => ?Goal@{i:=i0}) b	  end) j	";
             responses[i]=data;
           
 
             i = 32;
-            data = "1 subgoal (ID 23)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Bool	  ============================	  Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 16) is:	 forall i j : span_graph,	 span_graph i j ->	 (fun X : span_graph =>	  match X with	  | inl a => unit_name A a	  | inr b => (fun i0 : Bool => if i0 then B else C) b	  end) i ->	 (fun X : span_graph =>	  match X with	  | inl a => unit_name A a	  | inr b => (fun i0 : Bool => if i0 then B else C) b	  end) j	";
+            data = "1 goal (ID 23)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Bool	  ============================	  Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 16) is:	 forall i j : span_graph,	 span_graph i j ->	 (fun X : span_graph =>	  match X with	  | inl a => unit_name A a	  | inr b => (fun i0 : Bool => if i0 then B else C) b	  end) i ->	 (fun X : span_graph =>	  match X with	  | inl a => unit_name A a	  | inr b => (fun i0 : Bool => if i0 then B else C) b	  end) j	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 16)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  forall i j : span_graph,	  span_graph i j ->	  (fun X : span_graph =>	   match X with	   | inl a => unit_name A a	   | inr b => (fun i0 : Bool => if i0 then B else C) b	   end) i ->	  (fun X : span_graph =>	   match X with	   | inl a => unit_name A a	   | inr b => (fun i0 : Bool => if i0 then B else C) b	   end) j	1 subgoal (ID 50)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  j : Bool	  u : span_graph (inl i) (inr j)	  ============================	  A -> if j then B else C	";
+            data = "1 goal (ID 16)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  ============================	  forall i j : span_graph,	  span_graph i j ->	  (fun X : span_graph =>	   match X with	   | inl a => unit_name A a	   | inr b => (fun i0 : Bool => if i0 then B else C) b	   end) i ->	  (fun X : span_graph =>	   match X with	   | inl a => unit_name A a	   | inr b => (fun i0 : Bool => if i0 then B else C) b	   end) j	1 goal (ID 50)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  j : Bool	  u : span_graph (inl i) (inr j)	  ============================	  A -> if j then B else C	";
             responses[i]=data;
           
 
             i = 34;
-            data = "2 subgoals (ID 65)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  u : span_graph (inl i) (inr true)	  ============================	  A -> B		subgoal 2 (ID 66) is:	 A -> C	";
+            data = "2 goals (ID 65)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  u : span_graph (inl i) (inr true)	  ============================	  A -> B		goal 2 (ID 66) is:	 A -> C	";
             responses[i]=data;
           
 
             i = 35;
-            data = "1 subgoal (ID 65)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  u : span_graph (inl i) (inr true)	  ============================	  A -> B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 66) is:	 A -> C	";
+            data = "1 goal (ID 65)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  u : span_graph (inl i) (inr true)	  ============================	  A -> B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 66) is:	 A -> C	";
             responses[i]=data;
           
 
             i = 36;
-            data = "1 subgoal (ID 66)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  u : span_graph (inl i) (inr false)	  ============================	  A -> C	No more subgoals.	";
+            data = "1 goal (ID 66)	  	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : A -> C	  i : Unit	  u : span_graph (inl i) (inr false)	  ============================	  A -> C	No more goals.	";
             responses[i]=data;
           
 

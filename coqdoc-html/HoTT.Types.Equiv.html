@@ -69,7 +69,8 @@
 As usual, we can't make both of these <span class="inlinecode"><span class="id" title="var">Instances</span></span>. 
 </div>
 <div class="code">
-&nbsp;&nbsp;<span class="id" title="keyword">Hint Immediate</span> <span class="id" title="var">isequiv_contr_map</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
+&nbsp;&nbsp;#[<span class="id" title="var">local</span>]<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Immediate</span> <span class="id" title="var">isequiv_contr_map</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
 
 <br/>
 </div>
@@ -318,6 +319,16 @@ Theorem 4.7.7  <span class="inlinecode"><a class="idref" href="HoTT.Types.Sigma.
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Types.Equiv.html#AssumeFunext"><span class="id" title="section">AssumeFunext</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+We make this a global hint outside of the section. 
+</div>
+<div class="code">
+#[<span class="id" title="var">export</span>]<br/>
+<span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Immediate</span> <span class="id" title="var">isequiv_contr_map</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
 </div>
 </div>
 

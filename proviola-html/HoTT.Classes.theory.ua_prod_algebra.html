@@ -128,7 +128,7 @@
           
 
             i = 22;
-            data = "1 subgoal (ID 19)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  n : trunc_index	  H0 : forall i : I, IsTruncAlgebra n (A i)	  ============================	  IsTruncAlgebra n ProdAlgebra	";
+            data = "1 goal (ID 19)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  n : trunc_index	  H0 : forall i : I, IsTruncAlgebra n (A i)	  ============================	  IsTruncAlgebra n ProdAlgebra	";
             responses[i]=data;
           
 
@@ -138,12 +138,12 @@
           
 
             i = 24;
-            data = "1 subgoal (ID 21)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  n : trunc_index	  H0 : forall i : I, IsTruncAlgebra n (A i)	  s : Sort σ	  ============================	  IsTrunc n (ProdAlgebra s)	";
+            data = "1 goal (ID 21)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  n : trunc_index	  H0 : forall i : I, IsTruncAlgebra n (A i)	  s : Sort σ	  ============================	  IsTrunc n (ProdAlgebra s)	";
             responses[i]=data;
           
 
             i = 25;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -193,7 +193,7 @@
           
 
             i = 35;
-            data = "1 subgoal (ID 16)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  w : SymbolType σ	  i : I	  v : forall i : I, Operation (A i) w	  α : Operation (A i) w	  P : v i = α	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A w v) α	";
+            data = "1 goal (ID 16)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  w : SymbolType σ	  i : I	  v : forall i : I, Operation (A i) w	  α : Operation (A i) w	  P : v i = α	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A w v) α	";
             responses[i]=data;
           
 
@@ -203,27 +203,27 @@
           
 
             i = 37;
-            data = "2 subgoals (ID 33)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  i : I	  v : forall i : I, Operation (A i) [:t:]	  α : Operation (A i) [:t:]	  P : v i = α	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A [:t:] v) α		subgoal 2 (ID 44) is:	 OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A (t ::: w) v) α	";
+            data = "2 goals (ID 33)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  i : I	  v : forall i : I, Operation (A i) [:t:]	  α : Operation (A i) [:t:]	  P : v i = α	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A [:t:] v) α		goal 2 (ID 44) is:	 OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A (t ::: w) v) α	";
             responses[i]=data;
           
 
             i = 38;
-            data = "1 subgoal (ID 33)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  i : I	  v : forall i : I, Operation (A i) [:t:]	  α : Operation (A i) [:t:]	  P : v i = α	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A [:t:] v) α	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 44) is:	 OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A (t ::: w) v) α	";
+            data = "1 goal (ID 33)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  i : I	  v : forall i : I, Operation (A i) [:t:]	  α : Operation (A i) [:t:]	  P : v i = α	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A [:t:] v) α	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 44) is:	 OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A (t ::: w) v) α	";
             responses[i]=data;
           
 
             i = 39;
-            data = "1 subgoal (ID 44)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  i : I	  v : forall i : I, Operation (A i) (t ::: w)	  α : Operation (A i) (t ::: w)	  P : v i = α	  IHw : forall (v : forall i : I, Operation (A i) w) 	        (α : Operation (A i) w),	        v i = α	        → OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A w v) α	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A (t ::: w) v) α	1 subgoal (ID 47)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  i : I	  v : forall i : I, Operation (A i) (t ::: w)	  α : Operation (A i) (t ::: w)	  P : v i = α	  IHw : forall (v : forall i : I, Operation (A i) w) 	        (α : Operation (A i) w),	        v i = α	        → OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A w v) α	  p : ProdAlgebra I A t	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A (t ::: w) v p)	    (α (def_proj_prod_algebra i t p))	";
+            data = "1 goal (ID 44)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  i : I	  v : forall i : I, Operation (A i) (t ::: w)	  α : Operation (A i) (t ::: w)	  P : v i = α	  IHw : forall (v : forall i : I, Operation (A i) w) 	        (α : Operation (A i) w),	        v i = α	        → OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A w v) α	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A (t ::: w) v) α	1 goal (ID 47)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  i : I	  v : forall i : I, Operation (A i) (t ::: w)	  α : Operation (A i) (t ::: w)	  P : v i = α	  IHw : forall (v : forall i : I, Operation (A i) w) 	        (α : Operation (A i) w),	        v i = α	        → OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A w v) α	  p : ProdAlgebra I A t	  ============================	  OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A (t ::: w) v p)	    (α (def_proj_prod_algebra i t p))	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 49)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  i : I	  v : forall i : I, Operation (A i) (t ::: w)	  α : Operation (A i) (t ::: w)	  P : v i = α	  IHw : forall (v : forall i : I, Operation (A i) w) 	        (α : Operation (A i) w),	        v i = α	        → OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A w v) α	  p : ProdAlgebra I A t	  ============================	  v i (p i) = α (p i)	";
+            data = "1 goal (ID 49)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  i : I	  v : forall i : I, Operation (A i) (t ::: w)	  α : Operation (A i) (t ::: w)	  P : v i = α	  IHw : forall (v : forall i : I, Operation (A i) w) 	        (α : Operation (A i) w),	        v i = α	        → OpPreserving (def_proj_prod_algebra i) (op_prod_algebra I A w v) α	  p : ProdAlgebra I A t	  ============================	  v i (p i) = α (p i)	";
             responses[i]=data;
           
 
             i = 41;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -233,7 +233,7 @@
           
 
             i = 43;
-            data = "1 subgoal (ID 21)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  i : I	  ============================	  IsHomomorphism (def_proj_prod_algebra i)	";
+            data = "1 goal (ID 21)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  i : I	  ============================	  IsHomomorphism (def_proj_prod_algebra i)	";
             responses[i]=data;
           
 
@@ -243,12 +243,12 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 23)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  i : I	  u : Symbol σ	  ============================	  OpPreserving (def_proj_prod_algebra i) (u ^^ ProdAlgebra I A) (u ^^ A i)	";
+            data = "1 goal (ID 23)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  i : I	  u : Symbol σ	  ============================	  OpPreserving (def_proj_prod_algebra i) (u ^^ ProdAlgebra I A) (u ^^ A i)	";
             responses[i]=data;
           
 
             i = 46;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -318,7 +318,7 @@
           
 
             i = 60;
-            data = "1 subgoal (ID 29)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  w : SymbolType σ	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) w	  β : Operation C w	  P : forall i : I, OpPreserving (f i) β (α i)	  ============================	  OpPreserving (def_prod_algebra_mapin f) β	    (op_prod_algebra I A w (λ i : I, α i))	";
+            data = "1 goal (ID 29)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  w : SymbolType σ	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) w	  β : Operation C w	  P : forall i : I, OpPreserving (f i) β (α i)	  ============================	  OpPreserving (def_prod_algebra_mapin f) β	    (op_prod_algebra I A w (λ i : I, α i))	";
             responses[i]=data;
           
 
@@ -328,37 +328,37 @@
           
 
             i = 62;
-            data = "2 subgoals (ID 46)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) [:t:]	  β : Operation C [:t:]	  P : forall i : I, OpPreserving (f i) β (α i)	  ============================	  OpPreserving (def_prod_algebra_mapin f) β	    (op_prod_algebra I A [:t:] (λ i : I, α i))		subgoal 2 (ID 57) is:	 OpPreserving (def_prod_algebra_mapin f) β	   (op_prod_algebra I A (t ::: w) (λ i : I, α i))	";
+            data = "2 goals (ID 46)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) [:t:]	  β : Operation C [:t:]	  P : forall i : I, OpPreserving (f i) β (α i)	  ============================	  OpPreserving (def_prod_algebra_mapin f) β	    (op_prod_algebra I A [:t:] (λ i : I, α i))		goal 2 (ID 57) is:	 OpPreserving (def_prod_algebra_mapin f) β	   (op_prod_algebra I A (t ::: w) (λ i : I, α i))	";
             responses[i]=data;
           
 
             i = 63;
-            data = "1 subgoal (ID 46)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) [:t:]	  β : Operation C [:t:]	  P : forall i : I, OpPreserving (f i) β (α i)	  ============================	  OpPreserving (def_prod_algebra_mapin f) β	    (op_prod_algebra I A [:t:] (λ i : I, α i))	1 subgoal (ID 63)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) [:t:]	  β : Operation C [:t:]	  P : forall i : I, OpPreserving (f i) β (α i)	  i : I	  ============================	  def_prod_algebra_mapin f t β i =	  op_prod_algebra I A [:t:] (λ i0 : I, α i0) i	";
+            data = "1 goal (ID 46)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) [:t:]	  β : Operation C [:t:]	  P : forall i : I, OpPreserving (f i) β (α i)	  ============================	  OpPreserving (def_prod_algebra_mapin f) β	    (op_prod_algebra I A [:t:] (λ i : I, α i))	1 goal (ID 63)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) [:t:]	  β : Operation C [:t:]	  P : forall i : I, OpPreserving (f i) β (α i)	  i : I	  ============================	  def_prod_algebra_mapin f t β i =	  op_prod_algebra I A [:t:] (λ i0 : I, α i0) i	";
             responses[i]=data;
           
 
             i = 64;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 57) is:	 OpPreserving (def_prod_algebra_mapin f) β	   (op_prod_algebra I A (t ::: w) (λ i : I, α i))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 57) is:	 OpPreserving (def_prod_algebra_mapin f) β	   (op_prod_algebra I A (t ::: w) (λ i : I, α i))	";
             responses[i]=data;
           
 
             i = 65;
-            data = "1 subgoal (ID 57)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) (t ::: w)	  β : Operation C (t ::: w)	  P : forall i : I, OpPreserving (f i) β (α i)	  IHw : forall (α : forall i : I, Operation (A i) w) 	        (β : Operation C w),	        (forall i : I, OpPreserving (f i) β (α i))	        → OpPreserving (def_prod_algebra_mapin f) β	            (op_prod_algebra I A w (λ i : I, α i))	  ============================	  OpPreserving (def_prod_algebra_mapin f) β	    (op_prod_algebra I A (t ::: w) (λ i : I, α i))	1 subgoal (ID 66)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) (t ::: w)	  β : Operation C (t ::: w)	  P : forall i : I, OpPreserving (f i) β (α i)	  IHw : forall (α : forall i : I, Operation (A i) w) 	        (β : Operation C w),	        (forall i : I, OpPreserving (f i) β (α i))	        → OpPreserving (def_prod_algebra_mapin f) β	            (op_prod_algebra I A w (λ i : I, α i))	  x : C t	  ============================	  OpPreserving (def_prod_algebra_mapin f) (β x)	    (op_prod_algebra I A (t ::: w) (λ i : I, α i)	       (def_prod_algebra_mapin f t x))	";
+            data = "1 goal (ID 57)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) (t ::: w)	  β : Operation C (t ::: w)	  P : forall i : I, OpPreserving (f i) β (α i)	  IHw : forall (α : forall i : I, Operation (A i) w) 	        (β : Operation C w),	        (forall i : I, OpPreserving (f i) β (α i))	        → OpPreserving (def_prod_algebra_mapin f) β	            (op_prod_algebra I A w (λ i : I, α i))	  ============================	  OpPreserving (def_prod_algebra_mapin f) β	    (op_prod_algebra I A (t ::: w) (λ i : I, α i))	1 goal (ID 66)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) (t ::: w)	  β : Operation C (t ::: w)	  P : forall i : I, OpPreserving (f i) β (α i)	  IHw : forall (α : forall i : I, Operation (A i) w) 	        (β : Operation C w),	        (forall i : I, OpPreserving (f i) β (α i))	        → OpPreserving (def_prod_algebra_mapin f) β	            (op_prod_algebra I A w (λ i : I, α i))	  x : C t	  ============================	  OpPreserving (def_prod_algebra_mapin f) (β x)	    (op_prod_algebra I A (t ::: w) (λ i : I, α i)	       (def_prod_algebra_mapin f t x))	";
             responses[i]=data;
           
 
             i = 66;
-            data = "1 subgoal (ID 67)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) (t ::: w)	  β : Operation C (t ::: w)	  P : forall i : I, OpPreserving (f i) β (α i)	  IHw : forall (α : forall i : I, Operation (A i) w) 	        (β : Operation C w),	        (forall i : I, OpPreserving (f i) β (α i))	        → OpPreserving (def_prod_algebra_mapin f) β	            (op_prod_algebra I A w (λ i : I, α i))	  x : C t	  ============================	  forall i : I,	  OpPreserving (f i) (β x) (α i (def_prod_algebra_mapin f t x i))	";
+            data = "1 goal (ID 67)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) (t ::: w)	  β : Operation C (t ::: w)	  P : forall i : I, OpPreserving (f i) β (α i)	  IHw : forall (α : forall i : I, Operation (A i) w) 	        (β : Operation C w),	        (forall i : I, OpPreserving (f i) β (α i))	        → OpPreserving (def_prod_algebra_mapin f) β	            (op_prod_algebra I A w (λ i : I, α i))	  x : C t	  ============================	  forall i : I,	  OpPreserving (f i) (β x) (α i (def_prod_algebra_mapin f t x i))	";
             responses[i]=data;
           
 
             i = 67;
-            data = "1 subgoal (ID 68)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) (t ::: w)	  β : Operation C (t ::: w)	  P : forall i : I, OpPreserving (f i) β (α i)	  IHw : forall (α : forall i : I, Operation (A i) w) 	        (β : Operation C w),	        (forall i : I, OpPreserving (f i) β (α i))	        → OpPreserving (def_prod_algebra_mapin f) β	            (op_prod_algebra I A w (λ i : I, α i))	  x : C t	  i : I	  ============================	  OpPreserving (f i) (β x) (α i (def_prod_algebra_mapin f t x i))	";
+            data = "1 goal (ID 68)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  t : Sort σ	  w : ne_list (Sort σ)	  f : forall (i : I) (s : Sort σ), C s → A i s	  α : forall i : I, Operation (A i) (t ::: w)	  β : Operation C (t ::: w)	  P : forall i : I, OpPreserving (f i) β (α i)	  IHw : forall (α : forall i : I, Operation (A i) w) 	        (β : Operation C w),	        (forall i : I, OpPreserving (f i) β (α i))	        → OpPreserving (def_prod_algebra_mapin f) β	            (op_prod_algebra I A w (λ i : I, α i))	  x : C t	  i : I	  ============================	  OpPreserving (f i) (β x) (α i (def_prod_algebra_mapin f t x i))	";
             responses[i]=data;
           
 
             i = 68;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -368,7 +368,7 @@
           
 
             i = 70;
-            data = "1 subgoal (ID 35)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  ============================	  IsHomomorphism (def_prod_algebra_mapin (λ i : I, f i))	";
+            data = "1 goal (ID 35)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  ============================	  IsHomomorphism (def_prod_algebra_mapin (λ i : I, f i))	";
             responses[i]=data;
           
 
@@ -378,22 +378,22 @@
           
 
             i = 72;
-            data = "1 subgoal (ID 37)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  ============================	  OpPreserving (def_prod_algebra_mapin (λ i : I, f i)) 	    (u ^^ C) (u ^^ ProdAlgebra I A)	";
+            data = "1 goal (ID 37)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  ============================	  OpPreserving (def_prod_algebra_mapin (λ i : I, f i)) 	    (u ^^ C) (u ^^ ProdAlgebra I A)	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 subgoal (ID 39)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  ============================	  forall i : I, OpPreserving (f i) (u ^^ C) (u ^^ A i)	";
+            data = "1 goal (ID 39)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  ============================	  forall i : I, OpPreserving (f i) (u ^^ C) (u ^^ A i)	";
             responses[i]=data;
           
 
             i = 74;
-            data = "1 subgoal (ID 40)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  i : I	  ============================	  OpPreserving (f i) (u ^^ C) (u ^^ A i)	";
+            data = "1 goal (ID 40)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  i : I	  ============================	  OpPreserving (f i) (u ^^ C) (u ^^ A i)	";
             responses[i]=data;
           
 
             i = 75;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -678,7 +678,7 @@
           
 
             i = 132;
-            data = "1 subgoal (ID 50)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  ============================	  (forall i : I, Homomorphism C (A i)) <~> Homomorphism C (ProdAlgebra I A)	";
+            data = "1 goal (ID 50)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  ============================	  (forall i : I, Homomorphism C (A i)) <~> Homomorphism C (ProdAlgebra I A)	";
             responses[i]=data;
           
 
@@ -688,32 +688,32 @@
           
 
             i = 134;
-            data = "2 subgoals (ID 53)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  ============================	  (λ x : Homomorphism C (ProdAlgebra I A),	   hom_prod_algebra_mapin (hom_prod_algebra_mapout x)) == idmap		subgoal 2 (ID 54) is:	 (λ x : forall i : I, Homomorphism C (A i),	  hom_prod_algebra_mapout (hom_prod_algebra_mapin x)) == idmap	";
+            data = "2 goals (ID 53)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  ============================	  (λ x : Homomorphism C (ProdAlgebra I A),	   hom_prod_algebra_mapin (hom_prod_algebra_mapout x)) == idmap		goal 2 (ID 54) is:	 (λ x : forall i : I, Homomorphism C (A i),	  hom_prod_algebra_mapout (hom_prod_algebra_mapin x)) == idmap	";
             responses[i]=data;
           
 
             i = 135;
-            data = "1 subgoal (ID 53)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  ============================	  (λ x : Homomorphism C (ProdAlgebra I A),	   hom_prod_algebra_mapin (hom_prod_algebra_mapout x)) == idmap	1 subgoal (ID 56)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  f : Homomorphism C (ProdAlgebra I A)	  ============================	  hom_prod_algebra_mapin (hom_prod_algebra_mapout f) = f	";
+            data = "1 goal (ID 53)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  ============================	  (λ x : Homomorphism C (ProdAlgebra I A),	   hom_prod_algebra_mapin (hom_prod_algebra_mapout x)) == idmap	1 goal (ID 56)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  f : Homomorphism C (ProdAlgebra I A)	  ============================	  hom_prod_algebra_mapin (hom_prod_algebra_mapout f) = f	";
             responses[i]=data;
           
 
             i = 136;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 54) is:	 (λ x : forall i : I, Homomorphism C (A i),	  hom_prod_algebra_mapout (hom_prod_algebra_mapin x)) == idmap	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 54) is:	 (λ x : forall i : I, Homomorphism C (A i),	  hom_prod_algebra_mapout (hom_prod_algebra_mapin x)) == idmap	";
             responses[i]=data;
           
 
             i = 137;
-            data = "1 subgoal (ID 54)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  ============================	  (λ x : forall i : I, Homomorphism C (A i),	   hom_prod_algebra_mapout (hom_prod_algebra_mapin x)) == idmap	1 subgoal (ID 68)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  f : forall i : I, Homomorphism C (A i)	  ============================	  hom_prod_algebra_mapout (hom_prod_algebra_mapin f) = f	";
+            data = "1 goal (ID 54)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  ============================	  (λ x : forall i : I, Homomorphism C (A i),	   hom_prod_algebra_mapout (hom_prod_algebra_mapin x)) == idmap	1 goal (ID 68)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  f : forall i : I, Homomorphism C (A i)	  ============================	  hom_prod_algebra_mapout (hom_prod_algebra_mapin f) = f	";
             responses[i]=data;
           
 
             i = 138;
-            data = "1 subgoal (ID 74)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  f : forall i : I, Homomorphism C (A i)	  i : I	  ============================	  hom_prod_algebra_mapout (hom_prod_algebra_mapin f) i = f i	";
+            data = "1 goal (ID 74)	  	  H : Funext	  σ : Signature	  I : Type	  A : I → Algebra σ	  C : Algebra σ	  H0 : forall i : I, IsHSetAlgebra (A i)	  f : forall i : I, Homomorphism C (A i)	  i : I	  ============================	  hom_prod_algebra_mapout (hom_prod_algebra_mapin f) i = f i	";
             responses[i]=data;
           
 
             i = 139;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -763,7 +763,7 @@
           
 
             i = 149;
-            data = "1 subgoal (ID 7)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n A	  IsTruncAlgebra1 : IsTruncAlgebra n B	  ============================	  forall b : Bool, IsTruncAlgebra n (bin_prod_algebras b)	";
+            data = "1 goal (ID 7)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n A	  IsTruncAlgebra1 : IsTruncAlgebra n B	  ============================	  forall b : Bool, IsTruncAlgebra n (bin_prod_algebras b)	";
             responses[i]=data;
           
 
@@ -773,7 +773,7 @@
           
 
             i = 151;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -853,7 +853,7 @@
           
 
             i = 167;
-            data = "1 subgoal (ID 7)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra A	  IsHSetAlgebra1 : IsHSetAlgebra B	  ============================	  Homomorphism C A ∧ Homomorphism C B <~> Homomorphism C (A * B)	";
+            data = "1 goal (ID 7)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra A	  IsHSetAlgebra1 : IsHSetAlgebra B	  ============================	  Homomorphism C A ∧ Homomorphism C B <~> Homomorphism C (A * B)	";
             responses[i]=data;
           
 
@@ -863,12 +863,12 @@
           
 
             i = 169;
-            data = "1 subgoal (ID 11)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra A	  IsHSetAlgebra1 : IsHSetAlgebra B	  k := λ b : Bool, Homomorphism C (bin_prod_algebras A B b) : Bool → Type	  ============================	  Homomorphism C A ∧ Homomorphism C B <~> Homomorphism C (A * B)	";
+            data = "1 goal (ID 11)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra A	  IsHSetAlgebra1 : IsHSetAlgebra B	  k := λ b : Bool, Homomorphism C (bin_prod_algebras A B b) : Bool → Type	  ============================	  Homomorphism C A ∧ Homomorphism C B <~> Homomorphism C (A * B)	";
             responses[i]=data;
           
 
             i = 170;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 

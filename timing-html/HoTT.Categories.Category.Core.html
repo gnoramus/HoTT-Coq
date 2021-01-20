@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.006s">
-<div class="time" style="width: 100%"></div>
+Time: 0.005s">
+<div class="time" style="width: 83.333333333333%"></div>
 <pre>Require Export Overture Basics.Notations.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -345,24 +345,25 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
+#[export]
 Hint Resolve left_identity right_identity associativity : category morphism.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 109
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Hint Rewrite left_identity right_identity : category.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 110
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Hint Rewrite left_identity right_identity : morphism.</pre>
+Hint Rewrite left_identity right_identity : category.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 111
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Hint Rewrite left_identity right_identity : morphism.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 112
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -370,20 +371,20 @@ Time: 0s">
 (** ** Simple laws about the identity morphism *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 113
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section identity_unique.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 113
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Variable C : PreCategory.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 114
+Line: 115
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -392,30 +393,30 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 117
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 118
+Time: 0.001s">
+<div class="time" style="width: 16.666666666667%"></div>
 <pre>Lemma identity_unique (id0 id1 : forall x, morphism C x x)
         (id1_left : forall s d (m : morphism C s d), id1 _ o m = m)
         (id0_right : forall s d (m : morphism C s d), m o id0 _ = m)
   : id0 == id1.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 120
+Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 121
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     intro.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 122
+Line: 123
 Time: 0.001s">
 <div class="time" style="width: 16.666666666667%"></div>
 <pre>
@@ -424,14 +425,14 @@ Time: 0.001s">
       | apply id0_right ].</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 125
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 126
+Line: 127
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -441,7 +442,7 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 130
+Line: 131
 Time: 0.001s">
 <div class="time" style="width: 16.666666666667%"></div>
 <pre>Definition concat_left_identity s d (m : morphism C s d) i
@@ -449,7 +450,7 @@ Time: 0.001s">
     := fun H =&gt; (ap10 (ap _ H) _ @ left_identity _ _ _ m)%path.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 132
+Line: 133
 Time: 0.001s">
 <div class="time" style="width: 16.666666666667%"></div>
 <pre>
@@ -459,14 +460,14 @@ Time: 0.001s">
     := fun H =&gt; (ap _ H @ right_identity _ _ _ m)%path.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 136
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End identity_unique.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 137
+Line: 138
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -474,20 +475,20 @@ Time: 0s">
 (** Make a separate module for Notations, which can be exported/imported separately. *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 139
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Module Export CategoryCoreNotations.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 139
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Infix "o" := compose : morphism_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 140
+Line: 141
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -496,34 +497,34 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 143
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Notation "x --&gt; y" := (@morphism _ x y) : type_scope.</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 143
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Local Notation "x --&gt; y" := (morphism _ x y) : type_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Notation "1" := (identity _) : morphism_scope.</pre>
+  Local Notation "x --&gt; y" := (morphism _ x y) : type_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-End CategoryCoreNotations.</pre>
+  Notation "1" := (identity _) : morphism_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 146
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+End CategoryCoreNotations.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -531,7 +532,7 @@ Time: 0s">
 (** We have a tactic for trying to run a tactic after associating morphisms either all the way to the left, or all the way to the right *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 148
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "try_associativity_quick" tactic(tac) :=
@@ -539,7 +540,7 @@ Time: 0s">
         | rewrite -&gt; ?associativity; tac ].</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 151
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

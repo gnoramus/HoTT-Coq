@@ -343,7 +343,7 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 92)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  ============================	  Colimit D -> P	";
+            data = "1 goal (ID 92)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  ============================	  Colimit D -> P	";
             responses[i]=data;
           
 
@@ -353,22 +353,22 @@
           
 
             i = 67;
-            data = "1 subgoal (ID 104)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  transport (fun _ : Colimit D => P) (colimp i j g x) (C j ((D _f g) x)) =	  C i x	";
+            data = "1 goal (ID 104)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  transport (fun _ : Colimit D => P) (colimp i j g x) (C j ((D _f g) x)) =	  C i x	";
             responses[i]=data;
           
 
             i = 68;
-            data = "1 subgoal (ID 108)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  transport (fun _ : Colimit D => P) (colimp i j g x) (C j ((D _f g) x)) =	  C i x	";
+            data = "1 goal (ID 108)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  transport (fun _ : Colimit D => P) (colimp i j g x) (C j ((D _f g) x)) =	  C i x	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 123)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  C j ((D _f g) x) = C i x	";
+            data = "1 goal (ID 123)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  C j ((D _f g) x) = C i x	";
             responses[i]=data;
           
 
             i = 70;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -378,7 +378,7 @@
           
 
             i = 72;
-            data = "1 subgoal (ID 115)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  ap (Colimit_rec P C) (colimp i j g x) = legs_comm C i j g x	";
+            data = "1 goal (ID 115)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  ap (Colimit_rec P C) (colimp i j g x) = legs_comm C i j g x	";
             responses[i]=data;
           
 
@@ -388,22 +388,22 @@
           
 
             i = 74;
-            data = "1 subgoal (ID 116)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  ap	    (fun w : Colimit D =>	     match w with	     | colim i0 a =>	         fun	           _ : forall (i1 j0 : G) (g0 : G i1 j0) (x0 : D i1),	               transport (fun _ : Colimit D => P) 	                 (colimp i1 j0 g0 x0) (C j0 ((D _f g0) x0)) = 	               C i1 x0 => C i0 a	     end	       (fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        transport_const (colimp i0 j0 g0 x0) (C j0 ((D _f g0) x0)) @	        legs_comm C i0 j0 g0 x0)) (colimp i j g x) = 	  legs_comm C i j g x	";
+            data = "1 goal (ID 116)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  ap	    (fun w : Colimit D =>	     match w with	     | colim i0 a =>	         fun	           _ : forall (i1 j0 : G) (g0 : G i1 j0) (x0 : D i1),	               transport (fun _ : Colimit D => P) 	                 (colimp i1 j0 g0 x0) (C j0 ((D _f g0) x0)) = 	               C i1 x0 => C i0 a	     end	       (fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        transport_const (colimp i0 j0 g0 x0) (C j0 ((D _f g0) x0)) @	        legs_comm C i0 j0 g0 x0)) (colimp i j g x) = 	  legs_comm C i j g x	";
             responses[i]=data;
           
 
             i = 75;
-            data = "1 subgoal (ID 129)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  transport_const (colimp i j g x) (C j ((D _f g) x)) @	  ap	    (fun w : Colimit D =>	     match w with	     | colim i0 a =>	         fun	           _ : forall (i1 j0 : G) (g0 : G i1 j0) (x0 : D i1),	               transport (fun _ : Colimit D => P) 	                 (colimp i1 j0 g0 x0) (C j0 ((D _f g0) x0)) = 	               C i1 x0 => C i0 a	     end	       (fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        transport_const (colimp i0 j0 g0 x0) (C j0 ((D _f g0) x0)) @	        legs_comm C i0 j0 g0 x0)) (colimp i j g x) =	  transport_const (colimp i j g x) (C j ((D _f g) x)) @ legs_comm C i j g x	";
+            data = "1 goal (ID 129)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  transport_const (colimp i j g x) (C j ((D _f g) x)) @	  ap	    (fun w : Colimit D =>	     match w with	     | colim i0 a =>	         fun	           _ : forall (i1 j0 : G) (g0 : G i1 j0) (x0 : D i1),	               transport (fun _ : Colimit D => P) 	                 (colimp i1 j0 g0 x0) (C j0 ((D _f g0) x0)) = 	               C i1 x0 => C i0 a	     end	       (fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        transport_const (colimp i0 j0 g0 x0) (C j0 ((D _f g0) x0)) @	        legs_comm C i0 j0 g0 x0)) (colimp i j g x) =	  transport_const (colimp i j g x) (C j ((D _f g) x)) @ legs_comm C i j g x	";
             responses[i]=data;
           
 
             i = 76;
-            data = "1 subgoal (ID 149)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  apD	    (Colimit_ind (fun _ : Colimit D => P) C	       (fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        transport_const (colimp i0 j0 g0 x0) (C j0 ((D _f g0) x0)) @	        legs_comm C i0 j0 g0 x0)) (colimp i j g x) =	  transport_const (colimp i j g x) (C j ((D _f g) x)) @ legs_comm C i j g x	";
+            data = "1 goal (ID 149)	  	  G : Graph	  D : Diagram G	  P : Type	  C : Cocone D P	  i, j : G	  g : G i j	  x : D i	  ============================	  apD	    (Colimit_ind (fun _ : Colimit D => P) C	       (fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        transport_const (colimp i0 j0 g0 x0) (C j0 ((D _f g0) x0)) @	        legs_comm C i0 j0 g0 x0)) (colimp i j g x) =	  transport_const (colimp i j g x) (C j ((D _f g) x)) @ legs_comm C i j g x	";
             responses[i]=data;
           
 
             i = 77;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -438,7 +438,7 @@
           
 
             i = 84;
-            data = "1 subgoal (ID 22)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  IsEquiv (Colimit_rec P)	";
+            data = "1 goal (ID 22)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  IsEquiv (Colimit_rec P)	";
             responses[i]=data;
           
 
@@ -448,62 +448,62 @@
           
 
             i = 86;
-            data = "3 subgoals (ID 48)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  (Colimit D -> P) -> Cocone D P		subgoal 2 (ID 50) is:	 Colimit_rec P o ?g == idmap	subgoal 3 (ID 52) is:	 ?g o Colimit_rec P == idmap	";
+            data = "3 goals (ID 48)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  (Colimit D -> P) -> Cocone D P		goal 2 (ID 50) is:	 Colimit_rec P o ?g == idmap	goal 3 (ID 52) is:	 ?g o Colimit_rec P == idmap	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 subgoal (ID 48)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  (Colimit D -> P) -> Cocone D P	1 subgoal (ID 64)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  f : Colimit D -> P	  ============================	  Cocone D P	";
+            data = "1 goal (ID 48)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  (Colimit D -> P) -> Cocone D P	1 goal (ID 64)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  f : Colimit D -> P	  ============================	  Cocone D P	";
             responses[i]=data;
           
 
             i = 88;
-            data = "2 subgoals (ID 77)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  f : Colimit D -> P	  ============================	  forall i : G, D i -> P		subgoal 2 (ID 79) is:	 forall (i j : G) (g : G i j), ?legs j o D _f g == ?legs i	";
+            data = "2 goals (ID 77)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  f : Colimit D -> P	  ============================	  forall i : G, D i -> P		goal 2 (ID 79) is:	 forall (i j : G) (g : G i j), ?legs j o D _f g == ?legs i	";
             responses[i]=data;
           
 
             i = 89;
-            data = "1 subgoal (ID 79)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  f : Colimit D -> P	  ============================	  forall (i j : G) (g : G i j),	  (fun (i0 : G) (g0 : D i0) => f (colim i0 g0)) j o D _f g ==	  (fun (i0 : G) (g0 : D i0) => f (colim i0 g0)) i	";
+            data = "1 goal (ID 79)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  f : Colimit D -> P	  ============================	  forall (i j : G) (g : G i j),	  (fun (i0 : G) (g0 : D i0) => f (colim i0 g0)) j o D _f g ==	  (fun (i0 : G) (g0 : D i0) => f (colim i0 g0)) i	";
             responses[i]=data;
           
 
             i = 90;
-            data = "1 subgoal (ID 89)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  f : Colimit D -> P	  i, j : G	  g : G i j	  x : D i	  ============================	  f (colim j ((D _f g) x)) = f (colim i x)	";
+            data = "1 goal (ID 89)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  f : Colimit D -> P	  i, j : G	  g : G i j	  x : D i	  ============================	  f (colim j ((D _f g) x)) = f (colim i x)	";
             responses[i]=data;
           
 
             i = 91;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals		subgoal 1 (ID 50) is:	 Colimit_rec P	 o (fun f : Colimit D -> P =>	    {|	      legs := fun (i : G) (g : D i) => f (colim i g);	      legs_comm :=	        fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	    |}) == idmap	subgoal 2 (ID 52) is:	 (fun f : Colimit D -> P =>	  {|	    legs := fun (i : G) (g : D i) => f (colim i g);	    legs_comm := fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	  |}) o Colimit_rec P == idmap	2 subgoals (ID 50)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  Colimit_rec P	  o (fun f : Colimit D -> P =>	     {|	       legs := fun (i : G) (g : D i) => f (colim i g);	       legs_comm :=	         fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	     |}) == idmap		subgoal 2 (ID 52) is:	 (fun f : Colimit D -> P =>	  {|	    legs := fun (i : G) (g : D i) => f (colim i g);	    legs_comm := fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	  |}) o Colimit_rec P == idmap	1 subgoal (ID 50)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  Colimit_rec P	  o (fun f : Colimit D -> P =>	     {|	       legs := fun (i : G) (g : D i) => f (colim i g);	       legs_comm :=	         fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	     |}) == idmap	1 subgoal (ID 96)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  ============================	  Colimit_rec P	    {|	      legs := fun (i : G) (g : D i) => x (colim i g);	      legs_comm :=	        fun (i j : G) (g : G i j) (x0 : D i) => ap x (colimp i j g x0)	    |} = x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 50) is:	 Colimit_rec P	 o (fun f : Colimit D -> P =>	    {|	      legs := fun (i : G) (g : D i) => f (colim i g);	      legs_comm :=	        fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	    |}) == idmap	goal 2 (ID 52) is:	 (fun f : Colimit D -> P =>	  {|	    legs := fun (i : G) (g : D i) => f (colim i g);	    legs_comm := fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	  |}) o Colimit_rec P == idmap	2 goals (ID 50)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  Colimit_rec P	  o (fun f : Colimit D -> P =>	     {|	       legs := fun (i : G) (g : D i) => f (colim i g);	       legs_comm :=	         fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	     |}) == idmap		goal 2 (ID 52) is:	 (fun f : Colimit D -> P =>	  {|	    legs := fun (i : G) (g : D i) => f (colim i g);	    legs_comm := fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	  |}) o Colimit_rec P == idmap	1 goal (ID 50)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  Colimit_rec P	  o (fun f : Colimit D -> P =>	     {|	       legs := fun (i : G) (g : D i) => f (colim i g);	       legs_comm :=	         fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	     |}) == idmap	1 goal (ID 96)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  ============================	  Colimit_rec P	    {|	      legs := fun (i : G) (g : D i) => x (colim i g);	      legs_comm :=	        fun (i j : G) (g : G i j) (x0 : D i) => ap x (colimp i j g x0)	    |} = x	";
             responses[i]=data;
           
 
             i = 92;
-            data = "1 subgoal (ID 100)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  ============================	  Colimit_rec P	    {|	      legs := fun (i : G) (g : D i) => x (colim i g);	      legs_comm :=	        fun (i j : G) (g : G i j) (x0 : D i) => ap x (colimp i j g x0)	    |} == x	";
+            data = "1 goal (ID 100)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  ============================	  Colimit_rec P	    {|	      legs := fun (i : G) (g : D i) => x (colim i g);	      legs_comm :=	        fun (i j : G) (g : G i j) (x0 : D i) => ap x (colimp i j g x0)	    |} == x	";
             responses[i]=data;
           
 
             i = 93;
-            data = "2 subgoals (ID 118)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  ============================	  forall (i : G) (x0 : D i),	  (fun w : Colimit D =>	   Colimit_rec P	     {|	       legs := fun (i0 : G) (g : D i0) => x (colim i0 g);	       legs_comm :=	         fun (i0 j : G) (g : G i0 j) (x1 : D i0) => ap x (colimp i0 j g x1)	     |} w = x w) (colim i x0)		subgoal 2 (ID 120) is:	 forall (i j : G) (g : G i j) (x0 : D i),	 transport	   (fun w : Colimit D =>	    Colimit_rec P	      {|	        legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	        legs_comm :=	          fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	          ap x (colimp i0 j0 g0 x1)	      |} w = x w) (colimp i j g x0) (?q j ((D _f g) x0)) = 	 ?q i x0	";
+            data = "2 goals (ID 118)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  ============================	  forall (i : G) (x0 : D i),	  (fun w : Colimit D =>	   Colimit_rec P	     {|	       legs := fun (i0 : G) (g : D i0) => x (colim i0 g);	       legs_comm :=	         fun (i0 j : G) (g : G i0 j) (x1 : D i0) => ap x (colimp i0 j g x1)	     |} w = x w) (colim i x0)		goal 2 (ID 120) is:	 forall (i j : G) (g : G i j) (x0 : D i),	 transport	   (fun w : Colimit D =>	    Colimit_rec P	      {|	        legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	        legs_comm :=	          fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	          ap x (colimp i0 j0 g0 x1)	      |} w = x w) (colimp i j g x0) (?q j ((D _f g) x0)) = 	 ?q i x0	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 120)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  ============================	  forall (i j : G) (g : G i j) (x0 : D i),	  transport	    (fun w : Colimit D =>	     Colimit_rec P	       {|	         legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	         legs_comm :=	           fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	           ap x (colimp i0 j0 g0 x1)	       |} w = x w) (colimp i j g x0)	    ((fun (i0 : G) (x1 : D i0) => 1) j ((D _f g) x0)) =	  (fun (i0 : G) (x1 : D i0) => 1) i x0	";
+            data = "1 goal (ID 120)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  ============================	  forall (i j : G) (g : G i j) (x0 : D i),	  transport	    (fun w : Colimit D =>	     Colimit_rec P	       {|	         legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	         legs_comm :=	           fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	           ap x (colimp i0 j0 g0 x1)	       |} w = x w) (colimp i j g x0)	    ((fun (i0 : G) (x1 : D i0) => 1) j ((D _f g) x0)) =	  (fun (i0 : G) (x1 : D i0) => 1) i x0	";
             responses[i]=data;
           
 
             i = 95;
-            data = "1 subgoal (ID 128)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  i, j : G	  g : G i j	  x0 : D i	  ============================	  transport	    (fun w : Colimit D =>	     Colimit_rec P	       {|	         legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	         legs_comm :=	           fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	           ap x (colimp i0 j0 g0 x1)	       |} w = x w) (colimp i j g x0) 1 = 1	";
+            data = "1 goal (ID 128)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  i, j : G	  g : G i j	  x0 : D i	  ============================	  transport	    (fun w : Colimit D =>	     Colimit_rec P	       {|	         legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	         legs_comm :=	           fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	           ap x (colimp i0 j0 g0 x1)	       |} w = x w) (colimp i j g x0) 1 = 1	";
             responses[i]=data;
           
 
             i = 96;
-            data = "1 subgoal (ID 135)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  i, j : G	  g : G i j	  x0 : D i	  ============================	  ((ap	      (Colimit_rec P	         {|	           legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	           legs_comm :=	             fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	             ap x (colimp i0 j0 g0 x1)	         |}) (colimp i j g x0))^ @ 1) @ ap x (colimp i j g x0) = 1	";
+            data = "1 goal (ID 135)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  i, j : G	  g : G i j	  x0 : D i	  ============================	  ((ap	      (Colimit_rec P	         {|	           legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	           legs_comm :=	             fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	             ap x (colimp i0 j0 g0 x1)	         |}) (colimp i j g x0))^ @ 1) @ ap x (colimp i j g x0) = 1	";
             responses[i]=data;
           
 
             i = 97;
-            data = "1 subgoal (ID 144)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  i, j : G	  g : G i j	  x0 : D i	  ============================	  ((legs_comm	      {|	        legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	        legs_comm :=	          fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	          ap x (colimp i0 j0 g0 x1)	      |} i j g x0)^ @ 1) @ ap x (colimp i j g x0) = 1	";
+            data = "1 goal (ID 144)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  x : Colimit D -> P	  i, j : G	  g : G i j	  x0 : D i	  ============================	  ((legs_comm	      {|	        legs := fun (i0 : G) (g0 : D i0) => x (colim i0 g0);	        legs_comm :=	          fun (i0 j0 : G) (g0 : G i0 j0) (x1 : D i0) =>	          ap x (colimp i0 j0 g0 x1)	      |} i j g x0)^ @ 1) @ ap x (colimp i j g x0) = 1	";
             responses[i]=data;
           
 
@@ -513,27 +513,27 @@
           
 
             i = 99;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 subgoal		subgoal 1 (ID 52) is:	 (fun f : Colimit D -> P =>	  {|	    legs := fun (i : G) (g : D i) => f (colim i g);	    legs_comm := fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	  |}) o Colimit_rec P == idmap	1 subgoal (ID 52)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  (fun f : Colimit D -> P =>	   {|	     legs := fun (i : G) (g : D i) => f (colim i g);	     legs_comm :=	       fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	   |}) o Colimit_rec P == idmap	1 subgoal (ID 52)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  (fun f : Colimit D -> P =>	   {|	     legs := fun (i : G) (g : D i) => f (colim i g);	     legs_comm :=	       fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	   |}) o Colimit_rec P == idmap	1 subgoal (ID 262)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  {|	    legs :=	      fun (i : G) (g : D i) =>	      Colimit_rec P {| legs := legs; legs_comm := legs_comm |} (colim i g);	    legs_comm :=	      fun (i j : G) (g : G i j) (x : D i) =>	      ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	        (colimp i j g x)	  |} = {| legs := legs; legs_comm := legs_comm |}	2 subgoals (ID 298)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall i : G,	  {|	    legs :=	      fun (i0 : G) (g : D i0) =>	      Colimit_rec P {| legs := legs; legs_comm := legs_comm |} (colim i0 g);	    legs_comm :=	      fun (i0 j : G) (g : G i0 j) (x : D i0) =>	      ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	        (colimp i0 j g x)	  |} i == {| legs := legs; legs_comm := legs_comm |} i		subgoal 2 (ID 300) is:	 forall (i j : G) (g : G i j) (x : D i),	 Cocone.legs_comm	   {|	     legs :=	       fun (i0 : G) (g0 : D i0) =>	       Colimit_rec P {| legs := legs; legs_comm := legs_comm |} (colim i0 g0);	     legs_comm :=	       fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	       ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	         (colimp i0 j0 g0 x0)	   |} i j g x @ ?path_legs i x =	 ?path_legs j ((D _f g) x) @	 Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 52) is:	 (fun f : Colimit D -> P =>	  {|	    legs := fun (i : G) (g : D i) => f (colim i g);	    legs_comm := fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	  |}) o Colimit_rec P == idmap	1 goal (ID 52)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  (fun f : Colimit D -> P =>	   {|	     legs := fun (i : G) (g : D i) => f (colim i g);	     legs_comm :=	       fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	   |}) o Colimit_rec P == idmap	1 goal (ID 52)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  ============================	  (fun f : Colimit D -> P =>	   {|	     legs := fun (i : G) (g : D i) => f (colim i g);	     legs_comm :=	       fun (i j : G) (g : G i j) (x : D i) => ap f (colimp i j g x)	   |}) o Colimit_rec P == idmap	1 goal (ID 262)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  {|	    legs :=	      fun (i : G) (g : D i) =>	      Colimit_rec P {| legs := legs; legs_comm := legs_comm |} (colim i g);	    legs_comm :=	      fun (i j : G) (g : G i j) (x : D i) =>	      ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	        (colimp i j g x)	  |} = {| legs := legs; legs_comm := legs_comm |}	2 goals (ID 298)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall i : G,	  {|	    legs :=	      fun (i0 : G) (g : D i0) =>	      Colimit_rec P {| legs := legs; legs_comm := legs_comm |} (colim i0 g);	    legs_comm :=	      fun (i0 j : G) (g : G i0 j) (x : D i0) =>	      ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	        (colimp i0 j g x)	  |} i == {| legs := legs; legs_comm := legs_comm |} i		goal 2 (ID 300) is:	 forall (i j : G) (g : G i j) (x : D i),	 Cocone.legs_comm	   {|	     legs :=	       fun (i0 : G) (g0 : D i0) =>	       Colimit_rec P {| legs := legs; legs_comm := legs_comm |} (colim i0 g0);	     legs_comm :=	       fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	       ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	         (colimp i0 j0 g0 x0)	   |} i j g x @ ?path_legs i x =	 ?path_legs j ((D _f g) x) @	 Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	";
             responses[i]=data;
           
 
             i = 100;
-            data = "1 subgoal (ID 300)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  Cocone.legs_comm	    {|	      legs :=	        fun (i0 : G) (g0 : D i0) =>	        Colimit_rec P {| legs := legs; legs_comm := legs_comm |}	          (colim i0 g0);	      legs_comm :=	        fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	          (colimp i0 j0 g0 x0)	    |} i j g x @ (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @	  Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	";
+            data = "1 goal (ID 300)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  Cocone.legs_comm	    {|	      legs :=	        fun (i0 : G) (g0 : D i0) =>	        Colimit_rec P {| legs := legs; legs_comm := legs_comm |}	          (colim i0 g0);	      legs_comm :=	        fun (i0 j0 : G) (g0 : G i0 j0) (x0 : D i0) =>	        ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	          (colimp i0 j0 g0 x0)	    |} i j g x @ (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @	  Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	";
             responses[i]=data;
           
 
             i = 101;
-            data = "1 subgoal (ID 314)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  i, j : G	  g : G i j	  x : D i	  ============================	  ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	    (colimp i j g x) @ 1 = 1 @ legs_comm i j g x	";
+            data = "1 goal (ID 314)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  i, j : G	  g : G i j	  x : D i	  ============================	  ap (Colimit_rec P {| legs := legs; legs_comm := legs_comm |})	    (colimp i j g x) @ 1 = 1 @ legs_comm i j g x	";
             responses[i]=data;
           
 
             i = 102;
-            data = "1 subgoal (ID 317)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  i, j : G	  g : G i j	  x : D i	  ============================	  Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x @ 1 =	  1 @ legs_comm i j g x	";
+            data = "1 goal (ID 317)	  	  H : Funext	  G : Graph	  D : Diagram G	  P : Type	  legs : forall i : G, D i -> P	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  i, j : G	  g : G i j	  x : D i	  ============================	  Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x @ 1 =	  1 @ legs_comm i j g x	";
             responses[i]=data;
           
 
             i = 103;
-            data = "No more subgoals.	No more subgoals.	";
+            data = "No more goals.	No more goals.	";
             responses[i]=data;
           
 
@@ -568,7 +568,7 @@
           
 
             i = 110;
-            data = "1 subgoal (ID 50)	  	  H : Funext	  G : Graph	  D : Diagram G	  ============================	  UniversalCocone (cocone_colimit D)	";
+            data = "1 goal (ID 50)	  	  H : Funext	  G : Graph	  D : Diagram G	  ============================	  UniversalCocone (cocone_colimit D)	";
             responses[i]=data;
           
 
@@ -578,87 +578,87 @@
           
 
             i = 112;
-            data = "1 subgoal (ID 151)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  ============================	  IsEquiv (cocone_postcompose (cocone_colimit D))	";
+            data = "1 goal (ID 156)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  ============================	  IsEquiv (cocone_postcompose (cocone_colimit D))	";
             responses[i]=data;
           
 
             i = 113;
-            data = "2 subgoals (ID 159)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  ============================	  cocone_postcompose (cocone_colimit D) o Colimit_rec Y == idmap		subgoal 2 (ID 161) is:	 Colimit_rec Y o cocone_postcompose (cocone_colimit D) == idmap	";
+            data = "2 goals (ID 164)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  ============================	  cocone_postcompose (cocone_colimit D) o Colimit_rec Y == idmap		goal 2 (ID 166) is:	 Colimit_rec Y o cocone_postcompose (cocone_colimit D) == idmap	";
             responses[i]=data;
           
 
             i = 114;
-            data = "1 subgoal (ID 159)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  ============================	  cocone_postcompose (cocone_colimit D) o Colimit_rec Y == idmap	1 subgoal (ID 163)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  ============================	  cocone_postcompose (cocone_colimit D) (Colimit_rec Y C) = C	";
+            data = "1 goal (ID 164)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  ============================	  cocone_postcompose (cocone_colimit D) o Colimit_rec Y == idmap	1 goal (ID 168)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  ============================	  cocone_postcompose (cocone_colimit D) (Colimit_rec Y C) = C	";
             responses[i]=data;
           
 
             i = 115;
-            data = "2 subgoals (ID 185)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  ============================	  forall i : G,	  cocone_postcompose (cocone_colimit D) (Colimit_rec Y C) i == C i		subgoal 2 (ID 187) is:	 forall (i j : G) (g : G i j) (x : D i),	 legs_comm (cocone_postcompose (cocone_colimit D) (Colimit_rec Y C)) i j g x @	 ?path_legs i x = ?path_legs j ((D _f g) x) @ legs_comm C i j g x	";
+            data = "2 goals (ID 190)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  ============================	  forall i : G,	  cocone_postcompose (cocone_colimit D) (Colimit_rec Y C) i == C i		goal 2 (ID 192) is:	 forall (i j : G) (g : G i j) (x : D i),	 legs_comm (cocone_postcompose (cocone_colimit D) (Colimit_rec Y C)) i j g x @	 ?path_legs i x = ?path_legs j ((D _f g) x) @ legs_comm C i j g x	";
             responses[i]=data;
           
 
             i = 116;
-            data = "1 subgoal (ID 187)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  legs_comm (cocone_postcompose (cocone_colimit D) (Colimit_rec Y C)) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ legs_comm C i j g x	";
+            data = "1 goal (ID 192)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  legs_comm (cocone_postcompose (cocone_colimit D) (Colimit_rec Y C)) i j g x @	  (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @ legs_comm C i j g x	";
             responses[i]=data;
           
 
             i = 117;
-            data = "1 subgoal (ID 201)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  i, j : G	  f : G i j	  x : D i	  ============================	  ap (Colimit_rec Y C) (colimp i j f x) @ 1 = 1 @ legs_comm C i j f x	";
+            data = "1 goal (ID 206)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  i, j : G	  f : G i j	  x : D i	  ============================	  ap (Colimit_rec Y C) (colimp i j f x) @ 1 = 1 @ legs_comm C i j f x	";
             responses[i]=data;
           
 
             i = 118;
-            data = "1 subgoal (ID 225)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  i, j : G	  f : G i j	  x : D i	  ============================	  ap (Colimit_rec Y C) (colimp i j f x) = legs_comm C i j f x	";
+            data = "1 goal (ID 230)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  C : Cocone D Y	  i, j : G	  f : G i j	  x : D i	  ============================	  ap (Colimit_rec Y C) (colimp i j f x) = legs_comm C i j f x	";
             responses[i]=data;
           
 
             i = 119;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 161) is:	 Colimit_rec Y o cocone_postcompose (cocone_colimit D) == idmap	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 166) is:	 Colimit_rec Y o cocone_postcompose (cocone_colimit D) == idmap	";
             responses[i]=data;
           
 
             i = 120;
-            data = "1 subgoal (ID 161)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  ============================	  Colimit_rec Y o cocone_postcompose (cocone_colimit D) == idmap	1 subgoal (ID 229)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  ============================	  Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) = f	";
+            data = "1 goal (ID 166)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  ============================	  Colimit_rec Y o cocone_postcompose (cocone_colimit D) == idmap	1 goal (ID 234)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  ============================	  Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) = f	";
             responses[i]=data;
           
 
             i = 121;
-            data = "1 subgoal (ID 233)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  ============================	  Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) == f	";
+            data = "1 goal (ID 238)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  ============================	  Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) == f	";
             responses[i]=data;
           
 
             i = 122;
-            data = "2 subgoals (ID 251)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  ============================	  forall (i : G) (x : D i),	  (fun w : Colimit D =>	   Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) w = f w)	    (colim i x)		subgoal 2 (ID 253) is:	 forall (i j : G) (g : G i j) (x : D i),	 transport	   (fun w : Colimit D =>	    Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) w = f w)	   (colimp i j g x) (?q j ((D _f g) x)) = ?q i x	";
+            data = "2 goals (ID 256)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  ============================	  forall (i : G) (x : D i),	  (fun w : Colimit D =>	   Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) w = f w)	    (colim i x)		goal 2 (ID 258) is:	 forall (i j : G) (g : G i j) (x : D i),	 transport	   (fun w : Colimit D =>	    Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) w = f w)	   (colimp i j g x) (?q j ((D _f g) x)) = ?q i x	";
             responses[i]=data;
           
 
             i = 123;
-            data = "1 subgoal (ID 253)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  transport	    (fun w : Colimit D =>	     Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) w = f w)	    (colimp i j g x) ((fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x)) =	  (fun (i0 : G) (x0 : D i0) => 1) i x	";
+            data = "1 goal (ID 258)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  transport	    (fun w : Colimit D =>	     Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) w = f w)	    (colimp i j g x) ((fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x)) =	  (fun (i0 : G) (x0 : D i0) => 1) i x	";
             responses[i]=data;
           
 
             i = 124;
-            data = "1 subgoal (ID 261)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  transport	    (fun w : Colimit D =>	     Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) w = f w)	    (colimp i j g x) 1 = 1	";
+            data = "1 goal (ID 266)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  transport	    (fun w : Colimit D =>	     Colimit_rec Y (cocone_postcompose (cocone_colimit D) f) w = f w)	    (colimp i j g x) 1 = 1	";
             responses[i]=data;
           
 
             i = 125;
-            data = "1 subgoal (ID 268)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  ((ap (Colimit_rec Y (cocone_postcompose (cocone_colimit D) f))	      (colimp i j g x))^ @ 1) @ ap f (colimp i j g x) = 1	";
+            data = "1 goal (ID 273)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  ((ap (Colimit_rec Y (cocone_postcompose (cocone_colimit D) f))	      (colimp i j g x))^ @ 1) @ ap f (colimp i j g x) = 1	";
             responses[i]=data;
           
 
             i = 126;
-            data = "1 subgoal (ID 277)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  ((legs_comm (cocone_postcompose (cocone_colimit D) f) i j g x)^ @ 1) @	  ap f (colimp i j g x) = 1	";
+            data = "1 goal (ID 282)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  ((legs_comm (cocone_postcompose (cocone_colimit D) f) i j g x)^ @ 1) @	  ap f (colimp i j g x) = 1	";
             responses[i]=data;
           
 
             i = 127;
-            data = "1 subgoal (ID 306)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  (legs_comm (cocone_postcompose (cocone_colimit D) f) i j g x)^ @	  ap f (colimp i j g x) = 1	";
+            data = "1 goal (ID 311)	  	  H : Funext	  G : Graph	  D : Diagram G	  Y : Type	  f : Colimit D -> Y	  i, j : G	  g : G i j	  x : D i	  ============================	  (legs_comm (cocone_postcompose (cocone_colimit D) f) i j g x)^ @	  ap f (colimp i j g x) = 1	";
             responses[i]=data;
           
 
             i = 128;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -738,7 +738,7 @@
           
 
             i = 144;
-            data = "1 subgoal (ID 67)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q : Type	  ============================	  IsColimit D2 Q -> IsColimit D1 Q	";
+            data = "1 goal (ID 67)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q : Type	  ============================	  IsColimit D2 Q -> IsColimit D1 Q	";
             responses[i]=data;
           
 
@@ -748,17 +748,17 @@
           
 
             i = 146;
-            data = "1 subgoal (ID 68)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : IsColimit D2 Q	  ============================	  IsColimit D1 Q	";
+            data = "1 goal (ID 68)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : IsColimit D2 Q	  ============================	  IsColimit D1 Q	";
             responses[i]=data;
           
 
             i = 147;
-            data = "1 subgoal (ID 77)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : IsColimit D2 Q	  ============================	  UniversalCocone (cocone_precompose m HQ)	";
+            data = "1 goal (ID 77)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q : Type	  HQ : IsColimit D2 Q	  ============================	  UniversalCocone (cocone_precompose m HQ)	";
             responses[i]=data;
           
 
             i = 148;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -768,7 +768,7 @@
           
 
             i = 150;
-            data = "1 subgoal (ID 76)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  ============================	  IsColimit D Q -> IsColimit D Q'	";
+            data = "1 goal (ID 76)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  ============================	  IsColimit D Q -> IsColimit D Q'	";
             responses[i]=data;
           
 
@@ -778,17 +778,17 @@
           
 
             i = 152;
-            data = "1 subgoal (ID 77)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : IsColimit D Q	  ============================	  IsColimit D Q'	";
+            data = "1 goal (ID 77)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : IsColimit D Q	  ============================	  IsColimit D Q'	";
             responses[i]=data;
           
 
             i = 153;
-            data = "1 subgoal (ID 86)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : IsColimit D Q	  ============================	  UniversalCocone (cocone_postcompose HQ f)	";
+            data = "1 goal (ID 86)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q : Type	  Q' : Type	  f : Q <~> Q'	  HQ : IsColimit D Q	  ============================	  UniversalCocone (cocone_postcompose HQ f)	";
             responses[i]=data;
           
 
             i = 154;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -948,7 +948,7 @@
           
 
             i = 186;
-            data = "1 subgoal (ID 149)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  functor_colimit m HQ1 HQ2 o functor_colimit (diagram_equiv_inv m) HQ2 HQ1 ==	  idmap	";
+            data = "1 goal (ID 149)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  functor_colimit m HQ1 HQ2 o functor_colimit (diagram_equiv_inv m) HQ2 HQ1 ==	  idmap	";
             responses[i]=data;
           
 
@@ -958,52 +958,52 @@
           
 
             i = 188;
-            data = "1 subgoal (ID 154)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  (fun x : Q2 =>	   functor_colimit m HQ1 HQ2	     (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) = idmap	";
+            data = "1 goal (ID 154)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  (fun x : Q2 =>	   functor_colimit m HQ1 HQ2	     (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) = idmap	";
             responses[i]=data;
           
 
             i = 189;
-            data = "2 subgoals (ID 161)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  IsEquiv (cocone_postcompose HQ2)		subgoal 2 (ID 164) is:	 cocone_postcompose HQ2	   (fun x : Q2 =>	    functor_colimit m HQ1 HQ2	      (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) =	 cocone_postcompose HQ2 idmap	";
+            data = "2 goals (ID 161)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  IsEquiv (cocone_postcompose HQ2)		goal 2 (ID 164) is:	 cocone_postcompose HQ2	   (fun x : Q2 =>	    functor_colimit m HQ1 HQ2	      (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) =	 cocone_postcompose HQ2 idmap	";
             responses[i]=data;
           
 
             i = 190;
-            data = "1 subgoal (ID 164)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ2	    (fun x : Q2 =>	     functor_colimit m HQ1 HQ2	       (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) =	  cocone_postcompose HQ2 idmap	";
+            data = "1 goal (ID 164)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ2	    (fun x : Q2 =>	     functor_colimit m HQ1 HQ2	       (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) =	  cocone_postcompose HQ2 idmap	";
             responses[i]=data;
           
 
             i = 191;
-            data = "2 focused subgoals	(shelved: 1) (ID 265)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ2	    (fun x : Q2 =>	     functor_colimit m HQ1 HQ2	       (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) = 	  ?Goal		subgoal 2 (ID 266) is:	 ?Goal = cocone_postcompose HQ2 idmap	";
+            data = "2 focused goals	(shelved: 1) (ID 270)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ2	    (fun x : Q2 =>	     functor_colimit m HQ1 HQ2	       (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) = 	  ?Goal		goal 2 (ID 271) is:	 ?Goal = cocone_postcompose HQ2 idmap	";
             responses[i]=data;
           
 
             i = 192;
-            data = "1 subgoal (ID 265)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ2	    (fun x : Q2 =>	     functor_colimit m HQ1 HQ2	       (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) = HQ2	";
+            data = "1 goal (ID 270)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ2	    (fun x : Q2 =>	     functor_colimit m HQ1 HQ2	       (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) = HQ2	";
             responses[i]=data;
           
 
             i = 193;
-            data = "2 focused subgoals	(shelved: 1) (ID 297)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ2	    (fun x : Q2 =>	     functor_colimit m HQ1 HQ2	       (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) = 	  ?Goal		subgoal 2 (ID 298) is:	 ?Goal = HQ2	";
+            data = "2 focused goals	(shelved: 1) (ID 302)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ2	    (fun x : Q2 =>	     functor_colimit m HQ1 HQ2	       (functor_colimit (diagram_equiv_inv m) HQ2 HQ1 x)) = 	  ?Goal		goal 2 (ID 303) is:	 ?Goal = HQ2	";
             responses[i]=data;
           
 
             i = 194;
-            data = "1 subgoal (ID 298)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose	    (cocone_postcompose HQ2 (functor_colimit (diagram_equiv_inv m) HQ2 HQ1))	    (functor_colimit m HQ1 HQ2) = HQ2	";
+            data = "1 goal (ID 303)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose	    (cocone_postcompose HQ2 (functor_colimit (diagram_equiv_inv m) HQ2 HQ1))	    (functor_colimit m HQ1 HQ2) = HQ2	";
             responses[i]=data;
           
 
             i = 195;
-            data = "1 subgoal (ID 324)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_precompose (diagram_equiv_inv m) (cocone_precompose m HQ2) = HQ2	";
+            data = "1 goal (ID 329)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_precompose (diagram_equiv_inv m) (cocone_precompose m HQ2) = HQ2	";
             responses[i]=data;
           
 
             i = 196;
-            data = "1 subgoal (ID 345)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_precompose (diagram_idmap D2) HQ2 = HQ2	";
+            data = "1 goal (ID 350)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_precompose (diagram_idmap D2) HQ2 = HQ2	";
             responses[i]=data;
           
 
             i = 197;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1013,7 +1013,7 @@
           
 
             i = 199;
-            data = "1 subgoal (ID 173)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  functor_colimit (diagram_equiv_inv m) HQ2 HQ1 o functor_colimit m HQ1 HQ2 ==	  idmap	";
+            data = "1 goal (ID 173)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  functor_colimit (diagram_equiv_inv m) HQ2 HQ1 o functor_colimit m HQ1 HQ2 ==	  idmap	";
             responses[i]=data;
           
 
@@ -1023,52 +1023,52 @@
           
 
             i = 201;
-            data = "1 subgoal (ID 178)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  (fun x : Q1 =>	   functor_colimit (diagram_equiv_inv m) HQ2 HQ1	     (functor_colimit m HQ1 HQ2 x)) = idmap	";
+            data = "1 goal (ID 178)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  (fun x : Q1 =>	   functor_colimit (diagram_equiv_inv m) HQ2 HQ1	     (functor_colimit m HQ1 HQ2 x)) = idmap	";
             responses[i]=data;
           
 
             i = 202;
-            data = "2 subgoals (ID 185)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  IsEquiv (cocone_postcompose HQ1)		subgoal 2 (ID 188) is:	 cocone_postcompose HQ1	   (fun x : Q1 =>	    functor_colimit (diagram_equiv_inv m) HQ2 HQ1	      (functor_colimit m HQ1 HQ2 x)) = cocone_postcompose HQ1 idmap	";
+            data = "2 goals (ID 185)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  IsEquiv (cocone_postcompose HQ1)		goal 2 (ID 188) is:	 cocone_postcompose HQ1	   (fun x : Q1 =>	    functor_colimit (diagram_equiv_inv m) HQ2 HQ1	      (functor_colimit m HQ1 HQ2 x)) = cocone_postcompose HQ1 idmap	";
             responses[i]=data;
           
 
             i = 203;
-            data = "1 subgoal (ID 188)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ1	    (fun x : Q1 =>	     functor_colimit (diagram_equiv_inv m) HQ2 HQ1	       (functor_colimit m HQ1 HQ2 x)) = cocone_postcompose HQ1 idmap	";
+            data = "1 goal (ID 188)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ1	    (fun x : Q1 =>	     functor_colimit (diagram_equiv_inv m) HQ2 HQ1	       (functor_colimit m HQ1 HQ2 x)) = cocone_postcompose HQ1 idmap	";
             responses[i]=data;
           
 
             i = 204;
-            data = "2 focused subgoals	(shelved: 1) (ID 289)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ1	    (fun x : Q1 =>	     functor_colimit (diagram_equiv_inv m) HQ2 HQ1	       (functor_colimit m HQ1 HQ2 x)) = ?Goal		subgoal 2 (ID 290) is:	 ?Goal = cocone_postcompose HQ1 idmap	";
+            data = "2 focused goals	(shelved: 1) (ID 294)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ1	    (fun x : Q1 =>	     functor_colimit (diagram_equiv_inv m) HQ2 HQ1	       (functor_colimit m HQ1 HQ2 x)) = ?Goal		goal 2 (ID 295) is:	 ?Goal = cocone_postcompose HQ1 idmap	";
             responses[i]=data;
           
 
             i = 205;
-            data = "1 subgoal (ID 289)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ1	    (fun x : Q1 =>	     functor_colimit (diagram_equiv_inv m) HQ2 HQ1	       (functor_colimit m HQ1 HQ2 x)) = HQ1	";
+            data = "1 goal (ID 294)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ1	    (fun x : Q1 =>	     functor_colimit (diagram_equiv_inv m) HQ2 HQ1	       (functor_colimit m HQ1 HQ2 x)) = HQ1	";
             responses[i]=data;
           
 
             i = 206;
-            data = "2 focused subgoals	(shelved: 1) (ID 321)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ1	    (fun x : Q1 =>	     functor_colimit (diagram_equiv_inv m) HQ2 HQ1	       (functor_colimit m HQ1 HQ2 x)) = ?Goal		subgoal 2 (ID 322) is:	 ?Goal = HQ1	";
+            data = "2 focused goals	(shelved: 1) (ID 326)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose HQ1	    (fun x : Q1 =>	     functor_colimit (diagram_equiv_inv m) HQ2 HQ1	       (functor_colimit m HQ1 HQ2 x)) = ?Goal		goal 2 (ID 327) is:	 ?Goal = HQ1	";
             responses[i]=data;
           
 
             i = 207;
-            data = "1 subgoal (ID 322)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose (cocone_postcompose HQ1 (functor_colimit m HQ1 HQ2))	    (functor_colimit (diagram_equiv_inv m) HQ2 HQ1) = HQ1	";
+            data = "1 goal (ID 327)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_postcompose (cocone_postcompose HQ1 (functor_colimit m HQ1 HQ2))	    (functor_colimit (diagram_equiv_inv m) HQ2 HQ1) = HQ1	";
             responses[i]=data;
           
 
             i = 208;
-            data = "1 subgoal (ID 348)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_precompose m (cocone_precompose (diagram_equiv_inv m) HQ1) = HQ1	";
+            data = "1 goal (ID 353)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_precompose m (cocone_precompose (diagram_equiv_inv m) HQ1) = HQ1	";
             responses[i]=data;
           
 
             i = 209;
-            data = "1 subgoal (ID 369)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_precompose (diagram_idmap D1) HQ1 = HQ1	";
+            data = "1 goal (ID 374)	  	  H : Funext	  G : Graph	  D1 : Diagram G	  D2 : Diagram G	  m : D1 ~d~ D2	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D1 Q1	  HQ2 : IsColimit D2 Q2	  ============================	  cocone_precompose (diagram_idmap D1) HQ1 = HQ1	";
             responses[i]=data;
           
 
             i = 210;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1138,7 +1138,7 @@
           
 
             i = 224;
-            data = "1 subgoal (ID 69)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D Q1	  HQ2 : IsColimit D Q2	  ============================	  Q1 <~> Q2	";
+            data = "1 goal (ID 69)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D Q1	  HQ2 : IsColimit D Q2	  ============================	  Q1 <~> Q2	";
             responses[i]=data;
           
 
@@ -1148,12 +1148,12 @@
           
 
             i = 226;
-            data = "1 subgoal (ID 115)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D Q1	  HQ2 : IsColimit D Q2	  ============================	  D ~d~ D	";
+            data = "1 goal (ID 115)	  	  H : Funext	  G : Graph	  D : Diagram G	  Q1 : Type	  Q2 : Type	  HQ1 : IsColimit D Q1	  HQ2 : IsColimit D Q2	  ============================	  D ~d~ D	";
             responses[i]=data;
           
 
             i = 227;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1198,7 +1198,7 @@
           
 
             i = 236;
-            data = "1 subgoal (ID 77)	  	  H : Funext	  G : Graph	  D : Diagram G	  C : Type	  ============================	  (Colimit D -> C) <~> DiagramMap D (diagram_const C)	";
+            data = "1 goal (ID 77)	  	  H : Funext	  G : Graph	  D : Diagram G	  C : Type	  ============================	  (Colimit D -> C) <~> DiagramMap D (diagram_const C)	";
             responses[i]=data;
           
 
@@ -1208,17 +1208,17 @@
           
 
             i = 238;
-            data = "1 subgoal (ID 84)	  	  H : Funext	  G : Graph	  D : Diagram G	  C : Type	  ============================	  DiagramMap D (diagram_const C) <~> (Colimit D -> C)	";
+            data = "1 goal (ID 86)	  	  H : Funext	  G : Graph	  D : Diagram G	  C : Type	  ============================	  DiagramMap D (diagram_const C) <~> (Colimit D -> C)	";
             responses[i]=data;
           
 
             i = 239;
-            data = "1 subgoal (ID 93)	  	  H : Funext	  G : Graph	  D : Diagram G	  C : Type	  ============================	  DiagramMap D (diagram_const C) <~> Cocone D C	";
+            data = "1 goal (ID 95)	  	  H : Funext	  G : Graph	  D : Diagram G	  C : Type	  ============================	  DiagramMap D (diagram_const C) <~> Cocone D C	";
             responses[i]=data;
           
 
             i = 240;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 

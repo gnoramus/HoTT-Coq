@@ -433,7 +433,7 @@
           
 
             i = 83;
-            data = "1 subgoal (ID 24)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  ============================	  O1 <<< O3	";
+            data = "1 goal (ID 24)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  ============================	  O1 <<< O3	";
             responses[i]=data;
           
 
@@ -443,27 +443,27 @@
           
 
             i = 85;
-            data = "3 subgoals (ID 32)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  ============================	  O_reflector O3 A -> Type		subgoal 2 (ID 34) is:	 forall x : O_reflector O3 A,	 In O1	   ((fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	     ?Goal@{P:=P0; P_inO1:=P_inO0}) P P_inO1 x)	subgoal 3 (ID 36) is:	 forall x : A,	 (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	  ?Goal@{P:=P0; P_inO1:=P_inO0}) P P_inO1 (to O3 A x) <~> 	 P x	";
+            data = "3 goals (ID 32)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  ============================	  O_reflector O3 A -> Type		goal 2 (ID 34) is:	 forall x : O_reflector O3 A,	 In O1	   ((fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	     ?Goal@{P:=P0; P_inO1:=P_inO0}) P P_inO1 x)	goal 3 (ID 36) is:	 forall x : A,	 (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	  ?Goal@{P:=P0; P_inO1:=P_inO0}) P P_inO1 (to O3 A x) <~> 	 P x	";
             responses[i]=data;
           
 
             i = 86;
-            data = "3 subgoals (ID 52)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  P_inO2 := fun x : A => inO_leq O1 O2 (P x) (P_inO1 x)	   : forall x : A, In O2 (P x)	  ============================	  O_reflector O3 A -> Type		subgoal 2 (ID 68) is:	 forall x : O_reflector O3 A,	 In O1	   ((fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	     let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	     ?Goal@{P:=P0; P_inO1:=P_inO0}) P P_inO1 x)	subgoal 3 (ID 84) is:	 forall x : A,	 (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	  let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	  ?Goal@{P:=P0; P_inO1:=P_inO0}) P P_inO1 (to O3 A x) <~> 	 P x	";
+            data = "3 goals (ID 52)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  P_inO2 := fun x : A => inO_leq O1 O2 (P x) (P_inO1 x)	   : forall x : A, In O2 (P x)	  ============================	  O_reflector O3 A -> Type		goal 2 (ID 68) is:	 forall x : O_reflector O3 A,	 In O1	   ((fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	     let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	     ?Goal@{P:=P0; P_inO1:=P_inO0}) P P_inO1 x)	goal 3 (ID 84) is:	 forall x : A,	 (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	  let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	  ?Goal@{P:=P0; P_inO1:=P_inO0}) P P_inO1 (to O3 A x) <~> 	 P x	";
             responses[i]=data;
           
 
             i = 87;
-            data = "1 subgoal (ID 52)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  P_inO2 := fun x : A => inO_leq O1 O2 (P x) (P_inO1 x)	   : forall x : A, In O2 (P x)	  ============================	  O_reflector O3 A -> Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 68) is:	 forall x : O_reflector O3 A,	 In O1	   ((fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	     let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	     OO_descend O3 O2 P0) P P_inO1 x)	subgoal 2 (ID 84) is:	 forall x : A,	 (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	  let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	  OO_descend O3 O2 P0) P P_inO1 (to O3 A x) <~> P x	";
+            data = "1 goal (ID 52)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  P_inO2 := fun x : A => inO_leq O1 O2 (P x) (P_inO1 x)	   : forall x : A, In O2 (P x)	  ============================	  O_reflector O3 A -> Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 68) is:	 forall x : O_reflector O3 A,	 In O1	   ((fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	     let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	     OO_descend O3 O2 P0) P P_inO1 x)	goal 2 (ID 84) is:	 forall x : A,	 (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	  let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	  OO_descend O3 O2 P0) P P_inO1 (to O3 A x) <~> P x	";
             responses[i]=data;
           
 
             i = 88;
-            data = "1 subgoal (ID 68)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  P_inO2 := fun x : A => inO_leq O1 O2 (P x) (P_inO1 x)	   : forall x : A, In O2 (P x)	  ============================	  forall x : O_reflector O3 A,	  In O1	    ((fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	      let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	      OO_descend O3 O2 P0) P P_inO1 x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 84) is:	 forall x : A,	 (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	  let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	  OO_descend O3 O2 P0) P P_inO1 (to O3 A x) <~> P x	";
+            data = "1 goal (ID 68)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  P_inO2 := fun x : A => inO_leq O1 O2 (P x) (P_inO1 x)	   : forall x : A, In O2 (P x)	  ============================	  forall x : O_reflector O3 A,	  In O1	    ((fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	      let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	      OO_descend O3 O2 P0) P P_inO1 x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 84) is:	 forall x : A,	 (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	  let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	  OO_descend O3 O2 P0) P P_inO1 (to O3 A x) <~> P x	";
             responses[i]=data;
           
 
             i = 89;
-            data = "1 subgoal (ID 84)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  P_inO2 := fun x : A => inO_leq O1 O2 (P x) (P_inO1 x)	   : forall x : A, In O2 (P x)	  ============================	  forall x : A,	  (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	   let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	   OO_descend O3 O2 P0) P P_inO1 (to O3 A x) <~> P x	No more subgoals.	";
+            data = "1 goal (ID 84)	  	  O1, O2, O3 : ReflectiveSubuniverse	  H : O1 <=> O2	  H0 : O2 << O3	  H1 : O2 <<< O3	  Hstrong := O_strong_leq_trans_l O1 O2 O3 : O1 << O3	  A : Type	  P : A -> Type	  P_inO1 : forall x : A, In O1 (P x)	  P_inO2 := fun x : A => inO_leq O1 O2 (P x) (P_inO1 x)	   : forall x : A, In O2 (P x)	  ============================	  forall x : A,	  (fun (P0 : A -> Type) (P_inO0 : forall x0 : A, In O1 (P0 x0)) =>	   let P_inO3 := fun x0 : A => inO_leq O1 O2 (P0 x0) (P_inO0 x0) in	   OO_descend O3 O2 P0) P P_inO1 (to O3 A x) <~> P x	No more goals.	";
             responses[i]=data;
           
 
@@ -778,7 +778,7 @@
           
 
             i = 152;
-            data = "1 subgoal (ID 36)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  ============================	  IsConnMap O f	";
+            data = "1 goal (ID 36)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  ============================	  IsConnMap O f	";
             responses[i]=data;
           
 
@@ -788,67 +788,67 @@
           
 
             i = 154;
-            data = "1 subgoal (ID 37)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  ============================	  forall P : B -> Type,	  (forall b : B, In O (P b)) ->	  forall d : forall a : A, P (f a), ExtensionAlong f P d	";
+            data = "1 goal (ID 37)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  ============================	  forall P : B -> Type,	  (forall b : B, In O (P b)) ->	  forall d : forall a : A, P (f a), ExtensionAlong f P d	";
             responses[i]=data;
           
 
             i = 155;
-            data = "1 subgoal (ID 39)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  ============================	  forall d : forall a : A, P (f a), ExtensionAlong f P d	";
+            data = "1 goal (ID 39)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  ============================	  forall d : forall a : A, P (f a), ExtensionAlong f P d	";
             responses[i]=data;
           
 
             i = 156;
-            data = "1 subgoal (ID 42)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  ============================	  ExtendableAlong 1 f P	";
+            data = "1 goal (ID 42)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  ============================	  ExtendableAlong 1 f P	";
             responses[i]=data;
           
 
             i = 157;
-            data = "1 subgoal (ID 60)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Qp : forall x : B, OO_descend O' O P (to O' B x) <~> P x	  ============================	  ExtendableAlong 1 f P	";
+            data = "1 goal (ID 58)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Qp : forall x : B, OO_descend O' O P (to O' B x) <~> P x	  ============================	  ExtendableAlong 1 f P	";
             responses[i]=data;
           
 
             i = 158;
-            data = "1 subgoal (ID 74)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Qp : forall x : B, OO_descend O' O P (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (OO_descend O' O P x)	  ============================	  ExtendableAlong 1 f P	";
+            data = "1 goal (ID 71)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Qp : forall x : B, OO_descend O' O P (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (OO_descend O' O P x)	  ============================	  ExtendableAlong 1 f P	";
             responses[i]=data;
           
 
             i = 159;
-            data = "1 subgoal (ID 84)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 f P	";
+            data = "1 goal (ID 81)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 f P	";
             responses[i]=data;
           
 
             i = 160;
-            data = "1 subgoal (ID 100)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 f (fun x : B => Q (to O' B x))	";
+            data = "1 goal (ID 97)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 f (fun x : B => Q (to O' B x))	";
             responses[i]=data;
           
 
             i = 161;
-            data = "2 subgoals (ID 109)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (to O' B) Q		subgoal 2 (ID 110) is:	 ExtendableAlong 1 (fun x : A => to O' B (f x)) Q	";
+            data = "2 goals (ID 106)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (to O' B) Q		goal 2 (ID 107) is:	 ExtendableAlong 1 (fun x : A => to O' B (f x)) Q	";
             responses[i]=data;
           
 
             i = 162;
-            data = "1 subgoal (ID 110)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (fun x : A => to O' B (f x)) Q	";
+            data = "1 goal (ID 107)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (fun x : A => to O' B (f x)) Q	";
             responses[i]=data;
           
 
             i = 163;
-            data = "1 subgoal (ID 220)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (fun x : A => O_functor O' f (to O' A x)) Q	";
+            data = "1 goal (ID 217)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (fun x : A => O_functor O' f (to O' A x)) Q	";
             responses[i]=data;
           
 
             i = 164;
-            data = "2 subgoals (ID 330)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (O_functor O' f) Q		subgoal 2 (ID 331) is:	 ExtendableAlong 1 (to O' A)	   (fun b : O_reflector O' A => Q (O_functor O' f b))	";
+            data = "2 goals (ID 327)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (O_functor O' f) Q		goal 2 (ID 328) is:	 ExtendableAlong 1 (to O' A)	   (fun b : O_reflector O' A => Q (O_functor O' f b))	";
             responses[i]=data;
           
 
             i = 165;
-            data = "1 subgoal (ID 331)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (to O' A)	    (fun b : O_reflector O' A => Q (O_functor O' f b))	";
+            data = "1 goal (ID 328)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : B -> Type	  P_inO : forall b : B, In O (P b)	  Q := OO_descend O' O P : O_reflector O' B -> Type	  Qp : forall x : B, Q (to O' B x) <~> P x	  Q_inO : forall x : O_reflector O' B, In O (Q x)	  ============================	  ExtendableAlong 1 (to O' A)	    (fun b : O_reflector O' A => Q (O_functor O' f b))	";
             responses[i]=data;
           
 
             i = 166;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -978,7 +978,7 @@
           
 
             i = 192;
-            data = "1 subgoal (ID 63)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  O_inverts O (functor_sigma f g)	";
+            data = "1 goal (ID 63)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  O_inverts O (functor_sigma f g)	";
             responses[i]=data;
           
 
@@ -988,42 +988,42 @@
           
 
             i = 194;
-            data = "2 subgoals (ID 79)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  O {x : _ & P x} <~> O {x : _ & Q x}		subgoal 2 (ID 83) is:	 ?f == O_functor O (functor_sigma f g)	";
+            data = "2 goals (ID 79)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  O {x : _ & P x} <~> O {x : _ & Q x}		goal 2 (ID 83) is:	 ?f == O_functor O (functor_sigma f g)	";
             responses[i]=data;
           
 
             i = 195;
-            data = "1 subgoal (ID 79)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  O {x : _ & P x} <~> O {x : _ & Q x}	1 subgoal (ID 102)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  O {x : A & O (P x)} <~> O {x : B & O (Q x)}	";
+            data = "1 goal (ID 79)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  O {x : _ & P x} <~> O {x : _ & Q x}	1 goal (ID 102)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  O {x : A & O (P x)} <~> O {x : B & O (Q x)}	";
             responses[i]=data;
           
 
             i = 196;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 83) is:	 equiv_O_sigma_O O Q	 oE {|	      equiv_fun :=	        O_functor O (functor_sigma f (fun x : A => O_functor O (g x)));	      equiv_isequiv :=	        O_inverts_conn_map O	          (functor_sigma f (fun x : A => O_functor O (g x)))	    |} oE (equiv_O_sigma_O O P)^-1 == O_functor O (functor_sigma f g)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 83) is:	 equiv_O_sigma_O O Q	 oE {|	      equiv_fun :=	        O_functor O (functor_sigma f (fun x : A => O_functor O (g x)));	      equiv_isequiv :=	        O_inverts_conn_map O	          (functor_sigma f (fun x : A => O_functor O (g x)))	    |} oE (equiv_O_sigma_O O P)^-1 == O_functor O (functor_sigma f g)	";
             responses[i]=data;
           
 
             i = 197;
-            data = "1 subgoal (ID 83)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  equiv_O_sigma_O O Q	  oE {|	       equiv_fun :=	         O_functor O (functor_sigma f (fun x : A => O_functor O (g x)));	       equiv_isequiv :=	         O_inverts_conn_map O	           (functor_sigma f (fun x : A => O_functor O (g x)))	     |} oE (equiv_O_sigma_O O P)^-1 == O_functor O (functor_sigma f g)	1 subgoal (ID 421)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  (fun x : {x : _ & P x} =>	   (equiv_O_sigma_O O Q	    oE {|	         equiv_fun :=	           O_functor O (functor_sigma f (fun x0 : A => O_functor O (g x0)));	         equiv_isequiv :=	           O_inverts_conn_map O	             (functor_sigma f (fun x0 : A => O_functor O (g x0)))	       |} oE (equiv_O_sigma_O O P)^-1) (to O {x : _ & P x} x)) ==	  (fun x : {x : _ & P x} =>	   O_functor O (functor_sigma f g) (to O {x : _ & P x} x))	";
+            data = "1 goal (ID 83)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  equiv_O_sigma_O O Q	  oE {|	       equiv_fun :=	         O_functor O (functor_sigma f (fun x : A => O_functor O (g x)));	       equiv_isequiv :=	         O_inverts_conn_map O	           (functor_sigma f (fun x : A => O_functor O (g x)))	     |} oE (equiv_O_sigma_O O P)^-1 == O_functor O (functor_sigma f g)	1 goal (ID 491)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  ============================	  (fun x : {x : _ & P x} =>	   (equiv_O_sigma_O O Q	    oE {|	         equiv_fun :=	           O_functor O (functor_sigma f (fun x0 : A => O_functor O (g x0)));	         equiv_isequiv :=	           O_inverts_conn_map O	             (functor_sigma f (fun x0 : A => O_functor O (g x0)))	       |} oE (equiv_O_sigma_O O P)^-1) (to O {x : _ & P x} x)) ==	  (fun x : {x : _ & P x} =>	   O_functor O (functor_sigma f g) (to O {x : _ & P x} x))	";
             responses[i]=data;
           
 
             i = 198;
-            data = "1 subgoal (ID 428)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  x : A	  u : P x	  ============================	  O_rec	    (fun X : {x0 : B & O (Q x0)} =>	     O_rec (fun p : Q X.1 => to O {x0 : B & Q x0} (X.1; p)) X.2)	    (O_functor O (functor_sigma f (fun x0 : A => O_functor O (g x0)))	       (O_functor O (functor_sigma idmap (fun x0 : A => to O (P x0)))	          (to O {x : _ & P x} (x; u)))) =	  O_functor O (functor_sigma f g) (to O {x : _ & P x} (x; u))	";
+            data = "1 goal (ID 498)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  x : A	  u : P x	  ============================	  O_rec	    (fun X : {x0 : B & O (Q x0)} =>	     O_rec (fun p : Q X.1 => to O {x0 : B & Q x0} (X.1; p)) X.2)	    (O_functor O (functor_sigma f (fun x0 : A => O_functor O (g x0)))	       (O_functor O (functor_sigma idmap (fun x0 : A => to O (P x0)))	          (to O {x : _ & P x} (x; u)))) =	  O_functor O (functor_sigma f g) (to O {x : _ & P x} (x; u))	";
             responses[i]=data;
           
 
             i = 199;
-            data = "1 subgoal (ID 461)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  x : A	  u : P x	  ============================	  O_rec (fun p : Q (f x) => to O {x0 : B & Q x0} (f x; p))	    (O_functor O (g x) (to O (P x) u)) =	  to O {x : _ & Q x} (functor_sigma f g (x; u))	";
+            data = "1 goal (ID 531)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  x : A	  u : P x	  ============================	  O_rec (fun p : Q (f x) => to O {x0 : B & Q x0} (f x; p))	    (O_functor O (g x) (to O (P x) u)) =	  to O {x : _ & Q x} (functor_sigma f g (x; u))	";
             responses[i]=data;
           
 
             i = 200;
-            data = "1 subgoal (ID 477)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  x : A	  u : P x	  ============================	  to O {x0 : B & Q x0} (f x; g x u) =	  to O {x : _ & Q x} (functor_sigma f g (x; u))	";
+            data = "1 goal (ID 547)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  g : forall a : A, P a -> Q (f a)	  O_inverts0 : O_inverts O' f	  H1 : forall a : A, O_inverts O (g a)	  x : A	  u : P x	  ============================	  to O {x0 : B & Q x0} (f x; g x u) =	  to O {x : _ & Q x} (functor_sigma f g (x; u))	";
             responses[i]=data;
           
 
             i = 201;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1093,7 +1093,7 @@
           
 
             i = 215;
-            data = "1 subgoal (ID 75)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  ============================	  B -> Type	";
+            data = "1 goal (ID 75)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  ============================	  B -> Type	";
             responses[i]=data;
           
 
@@ -1103,17 +1103,17 @@
           
 
             i = 217;
-            data = "1 subgoal (ID 76)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  b : B	  ============================	  Type	";
+            data = "1 goal (ID 76)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  b : B	  ============================	  Type	";
             responses[i]=data;
           
 
             i = 218;
-            data = "1 subgoal (ID 88)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  b : B	  Q := OO_descend O' O P : O_reflector O' A -> Type	  ============================	  Type	";
+            data = "1 goal (ID 88)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  b : B	  Q := OO_descend O' O P : O_reflector O' A -> Type	  ============================	  Type	";
             responses[i]=data;
           
 
             i = 219;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1128,7 +1128,7 @@
           
 
             i = 222;
-            data = "1 subgoal (ID 102)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  ============================	  OO_descend_O_inverts f P (f a) <~> P a	";
+            data = "1 goal (ID 102)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  ============================	  OO_descend_O_inverts f P (f a) <~> P a	";
             responses[i]=data;
           
 
@@ -1138,27 +1138,27 @@
           
 
             i = 224;
-            data = "1 subgoal (ID 103)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  ============================	  OO_descend O' O P ((O_functor O' f)^-1 (to O' B (f a))) <~> P a	";
+            data = "1 goal (ID 103)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  ============================	  OO_descend O' O P ((O_functor O' f)^-1 (to O' B (f a))) <~> P a	";
             responses[i]=data;
           
 
             i = 225;
-            data = "1 subgoal (ID 120)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  ============================	  OO_descend O' O P ((O_functor O' f)^-1 (to O' B (f a))) <~>	  OO_descend O' O P (to O' A a)	";
+            data = "1 goal (ID 120)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  ============================	  OO_descend O' O P ((O_functor O' f)^-1 (to O' B (f a))) <~>	  OO_descend O' O P (to O' A a)	";
             responses[i]=data;
           
 
             i = 226;
-            data = "1 subgoal (ID 128)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  p : to O' B (f a) = O_functor O' f (to O' A a)	  ============================	  OO_descend O' O P ((O_functor O' f)^-1 (to O' B (f a))) <~>	  OO_descend O' O P (to O' A a)	";
+            data = "1 goal (ID 127)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  p : to O' B (f a) = O_functor O' f (to O' A a)	  ============================	  OO_descend O' O P ((O_functor O' f)^-1 (to O' B (f a))) <~>	  OO_descend O' O P (to O' A a)	";
             responses[i]=data;
           
 
             i = 227;
-            data = "1 subgoal (ID 134)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  p : (O_functor O' f)^-1 (to O' B (f a)) = to O' A a	  ============================	  OO_descend O' O P ((O_functor O' f)^-1 (to O' B (f a))) <~>	  OO_descend O' O P (to O' A a)	";
+            data = "1 goal (ID 133)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type	  P_inO : forall x : A, In O (P x)	  a : A	  p : (O_functor O' f)^-1 (to O' B (f a)) = to O' A a	  ============================	  OO_descend O' O P ((O_functor O' f)^-1 (to O' B (f a))) <~>	  OO_descend O' O P (to O' A a)	";
             responses[i]=data;
           
 
             i = 228;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1238,7 +1238,7 @@
           
 
             i = 244;
-            data = "1 subgoal (ID 115)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : Univalence	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  ============================	  ooExtendableAlong f (fun _ : B => Type_ O)	";
+            data = "1 goal (ID 115)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : Univalence	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  ============================	  ooExtendableAlong f (fun _ : B => Type_ O)	";
             responses[i]=data;
           
 
@@ -1248,22 +1248,22 @@
           
 
             i = 246;
-            data = "1 subgoal (ID 201)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : Univalence	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type_ O	  ============================	  ExtensionAlong f (fun _ : B => Type_ O) P	";
+            data = "1 goal (ID 201)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : Univalence	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type_ O	  ============================	  ExtensionAlong f (fun _ : B => Type_ O) P	";
             responses[i]=data;
           
 
             i = 247;
-            data = "1 subgoal (ID 222)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : Univalence	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type_ O	  ============================	  forall x : A,	  (OO_descend_O_inverts f (fun x0 : A => P x0) (f x);	  OO_descend_O_inverts_inO f (fun x0 : A => P x0) (f x)) = 	  P x	";
+            data = "1 goal (ID 222)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : Univalence	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type_ O	  ============================	  forall x : A,	  (OO_descend_O_inverts f (fun x0 : A => P x0) (f x);	  OO_descend_O_inverts_inO f (fun x0 : A => P x0) (f x)) = 	  P x	";
             responses[i]=data;
           
 
             i = 248;
-            data = "1 subgoal (ID 233)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : Univalence	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type_ O	  x : A	  ============================	  OO_descend_O_inverts f (fun x0 : A => P x0) (f x) <~> (P x).1	";
+            data = "1 goal (ID 233)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : Univalence	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  P : A -> Type_ O	  x : A	  ============================	  OO_descend_O_inverts f (fun x0 : A => P x0) (f x) <~> (P x).1	";
             responses[i]=data;
           
 
             i = 249;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1378,7 +1378,7 @@
           
 
             i = 272;
-            data = "1 subgoal (ID 141)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  ============================	  O_inverts O (ap f)	";
+            data = "1 goal (ID 141)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  ============================	  O_inverts O (ap f)	";
             responses[i]=data;
           
 
@@ -1388,142 +1388,142 @@
           
 
             i = 274;
-            data = "1 subgoal (ID 157)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  Pb : forall a : A,	       OO_descend_O_inverts f (fun y : A => O (x = y)) (f a) <~>	       (fun y : A => O (x = y)) a	  ============================	  O_inverts O (ap f)	";
+            data = "1 goal (ID 156)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  Pb : forall a : A,	       OO_descend_O_inverts f (fun y : A => O (x = y)) (f a) <~>	       (fun y : A => O (x = y)) a	  ============================	  O_inverts O (ap f)	";
             responses[i]=data;
           
 
             i = 275;
-            data = "1 subgoal (ID 173)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  Pb : forall a : A,	       OO_descend_O_inverts f (fun y : A => O (x = y)) (f a) <~>	       (fun y : A => O (x = y)) a	  P_inO : forall b : B,	          In O (OO_descend_O_inverts f (fun y : A => O (x = y)) b)	  ============================	  O_inverts O (ap f)	";
+            data = "1 goal (ID 171)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  Pb : forall a : A,	       OO_descend_O_inverts f (fun y : A => O (x = y)) (f a) <~>	       (fun y : A => O (x = y)) a	  P_inO : forall b : B,	          In O (OO_descend_O_inverts f (fun y : A => O (x = y)) b)	  ============================	  O_inverts O (ap f)	";
             responses[i]=data;
           
 
             i = 276;
-            data = "1 subgoal (ID 184)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P := OO_descend_O_inverts f (fun y : A => O (x = y)) : B -> Type	  Pb : forall a : A, P (f a) <~> (fun y : A => O (x = y)) a	  P_inO : forall b : B, In O (P b)	  ============================	  O_inverts O (ap f)	";
+            data = "1 goal (ID 182)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P := OO_descend_O_inverts f (fun y : A => O (x = y)) : B -> Type	  Pb : forall a : A, P (f a) <~> (fun y : A => O (x = y)) a	  P_inO : forall b : B, In O (P b)	  ============================	  O_inverts O (ap f)	";
             responses[i]=data;
           
 
             i = 277;
-            data = "1 subgoal (ID 187)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  O_inverts O (ap f)	";
+            data = "1 goal (ID 185)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  O_inverts O (ap f)	";
             responses[i]=data;
           
 
             i = 278;
-            data = "3 subgoals (ID 213)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  O (f x = f y) -> O (x = y)		subgoal 2 (ID 215) is:	 O_functor O (ap f) o ?g == idmap	subgoal 3 (ID 217) is:	 ?g o O_functor O (ap f) == idmap	";
+            data = "3 goals (ID 211)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  O (f x = f y) -> O (x = y)		goal 2 (ID 213) is:	 O_functor O (ap f) o ?g == idmap	goal 3 (ID 215) is:	 ?g o O_functor O (ap f) == idmap	";
             responses[i]=data;
           
 
             i = 279;
-            data = "1 subgoal (ID 213)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  O (f x = f y) -> O (x = y)	1 subgoal (ID 218)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  q : O (f x = f y)	  ============================	  O (x = y)	";
+            data = "1 goal (ID 211)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  O (f x = f y) -> O (x = y)	1 goal (ID 216)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  q : O (f x = f y)	  ============================	  O (x = y)	";
             responses[i]=data;
           
 
             i = 280;
-            data = "1 subgoal (ID 233)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  q : O (f x = f y)	  t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1))	   : f x = f y -> P (f y)	  ============================	  O (x = y)	";
+            data = "1 goal (ID 231)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  q : O (f x = f y)	  t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1))	   : f x = f y -> P (f y)	  ============================	  O (x = y)	";
             responses[i]=data;
           
 
             i = 281;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 215) is:	 O_functor O (ap f)	 o (fun q : O (f x = f y) =>	    let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1))	      in	    Pb y (O_rec t q)) == idmap	subgoal 2 (ID 217) is:	 (fun q : O (f x = f y) =>	  let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1)) in	  Pb y (O_rec t q)) o O_functor O (ap f) == idmap	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 213) is:	 O_functor O (ap f)	 o (fun q : O (f x = f y) =>	    let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1))	      in	    Pb y (O_rec t q)) == idmap	goal 2 (ID 215) is:	 (fun q : O (f x = f y) =>	  let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1)) in	  Pb y (O_rec t q)) o O_functor O (ap f) == idmap	";
             responses[i]=data;
           
 
             i = 282;
-            data = "1 subgoal (ID 215)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  O_functor O (ap f)	  o (fun q : O (f x = f y) =>	     let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1))	       in	     Pb y (O_rec t q)) == idmap	1 subgoal (ID 249)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  ============================	  O_functor O (ap f)	    (Pb y	       (O_rec	          (fun p0 : f x = f y => transport P p0 ((Pb x)^-1 (to O (x = x) 1)))	          (to O (f x = f y) p))) = to O (f x = f y) p	";
+            data = "1 goal (ID 213)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  O_functor O (ap f)	  o (fun q : O (f x = f y) =>	     let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1))	       in	     Pb y (O_rec t q)) == idmap	1 goal (ID 247)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  ============================	  O_functor O (ap f)	    (Pb y	       (O_rec	          (fun p0 : f x = f y => transport P p0 ((Pb x)^-1 (to O (x = x) 1)))	          (to O (f x = f y) p))) = to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 283;
-            data = "1 subgoal (ID 256)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
+            data = "1 goal (ID 254)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 284;
-            data = "1 subgoal (ID 591)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
+            data = "1 goal (ID 662)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 285;
-            data = "1 subgoal (ID 601)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall (b : B) (p : P b),	     (fun bp : {x : _ & P x} => O (f x = bp.1)) (b; p)	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
+            data = "1 goal (ID 672)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall (b : B) (p : P b),	     (fun bp : {x : _ & P x} => O (f x = bp.1)) (b; p)	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 286;
-            data = "1 subgoal (ID 602)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
+            data = "1 goal (ID 673)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 287;
-            data = "2 subgoals (ID 615)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  ============================	  (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1		subgoal 2 (ID 617) is:	 O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	 to O (f x = f y) p	";
+            data = "2 goals (ID 686)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  ============================	  (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1		goal 2 (ID 687) is:	 O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	 to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 288;
-            data = "1 subgoal (ID 617)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
+            data = "1 goal (ID 687)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 289;
-            data = "1 subgoal (ID 643)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
+            data = "1 goal (ID 712)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  O_functor O (ap f) (Pb y (transport P p ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 290;
-            data = "1 subgoal (ID 655)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  g1 (f y) (transport P p ((Pb x)^-1 (to O (x = x) 1))) = to O (f x = f y) p	";
+            data = "1 goal (ID 724)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  g1 (f y) (transport P p ((Pb x)^-1 (to O (x = x) 1))) = to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 291;
-            data = "1 subgoal (ID 661)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  transport (fun b : B => O (f x = b)) p	    (g1 (f x) ((Pb x)^-1 (to O (x = x) 1))) = to O (f x = f y) p	";
+            data = "1 goal (ID 730)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  transport (fun b : B => O (f x = b)) p	    (g1 (f x) ((Pb x)^-1 (to O (x = x) 1))) = to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 292;
-            data = "1 subgoal (ID 678)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  transport (fun b : B => O (f x = b)) p	    (O_functor O (ap f) (Pb x ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
+            data = "1 goal (ID 747)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  transport (fun b : B => O (f x = b)) p	    (O_functor O (ap f) (Pb x ((Pb x)^-1 (to O (x = x) 1)))) =	  to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 293;
-            data = "1 subgoal (ID 702)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  transport (fun b : B => O (f x = b)) p (to O (f x = f x) 1) =	  to O (f x = f y) p	";
+            data = "1 goal (ID 771)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  transport (fun b : B => O (f x = b)) p (to O (f x = f x) 1) =	  to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 294;
-            data = "1 subgoal (ID 712)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  to O (f x = f y) (transport (paths (f x)) p 1) = to O (f x = f y) p	";
+            data = "1 goal (ID 781)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  to O (f x = f y) (transport (paths (f x)) p 1) = to O (f x = f y) p	";
             responses[i]=data;
           
 
             i = 295;
-            data = "1 subgoal (ID 724)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  transport (paths (f x)) p 1 = p	";
+            data = "1 goal (ID 793)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  transport (paths (f x)) p 1 = p	";
             responses[i]=data;
           
 
             i = 296;
-            data = "1 subgoal (ID 729)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  1 @ p = p	";
+            data = "1 goal (ID 798)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : f x = f y	  g : ExtensionAlong (functor_sigma f (fun a : A => idmap))	        (fun bp : {x : _ & P x} => O (f x = bp.1))	        (fun u : {a : A & P (f a)} => O_functor O (ap f) (Pb u.1 u.2))	  g1 := fun (b : B) (p : P b) => g.1 (b; p)	   : forall b : B, P b -> O (f x = b)	  e : (fun u : {x : _ & P x} => g1 u.1 u.2) == g.1	  g2 : forall (a : A) (p : P (f a)), g1 (f a) p = O_functor O (ap f) (Pb a p)	  ============================	  1 @ p = p	";
             responses[i]=data;
           
 
             i = 297;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 217) is:	 (fun q : O (f x = f y) =>	  let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1)) in	  Pb y (O_rec t q)) o O_functor O (ap f) == idmap	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 215) is:	 (fun q : O (f x = f y) =>	  let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1)) in	  Pb y (O_rec t q)) o O_functor O (ap f) == idmap	";
             responses[i]=data;
           
 
             i = 298;
-            data = "1 subgoal (ID 217)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  (fun q : O (f x = f y) =>	   let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1))	     in	   Pb y (O_rec t q)) o O_functor O (ap f) == idmap	1 subgoal (ID 746)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : x = y	  ============================	  Pb y	    (O_rec	       (fun p0 : f x = f y => transport P p0 ((Pb x)^-1 (to O (x = x) 1)))	       (O_functor O (ap f) (to O (x = y) p))) = to O (x = y) p	";
+            data = "1 goal (ID 215)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  (fun q : O (f x = f y) =>	   let t := fun p : f x = f y => transport P p ((Pb x)^-1 (to O (x = x) 1))	     in	   Pb y (O_rec t q)) o O_functor O (ap f) == idmap	1 goal (ID 815)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : x = y	  ============================	  Pb y	    (O_rec	       (fun p0 : f x = f y => transport P p0 ((Pb x)^-1 (to O (x = x) 1)))	       (O_functor O (ap f) (to O (x = y) p))) = to O (x = y) p	";
             responses[i]=data;
           
 
             i = 299;
-            data = "1 subgoal (ID 758)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : x = y	  ============================	  Pb y (transport P (ap f p) ((Pb x)^-1 (to O (x = x) 1))) = to O (x = y) p	";
+            data = "1 goal (ID 827)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x, y : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  p : x = y	  ============================	  Pb y (transport P (ap f p) ((Pb x)^-1 (to O (x = x) 1))) = to O (x = y) p	";
             responses[i]=data;
           
 
             i = 300;
-            data = "1 subgoal (ID 769)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  Pb x (transport P 1 ((Pb x)^-1 (to O (x = x) 1))) = to O (x = x) 1	";
+            data = "1 goal (ID 838)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  f : A -> B	  O_inverts0 : O_inverts O' f	  x : A	  P : B -> Type	  Pb : forall a : A, P (f a) <~> O (x = a)	  P_inO : forall b : B, In O (P b)	  ============================	  Pb x (transport P 1 ((Pb x)^-1 (to O (x = x) 1))) = to O (x = x) 1	";
             responses[i]=data;
           
 
             i = 301;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1578,7 +1578,7 @@
           
 
             i = 312;
-            data = "1 subgoal (ID 171)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  H1 : IsConnected O' A	  x, y : A	  ============================	  IsConnected O (x = y)	";
+            data = "1 goal (ID 171)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  H1 : IsConnected O' A	  x, y : A	  ============================	  IsConnected O (x = y)	";
             responses[i]=data;
           
 
@@ -1588,7 +1588,7 @@
           
 
             i = 314;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1788,7 +1788,7 @@
           
 
             i = 354;
-            data = "1 subgoal (ID 182)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  O (x = y) -> to O' X x = to O' X y	";
+            data = "1 goal (ID 182)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  O (x = y) -> to O' X x = to O' X y	";
             responses[i]=data;
           
 
@@ -1798,17 +1798,17 @@
           
 
             i = 356;
-            data = "2 subgoals (ID 189)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  In O (to O' X x = to O' X y)		subgoal 2 (ID 190) is:	 Reflects O (x = y)	";
+            data = "2 goals (ID 189)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  In O (to O' X x = to O' X y)		goal 2 (ID 190) is:	 Reflects O (x = y)	";
             responses[i]=data;
           
 
             i = 357;
-            data = "1 subgoal (ID 189)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  In O (to O' X x = to O' X y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 190) is:	 Reflects O (x = y)	";
+            data = "1 goal (ID 189)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  In O (to O' X x = to O' X y)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 190) is:	 Reflects O (x = y)	";
             responses[i]=data;
           
 
             i = 358;
-            data = "1 subgoal (ID 190)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  Reflects O (x = y)	No more subgoals.	";
+            data = "1 goal (ID 190)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  Reflects O (x = y)	No more goals.	";
             responses[i]=data;
           
 
@@ -1818,7 +1818,7 @@
           
 
             i = 360;
-            data = "1 subgoal (ID 191)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  IsEquiv (path_OO x y)	";
+            data = "1 goal (ID 191)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  IsEquiv (path_OO x y)	";
             responses[i]=data;
           
 
@@ -1828,7 +1828,7 @@
           
 
             i = 362;
-            data = "1 subgoal (ID 198)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  O_inverts O (ap (to O' X))	";
+            data = "1 goal (ID 198)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  X : Type	  x, y : X	  ============================	  O_inverts O (ap (to O' X))	";
             responses[i]=data;
           
 
@@ -1853,7 +1853,7 @@
           
 
             i = 367;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1918,7 +1918,7 @@
           
 
             i = 380;
-            data = "1 subgoal (ID 258)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  ============================	  O_inverts O (functor_hfiber p b)	";
+            data = "1 goal (ID 258)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  ============================	  O_inverts O (functor_hfiber p b)	";
             responses[i]=data;
           
 
@@ -1928,32 +1928,32 @@
           
 
             i = 382;
-            data = "1 subgoal (ID 259)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  ============================	  O_inverts O	    (functor_sigma h (fun (a : A) (e : f a = b) => (p a)^ @ ap k e))	";
+            data = "1 goal (ID 259)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  ============================	  O_inverts O	    (functor_sigma h (fun (a : A) (e : f a = b) => (p a)^ @ ap k e))	";
             responses[i]=data;
           
 
             i = 383;
-            data = "2 subgoals (ID 268)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  ============================	  O_inverts O' h		subgoal 2 (ID 269) is:	 forall a : A,	 O_inverts O ((fun (a0 : A) (e : f a0 = b) => (p a0)^ @ ap k e) a)	";
+            data = "2 goals (ID 268)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  ============================	  O_inverts O' h		goal 2 (ID 269) is:	 forall a : A,	 O_inverts O ((fun (a0 : A) (e : f a0 = b) => (p a0)^ @ ap k e) a)	";
             responses[i]=data;
           
 
             i = 384;
-            data = "1 subgoal (ID 269)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  ============================	  forall a : A,	  O_inverts O ((fun (a0 : A) (e : f a0 = b) => (p a0)^ @ ap k e) a)	";
+            data = "1 goal (ID 269)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  ============================	  forall a : A,	  O_inverts O ((fun (a0 : A) (e : f a0 = b) => (p a0)^ @ ap k e) a)	";
             responses[i]=data;
           
 
             i = 385;
-            data = "1 subgoal (ID 272)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  a : A	  ============================	  O_inverts O (fun e : f a = b => (p a)^ @ ap k e)	";
+            data = "1 goal (ID 272)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  a : A	  ============================	  O_inverts O (fun e : f a = b => (p a)^ @ ap k e)	";
             responses[i]=data;
           
 
             i = 386;
-            data = "1 subgoal (ID 592)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  a : A	  ============================	  (fun x : O (f a = b) => O_functor O (concat (p a)^) (O_functor O (ap k) x)) ==	  O_functor O (fun e : f a = b => (p a)^ @ ap k e)	";
+            data = "1 goal (ID 622)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  b : B	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  a : A	  ============================	  (fun x : O (f a = b) => O_functor O (concat (p a)^) (O_functor O (ap k) x)) ==	  O_functor O (fun e : f a = b => (p a)^ @ ap k e)	";
             responses[i]=data;
           
 
             i = 387;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2003,7 +2003,7 @@
           
 
             i = 397;
-            data = "1 subgoal (ID 281)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  f : Y -> X	  x : X	  ============================	  O_inverts O (functor_hfiber (fun a : Y => (to_O_natural O' f a)^) x)	";
+            data = "1 goal (ID 281)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  f : Y -> X	  x : X	  ============================	  O_inverts O (functor_hfiber (fun a : Y => (to_O_natural O' f a)^) x)	";
             responses[i]=data;
           
 
@@ -2033,7 +2033,7 @@
           
 
             i = 403;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2088,7 +2088,7 @@
           
 
             i = 414;
-            data = "1 subgoal (ID 304)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  ============================	  IsConnMap O f	";
+            data = "1 goal (ID 304)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  ============================	  IsConnMap O f	";
             responses[i]=data;
           
 
@@ -2098,7 +2098,7 @@
           
 
             i = 416;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2153,7 +2153,7 @@
           
 
             i = 427;
-            data = "1 subgoal (ID 323)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  H3 : MapIn O f	  ============================	  IsEquiv f	";
+            data = "1 goal (ID 323)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  H3 : MapIn O f	  ============================	  IsEquiv f	";
             responses[i]=data;
           
 
@@ -2163,17 +2163,17 @@
           
 
             i = 429;
-            data = "2 subgoals (ID 326)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  H3 : MapIn O f	  ============================	  IsConnMap O f		subgoal 2 (ID 327) is:	 MapIn O f	";
+            data = "2 goals (ID 326)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  H3 : MapIn O f	  ============================	  IsConnMap O f		goal 2 (ID 327) is:	 MapIn O f	";
             responses[i]=data;
           
 
             i = 430;
-            data = "1 subgoal (ID 326)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  H3 : MapIn O f	  ============================	  IsConnMap O f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 327) is:	 MapIn O f	";
+            data = "1 goal (ID 326)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  H3 : MapIn O f	  ============================	  IsConnMap O f	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 327) is:	 MapIn O f	";
             responses[i]=data;
           
 
             i = 431;
-            data = "1 subgoal (ID 327)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  H3 : MapIn O f	  ============================	  MapIn O f	No more subgoals.	";
+            data = "1 goal (ID 327)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  H1 : IsConnected O' Y	  H2 : IsConnected O' X	  f : Y -> X	  H3 : MapIn O f	  ============================	  MapIn O f	No more goals.	";
             responses[i]=data;
           
 
@@ -2203,7 +2203,7 @@
           
 
             i = 437;
-            data = "1 subgoal (ID 374)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  H1 : IsConnMap O' h	  H2 : IsConnMap O' k	  p : k o f == g o h	  b : B	  ============================	  IsConnMap O (functor_hfiber p b)	";
+            data = "1 goal (ID 374)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  H1 : IsConnMap O' h	  H2 : IsConnMap O' k	  p : k o f == g o h	  b : B	  ============================	  IsConnMap O (functor_hfiber p b)	";
             responses[i]=data;
           
 
@@ -2213,17 +2213,17 @@
           
 
             i = 439;
-            data = "1 subgoal (ID 380)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  H1 : IsConnMap O' h	  H2 : IsConnMap O' k	  p : k o f == g o h	  b : B	  c : C	  q : g c = k b	  ============================	  IsConnected O (hfiber (functor_hfiber p b) (c; q))	";
+            data = "1 goal (ID 380)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  H1 : IsConnMap O' h	  H2 : IsConnMap O' k	  p : k o f == g o h	  b : B	  c : C	  q : g c = k b	  ============================	  IsConnected O (hfiber (functor_hfiber p b) (c; q))	";
             responses[i]=data;
           
 
             i = 440;
-            data = "1 subgoal (ID 397)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  H1 : IsConnMap O' h	  H2 : IsConnMap O' k	  p : k o f == g o h	  b : B	  c : C	  q : g c = k b	  ============================	  IsConnected O (hfiber (functor_hfiber (fun x : A => (p x)^) c) (b; q^))	";
+            data = "1 goal (ID 397)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  H1 : IsConnMap O' h	  H2 : IsConnMap O' k	  p : k o f == g o h	  b : B	  c : C	  q : g c = k b	  ============================	  IsConnected O (hfiber (functor_hfiber (fun x : A => (p x)^) c) (b; q^))	";
             responses[i]=data;
           
 
             i = 441;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2263,7 +2263,7 @@
           
 
             i = 449;
-            data = "1 subgoal (ID 396)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  IsModality0 : IsModality O'	  Y : Type	  X : Type	  f : Y -> X	  x : X	  ============================	  IsConnMap O (functor_hfiber (fun y : Y => (to_O_natural O' f y)^) x)	";
+            data = "1 goal (ID 396)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  IsModality0 : IsModality O'	  Y : Type	  X : Type	  f : Y -> X	  x : X	  ============================	  IsConnMap O (functor_hfiber (fun y : Y => (to_O_natural O' f y)^) x)	";
             responses[i]=data;
           
 
@@ -2273,7 +2273,7 @@
           
 
             i = 451;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2303,7 +2303,7 @@
           
 
             i = 457;
-            data = "1 subgoal (ID 454)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  H1 : MapIn O f	  H2 : MapIn O g	  ============================	  IsPullback p	";
+            data = "1 goal (ID 454)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  H1 : MapIn O f	  H2 : MapIn O g	  ============================	  IsPullback p	";
             responses[i]=data;
           
 
@@ -2313,17 +2313,17 @@
           
 
             i = 459;
-            data = "1 subgoal (ID 464)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  H1 : MapIn O f	  H2 : MapIn O g	  b : B	  ============================	  IsEquiv (functor_hfiber p b)	";
+            data = "1 goal (ID 464)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  H1 : MapIn O f	  H2 : MapIn O g	  b : B	  ============================	  IsEquiv (functor_hfiber p b)	";
             responses[i]=data;
           
 
             i = 460;
-            data = "1 subgoal (ID 587)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  H1 : MapIn O f	  H2 : MapIn O g	  b : B	  ============================	  O_inverts O (functor_hfiber p b)	";
+            data = "1 goal (ID 645)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B	  g : C -> D	  h : A -> C	  k : B -> D	  p : k o f == g o h	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  H1 : MapIn O f	  H2 : MapIn O g	  b : B	  ============================	  O_inverts O (functor_hfiber p b)	";
             responses[i]=data;
           
 
             i = 461;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2383,7 +2383,7 @@
           
 
             i = 473;
-            data = "1 subgoal (ID 535)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  ============================	  O_inverts O (functor_pullback f1 g1 f2 g2 h k l p q)	";
+            data = "1 goal (ID 535)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  ============================	  O_inverts O (functor_pullback f1 g1 f2 g2 h k l p q)	";
             responses[i]=data;
           
 
@@ -2393,62 +2393,62 @@
           
 
             i = 475;
-            data = "1 subgoal (ID 536)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  ============================	  O_inverts O	    (functor_sigma k	       (fun b1 : B1 =>	        functor_sigma l	          (fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^)))	";
+            data = "1 goal (ID 536)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  ============================	  O_inverts O	    (functor_sigma k	       (fun b1 : B1 =>	        functor_sigma l	          (fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^)))	";
             responses[i]=data;
           
 
             i = 476;
-            data = "2 subgoals (ID 545)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  ============================	  O_inverts O' k		subgoal 2 (ID 546) is:	 forall a : B1,	 O_inverts O	   ((fun b1 : B1 =>	     functor_sigma l	       (fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^)) a)	";
+            data = "2 goals (ID 545)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  ============================	  O_inverts O' k		goal 2 (ID 546) is:	 forall a : B1,	 O_inverts O	   ((fun b1 : B1 =>	     functor_sigma l	       (fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^)) a)	";
             responses[i]=data;
           
 
             i = 477;
-            data = "1 subgoal (ID 546)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  ============================	  forall a : B1,	  O_inverts O	    ((fun b1 : B1 =>	      functor_sigma l	        (fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^)) a)	";
+            data = "1 goal (ID 546)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  ============================	  forall a : B1,	  O_inverts O	    ((fun b1 : B1 =>	      functor_sigma l	        (fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^)) a)	";
             responses[i]=data;
           
 
             i = 478;
-            data = "1 subgoal (ID 549)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  ============================	  O_inverts O	    (functor_sigma l	       (fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^))	";
+            data = "1 goal (ID 549)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  ============================	  O_inverts O	    (functor_sigma l	       (fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^))	";
             responses[i]=data;
           
 
             i = 479;
-            data = "2 subgoals (ID 558)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  ============================	  O_inverts O' l		subgoal 2 (ID 559) is:	 forall a : C1,	 O_inverts O	   ((fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^) a)	";
+            data = "2 goals (ID 558)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  ============================	  O_inverts O' l		goal 2 (ID 559) is:	 forall a : C1,	 O_inverts O	   ((fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^) a)	";
             responses[i]=data;
           
 
             i = 480;
-            data = "1 subgoal (ID 559)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  ============================	  forall a : C1,	  O_inverts O	    ((fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^) a)	";
+            data = "1 goal (ID 559)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  ============================	  forall a : C1,	  O_inverts O	    ((fun (c1 : C1) (e1 : f1 b1 = g1 c1) => (p b1 @ ap h e1) @ (q c1)^) a)	";
             responses[i]=data;
           
 
             i = 481;
-            data = "1 subgoal (ID 562)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  ============================	  O_inverts O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^)	";
+            data = "1 goal (ID 562)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  ============================	  O_inverts O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^)	";
             responses[i]=data;
           
 
             i = 482;
-            data = "1 subgoal (ID 563)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  ============================	  O_inverts O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^)	1 subgoal (ID 776)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  ============================	  (fun x : O (f1 b1 = g1 c1) =>	   O_functor O (fun r : f2 (k b1) = h (g1 c1) => r @ (q c1)^)	     (O_functor O (concat (p b1)) (O_functor O (ap h) x))) ==	  O_functor O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^)	";
+            data = "1 goal (ID 563)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  ============================	  O_inverts O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^)	1 goal (ID 793)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  ============================	  (fun x : O (f1 b1 = g1 c1) =>	   O_functor O (fun r : f2 (k b1) = h (g1 c1) => r @ (q c1)^)	     (O_functor O (concat (p b1)) (O_functor O (ap h) x))) ==	  O_functor O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^)	";
             responses[i]=data;
           
 
             i = 483;
-            data = "1 subgoal (ID 788)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  r : O (f1 b1 = g1 c1)	  ============================	  O_functor O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^) r =	  O_functor O (fun r0 : f2 (k b1) = h (g1 c1) => r0 @ (q c1)^)	    (O_functor O (concat (p b1)) (O_functor O (ap h) r))	";
+            data = "1 goal (ID 805)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  r : O (f1 b1 = g1 c1)	  ============================	  O_functor O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^) r =	  O_functor O (fun r0 : f2 (k b1) = h (g1 c1) => r0 @ (q c1)^)	    (O_functor O (concat (p b1)) (O_functor O (ap h) r))	";
             responses[i]=data;
           
 
             i = 484;
-            data = "2 focused subgoals	(shelved: 1) (ID 798)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  r : O (f1 b1 = g1 c1)	  ============================	  O_functor O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^) r =	  ?Goal		subgoal 2 (ID 799) is:	 ?Goal =	 O_functor O (fun r0 : f2 (k b1) = h (g1 c1) => r0 @ (q c1)^)	   (O_functor O (concat (p b1)) (O_functor O (ap h) r))	";
+            data = "2 focused goals	(shelved: 1) (ID 815)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  r : O (f1 b1 = g1 c1)	  ============================	  O_functor O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^) r =	  ?Goal		goal 2 (ID 816) is:	 ?Goal =	 O_functor O (fun r0 : f2 (k b1) = h (g1 c1) => r0 @ (q c1)^)	   (O_functor O (concat (p b1)) (O_functor O (ap h) r))	";
             responses[i]=data;
           
 
             i = 485;
-            data = "1 subgoal (ID 798)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  r : O (f1 b1 = g1 c1)	  ============================	  O_functor O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^) r =	  O_functor O	    (fun x : h (f1 b1) = h (g1 c1) =>	     (fun r0 : f2 (k b1) = h (g1 c1) => r0 @ (q c1)^) (p b1 @ x))	    (O_functor O (ap h) r)	";
+            data = "1 goal (ID 815)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A1 : Type	  B1 : Type	  C1 : Type	  A2 : Type	  B2 : Type	  C2 : Type	  f1 : B1 -> A1	  g1 : C1 -> A1	  f2 : B2 -> A2	  g2 : C2 -> A2	  h : A1 -> A2	  k : B1 -> B2	  l : C1 -> C2	  p : f2 o k == h o f1	  q : g2 o l == h o g1	  O_inverts0 : O_inverts O' h	  O_inverts1 : O_inverts O' k	  O_inverts2 : O_inverts O' l	  b1 : B1	  c1 : C1	  i := @isequiv_compose	   : forall (A B : Type) (f : A -> B),	     IsEquiv f ->	     forall (C : Type) (g : B -> C), IsEquiv g -> IsEquiv (g o f)	  r : O (f1 b1 = g1 c1)	  ============================	  O_functor O (fun e1 : f1 b1 = g1 c1 => (p b1 @ ap h e1) @ (q c1)^) r =	  O_functor O	    (fun x : h (f1 b1) = h (g1 c1) =>	     (fun r0 : f2 (k b1) = h (g1 c1) => r0 @ (q c1)^) (p b1 @ x))	    (O_functor O (ap h) r)	";
             responses[i]=data;
           
 
             i = 486;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2498,7 +2498,7 @@
           
 
             i = 496;
-            data = "1 subgoal (ID 562)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  ============================	  O_inverts O	    (functor_pullback f g (O_functor O' f) (O_functor O' g) 	       (to O' A) (to O' B) (to O' C) (to_O_natural O' f) 	       (to_O_natural O' g))	";
+            data = "1 goal (ID 562)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  A : Type	  B : Type	  C : Type	  f : B -> A	  g : C -> A	  ============================	  O_inverts O	    (functor_pullback f g (O_functor O' f) (O_functor O' g) 	       (to O' A) (to O' B) (to O' C) (to_O_natural O' f) 	       (to_O_natural O' g))	";
             responses[i]=data;
           
 
@@ -2508,7 +2508,7 @@
           
 
             i = 498;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2543,7 +2543,7 @@
           
 
             i = 505;
-            data = "1 subgoal (ID 608)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O' g	  ============================	  IsConnMap O f	";
+            data = "1 goal (ID 608)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O' g	  ============================	  IsConnMap O f	";
             responses[i]=data;
           
 
@@ -2553,22 +2553,22 @@
           
 
             i = 507;
-            data = "1 subgoal (ID 611)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O' g	  ============================	  O_inverts O' f	";
+            data = "1 goal (ID 611)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O' g	  ============================	  O_inverts O' f	";
             responses[i]=data;
           
 
             i = 508;
-            data = "2 subgoals (ID 620)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O' g	  ============================	  O_inverts O' g		subgoal 2 (ID 621) is:	 IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	";
+            data = "2 goals (ID 620)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O' g	  ============================	  O_inverts O' g		goal 2 (ID 621) is:	 IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	";
             responses[i]=data;
           
 
             i = 509;
-            data = "1 subgoal (ID 621)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O' g	  ============================	  IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	";
+            data = "1 goal (ID 621)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O' g	  ============================	  IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	";
             responses[i]=data;
           
 
             i = 510;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2603,7 +2603,7 @@
           
 
             i = 517;
-            data = "1 subgoal (ID 55)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  ============================	  IsConnMap O' g	";
+            data = "1 goal (ID 55)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  ============================	  IsConnMap O' g	";
             responses[i]=data;
           
 
@@ -2613,47 +2613,47 @@
           
 
             i = 519;
-            data = "1 subgoal (ID 56)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  ============================	  forall P : Z -> Type,	  (forall b : Z, In O' (P b)) ->	  forall d : forall a : X, P (g a), ExtensionAlong g P d	";
+            data = "1 goal (ID 56)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  ============================	  forall P : Z -> Type,	  (forall b : Z, In O' (P b)) ->	  forall d : forall a : X, P (g a), ExtensionAlong g P d	";
             responses[i]=data;
           
 
             i = 520;
-            data = "1 subgoal (ID 59)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  ExtensionAlong g P h	";
+            data = "1 goal (ID 59)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  ExtensionAlong g P h	";
             responses[i]=data;
           
 
             i = 521;
-            data = "1 subgoal (ID 83)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  forall x : X,	  conn_map_elim O' (fun x0 : Y => g (f x0)) P (fun x0 : Y => h (f x0)) (g x) =	  h x	";
+            data = "1 goal (ID 83)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  forall x : X,	  conn_map_elim O' (fun x0 : Y => g (f x0)) P (fun x0 : Y => h (f x0)) (g x) =	  h x	";
             responses[i]=data;
           
 
             i = 522;
-            data = "2 subgoals (ID 93)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  forall b : X,	  In O	    (conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g b) =	     h b)		subgoal 2 (ID 94) is:	 forall a : Y,	 conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g (f a)) =	 h (f a)	";
+            data = "2 goals (ID 93)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  forall b : X,	  In O	    (conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g b) =	     h b)		goal 2 (ID 94) is:	 forall a : Y,	 conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g (f a)) =	 h (f a)	";
             responses[i]=data;
           
 
             i = 523;
-            data = "1 subgoal (ID 93)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  forall b : X,	  In O	    (conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g b) =	     h b)	1 subgoal (ID 96)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  x : X	  ============================	  In O	    (conn_map_elim O' (fun x0 : Y => g (f x0)) P (fun x0 : Y => h (f x0))	       (g x) = h x)	";
+            data = "1 goal (ID 93)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  forall b : X,	  In O	    (conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g b) =	     h b)	1 goal (ID 96)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  x : X	  ============================	  In O	    (conn_map_elim O' (fun x0 : Y => g (f x0)) P (fun x0 : Y => h (f x0))	       (g x) = h x)	";
             responses[i]=data;
           
 
             i = 524;
-            data = "1 subgoal (ID 100)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  x : X	  X0 : forall z : Z, In (Sep O) (P z)	  ============================	  In O	    (conn_map_elim O' (fun x0 : Y => g (f x0)) P (fun x0 : Y => h (f x0))	       (g x) = h x)	";
+            data = "1 goal (ID 100)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  x : X	  X0 : forall z : Z, In (Sep O) (P z)	  ============================	  In O	    (conn_map_elim O' (fun x0 : Y => g (f x0)) P (fun x0 : Y => h (f x0))	       (g x) = h x)	";
             responses[i]=data;
           
 
             i = 525;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 94) is:	 forall a : Y,	 conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g (f a)) =	 h (f a)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 94) is:	 forall a : Y,	 conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g (f a)) =	 h (f a)	";
             responses[i]=data;
           
 
             i = 526;
-            data = "1 subgoal (ID 94)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  forall a : Y,	  conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g (f a)) =	  h (f a)	1 subgoal (ID 105)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  y : Y	  ============================	  conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g (f y)) =	  h (f y)	";
+            data = "1 goal (ID 94)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  ============================	  forall a : Y,	  conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g (f a)) =	  h (f a)	1 goal (ID 129)	  	  O' : ReflectiveSubuniverse	  O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H1 : IsConnMap O' (g o f)	  H2 : IsConnMap O f	  P : Z -> Type	  P_inO : forall b : Z, In O' (P b)	  h : forall a : X, P (g a)	  y : Y	  ============================	  conn_map_elim O' (fun x : Y => g (f x)) P (fun x : Y => h (f x)) (g (f y)) =	  h (f y)	";
             responses[i]=data;
           
 
             i = 527;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2663,7 +2663,7 @@
           
 
             i = 529;
-            data = "1 subgoal (ID 69)	  	  O', O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  f : Y -> X	  H1 : IsConnected O' Y	  H2 : IsConnMap O f	  ============================	  IsConnected O' X	";
+            data = "1 goal (ID 69)	  	  O', O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  f : Y -> X	  H1 : IsConnected O' Y	  H2 : IsConnMap O f	  ============================	  IsConnected O' X	";
             responses[i]=data;
           
 
@@ -2673,12 +2673,12 @@
           
 
             i = 531;
-            data = "1 subgoal (ID 70)	  	  O', O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  f : Y -> X	  H1 : IsConnected O' Y	  H2 : IsConnMap O f	  ============================	  IsConnMap O' (const tt)	";
+            data = "1 goal (ID 70)	  	  O', O : ReflectiveSubuniverse	  H : O <= O'	  H0 : O' <= Sep O	  Y : Type	  X : Type	  f : Y -> X	  H1 : IsConnected O' Y	  H2 : IsConnMap O f	  ============================	  IsConnMap O' (const tt)	";
             responses[i]=data;
           
 
             i = 532;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2708,7 +2708,7 @@
           
 
             i = 538;
-            data = "1 subgoal (ID 104)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  O_inverts O' f	";
+            data = "1 goal (ID 104)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  O_inverts O' f	";
             responses[i]=data;
           
 
@@ -2718,22 +2718,22 @@
           
 
             i = 540;
-            data = "2 subgoals (ID 113)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  O_inverts O' g		subgoal 2 (ID 114) is:	 IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	";
+            data = "2 goals (ID 113)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  O_inverts O' g		goal 2 (ID 114) is:	 IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	";
             responses[i]=data;
           
 
             i = 541;
-            data = "1 subgoal (ID 113)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  O_inverts O' g	1 subgoal (ID 115)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  IsConnMap O' g	";
+            data = "1 goal (ID 113)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  O_inverts O' g	1 goal (ID 115)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  IsConnMap O' g	";
             responses[i]=data;
           
 
             i = 542;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 114) is:	 IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 114) is:	 IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	";
             responses[i]=data;
           
 
             i = 543;
-            data = "1 subgoal (ID 114)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	No more subgoals.	";
+            data = "1 goal (ID 114)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  Z : Type	  f : Y -> X	  g : X -> Z	  H2 : IsConnMap O' (g o f)	  H3 : IsConnMap O f	  ============================	  IsEquiv (fun x : O' Y => O_functor O' g (O_functor O' f x))	No more goals.	";
             responses[i]=data;
           
 
@@ -2743,7 +2743,7 @@
           
 
             i = 545;
-            data = "1 subgoal (ID 124)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  f : Y -> X	  H2 : IsConnected O' Y	  H3 : IsConnMap O f	  ============================	  O_inverts O' f	";
+            data = "1 goal (ID 124)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : O <<< O'	  H1 : O' <= Sep O	  Y : Type	  X : Type	  f : Y -> X	  H2 : IsConnected O' Y	  H3 : IsConnMap O f	  ============================	  O_inverts O' f	";
             responses[i]=data;
           
 
@@ -2753,7 +2753,7 @@
           
 
             i = 547;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2793,7 +2793,7 @@
           
 
             i = 555;
-            data = "1 subgoal (ID 134)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  ============================	  O <<< O'	";
+            data = "1 goal (ID 134)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  ============================	  O <<< O'	";
             responses[i]=data;
           
 
@@ -2803,32 +2803,32 @@
           
 
             i = 557;
-            data = "3 subgoals (ID 151)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  ============================	  O_reflector O' A -> Type		subgoal 2 (ID 156) is:	 forall x : O_reflector O' A,	 In O	   ((fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	     let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	     ?Goal@{P':=P'0; P_inO:=P_inO0}) P' P_inO x)	subgoal 3 (ID 161) is:	 forall x : A,	 (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	  let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	  ?Goal@{P':=P'0; P_inO:=P_inO0}) P' P_inO (to O' A x) <~> 	 P' x	";
+            data = "3 goals (ID 151)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  ============================	  O_reflector O' A -> Type		goal 2 (ID 156) is:	 forall x : O_reflector O' A,	 In O	   ((fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	     let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	     ?Goal@{P':=P'0; P_inO:=P_inO0}) P' P_inO x)	goal 3 (ID 161) is:	 forall x : A,	 (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	  let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	  ?Goal@{P':=P'0; P_inO:=P_inO0}) P' P_inO (to O' A x) <~> 	 P' x	";
             responses[i]=data;
           
 
             i = 558;
-            data = "1 subgoal (ID 151)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  ============================	  O_reflector O' A -> Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 subgoals		subgoal 1 (ID 156) is:	 forall x : O_reflector O' A,	 In O	   ((fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	     let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	     fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO x)	subgoal 2 (ID 161) is:	 forall x : A,	 (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	  let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	  fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO 	   (to O' A x) <~> P' x	";
+            data = "1 goal (ID 151)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  ============================	  O_reflector O' A -> Type	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 156) is:	 forall x : O_reflector O' A,	 In O	   ((fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	     let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	     fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO x)	goal 2 (ID 161) is:	 forall x : A,	 (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	  let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	  fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO 	   (to O' A x) <~> P' x	";
             responses[i]=data;
           
 
             i = 559;
-            data = "1 subgoal (ID 156)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  ============================	  forall x : O_reflector O' A,	  In O	    ((fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	      let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	      fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 161) is:	 forall x : A,	 (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	  let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	  fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO 	   (to O' A x) <~> P' x	";
+            data = "1 goal (ID 156)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  ============================	  forall x : O_reflector O' A,	  In O	    ((fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	      let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	      fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO x)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 161) is:	 forall x : A,	 (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	  let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	  fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO 	   (to O' A x) <~> P' x	";
             responses[i]=data;
           
 
             i = 560;
-            data = "1 subgoal (ID 161)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  ============================	  forall x : A,	  (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	   let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	   fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO 	    (to O' A x) <~> P' x	1 subgoal (ID 172)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  x : A	  ============================	  (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	   let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	   fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO 	    (to O' A x) <~> P' x	";
+            data = "1 goal (ID 161)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  ============================	  forall x : A,	  (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	   let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	   fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO 	    (to O' A x) <~> P' x	1 goal (ID 172)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  x : A	  ============================	  (fun (P'0 : A -> Type) (P_inO0 : forall x0 : A, In O (P'0 x0)) =>	   let P0 := fun x0 : A => (P'0 x0; P_inO0 x0) : Type_ O in	   fun x0 : O_reflector O' A => ((e A P0).1 x0).1) P' P_inO 	    (to O' A x) <~> P' x	";
             responses[i]=data;
           
 
             i = 561;
-            data = "1 subgoal (ID 173)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  x : A	  ============================	  (let P0 := fun x0 : A => (P' x0; P_inO x0) in	   fun x0 : O_reflector O' A => ((e A P0).1 x0).1) 	    (to O' A x) = P' x	";
+            data = "1 goal (ID 173)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  e : forall (A : Type) (g : A -> Type_ O),	      ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	  A : Type	  P' : A -> Type	  P_inO : forall x : A, In O (P' x)	  P := fun x : A => (P' x; P_inO x) : Type_ O : A -> Type_ O	  x : A	  ============================	  (let P0 := fun x0 : A => (P' x0; P_inO x0) in	   fun x0 : O_reflector O' A => ((e A P0).1 x0).1) 	    (to O' A x) = P' x	";
             responses[i]=data;
           
 
             i = 562;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -2858,7 +2858,7 @@
           
 
             i = 568;
-            data = "1 subgoal (ID 142)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  ============================	  O <<< O'	";
+            data = "1 goal (ID 142)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  ============================	  O <<< O'	";
             responses[i]=data;
           
 
@@ -2868,27 +2868,27 @@
           
 
             i = 570;
-            data = "1 subgoal (ID 143)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  ============================	  forall (A : Type) (g : A -> Type_ O),	  ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	";
+            data = "1 goal (ID 143)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  ============================	  forall (A : Type) (g : A -> Type_ O),	  ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	";
             responses[i]=data;
           
 
             i = 571;
-            data = "1 subgoal (ID 145)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  A : Type	  g : A -> Type_ O	  ============================	  ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	";
+            data = "1 goal (ID 145)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  A : Type	  g : A -> Type_ O	  ============================	  ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	";
             responses[i]=data;
           
 
             i = 572;
-            data = "2 subgoals (ID 152)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  A : Type	  g : A -> Type_ O	  ============================	  O_inverts (lift_accrsu O') (to O' A)		subgoal 2 (ID 153) is:	 ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	";
+            data = "2 goals (ID 152)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  A : Type	  g : A -> Type_ O	  ============================	  O_inverts (lift_accrsu O') (to O' A)		goal 2 (ID 153) is:	 ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	";
             responses[i]=data;
           
 
             i = 573;
-            data = "1 subgoal (ID 152)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  A : Type	  g : A -> Type_ O	  ============================	  O_inverts (lift_accrsu O') (to O' A)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 153) is:	 ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	";
+            data = "1 goal (ID 152)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  A : Type	  g : A -> Type_ O	  ============================	  O_inverts (lift_accrsu O') (to O' A)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 153) is:	 ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	";
             responses[i]=data;
           
 
             i = 574;
-            data = "1 subgoal (ID 153)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  A : Type	  g : A -> Type_ O	  X : O_inverts (lift_accrsu O') (to O' A)	  ============================	  ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	No more subgoals.	";
+            data = "1 goal (ID 153)	  	  O', O : ReflectiveSubuniverse	  H : O << O'	  H0 : IsAccRSU O'	  H1 : In (lift_accrsu O') (Type_ O)	  A : Type	  g : A -> Type_ O	  X : O_inverts (lift_accrsu O') (to O' A)	  ============================	  ExtensionAlong (to O' A) (fun _ : O_reflector O' A => Type_ O) g	No more goals.	";
             responses[i]=data;
           
 

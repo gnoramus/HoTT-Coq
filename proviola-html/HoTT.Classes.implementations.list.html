@@ -133,7 +133,7 @@
           
 
             i = 23;
-            data = "1 subgoal (ID 77)	  	  A : Type	  B : Type	  C : Type	  f : A -> B -> C	  defl : list A -> list C	  defr : list B -> list C	  x : A	  l1 : list A	  y : B	  l2 : list B	  ============================	  map2 f defl defr (x :: l1) (y :: l2) = f x y :: map2 f defl defr l1 l2	";
+            data = "1 goal (ID 77)	  	  A : Type	  B : Type	  C : Type	  f : A -> B -> C	  defl : list A -> list C	  defr : list B -> list C	  x : A	  l1 : list A	  y : B	  l2 : list B	  ============================	  map2 f defl defr (x :: l1) (y :: l2) = f x y :: map2 f defl defr l1 l2	";
             responses[i]=data;
           
 
@@ -143,7 +143,7 @@
           
 
             i = 25;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -153,7 +153,7 @@
           
 
             i = 27;
-            data = "1 subgoal (ID 90)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  l : list A	  ============================	  map f l = l	";
+            data = "1 goal (ID 90)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  l : list A	  ============================	  map f l = l	";
             responses[i]=data;
           
 
@@ -163,27 +163,27 @@
           
 
             i = 29;
-            data = "2 subgoals (ID 94)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  ============================	  map f [] = []		subgoal 2 (ID 98) is:	 map f (x :: l) = x :: l	";
+            data = "2 goals (ID 94)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  ============================	  map f [] = []		goal 2 (ID 98) is:	 map f (x :: l) = x :: l	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 94)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  ============================	  map f [] = []	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 98) is:	 map f (x :: l) = x :: l	";
+            data = "1 goal (ID 94)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  ============================	  map f [] = []	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 98) is:	 map f (x :: l) = x :: l	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 98)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  x : A	  l : list A	  IHl : map f l = l	  ============================	  map f (x :: l) = x :: l	1 subgoal (ID 101)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  x : A	  l : list A	  IHl : map f l = l	  ============================	  f x :: map f l = x :: l	";
+            data = "1 goal (ID 98)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  x : A	  l : list A	  IHl : map f l = l	  ============================	  map f (x :: l) = x :: l	1 goal (ID 101)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  x : A	  l : list A	  IHl : map f l = l	  ============================	  f x :: map f l = x :: l	";
             responses[i]=data;
           
 
             i = 32;
-            data = "1 subgoal (ID 103)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  x : A	  l : list A	  IHl : map f l = l	  ============================	  x :: l = x :: l	";
+            data = "1 goal (ID 103)	  	  A : Type	  f : A -> A	  Hf : forall x : A, f x = x	  x : A	  l : list A	  IHl : map f l = l	  ============================	  x :: l = x :: l	";
             responses[i]=data;
           
 
             i = 33;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -198,7 +198,7 @@
           
 
             i = 36;
-            data = "1 subgoal (ID 95)	  	  A : Type	  ============================	  Associative (app (A:=A))	";
+            data = "1 goal (ID 95)	  	  A : Type	  ============================	  Associative (app (A:=A))	";
             responses[i]=data;
           
 
@@ -208,22 +208,22 @@
           
 
             i = 38;
-            data = "1 subgoal (ID 97)	  	  A : Type	  l1 : list A	  ============================	  forall y z : list A, l1 ++ y ++ z = (l1 ++ y) ++ z	";
+            data = "1 goal (ID 97)	  	  A : Type	  l1 : list A	  ============================	  forall y z : list A, l1 ++ y ++ z = (l1 ++ y) ++ z	";
             responses[i]=data;
           
 
             i = 39;
-            data = "2 subgoals (ID 107)	  	  A : Type	  l2, l3 : list A	  ============================	  [] ++ l2 ++ l3 = ([] ++ l2) ++ l3		subgoal 2 (ID 109) is:	 (x :: l1) ++ l2 ++ l3 = ((x :: l1) ++ l2) ++ l3	";
+            data = "2 goals (ID 107)	  	  A : Type	  l2, l3 : list A	  ============================	  [] ++ l2 ++ l3 = ([] ++ l2) ++ l3		goal 2 (ID 109) is:	 (x :: l1) ++ l2 ++ l3 = ((x :: l1) ++ l2) ++ l3	";
             responses[i]=data;
           
 
             i = 40;
-            data = "1 subgoal (ID 107)	  	  A : Type	  l2, l3 : list A	  ============================	  [] ++ l2 ++ l3 = ([] ++ l2) ++ l3	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 109) is:	 (x :: l1) ++ l2 ++ l3 = ((x :: l1) ++ l2) ++ l3	";
+            data = "1 goal (ID 107)	  	  A : Type	  l2, l3 : list A	  ============================	  [] ++ l2 ++ l3 = ([] ++ l2) ++ l3	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 109) is:	 (x :: l1) ++ l2 ++ l3 = ((x :: l1) ++ l2) ++ l3	";
             responses[i]=data;
           
 
             i = 41;
-            data = "1 subgoal (ID 109)	  	  A : Type	  x : A	  l1 : list A	  IH : forall y z : list A, l1 ++ y ++ z = (l1 ++ y) ++ z	  l2, l3 : list A	  ============================	  (x :: l1) ++ l2 ++ l3 = ((x :: l1) ++ l2) ++ l3	No more subgoals.	";
+            data = "1 goal (ID 109)	  	  A : Type	  x : A	  l1 : list A	  IH : forall y z : list A, l1 ++ y ++ z = (l1 ++ y) ++ z	  l2, l3 : list A	  ============================	  (x :: l1) ++ l2 ++ l3 = ((x :: l1) ++ l2) ++ l3	No more goals.	";
             responses[i]=data;
           
 
@@ -238,7 +238,7 @@
           
 
             i = 44;
-            data = "1 subgoal (ID 107)	  	  A : Type	  P : A -> Type	  ============================	  (forall x : A, P x) -> forall l : list A, for_all P l	";
+            data = "1 goal (ID 107)	  	  A : Type	  P : A -> Type	  ============================	  (forall x : A, P x) -> forall l : list A, for_all P l	";
             responses[i]=data;
           
 
@@ -248,7 +248,7 @@
           
 
             i = 46;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -258,7 +258,7 @@
           
 
             i = 48;
-            data = "1 subgoal (ID 129)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  ============================	  forall l : list A, for_all P l -> for_all Q (map f l)	";
+            data = "1 goal (ID 129)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  ============================	  forall l : list A, for_all P l -> for_all Q (map f l)	";
             responses[i]=data;
           
 
@@ -268,22 +268,22 @@
           
 
             i = 50;
-            data = "2 subgoals (ID 142)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  ============================	  Unit -> Unit		subgoal 2 (ID 146) is:	 P x * for_all P l -> Q (f x) * for_all Q (map f l)	";
+            data = "2 goals (ID 142)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  ============================	  Unit -> Unit		goal 2 (ID 146) is:	 P x * for_all P l -> Q (f x) * for_all Q (map f l)	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 142)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  ============================	  Unit -> Unit	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 146) is:	 P x * for_all P l -> Q (f x) * for_all Q (map f l)	";
+            data = "1 goal (ID 142)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  ============================	  Unit -> Unit	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 146) is:	 P x * for_all P l -> Q (f x) * for_all Q (map f l)	";
             responses[i]=data;
           
 
             i = 52;
-            data = "1 subgoal (ID 146)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  x : A	  l : list A	  IHl : for_all P l -> for_all Q (map f l)	  ============================	  P x * for_all P l -> Q (f x) * for_all Q (map f l)	1 subgoal (ID 152)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  x : A	  l : list A	  IHl : for_all P l -> for_all Q (map f l)	  Hx : P x	  Hl : for_all P l	  ============================	  Q (f x) * for_all Q (map f l)	";
+            data = "1 goal (ID 146)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  x : A	  l : list A	  IHl : for_all P l -> for_all Q (map f l)	  ============================	  P x * for_all P l -> Q (f x) * for_all Q (map f l)	1 goal (ID 152)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B	  Hf : forall x : A, P x -> Q (f x)	  x : A	  l : list A	  IHl : for_all P l -> for_all Q (map f l)	  Hx : P x	  Hl : for_all P l	  ============================	  Q (f x) * for_all Q (map f l)	";
             responses[i]=data;
           
 
             i = 53;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -293,7 +293,7 @@
           
 
             i = 55;
-            data = "1 subgoal (ID 178)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  ============================	  forall (l1 : list A) (l2 : list B),	  for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	";
+            data = "1 goal (ID 178)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  ============================	  forall (l1 : list A) (l2 : list B),	  for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	";
             responses[i]=data;
           
 
@@ -303,37 +303,37 @@
           
 
             i = 57;
-            data = "2 subgoals (ID 183)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  ============================	  forall l2 : list B,	  for_all P [] -> for_all Q l2 -> for_all R (map2 f def_l def_r [] l2)		subgoal 2 (ID 187) is:	 forall l2 : list B,	 for_all P (x :: l1) ->	 for_all Q l2 -> for_all R (map2 f def_l def_r (x :: l1) l2)	";
+            data = "2 goals (ID 183)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  ============================	  forall l2 : list B,	  for_all P [] -> for_all Q l2 -> for_all R (map2 f def_l def_r [] l2)		goal 2 (ID 187) is:	 forall l2 : list B,	 for_all P (x :: l1) ->	 for_all Q l2 -> for_all R (map2 f def_l def_r (x :: l1) l2)	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 subgoal (ID 183)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  ============================	  forall l2 : list B,	  for_all P [] -> for_all Q l2 -> for_all R (map2 f def_l def_r [] l2)	1 subgoal (ID 191)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  ============================	  forall l2 : list B,	  Unit ->	  for_all Q l2 -> for_all R match l2 with	                            | [] => []	                            | _ :: _ => def_r l2	                            end	";
+            data = "1 goal (ID 183)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  ============================	  forall l2 : list B,	  for_all P [] -> for_all Q l2 -> for_all R (map2 f def_l def_r [] l2)	1 goal (ID 191)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  ============================	  forall l2 : list B,	  Unit ->	  for_all Q l2 -> for_all R match l2 with	                            | [] => []	                            | _ :: _ => def_r l2	                            end	";
             responses[i]=data;
           
 
             i = 59;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 187) is:	 forall l2 : list B,	 for_all P (x :: l1) ->	 for_all Q l2 -> for_all R (map2 f def_l def_r (x :: l1) l2)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 187) is:	 forall l2 : list B,	 for_all P (x :: l1) ->	 for_all Q l2 -> for_all R (map2 f def_l def_r (x :: l1) l2)	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 187)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  x : A	  l1 : list A	  IHl1 : forall l2 : list B,	         for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	  ============================	  forall l2 : list B,	  for_all P (x :: l1) ->	  for_all Q l2 -> for_all R (map2 f def_l def_r (x :: l1) l2)	1 subgoal (ID 211)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  x : A	  l1 : list A	  IHl1 : forall l2 : list B,	         for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	  ============================	  forall l2 : list B,	  P x * for_all P l1 ->	  for_all Q l2 ->	  for_all R	    match l2 with	    | [] => def_l (x :: l1)	    | y :: l0 => f x y :: map2 f def_l def_r l1 l0	    end	";
+            data = "1 goal (ID 187)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  x : A	  l1 : list A	  IHl1 : forall l2 : list B,	         for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	  ============================	  forall l2 : list B,	  for_all P (x :: l1) ->	  for_all Q l2 -> for_all R (map2 f def_l def_r (x :: l1) l2)	1 goal (ID 211)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  x : A	  l1 : list A	  IHl1 : forall l2 : list B,	         for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	  ============================	  forall l2 : list B,	  P x * for_all P l1 ->	  for_all Q l2 ->	  for_all R	    match l2 with	    | [] => def_l (x :: l1)	    | y :: l0 => f x y :: map2 f def_l def_r l1 l0	    end	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 239)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  x : A	  l1 : list A	  IHl1 : forall l2 : list B,	         for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	  Hx : P x	  Hl1 : for_all P l1	  ============================	  for_all R (def_l (x :: l1))	";
+            data = "1 goal (ID 239)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  x : A	  l1 : list A	  IHl1 : forall l2 : list B,	         for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	  Hx : P x	  Hl1 : for_all P l1	  ============================	  for_all R (def_l (x :: l1))	";
             responses[i]=data;
           
 
             i = 62;
-            data = "1 subgoal (ID 249)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  x : A	  l1 : list A	  IHl1 : forall l2 : list B,	         for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	  Hx : P x	  Hl1 : for_all P l1	  ============================	  for_all P (x :: l1)	";
+            data = "1 goal (ID 249)	  	  A : Type	  B : Type	  C : Type	  P : A -> Type	  Q : B -> Type	  R : C -> Type	  f : A -> B -> C	  Hf : forall (x : A) (y : B), P x -> Q y -> R (f x y)	  def_l : list A -> list C	  Hdefl : forall l1 : list A, for_all P l1 -> for_all R (def_l l1)	  def_r : list B -> list C	  Hdefr : forall l2 : list B, for_all Q l2 -> for_all R (def_r l2)	  x : A	  l1 : list A	  IHl1 : forall l2 : list B,	         for_all P l1 -> for_all Q l2 -> for_all R (map2 f def_l def_r l1 l2)	  Hx : P x	  Hl1 : for_all P l1	  ============================	  for_all P (x :: l1)	";
             responses[i]=data;
           
 
             i = 63;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -343,7 +343,7 @@
           
 
             i = 65;
-            data = "1 subgoal (ID 202)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  ============================	  forall acc : A,	  P acc -> forall l : list B, for_all Q l -> P (fold_left f acc l)	";
+            data = "1 goal (ID 202)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  ============================	  forall acc : A,	  P acc -> forall l : list B, for_all Q l -> P (fold_left f acc l)	";
             responses[i]=data;
           
 
@@ -353,37 +353,37 @@
           
 
             i = 67;
-            data = "1 subgoal (ID 208)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  ============================	  forall l : list B,	  for_all Q l -> forall acc : A, P acc -> P (fold_left f acc l)	";
+            data = "1 goal (ID 208)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  ============================	  forall l : list B,	  for_all Q l -> forall acc : A, P acc -> P (fold_left f acc l)	";
             responses[i]=data;
           
 
             i = 68;
-            data = "2 subgoals (ID 213)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  ============================	  for_all Q [] -> forall acc : A, P acc -> P (fold_left f acc [])		subgoal 2 (ID 217) is:	 for_all Q (x :: l) -> forall acc : A, P acc -> P (fold_left f acc (x :: l))	";
+            data = "2 goals (ID 213)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  ============================	  for_all Q [] -> forall acc : A, P acc -> P (fold_left f acc [])		goal 2 (ID 217) is:	 for_all Q (x :: l) -> forall acc : A, P acc -> P (fold_left f acc (x :: l))	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 213)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  ============================	  for_all Q [] -> forall acc : A, P acc -> P (fold_left f acc [])	1 subgoal (ID 221)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  acc : A	  Ha : P acc	  ============================	  P (fold_left f acc [])	";
+            data = "1 goal (ID 213)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  ============================	  for_all Q [] -> forall acc : A, P acc -> P (fold_left f acc [])	1 goal (ID 221)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  acc : A	  Ha : P acc	  ============================	  P (fold_left f acc [])	";
             responses[i]=data;
           
 
             i = 70;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 217) is:	 for_all Q (x :: l) -> forall acc : A, P acc -> P (fold_left f acc (x :: l))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 217) is:	 for_all Q (x :: l) -> forall acc : A, P acc -> P (fold_left f acc (x :: l))	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 217)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  x : B	  l : list B	  IHl : for_all Q l -> forall acc : A, P acc -> P (fold_left f acc l)	  ============================	  for_all Q (x :: l) -> forall acc : A, P acc -> P (fold_left f acc (x :: l))	1 subgoal (ID 224)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  x : B	  l : list B	  IHl : for_all Q l -> forall acc : A, P acc -> P (fold_left f acc l)	  ============================	  Q x * for_all Q l -> forall acc : A, P acc -> P (fold_left f (f acc x) l)	";
+            data = "1 goal (ID 217)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  x : B	  l : list B	  IHl : for_all Q l -> forall acc : A, P acc -> P (fold_left f acc l)	  ============================	  for_all Q (x :: l) -> forall acc : A, P acc -> P (fold_left f acc (x :: l))	1 goal (ID 224)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  x : B	  l : list B	  IHl : for_all Q l -> forall acc : A, P acc -> P (fold_left f acc l)	  ============================	  Q x * for_all Q l -> forall acc : A, P acc -> P (fold_left f (f acc x) l)	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 231)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  x : B	  l : list B	  IHl : for_all Q l -> forall acc : A, P acc -> P (fold_left f acc l)	  Hx : Q x	  Hl : for_all Q l	  acc : A	  Ha : P acc	  ============================	  P (fold_left f (f acc x) l)	";
+            data = "1 goal (ID 231)	  	  A : Type	  B : Type	  P : A -> Type	  Q : B -> Type	  f : A -> B -> A	  Hf : forall (x : A) (y : B), P x -> Q y -> P (f x y)	  x : B	  l : list B	  IHl : for_all Q l -> forall acc : A, P acc -> P (fold_left f acc l)	  Hx : Q x	  Hl : for_all Q l	  acc : A	  Ha : P acc	  ============================	  P (fold_left f (f acc x) l)	";
             responses[i]=data;
           
 
             i = 73;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -393,7 +393,7 @@
           
 
             i = 75;
-            data = "1 subgoal (ID 212)	  	  A : Type	  n : trunc_index	  P : A -> Type	  ============================	  forall l : list A,	  for_all (fun x : A => IsTrunc n (P x)) l -> IsTrunc n (for_all P l)	";
+            data = "1 goal (ID 212)	  	  A : Type	  n : trunc_index	  P : A -> Type	  ============================	  forall l : list A,	  for_all (fun x : A => IsTrunc n (P x)) l -> IsTrunc n (for_all P l)	";
             responses[i]=data;
           
 
@@ -403,32 +403,32 @@
           
 
             i = 77;
-            data = "2 subgoals (ID 224)	  	  A : Type	  n : trunc_index	  P : A -> Type	  ============================	  Unit -> IsTrunc n Unit		subgoal 2 (ID 227) is:	 IsTrunc n (P x) * for_all (fun x0 : A => IsTrunc n (P x0)) l ->	 IsTrunc n (P x * for_all P l)	";
+            data = "2 goals (ID 224)	  	  A : Type	  n : trunc_index	  P : A -> Type	  ============================	  Unit -> IsTrunc n Unit		goal 2 (ID 227) is:	 IsTrunc n (P x) * for_all (fun x0 : A => IsTrunc n (P x0)) l ->	 IsTrunc n (P x * for_all P l)	";
             responses[i]=data;
           
 
             i = 78;
-            data = "1 subgoal (ID 224)	  	  A : Type	  n : trunc_index	  P : A -> Type	  ============================	  Unit -> IsTrunc n Unit	1 subgoal (ID 229)	  	  A : Type	  n : trunc_index	  P : A -> Type	  ============================	  IsTrunc n Unit	";
+            data = "1 goal (ID 224)	  	  A : Type	  n : trunc_index	  P : A -> Type	  ============================	  Unit -> IsTrunc n Unit	1 goal (ID 229)	  	  A : Type	  n : trunc_index	  P : A -> Type	  ============================	  IsTrunc n Unit	";
             responses[i]=data;
           
 
             i = 79;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 227) is:	 IsTrunc n (P x) * for_all (fun x0 : A => IsTrunc n (P x0)) l ->	 IsTrunc n (P x * for_all P l)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 227) is:	 IsTrunc n (P x) * for_all (fun x0 : A => IsTrunc n (P x0)) l ->	 IsTrunc n (P x * for_all P l)	";
             responses[i]=data;
           
 
             i = 80;
-            data = "1 subgoal (ID 227)	  	  A : Type	  n : trunc_index	  P : A -> Type	  x : A	  l : list A	  IHl : for_all (fun x : A => IsTrunc n (P x)) l -> IsTrunc n (for_all P l)	  ============================	  IsTrunc n (P x) * for_all (fun x0 : A => IsTrunc n (P x0)) l ->	  IsTrunc n (P x * for_all P l)	1 subgoal (ID 250)	  	  A : Type	  n : trunc_index	  P : A -> Type	  x : A	  l : list A	  IHl : for_all (fun x : A => IsTrunc n (P x)) l -> IsTrunc n (for_all P l)	  Hx : IsTrunc n (P x)	  Hl : for_all (fun x : A => IsTrunc n (P x)) l	  ============================	  IsTrunc n (P x * for_all P l)	";
+            data = "1 goal (ID 227)	  	  A : Type	  n : trunc_index	  P : A -> Type	  x : A	  l : list A	  IHl : for_all (fun x : A => IsTrunc n (P x)) l -> IsTrunc n (for_all P l)	  ============================	  IsTrunc n (P x) * for_all (fun x0 : A => IsTrunc n (P x0)) l ->	  IsTrunc n (P x * for_all P l)	1 goal (ID 258)	  	  A : Type	  n : trunc_index	  P : A -> Type	  x : A	  l : list A	  IHl : for_all (fun x : A => IsTrunc n (P x)) l -> IsTrunc n (for_all P l)	  Hx : IsTrunc n (P x)	  Hl : for_all (fun x : A => IsTrunc n (P x)) l	  ============================	  IsTrunc n (P x * for_all P l)	";
             responses[i]=data;
           
 
             i = 81;
-            data = "1 subgoal (ID 252)	  	  A : Type	  n : trunc_index	  P : A -> Type	  x : A	  l : list A	  IHl : for_all (fun x : A => IsTrunc n (P x)) l -> IsTrunc n (for_all P l)	  Hx : IsTrunc n (P x)	  Hl : IsTrunc n (for_all P l)	  ============================	  IsTrunc n (P x * for_all P l)	";
+            data = "1 goal (ID 260)	  	  A : Type	  n : trunc_index	  P : A -> Type	  x : A	  l : list A	  IHl : for_all (fun x : A => IsTrunc n (P x)) l -> IsTrunc n (for_all P l)	  Hx : IsTrunc n (P x)	  Hl : IsTrunc n (for_all P l)	  ============================	  IsTrunc n (P x * for_all P l)	";
             responses[i]=data;
           
 
             i = 82;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 

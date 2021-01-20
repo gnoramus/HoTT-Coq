@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: family_prod.v
 Line: 1
-Time: 0.091s">
+Time: 0.084s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   Coq.Unicode.Utf8
@@ -103,7 +103,7 @@ Time: 0s">
 <div class="code" title="File: family_prod.v
 Line: 30
 Time: 0.002s">
-<div class="time" style="width: 2.1978021978022%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>Fixpoint map_family_prod {F G : I → Type} {ℓ : list I}
       (f : ∀ i, F i → G i)
       : FamilyProd F ℓ → FamilyProd G ℓ :=
@@ -125,13 +125,13 @@ Time: 0s">
 </div>
 <div class="code" title="File: family_prod.v
 Line: 41
-Time: 0.002s">
-<div class="time" style="width: 2.1978021978022%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>Fixpoint for_all_family_prod (F : I → Type) {ℓ : list I}
       (P : ∀ i, F i -&gt; Type) : FamilyProd F ℓ → Type :=
     match ℓ with
     | nil =&gt; λ _, True
-    | i :: ℓ' =&gt; λ '(x,s), P i x ∧ for_all_family_prod F P s
+    | i :: _ =&gt; λ '(x,s), P i x ∧ for_all_family_prod F P s
     end.</pre>
 </div>
 <div class="code" title="File: family_prod.v
@@ -148,13 +148,13 @@ Time: 0s">
 <div class="code" title="File: family_prod.v
 Line: 51
 Time: 0.003s">
-<div class="time" style="width: 3.2967032967033%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Fixpoint for_all_2_family_prod (F G : I → Type) {ℓ : list I}
       (R : ∀ i, F i -&gt; G i -&gt; Type)
       : FamilyProd F ℓ → FamilyProd G ℓ → Type :=
     match ℓ with
     | nil =&gt; λ _ _, True
-    | i :: ℓ' =&gt; λ '(x,s) '(y,t), R i x y ∧ for_all_2_family_prod F G R s t
+    | i :: _ =&gt; λ '(x,s) '(y,t), R i x y ∧ for_all_2_family_prod F G R s t
     end.</pre>
 </div>
 <div class="code" title="File: family_prod.v
@@ -175,8 +175,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: family_prod.v
 Line: 67
-Time: 0.001s">
-<div class="time" style="width: 1.0989010989011%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma reflexive_for_all_2_family_prod (F : I → Type)
     (R : ∀ i, Relation (F i)) `{!∀ i, Reflexive (R i)}
     {ℓ : list I} (s : FamilyProd F ℓ)
@@ -191,15 +191,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: family_prod.v
 Line: 71
-Time: 0.003s">
-<div class="time" style="width: 3.2967032967033%"></div>
+Time: 0.002s">
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     induction ℓ...</pre>
 </div>
 <div class="code" title="File: family_prod.v
 Line: 72
 Time: 0.002s">
-<div class="time" style="width: 2.1978021978022%"></div>
+<div class="time" style="width: 2.3809523809524%"></div>
 <pre>
     split...</pre>
 </div>
@@ -220,7 +220,7 @@ Time: 0s">
 <div class="code" title="File: family_prod.v
 Line: 75
 Time: 0.001s">
-<div class="time" style="width: 1.0989010989011%"></div>
+<div class="time" style="width: 1.1904761904762%"></div>
 <pre>
 End family_prod.</pre>
 </div>

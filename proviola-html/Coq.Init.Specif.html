@@ -903,7 +903,7 @@
           
 
             i = 177;
-            data = "1 subgoal (ID 4)	  	  S : Type	  S' : Type	  R : S -> S' -> Type	  R' : S -> S' -> Type	  R1 : S -> Type	  R2 : S -> Type	  ============================	  (forall x : S, {y : S' & R' x y}) ->	  {f : S -> S' & forall z : S, R' z (f z)}	";
+            data = "1 goal (ID 4)	  	  S : Type	  S' : Type	  R : S -> S' -> Type	  R' : S -> S' -> Type	  R1 : S -> Type	  R2 : S -> Type	  ============================	  (forall x : S, {y : S' & R' x y}) ->	  {f : S -> S' & forall z : S, R' z (f z)}	";
             responses[i]=data;
           
 
@@ -913,17 +913,17 @@
           
 
             i = 179;
-            data = "1 subgoal (ID 5)	  	  S : Type	  S' : Type	  R : S -> S' -> Type	  R' : S -> S' -> Type	  R1 : S -> Type	  R2 : S -> Type	  H : forall x : S, {y : S' & R' x y}	  ============================	  {f : S -> S' & forall z : S, R' z (f z)}	";
+            data = "1 goal (ID 5)	  	  S : Type	  S' : Type	  R : S -> S' -> Type	  R' : S -> S' -> Type	  R1 : S -> Type	  R2 : S -> Type	  H : forall x : S, {y : S' & R' x y}	  ============================	  {f : S -> S' & forall z : S, R' z (f z)}	";
             responses[i]=data;
           
 
             i = 180;
-            data = "1 subgoal (ID 10)	  	  S : Type	  S' : Type	  R : S -> S' -> Type	  R' : S -> S' -> Type	  R1 : S -> Type	  R2 : S -> Type	  H : forall x : S, {y : S' & R' x y}	  ============================	  forall z : S, R' z (proj1_sig (H z))	";
+            data = "1 goal (ID 10)	  	  S : Type	  S' : Type	  R : S -> S' -> Type	  R' : S -> S' -> Type	  R1 : S -> Type	  R2 : S -> Type	  H : forall x : S, {y : S' & R' x y}	  ============================	  forall z : S, R' z (proj1_sig (H z))	";
             responses[i]=data;
           
 
             i = 181;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -953,7 +953,7 @@
           
 
             i = 187;
-            data = "1 subgoal (ID 9)	  	  X : Type	  R : X -> X -> Type	  ============================	  (forall x : X, {y : X & R x y}) ->	  forall x0 : X,	  {f : nat -> X & (f 0 = x0) * (forall n : nat, R (f n) (f (S n)))}	";
+            data = "1 goal (ID 9)	  	  X : Type	  R : X -> X -> Type	  ============================	  (forall x : X, {y : X & R x y}) ->	  forall x0 : X,	  {f : nat -> X & (f 0 = x0) * (forall n : nat, R (f n) (f (S n)))}	";
             responses[i]=data;
           
 
@@ -963,32 +963,32 @@
           
 
             i = 189;
-            data = "1 subgoal (ID 11)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  ============================	  {f : nat -> X & (f 0 = x0) * (forall n : nat, R (f n) (f (S n)))}	";
+            data = "1 goal (ID 11)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  ============================	  {f : nat -> X & (f 0 = x0) * (forall n : nat, R (f n) (f (S n)))}	";
             responses[i]=data;
           
 
             i = 190;
-            data = "1 subgoal (ID 19)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  {f0 : nat -> X & (f0 0 = x0) * (forall n : nat, R (f0 n) (f0 (S n)))}	";
+            data = "1 goal (ID 19)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  {f0 : nat -> X & (f0 0 = x0) * (forall n : nat, R (f0 n) (f0 (S n)))}	";
             responses[i]=data;
           
 
             i = 191;
-            data = "1 subgoal (ID 21)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  (f 0 = x0) * (forall n : nat, R (f n) (f (S n)))	";
+            data = "1 goal (ID 21)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  (f 0 = x0) * (forall n : nat, R (f n) (f (S n)))	";
             responses[i]=data;
           
 
             i = 192;
-            data = "2 subgoals (ID 23)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  f 0 = x0		subgoal 2 (ID 24) is:	 forall n : nat, R (f n) (f (S n))	";
+            data = "2 goals (ID 23)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  f 0 = x0		goal 2 (ID 24) is:	 forall n : nat, R (f n) (f (S n))	";
             responses[i]=data;
           
 
             i = 193;
-            data = "1 subgoal (ID 24)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  forall n : nat, R (f n) (f (S n))	";
+            data = "1 goal (ID 24)	  	  X : Type	  R : X -> X -> Type	  H : forall x : X, {y : X & R x y}	  x0 : X	  f := fix f (n : nat) : X :=	         match n with	         | 0 => x0	         | S n' => proj1_sig (H (f n'))	         end : nat -> X	  ============================	  forall n : nat, R (f n) (f (S n))	";
             responses[i]=data;
           
 
             i = 194;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1268,7 +1268,7 @@
           
 
             i = 250;
-            data = "1 subgoal (ID 2)	  	  ============================	  forall (A : Prop) (C : Set), A -> not A -> C	";
+            data = "1 goal (ID 2)	  	  ============================	  forall (A : Prop) (C : Set), A -> not A -> C	";
             responses[i]=data;
           
 
@@ -1278,17 +1278,17 @@
           
 
             i = 252;
-            data = "1 subgoal (ID 6)	  	  A : Prop	  C : Set	  h1 : A	  h2 : not A	  ============================	  C	";
+            data = "1 goal (ID 6)	  	  A : Prop	  C : Set	  h1 : A	  h2 : not A	  ============================	  C	";
             responses[i]=data;
           
 
             i = 253;
-            data = "1 subgoal (ID 9)	  	  A : Prop	  C : Set	  h1 : A	  h2 : not A	  ============================	  False	";
+            data = "1 goal (ID 9)	  	  A : Prop	  C : Set	  h1 : A	  h2 : not A	  ============================	  False	";
             responses[i]=data;
           
 
             i = 254;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1612,13 +1612,13 @@ We make the parameters maximally inserted so that we can pass around <span class
       "><br>
 <br>
 <span class="id" title="keyword">Notation</span> <a id="3df228c109f14f0423b4fccc967ee1ac" class="idref" href="#3df228c109f14f0423b4fccc967ee1ac"><span class="id" title="notation">"</span></a>'exists2' x , p &amp; q" := (<a class="idref" href="Coq.Init.Specif.html#sigT2"><span class="id" title="abbreviation">sigT2</span></a> (<span class="id" title="keyword">fun</span> <a id="x:21" class="idref" href="#x:21"><span class="id" title="binder">x</span></a> ⇒ <span class="id" title="var">p</span>) (<span class="id" title="keyword">fun</span> <a id="x:20" class="idref" href="#x:20"><span class="id" title="binder">x</span></a> ⇒ <span class="id" title="var">q</span>))<br>
-  (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="var">x</span> <span class="id" title="var">ident</span>, <span class="id" title="var">p</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="tactic">right</span> <span class="id" title="keyword">associativity</span>) : <span class="id" title="var">type_scope</span>.</span><span class="command" onmouseout="
+  (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="var">x</span> <span class="id" title="var">name</span>, <span class="id" title="var">p</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="tactic">right</span> <span class="id" title="keyword">associativity</span>) : <span class="id" title="var">type_scope</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(123, '0_3_19');
       "><br>
 <span class="id" title="keyword">Notation</span> <a id="59ba2b47d2814e66f8210a649ae6e6bc" class="idref" href="#59ba2b47d2814e66f8210a649ae6e6bc"><span class="id" title="notation">"</span></a>'exists2' x : t , p &amp; q" := (<a class="idref" href="Coq.Init.Specif.html#sigT2"><span class="id" title="abbreviation">sigT2</span></a> (<span class="id" title="keyword">fun</span> <a id="x:23" class="idref" href="#x:23"><span class="id" title="binder">x</span></a>:<span class="id" title="var">t</span> ⇒ <span class="id" title="var">p</span>) (<span class="id" title="keyword">fun</span> <a id="x:22" class="idref" href="#x:22"><span class="id" title="binder">x</span></a>:<span class="id" title="var">t</span> ⇒ <span class="id" title="var">q</span>))<br>
-  (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="var">x</span> <span class="id" title="var">ident</span>, <span class="id" title="var">t</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="var">p</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="tactic">right</span> <span class="id" title="keyword">associativity</span>,<br>
+  (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="var">x</span> <span class="id" title="var">name</span>, <span class="id" title="var">t</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="var">p</span> <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 200, <span class="id" title="tactic">right</span> <span class="id" title="keyword">associativity</span>,<br>
     <span class="id" title="var">format</span> "'[' 'exists2'  '/  ' x  :  t ,  '/  ' '[' p  &amp;  '/' q ']' ']'")<br>
   : <span class="id" title="var">type_scope</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
@@ -1920,7 +1920,7 @@ A result of type <span class="inlinecode">(<a class="idref" href="Coq.Init.Speci
       mouseover(256, '0_3_31');
       "><br>
 <br>
-<span class="id" title="keyword">Hint Resolve</span> <span class="id" title="var">existT</span> <span class="id" title="var">existT2</span>: <span class="id" title="var">core</span>.</span><span class="command" onmouseout="
+#[<span class="id" title="var">export</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Resolve</span> <span class="id" title="var">existT</span> <span class="id" title="var">existT2</span>: <span class="id" title="var">core</span>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
       mouseover(257, '0_3_31');

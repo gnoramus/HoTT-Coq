@@ -123,7 +123,7 @@
           
 
             i = 21;
-            data = "1 subgoal (ID 2)	  	  G : Graph	  C : Type	  ============================	  Diagram G	";
+            data = "1 goal (ID 2)	  	  G : Graph	  C : Type	  ============================	  Diagram G	";
             responses[i]=data;
           
 
@@ -133,22 +133,22 @@
           
 
             i = 23;
-            data = "2 subgoals (ID 12)	  	  G : Graph	  C : Type	  ============================	  G -> Type		subgoal 2 (ID 14) is:	 forall i j : G, G i j -> ?obj i -> ?obj j	";
+            data = "2 goals (ID 12)	  	  G : Graph	  C : Type	  ============================	  G -> Type		goal 2 (ID 14) is:	 forall i j : G, G i j -> ?obj i -> ?obj j	";
             responses[i]=data;
           
 
             i = 24;
-            data = "1 subgoal (ID 14)	  	  G : Graph	  C : Type	  ============================	  forall i j : G, G i j -> (fun _ : G => C) i -> (fun _ : G => C) j	";
+            data = "1 goal (ID 14)	  	  G : Graph	  C : Type	  ============================	  forall i j : G, G i j -> (fun _ : G => C) i -> (fun _ : G => C) j	";
             responses[i]=data;
           
 
             i = 25;
-            data = "1 subgoal (ID 18)	  	  G : Graph	  C : Type	  i, j : G	  k : G i j	  ============================	  (fun _ : G => C) i -> (fun _ : G => C) j	";
+            data = "1 goal (ID 18)	  	  G : Graph	  C : Type	  i, j : G	  k : G i j	  ============================	  (fun _ : G => C) i -> (fun _ : G => C) j	";
             responses[i]=data;
           
 
             i = 26;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -158,7 +158,7 @@
           
 
             i = 28;
-            data = "1 subgoal (ID 7)	  	  G : Graph	  A : Type	  B : Type	  f : A -> B	  ============================	  DiagramMap (diagram_const A) (diagram_const B)	";
+            data = "1 goal (ID 7)	  	  G : Graph	  A : Type	  B : Type	  f : A -> B	  ============================	  DiagramMap (diagram_const A) (diagram_const B)	";
             responses[i]=data;
           
 
@@ -168,17 +168,17 @@
           
 
             i = 30;
-            data = "2 subgoals (ID 30)	  	  G : Graph	  A : Type	  B : Type	  f : A -> B	  ============================	  forall i : G, diagram_const A i -> diagram_const B i		subgoal 2 (ID 32) is:	 forall (i j : G) (g : G i j) (x : diagram_const A i),	 ((diagram_const B) _f g) (?DiagramMap_obj i x) =	 ?DiagramMap_obj j (((diagram_const A) _f g) x)	";
+            data = "2 goals (ID 30)	  	  G : Graph	  A : Type	  B : Type	  f : A -> B	  ============================	  forall i : G, diagram_const A i -> diagram_const B i		goal 2 (ID 32) is:	 forall (i j : G) (g : G i j) (x : diagram_const A i),	 ((diagram_const B) _f g) (?DiagramMap_obj i x) =	 ?DiagramMap_obj j (((diagram_const A) _f g) x)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "1 subgoal (ID 32)	  	  G : Graph	  A : Type	  B : Type	  f : A -> B	  ============================	  forall (i j : G) (g : G i j) (x : diagram_const A i),	  ((diagram_const B) _f g) ((fun _ : G => f) i x) =	  (fun _ : G => f) j (((diagram_const A) _f g) x)	";
+            data = "1 goal (ID 32)	  	  G : Graph	  A : Type	  B : Type	  f : A -> B	  ============================	  forall (i j : G) (g : G i j) (x : diagram_const A i),	  ((diagram_const B) _f g) ((fun _ : G => f) i x) =	  (fun _ : G => f) j (((diagram_const A) _f g) x)	";
             responses[i]=data;
           
 
             i = 32;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -188,7 +188,7 @@
           
 
             i = 34;
-            data = "1 subgoal (ID 34)	  	  G : Graph	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  ============================	  diagram_const_functor (g o f) =	  diagram_comp (diagram_const_functor g) (diagram_const_functor f)	";
+            data = "1 goal (ID 34)	  	  G : Graph	  A : Type	  B : Type	  C : Type	  f : A -> B	  g : B -> C	  ============================	  diagram_const_functor (g o f) =	  diagram_comp (diagram_const_functor g) (diagram_const_functor f)	";
             responses[i]=data;
           
 
@@ -198,7 +198,7 @@
           
 
             i = 36;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -208,7 +208,7 @@
           
 
             i = 38;
-            data = "1 subgoal (ID 42)	  	  G : Graph	  A : Type	  ============================	  diagram_const_functor (idmap : A -> A) = diagram_idmap (diagram_const A)	";
+            data = "1 goal (ID 42)	  	  G : Graph	  A : Type	  ============================	  diagram_const_functor (idmap : A -> A) = diagram_idmap (diagram_const A)	";
             responses[i]=data;
           
 
@@ -218,7 +218,7 @@
           
 
             i = 40;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -228,7 +228,7 @@
           
 
             i = 42;
-            data = "1 subgoal (ID 48)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  ============================	  DiagramMap D (diagram_const X) <~> Cocone D X	";
+            data = "1 goal (ID 48)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  ============================	  DiagramMap D (diagram_const X) <~> Cocone D X	";
             responses[i]=data;
           
 
@@ -238,47 +238,47 @@
           
 
             i = 44;
-            data = "4 subgoals (ID 72)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  ============================	  DiagramMap D (diagram_const X) -> Cocone D X		subgoal 2 (ID 74) is:	 Cocone D X -> DiagramMap D (diagram_const X)	subgoal 3 (ID 76) is:	 ?f o ?g == idmap	subgoal 4 (ID 78) is:	 ?g o ?f == idmap	";
+            data = "4 goals (ID 72)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  ============================	  DiagramMap D (diagram_const X) -> Cocone D X		goal 2 (ID 74) is:	 Cocone D X -> DiagramMap D (diagram_const X)	goal 3 (ID 76) is:	 ?f o ?g == idmap	goal 4 (ID 78) is:	 ?g o ?f == idmap	";
             responses[i]=data;
           
 
             i = 45;
-            data = "4 focused subgoals	(shelved: 2) (ID 98)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  DiagramMap_obj : forall i : G, D i -> diagram_const X i	  w : forall (i j : G) (g : G i j) (x : D i),	      ((diagram_const X) _f g) (DiagramMap_obj i x) =	      DiagramMap_obj j ((D _f g) x)	  ============================	  forall (i j : G) (g : G i j),	  (fun x : D i => ?legs j ((D _f g) x)) == ?legs i		subgoal 2 (ID 101) is:	 forall (i j : G) (g : G i j) (x : D i),	 ((diagram_const X) _f g) (?DiagramMap_obj i x) =	 ?DiagramMap_obj j ((D _f g) x)	subgoal 3 (ID 76) is:	 (fun X0 : DiagramMap D (diagram_const X) =>	  (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	     (w : forall (i j : G) (g : G i j) (x : D i),	          ((diagram_const X) _f g) (DiagramMap_obj i x) =	          DiagramMap_obj j ((D _f g) x)) =>	   {| legs := ?legs; legs_comm := ?Goal |}) X0 (DiagramMap_comm X0))	 o (fun X0 : Cocone D X =>	    (fun (legs : forall i : G, D i -> X)	       (w : forall (i j : G) (g : G i j),	            (fun x : D i => legs j ((D _f g) x)) == legs i) =>	     {| DiagramMap_obj := ?DiagramMap_obj; DiagramMap_comm := ?Goal0 |}) X0	      (legs_comm X0)) == idmap	subgoal 4 (ID 78) is:	 (fun X0 : Cocone D X =>	  (fun (legs : forall i : G, D i -> X)	     (w : forall (i j : G) (g : G i j),	          (fun x : D i => legs j ((D _f g) x)) == legs i) =>	   {| DiagramMap_obj := ?DiagramMap_obj; DiagramMap_comm := ?Goal0 |}) X0	    (legs_comm X0))	 o (fun X0 : DiagramMap D (diagram_const X) =>	    (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	       (w : forall (i j : G) (g : G i j) (x : D i),	            ((diagram_const X) _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j ((D _f g) x)) =>	     {| legs := ?legs; legs_comm := ?Goal |}) X0 (DiagramMap_comm X0)) ==	 idmap	";
+            data = "4 focused goals	(shelved: 2) (ID 98)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  DiagramMap_obj : forall i : G, D i -> diagram_const X i	  w : forall (i j : G) (g : G i j) (x : D i),	      ((diagram_const X) _f g) (DiagramMap_obj i x) =	      DiagramMap_obj j ((D _f g) x)	  ============================	  forall (i j : G) (g : G i j),	  (fun x : D i => ?legs j ((D _f g) x)) == ?legs i		goal 2 (ID 101) is:	 forall (i j : G) (g : G i j) (x : D i),	 ((diagram_const X) _f g) (?DiagramMap_obj i x) =	 ?DiagramMap_obj j ((D _f g) x)	goal 3 (ID 76) is:	 (fun X0 : DiagramMap D (diagram_const X) =>	  (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	     (w : forall (i j : G) (g : G i j) (x : D i),	          ((diagram_const X) _f g) (DiagramMap_obj i x) =	          DiagramMap_obj j ((D _f g) x)) =>	   {| legs := ?legs; legs_comm := ?Goal |}) X0 (DiagramMap_comm X0))	 o (fun X0 : Cocone D X =>	    (fun (legs : forall i : G, D i -> X)	       (w : forall (i j : G) (g : G i j),	            (fun x : D i => legs j ((D _f g) x)) == legs i) =>	     {| DiagramMap_obj := ?DiagramMap_obj; DiagramMap_comm := ?Goal0 |}) X0	      (legs_comm X0)) == idmap	goal 4 (ID 78) is:	 (fun X0 : Cocone D X =>	  (fun (legs : forall i : G, D i -> X)	     (w : forall (i j : G) (g : G i j),	          (fun x : D i => legs j ((D _f g) x)) == legs i) =>	   {| DiagramMap_obj := ?DiagramMap_obj; DiagramMap_comm := ?Goal0 |}) X0	    (legs_comm X0))	 o (fun X0 : DiagramMap D (diagram_const X) =>	    (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	       (w : forall (i j : G) (g : G i j) (x : D i),	            ((diagram_const X) _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j ((D _f g) x)) =>	     {| legs := ?legs; legs_comm := ?Goal |}) X0 (DiagramMap_comm X0)) ==	 idmap	";
             responses[i]=data;
           
 
             i = 46;
-            data = "4 focused subgoals	(shelved: 2) (ID 132)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  DiagramMap_obj : forall i : G, D i -> diagram_const X i	  w : forall (i j : G) (g : G i j) (x : D i),	      ((diagram_const X) _f g) (DiagramMap_obj i x) =	      DiagramMap_obj j ((D _f g) x)	  ============================	  forall (x y : G) (z : G x y) (z' : D x), ?legs x z' = ?legs y ((D _f z) z')		subgoal 2 (ID 134) is:	 forall (x y : G) (z : G x y) (z' : D x),	 ?DiagramMap_obj y ((D _f z) z') =	 ((diagram_const X) _f z) (?DiagramMap_obj x z')	subgoal 3 (ID 76) is:	 (fun X0 : DiagramMap D (diagram_const X) =>	  (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	     (w : forall (i j : G) (g : G i j) (x : D i),	          ((diagram_const X) _f g) (DiagramMap_obj i x) =	          DiagramMap_obj j ((D _f g) x)) =>	   {|	     legs := ?legs;	     legs_comm := fun (x y : G) (z : G x y) (z' : D x) => (?Goal x y z z')^	   |}) X0 (DiagramMap_comm X0))	 o (fun X0 : Cocone D X =>	    (fun (legs : forall i : G, D i -> X)	       (w : forall (i j : G) (g : G i j),	            (fun x : D i => legs j ((D _f g) x)) == legs i) =>	     {|	       DiagramMap_obj := ?DiagramMap_obj;	       DiagramMap_comm :=	         fun (x y : G) (z : G x y) (z' : D x) => (?Goal0 x y z z')^	     |}) X0 (legs_comm X0)) == idmap	subgoal 4 (ID 78) is:	 (fun X0 : Cocone D X =>	  (fun (legs : forall i : G, D i -> X)	     (w : forall (i j : G) (g : G i j),	          (fun x : D i => legs j ((D _f g) x)) == legs i) =>	   {|	     DiagramMap_obj := ?DiagramMap_obj;	     DiagramMap_comm :=	       fun (x y : G) (z : G x y) (z' : D x) => (?Goal0 x y z z')^	   |}) X0 (legs_comm X0))	 o (fun X0 : DiagramMap D (diagram_const X) =>	    (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	       (w : forall (i j : G) (g : G i j) (x : D i),	            ((diagram_const X) _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j ((D _f g) x)) =>	     {|	       legs := ?legs;	       legs_comm := fun (x y : G) (z : G x y) (z' : D x) => (?Goal x y z z')^	     |}) X0 (DiagramMap_comm X0)) == idmap	";
+            data = "4 focused goals	(shelved: 2) (ID 132)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  DiagramMap_obj : forall i : G, D i -> diagram_const X i	  w : forall (i j : G) (g : G i j) (x : D i),	      ((diagram_const X) _f g) (DiagramMap_obj i x) =	      DiagramMap_obj j ((D _f g) x)	  ============================	  forall (x y : G) (z : G x y) (z' : D x), ?legs x z' = ?legs y ((D _f z) z')		goal 2 (ID 134) is:	 forall (x y : G) (z : G x y) (z' : D x),	 ?DiagramMap_obj y ((D _f z) z') =	 ((diagram_const X) _f z) (?DiagramMap_obj x z')	goal 3 (ID 76) is:	 (fun X0 : DiagramMap D (diagram_const X) =>	  (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	     (w : forall (i j : G) (g : G i j) (x : D i),	          ((diagram_const X) _f g) (DiagramMap_obj i x) =	          DiagramMap_obj j ((D _f g) x)) =>	   {|	     legs := ?legs;	     legs_comm := fun (x y : G) (z : G x y) (z' : D x) => (?Goal x y z z')^	   |}) X0 (DiagramMap_comm X0))	 o (fun X0 : Cocone D X =>	    (fun (legs : forall i : G, D i -> X)	       (w : forall (i j : G) (g : G i j),	            (fun x : D i => legs j ((D _f g) x)) == legs i) =>	     {|	       DiagramMap_obj := ?DiagramMap_obj;	       DiagramMap_comm :=	         fun (x y : G) (z : G x y) (z' : D x) => (?Goal0 x y z z')^	     |}) X0 (legs_comm X0)) == idmap	goal 4 (ID 78) is:	 (fun X0 : Cocone D X =>	  (fun (legs : forall i : G, D i -> X)	     (w : forall (i j : G) (g : G i j),	          (fun x : D i => legs j ((D _f g) x)) == legs i) =>	   {|	     DiagramMap_obj := ?DiagramMap_obj;	     DiagramMap_comm :=	       fun (x y : G) (z : G x y) (z' : D x) => (?Goal0 x y z z')^	   |}) X0 (legs_comm X0))	 o (fun X0 : DiagramMap D (diagram_const X) =>	    (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	       (w : forall (i j : G) (g : G i j) (x : D i),	            ((diagram_const X) _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j ((D _f g) x)) =>	     {|	       legs := ?legs;	       legs_comm := fun (x y : G) (z : G x y) (z' : D x) => (?Goal x y z z')^	     |}) X0 (DiagramMap_comm X0)) == idmap	";
             responses[i]=data;
           
 
             i = 47;
-            data = "2 subgoals (ID 76)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  ============================	  (fun X0 : DiagramMap D (diagram_const X) =>	   (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	      (w : forall (i j : G) (g : G i j) (x : D i),	           ((diagram_const X) _f g) (DiagramMap_obj i x) =	           DiagramMap_obj j ((D _f g) x)) =>	    {|	      legs := DiagramMap_obj;	      legs_comm := fun (x y : G) (z : G x y) (z' : D x) => (w x y z z')^	    |}) X0 (DiagramMap_comm X0))	  o (fun X0 : Cocone D X =>	     (fun (legs : forall i : G, D i -> X)	        (w : forall (i j : G) (g : G i j),	             (fun x : D i => legs j ((D _f g) x)) == legs i) =>	      {|	        DiagramMap_obj := legs;	        DiagramMap_comm :=	          fun (x y : G) (z : G x y) (z' : D x) => (w x y z z')^	      |}) X0 (legs_comm X0)) == idmap		subgoal 2 (ID 78) is:	 (fun X0 : Cocone D X =>	  (fun (legs : forall i : G, D i -> X)	     (w : forall (i j : G) (g : G i j),	          (fun x : D i => legs j ((D _f g) x)) == legs i) =>	   {|	     DiagramMap_obj := legs;	     DiagramMap_comm := fun (x y : G) (z : G x y) (z' : D x) => (w x y z z')^	   |}) X0 (legs_comm X0))	 o (fun X0 : DiagramMap D (diagram_const X) =>	    (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	       (w : forall (i j : G) (g : G i j) (x : D i),	            ((diagram_const X) _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j ((D _f g) x)) =>	     {|	       legs := DiagramMap_obj;	       legs_comm := fun (x y : G) (z : G x y) (z' : D x) => (w x y z z')^	     |}) X0 (DiagramMap_comm X0)) == idmap	";
+            data = "2 goals (ID 76)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  ============================	  (fun X0 : DiagramMap D (diagram_const X) =>	   (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	      (w : forall (i j : G) (g : G i j) (x : D i),	           ((diagram_const X) _f g) (DiagramMap_obj i x) =	           DiagramMap_obj j ((D _f g) x)) =>	    {|	      legs := DiagramMap_obj;	      legs_comm := fun (x y : G) (z : G x y) (z' : D x) => (w x y z z')^	    |}) X0 (DiagramMap_comm X0))	  o (fun X0 : Cocone D X =>	     (fun (legs : forall i : G, D i -> X)	        (w : forall (i j : G) (g : G i j),	             (fun x : D i => legs j ((D _f g) x)) == legs i) =>	      {|	        DiagramMap_obj := legs;	        DiagramMap_comm :=	          fun (x y : G) (z : G x y) (z' : D x) => (w x y z z')^	      |}) X0 (legs_comm X0)) == idmap		goal 2 (ID 78) is:	 (fun X0 : Cocone D X =>	  (fun (legs : forall i : G, D i -> X)	     (w : forall (i j : G) (g : G i j),	          (fun x : D i => legs j ((D _f g) x)) == legs i) =>	   {|	     DiagramMap_obj := legs;	     DiagramMap_comm := fun (x y : G) (z : G x y) (z' : D x) => (w x y z z')^	   |}) X0 (legs_comm X0))	 o (fun X0 : DiagramMap D (diagram_const X) =>	    (fun (DiagramMap_obj : forall i : G, D i -> diagram_const X i)	       (w : forall (i j : G) (g : G i j) (x : D i),	            ((diagram_const X) _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j ((D _f g) x)) =>	     {|	       legs := DiagramMap_obj;	       legs_comm := fun (x y : G) (z : G x y) (z' : D x) => (w x y z z')^	     |}) X0 (DiagramMap_comm X0)) == idmap	";
             responses[i]=data;
           
 
             i = 48;
-            data = "2 subgoals (ID 140)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  legs : forall i : G, D i -> X	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  {|	    legs := legs;	    legs_comm :=	      fun (x y : G) (z : G x y) (z' : D x) => ((legs_comm x y z z')^)^	  |} = {| legs := legs; legs_comm := legs_comm |}		subgoal 2 (ID 146) is:	 {|	   DiagramMap_obj := DiagramMap_obj;	   DiagramMap_comm :=	     fun (x y : G) (z : G x y) (z' : D x) => ((DiagramMap_comm x y z z')^)^	 |} =	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	";
+            data = "2 goals (ID 140)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  legs : forall i : G, D i -> X	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  {|	    legs := legs;	    legs_comm :=	      fun (x y : G) (z : G x y) (z' : D x) => ((legs_comm x y z z')^)^	  |} = {| legs := legs; legs_comm := legs_comm |}		goal 2 (ID 146) is:	 {|	   DiagramMap_obj := DiagramMap_obj;	   DiagramMap_comm :=	     fun (x y : G) (z : G x y) (z' : D x) => ((DiagramMap_comm x y z z')^)^	 |} =	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	";
             responses[i]=data;
           
 
             i = 49;
-            data = "3 subgoals (ID 174)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  legs : forall i : G, D i -> X	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall i : G,	  {|	    legs := legs;	    legs_comm :=	      fun (x y : G) (z : G x y) (z' : D x) => ((legs_comm x y z z')^)^	  |} i == {| legs := legs; legs_comm := legs_comm |} i		subgoal 2 (ID 176) is:	 forall (i j : G) (g : G i j) (x : D i),	 Cocone.legs_comm	   {|	     legs := legs;	     legs_comm :=	       fun (x0 y : G) (z : G x0 y) (z' : D x0) => ((legs_comm x0 y z z')^)^	   |} i j g x @ ?path_legs i x =	 ?path_legs j ((D _f g) x) @	 Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	subgoal 3 (ID 146) is:	 {|	   DiagramMap_obj := DiagramMap_obj;	   DiagramMap_comm :=	     fun (x y : G) (z : G x y) (z' : D x) => ((DiagramMap_comm x y z z')^)^	 |} =	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	";
+            data = "3 goals (ID 174)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  legs : forall i : G, D i -> X	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall i : G,	  {|	    legs := legs;	    legs_comm :=	      fun (x y : G) (z : G x y) (z' : D x) => ((legs_comm x y z z')^)^	  |} i == {| legs := legs; legs_comm := legs_comm |} i		goal 2 (ID 176) is:	 forall (i j : G) (g : G i j) (x : D i),	 Cocone.legs_comm	   {|	     legs := legs;	     legs_comm :=	       fun (x0 y : G) (z : G x0 y) (z' : D x0) => ((legs_comm x0 y z z')^)^	   |} i j g x @ ?path_legs i x =	 ?path_legs j ((D _f g) x) @	 Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	goal 3 (ID 146) is:	 {|	   DiagramMap_obj := DiagramMap_obj;	   DiagramMap_comm :=	     fun (x y : G) (z : G x y) (z' : D x) => ((DiagramMap_comm x y z z')^)^	 |} =	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	";
             responses[i]=data;
           
 
             i = 50;
-            data = "4 subgoals (ID 174)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  legs : forall i : G, D i -> X	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall i : G,	  {|	    legs := legs;	    legs_comm :=	      fun (x y : G) (z : G x y) (z' : D x) => ((legs_comm x y z z')^)^	  |} i == {| legs := legs; legs_comm := legs_comm |} i		subgoal 2 (ID 176) is:	 forall (i j : G) (g : G i j) (x : D i),	 Cocone.legs_comm	   {|	     legs := legs;	     legs_comm :=	       fun (x0 y : G) (z : G x0 y) (z' : D x0) => ((legs_comm x0 y z z')^)^	   |} i j g x @ ?path_legs i x =	 ?path_legs j ((D _f g) x) @	 Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	subgoal 3 (ID 198) is:	 forall i : G,	 {|	   DiagramMap_obj := DiagramMap_obj;	   DiagramMap_comm :=	     fun (x y : G) (z : G x y) (z' : D x) => ((DiagramMap_comm x y z z')^)^	 |} i ==	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} i	subgoal 4 (ID 200) is:	 forall (i j : G) (g : G i j) (x : D i),	 Diagram.DiagramMap_comm	   {|	     DiagramMap_obj := DiagramMap_obj;	     DiagramMap_comm :=	       fun (x0 y : G) (z : G x0 y) (z' : D x0) =>	       ((DiagramMap_comm x0 y z z')^)^	   |} g x @ ?h_obj j ((D _f g) x) =	 ap ((diagram_const X) _f g) (?h_obj i x) @	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x	";
+            data = "4 goals (ID 174)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  legs : forall i : G, D i -> X	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall i : G,	  {|	    legs := legs;	    legs_comm :=	      fun (x y : G) (z : G x y) (z' : D x) => ((legs_comm x y z z')^)^	  |} i == {| legs := legs; legs_comm := legs_comm |} i		goal 2 (ID 176) is:	 forall (i j : G) (g : G i j) (x : D i),	 Cocone.legs_comm	   {|	     legs := legs;	     legs_comm :=	       fun (x0 y : G) (z : G x0 y) (z' : D x0) => ((legs_comm x0 y z z')^)^	   |} i j g x @ ?path_legs i x =	 ?path_legs j ((D _f g) x) @	 Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x	goal 3 (ID 198) is:	 forall i : G,	 {|	   DiagramMap_obj := DiagramMap_obj;	   DiagramMap_comm :=	     fun (x y : G) (z : G x y) (z' : D x) => ((DiagramMap_comm x y z z')^)^	 |} i ==	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} i	goal 4 (ID 200) is:	 forall (i j : G) (g : G i j) (x : D i),	 Diagram.DiagramMap_comm	   {|	     DiagramMap_obj := DiagramMap_obj;	     DiagramMap_comm :=	       fun (x0 y : G) (z : G x0 y) (z' : D x0) =>	       ((DiagramMap_comm x0 y z z')^)^	   |} g x @ ?h_obj j ((D _f g) x) =	 ap ((diagram_const X) _f g) (?h_obj i x) @	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x	";
             responses[i]=data;
           
 
             i = 51;
-            data = "2 subgoals (ID 176)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  legs : forall i : G, D i -> X	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  Cocone.legs_comm	    {|	      legs := legs;	      legs_comm :=	        fun (x0 y : G) (z : G x0 y) (z' : D x0) => ((legs_comm x0 y z z')^)^	    |} i j g x @ (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @	  Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x		subgoal 2 (ID 200) is:	 forall (i j : G) (g : G i j) (x : D i),	 Diagram.DiagramMap_comm	   {|	     DiagramMap_obj := DiagramMap_obj;	     DiagramMap_comm :=	       fun (x0 y : G) (z : G x0 y) (z' : D x0) =>	       ((DiagramMap_comm x0 y z z')^)^	   |} g x @ (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) =	 ap ((diagram_const X) _f g) ((fun (i0 : G) (x0 : D i0) => 1) i x) @	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x	";
+            data = "2 goals (ID 176)	  	  G : Graph	  H : Funext	  D : Diagram G	  X : Type	  legs : forall i : G, D i -> X	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : D i => legs j ((D _f g) x)) == legs i	  ============================	  forall (i j : G) (g : G i j) (x : D i),	  Cocone.legs_comm	    {|	      legs := legs;	      legs_comm :=	        fun (x0 y : G) (z : G x0 y) (z' : D x0) => ((legs_comm x0 y z z')^)^	    |} i j g x @ (fun (i0 : G) (x0 : D i0) => 1) i x =	  (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) @	  Cocone.legs_comm {| legs := legs; legs_comm := legs_comm |} i j g x		goal 2 (ID 200) is:	 forall (i j : G) (g : G i j) (x : D i),	 Diagram.DiagramMap_comm	   {|	     DiagramMap_obj := DiagramMap_obj;	     DiagramMap_comm :=	       fun (x0 y : G) (z : G x0 y) (z' : D x0) =>	       ((DiagramMap_comm x0 y z z')^)^	   |} g x @ (fun (i0 : G) (x0 : D i0) => 1) j ((D _f g) x) =	 ap ((diagram_const X) _f g) ((fun (i0 : G) (x0 : D i0) => 1) i x) @	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x	";
             responses[i]=data;
           
 
             i = 52;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -288,7 +288,7 @@
           
 
             i = 54;
-            data = "1 subgoal (ID 54)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  ============================	  DiagramMap (diagram_const X) D <~> Cone X D	";
+            data = "1 goal (ID 54)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  ============================	  DiagramMap (diagram_const X) D <~> Cone X D	";
             responses[i]=data;
           
 
@@ -298,42 +298,42 @@
           
 
             i = 56;
-            data = "4 subgoals (ID 78)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  ============================	  DiagramMap (diagram_const X) D -> Cone X D		subgoal 2 (ID 80) is:	 Cone X D -> DiagramMap (diagram_const X) D	subgoal 3 (ID 82) is:	 ?f o ?g == idmap	subgoal 4 (ID 84) is:	 ?g o ?f == idmap	";
+            data = "4 goals (ID 78)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  ============================	  DiagramMap (diagram_const X) D -> Cone X D		goal 2 (ID 80) is:	 Cone X D -> DiagramMap (diagram_const X) D	goal 3 (ID 82) is:	 ?f o ?g == idmap	goal 4 (ID 84) is:	 ?g o ?f == idmap	";
             responses[i]=data;
           
 
             i = 57;
-            data = "4 focused subgoals	(shelved: 2) (ID 104)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  DiagramMap_obj : forall i : G, diagram_const X i -> D i	  w : forall (i j : G) (g : G i j) (x : diagram_const X i),	      (D _f g) (DiagramMap_obj i x) =	      DiagramMap_obj j (((diagram_const X) _f g) x)	  ============================	  forall (i j : G) (g : G i j),	  (fun x : X => (D _f g) (?legs i x)) == ?legs j		subgoal 2 (ID 107) is:	 forall (i j : G) (g : G i j) (x : diagram_const X i),	 (D _f g) (?DiagramMap_obj i x) =	 ?DiagramMap_obj j (((diagram_const X) _f g) x)	subgoal 3 (ID 82) is:	 (fun X0 : DiagramMap (diagram_const X) D =>	  (fun (DiagramMap_obj : forall i : G, diagram_const X i -> D i)	     (w : forall (i j : G) (g : G i j) (x : diagram_const X i),	          (D _f g) (DiagramMap_obj i x) =	          DiagramMap_obj j (((diagram_const X) _f g) x)) =>	   {| Cone.legs := ?legs; Cone.legs_comm := ?Goal |}) X0 	    (DiagramMap_comm X0))	 o (fun X0 : Cone X D =>	    (fun (legs : forall i : G, X -> D i)	       (w : forall (i j : G) (g : G i j),	            (fun x : X => (D _f g) (legs i x)) == legs j) =>	     {| DiagramMap_obj := ?DiagramMap_obj; DiagramMap_comm := ?Goal0 |}) X0	      (Cone.legs_comm X0)) == idmap	subgoal 4 (ID 84) is:	 (fun X0 : Cone X D =>	  (fun (legs : forall i : G, X -> D i)	     (w : forall (i j : G) (g : G i j),	          (fun x : X => (D _f g) (legs i x)) == legs j) =>	   {| DiagramMap_obj := ?DiagramMap_obj; DiagramMap_comm := ?Goal0 |}) X0	    (Cone.legs_comm X0))	 o (fun X0 : DiagramMap (diagram_const X) D =>	    (fun (DiagramMap_obj : forall i : G, diagram_const X i -> D i)	       (w : forall (i j : G) (g : G i j) (x : diagram_const X i),	            (D _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j (((diagram_const X) _f g) x)) =>	     {| Cone.legs := ?legs; Cone.legs_comm := ?Goal |}) X0	      (DiagramMap_comm X0)) == idmap	";
+            data = "4 focused goals	(shelved: 2) (ID 104)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  DiagramMap_obj : forall i : G, diagram_const X i -> D i	  w : forall (i j : G) (g : G i j) (x : diagram_const X i),	      (D _f g) (DiagramMap_obj i x) =	      DiagramMap_obj j (((diagram_const X) _f g) x)	  ============================	  forall (i j : G) (g : G i j),	  (fun x : X => (D _f g) (?legs i x)) == ?legs j		goal 2 (ID 107) is:	 forall (i j : G) (g : G i j) (x : diagram_const X i),	 (D _f g) (?DiagramMap_obj i x) =	 ?DiagramMap_obj j (((diagram_const X) _f g) x)	goal 3 (ID 82) is:	 (fun X0 : DiagramMap (diagram_const X) D =>	  (fun (DiagramMap_obj : forall i : G, diagram_const X i -> D i)	     (w : forall (i j : G) (g : G i j) (x : diagram_const X i),	          (D _f g) (DiagramMap_obj i x) =	          DiagramMap_obj j (((diagram_const X) _f g) x)) =>	   {| Cone.legs := ?legs; Cone.legs_comm := ?Goal |}) X0 	    (DiagramMap_comm X0))	 o (fun X0 : Cone X D =>	    (fun (legs : forall i : G, X -> D i)	       (w : forall (i j : G) (g : G i j),	            (fun x : X => (D _f g) (legs i x)) == legs j) =>	     {| DiagramMap_obj := ?DiagramMap_obj; DiagramMap_comm := ?Goal0 |}) X0	      (Cone.legs_comm X0)) == idmap	goal 4 (ID 84) is:	 (fun X0 : Cone X D =>	  (fun (legs : forall i : G, X -> D i)	     (w : forall (i j : G) (g : G i j),	          (fun x : X => (D _f g) (legs i x)) == legs j) =>	   {| DiagramMap_obj := ?DiagramMap_obj; DiagramMap_comm := ?Goal0 |}) X0	    (Cone.legs_comm X0))	 o (fun X0 : DiagramMap (diagram_const X) D =>	    (fun (DiagramMap_obj : forall i : G, diagram_const X i -> D i)	       (w : forall (i j : G) (g : G i j) (x : diagram_const X i),	            (D _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j (((diagram_const X) _f g) x)) =>	     {| Cone.legs := ?legs; Cone.legs_comm := ?Goal |}) X0	      (DiagramMap_comm X0)) == idmap	";
             responses[i]=data;
           
 
             i = 58;
-            data = "2 subgoals (ID 82)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  ============================	  (fun X0 : DiagramMap (diagram_const X) D =>	   (fun (DiagramMap_obj : forall i : G, diagram_const X i -> D i)	      (w : forall (i j : G) (g : G i j) (x : diagram_const X i),	           (D _f g) (DiagramMap_obj i x) =	           DiagramMap_obj j (((diagram_const X) _f g) x)) =>	    {| Cone.legs := DiagramMap_obj; Cone.legs_comm := w |}) X0	     (DiagramMap_comm X0))	  o (fun X0 : Cone X D =>	     (fun (legs : forall i : G, X -> D i)	        (w : forall (i j : G) (g : G i j),	             (fun x : X => (D _f g) (legs i x)) == legs j) =>	      {| DiagramMap_obj := legs; DiagramMap_comm := w |}) X0	       (Cone.legs_comm X0)) == idmap		subgoal 2 (ID 84) is:	 (fun X0 : Cone X D =>	  (fun (legs : forall i : G, X -> D i)	     (w : forall (i j : G) (g : G i j),	          (fun x : X => (D _f g) (legs i x)) == legs j) =>	   {| DiagramMap_obj := legs; DiagramMap_comm := w |}) X0 	    (Cone.legs_comm X0))	 o (fun X0 : DiagramMap (diagram_const X) D =>	    (fun (DiagramMap_obj : forall i : G, diagram_const X i -> D i)	       (w : forall (i j : G) (g : G i j) (x : diagram_const X i),	            (D _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j (((diagram_const X) _f g) x)) =>	     {| Cone.legs := DiagramMap_obj; Cone.legs_comm := w |}) X0	      (DiagramMap_comm X0)) == idmap	";
+            data = "2 goals (ID 82)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  ============================	  (fun X0 : DiagramMap (diagram_const X) D =>	   (fun (DiagramMap_obj : forall i : G, diagram_const X i -> D i)	      (w : forall (i j : G) (g : G i j) (x : diagram_const X i),	           (D _f g) (DiagramMap_obj i x) =	           DiagramMap_obj j (((diagram_const X) _f g) x)) =>	    {| Cone.legs := DiagramMap_obj; Cone.legs_comm := w |}) X0	     (DiagramMap_comm X0))	  o (fun X0 : Cone X D =>	     (fun (legs : forall i : G, X -> D i)	        (w : forall (i j : G) (g : G i j),	             (fun x : X => (D _f g) (legs i x)) == legs j) =>	      {| DiagramMap_obj := legs; DiagramMap_comm := w |}) X0	       (Cone.legs_comm X0)) == idmap		goal 2 (ID 84) is:	 (fun X0 : Cone X D =>	  (fun (legs : forall i : G, X -> D i)	     (w : forall (i j : G) (g : G i j),	          (fun x : X => (D _f g) (legs i x)) == legs j) =>	   {| DiagramMap_obj := legs; DiagramMap_comm := w |}) X0 	    (Cone.legs_comm X0))	 o (fun X0 : DiagramMap (diagram_const X) D =>	    (fun (DiagramMap_obj : forall i : G, diagram_const X i -> D i)	       (w : forall (i j : G) (g : G i j) (x : diagram_const X i),	            (D _f g) (DiagramMap_obj i x) =	            DiagramMap_obj j (((diagram_const X) _f g) x)) =>	     {| Cone.legs := DiagramMap_obj; Cone.legs_comm := w |}) X0	      (DiagramMap_comm X0)) == idmap	";
             responses[i]=data;
           
 
             i = 59;
-            data = "2 subgoals (ID 113)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  legs : forall i : G, X -> D i	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : X => (D _f g) (legs i x)) == legs j	  ============================	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} =	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |}		subgoal 2 (ID 119) is:	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} =	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	";
+            data = "2 goals (ID 113)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  legs : forall i : G, X -> D i	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : X => (D _f g) (legs i x)) == legs j	  ============================	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} =	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |}		goal 2 (ID 119) is:	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} =	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	";
             responses[i]=data;
           
 
             i = 60;
-            data = "3 subgoals (ID 147)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  legs : forall i : G, X -> D i	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : X => (D _f g) (legs i x)) == legs j	  ============================	  forall i : G,	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i ==	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i		subgoal 2 (ID 149) is:	 forall (i j : G) (g : G i j) (x : X),	 Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x @	 ?path_legs j x =	 ap (D _f g) (?path_legs i x) @	 Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x	subgoal 3 (ID 119) is:	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} =	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	";
+            data = "3 goals (ID 147)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  legs : forall i : G, X -> D i	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : X => (D _f g) (legs i x)) == legs j	  ============================	  forall i : G,	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i ==	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i		goal 2 (ID 149) is:	 forall (i j : G) (g : G i j) (x : X),	 Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x @	 ?path_legs j x =	 ap (D _f g) (?path_legs i x) @	 Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x	goal 3 (ID 119) is:	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} =	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	";
             responses[i]=data;
           
 
             i = 61;
-            data = "4 subgoals (ID 147)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  legs : forall i : G, X -> D i	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : X => (D _f g) (legs i x)) == legs j	  ============================	  forall i : G,	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i ==	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i		subgoal 2 (ID 149) is:	 forall (i j : G) (g : G i j) (x : X),	 Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x @	 ?path_legs j x =	 ap (D _f g) (?path_legs i x) @	 Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x	subgoal 3 (ID 171) is:	 forall i : G,	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} i ==	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} i	subgoal 4 (ID 173) is:	 forall (i j : G) (g : G i j) (x : diagram_const X i),	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x @ ?h_obj j (((diagram_const X) _f g) x) =	 ap (D _f g) (?h_obj i x) @	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x	";
+            data = "4 goals (ID 147)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  legs : forall i : G, X -> D i	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : X => (D _f g) (legs i x)) == legs j	  ============================	  forall i : G,	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i ==	  {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i		goal 2 (ID 149) is:	 forall (i j : G) (g : G i j) (x : X),	 Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x @	 ?path_legs j x =	 ap (D _f g) (?path_legs i x) @	 Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x	goal 3 (ID 171) is:	 forall i : G,	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} i ==	 {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |} i	goal 4 (ID 173) is:	 forall (i j : G) (g : G i j) (x : diagram_const X i),	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x @ ?h_obj j (((diagram_const X) _f g) x) =	 ap (D _f g) (?h_obj i x) @	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x	";
             responses[i]=data;
           
 
             i = 62;
-            data = "2 subgoals (ID 149)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  legs : forall i : G, X -> D i	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : X => (D _f g) (legs i x)) == legs j	  ============================	  forall (i j : G) (g : G i j) (x : X),	  Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x @	  (fun (i0 : G) (x0 : X) => 1) j x =	  ap (D _f g) ((fun (i0 : G) (x0 : X) => 1) i x) @	  Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x		subgoal 2 (ID 173) is:	 forall (i j : G) (g : G i j) (x : diagram_const X i),	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x @ (fun (i0 : G) (x0 : X) => 1) j (((diagram_const X) _f g) x) =	 ap (D _f g) ((fun (i0 : G) (x0 : X) => 1) i x) @	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x	";
+            data = "2 goals (ID 149)	  	  G : Graph	  H : Funext	  X : Type	  D : Diagram G	  legs : forall i : G, X -> D i	  legs_comm : forall (i j : G) (g : G i j),	              (fun x : X => (D _f g) (legs i x)) == legs j	  ============================	  forall (i j : G) (g : G i j) (x : X),	  Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x @	  (fun (i0 : G) (x0 : X) => 1) j x =	  ap (D _f g) ((fun (i0 : G) (x0 : X) => 1) i x) @	  Cone.legs_comm {| Cone.legs := legs; Cone.legs_comm := legs_comm |} i j g x		goal 2 (ID 173) is:	 forall (i j : G) (g : G i j) (x : diagram_const X i),	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x @ (fun (i0 : G) (x0 : X) => 1) j (((diagram_const X) _f g) x) =	 ap (D _f g) ((fun (i0 : G) (x0 : X) => 1) i x) @	 Diagram.DiagramMap_comm	   {| DiagramMap_obj := DiagramMap_obj; DiagramMap_comm := DiagramMap_comm |}	   g x	";
             responses[i]=data;
           
 
             i = 63;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 

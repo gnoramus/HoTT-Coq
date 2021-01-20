@@ -153,7 +153,7 @@
           
 
             i = 27;
-            data = "1 subgoal (ID 31)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  int_iter f (int_succ n) a = f (int_iter f n a)	";
+            data = "1 goal (ID 31)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  int_iter f (int_succ n) a = f (int_iter f n a)	";
             responses[i]=data;
           
 
@@ -163,77 +163,77 @@
           
 
             i = 29;
-            data = "2 subgoals (ID 40)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)		subgoal 2 (ID 42) is:	 int_iter f (int_succ (pos n)) a = f (int_iter f (pos n) a)	";
+            data = "2 goals (ID 40)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)		goal 2 (ID 42) is:	 int_iter f (int_succ (pos n)) a = f (int_iter f (pos n) a)	";
             responses[i]=data;
           
 
             i = 30;
-            data = "1 subgoal (ID 40)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	1 subgoal (ID 44)	  	  A : Type	  ============================	  forall (n : Pos) (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	";
+            data = "1 goal (ID 40)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	1 goal (ID 44)	  	  A : Type	  ============================	  forall (n : Pos) (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	";
             responses[i]=data;
           
 
             i = 31;
-            data = "2 subgoals (ID 54)	  	  A : Type	  ============================	  (fun p : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p)) a = f (int_iter f (neg p) a)) 1%pos		subgoal 2 (ID 56) is:	 forall p : Pos,	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) p ->	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) 	   (pos_succ p)	";
+            data = "2 goals (ID 54)	  	  A : Type	  ============================	  (fun p : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p)) a = f (int_iter f (neg p) a)) 1%pos		goal 2 (ID 56) is:	 forall p : Pos,	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) p ->	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) 	   (pos_succ p)	";
             responses[i]=data;
           
 
             i = 32;
-            data = "1 subgoal (ID 54)	  	  A : Type	  ============================	  (fun p : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p)) a = f (int_iter f (neg p) a)) 1%pos	1 subgoal (ID 60)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (-1)%int) a = f (int_iter f (-1)%int a)	";
+            data = "1 goal (ID 54)	  	  A : Type	  ============================	  (fun p : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p)) a = f (int_iter f (neg p) a)) 1%pos	1 goal (ID 60)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (-1)%int) a = f (int_iter f (-1)%int a)	";
             responses[i]=data;
           
 
             i = 33;
-            data = "1 subgoal (ID 70)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  f (int_iter f (-1)%int a) = int_iter f (int_succ (-1)%int) a	";
+            data = "1 goal (ID 70)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  f (int_iter f (-1)%int a) = int_iter f (int_succ (-1)%int) a	";
             responses[i]=data;
           
 
             i = 34;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals		subgoal 1 (ID 56) is:	 forall p : Pos,	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) p ->	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) 	   (pos_succ p)	subgoal 2 (ID 42) is:	 int_iter f (int_succ (pos n)) a = f (int_iter f (pos n) a)	1 subgoal (ID 56)	  	  A : Type	  ============================	  forall p : Pos,	  (fun p0 : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) p ->	  (fun p0 : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) 	    (pos_succ p)	1 subgoal (ID 78)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (neg (pos_succ n))) a =	  f (int_iter f (neg (pos_succ n)) a)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 56) is:	 forall p : Pos,	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) p ->	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) 	   (pos_succ p)	goal 2 (ID 42) is:	 int_iter f (int_succ (pos n)) a = f (int_iter f (pos n) a)	1 goal (ID 56)	  	  A : Type	  ============================	  forall p : Pos,	  (fun p0 : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) p ->	  (fun p0 : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p0)) a = f (int_iter f (neg p0) a)) 	    (pos_succ p)	1 goal (ID 78)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (neg (pos_succ n))) a =	  f (int_iter f (neg (pos_succ n)) a)	";
             responses[i]=data;
           
 
             i = 35;
-            data = "2 focused subgoals	(shelved: 1) (ID 103)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_succ (neg (pos_succ n)) = ?Goal0		subgoal 2 (ID 104) is:	 int_iter f ?Goal0 a = f (int_iter f (neg (pos_succ n)) a)	";
+            data = "2 focused goals	(shelved: 1) (ID 103)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_succ (neg (pos_succ n)) = ?Goal0		goal 2 (ID 104) is:	 int_iter f ?Goal0 a = f (int_iter f (neg (pos_succ n)) a)	";
             responses[i]=data;
           
 
             i = 36;
-            data = "2 focused subgoals	(shelved: 1) (ID 105)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_succ (int_pred (neg n)) = ?Goal0		subgoal 2 (ID 104) is:	 int_iter f ?Goal0 a = f (int_iter f (neg (pos_succ n)) a)	";
+            data = "2 focused goals	(shelved: 1) (ID 105)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_succ (int_pred (neg n)) = ?Goal0		goal 2 (ID 104) is:	 int_iter f ?Goal0 a = f (int_iter f (neg (pos_succ n)) a)	";
             responses[i]=data;
           
 
             i = 37;
-            data = "1 subgoal (ID 104)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (neg n) a = f (int_iter f (neg (pos_succ n)) a)	";
+            data = "1 goal (ID 104)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (neg n) a = f (int_iter f (neg (pos_succ n)) a)	";
             responses[i]=data;
           
 
             i = 38;
-            data = "1 subgoal (ID 113)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  f^-1 (int_iter f (neg n) a) = int_iter f (neg (pos_succ n)) a	";
+            data = "1 goal (ID 113)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  f^-1 (int_iter f (neg n) a) = int_iter f (neg (pos_succ n)) a	";
             responses[i]=data;
           
 
             i = 39;
-            data = "1 subgoal (ID 124)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  pos_iter f^-1 (pos_succ n) a = f^-1 (pos_iter f^-1 n a)	";
+            data = "1 goal (ID 124)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = f (int_iter f (neg n) a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  pos_iter f^-1 (pos_succ n) a = f^-1 (pos_iter f^-1 n a)	";
             responses[i]=data;
           
 
             i = 40;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 42) is:	 int_iter f (int_succ (pos n)) a = f (int_iter f (pos n) a)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 42) is:	 int_iter f (int_succ (pos n)) a = f (int_iter f (pos n) a)	";
             responses[i]=data;
           
 
             i = 41;
-            data = "1 subgoal (ID 42)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (pos n)) a = f (int_iter f (pos n) a)	1 subgoal (ID 141)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f (n + 1)%pos a = f (pos_iter f n a)	";
+            data = "1 goal (ID 42)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (pos n)) a = f (int_iter f (pos n) a)	1 goal (ID 141)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f (n + 1)%pos a = f (pos_iter f n a)	";
             responses[i]=data;
           
 
             i = 42;
-            data = "1 subgoal (ID 142)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f (pos_succ n) a = f (pos_iter f n a)	";
+            data = "1 goal (ID 142)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f (pos_succ n) a = f (pos_iter f n a)	";
             responses[i]=data;
           
 
             i = 43;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 subgoal (ID 48)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  int_iter f (int_succ n) a = int_iter f n (f a)	";
+            data = "1 goal (ID 48)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  int_iter f (int_succ n) a = int_iter f n (f a)	";
             responses[i]=data;
           
 
@@ -253,82 +253,82 @@
           
 
             i = 47;
-            data = "2 subgoals (ID 57)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)		subgoal 2 (ID 59) is:	 int_iter f (int_succ (pos n)) a = int_iter f (pos n) (f a)	";
+            data = "2 goals (ID 57)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)		goal 2 (ID 59) is:	 int_iter f (int_succ (pos n)) a = int_iter f (pos n) (f a)	";
             responses[i]=data;
           
 
             i = 48;
-            data = "1 subgoal (ID 57)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	1 subgoal (ID 61)	  	  A : Type	  ============================	  forall (n : Pos) (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	";
+            data = "1 goal (ID 57)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	1 goal (ID 61)	  	  A : Type	  ============================	  forall (n : Pos) (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	";
             responses[i]=data;
           
 
             i = 49;
-            data = "2 subgoals (ID 71)	  	  A : Type	  ============================	  (fun p : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p)) a = int_iter f (neg p) (f a)) 1%pos		subgoal 2 (ID 73) is:	 forall p : Pos,	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) p ->	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) 	   (pos_succ p)	";
+            data = "2 goals (ID 71)	  	  A : Type	  ============================	  (fun p : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p)) a = int_iter f (neg p) (f a)) 1%pos		goal 2 (ID 73) is:	 forall p : Pos,	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) p ->	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) 	   (pos_succ p)	";
             responses[i]=data;
           
 
             i = 50;
-            data = "1 subgoal (ID 71)	  	  A : Type	  ============================	  (fun p : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p)) a = int_iter f (neg p) (f a)) 1%pos	1 subgoal (ID 77)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (-1)%int) a = int_iter f (-1)%int (f a)	";
+            data = "1 goal (ID 71)	  	  A : Type	  ============================	  (fun p : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p)) a = int_iter f (neg p) (f a)) 1%pos	1 goal (ID 77)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (-1)%int) a = int_iter f (-1)%int (f a)	";
             responses[i]=data;
           
 
             i = 51;
-            data = "1 subgoal (ID 87)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (-1)%int (f a) = int_iter f (int_succ (-1)%int) a	";
+            data = "1 goal (ID 87)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (-1)%int (f a) = int_iter f (int_succ (-1)%int) a	";
             responses[i]=data;
           
 
             i = 52;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 subgoals		subgoal 1 (ID 73) is:	 forall p : Pos,	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) p ->	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) 	   (pos_succ p)	subgoal 2 (ID 59) is:	 int_iter f (int_succ (pos n)) a = int_iter f (pos n) (f a)	1 subgoal (ID 73)	  	  A : Type	  ============================	  forall p : Pos,	  (fun p0 : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) p ->	  (fun p0 : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) 	    (pos_succ p)	1 subgoal (ID 95)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (neg (pos_succ n))) a =	  int_iter f (neg (pos_succ n)) (f a)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 73) is:	 forall p : Pos,	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) p ->	 (fun p0 : Pos =>	  forall (f : A -> A) (H : IsEquiv f) (a : A),	  int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) 	   (pos_succ p)	goal 2 (ID 59) is:	 int_iter f (int_succ (pos n)) a = int_iter f (pos n) (f a)	1 goal (ID 73)	  	  A : Type	  ============================	  forall p : Pos,	  (fun p0 : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) p ->	  (fun p0 : Pos =>	   forall (f : A -> A) (H : IsEquiv f) (a : A),	   int_iter f (int_succ (neg p0)) a = int_iter f (neg p0) (f a)) 	    (pos_succ p)	1 goal (ID 95)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (neg (pos_succ n))) a =	  int_iter f (neg (pos_succ n)) (f a)	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 subgoal (ID 96)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (int_pred (neg n))) a =	  int_iter f (int_pred (neg n)) (f a)	";
+            data = "1 goal (ID 96)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (int_succ (int_pred (neg n))) a =	  int_iter f (int_pred (neg n)) (f a)	";
             responses[i]=data;
           
 
             i = 54;
-            data = "2 focused subgoals	(shelved: 1) (ID 121)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_succ (int_pred (neg n)) = ?Goal0		subgoal 2 (ID 122) is:	 int_iter f ?Goal0 a = int_iter f (int_pred (neg n)) (f a)	";
+            data = "2 focused goals	(shelved: 1) (ID 121)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_succ (int_pred (neg n)) = ?Goal0		goal 2 (ID 122) is:	 int_iter f ?Goal0 a = int_iter f (int_pred (neg n)) (f a)	";
             responses[i]=data;
           
 
             i = 55;
-            data = "1 subgoal (ID 122)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (neg n) a = int_iter f (int_pred (neg n)) (f a)	";
+            data = "1 goal (ID 122)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  int_iter f (neg n) a = int_iter f (int_pred (neg n)) (f a)	";
             responses[i]=data;
           
 
             i = 56;
-            data = "1 subgoal (ID 127)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  pos_iter f^-1 n a = pos_iter f^-1 (pos_succ n) (f a)	";
+            data = "1 goal (ID 127)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  pos_iter f^-1 n a = pos_iter f^-1 (pos_succ n) (f a)	";
             responses[i]=data;
           
 
             i = 57;
-            data = "1 subgoal (ID 129)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  pos_iter f^-1 n a = pos_iter f^-1 n (f^-1 (f a))	";
+            data = "1 goal (ID 129)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  pos_iter f^-1 n a = pos_iter f^-1 n (f^-1 (f a))	";
             responses[i]=data;
           
 
             i = 58;
-            data = "1 subgoal (ID 135)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  pos_iter f^-1 n a = pos_iter f^-1 n a	";
+            data = "1 goal (ID 135)	  	  A : Type	  n : Pos	  p : forall (f : A -> A) (H : IsEquiv f) (a : A),	      int_iter f (int_succ (neg n)) a = int_iter f (neg n) (f a)	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  pos_iter f^-1 n a = pos_iter f^-1 n a	";
             responses[i]=data;
           
 
             i = 59;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 59) is:	 int_iter f (int_succ (pos n)) a = int_iter f (pos n) (f a)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 59) is:	 int_iter f (int_succ (pos n)) a = int_iter f (pos n) (f a)	";
             responses[i]=data;
           
 
             i = 60;
-            data = "1 subgoal (ID 59)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (pos n)) a = int_iter f (pos n) (f a)	1 subgoal (ID 139)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f (n + 1)%pos a = pos_iter f n (f a)	";
+            data = "1 goal (ID 59)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_succ (pos n)) a = int_iter f (pos n) (f a)	1 goal (ID 139)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f (n + 1)%pos a = pos_iter f n (f a)	";
             responses[i]=data;
           
 
             i = 61;
-            data = "1 subgoal (ID 140)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f (pos_succ n) a = pos_iter f n (f a)	";
+            data = "1 goal (ID 140)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f (pos_succ n) a = pos_iter f n (f a)	";
             responses[i]=data;
           
 
             i = 62;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -338,7 +338,7 @@
           
 
             i = 64;
-            data = "1 subgoal (ID 71)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  int_iter f (int_pred n) a = f^-1 (int_iter f n a)	";
+            data = "1 goal (ID 71)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  int_iter f (int_pred n) a = f^-1 (int_iter f n a)	";
             responses[i]=data;
           
 
@@ -348,72 +348,72 @@
           
 
             i = 66;
-            data = "2 subgoals (ID 80)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_pred (neg n)) a = f^-1 (int_iter f (neg n) a)		subgoal 2 (ID 82) is:	 int_iter f (int_pred (pos n)) a = f^-1 (int_iter f (pos n) a)	";
+            data = "2 goals (ID 80)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_pred (neg n)) a = f^-1 (int_iter f (neg n) a)		goal 2 (ID 82) is:	 int_iter f (int_pred (pos n)) a = f^-1 (int_iter f (pos n) a)	";
             responses[i]=data;
           
 
             i = 67;
-            data = "1 subgoal (ID 80)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_pred (neg n)) a = f^-1 (int_iter f (neg n) a)	1 subgoal (ID 84)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f^-1 (pos_succ n) a = f^-1 (pos_iter f^-1 n a)	";
+            data = "1 goal (ID 80)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_pred (neg n)) a = f^-1 (int_iter f (neg n) a)	1 goal (ID 84)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  pos_iter f^-1 (pos_succ n) a = f^-1 (pos_iter f^-1 n a)	";
             responses[i]=data;
           
 
             i = 68;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 subgoal		subgoal 1 (ID 82) is:	 int_iter f (int_pred (pos n)) a = f^-1 (int_iter f (pos n) a)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 82) is:	 int_iter f (int_pred (pos n)) a = f^-1 (int_iter f (pos n) a)	";
             responses[i]=data;
           
 
             i = 69;
-            data = "1 subgoal (ID 82)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_pred (pos n)) a = f^-1 (int_iter f (pos n) a)	1 subgoal (ID 89)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  forall n : Pos,	  int_iter f (int_pred (pos n)) a = f^-1 (int_iter f (pos n) a)	";
+            data = "1 goal (ID 82)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  a : A	  ============================	  int_iter f (int_pred (pos n)) a = f^-1 (int_iter f (pos n) a)	1 goal (ID 89)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  forall n : Pos,	  int_iter f (int_pred (pos n)) a = f^-1 (int_iter f (pos n) a)	";
             responses[i]=data;
           
 
             i = 70;
-            data = "2 subgoals (ID 99)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  (fun p : Pos =>	   int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)) 1%pos		subgoal 2 (ID 101) is:	 forall p : Pos,	 (fun p0 : Pos =>	  int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a)) p ->	 (fun p0 : Pos =>	  int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a))	   (pos_succ p)	";
+            data = "2 goals (ID 99)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  (fun p : Pos =>	   int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)) 1%pos		goal 2 (ID 101) is:	 forall p : Pos,	 (fun p0 : Pos =>	  int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a)) p ->	 (fun p0 : Pos =>	  int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a))	   (pos_succ p)	";
             responses[i]=data;
           
 
             i = 71;
-            data = "1 subgoal (ID 99)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  (fun p : Pos =>	   int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)) 1%pos	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 subgoal		subgoal 1 (ID 101) is:	 forall p : Pos,	 (fun p0 : Pos =>	  int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a)) p ->	 (fun p0 : Pos =>	  int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a))	   (pos_succ p)	";
+            data = "1 goal (ID 99)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  (fun p : Pos =>	   int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)) 1%pos	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 101) is:	 forall p : Pos,	 (fun p0 : Pos =>	  int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a)) p ->	 (fun p0 : Pos =>	  int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a))	   (pos_succ p)	";
             responses[i]=data;
           
 
             i = 72;
-            data = "1 subgoal (ID 101)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  forall p : Pos,	  (fun p0 : Pos =>	   int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a)) p ->	  (fun p0 : Pos =>	   int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a))	    (pos_succ p)	1 subgoal (ID 117)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (int_pred (pos (pos_succ p))) a =	  f^-1 (int_iter f (pos (pos_succ p)) a)	";
+            data = "1 goal (ID 101)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  ============================	  forall p : Pos,	  (fun p0 : Pos =>	   int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a)) p ->	  (fun p0 : Pos =>	   int_iter f (int_pred (pos p0)) a = f^-1 (int_iter f (pos p0) a))	    (pos_succ p)	1 goal (ID 117)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (int_pred (pos (pos_succ p))) a =	  f^-1 (int_iter f (pos (pos_succ p)) a)	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 subgoal (ID 118)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (int_pred (pos (p + 1)%pos)) a =	  f^-1 (int_iter f (pos (p + 1)%pos) a)	";
+            data = "1 goal (ID 118)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (int_pred (pos (p + 1)%pos)) a =	  f^-1 (int_iter f (pos (p + 1)%pos) a)	";
             responses[i]=data;
           
 
             i = 74;
-            data = "1 subgoal (ID 119)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (int_pred (int_succ (pos p))) a =	  f^-1 (int_iter f (pos (p + 1)%pos) a)	";
+            data = "1 goal (ID 119)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (int_pred (int_succ (pos p))) a =	  f^-1 (int_iter f (pos (p + 1)%pos) a)	";
             responses[i]=data;
           
 
             i = 75;
-            data = "1 subgoal (ID 120)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (pos p) a = f^-1 (int_iter f (pos (p + 1)%pos) a)	";
+            data = "1 goal (ID 120)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (pos p) a = f^-1 (int_iter f (pos (p + 1)%pos) a)	";
             responses[i]=data;
           
 
             i = 76;
-            data = "1 subgoal (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (pos p) a = f^-1 (int_iter f (int_succ (pos p)) a)	";
+            data = "1 goal (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (pos p) a = f^-1 (int_iter f (int_succ (pos p)) a)	";
             responses[i]=data;
           
 
             i = 77;
-            data = "1 subgoal (ID 123)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (pos p) a = f^-1 (f (int_iter f (pos p) a))	";
+            data = "1 goal (ID 123)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  int_iter f (pos p) a = f^-1 (f (int_iter f (pos p) a))	";
             responses[i]=data;
           
 
             i = 78;
-            data = "1 subgoal (ID 134)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  f^-1 (f (int_iter f (pos p) a)) = int_iter f (pos p) a	";
+            data = "1 goal (ID 134)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  a : A	  p : Pos	  q : int_iter f (int_pred (pos p)) a = f^-1 (int_iter f (pos p) a)	  ============================	  f^-1 (f (int_iter f (pos p) a)) = int_iter f (pos p) a	";
             responses[i]=data;
           
 
             i = 79;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -423,7 +423,7 @@
           
 
             i = 81;
-            data = "1 subgoal (ID 94)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  int_iter f (int_pred n) a = int_iter f n (f^-1 a)	";
+            data = "1 goal (ID 94)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Int	  a : A	  ============================	  int_iter f (int_pred n) a = int_iter f n (f^-1 a)	";
             responses[i]=data;
           
 
@@ -433,67 +433,67 @@
           
 
             i = 83;
-            data = "1 subgoal (ID 96)	  	  A : Type	  ============================	  forall (f : A -> A) (H : IsEquiv f) (n : Int) (a : A),	  int_iter f (int_pred n) a = int_iter f n (f^-1 a)	";
+            data = "1 goal (ID 96)	  	  A : Type	  ============================	  forall (f : A -> A) (H : IsEquiv f) (n : Int) (a : A),	  int_iter f (int_pred n) a = int_iter f n (f^-1 a)	";
             responses[i]=data;
           
 
             i = 84;
-            data = "3 subgoals (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  ============================	  forall a : A,	  int_iter f (int_pred (neg (pos_succ n))) a =	  int_iter f (neg (pos_succ n)) (f^-1 a)		subgoal 2 (ID 128) is:	 forall a : A, int_iter f (int_pred 1%int) a = int_iter f 1%int (f^-1 a)	subgoal 3 (ID 131) is:	 forall a : A,	 int_iter f (int_pred (pos (pos_succ n))) a =	 int_iter f (pos (pos_succ n)) (f^-1 a)	";
+            data = "3 goals (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  ============================	  forall a : A,	  int_iter f (int_pred (neg (pos_succ n))) a =	  int_iter f (neg (pos_succ n)) (f^-1 a)		goal 2 (ID 128) is:	 forall a : A, int_iter f (int_pred 1%int) a = int_iter f 1%int (f^-1 a)	goal 3 (ID 131) is:	 forall a : A,	 int_iter f (int_pred (pos (pos_succ n))) a =	 int_iter f (pos (pos_succ n)) (f^-1 a)	";
             responses[i]=data;
           
 
             i = 85;
-            data = "2 subgoals (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  ============================	  forall a : A,	  int_iter f (int_pred (neg (pos_succ n))) a =	  int_iter f (neg (pos_succ n)) (f^-1 a)		subgoal 2 (ID 131) is:	 forall a : A,	 int_iter f (int_pred (pos (pos_succ n))) a =	 int_iter f (pos (pos_succ n)) (f^-1 a)	";
+            data = "2 goals (ID 121)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  ============================	  forall a : A,	  int_iter f (int_pred (neg (pos_succ n))) a =	  int_iter f (neg (pos_succ n)) (f^-1 a)		goal 2 (ID 131) is:	 forall a : A,	 int_iter f (int_pred (pos (pos_succ n))) a =	 int_iter f (pos (pos_succ n)) (f^-1 a)	";
             responses[i]=data;
           
 
             i = 86;
-            data = "2 subgoals (ID 146)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  ============================	  forall a : A,	  int_iter f (int_pred (neg (n + 1)%pos)) a =	  int_iter f (neg (n + 1)%pos) (f^-1 a)		subgoal 2 (ID 147) is:	 forall a : A,	 int_iter f (int_pred (pos (n + 1)%pos)) a =	 int_iter f (pos (n + 1)%pos) (f^-1 a)	";
+            data = "2 goals (ID 146)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  ============================	  forall a : A,	  int_iter f (int_pred (neg (n + 1)%pos)) a =	  int_iter f (neg (n + 1)%pos) (f^-1 a)		goal 2 (ID 147) is:	 forall a : A,	 int_iter f (int_pred (pos (n + 1)%pos)) a =	 int_iter f (pos (n + 1)%pos) (f^-1 a)	";
             responses[i]=data;
           
 
             i = 87;
-            data = "2 subgoals (ID 148)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  a : A	  ============================	  int_iter f (int_pred (neg (n + 1)%pos)) a =	  int_iter f (neg (n + 1)%pos) (f^-1 a)		subgoal 2 (ID 149) is:	 int_iter f (int_pred (pos (n + 1)%pos)) a =	 int_iter f (pos (n + 1)%pos) (f^-1 a)	";
+            data = "2 goals (ID 148)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  a : A	  ============================	  int_iter f (int_pred (neg (n + 1)%pos)) a =	  int_iter f (neg (n + 1)%pos) (f^-1 a)		goal 2 (ID 149) is:	 int_iter f (int_pred (pos (n + 1)%pos)) a =	 int_iter f (pos (n + 1)%pos) (f^-1 a)	";
             responses[i]=data;
           
 
             i = 88;
-            data = "2 subgoals (ID 150)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  a : A	  ============================	  int_iter f (int_pred (int_pred (neg n))) a =	  int_iter f (int_pred (neg n)) (f^-1 a)		subgoal 2 (ID 149) is:	 int_iter f (int_pred (pos (n + 1)%pos)) a =	 int_iter f (pos (n + 1)%pos) (f^-1 a)	";
+            data = "2 goals (ID 150)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  a : A	  ============================	  int_iter f (int_pred (int_pred (neg n))) a =	  int_iter f (int_pred (neg n)) (f^-1 a)		goal 2 (ID 149) is:	 int_iter f (int_pred (pos (n + 1)%pos)) a =	 int_iter f (pos (n + 1)%pos) (f^-1 a)	";
             responses[i]=data;
           
 
             i = 89;
-            data = "2 subgoals (ID 150)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  a : A	  ============================	  int_iter f (int_pred (int_pred (neg n))) a =	  int_iter f (int_pred (neg n)) (f^-1 a)		subgoal 2 (ID 151) is:	 int_iter f (int_pred (int_succ (pos n))) a =	 int_iter f (int_succ (pos n)) (f^-1 a)	";
+            data = "2 goals (ID 150)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  a : A	  ============================	  int_iter f (int_pred (int_pred (neg n))) a =	  int_iter f (int_pred (neg n)) (f^-1 a)		goal 2 (ID 151) is:	 int_iter f (int_pred (int_succ (pos n))) a =	 int_iter f (int_succ (pos n)) (f^-1 a)	";
             responses[i]=data;
           
 
             i = 90;
-            data = "2 subgoals (ID 153)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  a : A	  ============================	  int_iter f (neg (pos_succ (pos_succ n))) a =	  int_iter f (neg (pos_succ n)) (f^-1 a)		subgoal 2 (ID 151) is:	 int_iter f (int_pred (int_succ (pos n))) a =	 int_iter f (int_succ (pos n)) (f^-1 a)	";
+            data = "2 goals (ID 153)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (neg n)) a = int_iter f (neg n) (f^-1 a)	  a : A	  ============================	  int_iter f (neg (pos_succ (pos_succ n))) a =	  int_iter f (neg (pos_succ n)) (f^-1 a)		goal 2 (ID 151) is:	 int_iter f (int_pred (int_succ (pos n))) a =	 int_iter f (int_succ (pos n)) (f^-1 a)	";
             responses[i]=data;
           
 
             i = 91;
-            data = "1 subgoal (ID 151)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (pos n)) a = int_iter f (pos n) (f^-1 a)	  a : A	  ============================	  int_iter f (int_pred (int_succ (pos n))) a =	  int_iter f (int_succ (pos n)) (f^-1 a)	";
+            data = "1 goal (ID 151)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (pos n)) a = int_iter f (pos n) (f^-1 a)	  a : A	  ============================	  int_iter f (int_pred (int_succ (pos n))) a =	  int_iter f (int_succ (pos n)) (f^-1 a)	";
             responses[i]=data;
           
 
             i = 92;
-            data = "1 subgoal (ID 156)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (pos n)) a = int_iter f (pos n) (f^-1 a)	  a : A	  ============================	  int_iter f (pos n) a = int_iter f (int_succ (pos n)) (f^-1 a)	";
+            data = "1 goal (ID 156)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (pos n)) a = int_iter f (pos n) (f^-1 a)	  a : A	  ============================	  int_iter f (pos n) a = int_iter f (int_succ (pos n)) (f^-1 a)	";
             responses[i]=data;
           
 
             i = 93;
-            data = "1 subgoal (ID 158)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (pos n)) a = int_iter f (pos n) (f^-1 a)	  a : A	  ============================	  int_iter f (pos n) a = int_iter f (pos n) (f (f^-1 a))	";
+            data = "1 goal (ID 158)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (pos n)) a = int_iter f (pos n) (f^-1 a)	  a : A	  ============================	  int_iter f (pos n) a = int_iter f (pos n) (f (f^-1 a))	";
             responses[i]=data;
           
 
             i = 94;
-            data = "1 subgoal (ID 164)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (pos n)) a = int_iter f (pos n) (f^-1 a)	  a : A	  ============================	  int_iter f (pos n) a = int_iter f (pos n) a	";
+            data = "1 goal (ID 164)	  	  A : Type	  f : A -> A	  H : IsEquiv f	  n : Pos	  nH : forall a : A,	       int_iter f (int_pred (pos n)) a = int_iter f (pos n) (f^-1 a)	  a : A	  ============================	  int_iter f (pos n) a = int_iter f (pos n) a	";
             responses[i]=data;
           
 
             i = 95;
-            data = "No more subgoals.	";
+            data = "No more goals.	";
             responses[i]=data;
           
 

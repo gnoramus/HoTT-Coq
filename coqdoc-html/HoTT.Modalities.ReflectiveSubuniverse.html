@@ -800,7 +800,8 @@ An equivalent formulation of repleteness is that a type lies in the subuniverse 
 &nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#inO_equiv_inO"><span class="id" title="definition">inO_equiv_inO</span></a> (<a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Reflective_Subuniverse.O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#T:243"><span class="id" title="variable">T</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#to"><span class="id" title="method">to</span></a> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Reflective_Subuniverse.O"><span class="id" title="variable">O</span></a> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#T:243"><span class="id" title="variable">T</span></a><a class="idref" href="HoTT.Basics.Overture.html#f3f2d22838b594a6e5dbfb541ecf90ae"><span class="id" title="notation">)^-1</span></a>.<br/>
 
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Hint Immediate</span> <span class="id" title="var">inO_isequiv_to_O</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;#[<span class="id" title="var">local</span>]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Immediate</span> <span class="id" title="var">inO_isequiv_to_O</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
 
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Definition</span> <a id="inO_iff_isequiv_to_O" class="idref" href="#inO_iff_isequiv_to_O"><span class="id" title="definition">inO_iff_isequiv_to_O</span></a> (<a id="T:244" class="idref" href="#T:244"><span class="id" title="binder">T</span></a>:<span class="id" title="keyword">Type</span>)<br/>
@@ -1342,7 +1343,8 @@ TODO: Why doesn't Coq find this instance?
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Hint Immediate</span> <span class="id" title="var">inO_unsigma</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;#[<span class="id" title="var">local</span>]<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Immediate</span> <span class="id" title="var">inO_unsigma</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
 
 <br/>
 </div>
@@ -2596,7 +2598,8 @@ The constant map to <span class="inlinecode"><a class="idref" href="HoTT.Basics.
 &nbsp;&nbsp;<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Hint Immediate</span> <span class="id" title="var">isconnected_conn_map_to_unit</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
+&nbsp;&nbsp;#[<span class="id" title="var">local</span>]<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Immediate</span> <span class="id" title="var">isconnected_conn_map_to_unit</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
 
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Global Instance</span> <a id="conn_map_to_unit_isconnected" class="idref" href="#conn_map_to_unit_isconnected"><span class="id" title="instance">conn_map_to_unit_isconnected</span></a> {<a id="A:866" class="idref" href="#A:866"><span class="id" title="binder">A</span></a> : <span class="id" title="keyword">Type</span>}<br/>
@@ -3090,6 +3093,11 @@ And similar properties for connected maps
 &nbsp;&nbsp;- <span class="id" title="tactic">pose</span> (<a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#inO_leq"><span class="id" title="definition">inO_leq</span></a> <span class="id" title="var">O'</span> (<a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#Sep"><span class="id" title="definition">Sep</span></a> <span class="id" title="var">O</span>));<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intros</span>; <span class="id" title="var">rapply</span> <a class="idref" href="HoTT.Modalities.ReflectiveSubuniverse.html#ooextendable_conn_map_inO"><span class="id" title="definition">ooextendable_conn_map_inO</span></a>.<br/>
 <span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+#[<span class="id" title="var">export</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Immediate</span> <span class="id" title="var">inO_isequiv_to_O</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
+#[<span class="id" title="var">export</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Immediate</span> <span class="id" title="var">inO_unsigma</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
+#[<span class="id" title="var">export</span>] <span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Immediate</span> <span class="id" title="var">isconnected_conn_map_to_unit</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
 </div>
 </div>
 

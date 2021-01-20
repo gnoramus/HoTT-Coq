@@ -252,7 +252,8 @@ Having both of these as <span class="inlinecode"><span class="id" title="keyword
 Instead, we make the latter an immediate instance, but with high cost (i.e. low priority) so that it doesn't override the ordinary lemmas about truncation.  Unfortunately, <span class="inlinecode"><span class="id" title="keyword">Hint</span></span> <span class="inlinecode"><span class="id" title="keyword">Immediate</span></span> doesn't allow specifying a cost, so we use <span class="inlinecode"><span class="id" title="keyword">Hint</span></span> <span class="inlinecode"><span class="id" title="keyword">Extern</span></span> instead.  Hint Immediate istrunc_inO_tr : typeclass_instances.  See https://github.com/coq/coq/issues/11697 
 </div>
 <div class="code">
-<span class="id" title="keyword">Hint Extern</span> 1000 (<a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="class">IsTrunc</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>) ⇒ <span class="id" title="tactic">simple</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Truncations.Core.html#istrunc_inO_tr"><span class="id" title="definition">istrunc_inO_tr</span></a>; <span class="id" title="tactic">solve</span> [ <span class="id" title="tactic">trivial</span> ] : <span class="id" title="var">typeclass_instances</span>.<br/>
+#[<span class="id" title="var">export</span>]<br/>
+<span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Extern</span> 1000 (<a class="idref" href="HoTT.Basics.Overture.html#IsTrunc"><span class="id" title="class">IsTrunc</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>) ⇒ <span class="id" title="tactic">simple</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Truncations.Core.html#istrunc_inO_tr"><span class="id" title="definition">istrunc_inO_tr</span></a>; <span class="id" title="tactic">solve</span> [ <span class="id" title="tactic">trivial</span> ] : <span class="id" title="var">typeclass_instances</span>.<br/>
 </div>
 
 <div class="doc">
@@ -281,7 +282,8 @@ This doesn't seem to be quite the same as <span class="inlinecode"><span class="
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Hint Immediate</span> <span class="id" title="var">istruncmap_mapinO_tr</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
+#[<span class="id" title="var">export</span>]<br/>
+<span class="id" title="keyword">Hint</span> <span class="id" title="keyword">Immediate</span> <span class="id" title="var">istruncmap_mapinO_tr</span> : <span class="id" title="var">typeclass_instances</span>.<br/>
 
 <br/>
 </div>
