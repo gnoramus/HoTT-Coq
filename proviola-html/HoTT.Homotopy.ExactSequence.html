@@ -1118,12 +1118,12 @@
           
 
             i = 220;
-            data = "1 goal (ID 1002)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (ap f (p u) @ cx_isexact (g u)) =	  ((eisretr k (k (f' (i' u))))^ @	   ap k (ap k^-1 (q (i' u) @ (ap f (p u) @ cx_isexact (g u))))) @	  ((ap k (ap k^-1 (point_eq k)^) @ eisretr k (k (point Y'))) @ point_eq k)	";
+            data = "";
             responses[i]=data;
           
 
             i = 221;
-            data = "1 goal (ID 1026)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (ap f (p u) @ cx_isexact (g u)) =	  (eisretr k (k (f' (i' u))))^ @	  (ap (fun x : Y => k (k^-1 x)) (q (i' u) @ (ap f (p u) @ cx_isexact (g u))) @	   ((ap (fun x : Y => k (k^-1 x)) (point_eq k)^ @ eisretr k (k (point Y'))) @	    point_eq k))	";
+            data = "1 goal (ID 1002)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (ap f (p u) @ cx_isexact (g u)) =	  ((eisretr k (k (f' (i' u))))^ @	   ap k (ap k^-1 (q (i' u) @ (ap f (p u) @ cx_isexact (g u))))) @	  ((ap k (ap k^-1 (point_eq k)^) @ eisretr k (k (point Y'))) @ point_eq k)	1 goal (ID 1026)	  	  n : Modality	  F, F', X, X', Y, Y' : pType	  i : F ->* X	  i' : F' ->* X'	  f : X ->* Y	  f' : X' ->* Y'	  g : F' <~>* F	  h : X' <~>* X	  k : Y' <~>* Y	  p : Square g h i' i	  q : Square h k f' f	  H : IsExact n i f	  I := isexact_equiv_i n i i' g h p f : IsExact n i' (f o* h)	  I2 := isexact_homotopic_f n i' q : IsExact n i' (k $o f')	  e := (pequiv_pfiber (id_cate X') k (cat_idr (k o* f'))^$	        :	        pfiber f' <~>* pfiber (k o* f')) : pfiber f' <~>* pfiber (k o* f')	  u : F'	  ============================	  q (i' u) @ (ap f (p u) @ cx_isexact (g u)) =	  (eisretr k (k (f' (i' u))))^ @	  (ap (fun x : Y => k (k^-1 x)) (q (i' u) @ (ap f (p u) @ cx_isexact (g u))) @	   ((ap (fun x : Y => k (k^-1 x)) (point_eq k)^ @ eisretr k (k (point Y'))) @	    point_eq k))	";
             responses[i]=data;
           
 
@@ -2038,12 +2038,12 @@
           
 
             i = 404;
-            data = "6 goals (ID 1130)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y		goal 2 (ID 1131) is:	 iterated_loops n F ->* iterated_loops n X	goal 3 (ID 1132) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	goal 4 (ID 1133) is:	 IsExact purely ?Goal0 ?Goal	goal 5 (ID 1134) is:	 IsExact purely ?Goal1 ?Goal0	goal 6 (ID 1135) is:	 IsExact purely ?Goal@{n:=Nat.succ n} ?Goal1	1 goal (ID 1130)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	5 goals		goal 1 (ID 1131) is:	 iterated_loops n F ->* iterated_loops n X	goal 2 (ID 1132) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	goal 3 (ID 1133) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	goal 4 (ID 1134) is:	 IsExact purely ?Goal0 ?Goal	goal 5 (ID 1135) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	";
+            data = "";
             responses[i]=data;
           
 
             i = 405;
-            data = "5 goals (ID 1131)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X		goal 2 (ID 1132) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	goal 3 (ID 1133) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	goal 4 (ID 1134) is:	 IsExact purely ?Goal0 ?Goal	goal 5 (ID 1135) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	1 goal (ID 1131)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 goals		goal 1 (ID 1132) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	goal 2 (ID 1133) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	goal 3 (ID 1134) is:	 IsExact purely ?Goal (iterated_loops_functor n i)	goal 4 (ID 1135) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal	";
+            data = "6 goals (ID 1130)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y		goal 2 (ID 1131) is:	 iterated_loops n F ->* iterated_loops n X	goal 3 (ID 1132) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	goal 4 (ID 1133) is:	 IsExact purely ?Goal0 ?Goal	goal 5 (ID 1134) is:	 IsExact purely ?Goal1 ?Goal0	goal 6 (ID 1135) is:	 IsExact purely ?Goal@{n:=Nat.succ n} ?Goal1	1 goal (ID 1130)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n X ->* iterated_loops n Y	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	5 goals		goal 1 (ID 1131) is:	 iterated_loops n F ->* iterated_loops n X	goal 2 (ID 1132) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	goal 3 (ID 1133) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	goal 4 (ID 1134) is:	 IsExact purely ?Goal0 ?Goal	goal 5 (ID 1135) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	5 goals (ID 1131)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X		goal 2 (ID 1132) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	goal 3 (ID 1133) is:	 IsExact purely ?Goal (iterated_loops_functor n f)	goal 4 (ID 1134) is:	 IsExact purely ?Goal0 ?Goal	goal 5 (ID 1135) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal0	1 goal (ID 1131)	  	  F : pType	  X : pType	  Y : pType	  i : F ->* X	  f : X ->* Y	  H : IsExact purely i f	  n : +N	  ============================	  iterated_loops n F ->* iterated_loops n X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	4 goals		goal 1 (ID 1132) is:	 loops (iterated_loops n Y) ->* iterated_loops n F	goal 2 (ID 1133) is:	 IsExact purely (iterated_loops_functor n i) (iterated_loops_functor n f)	goal 3 (ID 1134) is:	 IsExact purely ?Goal (iterated_loops_functor n i)	goal 4 (ID 1135) is:	 IsExact purely (iterated_loops_functor (Nat.succ n) f) ?Goal	";
             responses[i]=data;
           
 
@@ -2219,9 +2219,9 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab652"></a><h1 class="section">Exact sequences</h1>
+<a id="lab653"></a><h1 class="section">Exact sequences</h1>
 <div class="doc" scenenumber="4"> </div>
-<a id="lab653"></a><h2 class="section">Very short complexes</h2>
+<a id="lab654"></a><h2 class="section">Very short complexes</h2>
 <div class="doc" scenenumber="9"> </div>
 
  A (very short) complex is a pair of pointed maps whose composite is the zero map. 
@@ -2676,7 +2676,7 @@ If Y is a set, then IsComplex is an HProp.
 </div>
 <div class="goal" id="goal0_3_39"><pre><span></span></pre></div>
 <div class="doc" scenenumber="41">
-<a id="lab654"></a><h2 class="section">Very short exact sequences and fiber sequences</h2>
+<a id="lab655"></a><h2 class="section">Very short exact sequences and fiber sequences</h2>
 <div class="doc" scenenumber="4"> </div>
 
  A complex is n-exact if the induced map <span class="inlinecode"><a class="idref" href="HoTT.Homotopy.ExactSequence.html#cxfib"><span class="id" title="definition">cxfib</span></a></span> is n-connected.  
@@ -3559,7 +3559,7 @@ In particular, (n.+1)-truncation takes fiber sequences to n-exact ones.
 </div>
 <div class="goal" id="goal0_3_83"><pre><span></span></pre></div>
 <div class="doc" scenenumber="85">
-<a id="lab655"></a><h2 class="section">Connecting maps</h2>
+<a id="lab656"></a><h2 class="section">Connecting maps</h2>
 <div class="doc" scenenumber="4"> </div>
 
  It's useful to see <span class="inlinecode"><a class="idref" href="HoTT.Homotopy.ExactSequence.html#pfib_cxfib"><span class="id" title="definition">pfib_cxfib</span></a></span> as a degenerate square. 
@@ -3713,7 +3713,7 @@ The connecting maps for the long exact sequence of loop spaces, defined as an ex
 </div>
 <div class="goal" id="goal0_3_91"><pre><span></span></pre></div>
 <div class="doc" scenenumber="93">
-<a id="lab656"></a><h2 class="section">Long exact sequences</h2>
+<a id="lab657"></a><h2 class="section">Long exact sequences</h2>
 </div>
 <div scenenumber="95" class="code">
 <span class="command" onmouseout="
@@ -3776,7 +3776,7 @@ Long exact sequences are preserved by truncation.
 </div>
 <div class="goal" id="goal0_3_99"><pre><span></span></pre></div>
 <div class="doc" scenenumber="101">
-<a id="lab657"></a><h2 class="section">LES of loop spaces and homotopy groups</h2>
+<a id="lab658"></a><h2 class="section">LES of loop spaces and homotopy groups</h2>
 </div>
 <div scenenumber="103" class="code">
 <span class="command" onmouseout="

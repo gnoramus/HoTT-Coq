@@ -39,14 +39,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Prelude.v
 Line: 3
-Time: 0.006s">
+Time: 0.008s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Export Notations.</pre>
 </div>
 <div class="code" title="File: Prelude.v
 Line: 3
 Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 12.5%"></div>
 <pre>
 Require Export Logic.</pre>
 </div>
@@ -66,8 +66,8 @@ Require Export Coq.Init.Tactics.</pre>
 </div>
 <div class="code" title="File: Prelude.v
 Line: 6
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Export Specif.</pre>
 </div>
@@ -97,33 +97,25 @@ Line: 10
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Require Coq.Init.Nat.</pre>
+Require Coq.Init.Number.</pre>
 </div>
 <div class="code" title="File: Prelude.v
 Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+Require Coq.Init.Nat.</pre>
+</div>
+<div class="code" title="File: Prelude.v
+Line: 12
+Time: 0.001s">
+<div class="time" style="width: 12.5%"></div>
+<pre>
 
 Declare ML Module "number_string_notation_plugin".</pre>
 </div>
 <div class="code" title="File: Prelude.v
-Line: 13
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Set Warnings "-decimal-numeral-notation".</pre>
-</div>
-<div class="code" title="File: Prelude.v
-Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Set Warnings "-numeral-notation".</pre>
-</div>
-<div class="code" title="File: Prelude.v
-Line: 16
+Line: 14
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -131,36 +123,36 @@ Time: 0s">
 (* Parsing / printing of decimal numbers *)</pre>
 </div>
 <div class="code" title="File: Prelude.v
-Line: 18
+Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Arguments Nat.of_uint d%dec_uint_scope.</pre>
 </div>
 <div class="code" title="File: Prelude.v
-Line: 18
+Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Arguments Nat.of_int d%dec_int_scope.</pre>
 </div>
 <div class="code" title="File: Prelude.v
-Line: 19
-Time: 0.001s">
-<div class="time" style="width: 16.666666666667%"></div>
-<pre>
-Numeral Notation Decimal.uint Decimal.uint_of_uint Decimal.uint_of_uint
-  : dec_uint_scope.</pre>
-</div>
-<div class="code" title="File: Prelude.v
-Line: 21
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Numeral Notation Decimal.int Decimal.int_of_int Decimal.int_of_int
+Number Notation Number.uint Number.uint_of_uint Number.uint_of_uint
+  : dec_uint_scope.</pre>
+</div>
+<div class="code" title="File: Prelude.v
+Line: 19
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Number Notation Number.int Number.int_of_int Number.int_of_int
   : dec_int_scope.</pre>
 </div>
 <div class="code" title="File: Prelude.v
-Line: 23
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -168,13 +160,13 @@ Time: 0s">
 (* Parsing / printing of [nat] numbers *)</pre>
 </div>
 <div class="code" title="File: Prelude.v
-Line: 25
+Line: 23
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Numeral Notation nat Nat.of_uint Nat.to_uint : nat_scope (abstract after 5000).</pre>
+<pre>Number Notation nat Nat.of_num_uint Nat.to_num_uint (abstract after 5001) : nat_scope.</pre>
 </div>
 <div class="code" title="File: Prelude.v
-Line: 25
+Line: 23
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -182,7 +174,7 @@ Time: 0s">
 Add Search Blacklist "_admitted" "_subproof" "Private_".</pre>
 </div>
 <div class="code" title="File: Prelude.v
-Line: 28
+Line: 26
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
