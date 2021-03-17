@@ -36,8 +36,8 @@ Time: 0.009s">
 </div>
 <div class="code" title="File: fields.v
 Line: 1
-Time: 0.099s">
-<div class="time" style="width: 98.019801980198%"></div>
+Time: 0.101s">
+<div class="time" style="width: 100%"></div>
 <pre>
 Require Import
   HoTT.Classes.interfaces.abstract_algebra
@@ -69,15 +69,15 @@ Section field_properties.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 10
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Context `{IsField F}.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 11
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Definition recip' (x : F) (apx : x ≶ 0) : F := //(x;apx).</pre>
@@ -92,8 +92,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 15
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma recip_inverse' (x : F) (Px : x ≶ 0) : x // (x; Px) = 1.</pre>
 </div>
 <div class="code" title="File: fields.v
@@ -119,8 +119,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 18
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Lemma reciperse_alt (x : F) Px : x // (x;Px) = 1.</pre>
@@ -196,8 +196,8 @@ apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 29
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -225,8 +225,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 34
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   rewrite &lt;- (mult_1_r y).</pre>
 </div>
@@ -239,15 +239,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 36
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.970297029703%"></div>
 <pre>
   rewrite (mult_assoc y x (//(y;Py))).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 37
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   rewrite (mult_comm y x).</pre>
 </div>
@@ -379,8 +379,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 56
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.970297029703%"></div>
 <pre>
 repeat (split; try apply _); intros x y E.</pre>
 </div>
@@ -393,21 +393,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 58
-Time: 0.005s">
-<div class="time" style="width: 4.950495049505%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.9405940594059%"></div>
 <pre> apply (strong_extensionality (+ x + y)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 58
-Time: 0.026s">
-<div class="time" style="width: 25.742574257426%"></div>
+Time: 0.024s">
+<div class="time" style="width: 23.762376237624%"></div>
 <pre>
   rewrite simple_associativity, left_inverse, plus_0_l.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 59
-Time: 0.035s">
-<div class="time" style="width: 34.653465346535%"></div>
+Time: 0.031s">
+<div class="time" style="width: 30.693069306931%"></div>
 <pre>
   rewrite (commutativity (f:=plus) x y), simple_associativity,
     left_inverse, plus_0_l.</pre>
@@ -428,21 +428,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 63
-Time: 0.005s">
-<div class="time" style="width: 4.950495049505%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre> apply (strong_extensionality (+ -x + -y)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 63
-Time: 0.027s">
-<div class="time" style="width: 26.732673267327%"></div>
+Time: 0.025s">
+<div class="time" style="width: 24.752475247525%"></div>
 <pre>
   rewrite simple_associativity, right_inverse, plus_0_l.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 64
-Time: 0.062s">
-<div class="time" style="width: 61.386138613861%"></div>
+Time: 0.051s">
+<div class="time" style="width: 50.49504950495%"></div>
 <pre>
   rewrite (commutativity (f:=plus) (- x) (- y)),
     simple_associativity, right_inverse, plus_0_l.</pre>
@@ -463,8 +463,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 68
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance: IsStrongInjective (//).</pre>
@@ -492,35 +492,35 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 73
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre> apply (strong_extensionality (x.1 *.)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 73
-Time: 0.008s">
-<div class="time" style="width: 7.9207920792079%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.9405940594059%"></div>
 <pre>
   rewrite recip_inverse, (commutativity (f:=mult)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 74
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
   apply (strong_extensionality (y.1 *.)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 75
-Time: 0.015s">
-<div class="time" style="width: 14.851485148515%"></div>
+Time: 0.013s">
+<div class="time" style="width: 12.871287128713%"></div>
 <pre>
   rewrite simple_associativity, recip_inverse.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 76
-Time: 0.006s">
-<div class="time" style="width: 5.9405940594059%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.950495049505%"></div>
 <pre>
   rewrite mult_1_l,mult_1_r.</pre>
 </div>
@@ -545,29 +545,29 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: fields.v
 Line: 78
-Time: 0.008s">
-<div class="time" style="width: 7.9207920792079%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.950495049505%"></div>
 <pre>
   rewrite recip_inverse, (commutativity (f:=mult)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 79
-Time: 0.004s">
-<div class="time" style="width: 3.960396039604%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
   apply (strong_extensionality (.* // y)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 80
-Time: 0.014s">
-<div class="time" style="width: 13.861386138614%"></div>
+Time: 0.01s">
+<div class="time" style="width: 9.9009900990099%"></div>
 <pre>
   rewrite &lt;-simple_associativity, recip_inverse.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 81
-Time: 0.006s">
-<div class="time" style="width: 5.9405940594059%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre>
   rewrite mult_1_l,mult_1_r.</pre>
 </div>
@@ -608,14 +608,14 @@ intros z x y E.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 87
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre> apply (strong_extensionality (+ -z)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 87
-Time: 0.062s">
-<div class="time" style="width: 61.386138613861%"></div>
+Time: 0.047s">
+<div class="time" style="width: 46.534653465347%"></div>
 <pre>
 do 2 rewrite (commutativity (f:=plus) z _),
   &lt;-simple_associativity,right_inverse,plus_0_r.</pre>
@@ -629,8 +629,8 @@ trivial.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 90
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -658,8 +658,8 @@ intros.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 95
-Time: 0.007s">
-<div class="time" style="width: 6.9306930693069%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre> apply (strong_right_cancel_from_left (+)).</pre>
 </div>
 <div class="code" title="File: fields.v
@@ -671,8 +671,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 96
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance: forall z, PropHolds (z ≶ 0) -&gt; StrongLeftCancellation (.*.) z.</pre>
@@ -699,29 +699,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 100
-Time: 0.013s">
-<div class="time" style="width: 12.871287128713%"></div>
+Time: 0.009s">
+<div class="time" style="width: 8.9108910891089%"></div>
 <pre>
 rewrite !(commutativity z).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 101
-Time: 0.004s">
-<div class="time" style="width: 3.960396039604%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.970297029703%"></div>
 <pre>
 apply (strong_extensionality (.* // (z;(Ez : (≶0) z)))).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 102
-Time: 0.045s">
-<div class="time" style="width: 44.554455445545%"></div>
+Time: 0.027s">
+<div class="time" style="width: 26.732673267327%"></div>
 <pre>
 rewrite &lt;-!simple_associativity, !reciperse_alt.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 103
-Time: 0.007s">
-<div class="time" style="width: 6.9306930693069%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.9405940594059%"></div>
 <pre>
 rewrite !mult_1_r;trivial.</pre>
 </div>
@@ -756,8 +756,8 @@ intros.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 109
-Time: 0.005s">
-<div class="time" style="width: 4.950495049505%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre> apply (strong_right_cancel_from_left (.*.)).</pre>
 </div>
 <div class="code" title="File: fields.v
@@ -769,8 +769,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 110
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma mult_apart_zero_l x y : x * y ≶ 0 -&gt; x ≶ 0.</pre>
@@ -797,8 +797,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: fields.v
 Line: 114
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
 rewrite mult_0_l.</pre>
 </div>
@@ -817,8 +817,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 116
-Time: 0.005s">
-<div class="time" style="width: 4.950495049505%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre>
 
 Lemma mult_apart_zero_r x y : x * y ≶ 0 -&gt; y ≶ 0.</pre>
@@ -888,15 +888,15 @@ intros Ex Ey.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 127
-Time: 0.004s">
-<div class="time" style="width: 3.960396039604%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.970297029703%"></div>
 <pre>
 apply (strong_extensionality (.* // (y;(Ey : (≶0) y)))).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 128
-Time: 0.019s">
-<div class="time" style="width: 18.811881188119%"></div>
+Time: 0.014s">
+<div class="time" style="width: 13.861386138614%"></div>
 <pre>
 rewrite &lt;-simple_associativity, reciperse_alt, mult_1_r, mult_0_l.</pre>
 </div>
@@ -997,8 +997,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 140
-Time: 0.014s">
-<div class="time" style="width: 13.861386138614%"></div>
+Time: 0.01s">
+<div class="time" style="width: 9.9009900990099%"></div>
 <pre>
   rewrite simple_associativity, E.</pre>
 </div>
@@ -1018,8 +1018,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 143
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
 
 Global Instance : IsIntegralDomain F := {}.</pre>
@@ -1084,15 +1084,15 @@ apply mult_apart_zero_r with (x.1).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 155
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 rewrite recip_inverse.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 156
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> solve_propholds.</pre>
 </div>
 <div class="code" title="File: fields.v
@@ -1145,8 +1145,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 162
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma field_div_diag x y : x = y.1 -&gt; x // y = 1.</pre>
@@ -1215,8 +1215,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 172
-Time: 0.074s">
-<div class="time" style="width: 73.267326732673%"></div>
+Time: 0.054s">
+<div class="time" style="width: 53.465346534653%"></div>
 <pre> rewrite &lt;-(mult_1_l (a // b)),
   &lt;- (recip_inverse d),
   (commutativity (f:=mult) d.1 (// d)),
@@ -1231,8 +1231,8 @@ Time: 0.074s">
 </div>
 <div class="code" title="File: fields.v
 Line: 182
-Time: 0.005s">
-<div class="time" style="width: 4.950495049505%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre>
   apply commutativity.</pre>
 </div>
@@ -1245,8 +1245,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 184
-Time: 0.101s">
-<div class="time" style="width: 100%"></div>
+Time: 0.078s">
+<div class="time" style="width: 77.227722772277%"></div>
 <pre> rewrite &lt;-(mult_1_r (a * d.1)),
   &lt;- (recip_inverse b),
   &lt;-simple_associativity,
@@ -1269,15 +1269,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 196
-Time: 0.03s">
-<div class="time" style="width: 29.70297029703%"></div>
+Time: 0.026s">
+<div class="time" style="width: 25.742574257426%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 197
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Lemma recip_distr_alt (x y : F) Px Py Pxy :
@@ -1292,8 +1292,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 201
-Time: 0.03s">
-<div class="time" style="width: 29.70297029703%"></div>
+Time: 0.021s">
+<div class="time" style="width: 20.792079207921%"></div>
 <pre>
 apply (left_cancellation_ne_0 (.*.) (x * y)).</pre>
 </div>
@@ -1332,8 +1332,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 205
-Time: 0.005s">
-<div class="time" style="width: 4.950495049505%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.970297029703%"></div>
 <pre> rewrite 3!reciperse_alt,mult_1_r.</pre>
 </div>
 <div class="code" title="File: fields.v
@@ -1351,8 +1351,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 206
-Time: 0.028s">
-<div class="time" style="width: 27.722772277228%"></div>
+Time: 0.021s">
+<div class="time" style="width: 20.792079207921%"></div>
 <pre> rewrite &lt;-simple_associativity,&lt;-simple_associativity.</pre>
 </div>
 <div class="code" title="File: fields.v
@@ -1364,22 +1364,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 207
-Time: 0.013s">
-<div class="time" style="width: 12.871287128713%"></div>
+Time: 0.01s">
+<div class="time" style="width: 9.9009900990099%"></div>
 <pre>
     rewrite simple_associativity.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 208
-Time: 0.009s">
-<div class="time" style="width: 8.9108910891089%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.9405940594059%"></div>
 <pre>
     rewrite (commutativity (f:=mult) _ y).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 209
-Time: 0.014s">
-<div class="time" style="width: 13.861386138614%"></div>
+Time: 0.01s">
+<div class="time" style="width: 9.9009900990099%"></div>
 <pre>
     rewrite &lt;-simple_associativity.</pre>
 </div>
@@ -1399,8 +1399,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 212
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma apart_negate (x : F) (Px : x ≶ 0) : (-x) ≶ 0.</pre>
@@ -1465,8 +1465,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 224
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
   refine (Trunc_rec _ (field_plus_ext F x 0 x (-x) ap)).</pre>
 </div>
@@ -1554,8 +1554,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 235
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Lemma recip_negate (x : F) (Px : x ≶ 0) : (-//(x;Px))=//(negate_apart(x;Px)).</pre>
 </div>
@@ -1568,8 +1568,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 237
-Time: 0.022s">
-<div class="time" style="width: 21.782178217822%"></div>
+Time: 0.017s">
+<div class="time" style="width: 16.831683168317%"></div>
 <pre>
   apply (left_cancellation (.*.) x).</pre>
 </div>
@@ -1589,8 +1589,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 240
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre>
   apply flip_negate.</pre>
 </div>
@@ -1638,8 +1638,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 247
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
   apply (strong_extensionality (x*.) (// (x; Px)) 0).</pre>
 </div>
@@ -1659,8 +1659,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: fields.v
 Line: 250
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   solve_propholds.</pre>
 </div>
@@ -1729,8 +1729,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 260
-Time: 0.016s">
-<div class="time" style="width: 15.841584158416%"></div>
+Time: 0.014s">
+<div class="time" style="width: 13.861386138614%"></div>
 <pre>
   apply path_sigma_hprop.</pre>
 </div>
@@ -1750,8 +1750,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 263
-Time: 0.022s">
-<div class="time" style="width: 21.782178217822%"></div>
+Time: 0.017s">
+<div class="time" style="width: 16.831683168317%"></div>
 <pre>
   apply (left_cancellation (.*.) (// (x; apx0))).</pre>
 </div>
@@ -1764,15 +1764,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: fields.v
 Line: 265
-Time: 0.003s">
-<div class="time" style="width: 2.970297029703%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
   rewrite mult_comm.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 266
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   rewrite (recip_inverse (x;apx0)).</pre>
 </div>
@@ -1833,8 +1833,8 @@ Section morphisms.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 280
-Time: 0.004s">
-<div class="time" style="width: 3.960396039604%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.970297029703%"></div>
 <pre>
   Context `{IsField F1} `{IsField F2} `{!IsSemiRingStrongPreserving (f : F1 -&gt; F2)}.</pre>
 </div>
@@ -1850,8 +1850,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 285
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Lemma strong_injective_preserves_0 : (forall x, x ≶ 0 -&gt; f x ≶ 0) -&gt; IsStrongInjective f.</pre>
 </div>
 <div class="code" title="File: fields.v
@@ -1870,8 +1870,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 287
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> split; try apply _.</pre>
 </div>
 <div class="code" title="File: fields.v
@@ -1882,15 +1882,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 287
-Time: 0.005s">
-<div class="time" style="width: 4.950495049505%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre>
   apply (strong_extensionality (+ -f y)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 288
-Time: 0.008s">
-<div class="time" style="width: 7.9207920792079%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.9405940594059%"></div>
 <pre>
   rewrite plus_negate_r, &lt;-preserves_minus.</pre>
 </div>
@@ -1903,15 +1903,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 290
-Time: 0.006s">
-<div class="time" style="width: 5.9405940594059%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.960396039604%"></div>
 <pre>
   apply (strong_extensionality (+ y)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 291
-Time: 0.048s">
-<div class="time" style="width: 47.524752475248%"></div>
+Time: 0.037s">
+<div class="time" style="width: 36.633663366337%"></div>
 <pre>
   rewrite &lt;-simple_associativity,left_inverse,plus_0_l,plus_0_r.</pre>
 </div>
@@ -1989,15 +1989,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: fields.v
 Line: 304
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   rewrite (rings.preserves_1 (f:=f)).</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 305
-Time: 0.001s">
-<div class="time" style="width: 0.99009900990099%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   solve_propholds.</pre>
 </div>
@@ -2010,8 +2010,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 307
-Time: 0.002s">
-<div class="time" style="width: 1.980198019802%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
   Lemma preserves_recip x Px Pfx : f (// (x;Px)) = // (f x;Pfx).</pre>
@@ -2025,8 +2025,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 310
-Time: 0.039s">
-<div class="time" style="width: 38.613861386139%"></div>
+Time: 0.033s">
+<div class="time" style="width: 32.673267326733%"></div>
 <pre>
   apply (left_cancellation_ne_0 (.*.) (f x)).</pre>
 </div>
@@ -2052,14 +2052,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: fields.v
 Line: 313
-Time: 0.01s">
-<div class="time" style="width: 9.9009900990099%"></div>
+Time: 0.009s">
+<div class="time" style="width: 8.9108910891089%"></div>
 <pre> rewrite &lt;-rings.preserves_mult.</pre>
 </div>
 <div class="code" title="File: fields.v
 Line: 313
-Time: 0.005s">
-<div class="time" style="width: 4.950495049505%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.970297029703%"></div>
 <pre>
     rewrite !reciperse_alt.</pre>
 </div>
