@@ -39,7 +39,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 3
-Time: 0.013s">
+Time: 0.012s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Overture PathGroupoids Contractible Equivalences.</pre>
 </div>
@@ -450,8 +450,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 108
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   all: cbn; apply ap.</pre>
 </div>
@@ -735,7 +735,7 @@ Time: 0s">
 <div class="code" title="File: Trunc.v
 Line: 164
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   by induction n as [|n IHn] using trunc_index_ind.</pre>
 </div>
@@ -812,7 +812,7 @@ Time: 0s">
 <div class="code" title="File: Trunc.v
 Line: 175
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   induction a as [|a IHa] using trunc_index_ind;
   induction c as [|c IHc] using trunc_index_ind.</pre>
@@ -854,8 +854,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 182
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1092,7 +1092,7 @@ Time: 0s">
 <div class="code" title="File: Trunc.v
 Line: 221
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   destruct (IHn m).</pre>
 </div>
@@ -1214,8 +1214,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 242
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   all: refine (trunc_index_ind _ _ _); [ | intros m IHm ].</pre>
 </div>
@@ -1321,8 +1321,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 259
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1358,7 +1358,7 @@ Time: 0s">
 <div class="code" title="File: Trunc.v
 Line: 265
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   simple_induction n n' IH;
     intros [ | m'] Hmn A ? .</pre>
@@ -1435,8 +1435,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 271
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>intros x y; apply (IH m');
                      auto with typeclass_instances.</pre>
 </div>
@@ -1459,8 +1459,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 276
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>Definition trunc_contr {n} {A} `{Contr A} : IsTrunc n.+1 A
   := (@trunc_leq (-2) n.+1 tt _ _).</pre>
 </div>
@@ -1581,8 +1581,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 302
-Time: 0.004s">
-<div class="time" style="width: 30.769230769231%"></div>
+Time: 0.005s">
+<div class="time" style="width: 41.666666666667%"></div>
 <pre>
     exact (IH (f^-1 x = f^-1 y) (H (f^-1 x) (f^-1 y))
       (x = y) ((ap (f^-1))^-1) _).</pre>
@@ -1597,7 +1597,7 @@ Defined.</pre>
 <div class="code" title="File: Trunc.v
 Line: 305
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
 
 Definition trunc_equiv' A {B} (f : A &lt;~&gt; B) `{IsTrunc n A}
@@ -1652,7 +1652,7 @@ Time: 0s">
 <div class="code" title="File: Trunc.v
 Line: 322
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>Record TruncType (n : trunc_index) := BuildTruncType {
   trunctype_type : Type ;
   istrunc_trunctype_type : IsTrunc n trunctype_type
@@ -2096,8 +2096,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Trunc.v
 Line: 406
-Time: 0.002s">
-<div class="time" style="width: 15.384615384615%"></div>
+Time: 0.003s">
+<div class="time" style="width: 25%"></div>
 <pre>
   exact (equiv_iff_hprop_uncurried (iff_contr_hprop A)).</pre>
 </div>
@@ -2146,8 +2146,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 414
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
   simple_induction n n IH; unfold IsTrunc; simpl.</pre>
 </div>
@@ -2228,8 +2228,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Trunc.v
 Line: 424
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
 Qed.</pre>
 </div>
