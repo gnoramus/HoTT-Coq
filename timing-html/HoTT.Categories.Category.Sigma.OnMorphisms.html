@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 1
-Time: 0.028s">
-<div class="time" style="width: 48.275862068966%"></div>
+Time: 0.037s">
+<div class="time" style="width: 74%"></div>
 <pre>Require Import HSet Types.Unit HoTT.Tactics Types.Forall Types.Sigma Basics.Trunc.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 1
-Time: 0.003s">
-<div class="time" style="width: 5.1724137931034%"></div>
+Time: 0.004s">
+<div class="time" style="width: 8%"></div>
 <pre>
 Require Import Category.Core Functor.Core Category.Sigma.Core.</pre>
 </div>
@@ -110,7 +110,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Local Notation sigT_type := Coq.Init.Specif.sigT.</pre>
+Local Notation sig_type := Overture.sig.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 13
@@ -140,7 +140,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Section sigT_mor.</pre>
+Section sig_mor.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 19
@@ -162,7 +162,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  Local Notation mor s d := (sigT_type (Pmor s d)).</pre>
+  Local Notation mor s d := (sig_type (Pmor s d)).</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 23
@@ -207,7 +207,7 @@ Time: 0s">
 <div class="code" title="File: OnMorphisms.v
 Line: 33
 Time: 0.009s">
-<div class="time" style="width: 15.51724137931%"></div>
+<div class="time" style="width: 18%"></div>
 <pre>
 
   Hypothesis P_associativity
@@ -217,7 +217,7 @@ Time: 0.009s">
 <div class="code" title="File: OnMorphisms.v
 Line: 37
 Time: 0.001s">
-<div class="time" style="width: 1.7241379310345%"></div>
+<div class="time" style="width: 2%"></div>
 <pre>
 
   Hypothesis P_left_identity
@@ -226,8 +226,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 41
-Time: 0.002s">
-<div class="time" style="width: 3.448275862069%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2%"></div>
 <pre>
 
   Hypothesis P_right_identity
@@ -240,14 +240,14 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  (** ** Definition of [sigT_mor]-precategory *)
+  (** ** Definition of [sig_mor]-precategory *)
  </pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Definition sigT_mor : PreCategory.</pre>
+<pre>Definition sig_mor' : PreCategory.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 48
@@ -259,7 +259,7 @@ Time: 0s">
 <div class="code" title="File: OnMorphisms.v
 Line: 49
 Time: 0.002s">
-<div class="time" style="width: 3.448275862069%"></div>
+<div class="time" style="width: 4%"></div>
 <pre>
     refine (@Build_PreCategory
               (object A)
@@ -291,10 +291,10 @@ Time: 0s">
 <div class="code" title="File: OnMorphisms.v
 Line: 63
 Time: 0.001s">
-<div class="time" style="width: 1.7241379310345%"></div>
-<pre>Definition pr1_mor : Functor sigT_mor A
+<div class="time" style="width: 2%"></div>
+<pre>Definition pr1_mor : Functor sig_mor' A
     := Build_Functor
-         sigT_mor A
+         sig_mor' A
          idmap
          (fun _ _ =&gt; @pr1_type _ _)
          (fun _ _ _ _ _ =&gt; idpath)
@@ -306,7 +306,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  Definition sigT_mor_as_sigT : PreCategory.</pre>
+  Definition sig_mor_as_sig : PreCategory.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 71
@@ -317,10 +317,10 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 72
-Time: 0.014s">
-<div class="time" style="width: 24.137931034483%"></div>
+Time: 0.013s">
+<div class="time" style="width: 26%"></div>
 <pre>
-    refine (@sigT A (fun _ =&gt; Unit) (fun s d =&gt; @Pmor (pr1_type s) (pr1_type d)) _ (fun _ =&gt; Pidentity _) (fun _ _ _ _ _ m1 m2 =&gt; Pcompose m1 m2) _ _ _);
+    refine (@sig' A (fun _ =&gt; Unit) (fun s d =&gt; @Pmor (pr1_type s) (pr1_type d)) _ (fun _ =&gt; Pidentity _) (fun _ _ _ _ _ m1 m2 =&gt; Pcompose m1 m2) _ _ _);
     intros; trivial.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
@@ -333,12 +333,12 @@ Time: 0s">
 <div class="code" title="File: OnMorphisms.v
 Line: 75
 Time: 0.002s">
-<div class="time" style="width: 3.448275862069%"></div>
+<div class="time" style="width: 4%"></div>
 <pre>
 
-  Definition sigT_functor_mor : Functor sigT_mor_as_sigT sigT_mor
+  Definition sig_functor_mor : Functor sig_mor_as_sig sig_mor'
     := Build_Functor
-         sigT_mor_as_sigT sigT_mor
+         sig_mor_as_sig sig_mor'
          (@pr1_type _ _)
          (fun _ _ =&gt; idmap)
          (fun _ _ _ _ _ =&gt; idpath)
@@ -347,13 +347,13 @@ Time: 0.002s">
 <div class="code" title="File: OnMorphisms.v
 Line: 83
 Time: 0.002s">
-<div class="time" style="width: 3.448275862069%"></div>
+<div class="time" style="width: 4%"></div>
 <pre>
 
-  Definition sigT_functor_mor_inv : Functor sigT_mor sigT_mor_as_sigT
+  Definition sig_functor_mor_inv : Functor sig_mor' sig_mor_as_sig
     := Build_Functor
-         sigT_mor sigT_mor_as_sigT
-         (fun x =&gt; existT _ x tt)
+         sig_mor' sig_mor_as_sig
+         (fun x =&gt; exist _ x tt)
          (fun _ _ =&gt; idmap)
          (fun _ _ _ _ _ =&gt; idpath)
          (fun _ =&gt; idpath).</pre>
@@ -368,13 +368,13 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 93
-Time: 0.002s">
-<div class="time" style="width: 3.448275862069%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2%"></div>
 <pre>
 
-  Lemma sigT_mor_eq `{Funext}
-  : sigT_functor_mor o sigT_functor_mor_inv = 1
-    /\ sigT_functor_mor_inv o sigT_functor_mor = 1.</pre>
+  Lemma sig_mor_eq `{Funext}
+  : sig_functor_mor o sig_functor_mor_inv = 1
+    /\ sig_functor_mor_inv o sig_functor_mor = 1.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 97
@@ -385,17 +385,17 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 98
-Time: 0.007s">
-<div class="time" style="width: 12.068965517241%"></div>
+Time: 0.006s">
+<div class="time" style="width: 12%"></div>
 <pre>
     split; path_functor; simpl; trivial.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 99
 Time: 0.002s">
-<div class="time" style="width: 3.448275862069%"></div>
+<div class="time" style="width: 4%"></div>
 <pre>
-    refine (existT
+    refine (exist
               _
               (path_forall
                  _
@@ -409,35 +409,35 @@ Time: 0.002s">
 <div class="code" title="File: OnMorphisms.v
 Line: 109
 Time: 0.003s">
-<div class="time" style="width: 5.1724137931034%"></div>
+<div class="time" style="width: 6%"></div>
 <pre>
     repeat (apply path_forall; intro).</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 110
 Time: 0.008s">
-<div class="time" style="width: 13.793103448276%"></div>
+<div class="time" style="width: 16%"></div>
 <pre>
-    destruct_head @sigT_type.</pre>
+    destruct_head @sig_type.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 111
 Time: 0.005s">
-<div class="time" style="width: 8.6206896551724%"></div>
+<div class="time" style="width: 10%"></div>
 <pre>
     destruct_head Unit.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 112
-Time: 0.016s">
-<div class="time" style="width: 27.586206896552%"></div>
+Time: 0.017s">
+<div class="time" style="width: 34%"></div>
 <pre>
     rewrite !transport_forall_constant.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 113
-Time: 0.019s">
-<div class="time" style="width: 32.758620689655%"></div>
+Time: 0.018s">
+<div class="time" style="width: 36%"></div>
 <pre>
     transport_path_forall_hammer.</pre>
 </div>
@@ -450,7 +450,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 115
-Time: 0.058s">
+Time: 0.05s">
 <div class="time" style="width: 100%"></div>
 <pre>
   Qed.</pre>
@@ -458,18 +458,18 @@ Time: 0.058s">
 <div class="code" title="File: OnMorphisms.v
 Line: 116
 Time: 0.004s">
-<div class="time" style="width: 6.8965517241379%"></div>
+<div class="time" style="width: 8%"></div>
 <pre>
 
-  Definition sigT_mor_compat : pr1_mor o sigT_functor_mor = pr1
+  Definition sig_mor_compat : pr1_mor o sig_functor_mor = pr1'
     := idpath.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 119
-Time: 0.008s">
-<div class="time" style="width: 13.793103448276%"></div>
+Time: 0.007s">
+<div class="time" style="width: 14%"></div>
 <pre>
-End sigT_mor.</pre>
+End sig_mor.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 120
@@ -485,7 +485,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Section sigT_mor_hProp.</pre>
+Section sig_mor_hProp.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 124
@@ -507,7 +507,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  Local Notation mor s d := (sigT_type (Pmor s d)).</pre>
+  Local Notation mor s d := (sig_type (Pmor s d)).</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 128
@@ -566,7 +566,7 @@ Time: 0s">
 <div class="code" title="File: OnMorphisms.v
 Line: 146
 Time: 0.009s">
-<div class="time" style="width: 15.51724137931%"></div>
+<div class="time" style="width: 18%"></div>
 <pre>
 
   Let P_associativity
@@ -583,7 +583,7 @@ Time: 0s">
 <div class="code" title="File: OnMorphisms.v
 Line: 151
 Time: 0.004s">
-<div class="time" style="width: 6.8965517241379%"></div>
+<div class="time" style="width: 8%"></div>
 <pre>
     abstract t ltac:(exists (associativity _ _ _ _ _ _ _ _))
       using P_associativity_on_morphisms_subproof.</pre>
@@ -591,14 +591,14 @@ Time: 0.004s">
 <div class="code" title="File: OnMorphisms.v
 Line: 153
 Time: 0.001s">
-<div class="time" style="width: 1.7241379310345%"></div>
+<div class="time" style="width: 2%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 154
-Time: 0.001s">
-<div class="time" style="width: 1.7241379310345%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4%"></div>
 <pre>
 
   Let P_left_identity
@@ -622,7 +622,7 @@ Time: 0s">
 <div class="code" title="File: OnMorphisms.v
 Line: 160
 Time: 0.002s">
-<div class="time" style="width: 3.448275862069%"></div>
+<div class="time" style="width: 4%"></div>
 <pre>
     abstract t ltac:(exists (left_identity _ _ _ _))
       using P_left_identity_on_morphisms_subproof.</pre>
@@ -636,8 +636,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 163
-Time: 0.001s">
-<div class="time" style="width: 1.7241379310345%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4%"></div>
 <pre>
 
   Let P_right_identity
@@ -660,16 +660,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 169
-Time: 0.017s">
-<div class="time" style="width: 29.310344827586%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4%"></div>
 <pre>
     abstract t ltac:(exists (right_identity _ _ _ _))
       using P_right_identity_on_morphisms_subproof.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 171
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.015s">
+<div class="time" style="width: 30%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -684,11 +684,11 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 175
-Time: 0.011s">
-<div class="time" style="width: 18.965517241379%"></div>
+Time: 0.01s">
+<div class="time" style="width: 20%"></div>
 <pre>Definition sig_mor : PreCategory
     := Eval cbv delta [P_associativity P_left_identity P_right_identity]
-      in @sigT_mor A Pmor _ Pidentity Pcompose P_associativity P_left_identity P_right_identity.</pre>
+      in @sig_mor' A Pmor _ Pidentity Pcompose P_associativity P_left_identity P_right_identity.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 177
@@ -701,17 +701,17 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 180
-Time: 0.001s">
-<div class="time" style="width: 1.7241379310345%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition proj1_sig_mor : Functor sig_mor A
     := pr1_mor.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 181
 Time: 0.001s">
-<div class="time" style="width: 1.7241379310345%"></div>
+<div class="time" style="width: 2%"></div>
 <pre>
-End sigT_mor_hProp.</pre>
+End sig_mor_hProp.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 182

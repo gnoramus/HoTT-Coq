@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Universal.v
 Line: 1
-Time: 0.032s">
-<div class="time" style="width: 65.30612244898%"></div>
+Time: 0.041s">
+<div class="time" style="width: 89.130434782609%"></div>
 <pre>Require Import Category.Core Functor.Core Category.Prod NaturalTransformation.Core Functor.Composition.Core Functor.Prod.Core.</pre>
 </div>
 <div class="code" title="File: Universal.v
@@ -50,7 +50,7 @@ Require Import Functor.Paths.</pre>
 <div class="code" title="File: Universal.v
 Line: 2
 Time: 0.001s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
 Require Import Types.Prod HoTT.Tactics Types.Forall Types.Sigma.</pre>
 </div>
@@ -59,61 +59,68 @@ Line: 3
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Set Universe Polymorphism.</pre>
+Require Import Basics.Tactics.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 5
+Line: 4
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Implicit Arguments.</pre>
+
+Set Universe Polymorphism.</pre>
 </div>
 <div class="code" title="File: Universal.v
 Line: 6
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Generalizable All Variables.</pre>
+Set Implicit Arguments.</pre>
 </div>
 <div class="code" title="File: Universal.v
 Line: 7
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Asymmetric Patterns.</pre>
+Generalizable All Variables.</pre>
 </div>
 <div class="code" title="File: Universal.v
 Line: 8
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Local Notation fst_type := Coq.Init.Datatypes.fst.</pre>
+Set Asymmetric Patterns.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 10
+Line: 9
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Local Notation snd_type := Coq.Init.Datatypes.snd.</pre>
+
+Local Notation fst_type := Basics.Datatypes.fst.</pre>
 </div>
 <div class="code" title="File: Universal.v
 Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Local Notation pair_type := Coq.Init.Datatypes.pair.</pre>
+Local Notation snd_type := Basics.Datatypes.snd.</pre>
 </div>
 <div class="code" title="File: Universal.v
 Line: 12
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Local Notation prod_type := Coq.Init.Datatypes.prod.</pre>
+Local Notation pair_type := Basics.Datatypes.pair.</pre>
 </div>
 <div class="code" title="File: Universal.v
 Line: 13
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Local Notation prod_type := Basics.Datatypes.prod.</pre>
+</div>
+<div class="code" title="File: Universal.v
+Line: 14
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -121,14 +128,14 @@ Time: 0s">
 Local Open Scope morphism_scope.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 15
+Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Local Open Scope functor_scope.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 16
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -136,14 +143,14 @@ Time: 0s">
 Section universal.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 18
+Line: 19
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 19
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -151,7 +158,7 @@ Time: 0s">
   Variables A B C : PreCategory.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 21
+Line: 22
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -159,7 +166,7 @@ Time: 0s">
   Local Open Scope functor_scope.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 23
+Line: 24
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -167,21 +174,21 @@ Time: 0s">
   Section universal.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 25
+Line: 26
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Variable a : Functor C A.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 26
+Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Variable b : Functor C B.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 27
+Line: 28
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -190,34 +197,34 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 30
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Lemma compose_fst_prod : fst o (a * b) = a.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 30
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Proof.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 31
-Time: 0.002s">
-<div class="time" style="width: 4.0816326530612%"></div>
+Line: 32
+Time: 0.003s">
+<div class="time" style="width: 6.5217391304348%"></div>
 <pre>
       path_functor; trivial.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 32
+Line: 33
 Time: 0.001s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
     Defined.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 33
+Line: 34
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -226,34 +233,34 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 36
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Lemma compose_snd_prod : snd o (a * b) = b.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 36
+Line: 37
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Proof.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 37
-Time: 0.003s">
-<div class="time" style="width: 6.1224489795918%"></div>
+Line: 38
+Time: 0.002s">
+<div class="time" style="width: 4.3478260869565%"></div>
 <pre>
       path_functor; trivial.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 38
+Line: 39
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Defined.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 39
+Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -261,88 +268,88 @@ Time: 0s">
     Section unique.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 41
+Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F : Functor C (A * B).</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 42
+Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Hypothesis H1 : fst o F = a.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 43
-Time: 0.001s">
-<div class="time" style="width: 2.0408163265306%"></div>
+Line: 44
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       Hypothesis H2 : snd o F = b.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 44
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 45
+Time: 0.001s">
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
 
       Lemma unique_helper c
       : (a * b) c = F c.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 47
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Proof.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 48
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         pose proof (ap (fun F =&gt; object_of F c) H1).</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 49
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         pose proof (ap (fun F =&gt; object_of F c) H2).</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 50
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         simpl in *.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 51
-Time: 0.003s">
-<div class="time" style="width: 6.1224489795918%"></div>
+Line: 52
+Time: 0.004s">
+<div class="time" style="width: 8.695652173913%"></div>
 <pre>
         path_induction.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 52
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         apply eta_prod.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 53
+Line: 54
 Time: 0.001s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
       Defined.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 54
+Line: 55
 Time: 0.003s">
-<div class="time" style="width: 6.1224489795918%"></div>
+<div class="time" style="width: 6.5217391304348%"></div>
 <pre>
 
       Lemma unique_helper2
@@ -357,23 +364,23 @@ Time: 0.003s">
         morphism_of F.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 65
+Line: 66
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Proof.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 66
+Line: 67
 Time: 0.002s">
-<div class="time" style="width: 4.0816326530612%"></div>
+<div class="time" style="width: 4.3478260869565%"></div>
 <pre>
         repeat (apply path_forall; intro).</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 67
+Line: 68
 Time: 0.017s">
-<div class="time" style="width: 34.69387755102%"></div>
+<div class="time" style="width: 36.95652173913%"></div>
 <pre>
         repeat match goal with
                  | _ =&gt; reflexivity
@@ -382,32 +389,32 @@ Time: 0.017s">
                end.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 72
-Time: 0.016s">
-<div class="time" style="width: 32.65306122449%"></div>
+Line: 73
+Time: 0.015s">
+<div class="time" style="width: 32.608695652174%"></div>
 <pre>
         transport_path_forall_hammer.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 73
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         unfold unique_helper.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 74
-Time: 0.012s">
-<div class="time" style="width: 24.489795918367%"></div>
+Line: 75
+Time: 0.011s">
+<div class="time" style="width: 23.913043478261%"></div>
 <pre>
         repeat match goal with
                  | [ H : _ = _ |- _ ] =&gt; case H; simpl; clear H
                end.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 77
-Time: 0.007s">
-<div class="time" style="width: 14.285714285714%"></div>
+Line: 78
+Time: 0.006s">
+<div class="time" style="width: 13.04347826087%"></div>
 <pre>
         repeat match goal with
                  | [ |- context[@morphism_of ?C ?D ?F ?s ?d ?m] ]
@@ -417,21 +424,21 @@ Time: 0.007s">
                end.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 83
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         reflexivity.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 84
-Time: 0.049s">
+Line: 85
+Time: 0.046s">
 <div class="time" style="width: 100%"></div>
 <pre>
       Qed.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 85
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -440,49 +447,49 @@ Time: 0s">
       : a * b = F.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 88
+Line: 89
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Proof.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 89
-Time: 0.002s">
-<div class="time" style="width: 4.0816326530612%"></div>
+Line: 90
+Time: 0.003s">
+<div class="time" style="width: 6.5217391304348%"></div>
 <pre>
         path_functor.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 90
+Line: 91
 Time: 0.001s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
         exists (path_forall _ _ unique_helper).</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 91
+Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
         apply unique_helper2.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 92
+Line: 93
 Time: 0.001s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
       Defined.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 93
+Line: 94
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     End unique.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 94
+Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -490,7 +497,7 @@ Time: 0s">
     Local Open Scope core_scope.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 96
+Line: 97
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -499,9 +506,9 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 99
+Line: 100
 Time: 0.002s">
-<div class="time" style="width: 4.0816326530612%"></div>
+<div class="time" style="width: 4.3478260869565%"></div>
 <pre>Global Instance contr_prod_type
            `{IsHSet (Functor C A), IsHSet (Functor C B)}
     : Contr { F : Functor C (A * B)
@@ -509,70 +516,70 @@ Time: 0.002s">
               /\ snd o F = b }.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 103
+Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Proof.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 104
-Time: 0.001s">
-<div class="time" style="width: 2.0408163265306%"></div>
-<pre>
-      refine (Build_Contr _ (a * b; (compose_fst_prod, compose_snd_prod)) _).</pre>
-</div>
-<div class="code" title="File: Universal.v
 Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-      intro y.</pre>
+      refine (Build_Contr _ (a * b; (compose_fst_prod, compose_snd_prod)) _).</pre>
 </div>
 <div class="code" title="File: Universal.v
 Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-      apply path_sigma_uncurried.</pre>
+      intro y.</pre>
 </div>
 <div class="code" title="File: Universal.v
 Line: 107
+Time: 0.001s">
+<div class="time" style="width: 2.1739130434783%"></div>
+<pre>
+      apply path_sigma_uncurried.</pre>
+</div>
+<div class="code" title="File: Universal.v
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       simpl.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 108
+Line: 109
 Time: 0.001s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
       exists (unique (fst_type y.2) (snd_type y.2)).</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 109
-Time: 0.005s">
-<div class="time" style="width: 10.204081632653%"></div>
+Line: 110
+Time: 0.003s">
+<div class="time" style="width: 6.5217391304348%"></div>
 <pre>
       exact (center _).</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 110
+Line: 111
 Time: 0.007s">
-<div class="time" style="width: 14.285714285714%"></div>
+<div class="time" style="width: 15.217391304348%"></div>
 <pre>
     Qed.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 111
+Line: 112
 Time: 0.001s">
-<div class="time" style="width: 2.0408163265306%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
   End universal.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 112
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -581,45 +588,45 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 115
+Line: 116
 Time: 0.003s">
-<div class="time" style="width: 6.1224489795918%"></div>
+<div class="time" style="width: 6.5217391304348%"></div>
 <pre>Definition path_prod (F G : Functor C (A * B))
              (H1 : fst o F = fst o G)
              (H2 : snd o F = snd o G)
   : F = G.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 118
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 119
+Line: 120
 Time: 0.003s">
-<div class="time" style="width: 6.1224489795918%"></div>
+<div class="time" style="width: 6.5217391304348%"></div>
 <pre>
     etransitivity; [ symmetry | ];
     apply unique; try eassumption; reflexivity.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 121
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 122
+Time: 0.002s">
+<div class="time" style="width: 4.3478260869565%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 122
+Line: 123
 Time: 0.005s">
-<div class="time" style="width: 10.204081632653%"></div>
+<div class="time" style="width: 10.869565217391%"></div>
 <pre>
 End universal.</pre>
 </div>
 <div class="code" title="File: Universal.v
-Line: 124
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

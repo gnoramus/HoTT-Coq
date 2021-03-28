@@ -36,7 +36,7 @@ Representation of cardinals, see Chapter 10 of the HoTT book.
 This speeds things up considerably 
 <div class="paragraph"> </div>
 
-<a id="lab252"></a><h2 class="section">Definitions and operations</h2>
+<a id="lab251"></a><h2 class="section">Definitions and operations</h2>
 
 </div>
 <div class="code">
@@ -48,36 +48,36 @@ This speeds things up considerably
 <span class="id" title="keyword">Definition</span> <a id="sum_card" class="idref" href="#sum_card"><span class="id" title="definition">sum_card</span></a> (<a id="a:1" class="idref" href="#a:1"><span class="id" title="binder">a</span></a> <a id="b:2" class="idref" href="#b:2"><span class="id" title="binder">b</span></a> : <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a>) : <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a>.<br/>
 <span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Trunc.html#BuildhSet"><span class="id" title="abbreviation">BuildhSet</span></a> (<span class="id" title="var">a</span> <a class="idref" href="Coq.Init.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <span class="id" title="var">b</span>))).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Trunc.html#BuildhSet"><span class="id" title="abbreviation">BuildhSet</span></a> (<span class="id" title="var">a</span> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <span class="id" title="var">b</span>))).<br/>
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="prod_card" class="idref" href="#prod_card"><span class="id" title="definition">prod_card</span></a> (<a id="a:3" class="idref" href="#a:3"><span class="id" title="binder">a</span></a> <a id="b:4" class="idref" href="#b:4"><span class="id" title="binder">b</span></a> : <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a>) : <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a>.<br/>
 <span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Trunc.html#BuildhSet"><span class="id" title="abbreviation">BuildhSet</span></a> (<span class="id" title="var">a</span> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <span class="id" title="var">b</span>))).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Trunc.html#BuildhSet"><span class="id" title="abbreviation">BuildhSet</span></a> (<span class="id" title="var">a</span> <a class="idref" href="HoTT.Basics.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <span class="id" title="var">b</span>))).<br/>
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a id="exp_card" class="idref" href="#exp_card"><span class="id" title="definition">exp_card</span></a> `{<a id="H:5" class="idref" href="#H:5"><span class="id" title="binder">Funext</span></a>} (<a id="b:6" class="idref" href="#b:6"><span class="id" title="binder">b</span></a> <a id="a:7" class="idref" href="#a:7"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a>) : <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a>.<br/>
 <span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="var">strip_truncations</span>.<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Trunc.html#BuildhSet"><span class="id" title="abbreviation">BuildhSet</span></a> (<span class="id" title="var">b</span> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="var">a</span>))).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Trunc.html#BuildhSet"><span class="id" title="abbreviation">BuildhSet</span></a> (<span class="id" title="var">b</span> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="var">a</span>))).<br/>
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Definition</span> <a id="leq_card" class="idref" href="#leq_card"><span class="id" title="definition">leq_card</span></a> `{<a id="H:8" class="idref" href="#H:8"><span class="id" title="binder">Univalence</span></a>} : <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Trunc.html#hProp"><span class="id" title="abbreviation">hProp</span></a>.<br/>
+<span class="id" title="keyword">Definition</span> <a id="leq_card" class="idref" href="#leq_card"><span class="id" title="definition">leq_card</span></a> `{<a id="H:8" class="idref" href="#H:8"><span class="id" title="binder">Univalence</span></a>} : <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Trunc.html#hProp"><span class="id" title="abbreviation">hProp</span></a>.<br/>
 <span class="id" title="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc_rec"><span class="id" title="definition">Trunc_rec</span></a> (<span class="id" title="keyword">fun</span> <a id="a:10" class="idref" href="#a:10"><span class="id" title="binder">a</span></a> ⇒ <span class="id" title="var">_</span>)).<br/>
 &nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc_rec"><span class="id" title="definition">Trunc_rec</span></a> (<span class="id" title="keyword">fun</span> <a id="b:12" class="idref" href="#b:12"><span class="id" title="binder">b</span></a> ⇒ <span class="id" title="var">_</span>)).<br/>
-&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#hexists"><span class="id" title="definition">hexists</span></a> (<span class="id" title="keyword">fun</span> (<a id="i:14" class="idref" href="#i:14"><span class="id" title="binder">i</span></a> : <span class="id" title="var">a</span> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="var">b</span>) ⇒ <a class="idref" href="HoTT.HSet.html#isinj"><span class="id" title="definition">isinj</span></a> <a class="idref" href="HoTT.Spaces.Card.html#i:13"><span class="id" title="variable">i</span></a>)).<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Truncations.Core.html#hexists"><span class="id" title="definition">hexists</span></a> (<span class="id" title="keyword">fun</span> (<a id="i:14" class="idref" href="#i:14"><span class="id" title="binder">i</span></a> : <span class="id" title="var">a</span> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="var">b</span>) ⇒ <a class="idref" href="HoTT.HSet.html#isinj"><span class="id" title="definition">isinj</span></a> <a class="idref" href="HoTT.Spaces.Card.html#i:13"><span class="id" title="variable">i</span></a>)).<br/>
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
 </div>
 
 <div class="doc">
-<a id="lab253"></a><h2 class="section">Properties</h2>
+<a id="lab252"></a><h2 class="section">Properties</h2>
 
 </div>
 <div class="code">
@@ -107,7 +107,7 @@ We only make the instances of upper classes global, since the
   other instances will be project anyway. 
 <div class="paragraph"> </div>
 
-<a id="lab254"></a><h3 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a></span> is a semi-ring</h3>
+<a id="lab253"></a><h3 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Spaces.Card.html#Card"><span class="id" title="definition">Card</span></a></span> is a semi-ring</h3>
 
 </div>
 <div class="code">
@@ -158,7 +158,7 @@ We only make the instances of upper classes global, since the
 </div>
 
 <div class="doc">
-<a id="lab255"></a><h3 class="section">Properties of exponentiation</h3>
+<a id="lab254"></a><h3 class="section">Properties of exponentiation</h3>
 
 </div>
 <div class="code">
@@ -195,7 +195,7 @@ We only make the instances of upper classes global, since the
 </div>
 
 <div class="doc">
-<a id="lab256"></a><h3 class="section">Properties of ≤</h3>
+<a id="lab255"></a><h3 class="section">Properties of ≤</h3>
 
 </div>
 <div class="code">

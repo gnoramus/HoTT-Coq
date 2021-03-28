@@ -48,7 +48,7 @@
           
 
             i = 6;
-            data = "";
+            data = "<infomsg>[Loading ML file ltac_plugin.cmxs ... done]</infomsg>	<infomsg>[Loading ML file number_string_notation_plugin.cmxs ... done]	</infomsg>	";
             responses[i]=data;
           
 
@@ -599,12 +599,12 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab517"></a><h1 class="section">Coequalizer as a colimit</h1>
+<a id="lab516"></a><h1 class="section">Coequalizer as a colimit</h1>
 <div class="doc" scenenumber="4"> </div>
 
  In this file, we define <span class="inlinecode"><a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer"><span class="id" title="definition">Coequalizer</span></a></span> the coequalizer of two maps as the colimit of a particuliar diagram, and then show that it is equivalent to <span class="inlinecode"><a class="idref" href="HoTT.HIT.Coeq.html#Coeq.Coeq"><span class="id" title="inductive">Coeq</span></a></span> the primitive coequalizer defined as an HIT. 
 <div class="doc" scenenumber="10"> </div>
-<a id="lab518"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer"><span class="id" title="definition">Coequalizer</span></a></span></h2>
+<a id="lab517"></a><h2 class="section"><span class="inlinecode"><a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer"><span class="id" title="definition">Coequalizer</span></a></span></h2>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -625,14 +625,14 @@
       mouseover(35, '0_3_7');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a id="IsCoequalizer" class="idref" href="#IsCoequalizer"><span class="id" title="definition">IsCoequalizer</span></a> (<a id="f:3" class="idref" href="#f:3"><span class="id" title="binder">f</span></a> <a id="g:4" class="idref" href="#g:4"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.A"><span class="id" title="variable">A</span></a>)<br>
+  <span class="id" title="keyword">Definition</span> <a id="IsCoequalizer" class="idref" href="#IsCoequalizer"><span class="id" title="definition">IsCoequalizer</span></a> (<a id="f:3" class="idref" href="#f:3"><span class="id" title="binder">f</span></a> <a id="g:4" class="idref" href="#g:4"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.A"><span class="id" title="variable">A</span></a>)<br>
     := <a class="idref" href="HoTT.Colimits.Colimit.html#IsColimit"><span class="id" title="class">IsColimit</span></a> (<a class="idref" href="HoTT.Diagrams.ParallelPair.html#parallel_pair"><span class="id" title="definition">parallel_pair</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#f:3"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#g:4"><span class="id" title="variable">g</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(36, '0_3_7');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a id="Coequalizer" class="idref" href="#Coequalizer"><span class="id" title="definition">Coequalizer</span></a> (<a id="f:5" class="idref" href="#f:5"><span class="id" title="binder">f</span></a> <a id="g:6" class="idref" href="#g:6"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.A"><span class="id" title="variable">A</span></a>)<br>
+  <span class="id" title="keyword">Definition</span> <a id="Coequalizer" class="idref" href="#Coequalizer"><span class="id" title="definition">Coequalizer</span></a> (<a id="f:5" class="idref" href="#f:5"><span class="id" title="binder">f</span></a> <a id="g:6" class="idref" href="#g:6"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.A"><span class="id" title="variable">A</span></a>)<br>
     := <a class="idref" href="HoTT.Colimits.Colimit.html#Colimit.Colimit"><span class="id" title="inductive">Colimit</span></a> (<a class="idref" href="HoTT.Diagrams.ParallelPair.html#parallel_pair"><span class="id" title="definition">parallel_pair</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#f:5"><span class="id" title="variable">f</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#g:6"><span class="id" title="variable">g</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
@@ -643,7 +643,7 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-<a id="lab519"></a><h2 class="section">Equivalence with <span class="inlinecode"><a class="idref" href="HoTT.HIT.Coeq.html#Coeq.Coeq"><span class="id" title="inductive">Coeq</span></a></span>
+<a id="lab518"></a><h2 class="section">Equivalence with <span class="inlinecode"><a class="idref" href="HoTT.HIT.Coeq.html#Coeq.Coeq"><span class="id" title="inductive">Coeq</span></a></span>
 </h2>
 </div>
 <div scenenumber="11" class="code">
@@ -653,7 +653,7 @@
       mouseover(44, '0_3_11');
       ">
 <br>
-  <span class="id" title="keyword">Context</span> {<a id="f:7" class="idref" href="#f:7"><span class="id" title="binder">f</span></a> <a id="g:8" class="idref" href="#g:8"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.B"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.A"><span class="id" title="variable">A</span></a>}.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Context</span> {<a id="f:7" class="idref" href="#f:7"><span class="id" title="binder">f</span></a> <a id="g:8" class="idref" href="#g:8"><span class="id" title="binder">g</span></a> : <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.B"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Colimits.Colimit_Coequalizer.html#Coequalizer.A"><span class="id" title="variable">A</span></a>}.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(45, '0_3_11');

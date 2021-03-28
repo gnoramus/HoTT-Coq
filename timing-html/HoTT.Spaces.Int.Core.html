@@ -30,14 +30,14 @@ pre {
 
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.013s">
+Time: 0.026s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 1
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
 Require Import Spaces.Pos.</pre>
 </div>
@@ -84,8 +84,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 12
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Inductive Int : Type0 :=
   | neg : Pos -&gt; Int
   | zero : Int
@@ -139,16 +139,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 24
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>Definition neg_inj {z w : Pos} (p : neg z = neg w) : z = w
   := transport (fun s =&gt; z =
     (match s with neg a =&gt; a | zero =&gt; w | pos a =&gt; w end)) p (idpath z).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 26
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition pos_inj {z w : Pos} (p : pos z = pos w) : z = w
@@ -157,8 +157,8 @@ Definition pos_inj {z w : Pos} (p : pos z = pos w) : z = w
 </div>
 <div class="code" title="File: Core.v
 Line: 30
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
 
 Definition neg_neq_zero {z : Pos} : ~ (neg z = zero)
@@ -167,8 +167,8 @@ Definition neg_neq_zero {z : Pos} : ~ (neg z = zero)
 </div>
 <div class="code" title="File: Core.v
 Line: 34
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition pos_neq_zero {z : Pos} : ~ (pos z = zero)
@@ -177,8 +177,8 @@ Definition pos_neq_zero {z : Pos} : ~ (pos z = zero)
 </div>
 <div class="code" title="File: Core.v
 Line: 38
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
 
 Definition neg_neq_pos {z w : Pos} : ~ (neg z = pos w)
@@ -187,24 +187,24 @@ Definition neg_neq_pos {z w : Pos} : ~ (neg z = pos w)
 </div>
 <div class="code" title="File: Core.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition zero_neq_neg {z : Pos} := @neg_neq_zero z o symmetry _ _.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 44
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
 
 Definition zero_neq_pos {z : Pos} := @pos_neq_zero z o symmetry _ _.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 46
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition pos_neq_neg {z w : Pos} := @neg_neq_pos z w o symmetry _ _.</pre>
@@ -236,13 +236,13 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Definition int_to_number_int (n : Int) : Number.int :=
-  Number.IntDecimal (int_to_decimal_int n).</pre>
+Definition int_to_number_int (n : Int) : Numeral.int :=
+  Numeral.IntDec (int_to_decimal_int n).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 59
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
 
 Fixpoint int_of_decimal_uint (d : Decimal.uint) : Int :=
@@ -282,10 +282,10 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Definition int_of_number_int (d:Number.int) :=
+Definition int_of_number_int (d:Numeral.int) :=
   match d with
-  | Number.IntDecimal d =&gt; Some (int_of_decimal_int d)
-  | Number.IntHexadecimal _ =&gt; None
+  | Numeral.IntDec d =&gt; Some (int_of_decimal_int d)
+  | Numeral.IntHex _ =&gt; None
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -369,8 +369,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 119
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Fixpoint int_pos_sub (x y : Pos) {struct y} : Int :=
   match x, y with
     | p~1, q~1 =&gt; int_double (int_pos_sub p q)
@@ -430,8 +430,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 143
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   by destruct n.</pre>
 </div>
@@ -542,8 +542,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 172
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>Definition int_mul x y :=
   match x, y with
     | 0, _ =&gt; 0
@@ -658,8 +658,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 212
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros [n | | n] [m | | m].</pre>
 </div>
@@ -672,8 +672,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 214
-Time: 0.003s">
-<div class="time" style="width: 23.076923076923%"></div>
+Time: 0.004s">
+<div class="time" style="width: 15.384615384615%"></div>
 <pre> destruct (dec (n = m)) as [p | q].</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -803,7 +803,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 224
 Time: 0.003s">
-<div class="time" style="width: 23.076923076923%"></div>
+<div class="time" style="width: 11.538461538462%"></div>
 <pre> destruct (dec (n = m)) as [p | q].</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -835,7 +835,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 226
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -850,7 +850,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 229
 Time: 0.002s">
-<div class="time" style="width: 15.384615384615%"></div>
+<div class="time" style="width: 7.6923076923077%"></div>
 <pre>Global Instance hset_int : IsHSet Int | 0 := _.</pre>
 </div>
 <div class="code" title="File: Core.v

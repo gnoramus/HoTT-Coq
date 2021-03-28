@@ -48,7 +48,7 @@
           
 
             i = 6;
-            data = "";
+            data = "<infomsg>[Loading ML file ltac_plugin.cmxs ... done]</infomsg>	<infomsg>[Loading ML file number_string_notation_plugin.cmxs ... done]	</infomsg>	";
             responses[i]=data;
           
 
@@ -683,7 +683,7 @@
           
 
             i = 133;
-            data = "1 goal (ID 25)	  	  G : Group	  A : Type	  B : Type	  C : Type	  D : Type	  ============================	  (A -> B -> C -> D) -> A * B * C -> D	";
+            data = "1 goal (ID 139)	  	  G : Group	  A : Type	  B : Type	  C : Type	  D : Type	  ============================	  (A -> B -> C -> D) -> A * B * C -> D	";
             responses[i]=data;
           
 
@@ -693,7 +693,7 @@
           
 
             i = 135;
-            data = "1 goal (ID 35)	  	  G : Group	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B -> C -> D	  a : A	  b : B	  c : C	  ============================	  D	";
+            data = "1 goal (ID 149)	  	  G : Group	  A : Type	  B : Type	  C : Type	  D : Type	  f : A -> B -> C -> D	  a : A	  b : B	  c : C	  ============================	  D	";
             responses[i]=data;
           
 
@@ -753,7 +753,7 @@
           
 
             i = 147;
-            data = "1 goal (ID 44)	  	  G : Group	  ============================	  G -> Abel	";
+            data = "1 goal (ID 158)	  	  G : Group	  ============================	  G -> Abel	";
             responses[i]=data;
           
 
@@ -763,7 +763,7 @@
           
 
             i = 149;
-            data = "1 goal (ID 45)	  	  G : Group	  g : G	  ============================	  Abel	";
+            data = "1 goal (ID 159)	  	  G : Group	  g : G	  ============================	  Abel	";
             responses[i]=data;
           
 
@@ -798,7 +798,7 @@
           
 
             i = 156;
-            data = "1 goal (ID 67)	  	  G : Group	  a, b, c : G	  ============================	  ab (a * (b * c)) = ab (a * (c * b))	";
+            data = "1 goal (ID 181)	  	  G : Group	  a, b, c : G	  ============================	  ab (a * (b * c)) = ab (a * (c * b))	";
             responses[i]=data;
           
 
@@ -808,7 +808,7 @@
           
 
             i = 158;
-            data = "1 goal (ID 74)	  	  G : Group	  a, b, c : G	  ============================	  coeq (a * (b * c)) = coeq (a * (c * b))	";
+            data = "1 goal (ID 188)	  	  G : Group	  a, b, c : G	  ============================	  coeq (a * (b * c)) = coeq (a * (c * b))	";
             responses[i]=data;
           
 
@@ -868,7 +868,7 @@
           
 
             i = 170;
-            data = "1 goal (ID 89)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  ============================	  forall x : Abel, P x	";
+            data = "1 goal (ID 203)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  ============================	  forall x : Abel, P x	";
             responses[i]=data;
           
 
@@ -878,32 +878,32 @@
           
 
             i = 172;
-            data = "1 goal (ID 124)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  ============================	  forall	  a0 : Coeq (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)))	         (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b))), 	  P (tr a0)	";
+            data = "1 goal (ID 238)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  ============================	  forall	  a0 : Coeq (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)))	         (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b))), 	  P (tr a0)	";
             responses[i]=data;
           
 
             i = 173;
-            data = "2 goals (ID 150)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  ============================	  forall a0 : G,	  (fun	     w : Coeq (uncurry2 (fun a1 b c0 : G => a1 * (b * c0)))	           (uncurry2 (fun a1 b c0 : G => a1 * (c0 * b))) => 	   P (tr w)) (coeq a0)		goal 2 (ID 152) is:	 forall b : G * G * G,	 transport	   (fun	      w : Coeq (uncurry2 (fun a0 b0 c0 : G => a0 * (b0 * c0)))	            (uncurry2 (fun a0 b0 c0 : G => a0 * (c0 * b0))) => 	    P (tr w)) (cglue b)	   (?coeq' (uncurry2 (fun a0 b0 c0 : G => a0 * (b0 * c0)) b)) =	 ?coeq' (uncurry2 (fun a0 b0 c0 : G => a0 * (c0 * b0)) b)	";
+            data = "2 goals (ID 264)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  ============================	  forall a0 : G,	  (fun	     w : Coeq (uncurry2 (fun a1 b c0 : G => a1 * (b * c0)))	           (uncurry2 (fun a1 b c0 : G => a1 * (c0 * b))) => 	   P (tr w)) (coeq a0)		goal 2 (ID 266) is:	 forall b : G * G * G,	 transport	   (fun	      w : Coeq (uncurry2 (fun a0 b0 c0 : G => a0 * (b0 * c0)))	            (uncurry2 (fun a0 b0 c0 : G => a0 * (c0 * b0))) => 	    P (tr w)) (cglue b)	   (?coeq' (uncurry2 (fun a0 b0 c0 : G => a0 * (b0 * c0)) b)) =	 ?coeq' (uncurry2 (fun a0 b0 c0 : G => a0 * (c0 * b0)) b)	";
             responses[i]=data;
           
 
             i = 174;
-            data = "1 goal (ID 152)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  ============================	  forall b : G * G * G,	  transport	    (fun	       w : Coeq (uncurry2 (fun a0 b0 c0 : G => a0 * (b0 * c0)))	             (uncurry2 (fun a0 b0 c0 : G => a0 * (c0 * b0))) => 	     P (tr w)) (cglue b)	    (a (uncurry2 (fun a0 b0 c0 : G => a0 * (b0 * c0)) b)) =	  a (uncurry2 (fun a0 b0 c0 : G => a0 * (c0 * b0)) b)	";
+            data = "1 goal (ID 266)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  ============================	  forall b : G * G * G,	  transport	    (fun	       w : Coeq (uncurry2 (fun a0 b0 c0 : G => a0 * (b0 * c0)))	             (uncurry2 (fun a0 b0 c0 : G => a0 * (c0 * b0))) => 	     P (tr w)) (cglue b)	    (a (uncurry2 (fun a0 b0 c0 : G => a0 * (b0 * c0)) b)) =	  a (uncurry2 (fun a0 b0 c0 : G => a0 * (c0 * b0)) b)	";
             responses[i]=data;
           
 
             i = 175;
-            data = "1 goal (ID 161)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  transport	    (fun	       w : Coeq (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)))	             (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b))) => 	     P (tr w)) (cglue (x, y, z))	    (a (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)) (x, y, z))) =	  a (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b)) (x, y, z))	";
+            data = "1 goal (ID 275)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  transport	    (fun	       w : Coeq (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)))	             (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b))) => 	     P (tr w)) (cglue (x, y, z))	    (a (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)) (x, y, z))) =	  a (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b)) (x, y, z))	";
             responses[i]=data;
           
 
             i = 176;
-            data = "1 goal (ID 180)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  transport P (ap tr (cglue (x, y, z)))	    (a (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)) (x, y, z))) =	  a (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b)) (x, y, z))	";
+            data = "1 goal (ID 294)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  transport P (ap tr (cglue (x, y, z)))	    (a (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)) (x, y, z))) =	  a (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b)) (x, y, z))	";
             responses[i]=data;
           
 
             i = 177;
-            data = "1 goal (ID 203)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  DPath P (ap tr (cglue (x, y, z)))	    (a (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)) (x, y, z)))	    (a (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b)) (x, y, z)))	";
+            data = "1 goal (ID 317)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  DPath P (ap tr (cglue (x, y, z)))	    (a (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)) (x, y, z)))	    (a (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b)) (x, y, z)))	";
             responses[i]=data;
           
 
@@ -938,7 +938,7 @@
           
 
             i = 184;
-            data = "1 goal (ID 120)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  dp_apD (Abel_ind P a c) (ab_comm x y z) = c x y z	";
+            data = "1 goal (ID 234)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  dp_apD (Abel_ind P a c) (ab_comm x y z) = c x y z	";
             responses[i]=data;
           
 
@@ -948,17 +948,17 @@
           
 
             i = 186;
-            data = "1 goal (ID 123)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  apD (Abel_ind P a c) (ab_comm x y z) = dp_path_transport^-1 (c x y z)	";
+            data = "1 goal (ID 237)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  apD (Abel_ind P a c) (ab_comm x y z) = dp_path_transport^-1 (c x y z)	";
             responses[i]=data;
           
 
             i = 187;
-            data = "1 goal (ID 141)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  (transport_compose P tr (cglue (x, y, z))	     (Abel_ind P a c (tr (coeq (x * (y * z))))))^ @	  apD	    (fun	       x0 : Coeq (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)))	              (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b))) =>	     Abel_ind P a c (tr x0)) (cglue (x, y, z)) =	  dp_path_transport^-1 (c x y z)	";
+            data = "1 goal (ID 255)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  (transport_compose P tr (cglue (x, y, z))	     (Abel_ind P a c (tr (coeq (x * (y * z))))))^ @	  apD	    (fun	       x0 : Coeq (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)))	              (uncurry2 (fun a0 b c0 : G => a0 * (c0 * b))) =>	     Abel_ind P a c (tr x0)) (cglue (x, y, z)) =	  dp_path_transport^-1 (c x y z)	";
             responses[i]=data;
           
 
             i = 188;
-            data = "1 goal (ID 168)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  (transport_compose P tr (cglue (x, y, z))	     (Abel_ind P a c (tr (coeq (x * (y * z))))))^ @	  (transport_compose P tr (cglue (x, y, z))	     (a (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)) (x, y, z))) @	   (dp_path_transport^-1)%equiv (c x y z)) = dp_path_transport^-1 (c x y z)	";
+            data = "1 goal (ID 282)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHSet (P x)	  a : forall x : G, P (ab x)	  c : forall x y z : G,	      DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	  x, y, z : G	  ============================	  (transport_compose P tr (cglue (x, y, z))	     (Abel_ind P a c (tr (coeq (x * (y * z))))))^ @	  (transport_compose P tr (cglue (x, y, z))	     (a (uncurry2 (fun a0 b c0 : G => a0 * (b * c0)) (x, y, z))) @	   (dp_path_transport^-1)%equiv (c x y z)) = dp_path_transport^-1 (c x y z)	";
             responses[i]=data;
           
 
@@ -993,7 +993,7 @@
           
 
             i = 195;
-            data = "1 goal (ID 144)	  	  G : Group	  P : Type	  IsHSet0 : IsHSet P	  a : G -> P	  c : forall x y z : G, a (x * (y * z)) = a (x * (z * y))	  ============================	  Abel -> P	";
+            data = "1 goal (ID 258)	  	  G : Group	  P : Type	  IsHSet0 : IsHSet P	  a : G -> P	  c : forall x y z : G, a (x * (y * z)) = a (x * (z * y))	  ============================	  Abel -> P	";
             responses[i]=data;
           
 
@@ -1003,7 +1003,7 @@
           
 
             i = 197;
-            data = "1 goal (ID 162)	  	  G : Group	  P : Type	  IsHSet0 : IsHSet P	  a : G -> P	  c : forall x y z : G, a (x * (y * z)) = a (x * (z * y))	  ============================	  forall x y z : G,	  DPath (fun _ : Abel => P) (ab_comm x y z) (a (x * (y * z)))	    (a (x * (z * y)))	";
+            data = "1 goal (ID 276)	  	  G : Group	  P : Type	  IsHSet0 : IsHSet P	  a : G -> P	  c : forall x y z : G, a (x * (y * z)) = a (x * (z * y))	  ============================	  forall x y z : G,	  DPath (fun _ : Abel => P) (ab_comm x y z) (a (x * (y * z)))	    (a (x * (z * y)))	";
             responses[i]=data;
           
 
@@ -1038,7 +1038,7 @@
           
 
             i = 204;
-            data = "1 goal (ID 150)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHProp (P x)	  a : forall x : G, P (ab x)	  ============================	  forall x : Abel, P x	";
+            data = "1 goal (ID 264)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHProp (P x)	  a : forall x : G, P (ab x)	  ============================	  forall x : Abel, P x	";
             responses[i]=data;
           
 
@@ -1048,12 +1048,12 @@
           
 
             i = 206;
-            data = "1 goal (ID 171)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHProp (P x)	  a : forall x : G, P (ab x)	  ============================	  forall x y z : G,	  DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	";
+            data = "1 goal (ID 285)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHProp (P x)	  a : forall x : G, P (ab x)	  ============================	  forall x y z : G,	  DPath P (ab_comm x y z) (a (x * (y * z))) (a (x * (z * y)))	";
             responses[i]=data;
           
 
             i = 207;
-            data = "1 goal (ID 198)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHProp (P x)	  a : forall x : G, P (ab x)	  x, y, z : G	  ============================	  transport P (ab_comm x y z) (a (x * (y * z))) = a (x * (z * y))	";
+            data = "1 goal (ID 312)	  	  G : Group	  P : Abel -> Type	  H : forall x : Abel, IsHProp (P x)	  a : forall x : G, P (ab x)	  x, y, z : G	  ============================	  transport P (ab_comm x y z) (a (x * (y * z))) = a (x * (z * y))	";
             responses[i]=data;
           
 
@@ -1088,7 +1088,7 @@
           
 
             i = 214;
-            data = "1 goal (ID 154)	  	  G : Group	  P : Type	  IsHProp0 : IsHProp P	  a : G -> P	  ============================	  Abel -> P	";
+            data = "1 goal (ID 268)	  	  G : Group	  P : Type	  IsHProp0 : IsHProp P	  a : G -> P	  ============================	  Abel -> P	";
             responses[i]=data;
           
 
@@ -1098,7 +1098,7 @@
           
 
             i = 216;
-            data = "1 goal (ID 163)	  	  G : Group	  P : Type	  IsHProp0 : IsHProp P	  a : G -> P	  ============================	  forall x y z : G, a (x * (y * z)) = a (x * (z * y))	";
+            data = "1 goal (ID 277)	  	  G : Group	  P : Type	  IsHProp0 : IsHProp P	  a : G -> P	  ============================	  forall x y z : G, a (x * (y * z)) = a (x * (z * y))	";
             responses[i]=data;
           
 
@@ -1253,7 +1253,7 @@
           
 
             i = 247;
-            data = "1 goal (ID 21)	  	  G : Group	  ============================	  SgOp (Abel G)	";
+            data = "1 goal (ID 135)	  	  G : Group	  ============================	  SgOp (Abel G)	";
             responses[i]=data;
           
 
@@ -1263,102 +1263,102 @@
           
 
             i = 249;
-            data = "1 goal (ID 23)	  	  G : Group	  a : Abel G	  ============================	  Abel G -> Abel G	";
+            data = "1 goal (ID 137)	  	  G : Group	  a : Abel G	  ============================	  Abel G -> Abel G	";
             responses[i]=data;
           
 
             i = 250;
-            data = "2 goals (ID 131)	  	  G : Group	  a : Abel G	  ============================	  G -> Abel G		goal 2 (ID 133) is:	 forall x y z : G, ?a (x * (y * z)) = ?a (x * (z * y))	";
+            data = "2 goals (ID 245)	  	  G : Group	  a : Abel G	  ============================	  G -> Abel G		goal 2 (ID 247) is:	 forall x y z : G, ?a (x * (y * z)) = ?a (x * (z * y))	";
             responses[i]=data;
           
 
             i = 251;
-            data = "1 goal (ID 131)	  	  G : Group	  a : Abel G	  ============================	  G -> Abel G	1 goal (ID 134)	  	  G : Group	  a : Abel G	  b : G	  ============================	  Abel G	";
+            data = "1 goal (ID 245)	  	  G : Group	  a : Abel G	  ============================	  G -> Abel G	1 goal (ID 248)	  	  G : Group	  a : Abel G	  b : G	  ============================	  Abel G	";
             responses[i]=data;
           
 
             i = 252;
-            data = "1 goal (ID 136)	  	  G : Group	  b : G	  ============================	  Abel G -> Abel G	";
+            data = "1 goal (ID 250)	  	  G : Group	  b : G	  ============================	  Abel G -> Abel G	";
             responses[i]=data;
           
 
             i = 253;
-            data = "2 goals (ID 244)	  	  G : Group	  b : G	  ============================	  G -> Abel G		goal 2 (ID 246) is:	 forall x y z : G, ?a (x * (y * z)) = ?a (x * (z * y))	";
+            data = "2 goals (ID 358)	  	  G : Group	  b : G	  ============================	  G -> Abel G		goal 2 (ID 360) is:	 forall x y z : G, ?a (x * (y * z)) = ?a (x * (z * y))	";
             responses[i]=data;
           
 
             i = 254;
-            data = "1 goal (ID 244)	  	  G : Group	  b : G	  ============================	  G -> Abel G	1 goal (ID 247)	  	  G : Group	  b : G	  a : G	  ============================	  Abel G	";
+            data = "1 goal (ID 358)	  	  G : Group	  b : G	  ============================	  G -> Abel G	1 goal (ID 361)	  	  G : Group	  b : G	  a : G	  ============================	  Abel G	";
             responses[i]=data;
           
 
             i = 255;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 246) is:	 forall x y z : G,	 (fun a : G => ab (a * b)) (x * (y * z)) =	 (fun a : G => ab (a * b)) (x * (z * y))	goal 2 (ID 133) is:	 forall x y z : G,	 (fun b : G => Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b)) ?c0 a)	   (x * (y * z)) =	 (fun b : G => Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b)) ?c0 a)	   (x * (z * y))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 360) is:	 forall x y z : G,	 (fun a : G => ab (a * b)) (x * (y * z)) =	 (fun a : G => ab (a * b)) (x * (z * y))	goal 2 (ID 247) is:	 forall x y z : G,	 (fun b : G => Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b)) ?c0 a)	   (x * (y * z)) =	 (fun b : G => Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b)) ?c0 a)	   (x * (z * y))	";
             responses[i]=data;
           
 
             i = 256;
-            data = "1 goal (ID 246)	  	  G : Group	  b : G	  ============================	  forall x y z : G,	  (fun a : G => ab (a * b)) (x * (y * z)) =	  (fun a : G => ab (a * b)) (x * (z * y))	1 goal (ID 254)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (c * d) * b) = ab (a * (d * c) * b)	";
+            data = "1 goal (ID 360)	  	  G : Group	  b : G	  ============================	  forall x y z : G,	  (fun a : G => ab (a * b)) (x * (y * z)) =	  (fun a : G => ab (a * b)) (x * (z * y))	1 goal (ID 368)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (c * d) * b) = ab (a * (d * c) * b)	";
             responses[i]=data;
           
 
             i = 257;
-            data = "1 goal (ID 427)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (c * d * b)) = ab (a * (d * c) * b)	";
+            data = "1 goal (ID 541)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (c * d * b)) = ab (a * (d * c) * b)	";
             responses[i]=data;
           
 
             i = 258;
-            data = "1 goal (ID 441)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (b * (c * d))) = ab (a * (d * c) * b)	";
+            data = "1 goal (ID 555)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (b * (c * d))) = ab (a * (d * c) * b)	";
             responses[i]=data;
           
 
             i = 259;
-            data = "1 goal (ID 611)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * b * (c * d)) = ab (a * (d * c) * b)	";
+            data = "1 goal (ID 725)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * b * (c * d)) = ab (a * (d * c) * b)	";
             responses[i]=data;
           
 
             i = 260;
-            data = "1 goal (ID 625)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * b * (d * c)) = ab (a * (d * c) * b)	";
+            data = "1 goal (ID 739)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * b * (d * c)) = ab (a * (d * c) * b)	";
             responses[i]=data;
           
 
             i = 261;
-            data = "1 goal (ID 798)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (b * (d * c))) = ab (a * (d * c) * b)	";
+            data = "1 goal (ID 912)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (b * (d * c))) = ab (a * (d * c) * b)	";
             responses[i]=data;
           
 
             i = 262;
-            data = "1 goal (ID 812)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (d * c * b)) = ab (a * (d * c) * b)	";
+            data = "1 goal (ID 926)	  	  G : Group	  b : G	  a, c, d : G	  ============================	  ab (a * (d * c * b)) = ab (a * (d * c) * b)	";
             responses[i]=data;
           
 
             i = 263;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 133) is:	 forall x y z : G,	 (fun b : G =>	  Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b))	    (fun a0 c d : G =>	     ap ab (associativity a0 (c * d) b)^ @	     (ab_comm a0 (c * d) b @	      (ap ab (associativity a0 b (c * d)) @	       (ab_comm (a0 * b) c d @	        (ap ab (associativity a0 b (d * c))^ @	         (ab_comm a0 b (d * c) @ ap ab (associativity a0 (d * c) b))))))) a)	   (x * (y * z)) =	 (fun b : G =>	  Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b))	    (fun a0 c d : G =>	     ap ab (associativity a0 (c * d) b)^ @	     (ab_comm a0 (c * d) b @	      (ap ab (associativity a0 b (c * d)) @	       (ab_comm (a0 * b) c d @	        (ap ab (associativity a0 b (d * c))^ @	         (ab_comm a0 b (d * c) @ ap ab (associativity a0 (d * c) b))))))) a)	   (x * (z * y))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 247) is:	 forall x y z : G,	 (fun b : G =>	  Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b))	    (fun a0 c d : G =>	     ap ab (associativity a0 (c * d) b)^ @	     (ab_comm a0 (c * d) b @	      (ap ab (associativity a0 b (c * d)) @	       (ab_comm (a0 * b) c d @	        (ap ab (associativity a0 b (d * c))^ @	         (ab_comm a0 b (d * c) @ ap ab (associativity a0 (d * c) b))))))) a)	   (x * (y * z)) =	 (fun b : G =>	  Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b))	    (fun a0 c d : G =>	     ap ab (associativity a0 (c * d) b)^ @	     (ab_comm a0 (c * d) b @	      (ap ab (associativity a0 b (c * d)) @	       (ab_comm (a0 * b) c d @	        (ap ab (associativity a0 b (d * c))^ @	         (ab_comm a0 b (d * c) @ ap ab (associativity a0 (d * c) b))))))) a)	   (x * (z * y))	";
             responses[i]=data;
           
 
             i = 264;
-            data = "1 goal (ID 133)	  	  G : Group	  a : Abel G	  ============================	  forall x y z : G,	  (fun b : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b))	     (fun a0 c d : G =>	      ap ab (associativity a0 (c * d) b)^ @	      (ab_comm a0 (c * d) b @	       (ap ab (associativity a0 b (c * d)) @	        (ab_comm (a0 * b) c d @	         (ap ab (associativity a0 b (d * c))^ @	          (ab_comm a0 b (d * c) @ ap ab (associativity a0 (d * c) b))))))) a)	    (x * (y * z)) =	  (fun b : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b))	     (fun a0 c d : G =>	      ap ab (associativity a0 (c * d) b)^ @	      (ab_comm a0 (c * d) b @	       (ap ab (associativity a0 b (c * d)) @	        (ab_comm (a0 * b) c d @	         (ap ab (associativity a0 b (d * c))^ @	          (ab_comm a0 b (d * c) @ ap ab (associativity a0 (d * c) b))))))) a)	    (x * (z * y))	1 goal (ID 978)	  	  G : Group	  a : Abel G	  b, c, d : G	  ============================	  (fun b0 : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b0))	     (fun a0 c0 d0 : G =>	      ap ab (associativity a0 (c0 * d0) b0)^ @	      (ab_comm a0 (c0 * d0) b0 @	       (ap ab (associativity a0 b0 (c0 * d0)) @	        (ab_comm (a0 * b0) c0 d0 @	         (ap ab (associativity a0 b0 (d0 * c0))^ @	          (ab_comm a0 b0 (d0 * c0) @ ap ab (associativity a0 (d0 * c0) b0)))))))	     a) (b * (c * d)) =	  (fun b0 : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b0))	     (fun a0 c0 d0 : G =>	      ap ab (associativity a0 (c0 * d0) b0)^ @	      (ab_comm a0 (c0 * d0) b0 @	       (ap ab (associativity a0 b0 (c0 * d0)) @	        (ab_comm (a0 * b0) c0 d0 @	         (ap ab (associativity a0 b0 (d0 * c0))^ @	          (ab_comm a0 b0 (d0 * c0) @ ap ab (associativity a0 (d0 * c0) b0)))))))	     a) (b * (d * c))	";
+            data = "1 goal (ID 247)	  	  G : Group	  a : Abel G	  ============================	  forall x y z : G,	  (fun b : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b))	     (fun a0 c d : G =>	      ap ab (associativity a0 (c * d) b)^ @	      (ab_comm a0 (c * d) b @	       (ap ab (associativity a0 b (c * d)) @	        (ab_comm (a0 * b) c d @	         (ap ab (associativity a0 b (d * c))^ @	          (ab_comm a0 b (d * c) @ ap ab (associativity a0 (d * c) b))))))) a)	    (x * (y * z)) =	  (fun b : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b))	     (fun a0 c d : G =>	      ap ab (associativity a0 (c * d) b)^ @	      (ab_comm a0 (c * d) b @	       (ap ab (associativity a0 b (c * d)) @	        (ab_comm (a0 * b) c d @	         (ap ab (associativity a0 b (d * c))^ @	          (ab_comm a0 b (d * c) @ ap ab (associativity a0 (d * c) b))))))) a)	    (x * (z * y))	1 goal (ID 1092)	  	  G : Group	  a : Abel G	  b, c, d : G	  ============================	  (fun b0 : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b0))	     (fun a0 c0 d0 : G =>	      ap ab (associativity a0 (c0 * d0) b0)^ @	      (ab_comm a0 (c0 * d0) b0 @	       (ap ab (associativity a0 b0 (c0 * d0)) @	        (ab_comm (a0 * b0) c0 d0 @	         (ap ab (associativity a0 b0 (d0 * c0))^ @	          (ab_comm a0 b0 (d0 * c0) @ ap ab (associativity a0 (d0 * c0) b0)))))))	     a) (b * (c * d)) =	  (fun b0 : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b0))	     (fun a0 c0 d0 : G =>	      ap ab (associativity a0 (c0 * d0) b0)^ @	      (ab_comm a0 (c0 * d0) b0 @	       (ap ab (associativity a0 b0 (c0 * d0)) @	        (ab_comm (a0 * b0) c0 d0 @	         (ap ab (associativity a0 b0 (d0 * c0))^ @	          (ab_comm a0 b0 (d0 * c0) @ ap ab (associativity a0 (d0 * c0) b0)))))))	     a) (b * (d * c))	";
             responses[i]=data;
           
 
             i = 265;
-            data = "1 goal (ID 980)	  	  G : Group	  b, c, d : G	  ============================	  forall a : Abel G,	  (fun b0 : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b0))	     (fun a0 c0 d0 : G =>	      ap ab (associativity a0 (c0 * d0) b0)^ @	      (ab_comm a0 (c0 * d0) b0 @	       (ap ab (associativity a0 b0 (c0 * d0)) @	        (ab_comm (a0 * b0) c0 d0 @	         (ap ab (associativity a0 b0 (d0 * c0))^ @	          (ab_comm a0 b0 (d0 * c0) @ ap ab (associativity a0 (d0 * c0) b0)))))))	     a) (b * (c * d)) =	  (fun b0 : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b0))	     (fun a0 c0 d0 : G =>	      ap ab (associativity a0 (c0 * d0) b0)^ @	      (ab_comm a0 (c0 * d0) b0 @	       (ap ab (associativity a0 b0 (c0 * d0)) @	        (ab_comm (a0 * b0) c0 d0 @	         (ap ab (associativity a0 b0 (d0 * c0))^ @	          (ab_comm a0 b0 (d0 * c0) @ ap ab (associativity a0 (d0 * c0) b0)))))))	     a) (b * (d * c))	";
+            data = "1 goal (ID 1094)	  	  G : Group	  b, c, d : G	  ============================	  forall a : Abel G,	  (fun b0 : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b0))	     (fun a0 c0 d0 : G =>	      ap ab (associativity a0 (c0 * d0) b0)^ @	      (ab_comm a0 (c0 * d0) b0 @	       (ap ab (associativity a0 b0 (c0 * d0)) @	        (ab_comm (a0 * b0) c0 d0 @	         (ap ab (associativity a0 b0 (d0 * c0))^ @	          (ab_comm a0 b0 (d0 * c0) @ ap ab (associativity a0 (d0 * c0) b0)))))))	     a) (b * (c * d)) =	  (fun b0 : G =>	   Abel_rec G (Abel G) (fun a0 : G => ab (a0 * b0))	     (fun a0 c0 d0 : G =>	      ap ab (associativity a0 (c0 * d0) b0)^ @	      (ab_comm a0 (c0 * d0) b0 @	       (ap ab (associativity a0 b0 (c0 * d0)) @	        (ab_comm (a0 * b0) c0 d0 @	         (ap ab (associativity a0 b0 (d0 * c0))^ @	          (ab_comm a0 b0 (d0 * c0) @ ap ab (associativity a0 (d0 * c0) b0)))))))	     a) (b * (d * c))	";
             responses[i]=data;
           
 
             i = 266;
-            data = "1 goal (ID 1033)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * (b * (c * d))) = ab (a * (b * (d * c)))	";
+            data = "1 goal (ID 1147)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * (b * (c * d))) = ab (a * (b * (d * c)))	";
             responses[i]=data;
           
 
             i = 267;
-            data = "1 goal (ID 1203)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * b * (c * d)) = ab (a * (b * (d * c)))	";
+            data = "1 goal (ID 1317)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * b * (c * d)) = ab (a * (b * (d * c)))	";
             responses[i]=data;
           
 
             i = 268;
-            data = "1 goal (ID 1217)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * b * (d * c)) = ab (a * (b * (d * c)))	";
+            data = "1 goal (ID 1331)	  	  G : Group	  b, c, d : G	  a : G	  ============================	  ab (a * b * (d * c)) = ab (a * (b * (d * c)))	";
             responses[i]=data;
           
 
@@ -1393,7 +1393,7 @@
           
 
             i = 275;
-            data = "1 goal (ID 23)	  	  G : Group	  ============================	  Associative abel_sgop	";
+            data = "1 goal (ID 137)	  	  G : Group	  ============================	  Associative abel_sgop	";
             responses[i]=data;
           
 
@@ -1403,22 +1403,22 @@
           
 
             i = 277;
-            data = "1 goal (ID 26)	  	  G : Group	  x, y : Abel G	  ============================	  forall z : Abel G,	  abel_sgop x (abel_sgop y z) = abel_sgop (abel_sgop x y) z	";
+            data = "1 goal (ID 140)	  	  G : Group	  x, y : Abel G	  ============================	  forall z : Abel G,	  abel_sgop x (abel_sgop y z) = abel_sgop (abel_sgop x y) z	";
             responses[i]=data;
           
 
             i = 278;
-            data = "1 goal (ID 80)	  	  G : Group	  x : Abel G	  z : G	  ============================	  forall y : Abel G,	  (fun x0 : Abel G =>	   abel_sgop x (abel_sgop y x0) = abel_sgop (abel_sgop x y) x0) 	    (ab z)	";
+            data = "1 goal (ID 194)	  	  G : Group	  x : Abel G	  z : G	  ============================	  forall y : Abel G,	  (fun x0 : Abel G =>	   abel_sgop x (abel_sgop y x0) = abel_sgop (abel_sgop x y) x0) 	    (ab z)	";
             responses[i]=data;
           
 
             i = 279;
-            data = "1 goal (ID 134)	  	  G : Group	  z, y : G	  ============================	  forall x : Abel G,	  (fun x0 : Abel G =>	   (fun x1 : Abel G =>	    abel_sgop x (abel_sgop x0 x1) = abel_sgop (abel_sgop x x0) x1) 	     (ab z)) (ab y)	";
+            data = "1 goal (ID 248)	  	  G : Group	  z, y : G	  ============================	  forall x : Abel G,	  (fun x0 : Abel G =>	   (fun x1 : Abel G =>	    abel_sgop x (abel_sgop x0 x1) = abel_sgop (abel_sgop x x0) x1) 	     (ab z)) (ab y)	";
             responses[i]=data;
           
 
             i = 280;
-            data = "1 goal (ID 187)	  	  G : Group	  z, y : G	  x : G	  ============================	  ab (x * (y * z)) = ab (x * y * z)	";
+            data = "1 goal (ID 301)	  	  G : Group	  z, y : G	  x : G	  ============================	  ab (x * (y * z)) = ab (x * y * z)	";
             responses[i]=data;
           
 
@@ -1503,7 +1503,7 @@
           
 
             i = 297;
-            data = "1 goal (ID 32)	  	  G : Group	  ============================	  LeftIdentity abel_sgop abel_mon_unit	";
+            data = "1 goal (ID 146)	  	  G : Group	  ============================	  LeftIdentity abel_sgop abel_mon_unit	";
             responses[i]=data;
           
 
@@ -1513,7 +1513,7 @@
           
 
             i = 299;
-            data = "1 goal (ID 84)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => abel_sgop abel_mon_unit x0 = x0) (ab x)	";
+            data = "1 goal (ID 198)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => abel_sgop abel_mon_unit x0 = x0) (ab x)	";
             responses[i]=data;
           
 
@@ -1528,7 +1528,7 @@
           
 
             i = 302;
-            data = "1 goal (ID 35)	  	  G : Group	  ============================	  RightIdentity abel_sgop abel_mon_unit	";
+            data = "1 goal (ID 149)	  	  G : Group	  ============================	  RightIdentity abel_sgop abel_mon_unit	";
             responses[i]=data;
           
 
@@ -1538,7 +1538,7 @@
           
 
             i = 304;
-            data = "1 goal (ID 87)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => abel_sgop x0 abel_mon_unit = x0) (ab x)	";
+            data = "1 goal (ID 201)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => abel_sgop x0 abel_mon_unit = x0) (ab x)	";
             responses[i]=data;
           
 
@@ -1598,7 +1598,7 @@
           
 
             i = 316;
-            data = "1 goal (ID 43)	  	  G : Group	  ============================	  Commutative abel_sgop	";
+            data = "1 goal (ID 157)	  	  G : Group	  ============================	  Commutative abel_sgop	";
             responses[i]=data;
           
 
@@ -1608,37 +1608,37 @@
           
 
             i = 318;
-            data = "1 goal (ID 45)	  	  G : Group	  x : Abel G	  ============================	  forall y : Abel G, abel_sgop x y = abel_sgop y x	";
+            data = "1 goal (ID 159)	  	  G : Group	  x : Abel G	  ============================	  forall y : Abel G, abel_sgop x y = abel_sgop y x	";
             responses[i]=data;
           
 
             i = 319;
-            data = "1 goal (ID 97)	  	  G : Group	  x : Abel G	  y : G	  ============================	  (fun x0 : Abel G => abel_sgop x x0 = abel_sgop x0 x) (ab y)	";
+            data = "1 goal (ID 211)	  	  G : Group	  x : Abel G	  y : G	  ============================	  (fun x0 : Abel G => abel_sgop x x0 = abel_sgop x0 x) (ab y)	";
             responses[i]=data;
           
 
             i = 320;
-            data = "1 goal (ID 99)	  	  G : Group	  y : G	  ============================	  forall x : Abel G,	  (fun x0 : Abel G => abel_sgop x x0 = abel_sgop x0 x) (ab y)	";
+            data = "1 goal (ID 213)	  	  G : Group	  y : G	  ============================	  forall x : Abel G,	  (fun x0 : Abel G => abel_sgop x x0 = abel_sgop x0 x) (ab y)	";
             responses[i]=data;
           
 
             i = 321;
-            data = "1 goal (ID 151)	  	  G : Group	  y : G	  x : G	  ============================	  (fun x0 : Abel G =>	   (fun x1 : Abel G => abel_sgop x0 x1 = abel_sgop x1 x0) (ab y)) 	    (ab x)	";
+            data = "1 goal (ID 265)	  	  G : Group	  y : G	  x : G	  ============================	  (fun x0 : Abel G =>	   (fun x1 : Abel G => abel_sgop x0 x1 = abel_sgop x1 x0) (ab y)) 	    (ab x)	";
             responses[i]=data;
           
 
             i = 322;
-            data = "1 goal (ID 152)	  	  G : Group	  y : G	  x : G	  ============================	  ab (x * y) = ab (y * x)	";
+            data = "1 goal (ID 266)	  	  G : Group	  y : G	  x : G	  ============================	  ab (x * y) = ab (y * x)	";
             responses[i]=data;
           
 
             i = 323;
-            data = "1 goal (ID 279)	  	  G : Group	  y : G	  x : G	  ============================	  ab (mon_unit * (x * y)) = ab (y * x)	";
+            data = "1 goal (ID 393)	  	  G : Group	  y : G	  x : G	  ============================	  ab (mon_unit * (x * y)) = ab (y * x)	";
             responses[i]=data;
           
 
             i = 324;
-            data = "1 goal (ID 403)	  	  G : Group	  y : G	  x : G	  ============================	  ab (mon_unit * (x * y)) = ab (mon_unit * (y * x))	";
+            data = "1 goal (ID 517)	  	  G : Group	  y : G	  x : G	  ============================	  ab (mon_unit * (x * y)) = ab (mon_unit * (y * x))	";
             responses[i]=data;
           
 
@@ -1683,7 +1683,7 @@
           
 
             i = 333;
-            data = "1 goal (ID 44)	  	  G : Group	  ============================	  Negate (Abel G)	";
+            data = "1 goal (ID 158)	  	  G : Group	  ============================	  Negate (Abel G)	";
             responses[i]=data;
           
 
@@ -1693,32 +1693,32 @@
           
 
             i = 335;
-            data = "2 goals (ID 128)	  	  G : Group	  ============================	  G -> Abel G		goal 2 (ID 130) is:	 forall x y z : G, ?a (x * (y * z)) = ?a (x * (z * y))	";
+            data = "2 goals (ID 242)	  	  G : Group	  ============================	  G -> Abel G		goal 2 (ID 244) is:	 forall x y z : G, ?a (x * (y * z)) = ?a (x * (z * y))	";
             responses[i]=data;
           
 
             i = 336;
-            data = "1 goal (ID 128)	  	  G : Group	  ============================	  G -> Abel G	1 goal (ID 131)	  	  G : Group	  g : G	  ============================	  Abel G	";
+            data = "1 goal (ID 242)	  	  G : Group	  ============================	  G -> Abel G	1 goal (ID 245)	  	  G : Group	  g : G	  ============================	  Abel G	";
             responses[i]=data;
           
 
             i = 337;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 130) is:	 forall x y z : G,	 (fun g : G => ab (- g)) (x * (y * z)) =	 (fun g : G => ab (- g)) (x * (z * y))	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 244) is:	 forall x y z : G,	 (fun g : G => ab (- g)) (x * (y * z)) =	 (fun g : G => ab (- g)) (x * (z * y))	";
             responses[i]=data;
           
 
             i = 338;
-            data = "1 goal (ID 130)	  	  G : Group	  ============================	  forall x y z : G,	  (fun g : G => ab (- g)) (x * (y * z)) =	  (fun g : G => ab (- g)) (x * (z * y))	1 goal (ID 138)	  	  G : Group	  x, y, z : G	  ============================	  ab (- (x * (y * z))) = ab (- (x * (z * y)))	";
+            data = "1 goal (ID 244)	  	  G : Group	  ============================	  forall x y z : G,	  (fun g : G => ab (- g)) (x * (y * z)) =	  (fun g : G => ab (- g)) (x * (z * y))	1 goal (ID 252)	  	  G : Group	  x, y, z : G	  ============================	  ab (- (x * (y * z))) = ab (- (x * (z * y)))	";
             responses[i]=data;
           
 
             i = 339;
-            data = "1 goal (ID 162)	  	  G : Group	  x, y, z : G	  ============================	  ab (- z * - y * - x) = ab (- y * - z * - x)	";
+            data = "1 goal (ID 276)	  	  G : Group	  x, y, z : G	  ============================	  ab (- z * - y * - x) = ab (- y * - z * - x)	";
             responses[i]=data;
           
 
             i = 340;
-            data = "1 goal (ID 201)	  	  G : Group	  x, y, z : G	  ============================	  ab (- z) * ab (- y) * ab (- x) = ab (- y) * ab (- z) * ab (- x)	";
+            data = "1 goal (ID 315)	  	  G : Group	  x, y, z : G	  ============================	  ab (- z) * ab (- y) * ab (- x) = ab (- y) * ab (- z) * ab (- x)	";
             responses[i]=data;
           
 
@@ -1753,7 +1753,7 @@
           
 
             i = 347;
-            data = "1 goal (ID 48)	  	  G : Group	  ============================	  LeftInverse abel_sgop abel_negate abel_mon_unit	";
+            data = "1 goal (ID 162)	  	  G : Group	  ============================	  LeftInverse abel_sgop abel_negate abel_mon_unit	";
             responses[i]=data;
           
 
@@ -1763,7 +1763,7 @@
           
 
             i = 349;
-            data = "1 goal (ID 100)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => abel_sgop (abel_negate x0) x0 = abel_mon_unit) (ab x)	";
+            data = "1 goal (ID 214)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => abel_sgop (abel_negate x0) x0 = abel_mon_unit) (ab x)	";
             responses[i]=data;
           
 
@@ -1778,7 +1778,7 @@
           
 
             i = 352;
-            data = "1 goal (ID 52)	  	  G : Group	  ============================	  RightInverse abel_sgop abel_negate abel_mon_unit	";
+            data = "1 goal (ID 166)	  	  G : Group	  ============================	  RightInverse abel_sgop abel_negate abel_mon_unit	";
             responses[i]=data;
           
 
@@ -1788,7 +1788,7 @@
           
 
             i = 354;
-            data = "1 goal (ID 104)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => abel_sgop x0 (abel_negate x0) = abel_mon_unit) (ab x)	";
+            data = "1 goal (ID 218)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => abel_sgop x0 (abel_negate x0) = abel_mon_unit) (ab x)	";
             responses[i]=data;
           
 
@@ -1873,7 +1873,7 @@
           
 
             i = 371;
-            data = "1 goal (ID 69)	  	  G : Group	  ============================	  IsSemiGroupPreserving ab	";
+            data = "1 goal (ID 183)	  	  G : Group	  ============================	  IsSemiGroupPreserving ab	";
             responses[i]=data;
           
 
@@ -1918,7 +1918,7 @@
           
 
             i = 380;
-            data = "1 goal (ID 24)	  	  G : Group	  ============================	  IsConnMap (Tr (-1)) ab	";
+            data = "1 goal (ID 138)	  	  G : Group	  ============================	  IsConnMap (Tr (-1)) ab	";
             responses[i]=data;
           
 
@@ -1928,27 +1928,27 @@
           
 
             i = 382;
-            data = "1 goal (ID 27)	  	  G : Group	  ============================	  forall b : Abel G, merely (hfiber ab b)	";
+            data = "1 goal (ID 141)	  	  G : Group	  ============================	  forall b : Abel G, merely (hfiber ab b)	";
             responses[i]=data;
           
 
             i = 383;
-            data = "1 goal (ID 62)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => trunctype_type (merely (hfiber ab x0))) (ab x)	";
+            data = "1 goal (ID 176)	  	  G : Group	  x : G	  ============================	  (fun x0 : Abel G => trunctype_type (merely (hfiber ab x0))) (ab x)	";
             responses[i]=data;
           
 
             i = 384;
-            data = "1 goal (ID 63)	  	  G : Group	  x : G	  ============================	  Trunc (-1) (hfiber ab (ab x))	";
+            data = "1 goal (ID 177)	  	  G : Group	  x : G	  ============================	  Trunc (-1) (hfiber ab (ab x))	";
             responses[i]=data;
           
 
             i = 385;
-            data = "1 goal (ID 66)	  	  G : Group	  x : G	  ============================	  hfiber ab (ab x)	";
+            data = "1 goal (ID 180)	  	  G : Group	  x : G	  ============================	  hfiber ab (ab x)	";
             responses[i]=data;
           
 
             i = 386;
-            data = "1 goal (ID 68)	  	  G : Group	  x : G	  ============================	  ab x = ab x	";
+            data = "1 goal (ID 182)	  	  G : Group	  x : G	  ============================	  ab x = ab x	";
             responses[i]=data;
           
 
@@ -1993,7 +1993,7 @@
           
 
             i = 395;
-            data = "1 goal (ID 25)	  	  ============================	  Group -> AbGroup	";
+            data = "1 goal (ID 139)	  	  ============================	  Group -> AbGroup	";
             responses[i]=data;
           
 
@@ -2003,7 +2003,7 @@
           
 
             i = 397;
-            data = "1 goal (ID 26)	  	  G : Group	  ============================	  AbGroup	";
+            data = "1 goal (ID 140)	  	  G : Group	  ============================	  AbGroup	";
             responses[i]=data;
           
 
@@ -2038,7 +2038,7 @@
           
 
             i = 404;
-            data = "1 goal (ID 27)	  	  X : Group	  ============================	  GroupHomomorphism X (abel X)	";
+            data = "1 goal (ID 141)	  	  X : Group	  ============================	  GroupHomomorphism X (abel X)	";
             responses[i]=data;
           
 
@@ -2048,17 +2048,17 @@
           
 
             i = 406;
-            data = "2 goals (ID 45)	  	  X : Group	  ============================	  X -> abel X		goal 2 (ID 47) is:	 IsSemiGroupPreserving ?f	";
+            data = "2 goals (ID 159)	  	  X : Group	  ============================	  X -> abel X		goal 2 (ID 161) is:	 IsSemiGroupPreserving ?f	";
             responses[i]=data;
           
 
             i = 407;
-            data = "1 goal (ID 45)	  	  X : Group	  ============================	  X -> abel X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 47) is:	 IsSemiGroupPreserving ab	";
+            data = "1 goal (ID 159)	  	  X : Group	  ============================	  X -> abel X	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet +.	</infomsg>	1 goal		goal 1 (ID 161) is:	 IsSemiGroupPreserving ab	";
             responses[i]=data;
           
 
             i = 408;
-            data = "1 goal (ID 47)	  	  X : Group	  ============================	  IsSemiGroupPreserving ab	No more goals.	";
+            data = "1 goal (ID 161)	  	  X : Group	  ============================	  IsSemiGroupPreserving ab	No more goals.	";
             responses[i]=data;
           
 
@@ -2088,7 +2088,7 @@
           
 
             i = 414;
-            data = "1 goal (ID 30)	  	  G : Group	  ============================	  IsAbelianization (abel G) (abel_unit G)	";
+            data = "1 goal (ID 144)	  	  G : Group	  ============================	  IsAbelianization (abel G) (abel_unit G)	";
             responses[i]=data;
           
 
@@ -2098,82 +2098,82 @@
           
 
             i = 416;
-            data = "1 goal (ID 32)	  	  G : Group	  A : AbGroup	  ============================	  IsEquiv0Gpd (group_precomp A (abel_unit G))	";
+            data = "1 goal (ID 146)	  	  G : Group	  A : AbGroup	  ============================	  IsEquiv0Gpd (group_precomp A (abel_unit G))	";
             responses[i]=data;
           
 
             i = 417;
-            data = "2 goals (ID 34)	  	  G : Group	  A : AbGroup	  ============================	  SplEssSurj (group_precomp A (abel_unit G))		goal 2 (ID 35) is:	 forall x y : abel G $-> A,	 group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	 x $== y	";
+            data = "2 goals (ID 148)	  	  G : Group	  A : AbGroup	  ============================	  SplEssSurj (group_precomp A (abel_unit G))		goal 2 (ID 149) is:	 forall x y : abel G $-> A,	 group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	 x $== y	";
             responses[i]=data;
           
 
             i = 418;
-            data = "1 goal (ID 34)	  	  G : Group	  A : AbGroup	  ============================	  SplEssSurj (group_precomp A (abel_unit G))	1 goal (ID 37)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  {a : abel G $-> A & group_precomp A (abel_unit G) a $== h}	";
+            data = "1 goal (ID 148)	  	  G : Group	  A : AbGroup	  ============================	  SplEssSurj (group_precomp A (abel_unit G))	1 goal (ID 151)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  {a : abel G $-> A & group_precomp A (abel_unit G) a $== h}	";
             responses[i]=data;
           
 
             i = 419;
-            data = "2 goals (ID 42)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G $-> A		goal 2 (ID 44) is:	 (fun a : abel G $-> A => group_precomp A (abel_unit G) a $== h) ?proj1_sig	";
+            data = "2 goals (ID 156)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G $-> A		goal 2 (ID 158) is:	 (fun a : abel G $-> A => group_precomp A (abel_unit G) a $== h) ?proj1	";
             responses[i]=data;
           
 
             i = 420;
-            data = "1 goal (ID 42)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G $-> A	2 goals (ID 62)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G -> A		goal 2 (ID 64) is:	 IsSemiGroupPreserving ?f	";
+            data = "1 goal (ID 156)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G $-> A	2 goals (ID 176)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G -> A		goal 2 (ID 178) is:	 IsSemiGroupPreserving ?f	";
             responses[i]=data;
           
 
             i = 421;
-            data = "1 goal (ID 62)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G -> A	1 goal (ID 257)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  forall x y z : G, h (x * (y * z)) = h (x * (z * y))	";
+            data = "1 goal (ID 176)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  abel G -> A	1 goal (ID 371)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  forall x y z : G, h (x * (y * z)) = h (x * (z * y))	";
             responses[i]=data;
           
 
             i = 422;
-            data = "1 goal (ID 441)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h (x * (y * z)) = h (x * (z * y))	";
+            data = "1 goal (ID 555)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h (x * (y * z)) = h (x * (z * y))	";
             responses[i]=data;
           
 
             i = 423;
-            data = "1 goal (ID 471)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h x * h (y * z) = h x * h (z * y)	";
+            data = "1 goal (ID 585)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h x * h (y * z) = h x * h (z * y)	";
             responses[i]=data;
           
 
             i = 424;
-            data = "1 goal (ID 479)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h (y * z) = h (z * y)	";
+            data = "1 goal (ID 593)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h (y * z) = h (z * y)	";
             responses[i]=data;
           
 
             i = 425;
-            data = "1 goal (ID 509)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h y * h z = h z * h y	";
+            data = "1 goal (ID 623)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x, y, z : G	  ============================	  h y * h z = h z * h y	";
             responses[i]=data;
           
 
             i = 426;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 goals		goal 1 (ID 64) is:	 IsSemiGroupPreserving	   (Abel_rec G A h	      (fun x y z : G =>	       (grp_homo_op h x (y * z) @	        ap (sg_op (h x))	          ((grp_homo_op h y z @ commutativity (h y) (h z)) @	           (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^))	goal 2 (ID 44) is:	 (fun a : abel G $-> A => group_precomp A (abel_unit G) a $== h)	   (Build_GroupHomomorphism	      (Abel_rec G A h	         (fun x y z : G =>	          (grp_homo_op h x (y * z) @	           ap (sg_op (h x))	             ((grp_homo_op h y z @ commutativity (h y) (h z)) @	              (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^)))	goal 3 (ID 35) is:	 forall x y : abel G $-> A,	 group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	 x $== y	1 goal (ID 64)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  IsSemiGroupPreserving	    (Abel_rec G A h	       (fun x y z : G =>	        (grp_homo_op h x (y * z) @	         ap (sg_op (h x))	           ((grp_homo_op h y z @ commutativity (h y) (h z)) @	            (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^))	1 goal (ID 647)	  	  G : Group	  A : AbGroup	  h : G $-> A	  y : abel G	  ============================	  forall y0 : abel G,	  Abel_rec G A h	    (fun x y1 z : G =>	     (grp_homo_op h x (y1 * z) @	      ap (sg_op (h x))	        ((grp_homo_op h y1 z @ commutativity (h y1) (h z)) @	         (grp_homo_op h z y1)^)) @ (grp_homo_op h x (z * y1))^) 	    (y * y0) =	  Abel_rec G A h	    (fun x y1 z : G =>	     (grp_homo_op h x (y1 * z) @	      ap (sg_op (h x))	        ((grp_homo_op h y1 z @ commutativity (h y1) (h z)) @	         (grp_homo_op h z y1)^)) @ (grp_homo_op h x (z * y1))^) y *	  Abel_rec G A h	    (fun x y1 z : G =>	     (grp_homo_op h x (y1 * z) @	      ap (sg_op (h x))	        ((grp_homo_op h y1 z @ commutativity (h y1) (h z)) @	         (grp_homo_op h z y1)^)) @ (grp_homo_op h x (z * y1))^) y0	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	3 goals		goal 1 (ID 178) is:	 IsSemiGroupPreserving	   (Abel_rec G A h	      (fun x y z : G =>	       (grp_homo_op h x (y * z) @	        ap (sg_op (h x))	          ((grp_homo_op h y z @ commutativity (h y) (h z)) @	           (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^))	goal 2 (ID 158) is:	 (fun a : abel G $-> A => group_precomp A (abel_unit G) a $== h)	   (Build_GroupHomomorphism	      (Abel_rec G A h	         (fun x y z : G =>	          (grp_homo_op h x (y * z) @	           ap (sg_op (h x))	             ((grp_homo_op h y z @ commutativity (h y) (h z)) @	              (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^)))	goal 3 (ID 149) is:	 forall x y : abel G $-> A,	 group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	 x $== y	1 goal (ID 178)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  IsSemiGroupPreserving	    (Abel_rec G A h	       (fun x y z : G =>	        (grp_homo_op h x (y * z) @	         ap (sg_op (h x))	           ((grp_homo_op h y z @ commutativity (h y) (h z)) @	            (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^))	1 goal (ID 761)	  	  G : Group	  A : AbGroup	  h : G $-> A	  y : abel G	  ============================	  forall y0 : abel G,	  Abel_rec G A h	    (fun x y1 z : G =>	     (grp_homo_op h x (y1 * z) @	      ap (sg_op (h x))	        ((grp_homo_op h y1 z @ commutativity (h y1) (h z)) @	         (grp_homo_op h z y1)^)) @ (grp_homo_op h x (z * y1))^) 	    (y * y0) =	  Abel_rec G A h	    (fun x y1 z : G =>	     (grp_homo_op h x (y1 * z) @	      ap (sg_op (h x))	        ((grp_homo_op h y1 z @ commutativity (h y1) (h z)) @	         (grp_homo_op h z y1)^)) @ (grp_homo_op h x (z * y1))^) y *	  Abel_rec G A h	    (fun x y1 z : G =>	     (grp_homo_op h x (y1 * z) @	      ap (sg_op (h x))	        ((grp_homo_op h y1 z @ commutativity (h y1) (h z)) @	         (grp_homo_op h z y1)^)) @ (grp_homo_op h x (z * y1))^) y0	";
             responses[i]=data;
           
 
             i = 427;
-            data = "";
+            data = "1 goal (ID 996)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  ============================	  forall y : abel G,	  (fun x0 : Abel G =>	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) 	     (y * x0) =	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) y *	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) x0) 	    (ab x)	";
             responses[i]=data;
           
 
             i = 428;
-            data = "1 goal (ID 882)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  ============================	  forall y : abel G,	  (fun x0 : Abel G =>	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) 	     (y * x0) =	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) y *	   Abel_rec G A h	     (fun x1 y0 z : G =>	      (grp_homo_op h x1 (y0 * z) @	       ap (sg_op (h x1))	         ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	          (grp_homo_op h z y0)^)) @ (grp_homo_op h x1 (z * y0))^) x0) 	    (ab x)	1 goal (ID 1115)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  y : G	  ============================	  (fun x0 : Abel G =>	   (fun x1 : Abel G =>	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) 	      (x0 * x1) =	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x0 *	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x1) 	     (ab x)) (ab y)	";
+            data = "1 goal (ID 1229)	  	  G : Group	  A : AbGroup	  h : G $-> A	  x : G	  y : G	  ============================	  (fun x0 : Abel G =>	   (fun x1 : Abel G =>	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) 	      (x0 * x1) =	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x0 *	    Abel_rec G A h	      (fun x2 y0 z : G =>	       (grp_homo_op h x2 (y0 * z) @	        ap (sg_op (h x2))	          ((grp_homo_op h y0 z @ commutativity (h y0) (h z)) @	           (grp_homo_op h z y0)^)) @ (grp_homo_op h x2 (z * y0))^) x1) 	     (ab x)) (ab y)	";
             responses[i]=data;
           
 
             i = 429;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 44) is:	 (fun a : abel G $-> A => group_precomp A (abel_unit G) a $== h)	   (Build_GroupHomomorphism	      (Abel_rec G A h	         (fun x y z : G =>	          (grp_homo_op h x (y * z) @	           ap (sg_op (h x))	             ((grp_homo_op h y z @ commutativity (h y) (h z)) @	              (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^)))	goal 2 (ID 35) is:	 forall x y : abel G $-> A,	 group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	 x $== y	1 goal (ID 44)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  (fun a : abel G $-> A => group_precomp A (abel_unit G) a $== h)	    (Build_GroupHomomorphism	       (Abel_rec G A h	          (fun x y z : G =>	           (grp_homo_op h x (y * z) @	            ap (sg_op (h x))	              ((grp_homo_op h y z @ commutativity (h y) (h z)) @	               (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^)))	1 goal (ID 1118)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  (fun x : G => h x) == h	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 158) is:	 (fun a : abel G $-> A => group_precomp A (abel_unit G) a $== h)	   (Build_GroupHomomorphism	      (Abel_rec G A h	         (fun x y z : G =>	          (grp_homo_op h x (y * z) @	           ap (sg_op (h x))	             ((grp_homo_op h y z @ commutativity (h y) (h z)) @	              (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^)))	goal 2 (ID 149) is:	 forall x y : abel G $-> A,	 group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	 x $== y	1 goal (ID 158)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  (fun a : abel G $-> A => group_precomp A (abel_unit G) a $== h)	    (Build_GroupHomomorphism	       (Abel_rec G A h	          (fun x y z : G =>	           (grp_homo_op h x (y * z) @	            ap (sg_op (h x))	              ((grp_homo_op h y z @ commutativity (h y) (h z)) @	               (grp_homo_op h z y)^)) @ (grp_homo_op h x (z * y))^)))	1 goal (ID 1232)	  	  G : Group	  A : AbGroup	  h : G $-> A	  ============================	  (fun x : G => h x) == h	";
             responses[i]=data;
           
 
             i = 430;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 35) is:	 forall x y : abel G $-> A,	 group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	 x $== y	1 goal (ID 35)	  	  G : Group	  A : AbGroup	  ============================	  forall x y : abel G $-> A,	  group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	  x $== y	1 goal (ID 1128)	  	  G : Group	  A : AbGroup	  g, h : abel G $-> A	  p : group_precomp A (abel_unit G) g $== group_precomp A (abel_unit G) h	  ============================	  g $== h	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 149) is:	 forall x y : abel G $-> A,	 group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	 x $== y	1 goal (ID 149)	  	  G : Group	  A : AbGroup	  ============================	  forall x y : abel G $-> A,	  group_precomp A (abel_unit G) x $== group_precomp A (abel_unit G) y ->	  x $== y	1 goal (ID 1242)	  	  G : Group	  A : AbGroup	  g, h : abel G $-> A	  p : group_precomp A (abel_unit G) g $== group_precomp A (abel_unit G) h	  ============================	  g $== h	";
             responses[i]=data;
           
 
             i = 431;
-            data = "1 goal (ID 1361)	  	  G : Group	  A : AbGroup	  g, h : abel G $-> A	  p : group_precomp A (abel_unit G) g $== group_precomp A (abel_unit G) h	  x : G	  ============================	  (fun x0 : Abel G => g x0 = h x0) (ab x)	";
+            data = "1 goal (ID 1475)	  	  G : Group	  A : AbGroup	  g, h : abel G $-> A	  p : group_precomp A (abel_unit G) g $== group_precomp A (abel_unit G) h	  x : G	  ============================	  (fun x0 : Abel G => g x0 = h x0) (ab x)	";
             responses[i]=data;
           
 
@@ -2188,7 +2188,7 @@
           
 
             i = 434;
-            data = "1 goal (ID 40)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  ============================	  GroupIsomorphism A B	";
+            data = "1 goal (ID 154)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  ============================	  GroupIsomorphism A B	";
             responses[i]=data;
           
 
@@ -2198,52 +2198,52 @@
           
 
             i = 436;
-            data = "1 goal (ID 64)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  ============================	  GroupIsomorphism A B	";
+            data = "1 goal (ID 178)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  ============================	  GroupIsomorphism A B	";
             responses[i]=data;
           
 
             i = 437;
-            data = "1 goal (ID 88)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  GroupIsomorphism A B	";
+            data = "1 goal (ID 202)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  GroupIsomorphism A B	";
             responses[i]=data;
           
 
             i = 438;
-            data = "1 goal (ID 98)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  IsEquiv a	";
+            data = "1 goal (ID 212)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  IsEquiv a	";
             responses[i]=data;
           
 
             i = 439;
-            data = "2 goals (ID 140)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  a o b == idmap		goal 2 (ID 142) is:	 b o a == idmap	";
+            data = "2 goals (ID 254)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  a o b == idmap		goal 2 (ID 256) is:	 b o a == idmap	";
             responses[i]=data;
           
 
             i = 440;
-            data = "1 goal (ID 140)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  a o b == idmap	1 goal (ID 168)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  group_precomp B eta2 (a $o b) $== group_precomp B eta2 (Id B)	";
+            data = "1 goal (ID 254)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  a o b == idmap	1 goal (ID 282)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  group_precomp B eta2 (a $o b) $== group_precomp B eta2 (Id B)	";
             responses[i]=data;
           
 
             i = 441;
-            data = "1 goal (ID 172)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : GroupHomomorphism A B	  ac : (fun x : G => a (eta1 x)) == eta2	  b : GroupHomomorphism B A	  bc : (fun x : G => b (eta2 x)) == eta1	  x : G	  ============================	  a (b (eta2 x)) = eta2 x	";
+            data = "1 goal (ID 286)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : GroupHomomorphism A B	  ac : (fun x : G => a (eta1 x)) == eta2	  b : GroupHomomorphism B A	  bc : (fun x : G => b (eta2 x)) == eta1	  x : G	  ============================	  a (b (eta2 x)) = eta2 x	";
             responses[i]=data;
           
 
             i = 442;
-            data = "1 goal (ID 179)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : GroupHomomorphism A B	  ac : (fun x : G => a (eta1 x)) == eta2	  b : GroupHomomorphism B A	  bc : (fun x : G => b (eta2 x)) == eta1	  x : G	  ============================	  a (b (eta2 x)) = a (eta1 x)	";
+            data = "1 goal (ID 293)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : GroupHomomorphism A B	  ac : (fun x : G => a (eta1 x)) == eta2	  b : GroupHomomorphism B A	  bc : (fun x : G => b (eta2 x)) == eta1	  x : G	  ============================	  a (b (eta2 x)) = a (eta1 x)	";
             responses[i]=data;
           
 
             i = 443;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 142) is:	 b o a == idmap	1 goal (ID 142)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  b o a == idmap	1 goal (ID 142)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  b o a == idmap	1 goal (ID 208)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  group_precomp A eta1 (b $o a) $== group_precomp A eta1 (Id A)	";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	1 goal		goal 1 (ID 256) is:	 b o a == idmap	1 goal (ID 256)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  b o a == idmap	1 goal (ID 256)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  b o a == idmap	1 goal (ID 322)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : A $-> B	  ac : group_precomp B eta1 a $== eta2	  b : B $-> A	  bc : group_precomp A eta2 b $== eta1	  ============================	  group_precomp A eta1 (b $o a) $== group_precomp A eta1 (Id A)	";
             responses[i]=data;
           
 
             i = 444;
-            data = "1 goal (ID 212)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : GroupHomomorphism A B	  ac : (fun x : G => a (eta1 x)) == eta2	  b : GroupHomomorphism B A	  bc : (fun x : G => b (eta2 x)) == eta1	  x : G	  ============================	  b (a (eta1 x)) = eta1 x	";
+            data = "1 goal (ID 326)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : GroupHomomorphism A B	  ac : (fun x : G => a (eta1 x)) == eta2	  b : GroupHomomorphism B A	  bc : (fun x : G => b (eta2 x)) == eta1	  x : G	  ============================	  b (a (eta1 x)) = eta1 x	";
             responses[i]=data;
           
 
             i = 445;
-            data = "1 goal (ID 219)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : GroupHomomorphism A B	  ac : (fun x : G => a (eta1 x)) == eta2	  b : GroupHomomorphism B A	  bc : (fun x : G => b (eta2 x)) == eta1	  x : G	  ============================	  b (a (eta1 x)) = b (eta2 x)	";
+            data = "1 goal (ID 333)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  a : GroupHomomorphism A B	  ac : (fun x : G => a (eta1 x)) == eta2	  b : GroupHomomorphism B A	  bc : (fun x : G => b (eta2 x)) == eta1	  x : G	  ============================	  b (a (eta1 x)) = b (eta2 x)	";
             responses[i]=data;
           
 
@@ -2253,7 +2253,7 @@
           
 
             i = 447;
-            data = "1 goal (ID 58)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  ============================	  eta2 == grp_homo_compose (groupiso_isabelianization A B eta1 eta2) eta1	";
+            data = "1 goal (ID 172)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  ============================	  eta2 == grp_homo_compose (groupiso_isabelianization A B eta1 eta2) eta1	";
             responses[i]=data;
           
 
@@ -2263,7 +2263,7 @@
           
 
             i = 449;
-            data = "1 goal (ID 60)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  x : G	  ============================	  eta2 x = grp_homo_compose (groupiso_isabelianization A B eta1 eta2) eta1 x	";
+            data = "1 goal (ID 174)	  	  G : Group	  A, B : AbGroup	  eta1 : GroupHomomorphism G A	  eta2 : GroupHomomorphism G B	  isab1 : IsAbelianization A eta1	  isab2 : IsAbelianization B eta2	  x : G	  ============================	  eta2 x = grp_homo_compose (groupiso_isabelianization A B eta1 eta2) eta1 x	";
             responses[i]=data;
           
 
@@ -2298,7 +2298,7 @@
           
 
             i = 456;
-            data = "1 goal (ID 65)	  	  G : Group	  A : AbGroup	  eta : GroupHomomorphism G A	  ============================	  IsAbelianization A eta -> IsConnMap (Tr (-1)) eta	";
+            data = "1 goal (ID 179)	  	  G : Group	  A : AbGroup	  eta : GroupHomomorphism G A	  ============================	  IsAbelianization A eta -> IsConnMap (Tr (-1)) eta	";
             responses[i]=data;
           
 
@@ -2308,12 +2308,12 @@
           
 
             i = 458;
-            data = "1 goal (ID 66)	  	  G : Group	  A : AbGroup	  eta : GroupHomomorphism G A	  k : IsAbelianization A eta	  ============================	  IsConnMap (Tr (-1)) eta	";
+            data = "1 goal (ID 180)	  	  G : Group	  A : AbGroup	  eta : GroupHomomorphism G A	  k : IsAbelianization A eta	  ============================	  IsConnMap (Tr (-1)) eta	";
             responses[i]=data;
           
 
             i = 459;
-            data = "1 goal (ID 70)	  	  G : Group	  A : AbGroup	  eta : GroupHomomorphism G A	  k : IsAbelianization A eta	  p := homotopic_isabelianization A (abel G) eta (abel_unit G)	   : abel_unit G ==	     grp_homo_compose	       (groupiso_isabelianization A (abel G) eta (abel_unit G)) eta	  ============================	  IsConnMap (Tr (-1)) eta	";
+            data = "1 goal (ID 184)	  	  G : Group	  A : AbGroup	  eta : GroupHomomorphism G A	  k : IsAbelianization A eta	  p := homotopic_isabelianization A (abel G) eta (abel_unit G)	   : abel_unit G ==	     grp_homo_compose	       (groupiso_isabelianization A (abel G) eta (abel_unit G)) eta	  ============================	  IsConnMap (Tr (-1)) eta	";
             responses[i]=data;
           
 
@@ -2328,7 +2328,7 @@
           
 
             i = 462;
-            data = "1 goal (ID 69)	  	  A : AbGroup	  ============================	  IsAbelianization A grp_homo_id	";
+            data = "1 goal (ID 183)	  	  A : AbGroup	  ============================	  IsAbelianization A grp_homo_id	";
             responses[i]=data;
           
 
@@ -2338,22 +2338,22 @@
           
 
             i = 464;
-            data = "1 goal (ID 71)	  	  A, B : AbGroup	  ============================	  IsEquiv0Gpd (group_precomp B grp_homo_id)	";
+            data = "1 goal (ID 185)	  	  A, B : AbGroup	  ============================	  IsEquiv0Gpd (group_precomp B grp_homo_id)	";
             responses[i]=data;
           
 
             i = 465;
-            data = "2 goals (ID 73)	  	  A, B : AbGroup	  ============================	  SplEssSurj (group_precomp B grp_homo_id)		goal 2 (ID 74) is:	 forall x y : A $-> B,	 group_precomp B grp_homo_id x $== group_precomp B grp_homo_id y -> x $== y	";
+            data = "2 goals (ID 187)	  	  A, B : AbGroup	  ============================	  SplEssSurj (group_precomp B grp_homo_id)		goal 2 (ID 188) is:	 forall x y : A $-> B,	 group_precomp B grp_homo_id x $== group_precomp B grp_homo_id y -> x $== y	";
             responses[i]=data;
           
 
             i = 466;
-            data = "1 goal (ID 73)	  	  A, B : AbGroup	  ============================	  SplEssSurj (group_precomp B grp_homo_id)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 74) is:	 forall x y : A $-> B,	 group_precomp B grp_homo_id x $== group_precomp B grp_homo_id y -> x $== y	";
+            data = "1 goal (ID 187)	  	  A, B : AbGroup	  ============================	  SplEssSurj (group_precomp B grp_homo_id)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 188) is:	 forall x y : A $-> B,	 group_precomp B grp_homo_id x $== group_precomp B grp_homo_id y -> x $== y	";
             responses[i]=data;
           
 
             i = 467;
-            data = "1 goal (ID 74)	  	  A, B : AbGroup	  ============================	  forall x y : A $-> B,	  group_precomp B grp_homo_id x $== group_precomp B grp_homo_id y -> x $== y	No more goals.	";
+            data = "1 goal (ID 188)	  	  A, B : AbGroup	  ============================	  forall x y : A $-> B,	  group_precomp B grp_homo_id x $== group_precomp B grp_homo_id y -> x $== y	No more goals.	";
             responses[i]=data;
           
 
@@ -2363,7 +2363,7 @@
           
 
             i = 469;
-            data = "1 goal (ID 77)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  IsEquiv eta	";
+            data = "1 goal (ID 191)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  IsEquiv eta	";
             responses[i]=data;
           
 
@@ -2373,22 +2373,22 @@
           
 
             i = 471;
-            data = "3 goals (ID 151)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  A -> B		goal 2 (ID 155) is:	 IsEquiv ?f	goal 3 (ID 157) is:	 ?f == eta	";
+            data = "3 goals (ID 265)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  A -> B		goal 2 (ID 269) is:	 IsEquiv ?f	goal 3 (ID 271) is:	 ?f == eta	";
             responses[i]=data;
           
 
             i = 472;
-            data = "1 goal (ID 151)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  A -> B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 155) is:	 IsEquiv (groupiso_isabelianization A B grp_homo_id eta)	goal 2 (ID 157) is:	 groupiso_isabelianization A B grp_homo_id eta == eta	";
+            data = "1 goal (ID 265)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  A -> B	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	2 goals		goal 1 (ID 269) is:	 IsEquiv (groupiso_isabelianization A B grp_homo_id eta)	goal 2 (ID 271) is:	 groupiso_isabelianization A B grp_homo_id eta == eta	";
             responses[i]=data;
           
 
             i = 473;
-            data = "1 goal (ID 155)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  IsEquiv (groupiso_isabelianization A B grp_homo_id eta)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 157) is:	 groupiso_isabelianization A B grp_homo_id eta == eta	";
+            data = "1 goal (ID 269)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  IsEquiv (groupiso_isabelianization A B grp_homo_id eta)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 271) is:	 groupiso_isabelianization A B grp_homo_id eta == eta	";
             responses[i]=data;
           
 
             i = 474;
-            data = "1 goal (ID 157)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  groupiso_isabelianization A B grp_homo_id eta == eta	No more goals.	";
+            data = "1 goal (ID 271)	  	  A, B : AbGroup	  eta : GroupHomomorphism A B	  isab : IsAbelianization B eta	  ============================	  groupiso_isabelianization A B grp_homo_id eta == eta	No more goals.	";
             responses[i]=data;
           
 
@@ -2636,7 +2636,7 @@ We locally define a map uncurry2 that lets us uncurry A * B * C -&gt; D twice.
       mouseover(133, '0_3_23');
       ">
   <span class="id" title="keyword">Local</span> <span class="id" title="keyword">Definition</span> <a id="uncurry2" class="idref" href="#uncurry2"><span class="id" title="definition">uncurry2</span></a> {<a id="A:10" class="idref" href="#A:10"><span class="id" title="binder">A</span></a> <a id="B:11" class="idref" href="#B:11"><span class="id" title="binder">B</span></a> <a id="C:12" class="idref" href="#C:12"><span class="id" title="binder">C</span></a> <a id="D:13" class="idref" href="#D:13"><span class="id" title="binder">D</span></a> : <span class="id" title="keyword">Type</span>}<br>
-    : <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#A:10"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#B:11"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#C:12"><span class="id" title="variable">C</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#D:13"><span class="id" title="variable">D</span></a><a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#A:10"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#B:11"><span class="id" title="variable">B</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#C:12"><span class="id" title="variable">C</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#D:13"><span class="id" title="variable">D</span></a>.</span><span class="command" onmouseout="
+    : <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#A:10"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#B:11"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#C:12"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#D:13"><span class="id" title="variable">D</span></a><a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#A:10"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#B:11"><span class="id" title="variable">B</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#C:12"><span class="id" title="variable">C</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#D:13"><span class="id" title="variable">D</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(134, '0_3_23');
@@ -2695,7 +2695,7 @@ We have a natural map from G to Abel G.
       " onmouseover="
       mouseover(147, '0_3_31');
       ">
-  <span class="id" title="keyword">Definition</span> <a id="ab" class="idref" href="#ab"><span class="id" title="definition">ab</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel.G"><span class="id" title="variable">G</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a id="ab" class="idref" href="#ab"><span class="id" title="definition">ab</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel.G"><span class="id" title="variable">G</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
       mouseover(148, '0_3_31');
@@ -2749,7 +2749,7 @@ This map satisfies the condition ab_comm.
       " onmouseover="
       mouseover(159, '0_3_35');
       "><br>
-    <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.HIT.Coeq.html#Coeq.cglue"><span class="id" title="axiom">cglue</span></a> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><span class="id" title="var">a</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">b</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">c</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.HIT.Coeq.html#Coeq.cglue"><span class="id" title="axiom">cglue</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><span class="id" title="var">a</span><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">b</span><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">c</span><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(160, '0_3_35');
@@ -2790,7 +2790,7 @@ We can derive the induction principle from the ones for truncation and the coequ
       " onmouseover="
       mouseover(170, '0_3_43');
       ">
-  <span class="id" title="keyword">Definition</span> <a id="Abel_ind" class="idref" href="#Abel_ind"><span class="id" title="definition">Abel_ind</span></a> (<a id="P:23" class="idref" href="#P:23"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">∀</span></a> <a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">x</span></a><a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">,</span></a> <a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">IsHSet</span></a> <a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">(</span></a><a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">P</span></a> <a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">x</span></a><a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">)</span></a>} <br>
+  <span class="id" title="keyword">Definition</span> <a id="Abel_ind" class="idref" href="#Abel_ind"><span class="id" title="definition">Abel_ind</span></a> (<a id="P:23" class="idref" href="#P:23"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">∀</span></a> <a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">x</span></a><a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">,</span></a> <a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">IsHSet</span></a> <a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">(</span></a><a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">P</span></a> <a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">x</span></a><a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">)</span></a>} <br>
     (<a id="a:27" class="idref" href="#a:27"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:26" class="idref" href="#x:26"><span class="id" title="binder">x</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:23"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#ab"><span class="id" title="definition">ab</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:26"><span class="id" title="variable">x</span></a>)) (<a id="c:31" class="idref" href="#c:31"><span class="id" title="binder">c</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:28" class="idref" href="#x:28"><span class="id" title="binder">x</span></a> <a id="y:29" class="idref" href="#y:29"><span class="id" title="binder">y</span></a> <a id="z:30" class="idref" href="#z:30"><span class="id" title="binder">z</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#DPath"><span class="id" title="definition">DPath</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:23"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#ab_comm"><span class="id" title="definition">ab_comm</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:28"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#y:29"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#z:30"><span class="id" title="variable">z</span></a>)<br>
       (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#a:27"><span class="id" title="variable">a</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:28"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#y:29"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#z:30"><span class="id" title="variable">z</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">)</span></a>)) (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#a:27"><span class="id" title="variable">a</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:28"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#z:30"><span class="id" title="variable">z</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#y:29"><span class="id" title="variable">y</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">)</span></a>)))<br>
     : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="x:32" class="idref" href="#x:32"><span class="id" title="binder">x</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:23"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:32"><span class="id" title="variable">x</span></a>.</span><span class="command" onmouseout="
@@ -2856,7 +2856,7 @@ The computation rule can also be proven.
       " onmouseover="
       mouseover(184, '0_3_47');
       ">
-  <span class="id" title="keyword">Definition</span> <a id="Abel_ind_beta_ab_comm" class="idref" href="#Abel_ind_beta_ab_comm"><span class="id" title="definition">Abel_ind_beta_ab_comm</span></a> (<a id="P:33" class="idref" href="#P:33"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
+  <span class="id" title="keyword">Definition</span> <a id="Abel_ind_beta_ab_comm" class="idref" href="#Abel_ind_beta_ab_comm"><span class="id" title="definition">Abel_ind_beta_ab_comm</span></a> (<a id="P:33" class="idref" href="#P:33"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>)<br>
     `{<a id="H:35" class="idref" href="#H:35"><span class="id" title="binder">∀</span></a> <a id="H:35" class="idref" href="#H:35"><span class="id" title="binder">x</span></a><a id="H:35" class="idref" href="#H:35"><span class="id" title="binder">,</span></a> <a id="H:35" class="idref" href="#H:35"><span class="id" title="binder">IsHSet</span></a> <a id="H:35" class="idref" href="#H:35"><span class="id" title="binder">(</span></a><a id="H:35" class="idref" href="#H:35"><span class="id" title="binder">P</span></a> <a id="H:35" class="idref" href="#H:35"><span class="id" title="binder">x</span></a><a id="H:35" class="idref" href="#H:35"><span class="id" title="binder">)</span></a>}(<a id="a:37" class="idref" href="#a:37"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:36" class="idref" href="#x:36"><span class="id" title="binder">x</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:33"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#ab"><span class="id" title="definition">ab</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:36"><span class="id" title="variable">x</span></a>))<br>
     (<a id="c:41" class="idref" href="#c:41"><span class="id" title="binder">c</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:38" class="idref" href="#x:38"><span class="id" title="binder">x</span></a> <a id="y:39" class="idref" href="#y:39"><span class="id" title="binder">y</span></a> <a id="z:40" class="idref" href="#z:40"><span class="id" title="binder">z</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Cubical.DPath.html#DPath"><span class="id" title="definition">DPath</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:33"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#ab_comm"><span class="id" title="definition">ab_comm</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:38"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#y:39"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#z:40"><span class="id" title="variable">z</span></a>)<br>
       (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#a:37"><span class="id" title="variable">a</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:38"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#y:39"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#z:40"><span class="id" title="variable">z</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">)</span></a>)) (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#a:37"><span class="id" title="variable">a</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:38"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#z:40"><span class="id" title="variable">z</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#y:39"><span class="id" title="variable">y</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">)</span></a>)))<br>
@@ -2880,7 +2880,7 @@ The computation rule can also be proven.
       " onmouseover="
       mouseover(188, '0_3_47');
       "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.HIT.Coeq.html#Coeq.Coeq_ind_beta_cglue"><span class="id" title="axiom">Coeq_ind_beta_cglue</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><span class="id" title="var">x</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">y</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">z</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Overture.html#ap"><span class="id" title="definition">ap</span></a> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.HIT.Coeq.html#Coeq.Coeq_ind_beta_cglue"><span class="id" title="axiom">Coeq_ind_beta_cglue</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><span class="id" title="var">x</span><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">y</span><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <span class="id" title="var">z</span><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#da4283005a63bc086811fc2e64b35356"><span class="id" title="notation">@</span></a> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(189, '0_3_47');
@@ -2908,9 +2908,9 @@ We also have a recursion princple.
       " onmouseover="
       mouseover(195, '0_3_51');
       ">
-  <span class="id" title="keyword">Definition</span> <a id="Abel_rec" class="idref" href="#Abel_rec"><span class="id" title="definition">Abel_rec</span></a> (<a id="P:45" class="idref" href="#P:45"><span class="id" title="binder">P</span></a> : <span class="id" title="keyword">Type</span>) `{<a id="IsHSet0:46" class="idref" href="#IsHSet0:46"><span class="id" title="binder">IsHSet</span></a> <a id="IsHSet0:46" class="idref" href="#IsHSet0:46"><span class="id" title="binder">P</span></a>} (<a id="a:47" class="idref" href="#a:47"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel.G"><span class="id" title="variable">G</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:45"><span class="id" title="variable">P</span></a>)<br>
+  <span class="id" title="keyword">Definition</span> <a id="Abel_rec" class="idref" href="#Abel_rec"><span class="id" title="definition">Abel_rec</span></a> (<a id="P:45" class="idref" href="#P:45"><span class="id" title="binder">P</span></a> : <span class="id" title="keyword">Type</span>) `{<a id="IsHSet0:46" class="idref" href="#IsHSet0:46"><span class="id" title="binder">IsHSet</span></a> <a id="IsHSet0:46" class="idref" href="#IsHSet0:46"><span class="id" title="binder">P</span></a>} (<a id="a:47" class="idref" href="#a:47"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel.G"><span class="id" title="variable">G</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:45"><span class="id" title="variable">P</span></a>)<br>
     (<a id="c:51" class="idref" href="#c:51"><span class="id" title="binder">c</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:48" class="idref" href="#x:48"><span class="id" title="binder">x</span></a> <a id="y:49" class="idref" href="#y:49"><span class="id" title="binder">y</span></a> <a id="z:50" class="idref" href="#z:50"><span class="id" title="binder">z</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#a:47"><span class="id" title="variable">a</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:48"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#y:49"><span class="id" title="variable">y</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#z:50"><span class="id" title="variable">z</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">)</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#a:47"><span class="id" title="variable">a</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:48"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#z:50"><span class="id" title="variable">z</span></a> <a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#y:49"><span class="id" title="variable">y</span></a><a class="idref" href="HoTT.Classes.interfaces.canonical_names.html#601809684726b80a51fcd53b156c93ba"><span class="id" title="notation">)</span></a>))<br>
-    : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:45"><span class="id" title="variable">P</span></a>.</span><span class="command" onmouseout="
+    : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:45"><span class="id" title="variable">P</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(196, '0_3_51');
@@ -2948,7 +2948,7 @@ Here is a simpler version of Abel_ind when our target is an HProp. This lets us 
       " onmouseover="
       mouseover(204, '0_3_55');
       ">
-  <span class="id" title="keyword">Definition</span> <a id="Abel_ind_hprop" class="idref" href="#Abel_ind_hprop"><span class="id" title="definition">Abel_ind_hprop</span></a> (<a id="P:52" class="idref" href="#P:52"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">∀</span></a> <a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">x</span></a><a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">,</span></a> <a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">IsHProp</span></a> <a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">(</span></a><a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">P</span></a> <a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">x</span></a><a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">)</span></a>} <br>
+  <span class="id" title="keyword">Definition</span> <a id="Abel_ind_hprop" class="idref" href="#Abel_ind_hprop"><span class="id" title="definition">Abel_ind_hprop</span></a> (<a id="P:52" class="idref" href="#P:52"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">∀</span></a> <a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">x</span></a><a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">,</span></a> <a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">IsHProp</span></a> <a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">(</span></a><a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">P</span></a> <a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">x</span></a><a id="H:54" class="idref" href="#H:54"><span class="id" title="binder">)</span></a>} <br>
     (<a id="a:56" class="idref" href="#a:56"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a id="x:55" class="idref" href="#x:55"><span class="id" title="binder">x</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:52"><span class="id" title="variable">P</span></a> (<a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#ab"><span class="id" title="definition">ab</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:55"><span class="id" title="variable">x</span></a>)) : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="x:57" class="idref" href="#x:57"><span class="id" title="binder">x</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:52"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#x:57"><span class="id" title="variable">x</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_55');
       " onmouseover="
@@ -2993,7 +2993,7 @@ And its recursion version.
       mouseover(214, '0_3_59');
       ">
   <span class="id" title="keyword">Definition</span> <a id="Abel_rec_hprop" class="idref" href="#Abel_rec_hprop"><span class="id" title="definition">Abel_rec_hprop</span></a> (<a id="P:58" class="idref" href="#P:58"><span class="id" title="binder">P</span></a> : <span class="id" title="keyword">Type</span>) `{<a id="IsHProp0:59" class="idref" href="#IsHProp0:59"><span class="id" title="binder">IsHProp</span></a> <a id="IsHProp0:59" class="idref" href="#IsHProp0:59"><span class="id" title="binder">P</span></a>}<br>
-    (<a id="a:60" class="idref" href="#a:60"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel.G"><span class="id" title="variable">G</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:58"><span class="id" title="variable">P</span></a>) : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:58"><span class="id" title="variable">P</span></a>.</span><span class="command" onmouseout="
+    (<a id="a:60" class="idref" href="#a:60"><span class="id" title="binder">a</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel.G"><span class="id" title="variable">G</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:58"><span class="id" title="variable">P</span></a>) : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#Abel"><span class="id" title="definition">Abel</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#P:58"><span class="id" title="variable">P</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_59');
       " onmouseover="
       mouseover(215, '0_3_59');
@@ -3748,7 +3748,7 @@ Now we finally check that our definition of abelianization satisfies the univers
       " onmouseover="
       mouseover(395, '0_3_127');
       ">
-<span class="id" title="keyword">Definition</span> <a id="abel" class="idref" href="#abel"><span class="id" title="definition">abel</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Definition</span> <a id="abel" class="idref" href="#abel"><span class="id" title="definition">abel</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_127');
       " onmouseover="
       mouseover(396, '0_3_127');
@@ -4051,7 +4051,7 @@ Hence any abelianization is surjective.
       ">
 <span class="id" title="keyword">Global Instance</span> <a id="issurj_isabelianization" class="idref" href="#issurj_isabelianization"><span class="id" title="instance">issurj_isabelianization</span></a> {<a id="G:79" class="idref" href="#G:79"><span class="id" title="binder">G</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#Group"><span class="id" title="record">Group</span></a>}<br>
   (<a id="A:80" class="idref" href="#A:80"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Algebra.AbGroups.AbelianGroup.html#AbGroup"><span class="id" title="record">AbGroup</span></a>) (<a id="eta:81" class="idref" href="#eta:81"><span class="id" title="binder">eta</span></a> : <a class="idref" href="HoTT.Algebra.Groups.Group.html#GroupHomomorphism"><span class="id" title="record">GroupHomomorphism</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#G:79"><span class="id" title="variable">G</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#A:80"><span class="id" title="variable">A</span></a>)<br>
-  : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#IsAbelianization"><span class="id" title="class">IsAbelianization</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#A:80"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#eta:81"><span class="id" title="variable">eta</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Truncations.Core.html#IsSurjection"><span class="id" title="abbreviation">IsSurjection</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#eta:81"><span class="id" title="variable">eta</span></a>.</span><span class="command" onmouseout="
+  : <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#IsAbelianization"><span class="id" title="class">IsAbelianization</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#A:80"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#eta:81"><span class="id" title="variable">eta</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Truncations.Core.html#IsSurjection"><span class="id" title="abbreviation">IsSurjection</span></a> <a class="idref" href="HoTT.Algebra.AbGroups.Abelianization.html#eta:81"><span class="id" title="variable">eta</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_139');
       " onmouseover="
       mouseover(457, '0_3_139');

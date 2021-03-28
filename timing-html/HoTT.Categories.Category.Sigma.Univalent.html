@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 1
-Time: 0.031s">
-<div class="time" style="width: 4.5722713864307%"></div>
+Time: 0.043s">
+<div class="time" style="width: 7.0607553366174%"></div>
 <pre>Require Import Category.Core Category.Morphisms.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -50,14 +50,14 @@ Require Import Category.Univalent.</pre>
 <div class="code" title="File: Univalent.v
 Line: 2
 Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 Require Import Category.Sigma.Core Category.Sigma.OnObjects Category.Sigma.OnMorphisms.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 3
-Time: 0.004s">
-<div class="time" style="width: 0.58997050147493%"></div>
+Time: 0.009s">
+<div class="time" style="width: 1.4778325123153%"></div>
 <pre>
 Require Import HoTT.Types HoTT.Basics HoTT.Tactics.</pre>
 </div>
@@ -157,12 +157,12 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 26
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
-  Global Instance iscategory_sigT_obj `{forall a, IsHProp (Pobj a), A_cat : IsCategory A}
-  : IsCategory (sigT_obj A Pobj).</pre>
+  Global Instance iscategory_sig_obj `{forall a, IsHProp (Pobj a), A_cat : IsCategory A}
+  : IsCategory (sig_obj A Pobj).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 29
@@ -195,10 +195,10 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 33
 Time: 0.066s">
-<div class="time" style="width: 9.7345132743363%"></div>
+<div class="time" style="width: 10.837438423645%"></div>
 <pre>
     refine (isequiv_homotopic
-              ((issig_full_isomorphic (sigT_obj A Pobj) _ _ o (issig_full_isomorphic A _ _)^-1)
+              ((issig_full_isomorphic (sig_obj A Pobj) _ _ o (issig_full_isomorphic A _ _)^-1)
                  o (@idtoiso A s.1 d.1)
                  o pr1_path)
               _).</pre>
@@ -206,21 +206,21 @@ Time: 0.066s">
 <div class="code" title="File: Univalent.v
 Line: 38
 Time: 0.004s">
-<div class="time" style="width: 0.58997050147493%"></div>
+<div class="time" style="width: 0.6568144499179%"></div>
 <pre>
     intro x; destruct x.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 39
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
     reflexivity.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 40
-Time: 0.028s">
-<div class="time" style="width: 4.1297935103245%"></div>
+Time: 0.029s">
+<div class="time" style="width: 4.7619047619048%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -234,8 +234,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 43
-Time: 0.006s">
-<div class="time" style="width: 0.88495575221239%"></div>
+Time: 0.007s">
+<div class="time" style="width: 1.1494252873563%"></div>
 <pre>End onobjects.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -316,8 +316,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 59
-Time: 0.012s">
-<div class="time" style="width: 1.7699115044248%"></div>
+Time: 0.011s">
+<div class="time" style="width: 1.8062397372742%"></div>
 <pre>
 
   Hypothesis P_associativity
@@ -327,7 +327,7 @@ Time: 0.012s">
 <div class="code" title="File: Univalent.v
 Line: 63
 Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 
   Hypothesis P_left_identity
@@ -336,8 +336,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 67
-Time: 0.003s">
-<div class="time" style="width: 0.44247787610619%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 
   Hypothesis P_right_identity
@@ -350,7 +350,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  Local Notation A' := (@sigT_mor A Pmor HPmor Pidentity Pcompose P_associativity P_left_identity P_right_identity).</pre>
+  Local Notation A' := (@sig_mor' A Pmor HPmor Pidentity Pcompose P_associativity P_left_identity P_right_identity).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 73
@@ -365,17 +365,17 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 78
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>Context `{forall s d m, IsIsomorphism m -&gt; Contr (Pmor s d m)}.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 78
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
-  Definition iscategory_sigT_mor_helper {s d}
+  Definition iscategory_sig_mor_helper {s d}
   : @Isomorphic A' s d -&gt; @Isomorphic A s d.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -387,15 +387,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 82
-Time: 0.178s">
-<div class="time" style="width: 26.253687315634%"></div>
+Time: 0.167s">
+<div class="time" style="width: 27.422003284072%"></div>
 <pre>
     refine ((issig_full_isomorphic A _ _) o _ o (issig_full_isomorphic A' _ _)^-1).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 83
-Time: 0.007s">
-<div class="time" style="width: 1.0324483775811%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.98522167487685%"></div>
 <pre>
     exact (functor_sigma
              pr1_type
@@ -409,19 +409,19 @@ Time: 0.007s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 92
-Time: 0.019s">
-<div class="time" style="width: 2.8023598820059%"></div>
+Time: 0.017s">
+<div class="time" style="width: 2.7914614121511%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 93
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
-  Local Instance isequiv_iscategory_sigT_mor_helper s d
-  : IsEquiv (@iscategory_sigT_mor_helper s d).</pre>
+  Local Instance isequiv_iscategory_sig_mor_helper s d
+  : IsEquiv (@iscategory_sig_mor_helper s d).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 96
@@ -432,8 +432,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 97
-Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
     simple refine (isequiv_adjointify _ _ _ _).</pre>
 </div>
@@ -452,15 +452,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 99
-Time: 0.017s">
-<div class="time" style="width: 2.5073746312684%"></div>
+Time: 0.014s">
+<div class="time" style="width: 2.2988505747126%"></div>
 <pre>
       exists (e : morphism _ _ _; center _).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 100
-Time: 0.056s">
-<div class="time" style="width: 8.259587020649%"></div>
+Time: 0.046s">
+<div class="time" style="width: 7.5533661740558%"></div>
 <pre>
       exists (e^-1%morphism; center _);
         simple refine (path_sigma _ _ _ _ _);
@@ -483,8 +483,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 106
-Time: 0.005s">
-<div class="time" style="width: 0.73746312684366%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.6568144499179%"></div>
 <pre> intro; by apply path_isomorphic.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -503,13 +503,13 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre> intros x; apply path_isomorphic.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
       exact (path_sigma' _ 1 (contr _)).</pre>
 </div>
@@ -521,18 +521,18 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 108
-Time: 0.049s">
-<div class="time" style="width: 7.2271386430678%"></div>
+Time: 0.036s">
+<div class="time" style="width: 5.9113300492611%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 109
-Time: 0.003s">
-<div class="time" style="width: 0.44247787610619%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 
-  Global Instance iscategory_sigT_mor `{A_cat : IsCategory A}
+  Global Instance iscategory_sig_mor `{A_cat : IsCategory A}
   : IsCategory A'.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -559,40 +559,40 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 116
-Time: 0.022s">
-<div class="time" style="width: 3.2448377581121%"></div>
+Time: 0.019s">
+<div class="time" style="width: 3.11986863711%"></div>
 <pre>refine (isequiv_homotopic
-              (equiv_compose iscategory_sigT_mor_helper^-1 (@idtoiso _ _ _))
+              (equiv_compose iscategory_sig_mor_helper^-1 (@idtoiso _ _ _))
               _).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 118
 Time: 0.013s">
-<div class="time" style="width: 1.9174041297935%"></div>
+<div class="time" style="width: 2.1346469622332%"></div>
 <pre>
     intro x; apply path_isomorphic; cbn.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 119
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
     destruct x; refine (path_sigma' _ 1 (contr _)).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 120
-Time: 0.007s">
-<div class="time" style="width: 1.0324483775811%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.98522167487685%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 121
 Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 
-  Definition iscategory_from_sigT_mor `{A'_cat : IsCategory A'}
+  Definition iscategory_from_sig_mor `{A'_cat : IsCategory A'}
   : IsCategory A.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -611,43 +611,43 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 126
-Time: 0.092s">
-<div class="time" style="width: 13.569321533923%"></div>
+Time: 0.077s">
+<div class="time" style="width: 12.64367816092%"></div>
 <pre>
     refine (isequiv_homotopic
-              (iscategory_sigT_mor_helper
+              (iscategory_sig_mor_helper
                  o (@idtoiso A' _ _))
               _).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 130
 Time: 0.036s">
-<div class="time" style="width: 5.3097345132743%"></div>
+<div class="time" style="width: 5.9113300492611%"></div>
 <pre>
     intro x; apply path_isomorphic; cbn.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 131
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
     destruct x; reflexivity.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 132
-Time: 0.011s">
-<div class="time" style="width: 1.622418879056%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.3136288998358%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 133
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
 
-  Global Instance isequiv_iscategory_sigT_mor `{Funext}
-  : IsEquiv (@iscategory_sigT_mor).</pre>
+  Global Instance isequiv_iscategory_sig_mor `{Funext}
+  : IsEquiv (@iscategory_sig_mor).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 136
@@ -658,22 +658,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 137
-Time: 0.035s">
-<div class="time" style="width: 5.1622418879056%"></div>
+Time: 0.032s">
+<div class="time" style="width: 5.2545155993432%"></div>
 <pre>
-    refine (isequiv_iff_hprop _ (@iscategory_from_sigT_mor)).</pre>
+    refine (isequiv_iff_hprop _ (@iscategory_from_sig_mor)).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 138
-Time: 0.005s">
-<div class="time" style="width: 0.73746312684366%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.6568144499179%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 139
 Time: 0.013s">
-<div class="time" style="width: 1.9174041297935%"></div>
+<div class="time" style="width: 2.1346469622332%"></div>
 <pre>
 End onmorphisms.</pre>
 </div>
@@ -771,8 +771,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 160
-Time: 0.009s">
-<div class="time" style="width: 1.3274336283186%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.3136288998358%"></div>
 <pre>
 
   Hypothesis P_associativity
@@ -782,7 +782,7 @@ Time: 0.009s">
 <div class="code" title="File: Univalent.v
 Line: 164
 Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 
   Hypothesis P_left_identity
@@ -792,7 +792,7 @@ Time: 0.002s">
 <div class="code" title="File: Univalent.v
 Line: 168
 Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 
   Hypothesis P_right_identity
@@ -805,7 +805,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-  Local Notation A' := (@sigT A Pobj Pmor HPmor Pidentity Pcompose P_associativity P_left_identity P_right_identity).</pre>
+  Local Notation A' := (@sig' A Pobj Pmor HPmor Pidentity Pcompose P_associativity P_left_identity P_right_identity).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 174
@@ -821,7 +821,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 179
 Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>Local Definition Pmor_iso_T s d m m' left right :=
     ({ e : Pmor s d m
      | { e' : Pmor d s m'
@@ -839,7 +839,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 185
 Time: 0.004s">
-<div class="time" style="width: 0.58997050147493%"></div>
+<div class="time" style="width: 0.6568144499179%"></div>
 <pre>
 
   Local Definition Pmor_iso_T' x (xp xp' : Pobj x)
@@ -888,22 +888,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 199
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.82101806239737%"></div>
 <pre>
     exists (Pidentity _).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 200
-Time: 0.005s">
-<div class="time" style="width: 0.73746312684366%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
     split; reflexivity.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 201
 Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -953,8 +953,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 210
-Time: 0.016s">
-<div class="time" style="width: 2.3598820058997%"></div>
+Time: 0.014s">
+<div class="time" style="width: 2.2988505747126%"></div>
 <pre>
     let H := constr:(_ : forall x y : mor s d, IsHProp (x = y)) in
     pose proof (@path_ishprop _ (H (m; p) (m; q))) as H'.</pre>
@@ -968,8 +968,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 213
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     specialize (H' (path_sigma' _ 1 x) (path_sigma' _ 1 y)).</pre>
 </div>
@@ -982,36 +982,36 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 215
-Time: 0.678s">
+Time: 0.609s">
 <div class="time" style="width: 100%"></div>
 <pre>
     apply (ap (path_sigma_uncurried (Pmor s d) (m; p) (m; q)))^-1 in H'.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 216
-Time: 0.046s">
-<div class="time" style="width: 6.7846607669617%"></div>
+Time: 0.042s">
+<div class="time" style="width: 6.8965517241379%"></div>
 <pre>
     assert (H'' : H'..1 = idpath) by apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 217
-Time: 0.004s">
-<div class="time" style="width: 0.58997050147493%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.49261083743842%"></div>
 <pre>
     exact (transport (fun H'1 =&gt; transport _ H'1 _ = _) H'' H'..2).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 218
-Time: 0.009s">
-<div class="time" style="width: 1.3274336283186%"></div>
+Time: 0.008s">
+<div class="time" style="width: 1.3136288998358%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 219
-Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
 
   Local Definition Pmor_iso_adjust x xp xp'
@@ -1041,8 +1041,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 226
-Time: 0.186s">
-<div class="time" style="width: 27.433628318584%"></div>
+Time: 0.158s">
+<div class="time" style="width: 25.944170771757%"></div>
 <pre>
     refine (equiv_functor_sigma' (equiv_iff_hprop _ _) (fun _ =&gt; equiv_iff_hprop _ _));
       cbn; intro H';
@@ -1055,8 +1055,8 @@ Time: 0.186s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 234
-Time: 0.097s">
-<div class="time" style="width: 14.306784660767%"></div>
+Time: 0.081s">
+<div class="time" style="width: 13.300492610837%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1070,8 +1070,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 237
-Time: 0.003s">
-<div class="time" style="width: 0.44247787610619%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 
   Local Definition iso_A'_code {s d}
@@ -1095,8 +1095,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 244
-Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
     simple refine (_; _).</pre>
 </div>
@@ -1109,14 +1109,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 246
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exists (e : morphism _ _ _).1.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 246
 Time: 0.003s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.49261083743842%"></div>
 <pre>
       exists (e^-1%morphism).1.</pre>
 </div>
@@ -1129,8 +1129,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 248
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (@left_inverse _ _ _ e e)..1.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -1142,8 +1142,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 249
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact (@right_inverse _ _ _ e e)..1.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -1162,27 +1162,27 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 250
 Time: 0.006s">
-<div class="time" style="width: 0.88495575221239%"></div>
+<div class="time" style="width: 0.98522167487685%"></div>
 <pre> exists (e : morphism _ _ _).2.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 250
 Time: 0.003s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.49261083743842%"></div>
 <pre>
       exists (e^-1%morphism).2; cbn.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 251
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
       exists (((@left_inverse _ _ _ e e))..2).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 252
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
       exact (@right_inverse _ _ _ e e)..2.</pre>
 </div>
@@ -1194,15 +1194,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 253
-Time: 0.091s">
-<div class="time" style="width: 13.421828908555%"></div>
+Time: 0.083s">
+<div class="time" style="width: 13.628899835796%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 254
 Time: 0.003s">
-<div class="time" style="width: 0.44247787610619%"></div>
+<div class="time" style="width: 0.49261083743842%"></div>
 <pre>
 
   Local Definition iso_A'_decode_helper {s d}
@@ -1246,8 +1246,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 263
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> refine (path_sigma' _ left_inverse e.2.2.2.1).</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -1278,14 +1278,14 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 264
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 265
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
 
   Local Definition iso_A'_decode {s d}
@@ -1344,7 +1344,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 276
 Time: 0.007s">
-<div class="time" style="width: 1.0324483775811%"></div>
+<div class="time" style="width: 1.1494252873563%"></div>
 <pre>
 
   Local Definition equiv_iso_A'_eisretr_helper {s d}
@@ -1365,8 +1365,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 286
-Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     simple refine (path_sigma _ _ _ _ _); cycle 1.</pre>
 </div>
@@ -1380,15 +1380,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 289
-Time: 0.133s">
-<div class="time" style="width: 19.616519174041%"></div>
+Time: 0.088s">
+<div class="time" style="width: 14.449917898194%"></div>
 <pre>1:pose @trunc_sigma; pose @istrunc_paths;
       simple refine (path_sigma _ _ _ _ (path_ishprop _ _)).</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 290
-Time: 0.256s">
-<div class="time" style="width: 37.758112094395%"></div>
+Time: 0.212s">
+<div class="time" style="width: 34.811165845649%"></div>
 <pre>
     all:repeat match goal with
                  | [ |- (transport ?P ?p ?z).1 = _ ] =&gt; rewrite (@ap_transport _ P _ _ _ p (fun _ x =&gt; x.1))
@@ -1410,15 +1410,15 @@ Time: 0.256s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 307
-Time: 0.132s">
-<div class="time" style="width: 19.469026548673%"></div>
+Time: 0.114s">
+<div class="time" style="width: 18.71921182266%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 308
-Time: 0.003s">
-<div class="time" style="width: 0.44247787610619%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 
   Local Definition equiv_iso_A' {s d}
@@ -1488,8 +1488,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 319
-Time: 0.006s">
-<div class="time" style="width: 0.88495575221239%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.82101806239737%"></div>
 <pre> apply equiv_iso_A'_eisretr_helper.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -1539,8 +1539,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 322
-Time: 0.007s">
-<div class="time" style="width: 1.0324483775811%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.82101806239737%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -1562,11 +1562,11 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 327
-Time: 0.003s">
-<div class="time" style="width: 0.44247787610619%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
 
-  Global Instance iscategory_sigT `{A_cat : IsCategory A}
+  Global Instance iscategory_sig `{A_cat : IsCategory A}
   : IsCategory A'.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -1585,8 +1585,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 332
-Time: 0.077s">
-<div class="time" style="width: 11.356932153392%"></div>
+Time: 0.065s">
+<div class="time" style="width: 10.673234811166%"></div>
 <pre>
     simple notypeclasses refine (isequiv_homotopic
               ((equiv_iso_A'^-1)
@@ -1630,7 +1630,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 340
 Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre> destruct s as [s0 s1], d as [d0 d1]; cbn.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -1642,8 +1642,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 341
-Time: 0.045s">
-<div class="time" style="width: 6.6371681415929%"></div>
+Time: 0.041s">
+<div class="time" style="width: 6.7323481116585%"></div>
 <pre>
       refine ((@Pmor_iso_adjust s0 s1 d1)^-1 o _).</pre>
 </div>
@@ -1677,7 +1677,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 345
 Time: 0.002s">
-<div class="time" style="width: 0.29498525073746%"></div>
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>nrefine isequiv_compose.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -1714,8 +1714,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 347
-Time: 0.003s">
-<div class="time" style="width: 0.44247787610619%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.32840722495895%"></div>
 <pre>
       destruct s, d.</pre>
 </div>
@@ -1729,7 +1729,7 @@ Time: 0s">
 <div class="code" title="File: Univalent.v
 Line: 349
 Time: 0.001s">
-<div class="time" style="width: 0.14749262536873%"></div>
+<div class="time" style="width: 0.16420361247947%"></div>
 <pre>
       intro p; destruct p.</pre>
 </div>
@@ -1781,8 +1781,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 354
-Time: 0.005s">
-<div class="time" style="width: 0.73746312684366%"></div>
+Time: 0.003s">
+<div class="time" style="width: 0.49261083743842%"></div>
 <pre> intro p; apply path_isomorphic; destruct p.</pre>
 </div>
 <div class="code" title="File: Univalent.v
@@ -1800,15 +1800,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Univalent.v
 Line: 355
-Time: 0.037s">
-<div class="time" style="width: 5.4572271386431%"></div>
+Time: 0.028s">
+<div class="time" style="width: 4.5977011494253%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Univalent.v
 Line: 356
-Time: 0.142s">
-<div class="time" style="width: 20.94395280236%"></div>
+Time: 0.108s">
+<div class="time" style="width: 17.733990147783%"></div>
 <pre>
 End on_both.</pre>
 </div>

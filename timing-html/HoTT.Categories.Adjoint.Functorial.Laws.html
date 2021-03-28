@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 1
-Time: 0.006s">
-<div class="time" style="width: 0.37243947858473%"></div>
+Time: 0.015s">
+<div class="time" style="width: 1.1278195488722%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: Laws.v
@@ -49,8 +49,8 @@ Require Import Functor.Identity Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 2
-Time: 0.021s">
-<div class="time" style="width: 1.3035381750466%"></div>
+Time: 0.024s">
+<div class="time" style="width: 1.8045112781955%"></div>
 <pre>
 Require Import NaturalTransformation.Composition.Core NaturalTransformation.Composition.Laws.</pre>
 </div>
@@ -71,7 +71,7 @@ Require Import NaturalTransformation.Paths.</pre>
 <div class="code" title="File: Laws.v
 Line: 5
 Time: 0.003s">
-<div class="time" style="width: 0.18621973929236%"></div>
+<div class="time" style="width: 0.22556390977444%"></div>
 <pre>
 Require Import Functor.Dual NaturalTransformation.Dual Category.Dual.</pre>
 </div>
@@ -99,7 +99,7 @@ Require Import Adjoint.Functorial.Parts.</pre>
 <div class="code" title="File: Laws.v
 Line: 9
 Time: 0.003s">
-<div class="time" style="width: 0.18621973929236%"></div>
+<div class="time" style="width: 0.22556390977444%"></div>
 <pre>
 Require Import HProp Types.Sigma HoTT.Tactics.</pre>
 </div>
@@ -108,32 +108,39 @@ Line: 10
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Set Universe Polymorphism.</pre>
+Require Import Basics.Tactics.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 12
+Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Implicit Arguments.</pre>
+
+Set Universe Polymorphism.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 13
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Generalizable All Variables.</pre>
+Set Implicit Arguments.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 14
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Asymmetric Patterns.</pre>
+Generalizable All Variables.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 15
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Set Asymmetric Patterns.</pre>
+</div>
+<div class="code" title="File: Laws.v
+Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -141,14 +148,14 @@ Time: 0s">
 Local Open Scope natural_transformation_scope.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 17
+Line: 18
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Local Open Scope morphism_scope.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 18
+Line: 19
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -156,7 +163,7 @@ Time: 0s">
 Section laws.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 20
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -167,7 +174,7 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 25
+Line: 26
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Ltac try_various_ways tac :=
@@ -178,7 +185,7 @@ Time: 0s">
                             progress try_associativity_quick tac ].</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 30
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -189,7 +196,7 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 35
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Ltac handle_laws' :=
@@ -207,7 +214,7 @@ Time: 0s">
     end.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 47
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -218,7 +225,7 @@ Time: 0s">
     repeat handle_laws'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 52
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -226,21 +233,21 @@ Time: 0s">
   Section left.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 54
+Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Local Arguments unit : simpl never.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 55
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Local Arguments counit : simpl never.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 56
+Line: 57
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -248,21 +255,21 @@ Time: 0s">
     Section identity_of.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 58
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 59
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variables C D : PreCategory.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 60
+Line: 61
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -270,23 +277,23 @@ Time: 0s">
       Variable G : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 62
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 63
+Line: 64
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A : F -| G.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 64
+Line: 65
 Time: 0.002s">
-<div class="time" style="width: 0.12414649286158%"></div>
+<div class="time" style="width: 0.15037593984962%"></div>
 <pre>
 
       Definition left_identity_of
@@ -295,61 +302,61 @@ Time: 0.002s">
              o (right_identity_natural_transformation_1 _))%natural_transformation.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 69
+Line: 70
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Proof.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 70
-Time: 0.048s">
-<div class="time" style="width: 2.9795158286778%"></div>
+Line: 71
+Time: 0.059s">
+<div class="time" style="width: 4.4360902255639%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 70
+Line: 71
 Time: 0.007s">
-<div class="time" style="width: 0.43451272501552%"></div>
+<div class="time" style="width: 0.52631578947368%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 70
+Line: 71
 Time: 0.001s">
-<div class="time" style="width: 0.062073246430788%"></div>
+<div class="time" style="width: 0.075187969924812%"></div>
 <pre>
 
       Definition left_identity_of_nondep
       : @left_morphism_of_nondep C D G F A G F A 1 = 1%natural_transformation.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 73
+Line: 74
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Proof.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 74
-Time: 0.059s">
-<div class="time" style="width: 3.6623215394165%"></div>
+Line: 75
+Time: 0.056s">
+<div class="time" style="width: 4.2105263157895%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 74
-Time: 0.01s">
-<div class="time" style="width: 0.62073246430788%"></div>
+Line: 75
+Time: 0.009s">
+<div class="time" style="width: 0.67669172932331%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 74
+Line: 75
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     End identity_of.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 75
+Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -357,56 +364,56 @@ Time: 0s">
     Section composition_of_dep.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 77
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 78
+Line: 79
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variables C C' C'' : PreCategory.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 79
+Line: 80
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable CF : Functor C C'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 80
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable CF' : Functor C' C''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 81
+Line: 82
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variables D D' D'' : PreCategory.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 82
+Line: 83
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable DF : Functor D D'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 83
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable DF' : Functor D' D''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 84
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -414,77 +421,77 @@ Time: 0s">
       Variable G : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 86
+Line: 87
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 87
+Line: 88
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A : F -| G.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 88
+Line: 89
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G' : Functor D' C'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 89
+Line: 90
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F' : Functor C' D'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 90
+Line: 91
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A' : F' -| G'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 91
+Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G'' : Functor D'' C''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 92
+Line: 93
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F'' : Functor C'' D''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 93
+Line: 94
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A'' : F'' -| G''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 94
+Line: 95
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable T : NaturalTransformation (CF o G) (G' o DF).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 95
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 96
+Time: 0.001s">
+<div class="time" style="width: 0.075187969924812%"></div>
 <pre>
       Variable T' : NaturalTransformation (CF' o G') (G'' o DF').</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 96
+Line: 97
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -492,9 +499,9 @@ Time: 0s">
       Local Open Scope natural_transformation_scope.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 98
+Line: 99
 Time: 0.012s">
-<div class="time" style="width: 0.74487895716946%"></div>
+<div class="time" style="width: 0.90225563909774%"></div>
 <pre>
 
       Definition left_composition_of
@@ -513,33 +520,33 @@ Time: 0.012s">
             o (associator_2 _ _ _).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 113
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Proof.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 114
-Time: 0.922s">
-<div class="time" style="width: 57.231533209187%"></div>
+Line: 115
+Time: 0.794s">
+<div class="time" style="width: 59.699248120301%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 114
-Time: 0.101s">
-<div class="time" style="width: 6.2693978895096%"></div>
+Line: 115
+Time: 0.091s">
+<div class="time" style="width: 6.8421052631579%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 114
+Line: 115
 Time: 0.001s">
-<div class="time" style="width: 0.062073246430788%"></div>
+<div class="time" style="width: 0.075187969924812%"></div>
 <pre>
     End composition_of_dep.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 115
+Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -547,21 +554,21 @@ Time: 0s">
     Section composition_of.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 117
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 118
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variables C D : PreCategory.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 119
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -569,77 +576,77 @@ Time: 0s">
       Variable G : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 121
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 122
+Line: 123
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A : F -| G.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 123
+Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G' : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 124
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F' : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 125
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A' : F' -| G'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 126
+Line: 127
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G'' : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 127
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F'' : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 128
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A'' : F'' -| G''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 129
+Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable T : NaturalTransformation G G'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 130
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable T' : NaturalTransformation G' G''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 131
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -647,9 +654,9 @@ Time: 0s">
       Local Open Scope natural_transformation_scope.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 133
-Time: 0.002s">
-<div class="time" style="width: 0.12414649286158%"></div>
+Line: 134
+Time: 0.003s">
+<div class="time" style="width: 0.22556390977444%"></div>
 <pre>
 
       Definition left_composition_of_nondep
@@ -658,40 +665,40 @@ Time: 0.002s">
              o (left_morphism_of_nondep A' A'' T')).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 138
+Line: 139
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Proof.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 139
-Time: 0.657s">
-<div class="time" style="width: 40.782122905028%"></div>
+Line: 140
+Time: 0.562s">
+<div class="time" style="width: 42.255639097744%"></div>
 <pre> t.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 139
-Time: 0.065s">
-<div class="time" style="width: 4.0347610180012%"></div>
+Line: 140
+Time: 0.056s">
+<div class="time" style="width: 4.2105263157895%"></div>
 <pre> Qed.</pre>
-</div>
-<div class="code" title="File: Laws.v
-Line: 139
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    End composition_of.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  End left.</pre>
+    End composition_of.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 141
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  End left.</pre>
+</div>
+<div class="code" title="File: Laws.v
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -699,28 +706,28 @@ Time: 0s">
   Section right.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 143
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Section identity_of.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 144
+Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 145
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variables C D : PreCategory.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 146
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -728,23 +735,23 @@ Time: 0s">
       Variable F : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 148
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 149
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A : F -| G.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 150
-Time: 0.016s">
-<div class="time" style="width: 0.99317194289261%"></div>
+Line: 151
+Time: 0.015s">
+<div class="time" style="width: 1.1278195488722%"></div>
 <pre>
 
       Definition right_identity_of
@@ -755,9 +762,9 @@ Time: 0.016s">
               (@left_identity_of _ _ _ F^op G^op A^op).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 157
-Time: 0.006s">
-<div class="time" style="width: 0.37243947858473%"></div>
+Line: 158
+Time: 0.005s">
+<div class="time" style="width: 0.37593984962406%"></div>
 <pre>
 
       Definition right_identity_of_nondep
@@ -766,14 +773,14 @@ Time: 0.006s">
               (@left_identity_of_nondep _ _ _ F^op G^op A^op).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 162
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     End identity_of.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 163
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -781,56 +788,56 @@ Time: 0s">
     Section composition_of_dep.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 165
+Line: 166
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 166
+Line: 167
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variables C C' C'' : PreCategory.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 167
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable CF : Functor C C'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 168
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable CF' : Functor C' C''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 169
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variables D D' D'' : PreCategory.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 170
+Line: 171
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable DF : Functor D D'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 171
+Line: 172
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable DF' : Functor D' D''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 172
+Line: 173
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -838,77 +845,77 @@ Time: 0s">
       Variable F : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 174
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 175
+Line: 176
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A : F -| G.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 176
+Line: 177
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F' : Functor C' D'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 177
+Line: 178
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G' : Functor D' C'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 178
+Line: 179
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A' : F' -| G'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 179
+Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F'' : Functor C'' D''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 180
+Line: 181
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G'' : Functor D'' C''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 181
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A'' : F'' -| G''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 182
+Line: 183
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable T : NaturalTransformation (F' o CF) (DF o F).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 183
+Line: 184
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable T' : NaturalTransformation (F'' o CF') (DF' o F').</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 184
+Line: 185
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -916,7 +923,7 @@ Time: 0s">
       Local Open Scope natural_transformation_scope.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 186
+Line: 187
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -926,8 +933,8 @@ Time: 0s">
      </pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 190
-Time: 1.611s">
+Line: 191
+Time: 1.33s">
 <div class="time" style="width: 100%"></div>
 <pre>Definition right_composition_of
       : right_morphism_of
@@ -948,14 +955,14 @@ Time: 1.611s">
                  _ _ A^op _ _ A'^op _ _ A''^op T^op T'^op).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 206
+Line: 207
 Time: 0.003s">
-<div class="time" style="width: 0.18621973929236%"></div>
+<div class="time" style="width: 0.22556390977444%"></div>
 <pre>
     End composition_of_dep.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 207
+Line: 208
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -963,21 +970,21 @@ Time: 0s">
     Section composition_of.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 209
+Line: 210
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 210
+Line: 211
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variables C D : PreCategory.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 211
+Line: 212
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -985,77 +992,77 @@ Time: 0s">
       Variable F : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 213
+Line: 214
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 214
+Line: 215
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A : F -| G.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 215
+Line: 216
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F' : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 216
+Line: 217
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G' : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 217
+Line: 218
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A' : F' -| G'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 218
+Line: 219
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable F'' : Functor C D.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 219
+Line: 220
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable G'' : Functor D C.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 220
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable A'' : F'' -| G''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 221
+Line: 222
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable T : NaturalTransformation F F'.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 222
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       Variable T' : NaturalTransformation F' F''.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 223
+Line: 224
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1063,9 +1070,9 @@ Time: 0s">
       Local Open Scope natural_transformation_scope.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 225
-Time: 0.026s">
-<div class="time" style="width: 1.6139044072005%"></div>
+Line: 226
+Time: 0.025s">
+<div class="time" style="width: 1.8796992481203%"></div>
 <pre>
 
       Definition right_composition_of_nondep
@@ -1076,28 +1083,28 @@ Time: 0.026s">
               (@left_composition_of_nondep _ _ _ _ _ A''^op _ _ A'^op _ _ A^op T'^op T^op).</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 232
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 233
+Time: 0.001s">
+<div class="time" style="width: 0.075187969924812%"></div>
 <pre>
     End composition_of.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 233
+Line: 234
 Time: 0.001s">
-<div class="time" style="width: 0.062073246430788%"></div>
+<div class="time" style="width: 0.075187969924812%"></div>
 <pre>
   End right.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 234
+Line: 235
 Time: 0.005s">
-<div class="time" style="width: 0.31036623215394%"></div>
+<div class="time" style="width: 0.37593984962406%"></div>
 <pre>
 End laws.</pre>
 </div>
 <div class="code" title="File: Laws.v
-Line: 236
+Line: 237
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

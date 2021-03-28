@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.013s">
+Time: 0.028s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Basics.</pre>
 </div>
@@ -48,8 +48,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 7
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Inductive Pos : Type0 :=
   | xH : Pos
   | x0 : Pos -&gt; Pos
@@ -89,19 +89,17 @@ Line: 15
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Notation "p ~ 1" := (x1 p)
- (at level 7, left associativity, format "p '~' '1'") : positive_scope.</pre>
+Notation "p ~ 1" := (x1 p) : positive_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 17
+Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Notation "p ~ 0" := (x0 p)
- (at level 7, left associativity, format "p '~' '0'") : positive_scope.</pre>
+Notation "p ~ 0" := (x0 p) : positive_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 19
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -109,7 +107,7 @@ Time: 0s">
 Local Open Scope positive_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 21
+Line: 19
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -117,7 +115,7 @@ Time: 0s">
 (** ** Successor *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 23
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint pos_succ x :=
@@ -128,7 +126,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 28
+Line: 26
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -136,9 +134,9 @@ Time: 0s">
 (** Peano induction (due to Daniel Schepler) *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 30
+Line: 28
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Fixpoint pos_peano_ind (P : Pos -&gt; Type) (a : P 1)
   (f : forall p, P p -&gt; P (pos_succ p)) (p : Pos) : P p
   := let f2 := pos_peano_ind (fun p =&gt; P (p~0))
@@ -150,7 +148,7 @@ Time: 0.001s">
      end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 38
+Line: 36
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -158,7 +156,7 @@ Time: 0s">
 (** Computation rules for Peano induction *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 40
+Line: 38
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_peano_ind_beta_1 (P : Pos -&gt; Type) (a : P 1)
@@ -166,7 +164,7 @@ Time: 0s">
   : pos_peano_ind P a f 1 = a := idpath.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 42
+Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -176,49 +174,49 @@ Definition pos_peano_ind_beta_pos_succ (P : Pos -&gt; Type) (a : P 1)
   : pos_peano_ind P a f (pos_succ p) = f _ (pos_peano_ind P a f p).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 46
+Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 47
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   revert P a f.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 48
+Line: 46
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   induction p; trivial.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 49
+Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros P a f.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 50
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   srapply IHp.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 51
+Line: 49
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 52
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -228,7 +226,7 @@ Definition pos_peano_rec (P : Type)
   := pos_peano_ind (fun _ =&gt; P).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 56
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -239,7 +237,7 @@ Definition pos_peano_rec_beta_pos_succ (P : Type)
   := pos_peano_ind_beta_pos_succ (fun _ =&gt; P) a f p.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 61
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -249,7 +247,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 64
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition x0_inj {z w : Pos} (p : x0 z = x0 w) : z = w
@@ -257,7 +255,7 @@ Time: 0s">
     match s with xH =&gt; w | x0 a =&gt; a | x1 a =&gt; w end)) p idpath.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 66
+Line: 64
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -267,9 +265,9 @@ Definition x1_inj {z w : Pos} (p : x1 z = x1 w) : z = w
     match s with xH =&gt; w | x0 a =&gt; w | x1 a =&gt; a end)) p idpath.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 70
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 68
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Definition x0_neq_xH {z : Pos} : x0 z &lt;&gt; xH
@@ -277,9 +275,9 @@ Definition x0_neq_xH {z : Pos} : x0 z &lt;&gt; xH
     match s with xH =&gt; Empty | x0 a =&gt; z = a | x1 a =&gt; Empty end) p idpath.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 74
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 72
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition x1_neq_xH {z : Pos} : x1 z &lt;&gt; xH
@@ -287,9 +285,9 @@ Definition x1_neq_xH {z : Pos} : x1 z &lt;&gt; xH
     match s with xH =&gt; Empty | x0 a =&gt; Empty | x1 a =&gt; z = a end) p idpath.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 78
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 76
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Definition x0_neq_x1 {z w : Pos} : x0 z &lt;&gt; x1 w
@@ -297,34 +295,34 @@ Definition x0_neq_x1 {z w : Pos} : x0 z &lt;&gt; x1 w
     match s with xH =&gt; Empty | x0 a =&gt; z = a | x1 _ =&gt; Empty end) p idpath.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 82
+Line: 80
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Definition xH_neq_x0 {z : Pos} : xH &lt;&gt; x0 z
   := x0_neq_xH o symmetry _ _.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 85
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+Line: 83
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition xH_neq_x1 {z : Pos} : xH &lt;&gt; x1 z
   := x1_neq_xH o symmetry _ _.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 88
+Line: 86
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Definition x1_neq_x0 {z w : Pos} : x1 z &lt;&gt; x0 w
   := x0_neq_x1 o symmetry _ _.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 91
+Line: 89
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -334,25 +332,51 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 94
+Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance decpaths_pos : DecidablePaths Pos.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 94
+Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 95
+Line: 93
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   intros n; induction n as [|zn|on];
   intros m; induction m as [|zm|om].</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 95
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 96
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (inl idpath).</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 96
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 97
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (inr xH_neq_x0).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 97
@@ -365,7 +389,7 @@ Time: 0s">
 Line: 98
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> exact (inl idpath).</pre>
+<pre> exact (inr xH_neq_x1).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 98
@@ -378,7 +402,7 @@ Time: 0s">
 Line: 99
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> exact (inr xH_neq_x0).</pre>
+<pre> exact (inr x0_neq_xH).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 99
@@ -391,66 +415,66 @@ Time: 0s">
 Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> exact (inr xH_neq_x1).</pre>
+<pre> destruct (IHzn zm) as [p|q].</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 100
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 101
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (inr x0_neq_xH).</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 101
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  +</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 102
-Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
-<pre> destruct (IHzn zm) as [p|q].</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 102
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
     -</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 103
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply inl, ap, p.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 103
+Line: 101
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 104
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply inr; intro p.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 102
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+      by apply q, x0_inj.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 103
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 104
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (inr x0_neq_x1).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-      by apply q, x0_inj.</pre>
+  +</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 105
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact (inr x1_neq_xH).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 105
@@ -463,7 +487,7 @@ Time: 0s">
 Line: 106
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> exact (inr x0_neq_x1).</pre>
+<pre> exact (inr x1_neq_x0).</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 106
@@ -474,78 +498,52 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 107
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (inr x1_neq_xH).</pre>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
+<pre> destruct (IHon om) as [p|q].</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 108
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact (inr x1_neq_x0).</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 108
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  +</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 109
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> destruct (IHon om) as [p|q].</pre>
-</div>
-<div class="code" title="File: Core.v
-Line: 109
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
     -</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 110
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply inl, ap, p.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 110
+Line: 108
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     -</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 111
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply inr; intro p.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 111
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
       by apply q, x1_inj.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 112
+Line: 110
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 113
+Line: 111
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -553,13 +551,13 @@ Time: 0s">
 (** Decidable paths imply Pos is a hSet *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 115
+Line: 113
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Global Instance ishset_pos : IsHSet Pos := _.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 115
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -571,9 +569,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 120
-Time: 0.002s">
-<div class="time" style="width: 15.384615384615%"></div>
+Line: 118
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Fixpoint pos_add x y :=
   match x, y with
     | p~1, q~1 =&gt; (pos_add_carry p q)~0
@@ -601,7 +599,7 @@ with pos_add_carry x y :=
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 144
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -609,7 +607,7 @@ Time: 0s">
 Infix "+" := pos_add : positive_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 146
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -619,7 +617,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 149
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint pos_pred_double x :=
@@ -630,7 +628,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 154
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -640,7 +638,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 157
+Line: 155
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_pred x :=
@@ -651,7 +649,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 162
+Line: 160
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -661,7 +659,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 165
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Inductive Pos_mask : Set :=
@@ -670,7 +668,7 @@ Time: 0s">
   | IsNeg : Pos_mask.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 168
+Line: 166
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -680,7 +678,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 171
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_mask_succ_double (x : Pos_mask) : Pos_mask :=
@@ -691,7 +689,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 176
+Line: 174
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -701,7 +699,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 179
+Line: 177
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_mask_double (x : Pos_mask) : Pos_mask :=
@@ -712,7 +710,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 184
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -722,7 +720,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 187
+Line: 185
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_mask_double_pred x : Pos_mask :=
@@ -733,7 +731,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 192
+Line: 190
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -743,7 +741,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 195
+Line: 193
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_mask_pred (p : Pos_mask) : Pos_mask :=
@@ -755,7 +753,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 201
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -765,9 +763,9 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 204
+Line: 202
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Fixpoint pos_mask_sub (x y : Pos) {struct y} : Pos_mask :=
   match x, y with
     | p~1, q~1 =&gt; pos_mask_double (pos_mask_sub p q)
@@ -792,7 +790,7 @@ with pos_mask_sub_carry (x y : Pos) {struct y} : Pos_mask :=
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 225
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -802,7 +800,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 228
+Line: 226
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_sub x y :=
@@ -812,7 +810,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 232
+Line: 230
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -820,7 +818,7 @@ Time: 0s">
 Infix "-" := pos_sub : positive_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 234
+Line: 232
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -830,7 +828,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 237
+Line: 235
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint pos_mul x y :=
@@ -841,7 +839,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 242
+Line: 240
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -849,7 +847,7 @@ Time: 0s">
 Infix "*" := pos_mul : positive_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 244
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -859,49 +857,49 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 247
+Line: 245
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_iter {A : Type} (f : A -&gt; A)
   : Pos -&gt; A -&gt; A.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 248
+Line: 246
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 249
+Line: 247
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply (pos_peano_ind (fun _ =&gt; A -&gt; A) f).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 250
+Line: 248
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros n g.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 251
+Line: 249
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   exact (f o g).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 252
+Line: 250
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 253
+Line: 251
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -911,13 +909,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 256
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_pow (x : Pos) := pos_iter (pos_mul x) 1.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 256
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -930,7 +928,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 262
+Line: 260
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint pos_square p :=
@@ -941,7 +939,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 267
+Line: 265
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -951,7 +949,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 270
+Line: 268
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_div2 p :=
@@ -962,7 +960,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 275
+Line: 273
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -972,7 +970,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 278
+Line: 276
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_div2_up p :=
@@ -983,7 +981,7 @@ Time: 0s">
  end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 283
+Line: 281
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -993,7 +991,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 286
+Line: 284
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint nat_pos_size p : nat :=
@@ -1004,7 +1002,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 291
+Line: 289
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1014,7 +1012,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 294
+Line: 292
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint pos_size p :=
@@ -1025,7 +1023,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 299
+Line: 297
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1035,7 +1033,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 302
+Line: 300
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition pos_iter_op {A} (op : A -&gt; A -&gt; A)
@@ -1047,7 +1045,7 @@ Time: 0s">
        end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 308
+Line: 306
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1059,7 +1057,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 313
+Line: 311
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint pos_of_nat (n : nat) : Pos :=
@@ -1070,7 +1068,7 @@ Time: 0s">
  end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 318
+Line: 316
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1080,7 +1078,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 321
+Line: 319
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Fixpoint pos_of_succ_nat (n : nat) : Pos :=
@@ -1090,7 +1088,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 325
+Line: 323
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1100,15 +1098,15 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 328
+Line: 326
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Notation ten := 1~0~1~0.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 328
+Line: 326
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Fixpoint pos_of_uint_acc (d : Decimal.uint) (acc : Pos) :=
@@ -1127,9 +1125,9 @@ Fixpoint pos_of_uint_acc (d : Decimal.uint) (acc : Pos) :=
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 343
+Line: 341
 Time: 0.001s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Fixpoint pos_of_uint (d : Decimal.uint) : option Pos :=
@@ -1148,7 +1146,7 @@ Fixpoint pos_of_uint (d : Decimal.uint) : option Pos :=
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 358
+Line: 356
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1160,19 +1158,19 @@ Definition pos_of_decimal_int (d:Decimal.int) : option Pos :=
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 364
+Line: 362
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Definition pos_of_number_uint (d:Number.int) : option Pos :=
+Definition pos_of_number_uint (d:Numeral.int) : option Pos :=
   match d with
-  | Number.IntDecimal d =&gt; pos_of_decimal_int d
-  | Number.IntHexadecimal _ =&gt; None
+  | Numeral.IntDec d =&gt; pos_of_decimal_int d
+  | Numeral.IntHex _ =&gt; None
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 370
+Line: 368
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1185,7 +1183,7 @@ Fixpoint pos_to_little_uint p :=
   end.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 377
+Line: 375
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1193,7 +1191,7 @@ Time: 0s">
 Definition pos_to_uint p := Decimal.rev (pos_to_little_uint p).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 379
+Line: 377
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1201,15 +1199,15 @@ Time: 0s">
 Definition pos_to_decimal_int n := Decimal.Pos (pos_to_uint n).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 381
+Line: 379
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Definition pos_to_number_uint p := Number.UIntDecimal (pos_to_uint p).</pre>
+Definition pos_to_number_uint p := Numeral.UIntDec (pos_to_uint p).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 383
+Line: 381
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1217,7 +1215,7 @@ Time: 0s">
 Number Notation Pos pos_of_number_uint pos_to_number_uint : positive_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 386
+Line: 384
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

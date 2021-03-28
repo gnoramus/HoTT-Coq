@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 1
-Time: 0.029s">
+Time: 0.043s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Category.Core Functor.Core FunctorCategory.Core Category.Prod.</pre>
 </div>
 <div class="code" title="File: Functors.v
 Line: 1
-Time: 0.007s">
-<div class="time" style="width: 24.137931034483%"></div>
+Time: 0.005s">
+<div class="time" style="width: 11.627906976744%"></div>
 <pre>
 Require Import Functor.Prod Functor.Composition.Core NaturalTransformation.Composition.Laws NaturalTransformation.Composition.Core.</pre>
 </div>
@@ -111,21 +111,21 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Local Notation fst_type := Coq.Init.Datatypes.fst.</pre>
+Local Notation fst_type := Basics.Datatypes.fst.</pre>
 </div>
 <div class="code" title="File: Functors.v
 Line: 14
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Local Notation snd_type := Coq.Init.Datatypes.snd.</pre>
+Local Notation snd_type := Basics.Datatypes.snd.</pre>
 </div>
 <div class="code" title="File: Functors.v
 Line: 15
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Local Notation pair_type := Coq.Init.Datatypes.pair.</pre>
+Local Notation pair_type := Basics.Datatypes.pair.</pre>
 </div>
 <div class="code" title="File: Functors.v
 Line: 16
@@ -160,8 +160,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functors.v
 Line: 23
-Time: 0.025s">
-<div class="time" style="width: 86.206896551724%"></div>
+Time: 0.024s">
+<div class="time" style="width: 55.813953488372%"></div>
 <pre>Definition functor
   : Functor (D -&gt; C1 * C2) ((D -&gt; C1) * (D -&gt; C2))
     := Build_Functor
@@ -186,7 +186,7 @@ Time: 0s">
 <div class="code" title="File: Functors.v
 Line: 36
 Time: 0.002s">
-<div class="time" style="width: 6.8965517241379%"></div>
+<div class="time" style="width: 4.6511627906977%"></div>
 <pre>Definition inverse
   : Functor ((D -&gt; C1) * (D -&gt; C2)) (D -&gt; C1 * C2)
     := Functor.Prod.Functorial.functor _ _ _.</pre>
@@ -194,7 +194,7 @@ Time: 0.002s">
 <div class="code" title="File: Functors.v
 Line: 38
 Time: 0.001s">
-<div class="time" style="width: 3.448275862069%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
 End law3.</pre>
 </div>

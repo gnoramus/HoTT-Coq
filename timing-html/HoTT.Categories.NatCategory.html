@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: NatCategory.v
 Line: 1
-Time: 0.033s">
+Time: 0.047s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Category.Core DiscreteCategory IndiscreteCategory.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
 Line: 1
-Time: 0.001s">
-<div class="time" style="width: 3.030303030303%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import Types.Unit Trunc Types.Sum Types.Empty.</pre>
 </div>
@@ -52,39 +52,46 @@ Line: 2
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Set Universe Polymorphism.</pre>
+Require Import Basics.Nat.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 4
+Line: 3
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Implicit Arguments.</pre>
+
+Set Universe Polymorphism.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
 Line: 5
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Generalizable All Variables.</pre>
+Set Implicit Arguments.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
 Line: 6
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Asymmetric Patterns.</pre>
+Generalizable All Variables.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
 Line: 7
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Local Open Scope nat_scope.</pre>
+Set Asymmetric Patterns.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
 Line: 8
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Local Open Scope nat_scope.</pre>
+</div>
+<div class="code" title="File: NatCategory.v
+Line: 9
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -92,7 +99,7 @@ Time: 0s">
 Module Export Core.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 10
+Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -103,9 +110,9 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 15
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 16
+Time: 0.001s">
+<div class="time" style="width: 2.1276595744681%"></div>
 <pre>Fixpoint CardinalityRepresentative (n : nat) : Type0 :=
     match n with
       | 0 =&gt; Empty
@@ -114,7 +121,7 @@ Time: 0s">
     end.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 20
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -122,7 +129,7 @@ Time: 0s">
   Coercion CardinalityRepresentative : nat &gt;-&gt; Sortclass.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 22
+Line: 23
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -131,50 +138,50 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 25
+Line: 26
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Global Instance trunc_cardinality_representative (n : nat)
   : IsHSet (CardinalityRepresentative n).</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 26
+Line: 27
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 27
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    induction n; [ typeclasses eauto |].</pre>
-</div>
-<div class="code" title="File: NatCategory.v
 Line: 28
-Time: 0.002s">
-<div class="time" style="width: 6.0606060606061%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.1276595744681%"></div>
 <pre>
     induction n; [ typeclasses eauto |].</pre>
 </div>
 <div class="code" title="File: NatCategory.v
 Line: 29
-Time: 0.031s">
-<div class="time" style="width: 93.939393939394%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.2553191489362%"></div>
+<pre>
+    induction n; [ typeclasses eauto |].</pre>
+</div>
+<div class="code" title="File: NatCategory.v
+Line: 30
+Time: 0.029s">
+<div class="time" style="width: 61.702127659574%"></div>
 <pre>
     intros [x|x] [y|y];
       typeclasses eauto.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 31
+Line: 32
 Time: 0.002s">
-<div class="time" style="width: 6.0606060606061%"></div>
+<div class="time" style="width: 4.2553191489362%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 32
+Line: 33
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -183,9 +190,9 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 35
-Time: 0.001s">
-<div class="time" style="width: 3.030303030303%"></div>
+Line: 36
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition nat_category (n : nat) :=
     match n with
       | 0 =&gt; indiscrete_category 0
@@ -194,7 +201,7 @@ Time: 0.001s">
     end.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 40
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -202,84 +209,84 @@ Time: 0s">
   Module Export NatCategoryCoreNotations.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 42
+Line: 43
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "0" := (nat_category 0) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 43
+Line: 44
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "1" := (nat_category 1) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 44
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "2" := (nat_category 2) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 45
+Line: 46
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "3" := (nat_category 3) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 46
+Line: 47
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "4" := (nat_category 4) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 47
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "5" := (nat_category 5) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 48
+Line: 49
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "6" := (nat_category 6) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 49
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "7" := (nat_category 7) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 50
+Line: 51
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "8" := (nat_category 8) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 51
+Line: 52
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Notation "9" := (nat_category 9) : category_scope.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 52
+Line: 53
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   End NatCategoryCoreNotations.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 53
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -287,7 +294,7 @@ Time: 0s">
   Typeclasses Transparent nat_category.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 55
+Line: 56
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -295,21 +302,21 @@ Time: 0s">
   Hint Unfold nat_category : core.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 57
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Arguments nat_category / .</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 58
+Line: 59
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End Core.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 59
+Line: 60
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -317,21 +324,21 @@ Time: 0s">
 Module Notations.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 61
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Include Core.NatCategoryCoreNotations.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 62
+Line: 63
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End Notations.</pre>
 </div>
 <div class="code" title="File: NatCategory.v
-Line: 64
+Line: 65
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

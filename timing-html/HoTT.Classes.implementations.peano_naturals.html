@@ -30,21 +30,21 @@ pre {
 
 <div class="code" title="File: peano_naturals.v
 Line: 1
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Require Coq.Init.Peano.</pre>
+Time: 0.046s">
+<div class="time" style="width: 36.220472440945%"></div>
+<pre>Require Import Basics Types.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 1
-Time: 0.02s">
-<div class="time" style="width: 13.986013986014%"></div>
+Time: 0.059s">
+<div class="time" style="width: 46.456692913386%"></div>
 <pre>
-Require Import HoTT.Basics.Decidable HoTT.Types.Sum.</pre>
+Require Spaces.Nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 2
-Time: 0.089s">
-<div class="time" style="width: 62.237762237762%"></div>
+Time: 0.037s">
+<div class="time" style="width: 29.133858267717%"></div>
 <pre>
 Require Import
   HoTT.Classes.interfaces.abstract_algebra
@@ -97,7 +97,7 @@ Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Infix "=N=" := natpaths (at level 70, no associativity).</pre>
+Infix "=N=" := natpaths.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 18
@@ -146,7 +146,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Global Instance nat_plus: Plus@{N} nat := Peano.plus.</pre>
+Global Instance nat_plus: Plus@{N} nat := Nat.plus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 25
@@ -154,7 +154,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Notation mul := Peano.mult.</pre>
+Notation mul := Nat.mult.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 27
@@ -162,7 +162,7 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Global Instance nat_mult: Mult@{N} nat := Peano.mult.</pre>
+Global Instance nat_mult: Mult@{N} nat := Nat.mult.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 29
@@ -171,13 +171,13 @@ Time: 0s">
 <pre>
 
 Ltac simpl_nat :=
-  change (@plus nat _) with Peano.plus;
-  change (@mult nat _) with Peano.mult;
+  change (@plus nat _) with Nat.plus;
+  change (@mult nat _) with Nat.mult;
   simpl;
   change nat_plus with (@plus nat nat_plus);
-  change Peano.plus with (@plus nat nat_plus);
+  change Nat.plus with (@plus nat nat_plus);
   change nat_mult with (@mult nat nat_mult);
-  change Peano.mult with (@mult nat nat_mult).</pre>
+  change Nat.mult with (@mult nat nat_mult).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 38
@@ -230,8 +230,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 45
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> change (S (a + (b + c)) = S (a + b + c)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
@@ -443,7 +443,7 @@ hnf.</pre>
 <div class="code" title="File: peano_naturals.v
 Line: 71
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> apply (nat_rect@{N} (fun a =&gt; forall b, _));[|intros a IHa];
 intros b;induction b as [|b IHb].</pre>
 </div>
@@ -510,25 +510,25 @@ Line: 76
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  rewrite IHa,&lt;-IHb.</pre>
+  rewrite (IHa (S b)), &lt;- (IHb ).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 77
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> apply (ap S),(ap S),symmetry,IHa.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 77
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 78
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Local Instance add_mul_distr_l : LeftDistribute@{N}
@@ -551,7 +551,7 @@ hnf.</pre>
 <div class="code" title="File: peano_naturals.v
 Line: 83
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> apply (nat_rect@{N} (fun a =&gt; forall b c, _));[|intros a IHa];
 simpl_nat.</pre>
 </div>
@@ -590,7 +590,7 @@ Time: 0s">
 <div class="code" title="File: peano_naturals.v
 Line: 86
 Time: 0.007s">
-<div class="time" style="width: 4.8951048951049%"></div>
+<div class="time" style="width: 5.511811023622%"></div>
 <pre>
   rewrite &lt;-(associativity b), (associativity c), (commutativity c),
   &lt;-(associativity (a*b)), (associativity b).</pre>
@@ -605,7 +605,7 @@ Time: 0s">
 <div class="code" title="File: peano_naturals.v
 Line: 89
 Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -627,7 +627,7 @@ Proof.</pre>
 <div class="code" title="File: peano_naturals.v
 Line: 93
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 induction a;simpl_nat;trivial.</pre>
 </div>
@@ -663,7 +663,7 @@ Proof.</pre>
 <div class="code" title="File: peano_naturals.v
 Line: 99
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 apply (nat_rect@{N} (fun a =&gt; forall b, _));[|intros a IHa];intros b;simpl_nat.</pre>
 </div>
@@ -695,8 +695,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 102
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rewrite IHa.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
@@ -708,27 +708,34 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 103
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
+<pre>
+  change (((b + a) + (a * b)).+1 =N= (a + Nat.add b (a * b)).+1).</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 104
 Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre>
   rewrite (commutativity (f:=plus) b a), &lt;-(associativity a b).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 104
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 105
+Line: 106
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 106
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -736,72 +743,72 @@ Time: 0s">
 Local Instance mul_comm : Commutative@{N N} (mult : Mult nat).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 108
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 109
+Line: 110
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 110
+Line: 111
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> apply (nat_rect@{N} (fun a =&gt; forall b, _));[|intros a IHa];simpl_nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 110
+Line: 111
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 111
+Line: 112
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros;apply symmetry,mul_0_r.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 111
+Line: 112
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 112
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros b;rewrite IHa.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 112
+Line: 113
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> rewrite mul_S_r,&lt;-IHa.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 112
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 112
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 113
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 113
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -809,107 +816,107 @@ Time: 0s">
 Local Instance mul_assoc : Associative@{N} (mult : Mult nat).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 115
+Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 116
+Line: 117
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 117
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply (nat_rect@{N} (fun a =&gt; forall b c, _));[|intros a IHa].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 117
+Line: 118
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 118
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros;reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 118
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 119
+Line: 120
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> unfold mult;simpl;change nat_mult with mult.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 119
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   intros b c.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 120
+Line: 121
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
   rewrite (mul_comm (_ + _) c).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 121
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   rewrite add_mul_distr_l.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 122
+Line: 123
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
   rewrite (mul_comm c (a*b)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 123
+Line: 124
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   rewrite &lt;-IHa.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 124
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite (mul_comm b c).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 124
+Line: 125
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 124
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 125
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 125
+Line: 126
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -917,76 +924,76 @@ Time: 0s">
 Global Instance S_neq_0 x : PropHolds (~ (S x =N= 0)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 127
+Line: 128
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 128
+Line: 129
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 129
+Line: 130
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 change ((fun a =&gt; match a with S _ =&gt; Unit | 0%nat =&gt; Empty end) 0).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 130
+Line: 131
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 eapply transport.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 131
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 132
+Line: 133
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 132
+Line: 133
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 133
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 133
+Line: 134
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 134
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Line: 135
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Definition pred x := match x with | 0%nat =&gt; 0 | S k =&gt; k end.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 136
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -995,7 +1002,7 @@ Global Instance S_inj : IsInjective@{N N} S
   := { injective := fun a b E =&gt; ap pred E }.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 139
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1003,157 +1010,157 @@ Time: 0s">
 Global Instance nat_dec: DecidablePaths@{N} nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 141
+Line: 142
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 142
+Line: 143
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 143
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply (nat_rect@{N} (fun x =&gt; forall y, _)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 144
+Line: 145
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 145
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros [|b].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 145
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 146
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> left;reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 146
+Line: 147
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 147
+Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> right;apply symmetric_neq,S_neq_0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 147
+Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 148
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a IHa [|b].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 148
+Line: 149
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 149
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> right;apply S_neq_0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 149
+Line: 150
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 150
+Line: 151
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> destruct (IHa b).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 150
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 151
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> left.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 151
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply ap;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 151
+Line: 152
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 152
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> right;intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 152
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply (injective S) in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 152
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 152
+Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 153
+Line: 154
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1161,28 +1168,28 @@ Time: 0s">
 Global Instance nat_set : IsTrunc@{N} 0 nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 155
+Line: 156
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 156
+Line: 157
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply hset_pathcoll, pathcoll_decpaths, nat_dec.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 157
+Line: 158
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 158
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1190,15 +1197,15 @@ Time: 0s">
 Instance nat_semiring : IsSemiRing@{N} nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 160
+Line: 161
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 161
-Time: 0.143s">
+Line: 162
+Time: 0.127s">
 <div class="time" style="width: 100%"></div>
 <pre>
 repeat (split; try apply _);
@@ -1206,19 +1213,6 @@ first [change sg_op with plus; change mon_unit with 0
       |change sg_op with mult; change mon_unit with 1].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 164
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 165
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> exact add_0_r.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
 Line: 165
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -1240,38 +1234,51 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 167
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> exact add_0_r.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 167
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf;simpl_nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 167
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 167
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   rewrite mul_S_r,mul_0_r.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 168
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply add_0_r.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 168
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 169
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1283,32 +1290,32 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 174
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Lemma O_nat_0 : O =N= 0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 174
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 175
+Line: 176
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 175
+Line: 176
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 175
+Line: 176
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1316,34 +1323,34 @@ Time: 0s">
 Lemma S_nat_plus_1 x : S x =N= x + 1.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 177
+Line: 178
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 178
+Line: 179
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 rewrite add_comm.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 179
+Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 179
+Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 180
+Line: 181
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1351,26 +1358,26 @@ Time: 0s">
 Lemma S_nat_1_plus x : S x =N= 1 + x.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 182
+Line: 183
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 183
+Line: 184
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 183
+Line: 184
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 183
+Line: 184
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1379,26 +1386,26 @@ Lemma nat_induction (P : nat -&gt; Type) :
   P 0 -&gt; (forall n, P n -&gt; P (1 + n)) -&gt; forall n, P n.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 186
+Line: 187
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 187
+Line: 188
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply nat_rect.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 187
+Line: 188
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 187
+Line: 188
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1406,66 +1413,66 @@ Time: 0s">
 Lemma plus_eq_zero : forall a b : nat, a + b =N= 0 -&gt; a =N= 0 /\ b =N= 0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 189
+Line: 190
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 190
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Line: 191
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 intros [|a];[intros [|b];auto|].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 191
+Line: 192
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 192
+Line: 193
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 192
+Line: 193
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct (S_neq_0 _ E).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 192
+Line: 193
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 193
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros ? E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 193
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct (S_neq_0 _ E).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 193
+Line: 194
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 194
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1473,68 +1480,68 @@ Time: 0s">
 Lemma mult_eq_zero : forall a b : nat, a * b =N= 0 -&gt; a =N= 0 |_| b =N= 0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 196
+Line: 197
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 197
-Time: 0.004s">
-<div class="time" style="width: 2.7972027972028%"></div>
+Line: 198
+Time: 0.002s">
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre>
 intros [|a] [|b];auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 198
+Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 199
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros _;right;reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 199
+Line: 200
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 200
+Line: 201
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl_nat.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 200
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 201
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  destruct (S_neq_0 _ E).</pre>
+  intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 202
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Defined.</pre>
+  destruct (S_neq_0 _ E).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 203
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 204
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1542,42 +1549,42 @@ Time: 0s">
 Instance nat_zero_divisors : NoZeroDivisors nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 205
+Line: 206
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 206
+Line: 207
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros x [Ex [y [Ey1 Ey2]]].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 207
+Line: 208
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply mult_eq_zero in Ey2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 208
+Line: 209
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 destruct Ey2;auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 209
+Line: 210
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 210
+Line: 211
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1585,72 +1592,72 @@ Time: 0s">
 Instance nat_plus_cancel_l : forall z:nat, LeftCancellation@{N} plus z.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 212
+Line: 213
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 213
+Line: 214
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 red.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 214
+Line: 215
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a;induction a as [|a IHa];simpl_nat;intros b c E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 214
+Line: 215
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 215
+Line: 216
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 215
+Line: 216
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 216
+Line: 217
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply IHa.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 216
+Line: 217
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply (injective S).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 216
+Line: 217
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> assumption.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 216
+Line: 217
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 217
+Line: 218
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1659,153 +1666,153 @@ Instance nat_mult_cancel_l
   : forall z : nat, PropHolds (~ (z =N= 0)) -&gt; LeftCancellation@{N} (.*.) z.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 220
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 221
+Line: 222
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold PropHolds.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 222
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> unfold LeftCancellation.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 222
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros a Ea b c E;revert b c a Ea E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 223
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 224
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 induction b as [|b IHb];intros [|c];simpl_nat;intros a Ea E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 224
+Line: 225
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 225
+Line: 226
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 225
+Line: 226
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 226
+Line: 227
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite mul_0_r in E.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 226
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  rewrite mul_S_r in E;apply symmetry in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 227
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply plus_eq_zero in E.</pre>
+  rewrite mul_S_r in E;apply symmetry in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 228
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  apply plus_eq_zero in E.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 229
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> destruct (Ea (fst E)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 228
+Line: 229
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 229
+Line: 230
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite mul_0_r,mul_S_r in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 229
+Line: 230
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply plus_eq_zero in E.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 229
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  destruct (Ea (fst E)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 230
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 231
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> rewrite 2!mul_S_r in E.</pre>
+  destruct (Ea (fst E)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 231
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply (left_cancellation _ _) in E.</pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 232
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> rewrite 2!mul_S_r in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 232
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply ap.</pre>
+  apply (left_cancellation _ _) in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 233
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  apply ap.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 234
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply IHb with a;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 233
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 234
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 234
+Line: 235
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1813,20 +1820,20 @@ Time: 0s">
 (* Order *)</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 236
+Line: 237
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>Global Instance nat_le: Le@{N N} nat := Peano.le.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 236
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Global Instance nat_lt: Lt@{N N} nat := Peano.lt.</pre>
+<pre>Global Instance nat_le: Le@{N N} nat := Nat.le'.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 237
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Global Instance nat_lt: Lt@{N N} nat := Nat.lt'.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 238
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1834,33 +1841,20 @@ Time: 0s">
 Lemma le_plus : forall n k, n &lt;= k + n.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 239
+Line: 240
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 240
+Line: 241
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 induction k.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 241
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 242
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply Peano.le_n.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
 Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -1869,31 +1863,44 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 243
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply Nat.le_n.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 243
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl_nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 243
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> constructor.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 243
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> assumption.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 243
+Line: 244
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 244
+Line: 245
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1902,106 +1909,106 @@ Lemma le_exists : forall n m : nat,
   iff@{N N N} (n &lt;= m) (sig@{N N} (fun k =&gt; m =N= k + n)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 247
+Line: 248
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 248
+Line: 249
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros n m;split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 249
+Line: 250
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 250
+Line: 251
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros E;induction E as [|m E IH].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 250
+Line: 251
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 251
+Line: 252
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exists 0;split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 251
+Line: 252
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 252
+Line: 253
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct IH as [k IH].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 252
+Line: 253
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     exists (S k).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 253
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite IH;reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 253
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 254
+Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros [k Hk].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 254
+Line: 255
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   rewrite Hk.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 255
+Line: 256
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_plus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 255
+Line: 256
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 256
+Line: 257
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2009,28 +2016,28 @@ Time: 0s">
 Lemma zero_least : forall a, 0 &lt;= a.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 258
+Line: 259
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 259
+Line: 260
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 induction a;constructor;auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 260
+Line: 261
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 261
+Line: 262
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2038,127 +2045,127 @@ Time: 0s">
 Lemma le_S_S : forall a b : nat, iff@{N N N} (a &lt;= b) (S a &lt;= S b).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 263
+Line: 264
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 264
+Line: 265
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 265
-Time: 0.007s">
-<div class="time" style="width: 4.8951048951049%"></div>
+Line: 266
+Time: 0.006s">
+<div class="time" style="width: 4.7244094488189%"></div>
 <pre> etransitivity;[apply le_exists|].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 265
-Time: 0.008s">
-<div class="time" style="width: 5.5944055944056%"></div>
+Line: 266
+Time: 0.007s">
+<div class="time" style="width: 5.511811023622%"></div>
 <pre>
 etransitivity;[|apply symmetry,le_exists].</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 266
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre>
-split;intros [k E];exists k.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 267
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
+split;intros [k E];exists k.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 268
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 269
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite E,add_S_r.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 268
+Line: 269
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 268
+Line: 269
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 269
+Line: 270
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite add_S_r in E;apply (injective _) in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 269
+Line: 270
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 269
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 270
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Lemma lt_0_S : forall a, 0 &lt; S a.</pre>
+Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 272
+Line: 271
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+
+Lemma lt_0_S : forall a : nat, 0 &lt; S a.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 273
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-intros.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 274
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply le_S_S.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 274
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply zero_least.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 274
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+intros.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 275
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply le_S_S.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 275
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply zero_least.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 275
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 276
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2166,85 +2173,85 @@ Time: 0s">
 Lemma le_S_either : forall a b, a &lt;= S b -&gt; a &lt;= b |_| a = S b.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 277
+Line: 278
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 278
+Line: 279
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros [|a] b.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 279
+Line: 280
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 280
+Line: 281
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros;left;apply zero_least.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 280
+Line: 281
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 281
+Line: 282
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 281
+Line: 282
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply (snd (le_S_S _ _)) in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 281
-Time: 0.015s">
-<div class="time" style="width: 10.48951048951%"></div>
+Line: 282
+Time: 0.013s">
+<div class="time" style="width: 10.236220472441%"></div>
 <pre> destruct E as [|b E];auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 281
+Line: 282
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   left.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 282
+Line: 283
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_S_S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 282
+Line: 283
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 282
+Line: 283
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 283
+Line: 284
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2252,130 +2259,130 @@ Time: 0s">
 Lemma le_lt_dec : forall a b : nat, a &lt;= b |_| b &lt; a.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 285
+Line: 286
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 286
+Line: 287
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 induction a as [|a IHa].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 287
+Line: 288
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 288
+Line: 289
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros;left;apply zero_least.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 288
+Line: 289
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 289
+Line: 290
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros [|b].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 289
+Line: 290
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 290
+Line: 291
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> right.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 290
+Line: 291
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply lt_0_S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 290
+Line: 291
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 291
+Line: 292
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct (IHa b).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 291
+Line: 292
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 292
+Line: 293
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> left.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 292
+Line: 293
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_S_S;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 292
+Line: 293
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     *</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 293
+Line: 294
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> right.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 293
+Line: 294
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_S_S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 293
+Line: 294
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 293
+Line: 294
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 294
+Line: 295
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2383,55 +2390,55 @@ Time: 0s">
 Lemma not_lt_0 : forall a, ~ (a &lt; 0).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 296
+Line: 297
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 297
+Line: 298
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros a E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 298
+Line: 299
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_exists in E.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 298
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-destruct E as [k E].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 299
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-apply natpaths_symm,plus_eq_zero in E.</pre>
+destruct E as [k E].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 300
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-apply (S_neq_0 _ (snd E)).</pre>
+apply natpaths_symm,plus_eq_zero in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 301
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+apply (S_neq_0 _ (snd E)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 302
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 303
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2439,79 +2446,79 @@ Time: 0s">
 Lemma lt_le : forall a b, a &lt; b -&gt; a &lt;= b.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 304
+Line: 305
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 305
+Line: 306
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 306
+Line: 307
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 destruct b.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 307
+Line: 308
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 308
+Line: 309
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct (not_lt_0 a).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 308
+Line: 309
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 308
+Line: 309
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 309
+Line: 310
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> constructor.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 309
+Line: 310
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_S_S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 309
+Line: 310
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 309
+Line: 310
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 310
+Line: 311
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2519,44 +2526,31 @@ Time: 0s">
 Local Instance nat_le_total : TotalRelation@{N N} (_:Le nat).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 312
+Line: 313
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 313
+Line: 314
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 314
+Line: 315
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a b.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 314
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-destruct (le_lt_dec a b);[left|right].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 315
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 316
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> trivial.</pre>
+destruct (le_lt_dec a b);[left|right].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 316
@@ -2569,17 +2563,30 @@ Time: 0s">
 Line: 317
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply lt_le;trivial.</pre>
+<pre> trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 317
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 318
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply lt_le;trivial.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 318
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 318
+Line: 319
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2587,89 +2594,89 @@ Time: 0s">
 Local Instance nat_lt_irrefl : Irreflexive@{N N} (_:Lt nat).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 320
+Line: 321
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 321
+Line: 322
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 322
+Line: 323
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x E.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 322
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-apply le_exists in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 323
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-destruct E as [k E].</pre>
+apply le_exists in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 324
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-apply (S_neq_0 k).</pre>
+destruct E as [k E].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 325
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-apply (left_cancellation@{N} (+) x).</pre>
+apply (S_neq_0 k).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 326
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-fold natpaths.</pre>
+apply (left_cancellation@{N} (+) x).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 327
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-rewrite add_0_r, add_S_r,&lt;-add_S_l.</pre>
+fold natpaths.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 328
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-rewrite add_comm.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 329
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply natpaths_symm,E.</pre>
+rewrite add_0_r, add_S_r,&lt;-add_S_l.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 329
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+rewrite add_comm.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 330
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply natpaths_symm,E.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 330
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 331
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2677,35 +2684,35 @@ Time: 0s">
 Local Instance nat_le_hprop : is_mere_relation nat le.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 332
+Line: 333
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 333
+Line: 334
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros m n;apply Trunc.hprop_allpath.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 334
+Line: 335
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 generalize (idpath (S n) : S n =N= S n).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 335
+Line: 336
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 generalize n at 2 3 4 5.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 336
+Line: 337
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2713,222 +2720,222 @@ change (forall n0 : nat,
 S n =N= S n0 -&gt; forall le_mn1 le_mn2 : m &lt;= n0, le_mn1 = le_mn2).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 338
+Line: 339
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 induction (S n) as [|n0 IHn0].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 339
+Line: 340
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 340
+Line: 341
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros ? E;destruct (S_neq_0 _ (natpaths_symm _ _ E)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 340
+Line: 341
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 341
+Line: 342
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> clear n; intros n H.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 341
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  apply (injective S) in H.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 342
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  rewrite &lt;- H; intros le_mn1 le_mn2; clear n H.</pre>
+  apply (injective S) in H.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 343
-Time: 0.006s">
-<div class="time" style="width: 4.1958041958042%"></div>
-<pre>
-  pose (def_n2 := idpath n0);
-  path_via (paths_ind n0 (fun n _ =&gt; le m _) le_mn2 n0 def_n2).</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 345
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  generalize def_n2; revert le_mn1 le_mn2.</pre>
+  rewrite &lt;- H; intros le_mn1 le_mn2; clear n H.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 344
+Time: 0.004s">
+<div class="time" style="width: 3.1496062992126%"></div>
+<pre>
+  pose (def_n2 := idpath n0);
+  path_via (paths_ind n0 (fun n _ =&gt; le m _) le_mn2 n0 def_n2).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 346
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  generalize n0 at 1 4 5 8; intros n1 le_mn1.</pre>
+  generalize def_n2; revert le_mn1 le_mn2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 347
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  generalize n0 at 1 4 5 8; intros n1 le_mn1.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 348
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
   destruct le_mn1; intros le_mn2; destruct le_mn2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 348
+Line: 349
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 349
+Line: 350
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros def_n0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 349
-Time: 0.016s">
-<div class="time" style="width: 11.188811188811%"></div>
+Line: 350
+Time: 0.014s">
+<div class="time" style="width: 11.023622047244%"></div>
 <pre>
     rewrite (Trunc.path_ishprop def_n0 idpath).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 350
+Line: 351
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 351
+Line: 352
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 351
+Line: 352
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 352
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros def_n0; generalize le_mn2; rewrite &lt;-def_n0; intros le_mn0.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 352
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre>
-    destruct (irreflexivity nat_lt _ le_mn0).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 353
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre> intros def_n0; generalize le_mn2; rewrite &lt;-def_n0; intros le_mn0.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 353
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
+<pre>
+    destruct (irreflexivity nat_lt _ le_mn0).</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 354
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 354
+Line: 355
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros def_n0.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 354
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    destruct (irreflexivity nat_lt m0).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 355
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    rewrite def_n0 in le_mn1;trivial.</pre>
+    destruct (irreflexivity nat_lt m0).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 356
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    rewrite def_n0 in le_mn1;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 357
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 358
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros def_n0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 357
+Line: 358
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> pose proof (injective S _ _ def_n0) as E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 357
+Line: 358
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     destruct E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 358
-Time: 0.018s">
-<div class="time" style="width: 12.587412587413%"></div>
+Line: 359
+Time: 0.021s">
+<div class="time" style="width: 16.535433070866%"></div>
 <pre>
     rewrite (Trunc.path_ishprop def_n0 idpath).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 359
+Line: 360
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 359
-Time: 0.005s">
-<div class="time" style="width: 3.4965034965035%"></div>
+Line: 360
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply ap.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 360
+Line: 361
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply IHn0;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 360
+Line: 361
 Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 361
+Line: 362
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -2936,33 +2943,20 @@ Time: 0s">
 Local Instance nat_le_po : PartialOrder nat_le.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 363
+Line: 364
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 364
+Line: 365
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 repeat split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 365
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 366
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply _.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
 Line: 366
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -2971,8 +2965,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 367
-Time: 0.003s">
-<div class="time" style="width: 2.0979020979021%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
@@ -2984,186 +2978,199 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 368
+Time: 0.003s">
+<div class="time" style="width: 2.3622047244094%"></div>
+<pre> apply _.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 368
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 369
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf;intros; constructor.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 368
+Line: 369
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 369
+Line: 370
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 369
+Line: 370
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a b c E1 E2.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 369
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  apply le_exists in E1;apply le_exists in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 370
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  destruct E1 as [k1 E1], E2 as [k2 E2].</pre>
+  apply le_exists in E1;apply le_exists in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 371
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  rewrite E2,E1,add_assoc.</pre>
+  destruct E1 as [k1 E1], E2 as [k2 E2].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 372
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  rewrite E2,E1,add_assoc.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 373
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply le_plus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 372
+Line: 373
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 373
+Line: 374
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 373
+Line: 374
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a b E1 E2.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 373
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  apply le_exists in E1;apply le_exists in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 374
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  destruct E1 as [k1 E1], E2 as [k2 E2].</pre>
+  apply le_exists in E1;apply le_exists in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 375
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  assert (k1 + k2 = 0) as E.</pre>
+  destruct E1 as [k1 E1], E2 as [k2 E2].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 376
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+  assert (k1 + k2 = 0) as E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 377
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> apply (left_cancellation (+) a).</pre>
+<pre>
+  +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 377
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre>
-    rewrite plus_0_r.</pre>
+Line: 378
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply (left_cancellation (+) a).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 378
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
+<pre>
+    rewrite plus_0_r.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 379
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
     path_via (k2 + b).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 379
+Line: 380
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     rewrite E1.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 380
+Line: 381
 Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre>
     rewrite (plus_comm a), (plus_assoc k2), (plus_comm k2).</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 381
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 382
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 383
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 384
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply plus_eq_zero in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 383
+Line: 384
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct E as [Ek1 Ek2].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 383
+Line: 384
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
     rewrite Ek2,plus_0_l in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 384
+Line: 385
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 385
+Line: 386
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 386
+Line: 387
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3171,33 +3178,20 @@ Time: 0s">
 Local Instance nat_strict : StrictOrder (_:Lt nat).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 388
+Line: 389
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 389
+Line: 390
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 390
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 391
-Time: 0.004s">
-<div class="time" style="width: 2.7972027972028%"></div>
-<pre> apply _.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
 Line: 391
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -3206,8 +3200,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 392
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.3622047244094%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
@@ -3221,72 +3215,85 @@ Time: 0s">
 Line: 393
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> hnf.</pre>
+<pre> apply _.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 393
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> intros a b c E1 E2.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 393
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
 <pre>
-  apply le_exists;apply le_exists in E1;apply le_exists in E2.</pre>
+-</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 394
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre> hnf.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 394
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros a b c E1 E2.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 394
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
-  destruct E1 as [k1 E1], E2 as [k2 E2].</pre>
+  apply le_exists;apply le_exists in E1;apply le_exists in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 395
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  exists (S (k1+k2)).</pre>
+  destruct E1 as [k1 E1], E2 as [k2 E2].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 396
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  rewrite E2,E1.</pre>
+  exists (S (k1+k2)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 397
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
-<pre>
-  rewrite !add_S_r,add_S_l.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 398
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  rewrite (add_assoc k2), (add_comm k2).</pre>
+  rewrite E2,E1.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 398
+Time: 0.002s">
+<div class="time" style="width: 1.5748031496063%"></div>
+<pre>
+  rewrite !add_S_r,add_S_l.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 399
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  reflexivity.</pre>
+  rewrite (add_assoc k2), (add_comm k2).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 400
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  reflexivity.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 401
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 401
+Line: 402
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3294,85 +3301,85 @@ Time: 0s">
 Instance nat_trichotomy : Trichotomy@{N N i} (lt:Lt nat).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 403
+Line: 404
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 404
+Line: 405
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 405
+Line: 406
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> fold natpaths.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 405
+Line: 406
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros a b.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 406
+Line: 407
 Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre> destruct (le_lt_dec a b) as [[|]|E];auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 406
+Line: 407
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 407
+Line: 408
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> right;left;split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 407
+Line: 408
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 408
+Line: 409
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> left.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 408
+Line: 409
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_S_S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 408
+Line: 409
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 408
+Line: 409
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 409
+Line: 410
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3380,7 +3387,7 @@ Time: 0s">
 Global Instance nat_apart : Apart@{N N} nat := fun n m =&gt; n &lt; m |_| m &lt; n.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 411
+Line: 412
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3388,48 +3395,48 @@ Time: 0s">
 Instance nat_apart_mere : is_mere_relation nat nat_apart.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 413
+Line: 414
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 414
+Line: 415
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros;apply ishprop_sum;try apply _.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 415
+Line: 416
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros E1 E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 416
+Line: 417
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply (irreflexivity nat_lt x).</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 416
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-transitivity y;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 417
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+transitivity y;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 418
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 419
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3437,33 +3444,20 @@ Time: 0s">
 Global Instance nat_trivial_apart : TrivialApart nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 420
+Line: 421
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 421
+Line: 422
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 422
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 423
-Time: 0.003s">
-<div class="time" style="width: 2.0979020979021%"></div>
-<pre> apply _.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
 Line: 423
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -3472,65 +3466,78 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 424
+Time: 0.003s">
+<div class="time" style="width: 2.3622047244094%"></div>
+<pre> apply _.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 424
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 425
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a b;split;intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 424
+Line: 425
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 425
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre> destruct E as [E|E];apply irrefl_neq in E;trivial.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 425
+Line: 426
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre>
-    apply symmetric_neq;trivial.</pre>
+<pre> destruct E as [E|E];apply irrefl_neq in E;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 426
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    apply symmetric_neq;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 427
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 428
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 427
+Line: 428
 Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre> destruct (trichotomy _ a b) as [?|[?|?]];auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 427
+Line: 428
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     destruct E;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 428
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 429
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 429
+Line: 430
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3538,42 +3545,42 @@ Time: 0s">
 Lemma nat_not_lt_le : forall a b, ~ (a &lt; b) -&gt; b &lt;= a.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 431
+Line: 432
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 432
+Line: 433
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros ?? E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 433
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 434
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 destruct (le_lt_dec b a);auto.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 434
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-destruct E;auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 435
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+destruct E;auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 436
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 437
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3581,104 +3588,104 @@ Time: 0s">
 Lemma nat_lt_not_le : forall a b : nat, a &lt; b -&gt; ~ (b &lt;= a).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 438
+Line: 439
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 439
+Line: 440
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros a b E1 E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 440
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre>
-apply le_exists in E1;apply le_exists in E2.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
 Line: 441
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-destruct E1 as [k1 E1], E2 as [k2 E2].</pre>
+apply le_exists in E1;apply le_exists in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 442
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-apply (S_neq_0 (k1 + k2)).</pre>
+destruct E1 as [k1 E1], E2 as [k2 E2].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 443
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-apply (left_cancellation (+) a).</pre>
+apply (S_neq_0 (k1 + k2)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 444
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-fold natpaths.</pre>
+apply (left_cancellation (+) a).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 445
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+fold natpaths.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 446
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rewrite add_0_r.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 445
+Line: 446
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 rewrite E1 in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 446
+Line: 447
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 rewrite add_S_r;rewrite !add_S_r in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 447
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre>
-rewrite (add_assoc a), (add_comm a), &lt;-(add_assoc k1), (add_comm a).</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
 Line: 448
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
-rewrite (add_assoc k1), (add_comm k1), &lt;-(add_assoc k2).</pre>
+rewrite (add_assoc a), (add_comm a), &lt;-(add_assoc k1), (add_comm a).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 449
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-apply natpaths_symm,E2.</pre>
+rewrite (add_assoc k1), (add_comm k1), &lt;-(add_assoc k2).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 450
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+apply natpaths_symm,E2.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 451
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 451
+Line: 452
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3686,72 +3693,72 @@ Time: 0s">
 Global Instance nat_le_dec: forall x y : nat, Decidable (x ≤ y).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 453
+Line: 454
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 454
+Line: 455
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros a b.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 455
+Line: 456
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct (le_lt_dec a b).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 455
+Line: 456
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 456
+Line: 457
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> left;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 456
+Line: 457
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 457
+Line: 458
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> right.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 457
+Line: 458
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply nat_lt_not_le.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 457
+Line: 458
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 457
+Line: 458
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 458
+Line: 459
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3759,28 +3766,28 @@ Time: 0s">
 Lemma S_gt_0 : forall a, 0 &lt; S a.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 460
+Line: 461
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 461
+Line: 462
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros;apply le_S_S,zero_least.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 462
+Line: 463
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 463
+Line: 464
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3788,54 +3795,54 @@ Time: 0s">
 Lemma nonzero_gt_0 : forall a, ~ (a =N= 0) -&gt; 0 &lt; a.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 465
+Line: 466
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 466
+Line: 467
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros [|a] E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 467
+Line: 468
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 468
+Line: 469
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> destruct E;split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 468
+Line: 469
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 469
+Line: 470
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply S_gt_0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 469
+Line: 470
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 470
+Line: 471
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3843,55 +3850,55 @@ Time: 0s">
 Lemma nat_le_lt_trans : forall a b c : nat, a &lt;= b -&gt; b &lt; c -&gt; a &lt; c.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 472
+Line: 473
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 473
+Line: 474
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros a b c E1 E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 474
+Line: 475
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 apply le_exists in E1;apply le_exists in E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 475
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Line: 476
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 destruct E1 as [k1 E1],E2 as [k2 E2];rewrite E2,E1.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 476
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre>
-rewrite add_S_r,add_assoc.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 477
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+rewrite add_S_r,add_assoc.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 478
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply le_S_S,le_plus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 477
+Line: 478
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 478
+Line: 479
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3899,67 +3906,67 @@ Time: 0s">
 Lemma lt_strong_cotrans : forall a b : nat, a &lt; b -&gt; forall c, a &lt; c |_| c &lt; b.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 480
+Line: 481
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 481
+Line: 482
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros a b E1 c.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 482
+Line: 483
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 destruct (le_lt_dec c a) as [E2|E2].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 483
+Line: 484
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 484
+Line: 485
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> right.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 484
+Line: 485
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply nat_le_lt_trans with a;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 484
+Line: 485
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 485
+Line: 486
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> left;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 485
+Line: 486
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 486
+Line: 487
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -3967,408 +3974,408 @@ Time: 0s">
 Lemma nat_full' : FullPseudoSemiRingOrder nat_le nat_lt.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 488
+Line: 489
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 489
-Time: 0.004s">
-<div class="time" style="width: 2.7972027972028%"></div>
+Line: 490
+Time: 0.009s">
+<div class="time" style="width: 7.0866141732283%"></div>
 <pre>
 split;[apply _|split|].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 490
+Line: 491
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 491
-Time: 0.013s">
-<div class="time" style="width: 9.0909090909091%"></div>
+Line: 492
+Time: 0.006s">
+<div class="time" style="width: 4.7244094488189%"></div>
 <pre> split;try apply _.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 491
+Line: 492
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 492
+Line: 493
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a b [E1 E2].</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 492
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    destruct (irreflexivity lt a).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 493
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    transitivity b;trivial.</pre>
+    destruct (irreflexivity lt a).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 494
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 495
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> hnf.</pre>
+    transitivity b;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 495
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    intros a b E c;apply tr;apply lt_strong_cotrans;trivial.</pre>
+  +</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 496
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> hnf.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 496
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    intros a b E c;apply tr;apply lt_strong_cotrans;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 497
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 498
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 497
+Line: 498
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 498
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros a b E.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 498
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply nat_not_lt_le,le_exists in E.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 498
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre>
-  destruct E as [k E];exists k;rewrite plus_comm;auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 499
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre> intros a b E.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 499
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply nat_not_lt_le,le_exists in E.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 499
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
--</pre>
+  destruct E as [k E];exists k;rewrite plus_comm;auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 500
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 501
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 500
+Line: 501
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 501
+Line: 502
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a b E.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 501
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    apply le_exists in E;destruct E as [k Hk].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 502
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    rewrite Hk.</pre>
+    apply le_exists in E;destruct E as [k Hk].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 503
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre> rewrite add_S_r,&lt;-add_S_l.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 503
-Time: 0.003s">
-<div class="time" style="width: 2.0979020979021%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-    rewrite plus_assoc,(plus_comm z (S k)), &lt;-plus_assoc.</pre>
+    rewrite Hk.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 504
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre> rewrite add_S_r,&lt;-add_S_l.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 504
+Time: 0.003s">
+<div class="time" style="width: 2.3622047244094%"></div>
 <pre>
-    apply le_S_S,le_plus.</pre>
+    rewrite plus_assoc,(plus_comm z (S k)), &lt;-plus_assoc.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 505
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    apply le_S_S,le_plus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 506
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 507
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros a b E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 506
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Line: 507
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     apply le_exists in E;destruct E as [k E].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 507
+Line: 508
 Time: 0.003s">
-<div class="time" style="width: 2.0979020979021%"></div>
+<div class="time" style="width: 2.3622047244094%"></div>
 <pre>
     rewrite &lt;-add_S_r,plus_assoc,(plus_comm k z),&lt;-plus_assoc in E.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 508
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    apply (left_cancellation plus _) in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 509
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    rewrite E;apply le_plus.</pre>
+    apply (left_cancellation plus _) in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 510
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
+    rewrite E;apply le_plus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 511
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 512
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros ???? E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 511
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Line: 512
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply trivial_apart in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 512
-Time: 0.007s">
-<div class="time" style="width: 4.8951048951049%"></div>
+Line: 513
+Time: 0.006s">
+<div class="time" style="width: 4.7244094488189%"></div>
 <pre>
   destruct (dec (apart x₁ x₂)) as [?|ex];apply tr;auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 513
+Line: 514
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   right.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 514
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Line: 515
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply tight_apart in ex.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 514
+Line: 515
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply trivial_apart.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 515
+Line: 516
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros ey.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 515
+Line: 516
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 516
+Line: 517
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply ap011;trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 516
+Line: 517
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 517
+Line: 518
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> unfold PropHolds.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 517
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  intros a b Ea Eb.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 518
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply nonzero_gt_0.</pre>
+  intros a b Ea Eb.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 519
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  apply nonzero_gt_0.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 520
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 519
+Line: 520
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   apply mult_eq_zero in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 520
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 521
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
   destruct E as [E|E];[rewrite E in Ea|rewrite E in Eb];
   apply (irreflexivity lt 0);trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 522
+Line: 523
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 523
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+Line: 524
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros a b;split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 523
+Line: 524
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 524
+Line: 525
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros E1 E2.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 524
+Line: 525
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply nat_lt_not_le in E2.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 524
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 525
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+    auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 526
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 527
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 526
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 527
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
     destruct (le_lt_dec a b);auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 527
+Line: 528
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     destruct E;auto.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 528
+Line: 529
 Time: 0.004s">
-<div class="time" style="width: 2.7972027972028%"></div>
+<div class="time" style="width: 3.1496062992126%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 529
+Line: 530
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4376,7 +4383,7 @@ Time: 0s">
 (* Coq pre 8.8 produces phantom universes, see GitHub Coq/Coq#1033. *)</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 531
+Line: 532
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition nat_full@{} := ltac:(first[exact nat_full'@{Ularge Ularge}|
@@ -4384,182 +4391,169 @@ Time: 0s">
                                       exact nat_full'@{}]).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 533
+Line: 534
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Local Existing Instance nat_full.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 534
+Line: 535
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Lemma le_nat_max_l n m : n &lt;= Peano.max n m.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 536
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
+Lemma le_nat_max_l n m : n &lt;= Nat.max n m.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 537
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  revert m.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 538
-Time: 0.005s">
-<div class="time" style="width: 3.4965034965035%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  induction n as [|n' IHn];
-  intros m; induction m as [|m' IHm]; try auto; cbn.</pre>
+  revert m.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 540
+Line: 539
+Time: 0.003s">
+<div class="time" style="width: 2.3622047244094%"></div>
+<pre>
+  induction n as [|n' IHn];
+  intros m; induction m as [|m' IHm]; try reflexivity; cbn.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 541
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 541
+Line: 542
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply zero_least.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 541
+Line: 542
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 542
+Line: 543
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_S_S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 542
+Line: 543
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (IHn m').</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 542
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 543
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Lemma le_nat_max_r n m : m &lt;= Peano.max n m.</pre>
+Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 544
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+Lemma le_nat_max_r n m : m &lt;= Nat.max n m.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 545
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  revert m.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 546
-Time: 0.004s">
-<div class="time" style="width: 2.7972027972028%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
-  induction n as [|n' IHn];
-  intros m; induction m as [|m' IHm]; try auto; cbn.</pre>
+  revert m.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 548
+Line: 547
+Time: 0.003s">
+<div class="time" style="width: 2.3622047244094%"></div>
+<pre>
+  induction n as [|n' IHn];
+  intros m; induction m as [|m' IHm]; try reflexivity; cbn.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 549
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 549
+Line: 550
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply zero_least.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 549
+Line: 550
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 550
+Line: 551
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_S_S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 550
+Line: 551
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact (IHn m').</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 550
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 551
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Instance S_embedding : OrderEmbedding S.</pre>
+Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 552
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Proof.</pre>
+Instance S_embedding : OrderEmbedding S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 553
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-split.</pre>
+Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 554
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 555
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros ??;apply le_S_S.</pre>
+split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 555
@@ -4576,13 +4570,26 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 556
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 557
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros ??;apply le_S_S.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 557
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 557
+Line: 558
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4590,30 +4597,30 @@ Time: 0s">
 Global Instance S_strict_embedding : StrictOrderEmbedding S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 559
+Line: 560
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 560
+Line: 561
 Time: 0.005s">
-<div class="time" style="width: 3.4965034965035%"></div>
+<div class="time" style="width: 3.9370078740157%"></div>
 <pre>
 split;apply _.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 561
+Line: 562
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 562
+Line: 563
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 
 Global Instance nat_naturals_to_semiring : NaturalsToSemiRing@{N i} nat :=
@@ -4621,7 +4628,7 @@ Global Instance nat_naturals_to_semiring : NaturalsToSemiRing@{N i} nat :=
    S n' =&gt; 1 + f n' end.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 566
+Line: 567
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4629,21 +4636,21 @@ Time: 0s">
 Section for_another_semiring.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 568
+Line: 569
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Universe U.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 569
+Line: 570
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context {R:Type@{U} } `{IsSemiRing@{U} R}.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 570
+Line: 571
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4651,7 +4658,7 @@ Time: 0s">
   Notation toR := (naturals_to_semiring nat R).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 572
+Line: 573
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4661,32 +4668,32 @@ Time: 0s">
  </pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 576
+Line: 577
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Let f_preserves_0: toR 0 =  0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 576
+Line: 577
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 577
+Line: 578
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 577
+Line: 578
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 577
+Line: 578
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -4694,58 +4701,45 @@ Time: 0s">
   Let f_preserves_1: toR 1 = 1.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 579
+Line: 580
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 580
+Line: 581
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 580
+Line: 581
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 580
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre>
-
-  Let f_S : forall x, toR (S x) = 1 + toR x.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 582
+Line: 581
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Proof.</pre>
+
+  Let f_S : forall x, toR (S x) = 1 + toR x.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 583
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  intros [|x].</pre>
+  Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 584
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 585
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre> symmetry;apply plus_0_r.</pre>
+  intros [|x].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 585
@@ -4758,315 +4752,328 @@ Time: 0s">
 Line: 586
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> reflexivity.</pre>
+<pre> symmetry;apply plus_0_r.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 586
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 587
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> reflexivity.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 587
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 587
+Line: 588
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 
   Let f_preserves_plus a a': toR (a + a') = toR a + toR a'.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 589
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 590
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  induction a as [|a IHa].</pre>
+  Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 591
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 592
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre> change (toR a' = 0 + toR a').</pre>
+  induction a as [|a IHa].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 592
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    apply symmetry,plus_0_l.</pre>
+  -</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 593
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> change (toR a' = 0 + toR a').</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 593
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+    apply symmetry,plus_0_l.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 594
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
   -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 594
+Line: 595
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> change (toR (S (a + a')) = toR (S a) + toR a').</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 594
+Line: 595
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
     rewrite !f_S,IHa.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 595
+Line: 596
 Time: 0.015s">
-<div class="time" style="width: 10.48951048951%"></div>
+<div class="time" style="width: 11.811023622047%"></div>
 <pre>
     apply associativity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 596
+Line: 597
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 597
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 598
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 
   Let f_preserves_mult a a': toR (a * a') = toR a * toR a'.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 599
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 600
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  induction a as [|a IHa].</pre>
+  Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 601
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  -</pre>
+  induction a as [|a IHa].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 602
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  -</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 603
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> change (0 = 0 * toR a').</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 602
+Line: 603
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
     rewrite mult_0_l.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 603
+Line: 604
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 603
+Line: 604
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 604
+Line: 605
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite f_S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 604
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 605
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
     change (toR (a' + a * a') = (1 + toR a) * toR a').</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 605
+Line: 606
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     rewrite f_preserves_plus, IHa.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 606
-Time: 0.003s">
-<div class="time" style="width: 2.0979020979021%"></div>
+Line: 607
+Time: 0.002s">
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre>
     rewrite plus_mult_distr_r,mult_1_l.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 607
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 608
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Qed.</pre>
+    reflexivity.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 609
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Qed.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 610
 Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre>
 
   Global Instance nat_to_sr_morphism
     : IsSemiRingPreserving (naturals_to_semiring nat R).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 612
+Line: 613
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 613
-Time: 0.03s">
-<div class="time" style="width: 20.979020979021%"></div>
+Line: 614
+Time: 0.026s">
+<div class="time" style="width: 20.472440944882%"></div>
 <pre>
   repeat (split;try apply _);trivial.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 614
+Line: 615
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 615
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 616
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
 
   Lemma toR_unique (h : nat -&gt; R) `{!IsSemiRingPreserving h} x :
     naturals_to_semiring nat R x = h x.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 618
+Line: 619
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 619
+Line: 620
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   induction x as [|n E].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 620
+Line: 621
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 621
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> change (0 = h 0).</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 621
-Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
-<pre>
-    apply symmetry,preserves_0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 622
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre> change (0 = h 0).</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 622
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
-  +</pre>
+    apply symmetry,preserves_0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 623
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 624
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rewrite f_S.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 623
+Line: 624
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> change (1 + naturals_to_semiring nat R n = h (1+n)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 623
+Line: 624
 Time: 0.001s">
-<div class="time" style="width: 0.6993006993007%"></div>
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre>
     rewrite (preserves_plus (f:=h)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 624
+Line: 625
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     rewrite E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 625
-Time: 0.002s">
-<div class="time" style="width: 1.3986013986014%"></div>
+Line: 626
+Time: 0.001s">
+<div class="time" style="width: 0.78740157480315%"></div>
 <pre> apply ap10,ap,symmetry,preserves_1.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 625
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 626
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-End for_another_semiring.</pre>
+  Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 627
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+End for_another_semiring.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 628
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -5074,50 +5081,50 @@ Time: 0s">
 Lemma nat_naturals@{i} : Naturals@{N N N N N N N i} nat.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 629
+Line: 630
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 630
-Time: 0.003s">
-<div class="time" style="width: 2.0979020979021%"></div>
+Line: 631
+Time: 0.002s">
+<div class="time" style="width: 1.5748031496063%"></div>
 <pre>
 split;try apply _.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 631
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-intros;apply toR_unique, _.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 632
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+intros;apply toR_unique, _.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 633
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Global Existing Instance nat_naturals.</pre>
+Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 634
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Global Instance nat_cut_minus: CutMinus@{N} nat := Peano.minus.</pre>
+Global Existing Instance nat_naturals.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 636
+Line: 635
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Global Instance nat_cut_minus: CutMinus@{N} nat := Nat.minus.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 637
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -5125,126 +5132,126 @@ Time: 0s">
 Lemma plus_minus : forall a b, cut_minus (a + b) b =N= a.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 638
+Line: 639
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 639
+Line: 640
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold cut_minus,nat_cut_minus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 640
+Line: 641
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros a b;revert a;induction b as [|b IH].</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 641
+Line: 642
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 642
+Line: 643
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros [|a];simpl;try split.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 642
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  apply ap,add_0_r.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 643
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 644
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> intros [|a].</pre>
+  apply ap,add_0_r.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 644
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  +</pre>
+-</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 645
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> intros [|a].</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 645
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  +</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 646
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 645
+Line: 646
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> pose proof (IH 0) as E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 645
+Line: 646
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     rewrite add_0_l in E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 646
+Line: 647
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> exact E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 646
+Line: 647
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   +</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 647
+Line: 648
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 647
+Line: 648
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> change nat_plus with plus.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 647
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-    rewrite add_S_r,&lt;-add_S_l;apply IH.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 648
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+    rewrite add_S_r,&lt;-add_S_l;apply IH.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 649
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 650
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -5252,54 +5259,54 @@ Time: 0s">
 Lemma le_plus_minus : forall n m : nat, n &lt;= m -&gt; m =N= (n + (cut_minus m  n)).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 651
+Line: 652
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 652
+Line: 653
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros n m E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 653
+Line: 654
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply le_exists in E.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 653
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-destruct E as [k E];rewrite E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 654
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-rewrite plus_minus.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 655
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> apply add_comm.</pre>
+destruct E as [k E];rewrite E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 655
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Qed.</pre>
+rewrite plus_minus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 656
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> apply add_comm.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 656
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Qed.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 657
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -5307,40 +5314,27 @@ Time: 0s">
 Lemma minus_ge : forall a b, a &lt;= b -&gt; cut_minus a b =N= 0.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 658
+Line: 659
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 659
+Line: 660
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 unfold cut_minus,nat_cut_minus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 660
+Line: 661
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 intros a b;revert a;induction b as [|b IH];intros [|a];simpl.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 661
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
--</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 662
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre> split.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
 Line: 662
 Time: 0s">
 <div class="time" style="width: 0%"></div>
@@ -5349,51 +5343,64 @@ Time: 0s">
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 663
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre> split.</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 663
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 664
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros E;destruct (not_lt_0 _ E).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 663
+Line: 664
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 664
+Line: 665
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 664
+Line: 665
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 665
+Line: 666
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 665
+Line: 666
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> apply IH;apply le_S_S,E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 665
+Line: 666
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 666
+Line: 667
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -5401,82 +5408,82 @@ Time: 0s">
 Global Instance nat_cut_minus_spec : CutMinusSpec@{N N} nat nat_cut_minus.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 668
+Line: 669
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 669
+Line: 670
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 split.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 670
+Line: 671
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 -</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 671
+Line: 672
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> intros x y E.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 671
+Line: 672
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> rewrite add_comm.</pre>
-</div>
-<div class="code" title="File: peano_naturals.v
-Line: 671
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  symmetry.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 672
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  apply (le_plus_minus _ _ E).</pre>
+  symmetry.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 673
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
--</pre>
+  apply (le_plus_minus _ _ E).</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
 Line: 674
 Time: 0s">
 <div class="time" style="width: 0%"></div>
+<pre>
+-</pre>
+</div>
+<div class="code" title="File: peano_naturals.v
+Line: 675
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply minus_ge.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 674
+Line: 675
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 675
-Time: 0.006s">
-<div class="time" style="width: 4.1958041958042%"></div>
+Line: 676
+Time: 0.013s">
+<div class="time" style="width: 10.236220472441%"></div>
 <pre>
 
 End nat_lift.</pre>
 </div>
 <div class="code" title="File: peano_naturals.v
-Line: 678
+Line: 679
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

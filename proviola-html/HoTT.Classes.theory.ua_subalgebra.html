@@ -48,7 +48,7 @@
           
 
             i = 6;
-            data = "";
+            data = "<infomsg>[Loading ML file ltac_plugin.cmxs ... done]</infomsg>	<infomsg>[Loading ML file number_string_notation_plugin.cmxs ... done]	</infomsg>	";
             responses[i]=data;
           
 
@@ -443,7 +443,7 @@
           
 
             i = 85;
-            data = "1 goal (ID 16)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  n : trunc_index	  H0 : forall (s : Sort σ) (x : A s), IsTrunc n (P s x)	  w : SymbolType σ	  α : Operation A w	  ============================	  IsTrunc n (ClosedUnderOp α)	";
+            data = "1 goal (ID 16)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  n : trunc_index	  H0 : forall (s : Sort σ) (x : A s), IsTrunc n (P s x)	  w : SymbolType σ	  α : Operation A w	  ============================	  IsTrunc n (ClosedUnderOp α)	";
             responses[i]=data;
           
 
@@ -468,7 +468,7 @@
           
 
             i = 90;
-            data = "1 goal (ID 24)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  n : trunc_index	  H0 : forall (s : Sort σ) (x : A s), IsTrunc n (P s x)	  ============================	  IsTrunc n IsClosedUnderOps	";
+            data = "1 goal (ID 24)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  n : trunc_index	  H0 : forall (s : Sort σ) (x : A s), IsTrunc n (P s x)	  ============================	  IsTrunc n IsClosedUnderOps	";
             responses[i]=data;
           
 
@@ -668,7 +668,7 @@
           
 
             i = 130;
-            data = "1 goal (ID 4)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  H : Funext	  ============================	  IsHProp IsSubalgebraPredicate	";
+            data = "1 goal (ID 4)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  H : Funext	  ============================	  IsHProp IsSubalgebraPredicate	";
             responses[i]=data;
           
 
@@ -678,12 +678,12 @@
           
 
             i = 132;
-            data = "1 goal (ID 5)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  H : Funext	  ============================	  forall x y : IsSubalgebraPredicate, x = y	";
+            data = "1 goal (ID 5)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  H : Funext	  ============================	  forall x y : IsSubalgebraPredicate, x = y	";
             responses[i]=data;
           
 
             i = 133;
-            data = "1 goal (ID 15)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  H : Funext	  x1 : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  x2 : IsClosedUnderOps A P	  y1 : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  y2 : IsClosedUnderOps A P	  ============================	  {|	    hprop_subalgebra_predicate := x1;	    is_closed_under_ops_subalgebra_predicate := x2	  |} =	  {|	    hprop_subalgebra_predicate := y1;	    is_closed_under_ops_subalgebra_predicate := y2	  |}	";
+            data = "1 goal (ID 15)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  H : Funext	  x1 : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  x2 : IsClosedUnderOps A P	  y1 : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  y2 : IsClosedUnderOps A P	  ============================	  {|	    hprop_subalgebra_predicate := x1;	    is_closed_under_ops_subalgebra_predicate := x2	  |} =	  {|	    hprop_subalgebra_predicate := y1;	    is_closed_under_ops_subalgebra_predicate := y2	  |}	";
             responses[i]=data;
           
 
@@ -1193,7 +1193,7 @@
           
 
             i = 235;
-            data = "1 goal (ID 42)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  ============================	  IsTruncAlgebra n.+1 Subalgebra	";
+            data = "1 goal (ID 42)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  ============================	  IsTruncAlgebra n.+1 Subalgebra	";
             responses[i]=data;
           
 
@@ -1203,27 +1203,27 @@
           
 
             i = 237;
-            data = "1 goal (ID 46)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  ============================	  IsTruncAlgebra n.+1 Subalgebra	";
+            data = "1 goal (ID 46)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  ============================	  IsTruncAlgebra n.+1 Subalgebra	";
             responses[i]=data;
           
 
             i = 238;
-            data = "1 goal (ID 48)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  ============================	  IsTrunc n.+1 (Subalgebra s)	";
+            data = "1 goal (ID 48)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  ============================	  IsTrunc n.+1 (Subalgebra s)	";
             responses[i]=data;
           
 
             i = 239;
-            data = "2 goals (ID 49)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  ============================	  IsTrunc n.+1 (A s)		goal 2 (ID 50) is:	 forall a : A s, IsTrunc n.+1 (P s a)	";
+            data = "2 goals (ID 49)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  ============================	  IsTrunc n.+1 (A s)		goal 2 (ID 50) is:	 forall a : A s, IsTrunc n.+1 (P s a)	";
             responses[i]=data;
           
 
             i = 240;
-            data = "1 goal (ID 49)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  ============================	  IsTrunc n.+1 (A s)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 50) is:	 forall a : A s, IsTrunc n.+1 (P s a)	";
+            data = "1 goal (ID 49)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  ============================	  IsTrunc n.+1 (A s)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 50) is:	 forall a : A s, IsTrunc n.+1 (P s a)	";
             responses[i]=data;
           
 
             i = 241;
-            data = "1 goal (ID 50)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  ============================	  forall a : A s, IsTrunc n.+1 (P s a)	1 goal (ID 65)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  a : A s	  ============================	  IsTrunc n.+1 (P s a)	";
+            data = "1 goal (ID 50)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  ============================	  forall a : A s, IsTrunc n.+1 (P s a)	1 goal (ID 65)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  n : trunc_index	  IsTruncAlgebra0 : IsTruncAlgebra n.+1 A	  X : forall (s : Sort σ) (x : A s), IsHProp (P s x)	  s : Sort σ	  a : A s	  ============================	  IsTrunc n.+1 (P s a)	";
             responses[i]=data;
           
 
@@ -1253,7 +1253,7 @@
           
 
             i = 247;
-            data = "<infomsg>Module subalgebra_notations is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
@@ -1273,7 +1273,7 @@
           
 
             i = 251;
-            data = "";
+            data = "<infomsg>Module subalgebra_notations is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -1318,17 +1318,17 @@
           
 
             i = 260;
-            data = "<infomsg>σ is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>P is declared</infomsg>	<infomsg>IsSubalgebraPredicate0 is declared</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 261;
-            data = "<infomsg>def_inc_subalgebra is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 262;
-            data = "1 goal (ID 19)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  w : SymbolType σ	  α : Operation A w	  C : ClosedUnderOp A P α	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	";
+            data = "";
             responses[i]=data;
           
 
@@ -1338,117 +1338,117 @@
           
 
             i = 264;
-            data = "2 goals (ID 32)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  t : Sort σ	  α : Operation A [:t:]	  C : ClosedUnderOp A P α	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α		goal 2 (ID 39) is:	 OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	";
+            data = "<infomsg>σ is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>P is declared</infomsg>	<infomsg>IsSubalgebraPredicate0 is declared</infomsg>	";
             responses[i]=data;
           
 
             i = 265;
-            data = "1 goal (ID 32)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  t : Sort σ	  α : Operation A [:t:]	  C : ClosedUnderOp A P α	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 39) is:	 OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	";
+            data = "<infomsg>def_inc_subalgebra is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 266;
-            data = "1 goal (ID 39)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  t : Sort σ	  w : ne_list (Sort σ)	  α : Operation A (t ::: w)	  C : ClosedUnderOp A P α	  IHw : forall (α : Operation A w) (C : ClosedUnderOp A P α),	        OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	1 goal (ID 44)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  t : Sort σ	  w : ne_list (Sort σ)	  α : Operation A (t ::: w)	  C : ClosedUnderOp A P α	  IHw : forall (α : Operation A w) (C : ClosedUnderOp A P α),	        OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	  x : (A & P) t	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C x)	    (α (def_inc_subalgebra t x))	";
+            data = "1 goal (ID 19)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  w : SymbolType σ	  α : Operation A w	  C : ClosedUnderOp A P α	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	";
             responses[i]=data;
           
 
             i = 267;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 268;
-            data = "";
+            data = "2 goals (ID 32)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  t : Sort σ	  α : Operation A [:t:]	  C : ClosedUnderOp A P α	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α		goal 2 (ID 39) is:	 OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	";
             responses[i]=data;
           
 
             i = 269;
-            data = "1 goal (ID 23)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  ============================	  IsHomomorphism def_inc_subalgebra	";
+            data = "1 goal (ID 32)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  t : Sort σ	  α : Operation A [:t:]	  C : ClosedUnderOp A P α	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 39) is:	 OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	";
             responses[i]=data;
           
 
             i = 270;
-            data = "";
+            data = "1 goal (ID 39)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  t : Sort σ	  w : ne_list (Sort σ)	  α : Operation A (t ::: w)	  C : ClosedUnderOp A P α	  IHw : forall (α : Operation A w) (C : ClosedUnderOp A P α),	        OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	1 goal (ID 44)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  t : Sort σ	  w : ne_list (Sort σ)	  α : Operation A (t ::: w)	  C : ClosedUnderOp A P α	  IHw : forall (α : Operation A w) (C : ClosedUnderOp A P α),	        OpPreserving def_inc_subalgebra (op_subalgebra A P α C) α	  x : (A & P) t	  ============================	  OpPreserving def_inc_subalgebra (op_subalgebra A P α C x)	    (α (def_inc_subalgebra t x))	";
             responses[i]=data;
           
 
             i = 271;
-            data = "1 goal (ID 25)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  u : Symbol σ	  ============================	  OpPreserving def_inc_subalgebra (u ^^ A & P) (u ^^ A)	";
+            data = "No more goals.	";
             responses[i]=data;
           
 
             i = 272;
-            data = "No more goals.	";
+            data = "";
             responses[i]=data;
           
 
             i = 273;
-            data = "";
+            data = "1 goal (ID 23)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  ============================	  IsHomomorphism def_inc_subalgebra	";
             responses[i]=data;
           
 
             i = 274;
-            data = "<infomsg>hom_inc_subalgebra is defined</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 275;
-            data = "1 goal (ID 37)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  ============================	  IsIsomorphism hom_inc_subalgebra	";
+            data = "1 goal (ID 25)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  u : Symbol σ	  ============================	  OpPreserving def_inc_subalgebra (u ^^ A & P) (u ^^ A)	";
             responses[i]=data;
           
 
             i = 276;
-            data = "";
-            responses[i]=data;
-          
-
-            i = 277;
-            data = "1 goal (ID 39)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  ============================	  IsEquiv (hom_inc_subalgebra s)	";
-            responses[i]=data;
-          
-
-            i = 278;
-            data = "2 goals (ID 54)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  ============================	  (λ x : A s, hom_inc_subalgebra s (x; improper s x)) == idmap		goal 2 (ID 55) is:	 (λ x : ∃ y, P s y,	  (hom_inc_subalgebra s x; improper s (hom_inc_subalgebra s x))) == idmap	";
-            responses[i]=data;
-          
-
-            i = 279;
-            data = "1 goal (ID 54)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  ============================	  (λ x : A s, hom_inc_subalgebra s (x; improper s x)) == idmap	1 goal (ID 57)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  x : A s	  ============================	  hom_inc_subalgebra s (x; improper s x) = x	";
-            responses[i]=data;
-          
-
-            i = 280;
-            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 55) is:	 (λ x : ∃ y, P s y,	  (hom_inc_subalgebra s x; improper s (hom_inc_subalgebra s x))) == idmap	";
-            responses[i]=data;
-          
-
-            i = 281;
-            data = "1 goal (ID 55)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  ============================	  (λ x : ∃ y, P s y,	   (hom_inc_subalgebra s x; improper s (hom_inc_subalgebra s x))) == idmap	1 goal (ID 60)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  x : ∃ y, P s y	  ============================	  (hom_inc_subalgebra s x; improper s (hom_inc_subalgebra s x)) = x	";
-            responses[i]=data;
-          
-
-            i = 282;
             data = "No more goals.	";
             responses[i]=data;
           
 
-            i = 283;
+            i = 277;
             data = "";
+            responses[i]=data;
+          
+
+            i = 278;
+            data = "<infomsg>hom_inc_subalgebra is defined</infomsg>	";
+            responses[i]=data;
+          
+
+            i = 279;
+            data = "1 goal (ID 37)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  ============================	  IsIsomorphism hom_inc_subalgebra	";
+            responses[i]=data;
+          
+
+            i = 280;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 281;
+            data = "1 goal (ID 39)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  ============================	  IsEquiv (hom_inc_subalgebra s)	";
+            responses[i]=data;
+          
+
+            i = 282;
+            data = "2 goals (ID 54)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  ============================	  (λ x : A s, hom_inc_subalgebra s (x; improper s x)) == idmap		goal 2 (ID 55) is:	 (λ x : {x : _ & P s x},	  (hom_inc_subalgebra s x; improper s (hom_inc_subalgebra s x))) == idmap	";
+            responses[i]=data;
+          
+
+            i = 283;
+            data = "1 goal (ID 54)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  ============================	  (λ x : A s, hom_inc_subalgebra s (x; improper s x)) == idmap	1 goal (ID 57)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  x : A s	  ============================	  hom_inc_subalgebra s (x; improper s x) = x	";
             responses[i]=data;
           
 
             i = 284;
-            data = "";
+            data = "<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 55) is:	 (λ x : {x : _ & P s x},	  (hom_inc_subalgebra s x; improper s (hom_inc_subalgebra s x))) == idmap	";
             responses[i]=data;
           
 
             i = 285;
-            data = "";
+            data = "1 goal (ID 55)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  ============================	  (λ x : {x : _ & P s x},	   (hom_inc_subalgebra s x; improper s (hom_inc_subalgebra s x))) == idmap	1 goal (ID 60)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  IsSubalgebraPredicate0 : IsSubalgebraPredicate A P	  improper : forall (s : Sort σ) (x : A s), P s x	  s : Sort σ	  x : {x : _ & P s x}	  ============================	  (hom_inc_subalgebra s x; improper s (hom_inc_subalgebra s x)) = x	";
             responses[i]=data;
           
 
             i = 286;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1488,12 +1488,12 @@
           
 
             i = 294;
-            data = "<infomsg>σ is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>P is declared</infomsg>	<infomsg>CP is declared</infomsg>	<infomsg>Q is declared</infomsg>	<infomsg>CQ is declared</infomsg>	";
+            data = "";
             responses[i]=data;
           
 
             i = 295;
-            data = "1 goal (ID 15)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s → Type	  CQ : IsSubalgebraPredicate A Q	  H : Funext	  p : P = Q	  ============================	  A & P = A & Q	";
+            data = "";
             responses[i]=data;
           
 
@@ -1503,17 +1503,17 @@
           
 
             i = 297;
-            data = "No more goals.	";
-            responses[i]=data;
-          
-
-            i = 298;
             data = "";
             responses[i]=data;
           
 
+            i = 298;
+            data = "<infomsg>σ is declared</infomsg>	<infomsg>A is declared</infomsg>	<infomsg>P is declared</infomsg>	<infomsg>CP is declared</infomsg>	<infomsg>Q is declared</infomsg>	<infomsg>CQ is declared</infomsg>	";
+            responses[i]=data;
+          
+
             i = 299;
-            data = "1 goal (ID 26)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s → Type	  CQ : IsSubalgebraPredicate A Q	  H : Univalence	  R : forall (s : Sort σ) (x : A s), P s x ↔ Q s x	  ============================	  A & P = A & Q	";
+            data = "1 goal (ID 15)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s -> Type	  CQ : IsSubalgebraPredicate A Q	  H : Funext	  p : P = Q	  ============================	  A & P = A & Q	";
             responses[i]=data;
           
 
@@ -1523,42 +1523,42 @@
           
 
             i = 301;
-            data = "1 goal (ID 31)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s → Type	  CQ : IsSubalgebraPredicate A Q	  H : Univalence	  R : forall (s : Sort σ) (x : A s), P s x ↔ Q s x	  ============================	  P = Q	";
-            responses[i]=data;
-          
-
-            i = 302;
-            data = "1 goal (ID 49)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s → Type	  CQ : IsSubalgebraPredicate A Q	  H : Univalence	  R : forall (s : Sort σ) (x : A s), P s x ↔ Q s x	  s : Sort σ	  x : A s	  ============================	  P s x = Q s x	";
-            responses[i]=data;
-          
-
-            i = 303;
-            data = "1 goal (ID 58)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s → Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s → Type	  CQ : IsSubalgebraPredicate A Q	  H : Univalence	  R : forall (s : Sort σ) (x : A s), P s x ↔ Q s x	  s : Sort σ	  x : A s	  ============================	  IsEquiv (fst (R s x))	";
-            responses[i]=data;
-          
-
-            i = 304;
             data = "No more goals.	";
             responses[i]=data;
           
 
-            i = 305;
+            i = 302;
             data = "";
+            responses[i]=data;
+          
+
+            i = 303;
+            data = "1 goal (ID 26)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s -> Type	  CQ : IsSubalgebraPredicate A Q	  H : Univalence	  R : forall (s : Sort σ) (x : A s), P s x <-> Q s x	  ============================	  A & P = A & Q	";
+            responses[i]=data;
+          
+
+            i = 304;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 305;
+            data = "1 goal (ID 31)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s -> Type	  CQ : IsSubalgebraPredicate A Q	  H : Univalence	  R : forall (s : Sort σ) (x : A s), P s x <-> Q s x	  ============================	  P = Q	";
             responses[i]=data;
           
 
             i = 306;
-            data = "";
+            data = "1 goal (ID 49)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s -> Type	  CQ : IsSubalgebraPredicate A Q	  H : Univalence	  R : forall (s : Sort σ) (x : A s), P s x <-> Q s x	  s : Sort σ	  x : A s	  ============================	  P s x = Q s x	";
             responses[i]=data;
           
 
             i = 307;
-            data = "";
+            data = "1 goal (ID 58)	  	  σ : Signature	  A : Algebra σ	  P : forall s : Sort σ, A s -> Type	  CP : IsSubalgebraPredicate A P	  Q : forall s : Sort σ, A s -> Type	  CQ : IsSubalgebraPredicate A Q	  H : Univalence	  R : forall (s : Sort σ) (x : A s), P s x <-> Q s x	  s : Sort σ	  x : A s	  ============================	  IsEquiv (fst (R s x))	";
             responses[i]=data;
           
 
             i = 308;
-            data = "";
+            data = "No more goals.	";
             responses[i]=data;
           
 
@@ -1603,6 +1603,26 @@
           
 
             i = 317;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 318;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 319;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 320;
+            data = "";
+            responses[i]=data;
+          
+
+            i = 321;
             data = "";
             responses[i]=data;
           
@@ -1655,7 +1675,7 @@
       " onmouseover="
       mouseover(9, '0_3_3');
       "><br>
-  <span class="id" title="keyword">Context</span> `{<a id="H:1" class="idref" href="#H:1"><span class="id" title="binder">Funext</span></a>} {<a id="5cb7069516295828a6769890e3fe4f53" class="idref" href="#5cb7069516295828a6769890e3fe4f53"><span class="id" title="binder">σ</span></a>} (<a id="A:3" class="idref" href="#A:3"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#5cb7069516295828a6769890e3fe4f53"><span class="id" title="variable">σ</span></a>) (<a id="P:5" class="idref" href="#P:5"><span class="id" title="binder">P</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:4" class="idref" href="#s:4"><span class="id" title="binder">s</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:3"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:4"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>).</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Context</span> `{<a id="H:1" class="idref" href="#H:1"><span class="id" title="binder">Funext</span></a>} {<a id="5cb7069516295828a6769890e3fe4f53" class="idref" href="#5cb7069516295828a6769890e3fe4f53"><span class="id" title="binder">σ</span></a>} (<a id="A:3" class="idref" href="#A:3"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#5cb7069516295828a6769890e3fe4f53"><span class="id" title="variable">σ</span></a>) (<a id="P:5" class="idref" href="#P:5"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:4" class="idref" href="#s:4"><span class="id" title="binder">s</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:3"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:4"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>).</span><span class="command" onmouseout="
       mouseout('0_3_3');
       " onmouseover="
       mouseover(10, '0_3_3');
@@ -1665,7 +1685,7 @@
 </div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-Let <span class="inlinecode"><span class="id" title="var">α</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">s1</span></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">s2</span></span> <span class="inlinecode">→</span> <span class="inlinecode">...</span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">sn</span></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#t"><span class="id" title="definition">t</span></a></span> be an algebra
+Let <span class="inlinecode"><span class="id" title="var">α</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">s1</span></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">s2</span></span> <span class="inlinecode">→</span> <span class="inlinecode">...</span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">sn</span></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">t</span></span> be an algebra
       operation. Then <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> satisfies <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a></span> <span class="inlinecode"><span class="id" title="var">α</span></span> iff
       for <span class="inlinecode"><a class="idref" href="HoTT.Categories.Category.Morphisms.html#associativity_composition.x1"><span class="id" title="variable">x1</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">s1</span></span>, <span class="inlinecode"><a class="idref" href="HoTT.Categories.Category.Morphisms.html#associativity_composition.x2"><span class="id" title="variable">x2</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">s2</span></span>, ..., <span class="inlinecode"><span class="id" title="var">xn</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">sn</span></span>,
 
@@ -1691,11 +1711,11 @@ Let <span class="inlinecode"><span class="id" title="var">α</span></span> <span
       mouseover(84, '0_3_7');
       ">
 <br>
-  <span class="id" title="keyword">Fixpoint</span> <a id="ClosedUnderOp" class="idref" href="#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a> {<a id="w:6" class="idref" href="#w:6"><span class="id" title="binder">w</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#0d50da1898314690bd7d49b8e76500b1"><span class="id" title="variable">σ</span></a>} : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:6"><span class="id" title="variable">w</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span> :=<br>
+  <span class="id" title="keyword">Fixpoint</span> <a id="ClosedUnderOp" class="idref" href="#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a> {<a id="w:6" class="idref" href="#w:6"><span class="id" title="binder">w</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#0d50da1898314690bd7d49b8e76500b1"><span class="id" title="variable">σ</span></a>} : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:6"><span class="id" title="variable">w</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span> :=<br>
     <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:6"><span class="id" title="variable">w</span></a> <span class="id" title="keyword">with</span><br>
     | <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">[:</span></a><span class="id" title="var">s</span><a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">:]</span></a> ⇒ <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.P"><span class="id" title="variable">P</span></a> <span class="id" title="var">s</span><br>
-    | <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.notations.::ne_list_scope:x_':::'_x"><span class="id" title="notation">:::</span></a> <span class="id" title="var">w'</span> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">(</span></a><a id="28f99dcc928d04043aa00c6d63ae3266" class="idref" href="#28f99dcc928d04043aa00c6d63ae3266"><span class="id" title="binder">α</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">s</span> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">w'</span><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">),</span></a><br>
-                    <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">(</span></a><a id="x:10" class="idref" href="#x:10"><span class="id" title="binder">x</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">s</span><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.P"><span class="id" title="variable">P</span></a> <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:10"><span class="id" title="variable">x</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp:7"><span class="id" title="definition">ClosedUnderOp</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#28f99dcc928d04043aa00c6d63ae3266"><span class="id" title="variable">α</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:10"><span class="id" title="variable">x</span></a>)<br>
+    | <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.notations.::ne_list_scope:x_':::'_x"><span class="id" title="notation">:::</span></a> <span class="id" title="var">w'</span> ⇒ <a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">(</span></a><a id="28f99dcc928d04043aa00c6d63ae3266" class="idref" href="#28f99dcc928d04043aa00c6d63ae3266"><span class="id" title="binder">α</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">s</span> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">w'</span><a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">),</span></a><br>
+                    <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">(</span></a><a id="x:10" class="idref" href="#x:10"><span class="id" title="binder">x</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">s</span><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.P"><span class="id" title="variable">P</span></a> <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:10"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp:7"><span class="id" title="definition">ClosedUnderOp</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#28f99dcc928d04043aa00c6d63ae3266"><span class="id" title="variable">α</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:10"><span class="id" title="variable">x</span></a>)<br>
     <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
@@ -1726,7 +1746,7 @@ Let <span class="inlinecode"><span class="id" title="var">α</span></span> <span
       "><br>
 <br>
   <span class="id" title="keyword">Definition</span> <a id="IsClosedUnderOps" class="idref" href="#IsClosedUnderOps"><span class="id" title="definition">IsClosedUnderOps</span></a> : <span class="id" title="keyword">Type</span><br>
-    := <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">(</span></a><a id="u:17" class="idref" href="#u:17"><span class="id" title="binder">u</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#0d50da1898314690bd7d49b8e76500b1"><span class="id" title="variable">σ</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#u:17"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#e11c7cea9fb47a1f2a2927c4977af045"><span class="id" title="notation">^^</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a>).</span><span class="command" onmouseout="
+    := <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">(</span></a><a id="u:17" class="idref" href="#u:17"><span class="id" title="binder">u</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#0d50da1898314690bd7d49b8e76500b1"><span class="id" title="variable">σ</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#u:17"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#e11c7cea9fb47a1f2a2927c4977af045"><span class="id" title="notation">^^</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#closed_under_op.A"><span class="id" title="variable">A</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(90, '0_3_7');
@@ -1779,7 +1799,7 @@ Let <span class="inlinecode"><span class="id" title="var">α</span></span> <span
       " onmouseover="
       mouseover(128, '0_3_11');
       "><br>
-  <span class="id" title="keyword">Context</span>  {<a id="7e47f8c913dc13cab771d71295e29a6d" class="idref" href="#7e47f8c913dc13cab771d71295e29a6d"><span class="id" title="binder">σ</span></a>} (<a id="A:23" class="idref" href="#A:23"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#7e47f8c913dc13cab771d71295e29a6d"><span class="id" title="variable">σ</span></a>) (<a id="P:25" class="idref" href="#P:25"><span class="id" title="binder">P</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:24" class="idref" href="#s:24"><span class="id" title="binder">s</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:23"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:24"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>).</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Context</span>  {<a id="7e47f8c913dc13cab771d71295e29a6d" class="idref" href="#7e47f8c913dc13cab771d71295e29a6d"><span class="id" title="binder">σ</span></a>} (<a id="A:23" class="idref" href="#A:23"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#7e47f8c913dc13cab771d71295e29a6d"><span class="id" title="variable">σ</span></a>) (<a id="P:25" class="idref" href="#P:25"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:24" class="idref" href="#s:24"><span class="id" title="binder">s</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:23"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:24"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>).</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
       mouseover(129, '0_3_11');
@@ -1787,7 +1807,7 @@ Let <span class="inlinecode"><span class="id" title="var">α</span></span> <span
 <br>
   <span class="id" title="keyword">Class</span> <a id="IsSubalgebraPredicate" class="idref" href="#IsSubalgebraPredicate"><span class="id" title="record">IsSubalgebraPredicate</span></a><br>
     := <a id="BuildIsSubalgebraPredicate" class="idref" href="#BuildIsSubalgebraPredicate"><span class="id" title="constructor">BuildIsSubalgebraPredicate</span></a><br>
-    { <a id="hprop_subalgebra_predicate" class="idref" href="#hprop_subalgebra_predicate"><span class="id" title="projection">hprop_subalgebra_predicate</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:27" class="idref" href="#s:27"><span class="id" title="binder">s</span></a> <a id="x:28" class="idref" href="#x:28"><span class="id" title="binder">x</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_predicate.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:27"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:28"><span class="id" title="variable">x</span></a>);<br>
+    { <a id="hprop_subalgebra_predicate" class="idref" href="#hprop_subalgebra_predicate"><span class="id" title="projection">hprop_subalgebra_predicate</span></a> : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:27" class="idref" href="#s:27"><span class="id" title="binder">s</span></a> <a id="x:28" class="idref" href="#x:28"><span class="id" title="binder">x</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_predicate.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:27"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:28"><span class="id" title="variable">x</span></a>);<br>
       <a id="is_closed_under_ops_subalgebra_predicate" class="idref" href="#is_closed_under_ops_subalgebra_predicate"><span class="id" title="projection">is_closed_under_ops_subalgebra_predicate</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsClosedUnderOps"><span class="id" title="definition">IsClosedUnderOps</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_predicate.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_predicate.P"><span class="id" title="variable">P</span></a> }.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
@@ -1863,7 +1883,7 @@ The next section defines subalgebra.
       "><br>
   <span class="id" title="keyword">Context</span><br>
     {<a id="06b43d5b33f680f1c997e1fdb8d32e12" class="idref" href="#06b43d5b33f680f1c997e1fdb8d32e12"><span class="id" title="binder">σ</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>} (<a id="A:33" class="idref" href="#A:33"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#06b43d5b33f680f1c997e1fdb8d32e12"><span class="id" title="variable">σ</span></a>)<br>
-    (<a id="P:35" class="idref" href="#P:35"><span class="id" title="binder">P</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:34" class="idref" href="#s:34"><span class="id" title="binder">s</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:33"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:34"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a id="IsSubalgebraPredicate0:36" class="idref" href="#IsSubalgebraPredicate0:36"><span class="id" title="binder">!</span></a><a id="IsSubalgebraPredicate0:36" class="idref" href="#IsSubalgebraPredicate0:36"><span class="id" title="binder">IsSubalgebraPredicate</span></a> <a id="IsSubalgebraPredicate0:36" class="idref" href="#IsSubalgebraPredicate0:36"><span class="id" title="binder">A</span></a> <a id="IsSubalgebraPredicate0:36" class="idref" href="#IsSubalgebraPredicate0:36"><span class="id" title="binder">P</span></a>}.</span><span class="command" onmouseout="
+    (<a id="P:35" class="idref" href="#P:35"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:34" class="idref" href="#s:34"><span class="id" title="binder">s</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:33"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:34"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a id="IsSubalgebraPredicate0:36" class="idref" href="#IsSubalgebraPredicate0:36"><span class="id" title="binder">!</span></a><a id="IsSubalgebraPredicate0:36" class="idref" href="#IsSubalgebraPredicate0:36"><span class="id" title="binder">IsSubalgebraPredicate</span></a> <a id="IsSubalgebraPredicate0:36" class="idref" href="#IsSubalgebraPredicate0:36"><span class="id" title="binder">A</span></a> <a id="IsSubalgebraPredicate0:36" class="idref" href="#IsSubalgebraPredicate0:36"><span class="id" title="binder">P</span></a>}.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(145, '0_3_15');
@@ -1883,7 +1903,7 @@ The subalgebra carriers is the family of subtypes defined by <span class="inline
       ">
 <br>
   <span class="id" title="keyword">Definition</span> <a id="carriers_subalgebra" class="idref" href="#carriers_subalgebra"><span class="id" title="definition">carriers_subalgebra</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Carriers"><span class="id" title="abbreviation">Carriers</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#c2c2f14a82efe4d4ae3bbcb8a2c678f1"><span class="id" title="variable">σ</span></a><br>
-    := <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">(</span></a><a id="s:37" class="idref" href="#s:37"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#c2c2f14a82efe4d4ae3bbcb8a2c678f1"><span class="id" title="variable">σ</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">),</span></a> <a class="idref" href="Coq.Init.Specif.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">{</span></a><a id="x:38" class="idref" href="#x:38"><span class="id" title="binder">x</span></a> <a class="idref" href="Coq.Init.Specif.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">|</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:37"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:38"><span class="id" title="variable">x</span></a><a class="idref" href="Coq.Init.Specif.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">}</span></a>.</span><span class="command" onmouseout="
+    := <a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">(</span></a><a id="s:37" class="idref" href="#s:37"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#c2c2f14a82efe4d4ae3bbcb8a2c678f1"><span class="id" title="variable">σ</span></a><a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Basics.Overture.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">{</span></a><a id="x:38" class="idref" href="#x:38"><span class="id" title="binder">x</span></a> <a class="idref" href="HoTT.Basics.Overture.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">|</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:37"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:38"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">}</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
       mouseover(152, '0_3_19');
@@ -1893,9 +1913,9 @@ The subalgebra carriers is the family of subtypes defined by <span class="inline
 </div>
 <div class="goal" id="goal0_3_19"><pre><span></span></pre></div>
 <div class="doc" scenenumber="21">
-Let <span class="inlinecode"><span class="id" title="var">α</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">s1</span></span> <span class="inlinecode">→</span> <span class="inlinecode">...</span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">sn</span></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#t"><span class="id" title="definition">t</span></a></span> be an operation and let <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.C"><span class="id" title="variable">C</span></a></span> <span class="inlinecode">:</span>
+Let <span class="inlinecode"><span class="id" title="var">α</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">s1</span></span> <span class="inlinecode">→</span> <span class="inlinecode">...</span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">sn</span></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><span class="id" title="var">t</span></span> be an operation and let <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.C"><span class="id" title="variable">C</span></a></span> <span class="inlinecode">:</span>
 <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> <span class="inlinecode"><a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><span class="id" title="var">α</span></span>. The corresponding subalgebra operation
-    <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#op_subalgebra"><span class="id" title="definition">op_subalgebra</span></a></span> <span class="inlinecode"><span class="id" title="var">α</span></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.C"><span class="id" title="variable">C</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode">(<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a>&amp;<a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a>)</span> <span class="inlinecode"><span class="id" title="var">s1</span></span> <span class="inlinecode">→</span> <span class="inlinecode">...</span> <span class="inlinecode">→</span> <span class="inlinecode">(<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a>&amp;<a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a>)</span> <span class="inlinecode"><span class="id" title="var">sn</span></span> <span class="inlinecode">→</span> <span class="inlinecode">(<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a>&amp;<a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a>)</span> <span class="inlinecode"><a class="idref" href="Coq.Init.Nat.html#t"><span class="id" title="definition">t</span></a></span> is
+    <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#op_subalgebra"><span class="id" title="definition">op_subalgebra</span></a></span> <span class="inlinecode"><span class="id" title="var">α</span></span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.C"><span class="id" title="variable">C</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode">(<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a>&amp;<a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a>)</span> <span class="inlinecode"><span class="id" title="var">s1</span></span> <span class="inlinecode">→</span> <span class="inlinecode">...</span> <span class="inlinecode">→</span> <span class="inlinecode">(<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a>&amp;<a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a>)</span> <span class="inlinecode"><span class="id" title="var">sn</span></span> <span class="inlinecode">→</span> <span class="inlinecode">(<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a>&amp;<a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a>)</span> <span class="inlinecode"><span class="id" title="var">t</span></span> is
     given by
 
 <div class="doc" scenenumber="65"> </div>
@@ -1913,11 +1933,11 @@ Let <span class="inlinecode"><span class="id" title="var">α</span></span> <span
       ">
 <br>
   <span class="id" title="keyword">Fixpoint</span> <a id="op_subalgebra" class="idref" href="#op_subalgebra"><span class="id" title="definition">op_subalgebra</span></a> {<a id="w:39" class="idref" href="#w:39"><span class="id" title="binder">w</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#c2c2f14a82efe4d4ae3bbcb8a2c678f1"><span class="id" title="variable">σ</span></a>}<br>
-    : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">(</span></a><a id="3c85de880ac7727ba8142958ded6bc4c" class="idref" href="#3c85de880ac7727ba8142958ded6bc4c"><span class="id" title="binder">α</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:39"><span class="id" title="variable">w</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a><br>
-      <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#3c85de880ac7727ba8142958ded6bc4c"><span class="id" title="variable">α</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#carriers_subalgebra"><span class="id" title="definition">carriers_subalgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:39"><span class="id" title="variable">w</span></a><br>
+    : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">(</span></a><a id="3c85de880ac7727ba8142958ded6bc4c" class="idref" href="#3c85de880ac7727ba8142958ded6bc4c"><span class="id" title="binder">α</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:39"><span class="id" title="variable">w</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a><br>
+      <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#3c85de880ac7727ba8142958ded6bc4c"><span class="id" title="variable">α</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#carriers_subalgebra"><span class="id" title="definition">carriers_subalgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:39"><span class="id" title="variable">w</span></a><br>
     := <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:39"><span class="id" title="variable">w</span></a> <span class="id" title="keyword">with</span><br>
-       | <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">[:</span></a><span class="id" title="var">t</span><a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">:]</span></a> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a id="54175b77e672f358d412233ef0129fe6" class="idref" href="#54175b77e672f358d412233ef0129fe6"><span class="id" title="binder">α</span></a> <a id="c:44" class="idref" href="#c:44"><span class="id" title="binder">c</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#54175b77e672f358d412233ef0129fe6"><span class="id" title="variable">α</span></a><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#c:44"><span class="id" title="variable">c</span></a><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a><br>
-       | <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.notations.::ne_list_scope:x_':::'_x"><span class="id" title="notation">:::</span></a> <span class="id" title="var">w'</span> ⇒ <a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a id="0d58e3003847343a8e874b4b73699f2f" class="idref" href="#0d58e3003847343a8e874b4b73699f2f"><span class="id" title="binder">α</span></a> <a id="c:46" class="idref" href="#c:46"><span class="id" title="binder">c</span></a> <a id="x:47" class="idref" href="#x:47"><span class="id" title="binder">x</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#op_subalgebra:41"><span class="id" title="definition">op_subalgebra</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#0d58e3003847343a8e874b4b73699f2f"><span class="id" title="variable">α</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:47"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">.1</span></a>) (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#c:46"><span class="id" title="variable">c</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:47"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">.1</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:47"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.2'"><span class="id" title="notation">.2</span></a>)<br>
+       | <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">[:</span></a><span class="id" title="var">t</span><a class="idref" href="HoTT.Classes.implementations.ne_list.html#ee22de0dcbfc7276e0428d092ee5aa94"><span class="id" title="notation">:]</span></a> ⇒ <a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a id="54175b77e672f358d412233ef0129fe6" class="idref" href="#54175b77e672f358d412233ef0129fe6"><span class="id" title="binder">α</span></a> <a id="c:44" class="idref" href="#c:44"><span class="id" title="binder">c</span></a><a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#54175b77e672f358d412233ef0129fe6"><span class="id" title="variable">α</span></a><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#c:44"><span class="id" title="variable">c</span></a><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a><br>
+       | <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.implementations.ne_list.html#ne_list.notations.::ne_list_scope:x_':::'_x"><span class="id" title="notation">:::</span></a> <span class="id" title="var">w'</span> ⇒ <a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a id="0d58e3003847343a8e874b4b73699f2f" class="idref" href="#0d58e3003847343a8e874b4b73699f2f"><span class="id" title="binder">α</span></a> <a id="c:46" class="idref" href="#c:46"><span class="id" title="binder">c</span></a> <a id="x:47" class="idref" href="#x:47"><span class="id" title="binder">x</span></a><a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#op_subalgebra:41"><span class="id" title="definition">op_subalgebra</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#0d58e3003847343a8e874b4b73699f2f"><span class="id" title="variable">α</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:47"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">.1</span></a>) (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#c:46"><span class="id" title="variable">c</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:47"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">.1</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:47"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.2'"><span class="id" title="notation">.2</span></a>)<br>
        <span class="id" title="keyword">end</span>.</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
@@ -2009,274 +2029,286 @@ The subalgebra operations <span class="inlinecode"><a class="idref" href="HoTT.C
       " onmouseover="
       mouseover(246, '0_3_27');
       "><br>
-  <span class="id" title="keyword">Notation</span> <a id="subalgebra_notations.::Algebra_scope:x_'&amp;'_x" class="idref" href="#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">"</span></a>A &amp; P" := (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#Subalgebra"><span class="id" title="definition">Subalgebra</span></a> <span class="id" title="var">A</span> <span class="id" title="var">P</span>)<br>
-                      (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 50, <span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>)<br>
-                      : <span class="id" title="var">Algebra_scope</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_27');
-      " onmouseover="
-      mouseover(247, '0_3_27');
-      "><br>
-<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations"><span class="id" title="module">subalgebra_notations</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_27');
-      " onmouseover="
-      mouseover(248, '0_3_27');
-      "><br>
-<br>
-<span class="id" title="keyword">Import</span> <span class="id" title="var">subalgebra_notations</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_27');
-      " onmouseover="
-      mouseover(249, '0_3_27');
-      "><br>
-<br>
 </span>
 </div>
 <div class="goal" id="goal0_3_27"><pre><span></span></pre></div>
 <div class="doc" scenenumber="29">
-The following section defines the inclusion homomorphism
-    <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#Homomorphism"><span class="id" title="record">Homomorphism</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a>&amp;<a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a>)</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span>, and some related results. 
+Cannot reserve since it messes with sigma type notation 
 </div>
 <div scenenumber="31" class="code">
 <span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(259, '0_3_31');
+      mouseover(250, '0_3_31');
       ">
-<br>
-<span class="id" title="keyword">Section</span> <a id="hom_inc_subalgebra" class="idref" href="#hom_inc_subalgebra"><span class="id" title="section">hom_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Notation</span> <a id="subalgebra_notations.::Algebra_scope:x_'&amp;'_x" class="idref" href="#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">"</span></a>A &amp; P" := (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#Subalgebra"><span class="id" title="definition">Subalgebra</span></a> <span class="id" title="var">A</span> <span class="id" title="var">P</span>)<br>
+                      (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 50, <span class="id" title="tactic">left</span> <span class="id" title="keyword">associativity</span>)<br>
+                      : <span class="id" title="var">Algebra_scope</span>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(260, '0_3_31');
+      mouseover(251, '0_3_31');
       "><br>
-  <span class="id" title="keyword">Context</span><br>
-    {<a id="aabbb3071490a3e89c35c54fc4d8b7c4" class="idref" href="#aabbb3071490a3e89c35c54fc4d8b7c4"><span class="id" title="binder">σ</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>} (<a id="A:52" class="idref" href="#A:52"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#aabbb3071490a3e89c35c54fc4d8b7c4"><span class="id" title="variable">σ</span></a>)<br>
-    (<a id="P:54" class="idref" href="#P:54"><span class="id" title="binder">P</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:53" class="idref" href="#s:53"><span class="id" title="binder">s</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:52"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:53"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a id="IsSubalgebraPredicate0:55" class="idref" href="#IsSubalgebraPredicate0:55"><span class="id" title="binder">!</span></a><a id="IsSubalgebraPredicate0:55" class="idref" href="#IsSubalgebraPredicate0:55"><span class="id" title="binder">IsSubalgebraPredicate</span></a> <a id="IsSubalgebraPredicate0:55" class="idref" href="#IsSubalgebraPredicate0:55"><span class="id" title="binder">A</span></a> <a id="IsSubalgebraPredicate0:55" class="idref" href="#IsSubalgebraPredicate0:55"><span class="id" title="binder">P</span></a>}.</span><span class="command" onmouseout="
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations"><span class="id" title="module">subalgebra_notations</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(261, '0_3_31');
-      "><br>
-<br>
-  <span class="id" title="keyword">Definition</span> <a id="def_inc_subalgebra" class="idref" href="#def_inc_subalgebra"><span class="id" title="definition">def_inc_subalgebra</span></a> (<a id="s:56" class="idref" href="#s:56"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#6e19242da08513deb2ed2701839f2916"><span class="id" title="variable">σ</span></a>) : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:56"><span class="id" title="variable">s</span></a><br>
-    := <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(262, '0_3_31');
+      mouseover(252, '0_3_31');
       "><br>
 <br>
-  <span class="id" title="keyword">Lemma</span> <a id="oppreserving_inc_subalgebra" class="idref" href="#oppreserving_inc_subalgebra"><span class="id" title="lemma">oppreserving_inc_subalgebra</span></a> {<a id="w:57" class="idref" href="#w:57"><span class="id" title="binder">w</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#6e19242da08513deb2ed2701839f2916"><span class="id" title="variable">σ</span></a>}<br>
-    (<a id="bf907aada7fd3e8b840d356133d6b896" class="idref" href="#bf907aada7fd3e8b840d356133d6b896"><span class="id" title="binder">α</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:57"><span class="id" title="variable">w</span></a>) (<a id="C:59" class="idref" href="#C:59"><span class="id" title="binder">C</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#bf907aada7fd3e8b840d356133d6b896"><span class="id" title="variable">α</span></a>)<br>
-    : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#OpPreserving"><span class="id" title="definition">OpPreserving</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#def_inc_subalgebra"><span class="id" title="definition">def_inc_subalgebra</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#op_subalgebra"><span class="id" title="definition">op_subalgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#bf907aada7fd3e8b840d356133d6b896"><span class="id" title="variable">α</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#C:59"><span class="id" title="variable">C</span></a>) <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#bf907aada7fd3e8b840d356133d6b896"><span class="id" title="variable">α</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Import</span> <span class="id" title="var">subalgebra_notations</span>.</span><span class="command" onmouseout="
       mouseout('0_3_31');
       " onmouseover="
-      mouseover(263, '0_3_31');
-      "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(264, '0_3_31');
-      "><br>
-    <span class="id" title="tactic">induction</span> <span class="id" title="var">w</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(265, '0_3_31');
-      "><br>
-    - <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(266, '0_3_31');
-      "><br>
-    - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(267, '0_3_31');
-      "><span class="id" title="tactic">apply</span> <span class="id" title="var">IHw</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(268, '0_3_31');
-      "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(269, '0_3_31');
-      "><br>
-<br>
-  <span class="id" title="keyword">Global Instance</span> <a id="is_homomorphism_inc_subalgebra" class="idref" href="#is_homomorphism_inc_subalgebra"><span class="id" title="instance">is_homomorphism_inc_subalgebra</span></a><br>
-    : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsHomomorphism"><span class="id" title="class">IsHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#def_inc_subalgebra"><span class="id" title="definition">def_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(270, '0_3_31');
-      "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(271, '0_3_31');
-      "><br>
-    <span class="id" title="tactic">intro</span> <span class="id" title="var">u</span>. </span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(272, '0_3_31');
-      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#oppreserving_inc_subalgebra"><span class="id" title="lemma">oppreserving_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(273, '0_3_31');
-      "><br>
-  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(274, '0_3_31');
-      "><br>
-<br>
-  <span class="id" title="keyword">Definition</span> <a id="hom_inc_subalgebra" class="idref" href="#hom_inc_subalgebra"><span class="id" title="definition">hom_inc_subalgebra</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#Homomorphism"><span class="id" title="record">Homomorphism</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a>) <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a><br>
-    := <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#BuildHomomorphism"><span class="id" title="constructor">BuildHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#def_inc_subalgebra"><span class="id" title="definition">def_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(275, '0_3_31');
-      "><br>
-<br>
-  <span class="id" title="keyword">Lemma</span> <a id="is_isomorphism_inc_improper_subalgebra" class="idref" href="#is_isomorphism_inc_improper_subalgebra"><span class="id" title="lemma">is_isomorphism_inc_improper_subalgebra</span></a><br>
-    (<a id="improper:62" class="idref" href="#improper:62"><span class="id" title="binder">improper</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:60" class="idref" href="#s:60"><span class="id" title="binder">s</span></a> (<a id="x:61" class="idref" href="#x:61"><span class="id" title="binder">x</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:60"><span class="id" title="variable">s</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:60"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:61"><span class="id" title="variable">x</span></a>)<br>
-    : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsIsomorphism"><span class="id" title="class">IsIsomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra"><span class="id" title="definition">hom_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(276, '0_3_31');
-      "><br>
-  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(277, '0_3_31');
-      "><br>
-    <span class="id" title="tactic">intro</span> <span class="id" title="var">s</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(278, '0_3_31');
-      "><br>
-    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_adjointify"><span class="id" title="definition">isequiv_adjointify</span></a> <span class="id" title="var">_</span> (<a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a id="x:64" class="idref" href="#x:64"><span class="id" title="binder">x</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:63"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <span class="id" title="var">improper</span> <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:63"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(279, '0_3_31');
-      "><br>
-    - <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(280, '0_3_31');
-      "><span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(281, '0_3_31');
-      "><br>
-    - <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(282, '0_3_31');
-      "><span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#path_sigma_hprop"><span class="id" title="definition">path_sigma_hprop</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(283, '0_3_31');
-      "><br>
-  <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(284, '0_3_31');
-      "><br>
-<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra"><span class="id" title="section">hom_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
-      mouseout('0_3_31');
-      " onmouseover="
-      mouseover(285, '0_3_31');
+      mouseover(253, '0_3_31');
       "><br>
 <br>
 </span>
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
 <div class="doc" scenenumber="33">
-The next section provides paths between subalgebras. These paths
-    are convenient to have because the implicit type-class argument
-    <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsClosedUnderOps"><span class="id" title="definition">IsClosedUnderOps</span></a></span> of <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#Subalgebra"><span class="id" title="definition">Subalgebra</span></a></span> is complicating things. 
+The following section defines the inclusion homomorphism
+    <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#Homomorphism"><span class="id" title="record">Homomorphism</span></a></span> <span class="inlinecode">(<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a>&amp;<a class="idref" href="HoTT.Categories.DependentProduct.html#dependent_product.P"><span class="id" title="variable">P</span></a>)</span> <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span>, and some related results. 
 </div>
 <div scenenumber="35" class="code">
 <span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(293, '0_3_35');
+      mouseover(263, '0_3_35');
       ">
 <br>
-<span class="id" title="keyword">Section</span> <a id="path_subalgebra" class="idref" href="#path_subalgebra"><span class="id" title="section">path_subalgebra</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Section</span> <a id="hom_inc_subalgebra" class="idref" href="#hom_inc_subalgebra"><span class="id" title="section">hom_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(294, '0_3_35');
+      mouseover(264, '0_3_35');
       "><br>
   <span class="id" title="keyword">Context</span><br>
-    {<a id="6a519936d42ceba91506fb36d8af79ea" class="idref" href="#6a519936d42ceba91506fb36d8af79ea"><span class="id" title="binder">σ</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>} (<a id="A:66" class="idref" href="#A:66"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#6a519936d42ceba91506fb36d8af79ea"><span class="id" title="variable">σ</span></a>)<br>
-    (<a id="P:68" class="idref" href="#P:68"><span class="id" title="binder">P</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:67" class="idref" href="#s:67"><span class="id" title="binder">s</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:66"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:67"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) {<a id="CP:69" class="idref" href="#CP:69"><span class="id" title="binder">CP</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsSubalgebraPredicate"><span class="id" title="class">IsSubalgebraPredicate</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:66"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#P:68"><span class="id" title="variable">P</span></a>}<br>
-    (<a id="Q:71" class="idref" href="#Q:71"><span class="id" title="binder">Q</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:70" class="idref" href="#s:70"><span class="id" title="binder">s</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:66"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:70"><span class="id" title="variable">s</span></a> <a class="idref" href="Coq.Unicode.Utf8_core.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) {<a id="CQ:72" class="idref" href="#CQ:72"><span class="id" title="binder">CQ</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsSubalgebraPredicate"><span class="id" title="class">IsSubalgebraPredicate</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:66"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#Q:71"><span class="id" title="variable">Q</span></a>}.</span><span class="command" onmouseout="
+    {<a id="aabbb3071490a3e89c35c54fc4d8b7c4" class="idref" href="#aabbb3071490a3e89c35c54fc4d8b7c4"><span class="id" title="binder">σ</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>} (<a id="A:52" class="idref" href="#A:52"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#aabbb3071490a3e89c35c54fc4d8b7c4"><span class="id" title="variable">σ</span></a>)<br>
+    (<a id="P:54" class="idref" href="#P:54"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:53" class="idref" href="#s:53"><span class="id" title="binder">s</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:52"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:53"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) `{<a id="IsSubalgebraPredicate0:55" class="idref" href="#IsSubalgebraPredicate0:55"><span class="id" title="binder">!</span></a><a id="IsSubalgebraPredicate0:55" class="idref" href="#IsSubalgebraPredicate0:55"><span class="id" title="binder">IsSubalgebraPredicate</span></a> <a id="IsSubalgebraPredicate0:55" class="idref" href="#IsSubalgebraPredicate0:55"><span class="id" title="binder">A</span></a> <a id="IsSubalgebraPredicate0:55" class="idref" href="#IsSubalgebraPredicate0:55"><span class="id" title="binder">P</span></a>}.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(295, '0_3_35');
+      mouseover(265, '0_3_35');
       "><br>
 <br>
-  <span class="id" title="keyword">Lemma</span> <a id="path_subalgebra" class="idref" href="#path_subalgebra"><span class="id" title="lemma">path_subalgebra</span></a> `{<a id="H:73" class="idref" href="#H:73"><span class="id" title="binder">Funext</span></a>} (<a id="p:74" class="idref" href="#p:74"><span class="id" title="binder">p</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.Q"><span class="id" title="variable">Q</span></a>) : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.Q"><span class="id" title="variable">Q</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a id="def_inc_subalgebra" class="idref" href="#def_inc_subalgebra"><span class="id" title="definition">def_inc_subalgebra</span></a> (<a id="s:56" class="idref" href="#s:56"><span class="id" title="binder">s</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Sort"><span class="id" title="projection">Sort</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#6e19242da08513deb2ed2701839f2916"><span class="id" title="variable">σ</span></a>) : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">s</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:56"><span class="id" title="variable">s</span></a><br>
+    := <a class="idref" href="HoTT.Basics.Overture.html#pr1"><span class="id" title="abbreviation">pr1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(296, '0_3_35');
+      mouseover(266, '0_3_35');
+      "><br>
+<br>
+  <span class="id" title="keyword">Lemma</span> <a id="oppreserving_inc_subalgebra" class="idref" href="#oppreserving_inc_subalgebra"><span class="id" title="lemma">oppreserving_inc_subalgebra</span></a> {<a id="w:57" class="idref" href="#w:57"><span class="id" title="binder">w</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#SymbolType"><span class="id" title="definition">SymbolType</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#6e19242da08513deb2ed2701839f2916"><span class="id" title="variable">σ</span></a>}<br>
+    (<a id="bf907aada7fd3e8b840d356133d6b896" class="idref" href="#bf907aada7fd3e8b840d356133d6b896"><span class="id" title="binder">α</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#w:57"><span class="id" title="variable">w</span></a>) (<a id="C:59" class="idref" href="#C:59"><span class="id" title="binder">C</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#ClosedUnderOp"><span class="id" title="definition">ClosedUnderOp</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#bf907aada7fd3e8b840d356133d6b896"><span class="id" title="variable">α</span></a>)<br>
+    : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#OpPreserving"><span class="id" title="definition">OpPreserving</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#def_inc_subalgebra"><span class="id" title="definition">def_inc_subalgebra</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#op_subalgebra"><span class="id" title="definition">op_subalgebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#bf907aada7fd3e8b840d356133d6b896"><span class="id" title="variable">α</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#C:59"><span class="id" title="variable">C</span></a>) <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#bf907aada7fd3e8b840d356133d6b896"><span class="id" title="variable">α</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(267, '0_3_35');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(297, '0_3_35');
+      mouseover(268, '0_3_35');
       "><br>
-    <span class="id" title="tactic">by</span> <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>, (<a class="idref" href="HoTT.Basics.Trunc.html#path_ishprop"><span class="id" title="lemma">path_ishprop</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.CP"><span class="id" title="variable">CP</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.CQ"><span class="id" title="variable">CQ</span></a>).</span><span class="command" onmouseout="
+    <span class="id" title="tactic">induction</span> <span class="id" title="var">w</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(298, '0_3_35');
+      mouseover(269, '0_3_35');
+      "><br>
+    - <span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(270, '0_3_35');
+      "><br>
+    - <span class="id" title="tactic">intros</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(271, '0_3_35');
+      "><span class="id" title="tactic">apply</span> <span class="id" title="var">IHw</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(272, '0_3_35');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(299, '0_3_35');
+      mouseover(273, '0_3_35');
       "><br>
 <br>
-  <span class="id" title="keyword">Lemma</span> <a id="path_subalgebra_iff" class="idref" href="#path_subalgebra_iff"><span class="id" title="lemma">path_subalgebra_iff</span></a> `{<a id="H:75" class="idref" href="#H:75"><span class="id" title="binder">Univalence</span></a>} (<a id="R:78" class="idref" href="#R:78"><span class="id" title="binder">R</span></a> : <a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:76" class="idref" href="#s:76"><span class="id" title="binder">s</span></a> <a id="x:77" class="idref" href="#x:77"><span class="id" title="binder">x</span></a><a class="idref" href="Coq.Unicode.Utf8_core.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:76"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:77"><span class="id" title="variable">x</span></a> <a class="idref" href="Coq.Init.Datatypes.html#::type_scope:x_'&lt;-&gt;'_x"><span class="id" title="notation">↔</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.Q"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:76"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:77"><span class="id" title="variable">x</span></a>)<br>
-    : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.Q"><span class="id" title="variable">Q</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Global Instance</span> <a id="is_homomorphism_inc_subalgebra" class="idref" href="#is_homomorphism_inc_subalgebra"><span class="id" title="instance">is_homomorphism_inc_subalgebra</span></a><br>
+    : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsHomomorphism"><span class="id" title="class">IsHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#def_inc_subalgebra"><span class="id" title="definition">def_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(300, '0_3_35');
+      mouseover(274, '0_3_35');
       "><br>
   <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(301, '0_3_35');
+      mouseover(275, '0_3_35');
       "><br>
-    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra"><span class="id" title="lemma">path_subalgebra</span></a>.</span><span class="command" onmouseout="
+    <span class="id" title="tactic">intro</span> <span class="id" title="var">u</span>. </span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(302, '0_3_35');
-      "><br>
-    <span class="id" title="var">funext</span> <span class="id" title="var">s</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+      mouseover(276, '0_3_35');
+      "><span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#oppreserving_inc_subalgebra"><span class="id" title="lemma">oppreserving_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(303, '0_3_35');
-      "><br>
-    <span class="id" title="tactic">apply</span> (@<a class="idref" href="HoTT.Types.Universe.html#path_universe"><span class="id" title="definition">path_universe</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<a class="idref" href="Coq.Init.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<span class="id" title="var">R</span> <span class="id" title="var">s</span> <span class="id" title="var">x</span>))).</span><span class="command" onmouseout="
-      mouseout('0_3_35');
-      " onmouseover="
-      mouseover(304, '0_3_35');
-      "><br>
-    <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HProp.html#equiv_equiv_iff_hprop"><span class="id" title="definition">equiv_equiv_iff_hprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="var">R</span> <span class="id" title="var">s</span> <span class="id" title="var">x</span>)).</span><span class="command" onmouseout="
-      mouseout('0_3_35');
-      " onmouseover="
-      mouseover(305, '0_3_35');
+      mouseover(277, '0_3_35');
       "><br>
   <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(306, '0_3_35');
+      mouseover(278, '0_3_35');
       "><br>
-<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra"><span class="id" title="section">path_subalgebra</span></a>.</span><span class="command" onmouseout="
+<br>
+  <span class="id" title="keyword">Definition</span> <a id="hom_inc_subalgebra" class="idref" href="#hom_inc_subalgebra"><span class="id" title="definition">hom_inc_subalgebra</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#Homomorphism"><span class="id" title="record">Homomorphism</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a>) <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a><br>
+    := <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#BuildHomomorphism"><span class="id" title="constructor">BuildHomomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#def_inc_subalgebra"><span class="id" title="definition">def_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
-      mouseover(307, '0_3_35');
+      mouseover(279, '0_3_35');
       "><br>
+<br>
+  <span class="id" title="keyword">Lemma</span> <a id="is_isomorphism_inc_improper_subalgebra" class="idref" href="#is_isomorphism_inc_improper_subalgebra"><span class="id" title="lemma">is_isomorphism_inc_improper_subalgebra</span></a><br>
+    (<a id="improper:62" class="idref" href="#improper:62"><span class="id" title="binder">improper</span></a> : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:60" class="idref" href="#s:60"><span class="id" title="binder">s</span></a> (<a id="x:61" class="idref" href="#x:61"><span class="id" title="binder">x</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:60"><span class="id" title="variable">s</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:60"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:61"><span class="id" title="variable">x</span></a>)<br>
+    : <a class="idref" href="HoTT.Classes.theory.ua_homomorphism.html#IsIsomorphism"><span class="id" title="class">IsIsomorphism</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra"><span class="id" title="definition">hom_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(280, '0_3_35');
+      "><br>
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(281, '0_3_35');
+      "><br>
+    <span class="id" title="tactic">intro</span> <span class="id" title="var">s</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(282, '0_3_35');
+      "><br>
+    <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Basics.Equivalences.html#isequiv_adjointify"><span class="id" title="definition">isequiv_adjointify</span></a> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a id="x:64" class="idref" href="#x:64"><span class="id" title="binder">x</span></a><a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:63"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">;</span></a> <span class="id" title="var">improper</span> <span class="id" title="var">s</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:63"><span class="id" title="variable">x</span></a><a class="idref" href="HoTT.Basics.Overture.html#4887cec9c4a6ccb88dc6b18963c35c8f"><span class="id" title="notation">)</span></a>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(283, '0_3_35');
+      "><br>
+    - <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(284, '0_3_35');
+      "><span class="id" title="tactic">reflexivity</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(285, '0_3_35');
+      "><br>
+    - <span class="id" title="tactic">intro</span> <span class="id" title="var">x</span>. </span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(286, '0_3_35');
+      "><span class="id" title="tactic">by</span> <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Types.Sigma.html#path_sigma_hprop"><span class="id" title="definition">path_sigma_hprop</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(287, '0_3_35');
+      "><br>
+  <span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(288, '0_3_35');
+      "><br>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#hom_inc_subalgebra"><span class="id" title="section">hom_inc_subalgebra</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_35');
+      " onmouseover="
+      mouseover(289, '0_3_35');
+      "><br>
+<br>
 </span>
 </div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
+<div class="doc" scenenumber="37">
+The next section provides paths between subalgebras. These paths
+    are convenient to have because the implicit type-class argument
+    <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsClosedUnderOps"><span class="id" title="definition">IsClosedUnderOps</span></a></span> of <span class="inlinecode"><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#Subalgebra"><span class="id" title="definition">Subalgebra</span></a></span> is complicating things. 
+</div>
+<div scenenumber="39" class="code">
+<span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(297, '0_3_39');
+      ">
+<br>
+<span class="id" title="keyword">Section</span> <a id="path_subalgebra" class="idref" href="#path_subalgebra"><span class="id" title="section">path_subalgebra</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(298, '0_3_39');
+      "><br>
+  <span class="id" title="keyword">Context</span><br>
+    {<a id="6a519936d42ceba91506fb36d8af79ea" class="idref" href="#6a519936d42ceba91506fb36d8af79ea"><span class="id" title="binder">σ</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Signature"><span class="id" title="record">Signature</span></a>} (<a id="A:66" class="idref" href="#A:66"><span class="id" title="binder">A</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Algebra"><span class="id" title="record">Algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#6a519936d42ceba91506fb36d8af79ea"><span class="id" title="variable">σ</span></a>)<br>
+    (<a id="P:68" class="idref" href="#P:68"><span class="id" title="binder">P</span></a> : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:67" class="idref" href="#s:67"><span class="id" title="binder">s</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:66"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:67"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) {<a id="CP:69" class="idref" href="#CP:69"><span class="id" title="binder">CP</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsSubalgebraPredicate"><span class="id" title="class">IsSubalgebraPredicate</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:66"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#P:68"><span class="id" title="variable">P</span></a>}<br>
+    (<a id="Q:71" class="idref" href="#Q:71"><span class="id" title="binder">Q</span></a> : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:70" class="idref" href="#s:70"><span class="id" title="binder">s</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:66"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:70"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Utf8.html#c41c566ddac4c1298b9e7dd2bae1c794"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>) {<a id="CQ:72" class="idref" href="#CQ:72"><span class="id" title="binder">CQ</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#IsSubalgebraPredicate"><span class="id" title="class">IsSubalgebraPredicate</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#A:66"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#Q:71"><span class="id" title="variable">Q</span></a>}.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(299, '0_3_39');
+      "><br>
+<br>
+  <span class="id" title="keyword">Lemma</span> <a id="path_subalgebra" class="idref" href="#path_subalgebra"><span class="id" title="lemma">path_subalgebra</span></a> `{<a id="H:73" class="idref" href="#H:73"><span class="id" title="binder">Funext</span></a>} (<a id="p:74" class="idref" href="#p:74"><span class="id" title="binder">p</span></a> : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.Q"><span class="id" title="variable">Q</span></a>) : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.Q"><span class="id" title="variable">Q</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(300, '0_3_39');
+      "><br>
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(301, '0_3_39');
+      "><br>
+    <span class="id" title="tactic">by</span> <span class="id" title="tactic">destruct</span> <span class="id" title="var">p</span>, (<a class="idref" href="HoTT.Basics.Trunc.html#path_ishprop"><span class="id" title="lemma">path_ishprop</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.CP"><span class="id" title="variable">CP</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.CQ"><span class="id" title="variable">CQ</span></a>).</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(302, '0_3_39');
+      "><br>
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(303, '0_3_39');
+      "><br>
+<br>
+  <span class="id" title="keyword">Lemma</span> <a id="path_subalgebra_iff" class="idref" href="#path_subalgebra_iff"><span class="id" title="lemma">path_subalgebra_iff</span></a> `{<a id="H:75" class="idref" href="#H:75"><span class="id" title="binder">Univalence</span></a>} (<a id="R:78" class="idref" href="#R:78"><span class="id" title="binder">R</span></a> : <a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">∀</span></a> <a id="s:76" class="idref" href="#s:76"><span class="id" title="binder">s</span></a> <a id="x:77" class="idref" href="#x:77"><span class="id" title="binder">x</span></a><a class="idref" href="HoTT.Utf8.html#e15f3fa8414cf45e36c73a91b3f5f2c2"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:76"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:77"><span class="id" title="variable">x</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#::type_scope:x_'&lt;-&gt;'_x"><span class="id" title="notation">↔</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.Q"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#s:76"><span class="id" title="variable">s</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#x:77"><span class="id" title="variable">x</span></a>)<br>
+    : <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.P"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.A"><span class="id" title="variable">A</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#subalgebra_notations.::Algebra_scope:x_'&amp;'_x"><span class="id" title="notation">&amp;</span></a><a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra.Q"><span class="id" title="variable">Q</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(304, '0_3_39');
+      "><br>
+  <span class="id" title="keyword">Proof</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(305, '0_3_39');
+      "><br>
+    <span class="id" title="tactic">apply</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra"><span class="id" title="lemma">path_subalgebra</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(306, '0_3_39');
+      "><br>
+    <span class="id" title="var">funext</span> <span class="id" title="var">s</span> <span class="id" title="var">x</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(307, '0_3_39');
+      "><br>
+    <span class="id" title="tactic">apply</span> (@<a class="idref" href="HoTT.Types.Universe.html#path_universe"><span class="id" title="definition">path_universe</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<a class="idref" href="HoTT.Basics.Datatypes.html#fst"><span class="id" title="projection">fst</span></a> (<span class="id" title="var">R</span> <span class="id" title="var">s</span> <span class="id" title="var">x</span>))).</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(308, '0_3_39');
+      "><br>
+    <span class="id" title="tactic">apply</span> (<a class="idref" href="HoTT.HProp.html#equiv_equiv_iff_hprop"><span class="id" title="definition">equiv_equiv_iff_hprop</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> (<span class="id" title="var">R</span> <span class="id" title="var">s</span> <span class="id" title="var">x</span>)).</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(309, '0_3_39');
+      "><br>
+  <span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(310, '0_3_39');
+      "><br>
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Classes.theory.ua_subalgebra.html#path_subalgebra"><span class="id" title="section">path_subalgebra</span></a>.</span><span class="command" onmouseout="
+      mouseout('0_3_39');
+      " onmouseover="
+      mouseover(311, '0_3_39');
+      "><br>
+</span>
+</div>
+<div class="goal" id="goal0_3_39"><pre><span></span></pre></div>
 </div>
 <div id="footer" scenenumber="5" class="doc">
 <hr>

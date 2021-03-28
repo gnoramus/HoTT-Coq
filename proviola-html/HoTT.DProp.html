@@ -83,7 +83,7 @@
           
 
             i = 13;
-            data = "";
+            data = "<infomsg>[Loading ML file ltac_plugin.cmxs ... done]</infomsg>	<infomsg>[Loading ML file number_string_notation_plugin.cmxs ... done]	</infomsg>	";
             responses[i]=data;
           
 
@@ -1691,7 +1691,7 @@
 </span></div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab591"></a><h1 class="section">Decidable propositions</h1>
+<a id="lab590"></a><h1 class="section">Decidable propositions</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -1726,7 +1726,7 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-<a id="lab592"></a><h2 class="section">Definitions</h2>
+<a id="lab591"></a><h2 class="section">Definitions</h2>
 <div class="doc" scenenumber="4"> </div>
 
  A decidable proposition is, morally speaking, an hprop that is decidable.  However, we only require that it be an hprop under the additional assumption of <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span>; this enables decidable propositions to usually be used without <span class="inlinecode"><a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="axiom">Funext</span></a></span> hypotheses. 
@@ -1740,7 +1740,7 @@
 <br>
 <span class="id" title="keyword">Record</span> <a id="DProp" class="idref" href="#DProp"><span class="id" title="record">DProp</span></a> :=<br>
   { <a id="dprop_type" class="idref" href="#dprop_type"><span class="id" title="projection">dprop_type</span></a> : <span class="id" title="keyword">Type</span> ;<br>
-    <a id="ishprop_dprop" class="idref" href="#ishprop_dprop"><span class="id" title="projection">ishprop_dprop</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> <a class="idref" href="HoTT.DProp.html#dprop_type:2"><span class="id" title="method">dprop_type</span></a> ;<br>
+    <a id="ishprop_dprop" class="idref" href="#ishprop_dprop"><span class="id" title="projection">ishprop_dprop</span></a> : <a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> <a class="idref" href="HoTT.DProp.html#dprop_type:2"><span class="id" title="method">dprop_type</span></a> ;<br>
     <a id="dec_dprop" class="idref" href="#dec_dprop"><span class="id" title="projection">dec_dprop</span></a> : <a class="idref" href="HoTT.Basics.Decidable.html#Decidable"><span class="id" title="class">Decidable</span></a> <a class="idref" href="HoTT.DProp.html#dprop_type:2"><span class="id" title="method">dprop_type</span></a><br>
   }.</span><span class="command" onmouseout="
       mouseout('0_3_11');
@@ -1826,7 +1826,7 @@ Sometimes, however, we have decidable props that are hprops without funext, and 
       mouseover(57, '0_3_19');
       "><br>
 <br>
-<span class="id" title="keyword">Definition</span> <a id="dhprop_to_dprop" class="idref" href="#dhprop_to_dprop"><span class="id" title="definition">dhprop_to_dprop</span></a> : <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a><br>
+<span class="id" title="keyword">Definition</span> <a id="dhprop_to_dprop" class="idref" href="#dhprop_to_dprop"><span class="id" title="definition">dhprop_to_dprop</span></a> : <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a><br>
   := <span class="id" title="keyword">fun</span> <a id="P:8" class="idref" href="#P:8"><span class="id" title="binder">P</span></a> ⇒ <a class="idref" href="HoTT.DProp.html#Build_DProp"><span class="id" title="constructor">Build_DProp</span></a> <a class="idref" href="HoTT.DProp.html#P:8"><span class="id" title="variable">P</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <span class="id" title="var">_</span>) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_19');
       " onmouseover="
@@ -1853,14 +1853,14 @@ In particular, <span class="inlinecode"><a class="idref" href="HoTT.DProp.html#T
       ">
 <br>
 <span class="id" title="keyword">Definition</span> <a id="True" class="idref" href="#True"><span class="id" title="definition">True</span></a> : <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a><br>
-  := <a class="idref" href="HoTT.DProp.html#Build_DHProp"><span class="id" title="constructor">Build_DHProp</span></a> <a class="idref" href="HoTT.TruncType.html#Unit_hp"><span class="id" title="definition">Unit_hp</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).</span><span class="command" onmouseout="
+  := <a class="idref" href="HoTT.DProp.html#Build_DHProp"><span class="id" title="constructor">Build_DHProp</span></a> <a class="idref" href="HoTT.TruncType.html#Unit_hp"><span class="id" title="definition">Unit_hp</span></a> (<a class="idref" href="HoTT.Basics.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(68, '0_3_23');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="False" class="idref" href="#False"><span class="id" title="definition">False</span></a> : <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a><br>
-  := <a class="idref" href="HoTT.DProp.html#Build_DHProp"><span class="id" title="constructor">Build_DHProp</span></a> <a class="idref" href="HoTT.TruncType.html#False_hp"><span class="id" title="definition">False_hp</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>).</span><span class="command" onmouseout="
+  := <a class="idref" href="HoTT.DProp.html#Build_DHProp"><span class="id" title="constructor">Build_DHProp</span></a> <a class="idref" href="HoTT.TruncType.html#False_hp"><span class="id" title="definition">False_hp</span></a> (<a class="idref" href="HoTT.Basics.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <a class="idref" href="HoTT.Basics.Overture.html#idmap"><span class="id" title="abbreviation">idmap</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_23');
       " onmouseover="
       mouseover(69, '0_3_23');
@@ -1916,7 +1916,7 @@ And back again, but we don't declare that as a coercion.
 </div>
 <div class="goal" id="goal0_3_31"><pre><span></span></pre></div>
 <div class="doc" scenenumber="33">
-<a id="lab593"></a><h2 class="section">The type of decidable props</h2>
+<a id="lab592"></a><h2 class="section">The type of decidable props</h2>
 </div>
 <div scenenumber="35" class="code">
 <span class="command" onmouseout="
@@ -1925,7 +1925,7 @@ And back again, but we don't declare that as a coercion.
       mouseover(89, '0_3_35');
       ">
 <span class="id" title="keyword">Definition</span> <a id="issig_dprop" class="idref" href="#issig_dprop"><span class="id" title="definition">issig_dprop</span></a><br>
-  : <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a> <a id="X:11" class="idref" href="#X:11"><span class="id" title="binder">X</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <span class="id" title="keyword">Type</span> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a> <span class="id" title="var">_</span> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> <a class="idref" href="HoTT.DProp.html#X:11"><span class="id" title="variable">X</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Basics.Decidable.html#Decidable"><span class="id" title="class">Decidable</span></a> <a class="idref" href="HoTT.DProp.html#X:11"><span class="id" title="variable">X</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a>.</span><span class="command" onmouseout="
+  : <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a> <a id="X:11" class="idref" href="#X:11"><span class="id" title="binder">X</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <span class="id" title="keyword">Type</span> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Funext"><span class="id" title="class">Funext</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Overture.html#IsHProp"><span class="id" title="abbreviation">IsHProp</span></a> <a class="idref" href="HoTT.DProp.html#X:11"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Basics.Decidable.html#Decidable"><span class="id" title="class">Decidable</span></a> <a class="idref" href="HoTT.DProp.html#X:11"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(90, '0_3_35');
@@ -1997,7 +1997,7 @@ And back again, but we don't declare that as a coercion.
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="path_dprop" class="idref" href="#path_dprop"><span class="id" title="definition">path_dprop</span></a> `{<a id="H:15" class="idref" href="#H:15"><span class="id" title="binder">Funext</span></a>} {<a id="P:16" class="idref" href="#P:16"><span class="id" title="binder">P</span></a> <a id="Q:17" class="idref" href="#Q:17"><span class="id" title="binder">Q</span></a> : <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a>}<br>
-: <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#P:16"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.DProp.html#Q:17"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">:&gt;</span></a> <span class="id" title="keyword">Type</span><a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#P:16"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.DProp.html#Q:17"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">:&gt;</span></a> <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a><a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a><br>
+: <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#P:16"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.DProp.html#Q:17"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">:&gt;</span></a> <span class="id" title="keyword">Type</span><a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#P:16"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.DProp.html#Q:17"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">:&gt;</span></a> <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a><a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a><br>
   := <a class="idref" href="HoTT.DProp.html#equiv_path_dprop"><span class="id" title="definition">equiv_path_dprop</span></a> <a class="idref" href="HoTT.DProp.html#P:16"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.DProp.html#Q:17"><span class="id" title="variable">Q</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
@@ -2005,7 +2005,7 @@ And back again, but we don't declare that as a coercion.
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="issig_dhprop" class="idref" href="#issig_dhprop"><span class="id" title="definition">issig_dhprop</span></a><br>
-  : <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a> <a id="X:18" class="idref" href="#X:18"><span class="id" title="binder">X</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Basics.Trunc.html#hProp"><span class="id" title="abbreviation">hProp</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Basics.Decidable.html#Decidable"><span class="id" title="class">Decidable</span></a> <a class="idref" href="HoTT.DProp.html#X:18"><span class="id" title="variable">X</span></a> <a class="idref" href="Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a>.</span><span class="command" onmouseout="
+  : <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a> <a id="X:18" class="idref" href="#X:18"><span class="id" title="binder">X</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <a class="idref" href="HoTT.Basics.Trunc.html#hProp"><span class="id" title="abbreviation">hProp</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <a class="idref" href="HoTT.Basics.Decidable.html#Decidable"><span class="id" title="class">Decidable</span></a> <a class="idref" href="HoTT.DProp.html#X:18"><span class="id" title="variable">X</span></a> <a class="idref" href="HoTT.Basics.Overture.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a> <a class="idref" href="HoTT.Basics.Overture.html#068136b784cb569aaadfa01f234d5c01"><span class="id" title="notation">&lt;~&gt;</span></a> <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
       mouseover(104, '0_3_35');
@@ -2096,7 +2096,7 @@ And back again, but we don't declare that as a coercion.
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="path_dhprop" class="idref" href="#path_dhprop"><span class="id" title="definition">path_dhprop</span></a> `{<a id="H:25" class="idref" href="#H:25"><span class="id" title="binder">Univalence</span></a>} {<a id="P:26" class="idref" href="#P:26"><span class="id" title="binder">P</span></a> <a id="Q:27" class="idref" href="#Q:27"><span class="id" title="binder">Q</span></a> : <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a>}<br>
-: <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#P:26"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.DProp.html#Q:27"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">:&gt;</span></a> <span class="id" title="keyword">Type</span><a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#P:26"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.DProp.html#Q:27"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">:&gt;</span></a> <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a><a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a><br>
+: <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#P:26"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.DProp.html#Q:27"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">:&gt;</span></a> <span class="id" title="keyword">Type</span><a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#P:26"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.DProp.html#Q:27"><span class="id" title="variable">Q</span></a> <a class="idref" href="HoTT.Basics.Overture.html#b8b2ebc8e1a8b9aa935c0702efb5dccf"><span class="id" title="notation">:&gt;</span></a> <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a><a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">)</span></a><br>
   := <a class="idref" href="HoTT.DProp.html#equiv_path_dhprop"><span class="id" title="definition">equiv_path_dhprop</span></a> <a class="idref" href="HoTT.DProp.html#P:26"><span class="id" title="variable">P</span></a> <a class="idref" href="HoTT.DProp.html#Q:27"><span class="id" title="variable">Q</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_35');
       " onmouseover="
@@ -2188,7 +2188,7 @@ And back again, but we don't declare that as a coercion.
 </div>
 <div class="goal" id="goal0_3_35"><pre><span></span></pre></div>
 <div class="doc" scenenumber="37">
-<a id="lab594"></a><h2 class="section">Operations</h2>
+<a id="lab593"></a><h2 class="section">Operations</h2>
 <div class="doc" scenenumber="4"> </div>
 
  We define the logical operations on decidable hprops to be the operations on ordinary hprops, with decidability carrying over.  For the operations which preserve hprops without funext, we define separate versions that act on <span class="inlinecode"><a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a></span>. 
@@ -2201,14 +2201,14 @@ And back again, but we don't declare that as a coercion.
       ">
 <br>
 <span class="id" title="keyword">Definition</span> <a id="dand" class="idref" href="#dand"><span class="id" title="definition">dand</span></a> (<a id="b1:31" class="idref" href="#b1:31"><span class="id" title="binder">b1</span></a> <a id="b2:32" class="idref" href="#b2:32"><span class="id" title="binder">b2</span></a> : <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a>) : <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a><br>
-  := <a class="idref" href="HoTT.DProp.html#Build_DProp"><span class="id" title="constructor">Build_DProp</span></a> (<a class="idref" href="HoTT.DProp.html#b1:31"><span class="id" title="variable">b1</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.DProp.html#b2:32"><span class="id" title="variable">b2</span></a>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+  := <a class="idref" href="HoTT.DProp.html#Build_DProp"><span class="id" title="constructor">Build_DProp</span></a> (<a class="idref" href="HoTT.DProp.html#b1:31"><span class="id" title="variable">b1</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.DProp.html#b2:32"><span class="id" title="variable">b2</span></a>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
       mouseover(148, '0_3_39');
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="dhand" class="idref" href="#dhand"><span class="id" title="definition">dhand</span></a> (<a id="b1:33" class="idref" href="#b1:33"><span class="id" title="binder">b1</span></a> <a id="b2:34" class="idref" href="#b2:34"><span class="id" title="binder">b2</span></a> : <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a>) : <a class="idref" href="HoTT.DProp.html#DHProp"><span class="id" title="record">DHProp</span></a><br>
-  := <a class="idref" href="HoTT.DProp.html#Build_DHProp"><span class="id" title="constructor">Build_DHProp</span></a> (<a class="idref" href="HoTT.Basics.Trunc.html#BuildhProp"><span class="id" title="abbreviation">BuildhProp</span></a> (<a class="idref" href="HoTT.DProp.html#b1:33"><span class="id" title="variable">b1</span></a> <a class="idref" href="Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.DProp.html#b2:34"><span class="id" title="variable">b2</span></a>)) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+  := <a class="idref" href="HoTT.DProp.html#Build_DHProp"><span class="id" title="constructor">Build_DHProp</span></a> (<a class="idref" href="HoTT.Basics.Trunc.html#BuildhProp"><span class="id" title="abbreviation">BuildhProp</span></a> (<a class="idref" href="HoTT.DProp.html#b1:33"><span class="id" title="variable">b1</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> <a class="idref" href="HoTT.DProp.html#b2:34"><span class="id" title="variable">b2</span></a>)) <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
       mouseover(149, '0_3_39');
@@ -2236,7 +2236,7 @@ And back again, but we don't declare that as a coercion.
       "><br>
 <br>
 <span class="id" title="keyword">Definition</span> <a id="dimpl" class="idref" href="#dimpl"><span class="id" title="definition">dimpl</span></a> (<a id="b1:40" class="idref" href="#b1:40"><span class="id" title="binder">b1</span></a> <a id="b2:41" class="idref" href="#b2:41"><span class="id" title="binder">b2</span></a> : <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a>) : <a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a><br>
-  := <a class="idref" href="HoTT.DProp.html#Build_DProp"><span class="id" title="constructor">Build_DProp</span></a> (<a class="idref" href="HoTT.DProp.html#b1:40"><span class="id" title="variable">b1</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.DProp.html#b2:41"><span class="id" title="variable">b2</span></a>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
+  := <a class="idref" href="HoTT.DProp.html#Build_DProp"><span class="id" title="constructor">Build_DProp</span></a> (<a class="idref" href="HoTT.DProp.html#b1:40"><span class="id" title="variable">b1</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <a class="idref" href="HoTT.DProp.html#b2:41"><span class="id" title="variable">b2</span></a>) <span class="id" title="var">_</span> <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_39');
       " onmouseover="
       mouseover(153, '0_3_39');
@@ -2314,7 +2314,7 @@ And back again, but we don't declare that as a coercion.
 </div>
 <div class="goal" id="goal0_3_39"><pre><span></span></pre></div>
 <div class="doc" scenenumber="41">
-<a id="lab595"></a><h2 class="section">Computation</h2>
+<a id="lab594"></a><h2 class="section">Computation</h2>
 <div class="doc" scenenumber="4"> </div>
 
  In order to be able to "compute" with <span class="inlinecode"><a class="idref" href="HoTT.DProp.html#DProp"><span class="id" title="record">DProp</span></a></span>s like booleans, we define a couple of typeclasses. 
@@ -2376,7 +2376,7 @@ Note that we are not using <span class="inlinecode"><span class="id" title="keyw
       " onmouseover="
       mouseover(199, '0_3_47');
       "><br>
-  <span class="id" title="tactic">exact</span> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_47');
       " onmouseover="
       mouseover(200, '0_3_47');
@@ -2464,7 +2464,7 @@ We have to give <span class="inlinecode"><a class="idref" href="HoTT.Categories.
       " onmouseover="
       mouseover(235, '0_3_51');
       ">
-  <span class="id" title="tactic">exact</span> <a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a>@<a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a> <span class="id" title="var">P</span> <span class="id" title="var">_</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> @<a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a> <span class="id" title="var">Q</span> <span class="id" title="var">_</span><a class="idref" href="Coq.Init.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="tactic">exact</span> <a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">(</span></a>@<a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a> <span class="id" title="var">P</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">,</span></a> @<a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a> <span class="id" title="var">Q</span> <span class="id" title="var">_</span><a class="idref" href="HoTT.Basics.Datatypes.html#e6756e10c36f149b18b4a8741ed83079"><span class="id" title="notation">)</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(236, '0_3_51');
@@ -2540,7 +2540,7 @@ We have to give <span class="inlinecode"><a class="idref" href="HoTT.Categories.
       " onmouseover="
       mouseover(249, '0_3_51');
       "><br>
-  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a> <span class="id" title="var">Q</span> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a>)).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a> <span class="id" title="var">Q</span> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(250, '0_3_51');
@@ -2562,7 +2562,7 @@ We have to give <span class="inlinecode"><a class="idref" href="HoTT.Categories.
       " onmouseover="
       mouseover(253, '0_3_51');
       "><br>
-  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <span class="id" title="var">P</span> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a>)).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <span class="id" title="var">P</span> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(254, '0_3_51');
@@ -2624,7 +2624,7 @@ We have to give <span class="inlinecode"><a class="idref" href="HoTT.Categories.
       " onmouseover="
       mouseover(265, '0_3_51');
       "><br>
-  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a> <span class="id" title="var">Q</span> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a>)).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Datatypes.html#inl"><span class="id" title="constructor">inl</span></a> <span class="id" title="var">Q</span> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(266, '0_3_51');
@@ -2646,7 +2646,7 @@ We have to give <span class="inlinecode"><a class="idref" href="HoTT.Categories.
       " onmouseover="
       mouseover(269, '0_3_51');
       "><br>
-  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <span class="id" title="var">P</span> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a>)).</span><span class="command" onmouseout="
+  <span class="id" title="tactic">exact</span> (<a class="idref" href="HoTT.Truncations.Core.html#Trunc.tr"><span class="id" title="constructor">tr</span></a> (<a class="idref" href="HoTT.Basics.Datatypes.html#inr"><span class="id" title="constructor">inr</span></a> <span class="id" title="var">P</span> <a class="idref" href="HoTT.DProp.html#dprop_istrue"><span class="id" title="definition">dprop_istrue</span></a>)).</span><span class="command" onmouseout="
       mouseout('0_3_51');
       " onmouseover="
       mouseover(270, '0_3_51');

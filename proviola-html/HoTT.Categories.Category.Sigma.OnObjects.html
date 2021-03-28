@@ -83,7 +83,7 @@
           
 
             i = 13;
-            data = "";
+            data = "<infomsg>[Loading ML file ltac_plugin.cmxs ... done]</infomsg>	<infomsg>[Loading ML file number_string_notation_plugin.cmxs ... done]	</infomsg>	";
             responses[i]=data;
           
 
@@ -203,7 +203,7 @@
           
 
             i = 37;
-            data = "<infomsg>sigT_obj is defined</infomsg>	";
+            data = "<infomsg>sig_obj is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -248,17 +248,17 @@
           
 
             i = 46;
-            data = "<infomsg>sigT_obj_as_sigT is defined</infomsg>	";
+            data = "<infomsg>sig_obj_as_sig is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 47;
-            data = "<infomsg>sigT_functor_obj is defined</infomsg>	";
+            data = "<infomsg>sig_functor_obj is defined</infomsg>	";
             responses[i]=data;
           
 
             i = 48;
-            data = "<infomsg>sigT_functor_obj_inv is defined</infomsg>	";
+            data = "<infomsg>sig_functor_obj_inv is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -268,7 +268,7 @@
           
 
             i = 50;
-            data = "1 goal (ID 174)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  ============================	  (sigT_functor_obj o sigT_functor_obj_inv = 1) *	  (sigT_functor_obj_inv o sigT_functor_obj = 1)	";
+            data = "1 goal (ID 192)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  ============================	  (sig_functor_obj o sig_functor_obj_inv = 1) *	  (sig_functor_obj_inv o sig_functor_obj = 1)	";
             responses[i]=data;
           
 
@@ -278,22 +278,22 @@
           
 
             i = 52;
-            data = "1 goal (ID 199)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  ============================	  transport	    (fun GO : sigT_type Pobj -> sigT_type Pobj =>	     forall s d : sigT_type Pobj,	     sigT_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit) ->	     sigT_type	       (fun _ : morphism A (pr1_type (GO s)) (pr1_type (GO d)) => Unit)) 1	    (fun (s d : sigT_type Pobj)	       (m : sigT_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit))	     => (pr1_type m; tt)) = (fun s d : sigT_type Pobj => idmap)	";
+            data = "1 goal (ID 217)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  ============================	  transport	    (fun GO : sig_type Pobj -> sig_type Pobj =>	     forall s d : sig_type Pobj,	     sig_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit) ->	     sig_type	       (fun _ : morphism A (pr1_type (GO s)) (pr1_type (GO d)) => Unit)) 1	    (fun (s d : sig_type Pobj)	       (m : sig_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit))	     => (pr1_type m; tt)) = (fun s d : sig_type Pobj => idmap)	";
             responses[i]=data;
           
 
             i = 53;
-            data = "1 goal (ID 222)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  proj1_sig : A	  proj2_sig : Pobj proj1_sig	  ============================	  transport	    (fun GO : sigT_type Pobj -> sigT_type Pobj =>	     forall s d : sigT_type Pobj,	     sigT_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit) ->	     sigT_type	       (fun _ : morphism A (pr1_type (GO s)) (pr1_type (GO d)) => Unit)) 1	    (fun (s d : sigT_type Pobj)	       (m : sigT_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit))	     => (pr1_type m; tt)) (proj1_sig; proj2_sig) =	  (fun d : sigT_type Pobj => idmap)	";
+            data = "1 goal (ID 240)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  proj1 : A	  proj2 : Pobj proj1	  ============================	  transport	    (fun GO : sig_type Pobj -> sig_type Pobj =>	     forall s d : sig_type Pobj,	     sig_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit) ->	     sig_type	       (fun _ : morphism A (pr1_type (GO s)) (pr1_type (GO d)) => Unit)) 1	    (fun (s d : sig_type Pobj)	       (m : sig_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit))	     => (pr1_type m; tt)) (proj1; proj2) = (fun d : sig_type Pobj => idmap)	";
             responses[i]=data;
           
 
             i = 54;
-            data = "1 goal (ID 232)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  proj1_sig : A	  proj2_sig : Pobj proj1_sig	  proj1_sig0 : A	  proj2_sig0 : Pobj proj1_sig0	  ============================	  transport	    (fun GO : sigT_type Pobj -> sigT_type Pobj =>	     forall s d : sigT_type Pobj,	     sigT_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit) ->	     sigT_type	       (fun _ : morphism A (pr1_type (GO s)) (pr1_type (GO d)) => Unit)) 1	    (fun (s d : sigT_type Pobj)	       (m : sigT_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit))	     => (pr1_type m; tt)) (proj1_sig; proj2_sig) (proj1_sig0; proj2_sig0) =	  idmap	";
+            data = "1 goal (ID 250)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  proj1 : A	  proj2 : Pobj proj1	  proj0 : A	  proj3 : Pobj proj0	  ============================	  transport	    (fun GO : sig_type Pobj -> sig_type Pobj =>	     forall s d : sig_type Pobj,	     sig_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit) ->	     sig_type	       (fun _ : morphism A (pr1_type (GO s)) (pr1_type (GO d)) => Unit)) 1	    (fun (s d : sig_type Pobj)	       (m : sig_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit))	     => (pr1_type m; tt)) (proj1; proj2) (proj0; proj3) = idmap	";
             responses[i]=data;
           
 
             i = 55;
-            data = "1 goal (ID 244)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  proj1_sig : A	  proj2_sig : Pobj proj1_sig	  proj1_sig0 : A	  proj2_sig0 : Pobj proj1_sig0	  proj1_sig1 : morphism A (pr1_type (proj1_sig; proj2_sig))	                 (pr1_type (proj1_sig0; proj2_sig0))	  ============================	  transport	    (fun GO : sigT_type Pobj -> sigT_type Pobj =>	     forall s d : sigT_type Pobj,	     sigT_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit) ->	     sigT_type	       (fun _ : morphism A (pr1_type (GO s)) (pr1_type (GO d)) => Unit)) 1	    (fun (s d : sigT_type Pobj)	       (m : sigT_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit))	     => (pr1_type m; tt)) (proj1_sig; proj2_sig) (proj1_sig0; proj2_sig0)	    (proj1_sig1; tt) = (proj1_sig1; tt)	";
+            data = "1 goal (ID 262)	  	  A : PreCategory	  Pobj : A -> Type	  H : Funext	  proj1 : A	  proj2 : Pobj proj1	  proj0 : A	  proj3 : Pobj proj0	  proj4 : morphism A (pr1_type (proj1; proj2)) (pr1_type (proj0; proj3))	  ============================	  transport	    (fun GO : sig_type Pobj -> sig_type Pobj =>	     forall s d : sig_type Pobj,	     sig_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit) ->	     sig_type	       (fun _ : morphism A (pr1_type (GO s)) (pr1_type (GO d)) => Unit)) 1	    (fun (s d : sig_type Pobj)	       (m : sig_type (fun _ : morphism A (pr1_type s) (pr1_type d) => Unit))	     => (pr1_type m; tt)) (proj1; proj2) (proj0; proj3) 	    (proj4; tt) = (proj4; tt)	";
             responses[i]=data;
           
 
@@ -308,7 +308,7 @@
           
 
             i = 58;
-            data = "<infomsg>sigT_obj_compat is defined</infomsg>	";
+            data = "<infomsg>sig_obj_compat is defined</infomsg>	";
             responses[i]=data;
           
 
@@ -420,7 +420,7 @@
 </span></div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab921"></a><h1 class="section">∑-categories on objects - a generalization of subcategories</h1>
+<a id="lab920"></a><h1 class="section">∑-categories on objects - a generalization of subcategories</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -480,7 +480,7 @@
       mouseover(23, '0_3_7');
       "><br>
 <br>
-<span class="id" title="keyword">Local</span> <span class="id" title="keyword">Notation</span> <a id="sigT_type" class="idref" href="#sigT_type"><span class="id" title="abbreviation">sigT_type</span></a> := <a class="idref" href="Coq.Init.Specif.html#sigT"><span class="id" title="abbreviation">Coq.Init.Specif.sigT</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Local</span> <span class="id" title="keyword">Notation</span> <a id="sig_type" class="idref" href="#sig_type"><span class="id" title="abbreviation">sig_type</span></a> := <a class="idref" href="HoTT.Basics.Overture.html#sig"><span class="id" title="record">Overture.sig</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(24, '0_3_7');
@@ -502,17 +502,17 @@
       mouseover(27, '0_3_7');
       "><br>
 <br>
-<span class="id" title="keyword">Section</span> <a id="sigT_obj" class="idref" href="#sigT_obj"><span class="id" title="section">sigT_obj</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Section</span> <a id="sig_obj" class="idref" href="#sig_obj"><span class="id" title="section">sig_obj</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(28, '0_3_7');
       "><br>
-  <span class="id" title="keyword">Variable</span> <a id="sigT_obj.A" class="idref" href="#sigT_obj.A"><span class="id" title="variable">A</span></a> : <a class="idref" href="HoTT.Categories.Category.Core.html#PreCategory"><span class="id" title="record">PreCategory</span></a>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Variable</span> <a id="sig_obj.A" class="idref" href="#sig_obj.A"><span class="id" title="variable">A</span></a> : <a class="idref" href="HoTT.Categories.Category.Core.html#PreCategory"><span class="id" title="record">PreCategory</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(29, '0_3_7');
       "><br>
-  <span class="id" title="keyword">Variable</span> <a id="sigT_obj.Pobj" class="idref" href="#sigT_obj.Pobj"><span class="id" title="variable">Pobj</span></a> : <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.A"><span class="id" title="variable">A</span></a> <a class="idref" href="Coq.Init.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Variable</span> <a id="sig_obj.Pobj" class="idref" href="#sig_obj.Pobj"><span class="id" title="variable">Pobj</span></a> : <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Basics.Logic.html#::type_scope:x_'-&gt;'_x"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">Type</span>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(30, '0_3_7');
@@ -522,7 +522,7 @@
 </div>
 <div class="goal" id="goal0_3_7"><pre><span></span></pre></div>
 <div class="doc" scenenumber="9">
-<a id="lab922"></a><h2 class="section">Definition of <span class="inlinecode"><a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj"><span class="id" title="definition">sigT_obj</span></a></span>-precategory</h2>
+<a id="lab921"></a><h2 class="section">Definition of <span class="inlinecode"><a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj"><span class="id" title="definition">sig_obj</span></a></span>-precategory</h2>
 </div>
 <div scenenumber="11" class="code">
 <span class="command" onmouseout="
@@ -530,15 +530,15 @@
       " onmouseover="
       mouseover(37, '0_3_11');
       ">
-  <span class="id" title="keyword">Definition</span> <a id="sigT_obj" class="idref" href="#sigT_obj"><span class="id" title="definition">sigT_obj</span></a> : <a class="idref" href="HoTT.Categories.Category.Core.html#PreCategory"><span class="id" title="record">PreCategory</span></a><br>
+  <span class="id" title="keyword">Definition</span> <a id="sig_obj" class="idref" href="#sig_obj"><span class="id" title="definition">sig_obj</span></a> : <a class="idref" href="HoTT.Categories.Category.Core.html#PreCategory"><span class="id" title="record">PreCategory</span></a><br>
     := @<a class="idref" href="HoTT.Categories.Category.Core.html#Build_PreCategory"><span class="id" title="definition">Build_PreCategory</span></a><br>
-         (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_type"><span class="id" title="abbreviation">sigT_type</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.Pobj"><span class="id" title="variable">Pobj</span></a>)<br>
-         (<span class="id" title="keyword">fun</span> <a id="s:3" class="idref" href="#s:3"><span class="id" title="binder">s</span></a> <a id="d:4" class="idref" href="#d:4"><span class="id" title="binder">d</span></a> ⇒ <a class="idref" href="HoTT.Categories.Category.Core.html#morphism"><span class="id" title="projection">morphism</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_type"><span class="id" title="abbreviation">pr1_type</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#s:3"><span class="id" title="variable">s</span></a>) (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_type"><span class="id" title="abbreviation">pr1_type</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#d:4"><span class="id" title="variable">d</span></a>))<br>
-         (<span class="id" title="keyword">fun</span> <a id="x:5" class="idref" href="#x:5"><span class="id" title="binder">x</span></a> ⇒ @<a class="idref" href="HoTT.Categories.Category.Core.html#identity"><span class="id" title="projection">identity</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_type"><span class="id" title="abbreviation">pr1_type</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#x:5"><span class="id" title="variable">x</span></a>))<br>
+         (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_type"><span class="id" title="abbreviation">sig_type</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.Pobj"><span class="id" title="variable">Pobj</span></a>)<br>
+         (<span class="id" title="keyword">fun</span> <a id="s:3" class="idref" href="#s:3"><span class="id" title="binder">s</span></a> <a id="d:4" class="idref" href="#d:4"><span class="id" title="binder">d</span></a> ⇒ <a class="idref" href="HoTT.Categories.Category.Core.html#morphism"><span class="id" title="projection">morphism</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_type"><span class="id" title="abbreviation">pr1_type</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#s:3"><span class="id" title="variable">s</span></a>) (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_type"><span class="id" title="abbreviation">pr1_type</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#d:4"><span class="id" title="variable">d</span></a>))<br>
+         (<span class="id" title="keyword">fun</span> <a id="x:5" class="idref" href="#x:5"><span class="id" title="binder">x</span></a> ⇒ @<a class="idref" href="HoTT.Categories.Category.Core.html#identity"><span class="id" title="projection">identity</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_type"><span class="id" title="abbreviation">pr1_type</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#x:5"><span class="id" title="variable">x</span></a>))<br>
          (<span class="id" title="keyword">fun</span> <a id="s:6" class="idref" href="#s:6"><span class="id" title="binder">s</span></a> <a id="d:7" class="idref" href="#d:7"><span class="id" title="binder">d</span></a> <a id="d':8" class="idref" href="#d':8"><span class="id" title="binder">d'</span></a> <a id="m1:9" class="idref" href="#m1:9"><span class="id" title="binder">m1</span></a> <a id="m2:10" class="idref" href="#m2:10"><span class="id" title="binder">m2</span></a> ⇒ <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#m1:9"><span class="id" title="variable">m1</span></a> <a class="idref" href="HoTT.Categories.Category.Core.html#CategoryCoreNotations.::morphism_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#m2:10"><span class="id" title="variable">m2</span></a>)%<span class="id" title="var">morphism</span><br>
-         (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Categories.Category.Core.html#associativity"><span class="id" title="projection">associativity</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br>
-         (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Categories.Category.Core.html#left_identity"><span class="id" title="projection">left_identity</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br>
-         (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Categories.Category.Core.html#right_identity"><span class="id" title="projection">right_identity</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br>
+         (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Categories.Category.Core.html#associativity"><span class="id" title="projection">associativity</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br>
+         (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Categories.Category.Core.html#left_identity"><span class="id" title="projection">left_identity</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br>
+         (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Categories.Category.Core.html#right_identity"><span class="id" title="projection">right_identity</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.A"><span class="id" title="variable">A</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br>
          <span class="id" title="var">_</span>.</span><span class="command" onmouseout="
       mouseout('0_3_11');
       " onmouseover="
@@ -549,7 +549,7 @@
 </div>
 <div class="goal" id="goal0_3_11"><pre><span></span></pre></div>
 <div class="doc" scenenumber="13">
-<a id="lab923"></a><h2 class="section">First projection functor</h2>
+<a id="lab922"></a><h2 class="section">First projection functor</h2>
 </div>
 <div scenenumber="15" class="code">
 <span class="command" onmouseout="
@@ -557,9 +557,9 @@
       " onmouseover="
       mouseover(45, '0_3_15');
       ">
-  <span class="id" title="keyword">Definition</span> <a id="pr1_obj" class="idref" href="#pr1_obj"><span class="id" title="definition">pr1_obj</span></a> : <a class="idref" href="HoTT.Categories.Functor.Core.html#Functor"><span class="id" title="record">Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj"><span class="id" title="definition">sigT_obj</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.A"><span class="id" title="variable">A</span></a><br>
+  <span class="id" title="keyword">Definition</span> <a id="pr1_obj" class="idref" href="#pr1_obj"><span class="id" title="definition">pr1_obj</span></a> : <a class="idref" href="HoTT.Categories.Functor.Core.html#Functor"><span class="id" title="record">Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj"><span class="id" title="definition">sig_obj</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.A"><span class="id" title="variable">A</span></a><br>
     := <a class="idref" href="HoTT.Categories.Functor.Core.html#Build_Functor"><span class="id" title="constructor">Build_Functor</span></a><br>
-         <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj"><span class="id" title="definition">sigT_obj</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.A"><span class="id" title="variable">A</span></a><br>
+         <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj"><span class="id" title="definition">sig_obj</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.A"><span class="id" title="variable">A</span></a><br>
          (@<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_type"><span class="id" title="abbreviation">pr1_type</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br>
          (<span class="id" title="keyword">fun</span> <a id="s:11" class="idref" href="#s:11"><span class="id" title="binder">s</span></a> <a id="d:12" class="idref" href="#d:12"><span class="id" title="binder">d</span></a> <a id="m:13" class="idref" href="#m:13"><span class="id" title="binder">m</span></a> ⇒ <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#m:13"><span class="id" title="variable">m</span></a>)<br>
          (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a>)<br>
@@ -569,15 +569,15 @@
       mouseover(46, '0_3_15');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a id="sigT_obj_as_sigT" class="idref" href="#sigT_obj_as_sigT"><span class="id" title="definition">sigT_obj_as_sigT</span></a> : <a class="idref" href="HoTT.Categories.Category.Core.html#PreCategory"><span class="id" title="record">PreCategory</span></a><br>
-    := @<a class="idref" href="HoTT.Categories.Category.Sigma.Core.html#sig"><span class="id" title="definition">sig</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj.Pobj"><span class="id" title="variable">Pobj</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>) <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>) (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Definition</span> <a id="sig_obj_as_sig" class="idref" href="#sig_obj_as_sig"><span class="id" title="definition">sig_obj_as_sig</span></a> : <a class="idref" href="HoTT.Categories.Category.Core.html#PreCategory"><span class="id" title="record">PreCategory</span></a><br>
+    := @<a class="idref" href="HoTT.Categories.Category.Sigma.Core.html#sig"><span class="id" title="definition">sig</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj.Pobj"><span class="id" title="variable">Pobj</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a>) <span class="id" title="var">_</span> (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>) (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(47, '0_3_15');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a id="sigT_functor_obj" class="idref" href="#sigT_functor_obj"><span class="id" title="definition">sigT_functor_obj</span></a> : <a class="idref" href="HoTT.Categories.Functor.Core.html#Functor"><span class="id" title="record">Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj_as_sigT"><span class="id" title="definition">sigT_obj_as_sigT</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj"><span class="id" title="definition">sigT_obj</span></a><br>
-    := <a class="idref" href="HoTT.Categories.Functor.Core.html#Build_Functor"><span class="id" title="constructor">Build_Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj_as_sigT"><span class="id" title="definition">sigT_obj_as_sigT</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj"><span class="id" title="definition">sigT_obj</span></a><br>
+  <span class="id" title="keyword">Definition</span> <a id="sig_functor_obj" class="idref" href="#sig_functor_obj"><span class="id" title="definition">sig_functor_obj</span></a> : <a class="idref" href="HoTT.Categories.Functor.Core.html#Functor"><span class="id" title="record">Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj_as_sig"><span class="id" title="definition">sig_obj_as_sig</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj"><span class="id" title="definition">sig_obj</span></a><br>
+    := <a class="idref" href="HoTT.Categories.Functor.Core.html#Build_Functor"><span class="id" title="constructor">Build_Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj_as_sig"><span class="id" title="definition">sig_obj_as_sig</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj"><span class="id" title="definition">sig_obj</span></a><br>
                      (<span class="id" title="keyword">fun</span> <a id="x:14" class="idref" href="#x:14"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#x:14"><span class="id" title="variable">x</span></a>)<br>
                      (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ @<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_type"><span class="id" title="abbreviation">pr1_type</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>)<br>
                      (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a>)<br>
@@ -587,10 +587,10 @@
       mouseover(48, '0_3_15');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a id="sigT_functor_obj_inv" class="idref" href="#sigT_functor_obj_inv"><span class="id" title="definition">sigT_functor_obj_inv</span></a> : <a class="idref" href="HoTT.Categories.Functor.Core.html#Functor"><span class="id" title="record">Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj"><span class="id" title="definition">sigT_obj</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj_as_sigT"><span class="id" title="definition">sigT_obj_as_sigT</span></a><br>
-    := <a class="idref" href="HoTT.Categories.Functor.Core.html#Build_Functor"><span class="id" title="constructor">Build_Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj"><span class="id" title="definition">sigT_obj</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj_as_sigT"><span class="id" title="definition">sigT_obj_as_sigT</span></a><br>
+  <span class="id" title="keyword">Definition</span> <a id="sig_functor_obj_inv" class="idref" href="#sig_functor_obj_inv"><span class="id" title="definition">sig_functor_obj_inv</span></a> : <a class="idref" href="HoTT.Categories.Functor.Core.html#Functor"><span class="id" title="record">Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj"><span class="id" title="definition">sig_obj</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj_as_sig"><span class="id" title="definition">sig_obj_as_sig</span></a><br>
+    := <a class="idref" href="HoTT.Categories.Functor.Core.html#Build_Functor"><span class="id" title="constructor">Build_Functor</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj"><span class="id" title="definition">sig_obj</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj_as_sig"><span class="id" title="definition">sig_obj_as_sig</span></a><br>
                      (<span class="id" title="keyword">fun</span> <a id="x:16" class="idref" href="#x:16"><span class="id" title="binder">x</span></a> ⇒ <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#x:16"><span class="id" title="variable">x</span></a>)<br>
-                     (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a id="m:15" class="idref" href="#m:15"><span class="id" title="binder">m</span></a> ⇒ <a class="idref" href="Coq.Init.Specif.html#existT"><span class="id" title="abbreviation">existT</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#m:15"><span class="id" title="variable">m</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>)<br>
+                     (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <a id="m:15" class="idref" href="#m:15"><span class="id" title="binder">m</span></a> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#exist"><span class="id" title="constructor">exist</span></a> <span class="id" title="var">_</span> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#m:15"><span class="id" title="variable">m</span></a> <a class="idref" href="HoTT.Basics.Overture.html#tt"><span class="id" title="constructor">tt</span></a>)<br>
                      (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a>)<br>
                      (<span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_15');
@@ -604,9 +604,9 @@
       mouseover(50, '0_3_15');
       "><br>
 <br>
-  <span class="id" title="keyword">Lemma</span> <a id="sigT_obj_eq" class="idref" href="#sigT_obj_eq"><span class="id" title="lemma">sigT_obj_eq</span></a> `{<a id="H:17" class="idref" href="#H:17"><span class="id" title="binder">Funext</span></a>}<br>
-  : <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_functor_obj"><span class="id" title="definition">sigT_functor_obj</span></a> <a class="idref" href="HoTT.Categories.Functor.Composition.Core.html#FunctorCompositionCoreNotations.::functor_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_functor_obj_inv"><span class="id" title="definition">sigT_functor_obj_inv</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> 1<br>
-    <a class="idref" href="Coq.Init.Datatypes.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">∧</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_functor_obj_inv"><span class="id" title="definition">sigT_functor_obj_inv</span></a> <a class="idref" href="HoTT.Categories.Functor.Composition.Core.html#FunctorCompositionCoreNotations.::functor_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_functor_obj"><span class="id" title="definition">sigT_functor_obj</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> 1.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Lemma</span> <a id="sig_obj_eq" class="idref" href="#sig_obj_eq"><span class="id" title="lemma">sig_obj_eq</span></a> `{<a id="H:17" class="idref" href="#H:17"><span class="id" title="binder">Funext</span></a>}<br>
+  : <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_functor_obj"><span class="id" title="definition">sig_functor_obj</span></a> <a class="idref" href="HoTT.Categories.Functor.Composition.Core.html#FunctorCompositionCoreNotations.::functor_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_functor_obj_inv"><span class="id" title="definition">sig_functor_obj_inv</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> 1<br>
+    <a class="idref" href="HoTT.Basics.Datatypes.html#ba2b0e492d2b4675a0acf3ea92aabadd"><span class="id" title="notation">∧</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_functor_obj_inv"><span class="id" title="definition">sig_functor_obj_inv</span></a> <a class="idref" href="HoTT.Categories.Functor.Composition.Core.html#FunctorCompositionCoreNotations.::functor_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_functor_obj"><span class="id" title="definition">sig_functor_obj</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> 1.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(51, '0_3_15');
@@ -647,13 +647,13 @@
       mouseover(58, '0_3_15');
       "><br>
 <br>
-  <span class="id" title="keyword">Definition</span> <a id="sigT_obj_compat" class="idref" href="#sigT_obj_compat"><span class="id" title="definition">sigT_obj_compat</span></a> : <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_obj"><span class="id" title="definition">pr1_obj</span></a> <a class="idref" href="HoTT.Categories.Functor.Composition.Core.html#FunctorCompositionCoreNotations.::functor_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_functor_obj"><span class="id" title="definition">sigT_functor_obj</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.Core.html#pr1"><span class="id" title="definition">pr1</span></a><br>
+  <span class="id" title="keyword">Definition</span> <a id="sig_obj_compat" class="idref" href="#sig_obj_compat"><span class="id" title="definition">sig_obj_compat</span></a> : <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#pr1_obj"><span class="id" title="definition">pr1_obj</span></a> <a class="idref" href="HoTT.Categories.Functor.Composition.Core.html#FunctorCompositionCoreNotations.::functor_scope:x_'o'_x"><span class="id" title="notation">o</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_functor_obj"><span class="id" title="definition">sig_functor_obj</span></a> <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Categories.Category.Sigma.Core.html#pr1'"><span class="id" title="definition">pr1'</span></a><br>
     := <a class="idref" href="HoTT.Basics.Overture.html#idpath"><span class="id" title="constructor">idpath</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(59, '0_3_15');
       "><br>
-<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj"><span class="id" title="section">sigT_obj</span></a>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">End</span> <a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj"><span class="id" title="section">sig_obj</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(60, '0_3_15');
@@ -670,7 +670,7 @@
       " onmouseover="
       mouseover(62, '0_3_15');
       "><br>
-  <span class="id" title="keyword">Notation</span> <a id="c9cabf684f8fe5fc33dec6361741f5b1" class="idref" href="#c9cabf684f8fe5fc33dec6361741f5b1"><span class="id" title="notation">"</span></a>{ x : A | P }" := (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sigT_obj"><span class="id" title="definition">sigT_obj</span></a> <span class="id" title="var">A</span> (<span class="id" title="keyword">fun</span> <a id="x:18" class="idref" href="#x:18"><span class="id" title="binder">x</span></a> ⇒ <span class="id" title="var">P</span>)) : <span class="id" title="var">category_scope</span>.</span><span class="command" onmouseout="
+  <span class="id" title="keyword">Notation</span> <a id="c9cabf684f8fe5fc33dec6361741f5b1" class="idref" href="#c9cabf684f8fe5fc33dec6361741f5b1"><span class="id" title="notation">"</span></a>{ x : A | P }" := (<a class="idref" href="HoTT.Categories.Category.Sigma.OnObjects.html#sig_obj"><span class="id" title="definition">sig_obj</span></a> <span class="id" title="var">A</span> (<span class="id" title="keyword">fun</span> <a id="x:18" class="idref" href="#x:18"><span class="id" title="binder">x</span></a> ⇒ <span class="id" title="var">P</span>)) : <span class="id" title="var">category_scope</span>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(63, '0_3_15');

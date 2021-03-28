@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 1
-Time: 0.006s">
-<div class="time" style="width: 7.5949367088608%"></div>
+Time: 0.015s">
+<div class="time" style="width: 19.480519480519%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 1
-Time: 0.023s">
-<div class="time" style="width: 29.113924050633%"></div>
+Time: 0.027s">
+<div class="time" style="width: 35.064935064935%"></div>
 <pre>
 Require Import Category.Dual.</pre>
 </div>
@@ -64,7 +64,7 @@ Require Import NaturalTransformation.Identity.</pre>
 <div class="code" title="File: InducedFunctors.v
 Line: 4
 Time: 0.004s">
-<div class="time" style="width: 5.0632911392405%"></div>
+<div class="time" style="width: 5.1948051948052%"></div>
 <pre>
 Require Import FunctorCategory.Core Cat.Core.</pre>
 </div>
@@ -78,7 +78,7 @@ Require Import InitialTerminalCategory.Core InitialTerminalCategory.Functors.</p
 <div class="code" title="File: InducedFunctors.v
 Line: 6
 Time: 0.001s">
-<div class="time" style="width: 1.2658227848101%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
 Require Comma.Core.</pre>
 </div>
@@ -117,8 +117,8 @@ Require Import Comma.Projection.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 10
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
 Require Import Types.Prod HoTT.Tactics Types.Unit.</pre>
 </div>
@@ -127,32 +127,39 @@ Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Set Universe Polymorphism.</pre>
+Require Import Basics.Tactics.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 13
+Line: 12
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Implicit Arguments.</pre>
+
+Set Universe Polymorphism.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 14
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Generalizable All Variables.</pre>
+Set Implicit Arguments.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 15
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Asymmetric Patterns.</pre>
+Generalizable All Variables.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 16
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Set Asymmetric Patterns.</pre>
+</div>
+<div class="code" title="File: InducedFunctors.v
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -160,14 +167,14 @@ Time: 0s">
 Local Open Scope functor_scope.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 18
+Line: 19
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Local Open Scope category_scope.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 19
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -175,29 +182,29 @@ Time: 0s">
 (** ** Morphisms in [(A → C)ᵒᵖ × (B → C)] from [(s₀, s₁)] to [(d₀, d₁)] induce functors [(s₀ / s₁) → (d₀ / d₁)] *)</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 21
+Line: 22
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section comma_category_induced_functor.</pre>
-</div>
-<div class="code" title="File: InducedFunctors.v
-Line: 21
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 22
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Variables A B C : PreCategory.</pre>
+  Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 23
-Time: 0.01s">
-<div class="time" style="width: 12.658227848101%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Variables A B C : PreCategory.</pre>
+</div>
+<div class="code" title="File: InducedFunctors.v
+Line: 24
+Time: 0.009s">
+<div class="time" style="width: 11.688311688312%"></div>
 <pre>
 
   Definition comma_category_induced_functor_object_of s d
@@ -211,9 +218,9 @@ Time: 0.01s">
          ((snd m) (CommaCategory.b x) o CommaCategory.f x o (fst m) (CommaCategory.a x)).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 33
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 34
+Time: 0.001s">
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
 
   Lemma comma_category_induced_functor_object_of_identity s x
@@ -221,46 +228,46 @@ Time: 0s">
     = x.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 37
+Line: 38
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 38
+Line: 39
 Time: 0.001s">
-<div class="time" style="width: 1.2658227848101%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
     let x1 := match goal with |- ?x1 = ?x2 =&gt; constr:(x1) end in
     let x2 := match goal with |- ?x1 = ?x2 =&gt; constr:(x2) end in
     apply (CommaCategory.path_object' x1 x2 idpath idpath).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 41
+Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 42
+Line: 43
 Time: 0.006s">
-<div class="time" style="width: 7.5949367088608%"></div>
+<div class="time" style="width: 7.7922077922078%"></div>
 <pre>
     abstract (rewrite ?left_identity, ?right_identity; reflexivity).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 43
+Line: 44
 Time: 0.002s">
-<div class="time" style="width: 2.5316455696203%"></div>
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 44
+Line: 45
 Time: 0.003s">
-<div class="time" style="width: 3.7974683544304%"></div>
+<div class="time" style="width: 3.8961038961039%"></div>
 <pre>
 
   Definition comma_category_induced_functor_object_of_compose s d d'
@@ -273,25 +280,25 @@ Time: 0.003s">
         (comma_category_induced_functor_object_of m' x).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 53
+Line: 54
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 54
-Time: 0.001s">
-<div class="time" style="width: 1.2658227848101%"></div>
+Line: 55
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
     let x1 := match goal with |- ?x1 = ?x2 =&gt; constr:(x1) end in
     let x2 := match goal with |- ?x1 = ?x2 =&gt; constr:(x2) end in
     apply (CommaCategory.path_object' x1 x2 idpath idpath).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 57
-Time: 0.05s">
-<div class="time" style="width: 63.291139240506%"></div>
+Line: 58
+Time: 0.049s">
+<div class="time" style="width: 63.636363636364%"></div>
 <pre>
     abstract (
         destruct m', m, x;
@@ -301,16 +308,16 @@ Time: 0.05s">
       ).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 63
-Time: 0.005s">
-<div class="time" style="width: 6.3291139240506%"></div>
+Line: 64
+Time: 0.004s">
+<div class="time" style="width: 5.1948051948052%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 64
-Time: 0.005s">
-<div class="time" style="width: 6.3291139240506%"></div>
+Line: 65
+Time: 0.006s">
+<div class="time" style="width: 7.7922077922078%"></div>
 <pre>
 
   Definition comma_category_induced_functor_morphism_of s d m s0 d0
@@ -320,23 +327,23 @@ Time: 0.005s">
              (@comma_category_induced_functor_object_of s d m d0).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 70
+Line: 71
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 71
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     simpl.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 72
-Time: 0.001s">
-<div class="time" style="width: 1.2658227848101%"></div>
+Line: 73
+Time: 0.002s">
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre>
     let s := match goal with |- CommaCategory.morphism ?s ?d =&gt; constr:(s) end in
     let d := match goal with |- CommaCategory.morphism ?s ?d =&gt; constr:(d) end in
@@ -344,8 +351,8 @@ Time: 0.001s">
       simpl in *; clear.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 76
-Time: 0.079s">
+Line: 77
+Time: 0.077s">
 <div class="time" style="width: 100%"></div>
 <pre>
     abstract (
@@ -359,22 +366,22 @@ Time: 0.079s">
       ).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 85
+Line: 86
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre> (* 3.495 s *)
  </pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 86
-Time: 0.009s">
-<div class="time" style="width: 11.392405063291%"></div>
+Line: 87
+Time: 0.008s">
+<div class="time" style="width: 10.38961038961%"></div>
 <pre>Defined.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 86
+Line: 87
 Time: 0.003s">
-<div class="time" style="width: 3.7974683544304%"></div>
+<div class="time" style="width: 3.8961038961039%"></div>
 <pre>
 
   Definition comma_category_induced_functor s d
@@ -382,16 +389,16 @@ Time: 0.003s">
   : Functor (fst s / snd s) (fst d / snd d).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 90
+Line: 91
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 91
-Time: 0.032s">
-<div class="time" style="width: 40.506329113924%"></div>
+Line: 92
+Time: 0.028s">
+<div class="time" style="width: 36.363636363636%"></div>
 <pre>
     refine (Build_Functor (fst s / snd s) (fst d / snd d)
                           (@comma_category_induced_functor_object_of s d m)
@@ -404,21 +411,21 @@ Time: 0.032s">
       ).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 100
+Line: 101
 Time: 0.001s">
-<div class="time" style="width: 1.2658227848101%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 101
+Line: 102
 Time: 0.008s">
-<div class="time" style="width: 10.126582278481%"></div>
+<div class="time" style="width: 10.38961038961%"></div>
 <pre>
 End comma_category_induced_functor.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 102
+Line: 103
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -426,27 +433,27 @@ Time: 0s">
 (** ** Morphisms in [C] from [a] to [a'] induce functors [(C / a) → (C / a')] *)</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 104
+Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section slice_category_induced_functor.</pre>
-</div>
-<div class="code" title="File: InducedFunctors.v
-Line: 104
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 105
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Variable C : PreCategory.</pre>
+  Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 106
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Variable C : PreCategory.</pre>
+</div>
+<div class="code" title="File: InducedFunctors.v
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -454,14 +461,14 @@ Time: 0s">
   Section slice_coslice.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 108
+Line: 109
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Variable D : PreCategory.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 109
+Line: 110
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -470,37 +477,37 @@ Time: 0s">
    </pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 112
+Line: 113
 Time: 0.004s">
-<div class="time" style="width: 5.0632911392405%"></div>
+<div class="time" style="width: 5.1948051948052%"></div>
 <pre>Definition slice_category_induced_functor_nt s d (m : morphism D s d)
     : NaturalTransformation !s !d.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 113
+Line: 114
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Proof.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 114
-Time: 0.017s">
-<div class="time" style="width: 21.518987341772%"></div>
+Line: 115
+Time: 0.014s">
+<div class="time" style="width: 18.181818181818%"></div>
 <pre>
       exists (fun _ : Unit =&gt; m);
       simpl; intros; clear;
       abstract (autorewrite with category; reflexivity).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 117
+Line: 118
 Time: 0.001s">
-<div class="time" style="width: 1.2658227848101%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
     Defined.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 118
+Line: 119
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -508,14 +515,14 @@ Time: 0s">
     Variable F : Functor C D.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 120
+Line: 121
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     Variable a : D.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 121
+Line: 122
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -523,9 +530,9 @@ Time: 0s">
     Section slice.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 123
+Line: 124
 Time: 0.004s">
-<div class="time" style="width: 5.0632911392405%"></div>
+<div class="time" style="width: 5.1948051948052%"></div>
 <pre>
       Definition slice_category_induced_functor F' a'
                  (m : morphism D a a')
@@ -537,7 +544,7 @@ Time: 0.004s">
              (T, @slice_category_induced_functor_nt a a' m).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 131
+Line: 132
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -546,7 +553,7 @@ Time: 0s">
         := @slice_category_induced_functor F' a 1 T.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 134
+Line: 135
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -554,14 +561,14 @@ Time: 0s">
         := @slice_category_induced_functor F a' m 1.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 136
+Line: 137
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     End slice.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 137
+Line: 138
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -569,9 +576,9 @@ Time: 0s">
     Section coslice.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 139
-Time: 0.004s">
-<div class="time" style="width: 5.0632911392405%"></div>
+Line: 140
+Time: 0.003s">
+<div class="time" style="width: 3.8961038961039%"></div>
 <pre>
       Definition coslice_category_induced_functor F' a'
                  (m : morphism D a' a)
@@ -583,7 +590,7 @@ Time: 0.004s">
              (@slice_category_induced_functor_nt a' a m, T).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 147
+Line: 148
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -592,31 +599,31 @@ Time: 0s">
         := @coslice_category_induced_functor F' a 1 T.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 150
-Time: 0.001s">
-<div class="time" style="width: 1.2658227848101%"></div>
-<pre>
-      Definition coslice_category_morphism_induced_functor a' m
-        := @coslice_category_induced_functor F a' m 1.</pre>
-</div>
-<div class="code" title="File: InducedFunctors.v
-Line: 152
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-    End coslice.</pre>
+      Definition coslice_category_morphism_induced_functor a' m
+        := @coslice_category_induced_functor F a' m 1.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 153
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  End slice_coslice.</pre>
+    End coslice.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 154
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  End slice_coslice.</pre>
+</div>
+<div class="code" title="File: InducedFunctors.v
+Line: 155
 Time: 0.004s">
-<div class="time" style="width: 5.0632911392405%"></div>
+<div class="time" style="width: 5.1948051948052%"></div>
 <pre>
 
   Definition slice_category_over_induced_functor a a' (m : morphism C a a')
@@ -624,23 +631,23 @@ Time: 0.004s">
     := Eval hnf in slice_category_morphism_induced_functor _ _ _ m.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 158
+Line: 159
 Time: 0.003s">
-<div class="time" style="width: 3.7974683544304%"></div>
+<div class="time" style="width: 3.8961038961039%"></div>
 <pre>
   Definition coslice_category_over_induced_functor a a' (m : morphism C a' a)
   : Functor (a \ C) (a' \ C)
     := Eval hnf in coslice_category_morphism_induced_functor _ _ _ m.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 161
-Time: 0.005s">
-<div class="time" style="width: 6.3291139240506%"></div>
+Line: 162
+Time: 0.004s">
+<div class="time" style="width: 5.1948051948052%"></div>
 <pre>
 End slice_category_induced_functor.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 162
+Line: 163
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -648,34 +655,42 @@ Time: 0s">
 (** ** Functors [A → A'] functors [(cat / A) → (cat / A')] *)</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 164
+Line: 165
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section cat_over_induced_functor.</pre>
-</div>
-<div class="code" title="File: InducedFunctors.v
-Line: 164
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-  Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 165
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-  Variable P : PreCategory -&gt; Type.</pre>
+  Local Open Scope type_scope.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
 Line: 166
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
+
+  Context `{Funext}.</pre>
+</div>
+<div class="code" title="File: InducedFunctors.v
+Line: 168
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+  Variable P : PreCategory -&gt; Type.</pre>
+</div>
+<div class="code" title="File: InducedFunctors.v
+Line: 169
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
   Context `{H0 : forall C D, P C -&gt; P D -&gt; IsHSet (Functor C D)}.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 167
+Line: 170
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -683,9 +698,9 @@ Time: 0s">
   Local Notation cat := (@sub_pre_cat _ P H0).</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 169
-Time: 0.004s">
-<div class="time" style="width: 5.0632911392405%"></div>
+Line: 172
+Time: 0.003s">
+<div class="time" style="width: 3.8961038961039%"></div>
 <pre>
 
   Definition cat_over_induced_functor a a' (m : morphism cat a a')
@@ -693,9 +708,9 @@ Time: 0.004s">
     := slice_category_over_induced_functor cat a a' m.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 173
+Line: 176
 Time: 0.002s">
-<div class="time" style="width: 2.5316455696203%"></div>
+<div class="time" style="width: 2.5974025974026%"></div>
 <pre>
 
   Definition over_cat_induced_functor a a' (m : morphism cat a' a)
@@ -703,14 +718,14 @@ Time: 0.002s">
     := coslice_category_over_induced_functor cat a a' m.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 177
+Line: 180
 Time: 0.001s">
-<div class="time" style="width: 1.2658227848101%"></div>
+<div class="time" style="width: 1.2987012987013%"></div>
 <pre>
 End cat_over_induced_functor.</pre>
 </div>
 <div class="code" title="File: InducedFunctors.v
-Line: 179
+Line: 182
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

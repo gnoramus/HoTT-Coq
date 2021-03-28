@@ -83,7 +83,7 @@
           
 
             i = 13;
-            data = "";
+            data = "<infomsg>[Loading ML file ltac_plugin.cmxs ... done]</infomsg>	<infomsg>[Loading ML file number_string_notation_plugin.cmxs ... done]	</infomsg>	";
             responses[i]=data;
           
 
@@ -113,7 +113,7 @@
           
 
             i = 19;
-            data = "1 goal (ID 25)	  	  C : PreCategory	  C' : PreCategory	  D : PreCategory	  F, G : Functor C D	  F', G' : Functor C' D	  T : NaturalTransformation F G	  T' : NaturalTransformation F' G'	  ============================	  NaturalTransformation (F + F') (G + G')	";
+            data = "1 goal (ID 27)	  	  C : PreCategory	  C' : PreCategory	  D : PreCategory	  F, G : Functor C D	  F', G' : Functor C' D	  T : NaturalTransformation F G	  T' : NaturalTransformation F' G'	  ============================	  NaturalTransformation (F + F') (G + G')	";
             responses[i]=data;
           
 
@@ -123,7 +123,7 @@
           
 
             i = 21;
-            data = "1 goal (ID 39)	  	  C : PreCategory	  C' : PreCategory	  D : PreCategory	  F, G : Functor C D	  F', G' : Functor C' D	  T : NaturalTransformation F G	  T' : NaturalTransformation F' G'	  ============================	  forall (s d : (C + C')%category) (m : morphism (C + C') s d),	  (match	     d as x return (morphism D ((F + F') _0 x)%object ((G + G') _0 x)%object)	   with	   | Datatypes.inl c => T c	   | Datatypes.inr c' => T' c'	   end o (F + F') _1 m)%morphism =	  ((G + G') _1 m	   o match	       s as x	       return (morphism D ((F + F') _0 x)%object ((G + G') _0 x)%object)	     with	     | Datatypes.inl c => T c	     | Datatypes.inr c' => T' c'	     end)%morphism	";
+            data = "1 goal (ID 41)	  	  C : PreCategory	  C' : PreCategory	  D : PreCategory	  F, G : Functor C D	  F', G' : Functor C' D	  T : NaturalTransformation F G	  T' : NaturalTransformation F' G'	  ============================	  forall (s d : (C + C')%category) (m : morphism (C + C') s d),	  (match	     d as x return (morphism D ((F + F') _0 x)%object ((G + G') _0 x)%object)	   with	   | Datatypes.inl c => T c	   | Datatypes.inr c' => T' c'	   end o (F + F') _1 m)%morphism =	  ((G + G') _1 m	   o match	       s as x	       return (morphism D ((F + F') _0 x)%object ((G + G') _0 x)%object)	     with	     | Datatypes.inl c => T c	     | Datatypes.inr c' => T' c'	     end)%morphism	";
             responses[i]=data;
           
 
@@ -240,7 +240,7 @@
 </span></div>
 <div class="goal" id="goal0_3_3"><pre><span></span></pre></div>
 <div class="doc" scenenumber="5">
-<a id="lab1151"></a><h1 class="section">Coproduct of natural transformations</h1>
+<a id="lab1150"></a><h1 class="section">Coproduct of natural transformations</h1>
 </div>
 <div scenenumber="7" class="code">
 <span class="command" onmouseout="
@@ -297,8 +297,8 @@
     <span class="id" title="tactic">refine</span> (<a class="idref" href="HoTT.Categories.NaturalTransformation.Core.html#Build_NaturalTransformation"><span class="id" title="definition">Build_NaturalTransformation</span></a><br>
               (<span class="id" title="var">F</span> <a class="idref" href="HoTT.Categories.Functor.Sum.html#9d1155f20b588db97560a906e2820c32"><span class="id" title="notation">+</span></a> <span class="id" title="var">F'</span>) (<span class="id" title="var">G</span> <a class="idref" href="HoTT.Categories.Functor.Sum.html#9d1155f20b588db97560a906e2820c32"><span class="id" title="notation">+</span></a> <span class="id" title="var">G'</span>)<br>
               (<span class="id" title="keyword">fun</span> <a id="x:12" class="idref" href="#x:12"><span class="id" title="binder">x</span></a> ⇒ <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Categories.NaturalTransformation.Sum.html#x:10"><span class="id" title="variable">x</span></a> <span class="id" title="keyword">with</span><br>
-                          | <a class="idref" href="Coq.Init.Datatypes.html#inl"><span class="id" title="constructor">Datatypes.inl</span></a> <span class="id" title="var">c</span> ⇒ <span class="id" title="var">T</span> <span class="id" title="var">c</span><br>
-                          | <a class="idref" href="Coq.Init.Datatypes.html#inr"><span class="id" title="constructor">Datatypes.inr</span></a> <span class="id" title="var">c'</span> ⇒ <span class="id" title="var">T'</span> <span class="id" title="var">c'</span><br>
+                          | <a class="idref" href="HoTT.Basics.Datatypes.html#inl"><span class="id" title="constructor">Datatypes.inl</span></a> <span class="id" title="var">c</span> ⇒ <span class="id" title="var">T</span> <span class="id" title="var">c</span><br>
+                          | <a class="idref" href="HoTT.Basics.Datatypes.html#inr"><span class="id" title="constructor">Datatypes.inr</span></a> <span class="id" title="var">c'</span> ⇒ <span class="id" title="var">T'</span> <span class="id" title="var">c'</span><br>
                         <span class="id" title="keyword">end</span>)<br>
               <span class="id" title="var">_</span>).</span><span class="command" onmouseout="
       mouseout('0_3_7');

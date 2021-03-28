@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.006s">
-<div class="time" style="width: 2.020202020202%"></div>
+Time: 0.014s">
+<div class="time" style="width: 5.3846153846154%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -49,8 +49,8 @@ Require Import Functor.Composition.Core NaturalTransformation.Composition.Core.<
 </div>
 <div class="code" title="File: Core.v
 Line: 2
-Time: 0.019s">
-<div class="time" style="width: 6.3973063973064%"></div>
+Time: 0.024s">
+<div class="time" style="width: 9.2307692307692%"></div>
 <pre>
 Require Import Functor.Identity NaturalTransformation.Identity.</pre>
 </div>
@@ -64,7 +64,7 @@ Require NaturalTransformation.Composition.Laws.</pre>
 <div class="code" title="File: Core.v
 Line: 4
 Time: 0.004s">
-<div class="time" style="width: 1.3468013468013%"></div>
+<div class="time" style="width: 1.5384615384615%"></div>
 <pre>
 Require Import Adjoint.UnitCounit Adjoint.Core.</pre>
 </div>
@@ -78,7 +78,7 @@ Require Import Category.Morphisms.</pre>
 <div class="code" title="File: Core.v
 Line: 6
 Time: 0.001s">
-<div class="time" style="width: 0.33670033670034%"></div>
+<div class="time" style="width: 0.38461538461538%"></div>
 <pre>
 Require Import HoTT.Tactics.</pre>
 </div>
@@ -87,32 +87,39 @@ Line: 7
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-
-Set Universe Polymorphism.</pre>
+Require Import Basics.Tactics.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 9
+Line: 8
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Implicit Arguments.</pre>
+
+Set Universe Polymorphism.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 10
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Generalizable All Variables.</pre>
+Set Implicit Arguments.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 11
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
-Set Asymmetric Patterns.</pre>
+Generalizable All Variables.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 12
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Set Asymmetric Patterns.</pre>
+</div>
+<div class="code" title="File: Core.v
+Line: 13
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -120,7 +127,7 @@ Time: 0s">
 Local Open Scope natural_transformation_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 14
+Line: 15
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -128,20 +135,20 @@ Time: 0s">
 (** ** via the unit+counit+zig+zag definition *)</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 16
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section compose.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 16
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Variables C D E : PreCategory.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 17
+Line: 18
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -149,28 +156,28 @@ Time: 0s">
   Variable F : Functor C D.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 19
+Line: 20
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Variable F' : Functor D E.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 20
+Line: 21
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Variable G : Functor D C.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 21
-Time: 0.002s">
-<div class="time" style="width: 0.67340067340067%"></div>
+Line: 22
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Variable G' : Functor E D.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 22
+Line: 23
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -178,46 +185,46 @@ Time: 0s">
   Variable A' : F' -| G'.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 24
+Line: 25
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Variable A : F -| G.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 25
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 26
+Time: 0.001s">
+<div class="time" style="width: 0.38461538461538%"></div>
 <pre>
 
   Definition compose_unit
   : NaturalTransformation 1 ((G o G') o (F' o F)).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 28
+Line: 29
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 29
+Line: 30
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     pose (unit A) as eta.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 30
+Line: 31
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     pose (unit A') as eta'.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 31
+Line: 32
 Time: 0.016s">
-<div class="time" style="width: 5.3872053872054%"></div>
+<div class="time" style="width: 6.1538461538462%"></div>
 <pre>
     refine ((fun (T : NaturalTransformation _ _)
                  (U : NaturalTransformation _ _)
@@ -225,46 +232,46 @@ Time: 0.016s">
       NaturalTransformation.Composition.Laws.nt_solve_associator.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 35
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Line: 36
+Time: 0.001s">
+<div class="time" style="width: 0.38461538461538%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 36
-Time: 0.001s">
-<div class="time" style="width: 0.33670033670034%"></div>
+Line: 37
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Definition compose_counit
   : NaturalTransformation ((F' o F) o (G o G')) 1.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 39
+Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 40
+Line: 41
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     pose (counit A) as eps.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 41
+Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
     pose (counit A') as eps'.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 42
-Time: 0.026s">
-<div class="time" style="width: 8.7542087542088%"></div>
+Line: 43
+Time: 0.023s">
+<div class="time" style="width: 8.8461538461538%"></div>
 <pre>
     refine ((fun (T : NaturalTransformation _ _)
                  (U : NaturalTransformation _ _)
@@ -272,14 +279,14 @@ Time: 0.026s">
       NaturalTransformation.Composition.Laws.nt_solve_associator.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 46
+Line: 47
 Time: 0.001s">
-<div class="time" style="width: 0.33670033670034%"></div>
+<div class="time" style="width: 0.38461538461538%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 47
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -287,15 +294,15 @@ Time: 0s">
   Definition compose : F' o F -| G o G'.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 49
+Line: 50
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 50
-Time: 0.297s">
+Line: 51
+Time: 0.26s">
 <div class="time" style="width: 100%"></div>
 <pre>
     exists compose_unit compose_counit;
@@ -329,21 +336,21 @@ Time: 0.297s">
       ).</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 79
-Time: 0.011s">
-<div class="time" style="width: 3.7037037037037%"></div>
+Line: 80
+Time: 0.01s">
+<div class="time" style="width: 3.8461538461538%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 80
+Line: 81
 Time: 0.002s">
-<div class="time" style="width: 0.67340067340067%"></div>
+<div class="time" style="width: 0.76923076923077%"></div>
 <pre>
 End compose.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 81
+Line: 82
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -351,21 +358,21 @@ Time: 0s">
 Module Export AdjointCompositionCoreNotations.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 83
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Infix "o" := compose : adjunction_scope.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 84
+Line: 85
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 End AdjointCompositionCoreNotations.</pre>
 </div>
 <div class="code" title="File: Core.v
-Line: 86
+Line: 87
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

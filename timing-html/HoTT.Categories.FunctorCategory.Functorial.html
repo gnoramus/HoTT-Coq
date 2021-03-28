@@ -36,12 +36,19 @@ Time: 0s">
 </div>
 <div class="code" title="File: Functorial.v
 Line: 1
-Time: 0.036s">
-<div class="time" style="width: 100%"></div>
-<pre>Require Import Category.Core Functor.Core FunctorCategory.Core Functor.Pointwise.Core Functor.Pointwise.Properties Category.Dual Category.Prod Cat.Core ExponentialLaws.Law4.Functors.</pre>
+Time: 0.027s">
+<div class="time" style="width: 93.103448275862%"></div>
+<pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Functorial.v
 Line: 1
+Time: 0.029s">
+<div class="time" style="width: 100%"></div>
+<pre>
+Require Import Category.Core Functor.Core FunctorCategory.Core Functor.Pointwise.Core Functor.Pointwise.Properties Category.Dual Category.Prod Cat.Core ExponentialLaws.Law4.Functors.</pre>
+</div>
+<div class="code" title="File: Functorial.v
+Line: 2
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -49,28 +56,28 @@ Time: 0s">
 Set Universe Polymorphism.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 3
+Line: 4
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Set Implicit Arguments.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 4
+Line: 5
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Generalizable All Variables.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 5
+Line: 6
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Set Asymmetric Patterns.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 6
+Line: 7
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -78,7 +85,14 @@ Time: 0s">
 Local Open Scope category_scope.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 8
+Line: 9
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Local Open Scope type_scope.</pre>
+</div>
+<div class="code" title="File: Functorial.v
+Line: 10
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -86,20 +100,20 @@ Time: 0s">
 (** ** [(_ → _)] is a functor [catᵒᵖ × cat → cat] *)</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 10
+Line: 12
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Section functor.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 10
+Line: 12
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{Funext}.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 11
+Line: 13
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -107,21 +121,21 @@ Time: 0s">
   Variable P : PreCategory -&gt; Type.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 13
+Line: 15
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{forall C, IsHProp (P C)}.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 14
+Line: 16
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
   Context `{HF : forall C D, P C -&gt; P D -&gt; IsHSet (Functor C D)}.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 15
+Line: 17
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -129,17 +143,25 @@ Time: 0s">
   Local Notation cat := (sub_pre_cat P HF).</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 17
+Line: 19
 Time: 0.001s">
-<div class="time" style="width: 2.7777777777778%"></div>
+<div class="time" style="width: 3.448275862069%"></div>
 <pre>
 
   Hypothesis has_functor_categories : forall C D : cat, P (C.1 -&gt; D.1).</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 19
-Time: 0.019s">
-<div class="time" style="width: 52.777777777778%"></div>
+Line: 21
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+  Local Open Scope category_scope.</pre>
+</div>
+<div class="code" title="File: Functorial.v
+Line: 23
+Time: 0.018s">
+<div class="time" style="width: 62.068965517241%"></div>
 <pre>
 
   Definition functor_uncurried
@@ -155,23 +177,23 @@ Time: 0.019s">
              (fun _ =&gt; Functor.Pointwise.Properties.identity_of _ _).</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 31
+Line: 35
 Time: 0.003s">
-<div class="time" style="width: 8.3333333333333%"></div>
+<div class="time" style="width: 10.344827586207%"></div>
 <pre>
 
   Definition functor : object (cat^op -&gt; (cat -&gt; cat))
     := ExponentialLaws.Law4.Functors.inverse _ _ _ functor_uncurried.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 34
+Line: 38
 Time: 0.001s">
-<div class="time" style="width: 2.7777777777778%"></div>
+<div class="time" style="width: 3.448275862069%"></div>
 <pre>
 End functor.</pre>
 </div>
 <div class="code" title="File: Functorial.v
-Line: 36
+Line: 40
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

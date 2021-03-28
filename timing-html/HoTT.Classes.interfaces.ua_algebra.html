@@ -38,18 +38,18 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 2
-Time: 0.104s">
+Time: 0.115s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Export
-  Coq.Unicode.Utf8
+  HoTT.Utf8
   HoTT.Basics
   HoTT.Classes.implementations.ne_list
   HoTT.Classes.implementations.family_prod.</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 6
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre>
 
 Require Import
@@ -118,8 +118,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 33
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>Record Signature : Type := BuildSignature
   { Sort : Type
   ; Symbol : Type
@@ -155,8 +155,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 44
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition BuildSingleSortedSignature (sym : Type) (arities : sym → nat)
   : Signature
   := BuildSignature Unit sym (ne_list.replicate_Sn tt o arities).</pre>
@@ -229,8 +229,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 66
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition arity_symboltype {σ} : SymbolType σ → nat
   := length o dom_symboltype.</pre>
 </div>
@@ -274,8 +274,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 85
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>Fixpoint Operation {σ} (A : Carriers σ) (w : SymbolType σ) : Type
   := match w with
      | [:s:] =&gt; A s
@@ -302,7 +302,7 @@ Proof.</pre>
 <div class="code" title="File: ua_algebra.v
 Line: 94
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre>
   induction w; apply (istrunc_trunctype_type (BuildTruncType n _)).</pre>
 </div>
@@ -331,7 +331,7 @@ Time: 0s">
 <div class="code" title="File: ua_algebra.v
 Line: 104
 Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+<div class="time" style="width: 2.6086956521739%"></div>
 <pre>Fixpoint ap_operation {σ} {A : Carriers σ} {w : SymbolType σ}
     : Operation A w →
       FamilyProd A (dom_symboltype w) →
@@ -360,7 +360,7 @@ Time: 0s">
 <div class="code" title="File: ua_algebra.v
 Line: 120
 Time: 0.007s">
-<div class="time" style="width: 6.7307692307692%"></div>
+<div class="time" style="width: 6.0869565217391%"></div>
 <pre>Fixpoint path_forall_ap_operation `{Funext} {σ : Signature}
   {A : Carriers σ} {w : SymbolType σ}
   : ∀ (f g : Operation A w),
@@ -391,7 +391,7 @@ Time: 0s">
 <div class="code" title="File: ua_algebra.v
 Line: 138
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>Record Algebra {σ : Signature} : Type := BuildAlgebra
   { carriers : Carriers σ
   ; operations : ∀ (u : Symbol σ), Operation carriers (σ u) }.</pre>
@@ -454,14 +454,14 @@ Proof.</pre>
 <div class="code" title="File: ua_algebra.v
 Line: 153
 Time: 0.008s">
-<div class="time" style="width: 7.6923076923077%"></div>
+<div class="time" style="width: 6.9565217391304%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 154
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -510,7 +510,7 @@ Proof.</pre>
 <div class="code" title="File: ua_algebra.v
 Line: 167
 Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+<div class="time" style="width: 2.6086956521739%"></div>
 <pre>
   apply trunc_forall.</pre>
 </div>
@@ -541,7 +541,7 @@ Proof.</pre>
 <div class="code" title="File: ua_algebra.v
 Line: 174
 Time: 0.004s">
-<div class="time" style="width: 3.8461538461538%"></div>
+<div class="time" style="width: 3.4782608695652%"></div>
 <pre>
   intro; exact _.</pre>
 </div>
@@ -565,8 +565,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 180
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.6086956521739%"></div>
 <pre>Lemma path_algebra {σ : Signature} (A B : Algebra σ)
   (p : carriers A = carriers B)
   (q : transport (λ X, ∀ u, Operation X (σ u)) p (operations A)
@@ -583,7 +583,7 @@ Proof.</pre>
 <div class="code" title="File: ua_algebra.v
 Line: 185
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
   destruct A,B.</pre>
 </div>
@@ -596,20 +596,20 @@ Time: 0s">
 <div class="code" title="File: ua_algebra.v
 Line: 186
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre> by path_induction.</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 186
 Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 187
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre>
 
 Lemma path_ap_carriers_path_algebra {σ} (A B : Algebra σ)
@@ -627,8 +627,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 194
-Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
   destruct A as [A a], B as [B b].</pre>
 </div>
@@ -641,13 +641,13 @@ Time: 0s">
 <div class="code" title="File: ua_algebra.v
 Line: 195
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre> by destruct p,q.</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 195
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -666,7 +666,7 @@ Time: 0s">
 <div class="code" title="File: ua_algebra.v
 Line: 201
 Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+<div class="time" style="width: 2.6086956521739%"></div>
 <pre>Lemma path_path_algebra {σ : Signature} {A B : Algebra σ} (p q : A = B)
   (r : ap (issig_algebra σ)^-1 p = ap (issig_algebra σ)^-1 q)
   : p = q.</pre>
@@ -680,22 +680,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 204
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre>
   set (e := (equiv_ap (issig_algebra σ)^-1 A B)).</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 205
-Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre>
   by apply (@equiv_inv _ _ (ap e) (Equivalences.isequiv_ap _ _)).</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 206
-Time: 0.001s">
-<div class="time" style="width: 0.96153846153846%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -712,8 +712,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 211
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>Lemma path_path_hset_algebra `{Funext} {σ : Signature}
   {A B : Algebra σ} `{IsHSetAlgebra B}
   (p q : A = B) (r : ap carriers p = ap carriers q)
@@ -735,8 +735,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 216
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.8695652173913%"></div>
 <pre>
   unshelve eapply path_path_sigma.</pre>
 </div>
@@ -750,13 +750,13 @@ Time: 0s">
 <div class="code" title="File: ua_algebra.v
 Line: 218
 Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+<div class="time" style="width: 2.6086956521739%"></div>
 <pre> transitivity (ap carriers p); [by destruct p |].</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 218
 Time: 0.003s">
-<div class="time" style="width: 2.8846153846154%"></div>
+<div class="time" style="width: 2.6086956521739%"></div>
 <pre>
     transitivity (ap carriers q); [exact r | by destruct q].</pre>
 </div>
@@ -770,19 +770,19 @@ Time: 0s">
 <div class="code" title="File: ua_algebra.v
 Line: 220
 Time: 0.002s">
-<div class="time" style="width: 1.9230769230769%"></div>
+<div class="time" style="width: 1.7391304347826%"></div>
 <pre> apply hprop_allpath.</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 220
-Time: 0.017s">
-<div class="time" style="width: 16.346153846154%"></div>
+Time: 0.016s">
+<div class="time" style="width: 13.913043478261%"></div>
 <pre> apply hset_path2.</pre>
 </div>
 <div class="code" title="File: ua_algebra.v
 Line: 220
 Time: 0.01s">
-<div class="time" style="width: 9.6153846153846%"></div>
+<div class="time" style="width: 8.695652173913%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -803,7 +803,7 @@ Time: 0s">
 (** Given [A : Algebra σ] and function symbol [u : Symbol σ], we use
     the notation [u ^^ A] to refer to the corresponding algebra
     operation of type [Operation A (σ u)]. *)
-
+(** Note: We must reserve this notation here since it messes with the parsing of double inversion of paths *)
  </pre>
 </div>
 <div class="code" title="File: ua_algebra.v
