@@ -37,12 +37,12 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 1
 Time: 0.015s">
-<div class="time" style="width: 36.585365853659%"></div>
+<div class="time" style="width: 34.883720930233%"></div>
 <pre>Require Import Category.Core.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 1
-Time: 0.041s">
+Time: 0.043s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import HoTT.Basics HoTT.Types HProp HSet Trunc.</pre>
@@ -191,8 +191,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 64
-Time: 0.006s">
-<div class="time" style="width: 14.634146341463%"></div>
+Time: 0.005s">
+<div class="time" style="width: 11.627906976744%"></div>
 <pre>Record NotionOfStructure (X : PreCategory) :=
   {
     structure :&gt; X -&gt; Type;
@@ -317,8 +317,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 122
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
   split; repeat intro; eauto with structure_homomorphisms.</pre>
 </div>
@@ -331,15 +331,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 124
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
   eauto with structure_homomorphisms.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 125
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -361,7 +361,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 134
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>Class IsStandardNotionOfStructure X (P : NotionOfStructure X) :=
   antisymmetry_structure : forall x (a b : P x),
                              a &lt;= b -&gt; b &lt;= a -&gt; a = b.</pre>
@@ -394,8 +394,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 143
-Time: 0.009s">
-<div class="time" style="width: 21.951219512195%"></div>
+Time: 0.006s">
+<div class="time" style="width: 13.953488372093%"></div>
 <pre>
   eapply (@ishset_hrel_subpaths
             _ (fun a b =&gt; (a &lt;= b) * (b &lt;= a)));
@@ -411,7 +411,7 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 147
 Time: 0.002s">
-<div class="time" style="width: 4.8780487804878%"></div>
+<div class="time" style="width: 4.6511627906977%"></div>
 <pre> repeat intro; split; apply reflexivity.</pre>
 </div>
 <div class="code" title="File: Core.v
@@ -423,14 +423,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 148
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> intros ? ? [? ?]; apply antisymmetry_structure; assumption.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 148
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -526,16 +526,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 190
-Time: 0.003s">
-<div class="time" style="width: 7.3170731707317%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.6511627906977%"></div>
 <pre>Record morphism (xa yb : object) :=
       { f : Category.Core.morphism X xa.1 yb.1;
         h : is_structure_homomorphism _ _ _ f xa.2 yb.2 }.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 192
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
     Lemma issig_morphism (xa yb : object)
@@ -552,15 +552,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 198
-Time: 0.009s">
-<div class="time" style="width: 21.951219512195%"></div>
+Time: 0.01s">
+<div class="time" style="width: 23.255813953488%"></div>
 <pre>
       issig.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 199
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
     Defined.</pre>
 </div>
@@ -584,14 +584,14 @@ Time: 0s">
 <div class="code" title="File: Core.v
 Line: 205
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
       intros ? ? [? ?] [? ?] H; simpl in *; path_induction; apply ap.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 206
-Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       apply path_ishprop.</pre>
 </div>
@@ -604,8 +604,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 208
-Time: 0.003s">
-<div class="time" style="width: 7.3170731707317%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.6511627906977%"></div>
 <pre>
   End precategory.</pre>
 </div>
@@ -663,8 +663,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 219
-Time: 0.032s">
-<div class="time" style="width: 78.048780487805%"></div>
+Time: 0.026s">
+<div class="time" style="width: 60.46511627907%"></div>
 <pre>
     refine (@Build_PreCategory
               _
@@ -691,14 +691,14 @@ Time: 0.032s">
 <div class="code" title="File: Core.v
 Line: 240
 Time: 0.003s">
-<div class="time" style="width: 7.3170731707317%"></div>
+<div class="time" style="width: 6.9767441860465%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Core.v
 Line: 241
 Time: 0.001s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.3255813953488%"></div>
 <pre>
 End precategory.</pre>
 </div>
