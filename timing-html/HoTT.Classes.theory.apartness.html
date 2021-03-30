@@ -36,8 +36,8 @@ Time: 0.089s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 1
-Time: 0.027s">
-<div class="time" style="width: 30.337078651685%"></div>
+Time: 0.026s">
+<div class="time" style="width: 29.213483146067%"></div>
 <pre>
 Require Import HoTT.Classes.interfaces.abstract_algebra.</pre>
 </div>
@@ -66,8 +66,8 @@ Context `{IsApart A}.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 7
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
 
 Lemma apart_ne x y : PropHolds (x ≶ y) -&gt; PropHolds (x &lt;&gt; y).</pre>
@@ -95,8 +95,8 @@ intros ap e;revert ap.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 12
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
 apply tight_apart.</pre>
 </div>
@@ -245,8 +245,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: apartness.v
@@ -356,8 +356,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 45
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply tight_apart.</pre>
 </div>
 <div class="code" title="File: apartness.v
@@ -400,8 +400,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 47
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
     apply tight_apart.</pre>
 </div>
@@ -420,8 +420,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 49
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
 
 Instance sg_apart_mere `{IsApart A} (P : A -&gt; Type)
@@ -462,8 +462,8 @@ Qed.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 55
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
 
 Instance sig_strong_setoid `{IsApart A} (P: A -&gt; Type) `{forall x, IsHProp (P x)}
@@ -478,8 +478,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 59
-Time: 0.033s">
-<div class="time" style="width: 37.078651685393%"></div>
+Time: 0.039s">
+<div class="time" style="width: 43.820224719101%"></div>
 <pre>
 apply (projected_strong_setoid (@proj1 _ P)).</pre>
 </div>
@@ -511,14 +511,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 62
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre> intros;apply reflexivity.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 62
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -532,15 +532,15 @@ Section morphisms.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 65
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
   Context `{IsApart A} `{IsApart B} `{IsApart C}.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 66
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Global Instance strong_injective_injective `{!IsStrongInjective (f : A -&gt; B)} :
@@ -569,8 +569,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 72
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply tight_apart.</pre>
 </div>
@@ -619,8 +619,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 80
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance strong_setoid_morphism_1
     `{!StrongBinaryExtensionality (f : A -&gt; B -&gt; C)} :
     forall z, StrongExtensionality (f z).</pre>
@@ -648,8 +648,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 85
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros [?|?];trivial.</pre>
 </div>
@@ -699,22 +699,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 94
-Time: 0.006s">
-<div class="time" style="width: 6.7415730337079%"></div>
+Time: 0.007s">
+<div class="time" style="width: 7.8651685393258%"></div>
 <pre>
   apply (merely_destruct (strong_binary_extensionality f x z y z E)).</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 95
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   intros [?|?];trivial.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 96
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
   destruct (irreflexivity (≶) z);assumption.</pre>
 </div>
@@ -768,8 +768,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 109
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
   intros [?|?];apply tr.</pre>
 </div>
@@ -807,21 +807,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 112
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply (strong_extensionality (f x₂));trivial.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 112
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: apartness.v
 Line: 113
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 End morphisms.</pre>
@@ -843,8 +843,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 118
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma strong_binary_setoid_morphism_commutative {f : A -&gt; A -&gt; B} `{!Commutative f}
@@ -971,8 +971,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 144
-Time: 0.015s">
-<div class="time" style="width: 16.85393258427%"></div>
+Time: 0.016s">
+<div class="time" style="width: 17.977528089888%"></div>
 <pre> apply _.</pre>
 </div>
 <div class="code" title="File: apartness.v
@@ -1042,8 +1042,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 149
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 1.123595505618%"></div>
 <pre> intros E;destruct (dec (x=y)) as [e|_].</pre>
 </div>
 <div class="code" title="File: apartness.v
@@ -1120,8 +1120,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 161
-Time: 0.001s">
-<div class="time" style="width: 1.123595505618%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Instance ne_apart x y : PropHolds (x &lt;&gt; y) -&gt; PropHolds (x ≶ y).</pre>
 </div>
 <div class="code" title="File: apartness.v
@@ -1267,8 +1267,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 176
-Time: 0.015s">
-<div class="time" style="width: 16.85393258427%"></div>
+Time: 0.016s">
+<div class="time" style="width: 17.977528089888%"></div>
 <pre>
     destruct (dec (x=z)) as [e|ne'];[destruct (dec (z=y)) as [e'|ne']|].</pre>
 </div>
@@ -1369,8 +1369,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: apartness.v
 Line: 182
-Time: 0.007s">
-<div class="time" style="width: 7.8651685393258%"></div>
+Time: 0.008s">
+<div class="time" style="width: 8.9887640449438%"></div>
 <pre>
       destruct (dec (x=y));auto.</pre>
 </div>

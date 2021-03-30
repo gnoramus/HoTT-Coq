@@ -36,8 +36,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 1
-Time: 0.016s">
-<div class="time" style="width: 53.333333333333%"></div>
+Time: 0.014s">
+<div class="time" style="width: 48.275862068966%"></div>
 <pre>Require Import Category.Core Functor.Core NaturalTransformation.Core.</pre>
 </div>
 <div class="code" title="File: Isomorphisms.v
@@ -56,7 +56,7 @@ Require Import Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 3
-Time: 0.03s">
+Time: 0.029s">
 <div class="time" style="width: 100%"></div>
 <pre>
 Require Import Category.Morphisms FunctorCategory.Morphisms.</pre>
@@ -181,8 +181,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 38
-Time: 0.005s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.004s">
+<div class="time" style="width: 13.793103448276%"></div>
 <pre>Global Instance isisomorphism_compose
          `(T' : @NaturalTransformation C D F' F'')
          `(T : @NaturalTransformation C D F F')
@@ -203,7 +203,7 @@ Time: 0s">
 <div class="code" title="File: Isomorphisms.v
 Line: 47
 Time: 0.003s">
-<div class="time" style="width: 10%"></div>
+<div class="time" style="width: 10.344827586207%"></div>
 <pre>Global Instance iso_whisker_l C D E
          (F : Functor D E)
          (G G' : Functor C D)
@@ -221,7 +221,7 @@ Time: 0s">
 <div class="code" title="File: Isomorphisms.v
 Line: 53
 Time: 0.025s">
-<div class="time" style="width: 83.333333333333%"></div>
+<div class="time" style="width: 86.206896551724%"></div>
 <pre>
     exists (whisker_l F (T : morphism (_ -&gt; _) _ _)^-1);
     abstract iso_whisker_t.</pre>
@@ -229,7 +229,7 @@ Time: 0.025s">
 <div class="code" title="File: Isomorphisms.v
 Line: 55
 Time: 0.002s">
-<div class="time" style="width: 6.6666666666667%"></div>
+<div class="time" style="width: 6.8965517241379%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -244,8 +244,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 59
-Time: 0.002s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.344827586207%"></div>
 <pre>Global Instance iso_whisker_r C D E
          (F F' : Functor D E)
          (T : NaturalTransformation F F')
@@ -262,8 +262,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 65
-Time: 0.021s">
-<div class="time" style="width: 70%"></div>
+Time: 0.019s">
+<div class="time" style="width: 65.51724137931%"></div>
 <pre>
     exists (whisker_r (T : morphism (_ -&gt; _) _ _)^-1 G);
     abstract iso_whisker_t.</pre>
@@ -271,7 +271,7 @@ Time: 0.021s">
 <div class="code" title="File: Isomorphisms.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 3.3333333333333%"></div>
+<div class="time" style="width: 3.448275862069%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -287,7 +287,7 @@ Time: 0s">
 <div class="code" title="File: Isomorphisms.v
 Line: 71
 Time: 0.002s">
-<div class="time" style="width: 6.6666666666667%"></div>
+<div class="time" style="width: 6.8965517241379%"></div>
 <pre>Definition idtoiso_components_of C D
              (F G : Functor C D)
              (T' : F = G)
@@ -304,8 +304,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 77
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.448275862069%"></div>
 <pre>
     destruct T'.</pre>
 </div>
@@ -318,8 +318,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 79
-Time: 0.001s">
-<div class="time" style="width: 3.3333333333333%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -334,8 +334,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 83
-Time: 0.003s">
-<div class="time" style="width: 10%"></div>
+Time: 0.004s">
+<div class="time" style="width: 13.793103448276%"></div>
 <pre>Definition idtoiso_compose C D
          (F F' F'' : Functor C D)
          (T' : F' = F'')
@@ -353,15 +353,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 90
-Time: 0.004s">
-<div class="time" style="width: 13.333333333333%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.344827586207%"></div>
 <pre>
     path_natural_transformation; path_induction; simpl; auto with morphism.</pre>
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 91
 Time: 0.002s">
-<div class="time" style="width: 6.6666666666667%"></div>
+<div class="time" style="width: 6.8965517241379%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -377,7 +377,7 @@ Time: 0s">
 <div class="code" title="File: Isomorphisms.v
 Line: 95
 Time: 0.003s">
-<div class="time" style="width: 10%"></div>
+<div class="time" style="width: 10.344827586207%"></div>
 <pre>Definition idtoiso_whisker_l C D E
          (F : Functor D E)
          (G G' : Functor C D)
@@ -394,15 +394,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 101
-Time: 0.002s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.344827586207%"></div>
 <pre>
     path_natural_transformation; path_induction; simpl; auto with functor.</pre>
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 102
 Time: 0.001s">
-<div class="time" style="width: 3.3333333333333%"></div>
+<div class="time" style="width: 3.448275862069%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -418,7 +418,7 @@ Time: 0s">
 <div class="code" title="File: Isomorphisms.v
 Line: 106
 Time: 0.004s">
-<div class="time" style="width: 13.333333333333%"></div>
+<div class="time" style="width: 13.793103448276%"></div>
 <pre>Definition idtoiso_whisker_r C D E
          (F F' : Functor D E)
          (T : F = F')
@@ -436,21 +436,21 @@ Time: 0s">
 <div class="code" title="File: Isomorphisms.v
 Line: 112
 Time: 0.002s">
-<div class="time" style="width: 6.6666666666667%"></div>
+<div class="time" style="width: 6.8965517241379%"></div>
 <pre>
     path_natural_transformation; path_induction; simpl; auto with functor.</pre>
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 113
-Time: 0.002s">
-<div class="time" style="width: 6.6666666666667%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.448275862069%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 114
-Time: 0.004s">
-<div class="time" style="width: 13.333333333333%"></div>
+Time: 0.005s">
+<div class="time" style="width: 17.241379310345%"></div>
 <pre>
 End composition.</pre>
 </div>
@@ -492,7 +492,7 @@ Time: 0s">
 <div class="code" title="File: Isomorphisms.v
 Line: 120
 Time: 0.003s">
-<div class="time" style="width: 10%"></div>
+<div class="time" style="width: 10.344827586207%"></div>
 <pre>
   Lemma path_components_of_isisomorphism
         `{IsIsomorphism C s d m}
@@ -530,7 +530,7 @@ Time: 0s">
 <div class="code" title="File: Isomorphisms.v
 Line: 128
 Time: 0.003s">
-<div class="time" style="width: 10%"></div>
+<div class="time" style="width: 10.344827586207%"></div>
 <pre>
 
   Lemma path_components_of_isisomorphism'
@@ -554,8 +554,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 135
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.448275862069%"></div>
 <pre>
     symmetry.</pre>
 </div>
@@ -575,8 +575,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Isomorphisms.v
 Line: 138
-Time: 0.005s">
-<div class="time" style="width: 16.666666666667%"></div>
+Time: 0.004s">
+<div class="time" style="width: 13.793103448276%"></div>
 <pre>
 
   Definition path_components_of_isomorphic
@@ -588,7 +588,7 @@ Time: 0.005s">
 <div class="code" title="File: Isomorphisms.v
 Line: 144
 Time: 0.004s">
-<div class="time" style="width: 13.333333333333%"></div>
+<div class="time" style="width: 13.793103448276%"></div>
 <pre>
 
   Definition path_components_of_isomorphic'
