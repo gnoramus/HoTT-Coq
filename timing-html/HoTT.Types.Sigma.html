@@ -39,8 +39,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 3
-Time: 0.025s">
-<div class="time" style="width: 89.285714285714%"></div>
+Time: 0.027s">
+<div class="time" style="width: 96.428571428571%"></div>
 <pre>Require Import HoTT.Basics.</pre>
 </div>
 <div class="code" title="File: Sigma.v
@@ -112,8 +112,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 26
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Definition eta_sigma `{P : A -&gt; Type} (u : sig P)
   : (u.1; u.2) = u
   := 1.</pre>
@@ -268,8 +268,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 79
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -357,8 +357,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 105
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.005s">
+<div class="time" style="width: 17.857142857143%"></div>
 <pre>Definition pr1_path_sigma_uncurried `{P : A -&gt; Type} {u v : sig P}
            (pq : { p : u.1 = v.1 &amp; p # u.2 = v.2 })
 : (path_sigma_uncurried _ _ _ pq)..1 = pq.1.</pre>
@@ -400,8 +400,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 112
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 
 Definition pr2_path_sigma_uncurried `{P : A -&gt; Type} {u v : sig P}
@@ -418,15 +418,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 118
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
   destruct u as [u1 u2]; destruct v as [v1 v2]; simpl in *.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 119
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   destruct pq as [p q].</pre>
 </div>
@@ -439,8 +439,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 121
-Time: 0.005s">
-<div class="time" style="width: 17.857142857143%"></div>
+Time: 0.006s">
+<div class="time" style="width: 21.428571428571%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -476,15 +476,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 128
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 129
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 
 Lemma transport_pr1_path_sigma_uncurried
@@ -503,8 +503,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 137
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
   destruct pq as [p q], u, v; simpl in *.</pre>
 </div>
@@ -605,8 +605,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 172
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Global Instance isequiv_path_sigma `{P : A -&gt; Type} {u v : sig P}
 : IsEquiv (path_sigma_uncurried P u v) | 0.</pre>
 </div>
@@ -630,8 +630,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 179
-Time: 0.024s">
-<div class="time" style="width: 85.714285714286%"></div>
+Time: 0.023s">
+<div class="time" style="width: 82.142857142857%"></div>
 <pre>
   all: destruct u, v; intros [p q].</pre>
 </div>
@@ -644,15 +644,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 181
-Time: 0.02s">
-<div class="time" style="width: 71.428571428571%"></div>
+Time: 0.021s">
+<div class="time" style="width: 75%"></div>
 <pre>
   all: destruct q, p; simpl in *.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 182
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   all: reflexivity.</pre>
 </div>
@@ -690,8 +690,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 191
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   apply (isequiv_adjointify (path_sigma_uncurried_contra P u v)
         (fun r =&gt; match r with idpath =&gt; (1; 1) end)).</pre>
@@ -705,8 +705,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 194
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre> by intro r; induction r; destruct u as [u1 u2]; reflexivity.</pre>
 </div>
 <div class="code" title="File: Sigma.v
@@ -731,8 +731,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 196
-Time: 0.015s">
-<div class="time" style="width: 53.571428571429%"></div>
+Time: 0.016s">
+<div class="time" style="width: 57.142857142857%"></div>
 <pre>
   destruct p; simpl in q.</pre>
 </div>
@@ -760,8 +760,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 201
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Definition equiv_path_sigma_contra {A : Type} `(P : A -&gt; Type) (u v : sig P)
   : {p : u.1 = v.1 &amp; u.2 = p^ # v.2} &lt;~&gt; (u = v)
   := Build_Equiv _ _ (path_sigma_uncurried_contra P u v) _.</pre>
@@ -778,8 +778,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 206
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>Definition path_sigma_pp_pp {A : Type} (P : A -&gt; Type) {u v w : sig P}
            (p1 : u.1 = v.1) (q1 : p1 # u.2 = v.2)
            (p2 : v.1 = w.1) (q2 : p2 # v.2 = w.2)
@@ -796,8 +796,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 212
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
   destruct u, v, w.</pre>
 </div>
@@ -809,8 +809,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 213
-Time: 0.004s">
-<div class="time" style="width: 14.285714285714%"></div>
+Time: 0.005s">
+<div class="time" style="width: 17.857142857143%"></div>
 <pre>
   destruct p1, p2, q1, q2.</pre>
 </div>
@@ -830,8 +830,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 216
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.005s">
+<div class="time" style="width: 17.857142857143%"></div>
 <pre>
 
 Definition path_sigma_pp_pp' {A : Type} (P : A -&gt; Type)
@@ -1021,8 +1021,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 271
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>Definition ap_path_sigma {A B} (P : A -&gt; Type) (F : forall a : A, P a -&gt; B)
            {x x' : A} {y : P x} {y' : P x'} (p : x = x') (q : p # y = y')
   : ap (fun w =&gt; F w.1 w.2) (path_sigma' P p q)
@@ -1038,8 +1038,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 276
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
   destruct p, q; reflexivity.</pre>
 </div>
@@ -1127,15 +1127,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 304
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
   destruct p.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 305
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre> destruct q.</pre>
 </div>
 <div class="code" title="File: Sigma.v
@@ -1146,8 +1146,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 305
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1164,8 +1164,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 311
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>Definition path_path_sigma_uncurried {A : Type} (P : A -&gt; Type) (u v : sig P)
            (p q : u = v)
            (rs : {r : p..1 = q..1 &amp; transport (fun x =&gt; transport P x u.2 = v.2) r p..2 = q..2})
@@ -1180,8 +1180,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 315
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
   destruct rs, p, u.</pre>
 </div>
@@ -1248,8 +1248,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 334
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>Definition transport_sigma {A : Type} {B : A -&gt; Type} {C : forall a:A, B a -&gt; Type}
            {x1 x2 : A} (p : x1 = x2) (yz : { y : B x1 &amp; C x1 y })
 : transport (fun x =&gt; { y : B x &amp; C x y }) p yz
@@ -1298,8 +1298,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 342
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Definition transport_sigma' {A B : Type} {C : A -&gt; B -&gt; Type}
            {x1 x2 : A} (p : x1 = x2) (yz : { y : B &amp; C x1 y })
 : transport (fun x =&gt; { y : B &amp; C x y }) p yz =
@@ -1437,22 +1437,22 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 377
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
   destruct p; simpl in q.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 378
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
   destruct q.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 379
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   reflexivity.</pre>
 </div>
@@ -1536,16 +1536,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 397
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
     refine ((ap_transport (eissect f x) (fun x' =&gt; (g x') ^-1)
                           (transport Q (eisretr f (f x)) ^ (g x y)))^ @ _).</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 399
-Time: 0.006s">
-<div class="time" style="width: 21.428571428571%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
     abstract (
         rewrite transport_compose, eisadj, transport_pV;
@@ -1561,8 +1561,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 404
-Time: 0.004s">
-<div class="time" style="width: 14.285714285714%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
 
 Definition equiv_functor_sigma `{P : A -&gt; Type} `{Q : B -&gt; Type}
@@ -1597,8 +1597,8 @@ Definition equiv_functor_sigma_id `{P : A -&gt; Type} `{Q : A -&gt; Type}
 </div>
 <div class="code" title="File: Sigma.v
 Line: 422
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
 
 Definition equiv_functor_sigma_pb {A B : Type} {Q : B -&gt; Type}
@@ -1716,8 +1716,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 449
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   refine (equiv_adjointify (fun xp =&gt; (contr xp.1)^ # xp.2)
                            (fun p =&gt; (center A ; p)) _ _).</pre>
@@ -1737,8 +1737,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 452
-Time: 0.008s">
-<div class="time" style="width: 28.571428571429%"></div>
+Time: 0.011s">
+<div class="time" style="width: 39.285714285714%"></div>
 <pre>
     exact (ap (fun q =&gt; q # p) (path_contr _ 1)).</pre>
 </div>
@@ -1805,15 +1805,15 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 465
-Time: 0.005s">
-<div class="time" style="width: 17.857142857143%"></div>
+Time: 0.006s">
+<div class="time" style="width: 21.428571428571%"></div>
 <pre>
   make_equiv.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 466
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -1835,8 +1835,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 471
-Time: 0.005s">
-<div class="time" style="width: 17.857142857143%"></div>
+Time: 0.006s">
+<div class="time" style="width: 21.428571428571%"></div>
 <pre>
   make_equiv.</pre>
 </div>
@@ -1865,8 +1865,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 477
-Time: 0.005s">
-<div class="time" style="width: 17.857142857143%"></div>
+Time: 0.006s">
+<div class="time" style="width: 21.428571428571%"></div>
 <pre>
   make_equiv.</pre>
 </div>
@@ -1933,8 +1933,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 490
-Time: 0.004s">
-<div class="time" style="width: 14.285714285714%"></div>
+Time: 0.007s">
+<div class="time" style="width: 25%"></div>
 <pre>
   make_equiv.</pre>
 </div>
@@ -1987,8 +1987,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 502
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>Global Instance isequiv_sig_ind `{P : A -&gt; Type}
          (Q : sig P -&gt; Type)
 : IsEquiv (sig_ind Q) | 0
@@ -2021,8 +2021,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 518
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>Definition equiv_sig_ind' `{P : A -&gt; Type}
            (Q : forall a, P a -&gt; Type)
 : (forall (x:A) (y:P x), Q x y) &lt;~&gt; (forall xy, Q xy.1 xy.2)
@@ -2062,8 +2062,8 @@ Definition sig_coind
 </div>
 <div class="code" title="File: Sigma.v
 Line: 534
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.004s">
+<div class="time" style="width: 14.285714285714%"></div>
 <pre>
 
 Global Instance isequiv_sig_coind
@@ -2191,8 +2191,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 566
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2269,8 +2269,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 584
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
 
 Global Instance isequiv_path_sigma_hprop {A P} `{forall x : A, IsHProp (P x)} {u v : sig P}
@@ -2288,8 +2288,8 @@ Hint Immediate isequiv_path_sigma_hprop : typeclass_instances.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 591
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
 
 Definition equiv_path_sigma_hprop {A : Type} {P : A -&gt; Type}
@@ -2299,8 +2299,8 @@ Definition equiv_path_sigma_hprop {A : Type} {P : A -&gt; Type}
 </div>
 <div class="code" title="File: Sigma.v
 Line: 596
-Time: 0.008s">
-<div class="time" style="width: 28.571428571429%"></div>
+Time: 0.009s">
+<div class="time" style="width: 32.142857142857%"></div>
 <pre>
 
 Definition isequiv_pr1_path_hprop {A} {P : A -&gt; Type}
@@ -2384,8 +2384,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 621
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>refine (ap (fun p =&gt; match p in (_ = v2) return (u = (u.1; v2)) with 1 =&gt; 1 end)
              (contr (idpath u.2))).</pre>
 </div>
@@ -2430,15 +2430,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 631
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   refine (path_sigma_hprop_1 _ @ (ap inverse (path_sigma_hprop_1 _))^).</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 632
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -2503,8 +2503,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 650
-Time: 0.001s">
-<div class="time" style="width: 3.5714285714286%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.1428571428571%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -2518,8 +2518,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 653
-Time: 0.006s">
-<div class="time" style="width: 21.428571428571%"></div>
+Time: 0.007s">
+<div class="time" style="width: 25%"></div>
 <pre>Definition path_sigma_hprop_ap_pr1 {A : Type} {P : A -&gt; Type}
            `{forall x, IsHProp (P x)} (u v : sig P) (p : u = v)
 : path_sigma_hprop u v (ap pr1 p) = p
@@ -2527,8 +2527,8 @@ Time: 0.006s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 656
-Time: 0.006s">
-<div class="time" style="width: 21.428571428571%"></div>
+Time: 0.007s">
+<div class="time" style="width: 25%"></div>
 <pre>
 Definition path_sigma_hprop_pr1_path {A : Type} {P : A -&gt; Type}
            `{forall x, IsHProp (P x)} (u v : sig P) (p : u = v)
@@ -2547,8 +2547,8 @@ Definition ap_pr1_path_sigma_hprop {A : Type} {P : A -&gt; Type}
 </div>
 <div class="code" title="File: Sigma.v
 Line: 664
-Time: 0.003s">
-<div class="time" style="width: 10.714285714286%"></div>
+Time: 0.007s">
+<div class="time" style="width: 25%"></div>
 <pre>
 Definition pr1_path_path_sigma_hprop {A : Type} {P : A -&gt; Type}
            `{forall x, IsHProp (P x)} (u v : sig P) (p : u.1 = v.1)
@@ -2596,8 +2596,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 677
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   2:intros; symmetry; apply equiv_path_sigma.</pre>
 </div>
@@ -2610,15 +2610,15 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 679
-Time: 0.014s">
-<div class="time" style="width: 50%"></div>
+Time: 0.017s">
+<div class="time" style="width: 60.714285714286%"></div>
 <pre>
   1:make_equiv.</pre>
 </div>
 <div class="code" title="File: Sigma.v
 Line: 680
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.5714285714286%"></div>
 <pre>
   apply equiv_functor_sigma_id; intros [a p]; simpl.</pre>
 </div>
@@ -2638,8 +2638,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 683
-Time: 0.009s">
-<div class="time" style="width: 32.142857142857%"></div>
+Time: 0.01s">
+<div class="time" style="width: 35.714285714286%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -2670,8 +2670,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 691
-Time: 0.015s">
-<div class="time" style="width: 53.571428571429%"></div>
+Time: 0.016s">
+<div class="time" style="width: 57.142857142857%"></div>
 <pre>
   exact (trunc_equiv _ (hfiber_functor_sigma _ _ _ _ _ _)^-1).</pre>
 </div>
@@ -2716,8 +2716,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sigma.v
 Line: 701
-Time: 0.002s">
-<div class="time" style="width: 7.1428571428571%"></div>
+Time: 0.003s">
+<div class="time" style="width: 10.714285714286%"></div>
 <pre>
   exact (equiv_contr_sigma
            (fun (w:hfiber idmap b) =&gt; hfiber (g w.1) (transport Q (w.2)^ v))).</pre>
