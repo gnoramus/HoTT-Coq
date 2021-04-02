@@ -39,14 +39,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: TruncType.v
 Line: 3
-Time: 0.042s">
-<div class="time" style="width: 21.761658031088%"></div>
+Time: 0.047s">
+<div class="time" style="width: 28.14371257485%"></div>
 <pre>Require Import HoTT.Basics HoTT.Types.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 3
 Time: 0.002s">
-<div class="time" style="width: 1.0362694300518%"></div>
+<div class="time" style="width: 1.1976047904192%"></div>
 <pre>
 Require Import HProp.</pre>
 </div>
@@ -105,7 +105,7 @@ Proof.</pre>
 <div class="code" title="File: TruncType.v
 Line: 19
 Time: 0.007s">
-<div class="time" style="width: 3.6269430051813%"></div>
+<div class="time" style="width: 4.1916167664671%"></div>
 <pre>
   issig.</pre>
 </div>
@@ -142,8 +142,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: TruncType.v
 Line: 27
-Time: 0.011s">
-<div class="time" style="width: 5.699481865285%"></div>
+Time: 0.015s">
+<div class="time" style="width: 8.9820359281437%"></div>
 <pre>transparent assert (e : ((A = B :&gt; Type) &lt;~&gt; (A = B :&gt; n-Type))).</pre>
 </div>
 <div class="code" title="File: TruncType.v
@@ -156,7 +156,7 @@ Time: 0s">
 <div class="code" title="File: TruncType.v
 Line: 28
 Time: 0.002s">
-<div class="time" style="width: 1.0362694300518%"></div>
+<div class="time" style="width: 1.1976047904192%"></div>
 <pre> equiv_via ((issig_trunctype ^-1 A) = (issig_trunctype ^-1 B)).</pre>
 </div>
 <div class="code" title="File: TruncType.v
@@ -174,8 +174,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: TruncType.v
 Line: 29
-Time: 0.002s">
-<div class="time" style="width: 1.0362694300518%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.3952095808383%"></div>
 <pre> apply (equiv_path_sigma_hprop
                       (trunctype_type A; istrunc_trunctype_type A)
                       (trunctype_type B; istrunc_trunctype_type B)).</pre>
@@ -221,21 +221,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: TruncType.v
 Line: 34
-Time: 0.022s">
-<div class="time" style="width: 11.39896373057%"></div>
+Time: 0.024s">
+<div class="time" style="width: 14.37125748503%"></div>
 <pre>refine (isequiv_homotopic e^-1%equiv _).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 34
-Time: 0.003s">
-<div class="time" style="width: 1.5544041450777%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.1976047904192%"></div>
 <pre>
   intros p; destruct p; reflexivity.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 35
 Time: 0.002s">
-<div class="time" style="width: 1.0362694300518%"></div>
+<div class="time" style="width: 1.1976047904192%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -257,8 +257,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 40
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   exact ((Build_Equiv _ _ (@ap _ _ (@trunctype_type n) A B) _)^-1)%equiv.</pre>
 </div>
@@ -314,8 +314,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: TruncType.v
 Line: 49
-Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> exact ((Build_Equiv _ _ (@ap _ _ (@trunctype_type n) A B) _)^-1)%equiv.</pre>
 </div>
 <div class="code" title="File: TruncType.v
@@ -390,22 +390,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 65
-Time: 0.059s">
-<div class="time" style="width: 30.569948186528%"></div>
+Time: 0.056s">
+<div class="time" style="width: 33.532934131737%"></div>
 <pre>
   unfold path_trunctype; simpl.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 66
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   rewrite (eta_path_universe_uncurried 1).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   rewrite path_sigma_hprop_1.</pre>
 </div>
@@ -419,14 +419,14 @@ Time: 0s">
 <div class="code" title="File: TruncType.v
 Line: 69
 Time: 0.002s">
-<div class="time" style="width: 1.0362694300518%"></div>
+<div class="time" style="width: 1.1976047904192%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 70
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
 
 Definition path_trunctype_V {n : trunc_index} {A B : TruncType n}
@@ -442,22 +442,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 75
-Time: 0.129s">
-<div class="time" style="width: 66.839378238342%"></div>
+Time: 0.119s">
+<div class="time" style="width: 71.25748502994%"></div>
 <pre>
   unfold path_trunctype; simpl.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 76
 Time: 0.002s">
-<div class="time" style="width: 1.0362694300518%"></div>
+<div class="time" style="width: 1.1976047904192%"></div>
 <pre>
   rewrite path_universe_V_uncurried.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 77
 Time: 0.003s">
-<div class="time" style="width: 1.5544041450777%"></div>
+<div class="time" style="width: 1.7964071856287%"></div>
 <pre>
   rewrite (path_sigma_hprop_V (path_universe_uncurried f)).</pre>
 </div>
@@ -470,29 +470,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: TruncType.v
 Line: 79
-Time: 0.002s">
-<div class="time" style="width: 1.0362694300518%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   refine (_ @ (ap inverse (concat_1p _))^ @ (ap inverse (concat_p1 _))^).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 80
-Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   refine (ap_V _ _).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 81
 Time: 0.01s">
-<div class="time" style="width: 5.1813471502591%"></div>
+<div class="time" style="width: 5.9880239520958%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 82
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
 
 Definition path_trunctype_pp {n : trunc_index} {A B C : TruncType n}
@@ -508,57 +508,57 @@ Proof.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 87
-Time: 0.152s">
-<div class="time" style="width: 78.756476683938%"></div>
+Time: 0.15s">
+<div class="time" style="width: 89.820359281437%"></div>
 <pre>
   unfold path_trunctype; simpl.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 88
 Time: 0.004s">
-<div class="time" style="width: 2.0725388601036%"></div>
+<div class="time" style="width: 2.3952095808383%"></div>
 <pre>
   rewrite path_universe_compose_uncurried.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 89
-Time: 0.004s">
-<div class="time" style="width: 2.0725388601036%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.7964071856287%"></div>
 <pre>
   rewrite (path_sigma_hprop_pp _ _ _ (istrunc_trunctype_type B)).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 90
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   refine (concat_p1 _ @ concat_1p _ @ _).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 91
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   refine (_ @ (ap _ (concat_1p _))^ @ (ap _ (concat_p1 _))^).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 92
 Time: 0.003s">
-<div class="time" style="width: 1.5544041450777%"></div>
+<div class="time" style="width: 1.7964071856287%"></div>
 <pre>
   refine (_ @ (ap (fun z =&gt; z @ _) (concat_1p _))^ @ (ap (fun z =&gt; z @ _) (concat_p1 _))^).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 93
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   refine (ap_pp _ _ _).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 94
-Time: 0.025s">
-<div class="time" style="width: 12.953367875648%"></div>
+Time: 0.024s">
+<div class="time" style="width: 14.37125748503%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -581,49 +581,49 @@ Proof.</pre>
 <div class="code" title="File: TruncType.v
 Line: 99
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   destruct A, B.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 100
 Time: 0.07s">
-<div class="time" style="width: 36.269430051813%"></div>
+<div class="time" style="width: 41.916167664671%"></div>
 <pre>
   cbn in *.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 101
-Time: 0.018s">
-<div class="time" style="width: 9.3264248704663%"></div>
+Time: 0.017s">
+<div class="time" style="width: 10.179640718563%"></div>
 <pre>
   cbn; destruct (path_universe_uncurried f).</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 102
 Time: 0.002s">
-<div class="time" style="width: 1.0362694300518%"></div>
+<div class="time" style="width: 1.1976047904192%"></div>
 <pre>
   rewrite concat_1p, concat_p1.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 103
 Time: 0.009s">
-<div class="time" style="width: 4.6632124352332%"></div>
+<div class="time" style="width: 5.3892215568862%"></div>
 <pre>
   rewrite &lt;- 2 ap_compose.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 104
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   apply ap_const.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 105
-Time: 0.015s">
-<div class="time" style="width: 7.7720207253886%"></div>
+Time: 0.014s">
+<div class="time" style="width: 8.3832335329341%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -668,7 +668,7 @@ Time: 0s">
 <div class="code" title="File: TruncType.v
 Line: 114
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   refine (trunc_equiv _ (equiv_path_trunctype@{i j k} A B)).</pre>
 </div>
@@ -714,7 +714,7 @@ Time: 0s">
 <div class="code" title="File: TruncType.v
 Line: 118
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -809,7 +809,7 @@ Definition False_hp : hProp := (BuildhProp Empty).</pre>
 <div class="code" title="File: TruncType.v
 Line: 134
 Time: 0.003s">
-<div class="time" style="width: 1.5544041450777%"></div>
+<div class="time" style="width: 1.7964071856287%"></div>
 <pre>
 Definition Negation_hp `{Funext} (hprop : hProp) : hProp := BuildhProp (~hprop).</pre>
 </div>
@@ -869,8 +869,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: TruncType.v
 Line: 146
-Time: 0.008s">
-<div class="time" style="width: 4.1450777202073%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
   apply (equiv_inj (equiv_path X Y)).</pre>
 </div>
@@ -898,7 +898,7 @@ Qed.</pre>
 <div class="code" title="File: TruncType.v
 Line: 150
 Time: 0.001s">
-<div class="time" style="width: 0.51813471502591%"></div>
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
 
 Definition path_iff_ishprop_uncurried `{IsHProp A, IsHProp B}
@@ -907,8 +907,8 @@ Definition path_iff_ishprop_uncurried `{IsHProp A, IsHProp B}
 </div>
 <div class="code" title="File: TruncType.v
 Line: 154
-Time: 0.003s">
-<div class="time" style="width: 1.5544041450777%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.1976047904192%"></div>
 <pre>
 
 Definition path_iff_hprop_uncurried {A B : hProp}
@@ -933,8 +933,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 162
-Time: 0.017s">
-<div class="time" style="width: 8.8082901554404%"></div>
+Time: 0.015s">
+<div class="time" style="width: 8.9820359281437%"></div>
 <pre>
   exact _.</pre>
 </div>
@@ -963,7 +963,7 @@ Proof.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 168
-Time: 0.193s">
+Time: 0.167s">
 <div class="time" style="width: 100%"></div>
 <pre>
   exact _.</pre>
@@ -977,8 +977,8 @@ Defined.</pre>
 </div>
 <div class="code" title="File: TruncType.v
 Line: 170
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.59880239520958%"></div>
 <pre>
 
 Definition path_iff_ishprop `{IsHProp A, IsHProp B}
@@ -998,7 +998,7 @@ Definition path_iff_hprop {A B : hProp}
 <div class="code" title="File: TruncType.v
 Line: 178
 Time: 0.004s">
-<div class="time" style="width: 2.0725388601036%"></div>
+<div class="time" style="width: 2.3952095808383%"></div>
 <pre>
 
 End TruncType.</pre>

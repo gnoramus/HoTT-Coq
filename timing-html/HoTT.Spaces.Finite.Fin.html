@@ -36,35 +36,35 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 1
-Time: 0.033s">
-<div class="time" style="width: 5.045871559633%"></div>
+Time: 0.027s">
+<div class="time" style="width: 4.3760129659643%"></div>
 <pre>Require Import Basics.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 1
-Time: 0.016s">
-<div class="time" style="width: 2.4464831804281%"></div>
+Time: 0.015s">
+<div class="time" style="width: 2.4311183144246%"></div>
 <pre>
 Require Import Types.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 2
-Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import HSet.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 3
-Time: 0.06s">
-<div class="time" style="width: 9.1743119266055%"></div>
+Time: 0.053s">
+<div class="time" style="width: 8.5899513776337%"></div>
 <pre>
 Require Import DProp.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 4
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre>
 Require Import Spaces.Nat.</pre>
 </div>
@@ -116,8 +116,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 20
-Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Fixpoint fin_to_nat {n} : Fin n -&gt; nat
@@ -149,8 +149,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 35
-Time: 0.012s">
-<div class="time" style="width: 1.8348623853211%"></div>
+Time: 0.011s">
+<div class="time" style="width: 1.7828200972447%"></div>
 <pre>
   destruct n as [|n]; try exact _.</pre>
 </div>
@@ -186,8 +186,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 42
-Time: 0.017s">
-<div class="time" style="width: 2.5993883792049%"></div>
+Time: 0.016s">
+<div class="time" style="width: 2.5931928687196%"></div>
 <pre>
   induction n as [|n IHn]; simpl; exact _.</pre>
 </div>
@@ -273,8 +273,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 57
-Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Fixpoint fin_zero {n : nat} : Fin n.+1 :=
   match n with
   | O =&gt; inr tt
@@ -320,7 +320,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 67
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>Fixpoint fsucc {n : nat} : Fin n -&gt; Fin n.+1 :=
   match n with
   | O =&gt; Empty_rec
@@ -356,7 +356,7 @@ Proof.</pre>
 <div class="code" title="File: Fin.v
 Line: 79
 Time: 0.011s">
-<div class="time" style="width: 1.6819571865443%"></div>
+<div class="time" style="width: 1.7828200972447%"></div>
 <pre>
   apply isembedding_isinj_hset.</pre>
 </div>
@@ -396,7 +396,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 83
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> intros [] []; intro p.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -408,8 +408,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 84
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> f_ap.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -440,13 +440,13 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 85
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre> destruct u.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 85
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> elim (inl_ne_inr _ _ p).</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -464,8 +464,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 86
-Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> elim (inr_ne_inl _ _ p).</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -478,13 +478,13 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 87
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> destruct u, u0; reflexivity.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 87
 Time: 0.004s">
-<div class="time" style="width: 0.61162079510703%"></div>
+<div class="time" style="width: 0.6482982171799%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -590,8 +590,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 104
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> intros [k'|[]].</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -604,7 +604,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 105
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> rewrite path_fin_fsucc_incl, path_nat_fin_incl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -630,7 +630,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 107
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -735,7 +735,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 127
 Time: 0.003s">
-<div class="time" style="width: 0.45871559633028%"></div>
+<div class="time" style="width: 0.48622366288493%"></div>
 <pre>Definition fin_transpose_last_two (n : nat)
 : Fin n.+2 &lt;~&gt; Fin n.+2
   := ((equiv_sum_assoc _ _ _)^-1)
@@ -753,7 +753,7 @@ Arguments fin_transpose_last_two : simpl nomatch.</pre>
 <div class="code" title="File: Fin.v
 Line: 133
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
 
 Definition fin_transpose_last_two_last (n : nat)
@@ -762,8 +762,8 @@ Definition fin_transpose_last_two_last (n : nat)
 </div>
 <div class="code" title="File: Fin.v
 Line: 137
-Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
 
 Definition fin_transpose_last_two_nextlast (n : nat)
@@ -772,8 +772,8 @@ Definition fin_transpose_last_two_nextlast (n : nat)
 </div>
 <div class="code" title="File: Fin.v
 Line: 141
-Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre>
 
 Definition fin_transpose_last_two_rest (n : nat) (k : Fin n)
@@ -900,8 +900,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 160
-Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -931,8 +931,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 167
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
   destruct k as [k|].</pre>
 </div>
@@ -945,8 +945,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 169
-Time: 0.004s">
-<div class="time" style="width: 0.61162079510703%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> induction n as [|n IH]; simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -971,8 +971,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 171
-Time: 0.004s">
-<div class="time" style="width: 0.61162079510703%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> destruct k as [k|].</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -984,14 +984,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 172
-Time: 0.296s">
-<div class="time" style="width: 45.25993883792%"></div>
+Time: 0.267s">
+<div class="time" style="width: 43.273905996759%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 172
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre> rewrite IH; reflexivity.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1003,8 +1003,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 173
-Time: 0.04s">
-<div class="time" style="width: 6.1162079510703%"></div>
+Time: 0.035s">
+<div class="time" style="width: 5.6726094003242%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1030,7 +1030,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 175
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>destruct n; simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1043,7 +1043,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 176
 Time: 0.004s">
-<div class="time" style="width: 0.61162079510703%"></div>
+<div class="time" style="width: 0.6482982171799%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1080,7 +1080,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 183
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> induction n as [|n IH]; simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1105,8 +1105,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 185
-Time: 0.27s">
-<div class="time" style="width: 41.284403669725%"></div>
+Time: 0.255s">
+<div class="time" style="width: 41.329011345219%"></div>
 <pre> destruct k as [|k]; simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1119,7 +1119,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 186
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre> rewrite IH; reflexivity.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1144,8 +1144,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 188
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> destruct n; simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1158,7 +1158,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 189
 Time: 0.005s">
-<div class="time" style="width: 0.76452599388379%"></div>
+<div class="time" style="width: 0.81037277147488%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1197,7 +1197,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 198
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> induction n as [|n IH]; simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1209,7 +1209,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 199
-Time: 0.654s">
+Time: 0.617s">
 <div class="time" style="width: 100%"></div>
 <pre>
     destruct k as [k|]; simpl.</pre>
@@ -1223,8 +1223,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 201
-Time: 0.005s">
-<div class="time" style="width: 0.76452599388379%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.6482982171799%"></div>
 <pre> destruct l as [l|]; simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1236,8 +1236,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 202
-Time: 0.008s">
-<div class="time" style="width: 1.2232415902141%"></div>
+Time: 0.006s">
+<div class="time" style="width: 0.97244732576985%"></div>
 <pre> rewrite IH.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1295,7 +1295,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 206
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre> destruct l as [l|]; simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1321,7 +1321,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 208
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> elim (notk (ap inl (ap inr (path_unit _ _)))).</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1345,8 +1345,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 209
-Time: 0.016s">
-<div class="time" style="width: 2.4464831804281%"></div>
+Time: 0.015s">
+<div class="time" style="width: 2.4311183144246%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1405,8 +1405,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 221
-Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   destruct l as [l|[]].</pre>
 </div>
@@ -1433,7 +1433,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 224
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> destruct (dec_paths k l) as [p|p].</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1473,7 +1473,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 228
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> rewrite fin_transpose_last_with_rest;
           try apply fin_transpose_last_with_rest;
           exact (fun q =&gt; p (path_sum_inl _ q)).</pre>
@@ -1527,7 +1527,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 234
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -1546,7 +1546,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 241
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>Definition fin_equiv (n m : nat)
            (k : Fin m.+1) (e : Fin n &lt;~&gt; Fin m)
 : Fin n.+1 &lt;~&gt; Fin m.+1
@@ -1579,8 +1579,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 251
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>Definition fin_equiv_hfiber (n m : nat) (e : Fin n.+1 &lt;~&gt; Fin m.+1)
 : { kf : (Fin m.+1) * (Fin n &lt;~&gt; Fin m) &amp; fin_equiv' n m kf == e }.</pre>
 </div>
@@ -1615,7 +1615,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 256
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
   assert (p' := (moveL_equiv_V _ _ p)^).</pre>
 </div>
@@ -1629,7 +1629,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 258
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
   destruct y as [y|[]].</pre>
 </div>
@@ -1670,7 +1670,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 263
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre>
       assert (q : inl y &lt;&gt; e (inl a))
         by exact (fun z =&gt; inl_ne_inr _ _ (equiv_inj e (z^ @ p^))).</pre>
@@ -1685,7 +1685,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 266
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
       destruct z as [z|[]].</pre>
 </div>
@@ -1712,8 +1712,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 270
-Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> rewrite fin_transpose_last_with_last; exact tt.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1771,19 +1771,19 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 274
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> unfold fst, snd; ev_equiv.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 274
-Time: 0.056s">
-<div class="time" style="width: 8.5626911314985%"></div>
+Time: 0.045s">
+<div class="time" style="width: 7.2933549432739%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 274
-Time: 0.055s">
-<div class="time" style="width: 8.4097859327217%"></div>
+Time: 0.051s">
+<div class="time" style="width: 8.2658022690438%"></div>
 <pre>
     destruct x as [x|[]]; simpl.</pre>
 </div>
@@ -1797,7 +1797,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 276
 Time: 0.004s">
-<div class="time" style="width: 0.61162079510703%"></div>
+<div class="time" style="width: 0.6482982171799%"></div>
 <pre> rewrite unfunctor_sum_l_beta.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -1849,7 +1849,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 280
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
       destruct (is_inl_or_is_inr (e (inl a))) as [l|r].</pre>
 </div>
@@ -1882,14 +1882,14 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 283
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
         apply moveR_equiv_V in q.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 284
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
         assert (s := q^ @ ap (e^-1 o inr) (path_unit _ _) @ p').</pre>
 </div>
@@ -1941,13 +1941,13 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 288
 Time: 0.004s">
-<div class="time" style="width: 0.61162079510703%"></div>
+<div class="time" style="width: 0.6482982171799%"></div>
 <pre> simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 288
 Time: 0.005s">
-<div class="time" style="width: 0.76452599388379%"></div>
+<div class="time" style="width: 0.81037277147488%"></div>
 <pre>
     destruct x as [a|[]].</pre>
 </div>
@@ -1961,7 +1961,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 290
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre> rewrite fin_transpose_last_with_last_other.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -2000,8 +2000,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 294
-Time: 0.042s">
-<div class="time" style="width: 6.4220183486239%"></div>
+Time: 0.041s">
+<div class="time" style="width: 6.645056726094%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -2018,7 +2018,7 @@ Definition fin_equiv_inv (n m : nat) (e : Fin n.+1 &lt;~&gt; Fin m.+1)
 <div class="code" title="File: Fin.v
 Line: 299
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
 
 Definition fin_equiv_issect (n m : nat) (e : Fin n.+1 &lt;~&gt; Fin m.+1)
@@ -2052,7 +2052,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 309
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre>
   refine (_ @ p (inr tt) @ _); simpl;
   rewrite fin_transpose_last_with_last; reflexivity.</pre>
@@ -2060,14 +2060,14 @@ Time: 0.002s">
 <div class="code" title="File: Fin.v
 Line: 311
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 312
-Time: 0.003s">
-<div class="time" style="width: 0.45871559633028%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
 
 Definition fin_equiv_inj_snd (n m : nat)
@@ -2104,7 +2104,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 319
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
   rewrite !fin_transpose_last_with_last in q.</pre>
 </div>
@@ -2117,8 +2117,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 321
-Time: 0.007s">
-<div class="time" style="width: 1.0703363914373%"></div>
+Time: 0.005s">
+<div class="time" style="width: 0.81037277147488%"></div>
 <pre>
   exact (path_sum_inl _
            (equiv_inj (fin_transpose_last_with m k) (p (inl x)))).</pre>
@@ -2126,7 +2126,7 @@ Time: 0.007s">
 <div class="code" title="File: Fin.v
 Line: 323
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -2189,7 +2189,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 332
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> intros [k e] [l f]; simpl.</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -2201,8 +2201,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 333
-Time: 0.016s">
-<div class="time" style="width: 2.4464831804281%"></div>
+Time: 0.017s">
+<div class="time" style="width: 2.7552674230146%"></div>
 <pre>
     intros p; refine (_ ; path_ishprop _ _).</pre>
 </div>
@@ -2263,14 +2263,14 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 340
 Time: 0.007s">
-<div class="time" style="width: 1.0703363914373%"></div>
+<div class="time" style="width: 1.1345218800648%"></div>
 <pre>
 Qed.</pre>
 </div>
 <div class="code" title="File: Fin.v
 Line: 341
-Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+Time: 0.002s">
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre>
 
 Definition equiv_fin_equiv `{Funext} (n m : nat)
@@ -2328,8 +2328,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Fin.v
 Line: 352
-Time: 0.007s">
-<div class="time" style="width: 1.0703363914373%"></div>
+Time: 0.004s">
+<div class="time" style="width: 0.6482982171799%"></div>
 <pre> elim (e^-1 (inr tt)).</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -2651,7 +2651,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 391
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -2816,7 +2816,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 418
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre> destruct (dec (f (fin_incl fin_last))) as [prev_true|prev_false].</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -2848,7 +2848,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 420
 Time: 0.001s">
-<div class="time" style="width: 0.15290519877676%"></div>
+<div class="time" style="width: 0.16207455429498%"></div>
 <pre> destruct (sperners_lemma_1d _ (f o fin_incl) left_true prev_false) as [k' [fleft fright]].</pre>
 </div>
 <div class="code" title="File: Fin.v
@@ -2868,7 +2868,7 @@ Time: 0s">
 <div class="code" title="File: Fin.v
 Line: 422
 Time: 0.002s">
-<div class="time" style="width: 0.30581039755352%"></div>
+<div class="time" style="width: 0.32414910858995%"></div>
 <pre>
 Defined.</pre>
 </div>

@@ -30,8 +30,8 @@ pre {
 
 <div class="code" title="File: Tactics.v
 Line: 1
-Time: 0.014s">
-<div class="time" style="width: 25.454545454545%"></div>
+Time: 0.013s">
+<div class="time" style="width: 25.490196078431%"></div>
 <pre>Require Import Basics.Overture.</pre>
 </div>
 <div class="code" title="File: Tactics.v
@@ -136,12 +136,11 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac destruct_one_pair :=
  match goal with
-   | [H : conj _ _ |- _] =&gt; destruct H
    | [H : prod _ _ |- _] =&gt; destruct H
  end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 43
+Line: 42
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -151,13 +150,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 46
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac destruct_pairs := repeat (destruct_one_pair).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 46
+Line: 45
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -167,24 +166,17 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 49
+Line: 48
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac destruct_one_ex :=
-  let tac H := let ph := fresh "H" in (destruct H as [H ph]) in
-  let tac2 H := let ph := fresh "H" in let ph' := fresh "H" in
-    (destruct H as [H ph ph'])
-  in
   let tacT H := let ph := fresh "X" in (destruct H as [H ph]) in
-  let tacT2 H := let ph := fresh "X" in let ph' := fresh "X" in
-    (destruct H as [H ph ph'])
-  in
     match goal with
       | [H : (sig ?P) |- _ ] =&gt; tacT H
     end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 60
+Line: 52
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -194,13 +186,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 63
-Time: 0.001s">
-<div class="time" style="width: 1.8181818181818%"></div>
+Line: 55
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Ltac destruct_exists := repeat (destruct_one_ex).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 63
+Line: 55
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -210,13 +202,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 66
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac destruct_conjs := repeat (destruct_one_pair || destruct_one_ex).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 66
+Line: 58
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -227,13 +219,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 70
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "destruct" "exist" ident(t) ident(Ht) := destruct t as [t Ht].</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 70
+Line: 62
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -243,13 +235,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 73
+Line: 65
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "destruct" "or" ident(H) := destruct H as [H|H].</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 73
+Line: 65
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -259,7 +251,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 76
+Line: 68
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac discriminates :=
@@ -269,7 +261,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 80
+Line: 72
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -279,7 +271,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 83
+Line: 75
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac revert_last :=
@@ -288,7 +280,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 86
+Line: 78
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -298,13 +290,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 89
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac reverse := repeat revert_last.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 89
+Line: 81
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -314,7 +306,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 92
+Line: 84
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac revert_until id :=
@@ -325,7 +317,7 @@ Time: 0s">
     end).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 97
+Line: 89
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -335,7 +327,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 100
+Line: 92
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac clear_dup :=
@@ -351,7 +343,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 110
+Line: 102
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -359,7 +351,7 @@ Time: 0s">
 Ltac clear_dups := repeat clear_dup.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 112
+Line: 104
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -369,7 +361,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 115
+Line: 107
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac clear_except hyp :=
@@ -381,7 +373,7 @@ Time: 0s">
          end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 121
+Line: 113
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -391,13 +383,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 124
+Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac subst_no_fail := idtac.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 124
+Line: 116
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -408,13 +400,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 128
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "subst" "*" := subst_no_fail.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 128
+Line: 120
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -433,7 +425,7 @@ Ltac on_application f tac T :=
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 141
+Line: 133
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -443,7 +435,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 144
+Line: 136
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac on_call f tac :=
@@ -453,7 +445,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 148
+Line: 140
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -463,14 +455,14 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 151
+Line: 143
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac destruct_call f :=
   let tac t := (destruct t) in on_call f tac.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 152
+Line: 144
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -478,7 +470,7 @@ Time: 0s">
 Ltac destruct_calls f := repeat destruct_call f.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 154
+Line: 146
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -489,7 +481,7 @@ Ltac destruct_call_in f H :=
     on_application f tac T.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 159
+Line: 151
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -498,7 +490,7 @@ Ltac destruct_call_as f l :=
   let tac t := (destruct t as l) in on_call f tac.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 162
+Line: 154
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -509,7 +501,7 @@ Ltac destruct_call_as_in f l H :=
     on_application f tac T.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 167
+Line: 159
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -517,7 +509,7 @@ Time: 0s">
 Tactic Notation "destruct_call" constr(f) := destruct_call f.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 169
+Line: 161
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -527,14 +519,14 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 172
+Line: 164
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "destruct_call" constr(f) "as" simple_intropattern(l) :=
   destruct_call_as f l.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 173
+Line: 165
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -544,14 +536,14 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 176
+Line: 168
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "destruct_call" constr(f) "in" hyp(id) :=
   destruct_call_in f id.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 177
+Line: 169
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -560,7 +552,7 @@ Tactic Notation "destruct_call" constr(f) "as" simple_intropattern(l) "in" hyp(i
   destruct_call_as_in f l id.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 180
+Line: 172
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -570,13 +562,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 183
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition fix_proto {A : Type} (a : A) := a.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 183
+Line: 175
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -587,7 +579,7 @@ Ltac destruct_rec_calls :=
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 188
+Line: 180
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -596,7 +588,7 @@ Ltac destruct_all_rec_calls :=
   repeat destruct_rec_calls ; unfold fix_proto in *.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 191
+Line: 183
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -606,13 +598,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 194
+Line: 186
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac autoinjection tac := idtac.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 194
+Line: 186
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -623,13 +615,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 198
+Line: 190
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac inject H := progress (inversion H ; subst*; clear_dups) ; clear H.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 198
+Line: 190
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -637,7 +629,7 @@ Time: 0s">
 Ltac autoinjections := repeat (clear_dups ; autoinjection ltac:(inject)).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 200
+Line: 192
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -647,13 +639,13 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 203
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac destruct_nondep H := let H0 := fresh "H" in assert(H0 := H); destruct H0.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 203
+Line: 195
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -663,7 +655,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 206
+Line: 198
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac bang :=
@@ -675,7 +667,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 212
+Line: 204
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -683,14 +675,14 @@ Time: 0s">
 (** A tactic to show contradiction by first asserting an automatically provable hypothesis. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 214
+Line: 206
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "contradiction" "by" constr(t) :=
   let H := fresh in assert t as H by auto with * ; contradiction.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 215
+Line: 207
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -701,7 +693,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 219
+Line: 211
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac add_hypothesis H' p :=
@@ -714,7 +706,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 226
+Line: 218
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -724,7 +716,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 229
+Line: 221
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac replace_hyp H c :=
@@ -732,7 +724,7 @@ Time: 0s">
     assert(H' := c) ; clear H ; rename H' into H.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 231
+Line: 223
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -742,7 +734,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 234
+Line: 226
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac refine_hyp c :=
@@ -759,7 +751,7 @@ Time: 0s">
     end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 245
+Line: 237
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -771,7 +763,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 250
+Line: 242
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac program_simplify :=
@@ -780,7 +772,7 @@ simpl; intros ; destruct_all_rec_calls ; repeat (destruct_conjs; simpl proj1 in 
     try (solve [ red ; intros ; destruct_conjs ; autoinjections ; discriminates ]).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 253
+Line: 245
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -790,7 +782,7 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 256
+Line: 248
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac program_solve_wf :=
@@ -800,7 +792,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 260
+Line: 252
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -808,7 +800,7 @@ Time: 0s">
 Create HintDb program discriminated.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 262
+Line: 254
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -816,7 +808,7 @@ Time: 0s">
 Ltac program_simpl := program_simplify ; try typeclasses eauto with program ; try program_solve_wf.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 264
+Line: 256
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -824,7 +816,7 @@ Time: 0s">
 Obligation Tactic := program_simpl.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 266
+Line: 258
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -832,7 +824,7 @@ Time: 0s">
 Definition obligation (A : Type) {a : A} := a.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 268
+Line: 260
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -843,7 +835,7 @@ Time: 0s">
 (** Clear a hypothesis and also its dependencies.  Taken from Coq stdlib, with the performance-enhancing change to [lazymatch] suggested at [https://github.com/coq/coq/issues/11689]. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 273
+Line: 265
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "clear" "dependent" hyp(h) :=
@@ -856,7 +848,7 @@ Time: 0s">
  in depclear h.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 280
+Line: 272
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -865,14 +857,14 @@ Time: 0s">
 (** A version of [generalize dependent] that applies only to a hypothesis.  Taken from Coq stdlib. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 283
+Line: 275
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "revert" "dependent" hyp(h) :=
   generalize dependent h.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 284
+Line: 276
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -880,7 +872,7 @@ Time: 0s">
 (** Applying a tactic to a term with increasingly many arguments *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 286
+Line: 278
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "do_with_holes" tactic3(x) uconstr(p) :=
@@ -917,7 +909,7 @@ Time: 0s">
   x uconstr:(p _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 317
+Line: 309
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -925,7 +917,7 @@ Time: 0s">
 (** Same thing but starting with many holes first *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 319
+Line: 311
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "do_with_holes'" tactic3(x) uconstr(p) :=
@@ -962,7 +954,7 @@ Time: 0s">
   x uconstr:(p).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 350
+Line: 342
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -970,39 +962,39 @@ Time: 0s">
 (** A shorter name for [simple refine]. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 352
+Line: 344
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "srefine" uconstr(term) := simple refine term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 352
+Line: 344
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 (** A shorter name for [notypeclasses refine]. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 353
+Line: 345
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "nrefine" uconstr(term) := notypeclasses refine term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 353
+Line: 345
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 (** A shorter name for [simple notypeclasses refine]. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 354
+Line: 346
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "snrefine" uconstr(term) := simple notypeclasses refine term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 354
+Line: 346
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1010,14 +1002,14 @@ Time: 0s">
 (** Note that the Coq standard library has a [rapply], but it is like our [rapply'] with many-holes first.  We prefer fewer-holes first, for instance so that a theorem producing an equivalence will by preference be used to produce an equivalence rather than to apply the coercion of that equivalence to a function. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 356
+Line: 348
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "rapply" uconstr(term)
   := do_with_holes ltac:(fun x =&gt; refine x) term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 357
+Line: 349
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1025,7 +1017,7 @@ Tactic Notation "rapply'" uconstr(term)
   := do_with_holes' ltac:(fun x =&gt; refine x) term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 359
+Line: 351
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1034,7 +1026,7 @@ Tactic Notation "srapply" uconstr(term)
   := do_with_holes ltac:(fun x =&gt; srefine x) term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 362
+Line: 354
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1042,7 +1034,7 @@ Tactic Notation "srapply'" uconstr(term)
   := do_with_holes' ltac:(fun x =&gt; srefine x) term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 364
+Line: 356
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1051,7 +1043,7 @@ Tactic Notation "nrapply" uconstr(term)
   := do_with_holes ltac:(fun x =&gt; nrefine x) term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 367
+Line: 359
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1059,7 +1051,7 @@ Tactic Notation "nrapply'" uconstr(term)
   := do_with_holes' ltac:(fun x =&gt; nrefine x) term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 369
+Line: 361
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1068,7 +1060,7 @@ Tactic Notation "snrapply" uconstr(term)
   := do_with_holes ltac:(fun x =&gt; snrefine x) term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 372
+Line: 364
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1076,7 +1068,7 @@ Tactic Notation "snrapply'" uconstr(term)
   := do_with_holes' ltac:(fun x =&gt; snrefine x) term.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 374
+Line: 366
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1084,7 +1076,7 @@ Time: 0s">
 (** Ssreflect tactics, adapted by Robbert Krebbers *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 376
+Line: 368
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac done :=
@@ -1102,7 +1094,7 @@ Time: 0s">
       end ].</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 388
+Line: 380
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1111,7 +1103,7 @@ Tactic Notation "by" tactic(tac) :=
   tac; done.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 391
+Line: 383
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1119,7 +1111,7 @@ Time: 0s">
 (** A convenient tactic for using function extensionality. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 393
+Line: 385
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac by_extensionality x :=
@@ -1135,7 +1127,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 403
+Line: 395
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1145,14 +1137,14 @@ Time: 0s">
 (** For instance, if you have to prove [f = g] where [f] and [g] take two arguments, you can use [funext x y], and the goal become [f x y = g x y]. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 407
+Line: 399
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "funext" simple_intropattern(a)
   := apply path_forall; intros a.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 408
+Line: 400
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1160,7 +1152,7 @@ Tactic Notation "funext" simple_intropattern(a)  simple_intropattern(b)
   := funext a; funext b.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 410
+Line: 402
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1168,7 +1160,7 @@ Tactic Notation "funext" simple_intropattern(a) simple_intropattern(b) simple_in
   := funext a; funext b; funext c.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 412
+Line: 404
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1176,7 +1168,7 @@ Tactic Notation "funext" simple_intropattern(a) simple_intropattern(b) simple_in
   := funext a; funext b; funext c; funext d.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 414
+Line: 406
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1184,7 +1176,7 @@ Tactic Notation "funext" simple_intropattern(a) simple_intropattern(b) simple_in
   := funext a; funext b; funext c; funext d; funext e.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 416
+Line: 408
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1192,7 +1184,7 @@ Tactic Notation "funext" simple_intropattern(a) simple_intropattern(b) simple_in
   := funext a; funext b; funext c; funext d; funext e; funext f.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 418
+Line: 410
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1200,14 +1192,14 @@ Time: 0s">
 (* Test whether a tactic fails or succeeds, without actually doing anything.  Taken from Coq stdlib. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 420
+Line: 412
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac assert_fails tac :=
   tryif (once tac) then gfail 0 tac "succeeds" else idtac.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 421
+Line: 413
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1215,7 +1207,7 @@ Ltac assert_succeeds tac :=
   tryif (assert_fails tac) then gfail 0 tac "fails" else idtac.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 423
+Line: 415
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1223,7 +1215,7 @@ Tactic Notation "assert_succeeds" tactic3(tac) :=
   assert_succeeds tac.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 425
+Line: 417
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1231,7 +1223,7 @@ Tactic Notation "assert_fails" tactic3(tac) :=
   assert_fails tac.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 427
+Line: 419
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1239,7 +1231,7 @@ Time: 0s">
 (** This tactic doesn't end with [auto], but you can always write "by (path_induction;auto with path_hints)" if you want.*)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 429
+Line: 421
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac path_induction :=
@@ -1250,7 +1242,7 @@ Time: 0s">
   ).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 434
+Line: 426
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1258,7 +1250,7 @@ Time: 0s">
 (** The tactic [f_ap] is a replacement for the previously existing standard library tactic [f_equal].  This tactic works by repeatedly applying the fact that [f = g -&gt; x = y -&gt; f x = g y] to turn, e.g., [f x y = f z w] first into [f x = f z] and [y = w], and then turns the first of these into [f = f] and [x = z].  The [done] tactic is used to detect the [f = f] case and finish, and the [trivial] is used to solve, e.g., [x = x] when using [f_ap] on [f y x = f z x].  This tactic only works for non-dependently-typed functions; we cannot express [y = w] in the first example if [y] and [w] have different types.  If and when Arnaud's new-tacticals branch lands, and we can have a goal which depends on the term used to discharge another goal, then this tactic should probably be generalized to deal with dependent functions. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 436
+Line: 428
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac f_ap :=
@@ -1272,7 +1264,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 444
+Line: 436
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1280,7 +1272,7 @@ Time: 0s">
 (** [expand] replaces both terms of an equality (either [paths] or [pointwise_paths] in the goal with their head normal forms *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 446
+Line: 438
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac expand :=
@@ -1293,7 +1285,7 @@ Time: 0s">
   end; simpl.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 453
+Line: 445
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1301,7 +1293,7 @@ Time: 0s">
 (** [atomic x] is the same as [idtac] if [x] is a variable or hypothesis, but is [fail 0] if [x] has internal structure.  This is useful, for example, to easily destruct all variables that show up as the discriminees of [match] statements, without destructing more complicated terms whose structures might matter. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 455
+Line: 447
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac atomic x :=
@@ -1320,7 +1312,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 468
+Line: 460
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1328,7 +1320,7 @@ Time: 0s">
 (** Find the head of the given expression. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 470
+Line: 462
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac head expr :=
@@ -1338,7 +1330,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 474
+Line: 466
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1346,7 +1338,7 @@ Time: 0s">
 (** This tactic gets the constructor of any one-constructor inductive type. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 476
+Line: 468
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac get_constructor_head T :=
@@ -1363,7 +1355,7 @@ Time: 0s">
   h.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 487
+Line: 479
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1371,7 +1363,7 @@ Time: 0s">
 (* A version of econstructor that doesn't resolve typeclasses. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 489
+Line: 481
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac ntc_constructor :=
@@ -1381,7 +1373,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 493
+Line: 485
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1389,7 +1381,7 @@ Time: 0s">
 (** [case_path] is a HoTT replacement for [case_eq]; [case_path x] is like [destruct x], but it remembers the original value of [x] in an equation to be introduced. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 495
+Line: 487
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac case_path x :=
@@ -1400,7 +1392,7 @@ Time: 0s">
     destruct x'.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 500
+Line: 492
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1408,7 +1400,7 @@ Time: 0s">
 (** [revert_opaque x] is like [revert x], except that it fails if [x] is not an opaque variable (i.e. if it has a [:=] definition rather than just a type). *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 502
+Line: 494
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac revert_opaque x :=
@@ -1419,7 +1411,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 507
+Line: 499
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1428,7 +1420,7 @@ Time: 0s">
 (** Since binders don't respect [fresh], we use a name unlikely to be reused. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 510
+Line: 502
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "transparent" "assert" "(" ident(name) ":" constr(type) ")" :=
@@ -1439,7 +1431,7 @@ Time: 0s">
     rename H into name) ].</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 515
+Line: 507
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1447,27 +1439,27 @@ Time: 0s">
 (** [transparent eassert] is like [transparent assert], but allows holes in the type, which will be turned into evars. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 517
+Line: 509
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Tactic Notation "transparent" "assert" "(" ident(name) ":" constr(type) ")" "by" tactic3(tac) := let name := fresh "H" in transparent assert (name : type); [ solve [ tac ] | ].</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 517
+Line: 509
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Tactic Notation "transparent" "eassert" "(" ident(name) ":" open_constr(type) ")" := transparent assert (name : type).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 518
+Line: 510
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Tactic Notation "transparent" "eassert" "(" ident(name) ":" open_constr(type) ")" "by" tactic3(tac) := transparent assert (name : type) by tac.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 519
+Line: 511
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1475,11 +1467,37 @@ Time: 0s">
 (** A version of Coq's [remember] that uses our equality. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 521
+Line: 513
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac remember_as term name eqname :=
   set (name := term) in *;
+  pose (eqname := idpath : term = name);
+  clearbody eqname name.</pre>
+</div>
+<div class="code" title="File: Tactics.v
+Line: 516
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+Tactic Notation "remember" constr(term) "as" ident(name) "eqn:" ident(eqname) :=
+  remember_as term name eqname.</pre>
+</div>
+<div class="code" title="File: Tactics.v
+Line: 519
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+
+(** A variant that doesn't substitute in the goal and hypotheses. *)</pre>
+</div>
+<div class="code" title="File: Tactics.v
+Line: 521
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>Ltac recall_as term name eqname :=
+  pose (name := term);
   pose (eqname := idpath : term = name);
   clearbody eqname name.</pre>
 </div>
@@ -1489,8 +1507,8 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-Tactic Notation "remember" constr(term) "as" ident(name) "eqn:" ident(eqname) :=
-  remember_as term name eqname.</pre>
+Tactic Notation "recall" constr(term) "as" ident(name) "eqn:" ident(eqname) :=
+  recall_as term name eqname.</pre>
 </div>
 <div class="code" title="File: Tactics.v
 Line: 527
@@ -1498,36 +1516,10 @@ Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
-(** A variant that doesn't substitute in the goal and hypotheses. *)</pre>
-</div>
-<div class="code" title="File: Tactics.v
-Line: 529
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>Ltac recall_as term name eqname :=
-  pose (name := term);
-  pose (eqname := idpath : term = name);
-  clearbody eqname name.</pre>
-</div>
-<div class="code" title="File: Tactics.v
-Line: 532
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
-Tactic Notation "recall" constr(term) "as" ident(name) "eqn:" ident(eqname) :=
-  recall_as term name eqname.</pre>
-</div>
-<div class="code" title="File: Tactics.v
-Line: 535
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-
 (** [rel_hnf], when given a goal of the form [R x y] for any relation [R], puts [x] and [y] in head normal form. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 537
+Line: 529
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac rel_hnf :=
@@ -1539,7 +1531,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 543
+Line: 535
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1548,7 +1540,7 @@ Time: 0s">
 All three arguments are expected to be tactic thunks which will be passed a dummy unit argument.*)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 546
+Line: 538
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac tryif_cps require if_yes if_no :=
@@ -1559,7 +1551,7 @@ Time: 0s">
              end in res ().</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 551
+Line: 543
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1589,7 +1581,7 @@ In order to define this tactic we have many helper tactics.
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 574
+Line: 566
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Ltac peel_evars term :=
@@ -1603,7 +1595,7 @@ Time: 0s">
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 582
+Line: 574
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1619,7 +1611,7 @@ Local Ltac pi_to_sig ty :=
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 592
+Line: 584
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1630,7 +1622,7 @@ Local Ltac ctor_to_sig ctor :=
   pi_to_sig t.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 597
+Line: 589
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1644,7 +1636,7 @@ Local Ltac unify_first_evar_with term u :=
   end.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 605
+Line: 597
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1655,7 +1647,7 @@ Local Ltac unify_with_projections term u :=
    tryif has_evar term then fail 0 term "has evars remaining" else idtac).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 610
+Line: 602
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1663,7 +1655,7 @@ Time: 0s">
 (* Completely destroys v into it's pieces and trys to put pieces in sigma. *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 612
+Line: 604
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Local Ltac refine_with_exist_as_much_as_needed_then_destruct v :=
@@ -1673,7 +1665,7 @@ Time: 0s">
     | refine_with_exist_as_much_as_needed_then_destruct v ])).</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 616
+Line: 608
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1682,7 +1674,7 @@ Time: 0s">
 (* Finally we can define our issig tactic: *)</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 619
+Line: 611
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Ltac issig :=
@@ -1715,7 +1707,7 @@ Time: 0s">
   | reflexivity ].</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 646
+Line: 638
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
@@ -1725,41 +1717,73 @@ Time: 0s">
 </pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 649
+Line: 641
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>Definition issig_contr (A : Type)
   : {x : A &amp; forall y, x = y} &lt;~&gt; Contr A.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 650
+Line: 642
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 Proof.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 651
-Time: 0.009s">
-<div class="time" style="width: 16.363636363636%"></div>
+Line: 643
+Time: 0.008s">
+<div class="time" style="width: 15.686274509804%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 652
-Time: 0.001s">
-<div class="time" style="width: 1.8181818181818%"></div>
+Line: 644
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 653
+Line: 645
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>
 
 Definition issig_equiv (A B : Type)
   : {f : A -&gt; B &amp; IsEquiv f} &lt;~&gt; Equiv A B.</pre>
+</div>
+<div class="code" title="File: Tactics.v
+Line: 648
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Proof.</pre>
+</div>
+<div class="code" title="File: Tactics.v
+Line: 649
+Time: 0.008s">
+<div class="time" style="width: 15.686274509804%"></div>
+<pre>
+  issig.</pre>
+</div>
+<div class="code" title="File: Tactics.v
+Line: 650
+Time: 0s">
+<div class="time" style="width: 0%"></div>
+<pre>
+Defined.</pre>
+</div>
+<div class="code" title="File: Tactics.v
+Line: 651
+Time: 0.001s">
+<div class="time" style="width: 1.9607843137255%"></div>
+<pre>
+
+Definition issig_isequiv {A B : Type} (f : A -&gt; B)
+  : {g : B -&gt; A &amp; {r : f o g == idmap &amp; { s : g o f == idmap
+    &amp; forall x : A, r (f x) = ap f (s x)}}}
+  &lt;~&gt; IsEquiv f.</pre>
 </div>
 <div class="code" title="File: Tactics.v
 Line: 656
@@ -1770,52 +1794,20 @@ Proof.</pre>
 </div>
 <div class="code" title="File: Tactics.v
 Line: 657
-Time: 0.008s">
-<div class="time" style="width: 14.545454545455%"></div>
-<pre>
-  issig.</pre>
-</div>
-<div class="code" title="File: Tactics.v
-Line: 658
-Time: 0.001s">
-<div class="time" style="width: 1.8181818181818%"></div>
-<pre>
-Defined.</pre>
-</div>
-<div class="code" title="File: Tactics.v
-Line: 659
-Time: 0.001s">
-<div class="time" style="width: 1.8181818181818%"></div>
-<pre>
-
-Definition issig_isequiv {A B : Type} (f : A -&gt; B)
-  : {g : B -&gt; A &amp; {r : f o g == idmap &amp; { s : g o f == idmap
-    &amp; forall x : A, r (f x) = ap f (s x)}}}
-  &lt;~&gt; IsEquiv f.</pre>
-</div>
-<div class="code" title="File: Tactics.v
-Line: 664
-Time: 0s">
-<div class="time" style="width: 0%"></div>
-<pre>
-Proof.</pre>
-</div>
-<div class="code" title="File: Tactics.v
-Line: 665
-Time: 0.055s">
+Time: 0.051s">
 <div class="time" style="width: 100%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 666
-Time: 0.013s">
-<div class="time" style="width: 23.636363636364%"></div>
+Line: 658
+Time: 0.012s">
+<div class="time" style="width: 23.529411764706%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: Tactics.v
-Line: 668
+Line: 660
 Time: 0s">
 <div class="time" style="width: 0%"></div>
 <pre>

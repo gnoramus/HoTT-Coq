@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 1
-Time: 0.018s">
-<div class="time" style="width: 12.328767123288%"></div>
+Time: 0.015s">
+<div class="time" style="width: 11.029411764706%"></div>
 <pre>Require Import Category.Sum Functor.Core Functor.Composition.Core Functor.Identity.</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 1
-Time: 0.028s">
-<div class="time" style="width: 19.178082191781%"></div>
+Time: 0.025s">
+<div class="time" style="width: 18.382352941176%"></div>
 <pre>
 Require Import Functor.Paths HoTT.Tactics Types.Forall.</pre>
 </div>
@@ -128,7 +128,7 @@ Time: 0s">
 <div class="code" title="File: Sum.v
 Line: 14
 Time: 0.001s">
-<div class="time" style="width: 0.68493150684932%"></div>
+<div class="time" style="width: 0.73529411764706%"></div>
 <pre>
 
   Definition inl : Functor C (C + D)
@@ -141,7 +141,7 @@ Time: 0.001s">
 <div class="code" title="File: Sum.v
 Line: 21
 Time: 0.001s">
-<div class="time" style="width: 0.68493150684932%"></div>
+<div class="time" style="width: 0.73529411764706%"></div>
 <pre>
 
   Definition inr : Functor D (C + D)
@@ -197,8 +197,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 36
-Time: 0.066s">
-<div class="time" style="width: 45.205479452055%"></div>
+Time: 0.049s">
+<div class="time" style="width: 36.029411764706%"></div>
 <pre>
     refine (Build_Functor
               (C + C') D
@@ -225,15 +225,15 @@ Time: 0.066s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 58
-Time: 0.014s">
-<div class="time" style="width: 9.5890410958904%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.1470588235294%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 59
-Time: 0.001s">
-<div class="time" style="width: 0.68493150684932%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
 End sum.</pre>
 </div>
@@ -253,8 +253,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 62
-Time: 0.001s">
-<div class="time" style="width: 0.68493150684932%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Definition swap C D
   : Functor (C + D) (D + C)
@@ -271,7 +271,7 @@ Time: 0s">
 <div class="code" title="File: Sum.v
 Line: 67
 Time: 0.003s">
-<div class="time" style="width: 2.0547945205479%"></div>
+<div class="time" style="width: 2.2058823529412%"></div>
 <pre>
 
   Definition swap_involutive_helper {C D} c
@@ -281,8 +281,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 72
-Time: 0.001s">
-<div class="time" style="width: 0.68493150684932%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma swap_involutive `{Funext} C D
@@ -297,29 +297,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 76
-Time: 0.007s">
-<div class="time" style="width: 4.7945205479452%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.4117647058824%"></div>
 <pre>
     path_functor.</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 77
-Time: 0.003s">
-<div class="time" style="width: 2.0547945205479%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4705882352941%"></div>
 <pre>
     exists (path_forall _ _ swap_involutive_helper).</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 78
-Time: 0.009s">
-<div class="time" style="width: 6.1643835616438%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.4117647058824%"></div>
 <pre>
     repeat (apply (@path_forall _); intro).</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 79
-Time: 0.036s">
-<div class="time" style="width: 24.657534246575%"></div>
+Time: 0.037s">
+<div class="time" style="width: 27.205882352941%"></div>
 <pre>
     repeat match goal with
                | [ |- context[transport (fun x' =&gt; forall y, @?C x' y) ?p ?f ?x] ]
@@ -328,15 +328,15 @@ Time: 0.036s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 83
-Time: 0.047s">
-<div class="time" style="width: 32.191780821918%"></div>
+Time: 0.046s">
+<div class="time" style="width: 33.823529411765%"></div>
 <pre>
     transport_path_forall_hammer.</pre>
 </div>
 <div class="code" title="File: Sum.v
 Line: 84
-Time: 0.016s">
-<div class="time" style="width: 10.958904109589%"></div>
+Time: 0.014s">
+<div class="time" style="width: 10.294117647059%"></div>
 <pre>
       by repeat match goal with
                   | [ H : Empty |- _ ] =&gt; destruct H
@@ -346,7 +346,7 @@ Time: 0.016s">
 </div>
 <div class="code" title="File: Sum.v
 Line: 89
-Time: 0.146s">
+Time: 0.136s">
 <div class="time" style="width: 100%"></div>
 <pre>
   Qed.</pre>
