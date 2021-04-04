@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomFunctor.v
 Line: 1
-Time: 0.042s">
+Time: 0.046s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import Category.Core Functor.Core SetCategory.Core Category.Dual Functor.Composition.Core.</pre>
 </div>
 <div class="code" title="File: HomFunctor.v
 Line: 1
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
 Require Category.Prod Functor.Prod.Core.</pre>
 </div>
@@ -57,7 +57,7 @@ Import Category.Prod.CategoryProdNotations Functor.Prod.Core.FunctorProdCoreNota
 <div class="code" title="File: HomFunctor.v
 Line: 3
 Time: 0.002s">
-<div class="time" style="width: 4.7619047619048%"></div>
+<div class="time" style="width: 4.3478260869565%"></div>
 <pre>
 Require Import Basics.Trunc HSet TruncType.</pre>
 </div>
@@ -142,7 +142,7 @@ Time: 0s">
 <div class="code" title="File: HomFunctor.v
 Line: 22
 Time: 0.007s">
-<div class="time" style="width: 16.666666666667%"></div>
+<div class="time" style="width: 15.217391304348%"></div>
 <pre>
 
   Let hom_functor_morphism_of s's d'd (hf : morphism (C^op * C) s's d'd)
@@ -159,8 +159,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomFunctor.v
 Line: 28
-Time: 0.027s">
-<div class="time" style="width: 64.285714285714%"></div>
+Time: 0.028s">
+<div class="time" style="width: 60.869565217391%"></div>
 <pre>
     refine (Build_Functor (C^op * C) set_cat
                           (fun c'c =&gt; obj_of c'c)
@@ -179,14 +179,14 @@ Time: 0.027s">
 <div class="code" title="File: HomFunctor.v
 Line: 41
 Time: 0.006s">
-<div class="time" style="width: 14.285714285714%"></div>
+<div class="time" style="width: 13.04347826087%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: HomFunctor.v
 Line: 42
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>
 End hom_functor.</pre>
 </div>
@@ -247,7 +247,7 @@ Time: 0s">
 <div class="code" title="File: HomFunctor.v
 Line: 55
 Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+<div class="time" style="width: 2.1739130434783%"></div>
 <pre>Definition covariant_hom_functor (A : object C^op)
     := Eval simpl in Functor.Prod.Core.induced_snd (hom_functor C) A.</pre>
 </div>
@@ -261,8 +261,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: HomFunctor.v
 Line: 58
-Time: 0.001s">
-<div class="time" style="width: 2.3809523809524%"></div>
+Time: 0.002s">
+<div class="time" style="width: 4.3478260869565%"></div>
 <pre>Definition contravariant_hom_functor (A : C)
     := Eval simpl in Functor.Prod.Core.induced_fst (hom_functor C) A.</pre>
 </div>

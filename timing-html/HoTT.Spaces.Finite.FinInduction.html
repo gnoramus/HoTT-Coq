@@ -30,7 +30,7 @@ pre {
 
 <div class="code" title="File: FinInduction.v
 Line: 1
-Time: 0.097s">
+Time: 0.101s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Basics
@@ -118,15 +118,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 17
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 18
-Time: 0.001s">
-<div class="time" style="width: 1.0309278350515%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma compute_fin_ind_fin_zero (P : forall n : nat, Fin n -&gt; Type)
@@ -151,14 +151,14 @@ Time: 0s">
 <div class="code" title="File: FinInduction.v
 Line: 25
 Time: 0.001s">
-<div class="time" style="width: 1.0309278350515%"></div>
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   generalize (homot_fin_to_finnat_to_fin (@fin_zero n)).</pre>
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 26
-Time: 0.003s">
-<div class="time" style="width: 3.0927835051546%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
   induction (path_fin_to_finnat_fin_zero n)^.</pre>
 </div>
@@ -172,21 +172,21 @@ Time: 0s">
 <div class="code" title="File: FinInduction.v
 Line: 28
 Time: 0.01s">
-<div class="time" style="width: 10.309278350515%"></div>
+<div class="time" style="width: 9.9009900990099%"></div>
 <pre>
   by induction (hset_path2 1 p).</pre>
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 29
-Time: 0.003s">
-<div class="time" style="width: 3.0927835051546%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.980198019802%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 30
-Time: 0.001s">
-<div class="time" style="width: 1.0309278350515%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Lemma compute_fin_ind_fsucc (P : forall n : nat, Fin n -&gt; Type)
@@ -211,15 +211,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 38
-Time: 0.002s">
-<div class="time" style="width: 2.0618556701031%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.970297029703%"></div>
 <pre>
   generalize (homot_fin_to_finnat_to_fin (fsucc k)).</pre>
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 39
 Time: 0.005s">
-<div class="time" style="width: 5.1546391752577%"></div>
+<div class="time" style="width: 4.950495049505%"></div>
 <pre>
   induction (path_fin_to_finnat_fsucc k)^.</pre>
 </div>
@@ -233,7 +233,7 @@ Time: 0s">
 <div class="code" title="File: FinInduction.v
 Line: 41
 Time: 0.001s">
-<div class="time" style="width: 1.0309278350515%"></div>
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
   refine (ap (transport (P n.+1) p) (compute_finnat_ind_succ _ _ _ _) @ _).</pre>
 </div>
@@ -247,14 +247,14 @@ Time: 0s">
 <div class="code" title="File: FinInduction.v
 Line: 43
 Time: 0.013s">
-<div class="time" style="width: 13.40206185567%"></div>
+<div class="time" style="width: 12.871287128713%"></div>
 <pre>
   induction (homot_fin_to_finnat_to_fin k).</pre>
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 44
-Time: 0.016s">
-<div class="time" style="width: 16.494845360825%"></div>
+Time: 0.015s">
+<div class="time" style="width: 14.851485148515%"></div>
 <pre>
   induction (homot_fin_to_finnat_to_fin k)^.</pre>
 </div>
@@ -267,22 +267,22 @@ Time: 0s">
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 46
-Time: 0.023s">
-<div class="time" style="width: 23.711340206186%"></div>
+Time: 0.024s">
+<div class="time" style="width: 23.762376237624%"></div>
 <pre>
   now induction (hset_path2 1 p).</pre>
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 47
-Time: 0.021s">
-<div class="time" style="width: 21.649484536082%"></div>
+Time: 0.02s">
+<div class="time" style="width: 19.80198019802%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: FinInduction.v
 Line: 48
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.99009900990099%"></div>
 <pre>
 
 Definition fin_rec (B : nat -&gt; Type)
