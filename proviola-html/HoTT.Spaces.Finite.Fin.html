@@ -1123,7 +1123,7 @@
           
 
             i = 221;
-            data = "1 goal (ID 209)	  	  n : nat	  k : Fin n.+1	  l : Fin n.+1	  ============================	  fin_transpose_last_with n k (fin_transpose_last_with n k l) = l	";
+            data = "1 goal (ID 209)	  	  n : nat	  k, l : Fin n.+1	  ============================	  fin_transpose_last_with n k (fin_transpose_last_with n k l) = l	";
             responses[i]=data;
           
 
@@ -1133,22 +1133,22 @@
           
 
             i = 223;
-            data = "1 goal (ID 217)	  	  n : nat	  k : Fin n.+1	  l : Fin n	  ============================	  fin_transpose_last_with n k (fin_transpose_last_with n k (inl l)) = inl l	2 goals (ID 229)	  	  n : nat	  k : Fin n	  l : Fin n	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l		goal 2 (ID 233) is:	 fin_transpose_last_with n (inr tt)	   (fin_transpose_last_with n (inr tt) (inl l)) = 	 inl l	";
+            data = "1 goal (ID 217)	  	  n : nat	  k : Fin n.+1	  l : Fin n	  ============================	  fin_transpose_last_with n k (fin_transpose_last_with n k (inl l)) = inl l	2 goals (ID 229)	  	  n : nat	  k, l : Fin n	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l		goal 2 (ID 233) is:	 fin_transpose_last_with n (inr tt)	   (fin_transpose_last_with n (inr tt) (inl l)) = 	 inl l	";
             responses[i]=data;
           
 
             i = 224;
-            data = "1 goal (ID 229)	  	  n : nat	  k : Fin n	  l : Fin n	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l	2 goals (ID 242)	  	  n : nat	  k : Fin n	  l : Fin n	  p : k = l	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l		goal 2 (ID 243) is:	 fin_transpose_last_with n (inl k)	   (fin_transpose_last_with n (inl k) (inl l)) = inl l	";
+            data = "1 goal (ID 229)	  	  n : nat	  k, l : Fin n	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l	2 goals (ID 242)	  	  n : nat	  k, l : Fin n	  p : k = l	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l		goal 2 (ID 243) is:	 fin_transpose_last_with n (inl k)	   (fin_transpose_last_with n (inl k) (inl l)) = inl l	";
             responses[i]=data;
           
 
             i = 225;
-            data = "1 goal (ID 242)	  	  n : nat	  k : Fin n	  l : Fin n	  p : k = l	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l	1 goal (ID 244)	  	  n : nat	  k : Fin n	  l : Fin n	  p : k = l	  ============================	  fin_transpose_last_with n (inl l)	    (fin_transpose_last_with n (inl l) (inl l)) = 	  inl l	";
+            data = "1 goal (ID 242)	  	  n : nat	  k, l : Fin n	  p : k = l	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l	1 goal (ID 244)	  	  n : nat	  k, l : Fin n	  p : k = l	  ============================	  fin_transpose_last_with n (inl l)	    (fin_transpose_last_with n (inl l) (inl l)) = 	  inl l	";
             responses[i]=data;
           
 
             i = 226;
-            data = "1 goal (ID 245)	  	  n : nat	  k : Fin n	  l : Fin n	  p : k = l	  ============================	  fin_transpose_last_with n (inl l) (inr tt) = inl l	";
+            data = "1 goal (ID 245)	  	  n : nat	  k, l : Fin n	  p : k = l	  ============================	  fin_transpose_last_with n (inl l) (inr tt) = inl l	";
             responses[i]=data;
           
 
@@ -1158,7 +1158,7 @@
           
 
             i = 228;
-            data = "1 goal (ID 243)	  	  n : nat	  k : Fin n	  l : Fin n	  p : k <> l	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 233) is:	 fin_transpose_last_with n (inr tt)	   (fin_transpose_last_with n (inr tt) (inl l)) = 	 inl l	goal 2 (ID 220) is:	 fin_transpose_last_with n k (fin_transpose_last_with n k (inr tt)) = inr tt	";
+            data = "1 goal (ID 243)	  	  n : nat	  k, l : Fin n	  p : k <> l	  ============================	  fin_transpose_last_with n (inl k)	    (fin_transpose_last_with n (inl k) (inl l)) = 	  inl l	<infomsg>	This subproof is complete, but there are some unfocused goals.	Try unfocusing with \"}\".	</infomsg>	2 goals		goal 1 (ID 233) is:	 fin_transpose_last_with n (inr tt)	   (fin_transpose_last_with n (inr tt) (inl l)) = 	 inl l	goal 2 (ID 220) is:	 fin_transpose_last_with n k (fin_transpose_last_with n k (inr tt)) = inr tt	";
             responses[i]=data;
           
 
@@ -1703,7 +1703,7 @@
           
 
             i = 337;
-            data = "1 goal (ID 244)	  	  n, m : nat	  k, l : Fin m.+1	  e, f : Fin n <~> Fin m	  ============================	  fin_equiv n m k e == fin_equiv n m l f -> k = l	";
+            data = "1 goal (ID 244)	  	  n, m : nat	  k, l : Fin m.+1	  e : Fin n <~> Fin m	  f : Fin n <~> Fin m	  ============================	  fin_equiv n m k e == fin_equiv n m l f -> k = l	";
             responses[i]=data;
           
 
@@ -1713,7 +1713,7 @@
           
 
             i = 339;
-            data = "1 goal (ID 245)	  	  n, m : nat	  k, l : Fin m.+1	  e, f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  ============================	  k = l	";
+            data = "1 goal (ID 245)	  	  n, m : nat	  k, l : Fin m.+1	  e : Fin n <~> Fin m	  f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  ============================	  k = l	";
             responses[i]=data;
           
 
@@ -1728,7 +1728,7 @@
           
 
             i = 342;
-            data = "1 goal (ID 255)	  	  n, m : nat	  k : Fin m.+1	  l : Fin m.+1	  e, f : Fin n <~> Fin m	  ============================	  fin_equiv n m k e == fin_equiv n m l f -> e == f	";
+            data = "1 goal (ID 255)	  	  n, m : nat	  k, l : Fin m.+1	  e : Fin n <~> Fin m	  f : Fin n <~> Fin m	  ============================	  fin_equiv n m k e == fin_equiv n m l f -> e == f	";
             responses[i]=data;
           
 
@@ -1738,27 +1738,27 @@
           
 
             i = 344;
-            data = "1 goal (ID 256)	  	  n, m : nat	  k : Fin m.+1	  l : Fin m.+1	  e, f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  ============================	  e == f	";
+            data = "1 goal (ID 256)	  	  n, m : nat	  k, l : Fin m.+1	  e : Fin n <~> Fin m	  f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  ============================	  e == f	";
             responses[i]=data;
           
 
             i = 345;
-            data = "1 goal (ID 258)	  	  n, m : nat	  k : Fin m.+1	  l : Fin m.+1	  e, f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  x : Fin n	  ============================	  e x = f x	";
+            data = "1 goal (ID 258)	  	  n, m : nat	  k, l : Fin m.+1	  e : Fin n <~> Fin m	  f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  x : Fin n	  ============================	  e x = f x	";
             responses[i]=data;
           
 
             i = 346;
-            data = "1 goal (ID 264)	  	  n, m : nat	  k : Fin m.+1	  l : Fin m.+1	  e, f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  x : Fin n	  q : fin_transpose_last_with m k (inr tt) =	      fin_transpose_last_with m l (inr tt)	  ============================	  e x = f x	";
+            data = "1 goal (ID 264)	  	  n, m : nat	  k, l : Fin m.+1	  e : Fin n <~> Fin m	  f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  x : Fin n	  q : fin_transpose_last_with m k (inr tt) =	      fin_transpose_last_with m l (inr tt)	  ============================	  e x = f x	";
             responses[i]=data;
           
 
             i = 347;
-            data = "1 goal (ID 268)	  	  n, m : nat	  k : Fin m.+1	  l : Fin m.+1	  e, f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  x : Fin n	  q : k = l	  ============================	  e x = f x	";
+            data = "1 goal (ID 268)	  	  n, m : nat	  k, l : Fin m.+1	  e : Fin n <~> Fin m	  f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m l f	  x : Fin n	  q : k = l	  ============================	  e x = f x	";
             responses[i]=data;
           
 
             i = 348;
-            data = "1 goal (ID 271)	  	  n, m : nat	  k : Fin m.+1	  e, f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m k f	  x : Fin n	  ============================	  e x = f x	";
+            data = "1 goal (ID 271)	  	  n, m : nat	  k : Fin m.+1	  e : Fin n <~> Fin m	  f : Fin n <~> Fin m	  p : fin_equiv n m k e == fin_equiv n m k f	  x : Fin n	  ============================	  e x = f x	";
             responses[i]=data;
           
 
@@ -2433,7 +2433,7 @@
       mouseover(44, '0_3_7');
       ">
 <br>
-<span class="id" title="keyword">Fixpoint</span> <a id="Fin" class="idref" href="#Fin"><span class="id" title="definition">Fin</span></a> (<a id="n:1" class="idref" href="#n:1"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <span class="id" title="keyword">Type</span><br>
+<span class="id" title="keyword">Fixpoint</span> <a id="Fin" class="idref" href="#Fin"><span class="id" title="definition">Fin</span></a> (<a id="n:1" class="idref" href="#n:1"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#Type0"><span class="id" title="abbreviation">Type0</span></a><br>
   := <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Spaces.Finite.Fin.html#n:1"><span class="id" title="variable">n</span></a> <span class="id" title="keyword">with</span><br>
        | 0 ⇒ <a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a><br>
        | <a class="idref" href="HoTT.Basics.Datatypes.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n</span> ⇒ <a class="idref" href="HoTT.Spaces.Finite.Fin.html#Fin:2"><span class="id" title="definition">Fin</span></a> <a class="idref" href="HoTT.Spaces.Finite.Fin.html#n:1"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a><br>
@@ -2813,7 +2813,7 @@ This injection is an injection/embedding
       " onmouseover="
       mouseover(121, '0_3_27');
       "><br>
-<span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(122, '0_3_27');
@@ -2844,7 +2844,7 @@ This injection is an injection/embedding
       " onmouseover="
       mouseover(127, '0_3_27');
       "><br>
-<span class="id" title="keyword">Qed</span>.</span><span class="command" onmouseout="
+<span class="id" title="keyword">Defined</span>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(128, '0_3_27');

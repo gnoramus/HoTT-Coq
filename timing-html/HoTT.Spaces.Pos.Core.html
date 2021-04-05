@@ -157,8 +157,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 38
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>Definition pos_peano_ind_beta_1 (P : Pos -&gt; Type) (a : P 1)
   (f : forall p, P p -&gt; P (pos_succ p))
   : pos_peano_ind P a f 1 = a := idpath.</pre>
@@ -570,8 +570,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 118
-Time: 0.001s">
-<div class="time" style="width: 3.7037037037037%"></div>
+Time: 0.002s">
+<div class="time" style="width: 7.4074074074074%"></div>
 <pre>Fixpoint pos_add x y :=
   match x, y with
     | p~1, q~1 =&gt; (pos_add_carry p q)~0
@@ -721,8 +721,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 185
-Time: 0.001s">
-<div class="time" style="width: 3.7037037037037%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition pos_mask_double_pred x : Pos_mask :=
   match x with
     | p~1 =&gt; IsPos p~0~0
@@ -829,8 +829,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Core.v
 Line: 235
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>Fixpoint pos_mul x y :=
   match x with
     | p~1 =&gt; y + (pos_mul p y)~0

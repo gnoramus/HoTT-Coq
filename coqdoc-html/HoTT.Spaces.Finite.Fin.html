@@ -47,7 +47,7 @@
 <div class="code">
 
 <br/>
-<span class="id" title="keyword">Fixpoint</span> <a id="Fin" class="idref" href="#Fin"><span class="id" title="definition">Fin</span></a> (<a id="n:1" class="idref" href="#n:1"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <span class="id" title="keyword">Type</span><br/>
+<span class="id" title="keyword">Fixpoint</span> <a id="Fin" class="idref" href="#Fin"><span class="id" title="definition">Fin</span></a> (<a id="n:1" class="idref" href="#n:1"><span class="id" title="binder">n</span></a> : <a class="idref" href="HoTT.Basics.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <a class="idref" href="HoTT.Basics.Overture.html#Type0"><span class="id" title="abbreviation">Type0</span></a><br/>
 &nbsp;&nbsp;:= <span class="id" title="keyword">match</span> <a class="idref" href="HoTT.Spaces.Finite.Fin.html#n:1"><span class="id" title="variable">n</span></a> <span class="id" title="keyword">with</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 0 ⇒ <a class="idref" href="HoTT.Basics.Overture.html#Empty"><span class="id" title="inductive">Empty</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <a class="idref" href="HoTT.Basics.Datatypes.html#S"><span class="id" title="constructor">S</span></a> <span class="id" title="var">n</span> ⇒ <a class="idref" href="HoTT.Spaces.Finite.Fin.html#Fin:2"><span class="id" title="definition">Fin</span></a> <a class="idref" href="HoTT.Spaces.Finite.Fin.html#n:1"><span class="id" title="variable">n</span></a> <a class="idref" href="HoTT.Basics.Datatypes.html#e03f39daf98516fa530d3f6f5a1b4d92"><span class="id" title="notation">+</span></a> <a class="idref" href="HoTT.Basics.Overture.html#Unit"><span class="id" title="inductive">Unit</span></a><br/>
@@ -182,7 +182,7 @@ This injection is an injection/embedding
 &nbsp;&nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">rewrite</span> <a class="idref" href="HoTT.Spaces.Finite.Fin.html#path_fin_fsucc_incl"><span class="id" title="lemma">path_fin_fsucc_incl</span></a>, <a class="idref" href="HoTT.Spaces.Finite.Fin.html#path_nat_fin_incl"><span class="id" title="lemma">path_nat_fin_incl</span></a>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="var">IHn</span>.<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">reflexivity</span>.<br/>
-<span class="id" title="keyword">Qed</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a id="path_nat_fin_zero" class="idref" href="#path_nat_fin_zero"><span class="id" title="lemma">path_nat_fin_zero</span></a> {<a id="n:31" class="idref" href="#n:31"><span class="id" title="binder">n</span></a>} : <a class="idref" href="HoTT.Spaces.Finite.Fin.html#fin_to_nat"><span class="id" title="definition">fin_to_nat</span></a> (@<a class="idref" href="HoTT.Spaces.Finite.Fin.html#fin_zero"><span class="id" title="definition">fin_zero</span></a> <a class="idref" href="HoTT.Spaces.Finite.Fin.html#n:31"><span class="id" title="variable">n</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> 0.<br/>
@@ -190,7 +190,7 @@ This injection is an injection/embedding
 &nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">n</span> <span class="id" title="keyword">as</span> [|<span class="id" title="var">n'</span> <span class="id" title="var">IHn</span>].<br/>
 &nbsp;&nbsp;- <span class="id" title="tactic">reflexivity</span>.<br/>
 &nbsp;&nbsp;- <span class="id" title="tactic">trivial</span>.<br/>
-<span class="id" title="keyword">Qed</span>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a id="path_nat_fin_last" class="idref" href="#path_nat_fin_last"><span class="id" title="lemma">path_nat_fin_last</span></a> {<a id="n:32" class="idref" href="#n:32"><span class="id" title="binder">n</span></a>} : <a class="idref" href="HoTT.Spaces.Finite.Fin.html#fin_to_nat"><span class="id" title="definition">fin_to_nat</span></a> (@<a class="idref" href="HoTT.Spaces.Finite.Fin.html#fin_last"><span class="id" title="definition">fin_last</span></a> <a class="idref" href="HoTT.Spaces.Finite.Fin.html#n:32"><span class="id" title="variable">n</span></a>) <a class="idref" href="HoTT.Basics.Overture.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="HoTT.Spaces.Finite.Fin.html#n:32"><span class="id" title="variable">n</span></a>.<br/>

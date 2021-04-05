@@ -63,16 +63,16 @@ Definition is_ne_0 `(x : R) `{Zero R} `{p : PropHolds (x &lt;&gt; 0)}
 </div>
 <div class="code" title="File: rings.v
 Line: 10
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Definition is_nonneg `(x : R) `{Le R} `{Zero R} `{p : PropHolds (0 ≤ x)}
   : 0 ≤ x := p.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 12
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
 Definition is_pos `(x : R) `{Lt R} `{Zero R} `{p : PropHolds (0 &lt; x)}
   : 0 &lt; x := p.</pre>
@@ -195,8 +195,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 40
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
   rewrite 2!(commutativity (f:=op) z _).</pre>
 </div>
@@ -238,8 +238,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 47
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
 
   Lemma strong_right_cancel_from_left `{!Commutative op} 
@@ -269,8 +269,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: rings.v
 Line: 54
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   apply (strong_left_cancellation op z);trivial.</pre>
 </div>
@@ -414,8 +414,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 79
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>Instance mult_ne_0 `{!NoZeroDivisors R} x y
     : PropHolds (x &lt;&gt; 0) -&gt; PropHolds (y &lt;&gt; 0) -&gt; PropHolds (x * y &lt;&gt; 0).</pre>
 </div>
@@ -449,15 +449,15 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: rings.v
 Line: 84
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 85
-Time: 0.003s">
-<div class="time" style="width: 2.7777777777778%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
 
   Global Instance plus_0_r: RightIdentity (+) 0 := right_identity.</pre>
@@ -493,23 +493,23 @@ Time: 0.004s">
 </div>
 <div class="code" title="File: rings.v
 Line: 92
-Time: 0.005s">
-<div class="time" style="width: 4.6296296296296%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   Global Instance mult_assoc: Associative (.*.) := simple_associativity.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 93
-Time: 0.004s">
-<div class="time" style="width: 3.7037037037037%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.7777777777778%"></div>
 <pre>
 
   Global Instance plus_comm: Commutative (+) := commutativity.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 95
-Time: 0.003s">
-<div class="time" style="width: 2.7777777777778%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>
   Global Instance mult_comm: Commutative (.*.) := commutativity.</pre>
 </div>
@@ -545,8 +545,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 102
-Time: 0.002s">
-<div class="time" style="width: 1.8518518518519%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.7777777777778%"></div>
 <pre> path_via (0 * x).</pre>
 </div>
 <div class="code" title="File: rings.v
@@ -633,8 +633,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 112
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> apply distribute_l.</pre>
 </div>
 <div class="code" title="File: rings.v
@@ -652,8 +652,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 113
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -674,8 +674,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 117
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
   apply _.</pre>
 </div>
@@ -688,8 +688,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 119
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Global Instance: forall r : R, @IsMonoidPreserving R R (+) (+) 0 0 (r *.).</pre>
@@ -749,8 +749,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 126
-Time: 0.002s">
-<div class="time" style="width: 1.8518518518519%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
 End semiring_props.</pre>
 </div>
@@ -779,8 +779,8 @@ Section semiringmor_props.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 132
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Context `{IsSemiRingPreserving A B f}.</pre>
 </div>
@@ -839,8 +839,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 138
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Lemma preserves_mult: forall x y, f (x * y) = f x * f y.</pre>
 </div>
@@ -873,8 +873,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 142
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Lemma preserves_plus: forall x y, f (x + y) = f x + f y.</pre>
 </div>
@@ -894,8 +894,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 145
-Time: 0.005s">
-<div class="time" style="width: 4.6296296296296%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre> apply preserves_sg_op.</pre>
 </div>
 <div class="code" title="File: rings.v
@@ -907,8 +907,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 146
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma preserves_2: f 2 = 2.</pre>
@@ -977,8 +977,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 156
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -1013,8 +1013,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 162
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -1028,8 +1028,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 165
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Instance isinjective_ne_0 x : PropHolds (x &lt;&gt; 0) -&gt; PropHolds (f x &lt;&gt; 0).</pre>
 </div>
@@ -1055,8 +1055,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 168
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre> apply (isinjective_ne f).</pre>
 </div>
 <div class="code" title="File: rings.v
@@ -1184,8 +1184,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 194
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Instance: LeftAbsorb (.*.) 0.</pre>
 </div>
 <div class="code" title="File: rings.v
@@ -1204,8 +1204,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 196
-Time: 0.005s">
-<div class="time" style="width: 4.6296296296296%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   rewrite (commutativity (f:=(.*.)) 0).</pre>
 </div>
@@ -1225,8 +1225,8 @@ Time: 0.008s">
 </div>
 <div class="code" title="File: rings.v
 Line: 199
-Time: 0.007s">
-<div class="time" style="width: 6.4814814814815%"></div>
+Time: 0.006s">
+<div class="time" style="width: 5.5555555555556%"></div>
 <pre>
   path_via (y * (0 + 0)).</pre>
 </div>
@@ -1258,14 +1258,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 202
-Time: 0.004s">
-<div class="time" style="width: 3.7037037037037%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.6296296296296%"></div>
 <pre> apply right_identity.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 202
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -1286,8 +1286,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 206
-Time: 0.041s">
-<div class="time" style="width: 37.962962962963%"></div>
+Time: 0.04s">
+<div class="time" style="width: 37.037037037037%"></div>
 <pre>
   repeat (constructor; try apply _).</pre>
 </div>
@@ -1411,8 +1411,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 223
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -1454,8 +1454,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 230
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
 
   Lemma negate_plus_distr : forall x y, -(x + y) = -x + -y.</pre>
@@ -1632,8 +1632,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 252
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Lemma negate_mult_distr_r x y : -(x * y) = x * -y.</pre>
@@ -1661,8 +1661,8 @@ Time: 0.01s">
 </div>
 <div class="code" title="File: rings.v
 Line: 257
-Time: 0.004s">
-<div class="time" style="width: 3.7037037037037%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.7777777777778%"></div>
 <pre>
   apply symmetry,associativity.</pre>
 </div>
@@ -1808,8 +1808,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 278
-Time: 0.01s">
-<div class="time" style="width: 9.2592592592593%"></div>
+Time: 0.007s">
+<div class="time" style="width: 6.4814814814815%"></div>
 <pre>
     rewrite &lt;-simple_associativity.</pre>
 </div>
@@ -2297,8 +2297,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 341
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.92592592592593%"></div>
 <pre>
 
   Lemma plus_conjugate x y : x = y + x - y.</pre>
@@ -2458,15 +2458,15 @@ Section ringmor_props.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 370
-Time: 0.001s">
-<div class="time" style="width: 0.92592592592593%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.8518518518519%"></div>
 <pre>
   Context `{IsRing A} `{IsRing B} `{!IsSemiRingPreserving (f : A -&gt; B)}.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 371
-Time: 0.024s">
-<div class="time" style="width: 22.222222222222%"></div>
+Time: 0.023s">
+<div class="time" style="width: 21.296296296296%"></div>
 <pre>
 
   Definition preserves_negate x : f (-x) = -f x := groups.preserves_negate x.</pre>
@@ -2588,8 +2588,8 @@ Section from_another_ring.</pre>
 </div>
 <div class="code" title="File: rings.v
 Line: 392
-Time: 0.003s">
-<div class="time" style="width: 2.7777777777778%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.7037037037037%"></div>
 <pre>
   Context `{IsRing A} `{IsHSet B}
    `{Bplus : Plus B} `{Zero B} `{Bmult : Mult B} `{One B} `{Bnegate : Negate B}
@@ -2772,8 +2772,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: rings.v
 Line: 455
-Time: 0.009s">
-<div class="time" style="width: 8.3333333333333%"></div>
+Time: 0.01s">
+<div class="time" style="width: 9.2592592592593%"></div>
 <pre>
   split; apply _.</pre>
 </div>

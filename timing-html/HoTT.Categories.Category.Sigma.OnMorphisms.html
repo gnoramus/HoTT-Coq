@@ -36,14 +36,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 1
-Time: 0.051s">
-<div class="time" style="width: 100%"></div>
+Time: 0.039s">
+<div class="time" style="width: 76.470588235294%"></div>
 <pre>Require Import HSet Types.Unit HoTT.Tactics Types.Forall Types.Sigma Basics.Trunc.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 1
-Time: 0.006s">
-<div class="time" style="width: 11.764705882353%"></div>
+Time: 0.005s">
+<div class="time" style="width: 9.8039215686275%"></div>
 <pre>
 Require Import Category.Core Functor.Core Category.Sigma.Core.</pre>
 </div>
@@ -56,8 +56,8 @@ Require Functor.Composition.Core Functor.Identity.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 3
-Time: 0.001s">
-<div class="time" style="width: 1.9607843137255%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Require Import Functor.Paths.</pre>
 </div>
@@ -144,8 +144,8 @@ Section sig_mor.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 19
-Time: 0.001s">
-<div class="time" style="width: 1.9607843137255%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Variable A : PreCategory.</pre>
 </div>
@@ -166,8 +166,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 23
-Time: 0.001s">
-<div class="time" style="width: 1.9607843137255%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Context `(HPmor : forall s d, IsHSet (mor s d)).</pre>
 </div>
@@ -325,15 +325,15 @@ Time: 0.014s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 74
-Time: 0.001s">
-<div class="time" style="width: 1.9607843137255%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 75
-Time: 0.002s">
-<div class="time" style="width: 3.921568627451%"></div>
+Time: 0.003s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
 
   Definition sig_functor_mor : Functor sig_mor_as_sig sig_mor'
@@ -392,8 +392,8 @@ Time: 0.007s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 99
-Time: 0.002s">
-<div class="time" style="width: 3.921568627451%"></div>
+Time: 0.003s">
+<div class="time" style="width: 5.8823529411765%"></div>
 <pre>
     refine (exist
               _
@@ -415,8 +415,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 110
-Time: 0.009s">
-<div class="time" style="width: 17.647058823529%"></div>
+Time: 0.01s">
+<div class="time" style="width: 19.607843137255%"></div>
 <pre>
     destruct_head @sig_type.</pre>
 </div>
@@ -429,15 +429,15 @@ Time: 0.005s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 112
-Time: 0.017s">
-<div class="time" style="width: 33.333333333333%"></div>
+Time: 0.018s">
+<div class="time" style="width: 35.294117647059%"></div>
 <pre>
     rewrite !transport_forall_constant.</pre>
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 113
-Time: 0.025s">
-<div class="time" style="width: 49.019607843137%"></div>
+Time: 0.02s">
+<div class="time" style="width: 39.21568627451%"></div>
 <pre>
     transport_path_forall_hammer.</pre>
 </div>
@@ -565,8 +565,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 146
-Time: 0.01s">
-<div class="time" style="width: 19.607843137255%"></div>
+Time: 0.009s">
+<div class="time" style="width: 17.647058823529%"></div>
 <pre>
 
   Let P_associativity
@@ -629,8 +629,8 @@ Time: 0.002s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 162
-Time: 0.001s">
-<div class="time" style="width: 1.9607843137255%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -684,8 +684,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: OnMorphisms.v
 Line: 175
-Time: 0.026s">
-<div class="time" style="width: 50.980392156863%"></div>
+Time: 0.025s">
+<div class="time" style="width: 49.019607843137%"></div>
 <pre>Definition sig_mor : PreCategory
     := Eval cbv delta [P_associativity P_left_identity P_right_identity]
       in @sig_mor' A Pmor _ Pidentity Pcompose P_associativity P_left_identity P_right_identity.</pre>
