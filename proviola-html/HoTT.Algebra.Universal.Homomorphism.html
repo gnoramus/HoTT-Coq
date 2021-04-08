@@ -388,7 +388,7 @@
           
 
             i = 74;
-            data = "1 goal (ID 89)	  	  σ : Signature	  A : Algebra σ	  u : Symbol σ	  a : forall i : Arity (σ u), A (sorts_dom (σ u) i)	  ============================	  u ^^ A a = u ^^ A (fun i : Arity (σ u) => a i)	";
+            data = "1 goal (ID 89)	  	  σ : Signature	  A : Algebra σ	  u : Symbol σ	  a : forall i : Arity (σ u), A (sorts_dom (σ u) i)	  ============================	  u.#A a = u.#A (fun i : Arity (σ u) => a i)	";
             responses[i]=data;
           
 
@@ -483,7 +483,7 @@
           
 
             i = 93;
-            data = "1 goal (ID 110)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s -> C s	  IsHomomorphism0 : IsHomomorphism g	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism1 : IsHomomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), A (sorts_dom (σ u) i)	  ============================	  g (sort_cod (σ u)) (f (sort_cod (σ u)) (u ^^ A a)) =	  u ^^ C	    (fun i : Arity (σ u) =>	     g (sorts_dom (σ u) i) (f (sorts_dom (σ u) i) (a i)))	";
+            data = "1 goal (ID 110)	  	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  C : Algebra σ	  g : forall s : Sort σ, B s -> C s	  IsHomomorphism0 : IsHomomorphism g	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism1 : IsHomomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), A (sorts_dom (σ u) i)	  ============================	  g (sort_cod (σ u)) (f (sort_cod (σ u)) (u.#A a)) =	  u.#C	    (fun i : Arity (σ u) =>	     g (sorts_dom (σ u) i) (f (sorts_dom (σ u) i) (a i)))	";
             responses[i]=data;
           
 
@@ -633,22 +633,22 @@
           
 
             i = 123;
-            data = "1 goal (ID 170)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), B (sorts_dom (σ u) i)	  ============================	  (f (sort_cod (σ u)))^-1 (u ^^ B a) =	  u ^^ A (fun i : Arity (σ u) => (f (sorts_dom (σ u) i))^-1 (a i))	";
+            data = "1 goal (ID 170)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), B (sorts_dom (σ u) i)	  ============================	  (f (sort_cod (σ u)))^-1 (u.#B a) =	  u.#A (fun i : Arity (σ u) => (f (sorts_dom (σ u) i))^-1 (a i))	";
             responses[i]=data;
           
 
             i = 124;
-            data = "1 goal (ID 260)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), B (sorts_dom (σ u) i)	  ============================	  f (sort_cod (σ u)) ((f (sort_cod (σ u)))^-1 (u ^^ B a)) =	  f (sort_cod (σ u))	    (u ^^ A (fun i : Arity (σ u) => (f (sorts_dom (σ u) i))^-1 (a i)))	";
+            data = "1 goal (ID 260)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), B (sorts_dom (σ u) i)	  ============================	  f (sort_cod (σ u)) ((f (sort_cod (σ u)))^-1 (u.#B a)) =	  f (sort_cod (σ u))	    (u.#A (fun i : Arity (σ u) => (f (sorts_dom (σ u) i))^-1 (a i)))	";
             responses[i]=data;
           
 
             i = 125;
-            data = "1 goal (ID 268)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), B (sorts_dom (σ u) i)	  ============================	  f (sort_cod (σ u)) ((f (sort_cod (σ u)))^-1 (u ^^ B a)) =	  u ^^ B	    (fun i : Arity (σ u) =>	     f (sorts_dom (σ u) i) ((f (sorts_dom (σ u) i))^-1 (a i)))	";
+            data = "1 goal (ID 268)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), B (sorts_dom (σ u) i)	  ============================	  f (sort_cod (σ u)) ((f (sort_cod (σ u)))^-1 (u.#B a)) =	  u.#B	    (fun i : Arity (σ u) =>	     f (sorts_dom (σ u) i) ((f (sorts_dom (σ u) i))^-1 (a i)))	";
             responses[i]=data;
           
 
             i = 126;
-            data = "1 goal (ID 286)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), B (sorts_dom (σ u) i)	  ============================	  u ^^ B a =	  u ^^ B	    (fun i : Arity (σ u) =>	     f (sorts_dom (σ u) i) ((f (sorts_dom (σ u) i))^-1 (a i)))	";
+            data = "1 goal (ID 286)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  a : forall i : Arity (σ u), B (sorts_dom (σ u) i)	  ============================	  u.#B a =	  u.#B	    (fun i : Arity (σ u) =>	     f (sorts_dom (σ u) i) ((f (sorts_dom (σ u) i))^-1 (a i)))	";
             responses[i]=data;
           
 
@@ -958,12 +958,12 @@
           
 
             i = 188;
-            data = "1 goal (ID 228)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  ============================	  transport (fun C : Carriers σ => forall u0 : Symbol σ, Operation C (σ u0))	    (path_forall A B	       (fun i : Sort σ => path_universe (equiv_isomorphism f i)))	    (operations A) u = u ^^ B	";
+            data = "1 goal (ID 228)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  ============================	  transport (fun C : Carriers σ => forall u0 : Symbol σ, Operation C (σ u0))	    (path_forall A B	       (fun i : Sort σ => path_universe (equiv_isomorphism f i)))	    (operations A) u = u.#B	";
             responses[i]=data;
           
 
             i = 189;
-            data = "1 goal (ID 244)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  ============================	  transport (fun x : Carriers σ => Operation x (σ u))	    (path_forall A B	       (fun i : Sort σ => path_universe (equiv_isomorphism f i))) 	    u ^^ A = u ^^ B	";
+            data = "1 goal (ID 244)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  f : forall s : Sort σ, A s -> B s	  IsHomomorphism0 : IsHomomorphism f	  H0 : IsIsomorphism f	  u : Symbol σ	  ============================	  transport (fun x : Carriers σ => Operation x (σ u))	    (path_forall A B	       (fun i : Sort σ => path_universe (equiv_isomorphism f i))) u.#A = u.#B	";
             responses[i]=data;
           
 
@@ -1171,7 +1171,7 @@ Thie file implements algebra homomorphism and isomorphim.
       "><br>
 <br>
   <span class="id" title="keyword">Class</span> <a id="IsHomomorphism" class="idref" href="#IsHomomorphism"><span class="id" title="record">IsHomomorphism</span></a> : <span class="id" title="keyword">Type</span><br>
-    := <a id="oppreserving_hom" class="idref" href="#oppreserving_hom"><span class="id" title="projection">oppreserving_hom</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="u:16" class="idref" href="#u:16"><span class="id" title="binder">u</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#409ad27a15e5c61c2ee0006b0c759778"><span class="id" title="variable">σ</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#OpPreserving"><span class="id" title="definition">OpPreserving</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#u:16"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Algebra.Universal.Algebra.html#e33ad779ec661956bbe060c0412fa7fe"><span class="id" title="notation">^^</span></a><a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#is_homomorphism.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#u:16"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Algebra.Universal.Algebra.html#e33ad779ec661956bbe060c0412fa7fe"><span class="id" title="notation">^^</span></a><a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#is_homomorphism.B"><span class="id" title="variable">B</span></a>.</span><span class="command" onmouseout="
+    := <a id="oppreserving_hom" class="idref" href="#oppreserving_hom"><span class="id" title="projection">oppreserving_hom</span></a> : <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">∀</span></a> <a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">(</span></a><a id="u:16" class="idref" href="#u:16"><span class="id" title="binder">u</span></a> : <a class="idref" href="HoTT.Algebra.Universal.Algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#409ad27a15e5c61c2ee0006b0c759778"><span class="id" title="variable">σ</span></a><a class="idref" href="HoTT.Basics.Notations.html#adf9957462624adc9c2c94f56add3958"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#OpPreserving"><span class="id" title="definition">OpPreserving</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#u:16"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Algebra.Universal.Algebra.html#20527e8c20034c292a62900f684241bf"><span class="id" title="notation">.#</span></a><a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#is_homomorphism.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#u:16"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Algebra.Universal.Algebra.html#20527e8c20034c292a62900f684241bf"><span class="id" title="notation">.#</span></a><a class="idref" href="HoTT.Algebra.Universal.Homomorphism.html#is_homomorphism.B"><span class="id" title="variable">B</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(24, '0_3_7');

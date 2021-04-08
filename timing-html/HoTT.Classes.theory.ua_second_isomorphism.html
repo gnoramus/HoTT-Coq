@@ -38,7 +38,7 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 2
-Time: 0.136s">
+Time: 0.134s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Import
   HoTT.Types.Sigma
@@ -89,8 +89,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 22
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
   Context
     {σ : Signature} {A : Algebra σ}
@@ -99,11 +99,11 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 26
-Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 
-  Definition cong_trace (s : Sort σ) (x : (A&amp;P) s) (y : (A&amp;P) s)
+  Definition cong_trace (s : Sort σ) (x : (A&amp;&amp;P) s) (y : (A&amp;&amp;P) s)
     := Φ s (i s x) (i s y).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
@@ -145,14 +145,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 36
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre> intros [y Y].</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 36
-Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre> reflexivity.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
@@ -165,13 +165,13 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 37
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre> intros [y1 Y1] [y2 Y2] S.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 37
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre> by symmetry.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
@@ -183,32 +183,32 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 38
-Time: 0.002s">
-<div class="time" style="width: 1.4705882352941%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.2388059701493%"></div>
 <pre> intros [y1 Y1] [y2 Y2] [y3 Y3] S T.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 38
 Time: 0.002s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre> by transitivity y2.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 38
 Time: 0.002s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 39
 Time: 0.004s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
 
   Lemma for_all_2_family_prod_trace_congruence {w : SymbolType σ}
-    (a b : FamilyProd (A&amp;P) (dom_symboltype w))
-    (R : for_all_2_family_prod (A&amp;P) (A&amp;P) cong_trace a b)
+    (a b : FamilyProd (A&amp;&amp;P) (dom_symboltype w))
+    (R : for_all_2_family_prod (A&amp;&amp;P) (A&amp;&amp;P) cong_trace a b)
     : for_all_2_family_prod A A Φ
         (map_family_prod i a) (map_family_prod i b).</pre>
 </div>
@@ -221,47 +221,47 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 46
-Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
     induction w...</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 47
 Time: 0.006s">
-<div class="time" style="width: 4.4117647058824%"></div>
+<div class="time" style="width: 4.4776119402985%"></div>
 <pre>
     destruct a as [x a], b as [y b], R as [C R].</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 48
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
     split...</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 49
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
     apply IHw...</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 50
 Time: 0.008s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.9701492537313%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 51
-Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
   Global Instance ops_compatible_trace_trace
-    : OpsCompatible (A&amp;P) cong_trace.</pre>
+    : OpsCompatible (A&amp;&amp;P) cong_trace.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 54
@@ -280,15 +280,15 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 56
 Time: 0.002s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
     refine (transport (λ X, Φ _ X _)
               (path_homomorphism_ap_operation i u a)^ _).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 58
-Time: 0.003s">
-<div class="time" style="width: 2.2058823529412%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
     refine (transport (λ X, Φ _ _ X)
               (path_homomorphism_ap_operation i u b)^ _).</pre>
@@ -309,18 +309,18 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 62
-Time: 0.002s">
-<div class="time" style="width: 1.4705882352941%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.2388059701493%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 63
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
 
-  Global Instance is_congruence_trace : IsCongruence (A&amp;P) cong_trace.</pre>
+  Global Instance is_congruence_trace : IsCongruence (A&amp;&amp;P) cong_trace.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 65
@@ -332,9 +332,9 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 66
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
-    apply (@BuildIsCongruence _ (A&amp;P) cong_trace);
+    apply (@BuildIsCongruence _ (A&amp;&amp;P) cong_trace);
       [intros; apply (is_mere_relation_cong A Φ) | exact _ ..].</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
@@ -347,7 +347,7 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 69
 Time: 0.002s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 End cong_trace.</pre>
 </div>
@@ -370,8 +370,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 74
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
   Context `{Univalence}
     {σ : Signature} {A : Algebra σ}
@@ -381,16 +381,16 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 78
 Time: 0.005s">
-<div class="time" style="width: 3.6764705882353%"></div>
+<div class="time" style="width: 3.7313432835821%"></div>
 <pre>
 
   Definition is_subalgebra_class (s : Sort σ) (x : (A/Φ) s) : hProp
-    := hexists (λ (y : (A&amp;P) s), in_class (Φ s) x (i s y)).</pre>
+    := hexists (λ (y : (A&amp;&amp;P) s), in_class (Φ s) x (i s y)).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 81
-Time: 0.003s">
-<div class="time" style="width: 2.2058823529412%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
 
   Lemma op_closed_subalgebra_is_subalgebra_class {w : SymbolType σ}
@@ -410,7 +410,7 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 89
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
     induction w.</pre>
 </div>
@@ -442,21 +442,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 92
-Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       cbn in Q.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 93
 Time: 0.002s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre> destruct Q^.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 93
-Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       exact (EquivRel_Reflexive α).</pre>
 </div>
@@ -470,7 +470,7 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 95
 Time: 0.035s">
-<div class="time" style="width: 25.735294117647%"></div>
+<div class="time" style="width: 26.119402985075%"></div>
 <pre> refine (quotient_ind_prop (Φ t) _ _).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
@@ -482,21 +482,21 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 95
 Time: 0.019s">
-<div class="time" style="width: 13.970588235294%"></div>
+<div class="time" style="width: 14.179104477612%"></div>
 <pre>
       refine (Trunc_rec _).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 96
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
       intros [y R].</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 97
-Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
       apply (IHw (γ (class_of (Φ t) x)) (α (i t y))).</pre>
 </div>
@@ -516,14 +516,14 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 99
 Time: 0.02s">
-<div class="time" style="width: 14.705882352941%"></div>
+<div class="time" style="width: 14.925373134328%"></div>
 <pre>
         destruct (related_classes_eq (Φ t) R)^.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 100
 Time: 0.029s">
-<div class="time" style="width: 21.323529411765%"></div>
+<div class="time" style="width: 21.641791044776%"></div>
 <pre>
         apply (Q (i t y,a)).</pre>
 </div>
@@ -549,7 +549,7 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 102
 Time: 0.009s">
-<div class="time" style="width: 6.6176470588235%"></div>
+<div class="time" style="width: 6.7164179104478%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -640,8 +640,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 116
-Time: 0.007s">
-<div class="time" style="width: 5.1470588235294%"></div>
+Time: 0.008s">
+<div class="time" style="width: 5.9701492537313%"></div>
 <pre>
     apply BuildIsSubalgebraPredicate.</pre>
 </div>
@@ -662,7 +662,7 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 119
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
 End is_subalgebra_class.</pre>
 </div>
@@ -675,7 +675,7 @@ Time: 0s">
 (** The next section proves the second isomorphism theorem,
 
     &lt;&lt;
-      (A&amp;P) / (cong_trace P Φ) ≅ (A/Φ) &amp; (is_subalgebra_class P Φ).
+      (A&amp;&amp;P) / (cong_trace P Φ) ≅ (A/Φ) &amp;&amp; (is_subalgebra_class P Φ).
     &gt;&gt;
 *)
 
@@ -692,8 +692,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 131
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
   Context `{Univalence}
     {σ : Signature} (A : Algebra σ)
@@ -718,30 +718,30 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 139
-Time: 0.041s">
-<div class="time" style="width: 30.147058823529%"></div>
+Time: 0.046s">
+<div class="time" style="width: 34.328358208955%"></div>
 <pre>
 
   Definition def_second_isomorphism (s : Sort σ)
-    : ((A&amp;P) / Ψ) s → ((A/Φ) &amp; Q) s
+    : ((A&amp;&amp;P) / Ψ) s → ((A/Φ) &amp;&amp; Q) s
     := quotient_rec (Ψ s)
-        (λ (x : (A&amp;P) s),
+        (λ (x : (A&amp;&amp;P) s),
          (class_of (Φ s) (i s x); tr (x; EquivRel_Reflexive x)))
-        (λ (x y : (A&amp;P) s) (T : Ψ s x y),
+        (λ (x y : (A&amp;&amp;P) s) (T : Ψ s x y),
          path_sigma_hprop (class_of (Φ s) (i s x); _)
            (class_of (Φ s) (i s y); _) (related_classes_eq (Φ s) T)).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 148
 Time: 0.008s">
-<div class="time" style="width: 5.8823529411765%"></div>
+<div class="time" style="width: 5.9701492537313%"></div>
 <pre>
 
   Lemma oppreserving_second_isomorphism {w : SymbolType σ}
     (α : Operation A w) (γ : Operation (A/Φ) w)
-    (ζ : Operation ((A&amp;P) / Ψ) w) (CA : ClosedUnderOp (A/Φ) Q γ)
+    (ζ : Operation ((A&amp;&amp;P) / Ψ) w) (CA : ClosedUnderOp (A/Φ) Q γ)
     (CB : ClosedUnderOp A P α) (QA : ComputeOpQuotient A Φ α γ)
-    (QB : ComputeOpQuotient (A&amp;P) Ψ (op_subalgebra A P α CB) ζ)
+    (QB : ComputeOpQuotient (A&amp;&amp;P) Ψ (op_subalgebra A P α CB) ζ)
     : OpPreserving def_second_isomorphism ζ (op_subalgebra (A/Φ) Q γ CA).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
@@ -760,8 +760,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 157
-Time: 0.013s">
-<div class="time" style="width: 9.5588235294118%"></div>
+Time: 0.014s">
+<div class="time" style="width: 10.44776119403%"></div>
 <pre>
     induction w; cbn in *.</pre>
 </div>
@@ -775,7 +775,7 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 159
 Time: 0.006s">
-<div class="time" style="width: 4.4117647058824%"></div>
+<div class="time" style="width: 4.4776119402985%"></div>
 <pre> apply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
@@ -787,14 +787,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 160
-Time: 0.005s">
-<div class="time" style="width: 3.6764705882353%"></div>
+Time: 0.006s">
+<div class="time" style="width: 4.4776119402985%"></div>
 <pre> destruct (QB tt)^, (QA tt)^.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 160
 Time: 0.004s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
       by apply related_classes_eq.</pre>
 </div>
@@ -807,8 +807,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 162
-Time: 0.032s">
-<div class="time" style="width: 23.529411764706%"></div>
+Time: 0.036s">
+<div class="time" style="width: 26.865671641791%"></div>
 <pre> refine (quotient_ind_prop (Ψ t) _ _).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
@@ -820,7 +820,7 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 162
 Time: 0.004s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
       apply (IHw (α (i t x)) (γ (class_of (Φ t) (i t x)))
               (ζ (class_of (Ψ t) x))
@@ -867,8 +867,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 168
-Time: 0.017s">
-<div class="time" style="width: 12.5%"></div>
+Time: 0.019s">
+<div class="time" style="width: 14.179104477612%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -898,7 +898,7 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 174
 Time: 0.004s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
     eapply oppreserving_second_isomorphism.</pre>
 </div>
@@ -925,30 +925,30 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 177
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
-<pre> apply (compute_op_quotient (A&amp;P)).</pre>
+<div class="time" style="width: 0.74626865671642%"></div>
+<pre> apply (compute_op_quotient (A&amp;&amp;P)).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 177
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 178
 Time: 0.004s">
-<div class="time" style="width: 2.9411764705882%"></div>
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
 
   Definition hom_second_isomorphism
-    : Homomorphism ((A&amp;P) / Ψ) ((A/Φ) &amp; Q)
+    : Homomorphism ((A&amp;&amp;P) / Ψ) ((A/Φ) &amp;&amp; Q)
     := BuildHomomorphism def_second_isomorphism.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 182
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
 
   Global Instance embedding_second_isomorphism (s : Sort σ)
@@ -963,15 +963,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 186
-Time: 0.013s">
-<div class="time" style="width: 9.5588235294118%"></div>
+Time: 0.015s">
+<div class="time" style="width: 11.194029850746%"></div>
 <pre>
     apply isembedding_isinj_hset.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 187
-Time: 0.021s">
-<div class="time" style="width: 15.441176470588%"></div>
+Time: 0.024s">
+<div class="time" style="width: 17.910447761194%"></div>
 <pre>
     refine (quotient_ind_prop (Ψ s) _ _).</pre>
 </div>
@@ -983,8 +983,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 188
-Time: 0.015s">
-<div class="time" style="width: 11.029411764706%"></div>
+Time: 0.018s">
+<div class="time" style="width: 13.432835820896%"></div>
 <pre>
     refine (quotient_ind_prop (Ψ s) _ _).</pre>
 </div>
@@ -1004,21 +1004,21 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 190
 Time: 0.005s">
-<div class="time" style="width: 3.6764705882353%"></div>
+<div class="time" style="width: 3.7313432835821%"></div>
 <pre>
     exact (classes_eq_related (Φ s) (i s x) (i s y) (p..1)).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 191
 Time: 0.009s">
-<div class="time" style="width: 6.6176470588235%"></div>
+<div class="time" style="width: 6.7164179104478%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 192
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
 
   Global Instance surjection_second_isomorphism (s : Sort σ)
@@ -1040,8 +1040,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 197
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
     intros [y S].</pre>
 </div>
@@ -1061,8 +1061,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 200
-Time: 0.017s">
-<div class="time" style="width: 12.5%"></div>
+Time: 0.019s">
+<div class="time" style="width: 14.179104477612%"></div>
 <pre>
     refine (quotient_ind_prop (Φ s) _ _).</pre>
 </div>
@@ -1075,14 +1075,14 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 201
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
     refine (Trunc_rec _ S).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 202
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre> intros [y' S'].</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
@@ -1100,29 +1100,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 203
-Time: 0.006s">
-<div class="time" style="width: 4.4117647058824%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.2238805970149%"></div>
 <pre>
     apply path_sigma_hprop.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 204
-Time: 0.003s">
-<div class="time" style="width: 2.2058823529412%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
     by apply related_classes_eq.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 205
-Time: 0.007s">
-<div class="time" style="width: 5.1470588235294%"></div>
+Time: 0.008s">
+<div class="time" style="width: 5.9701492537313%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 206
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
 
   Theorem is_isomorphism_second_isomorphism
@@ -1145,13 +1145,13 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 211
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre> apply isequiv_surj_emb; exact _.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 211
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -1165,11 +1165,11 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 214
-Time: 0.003s">
-<div class="time" style="width: 2.2058823529412%"></div>
+Time: 0.004s">
+<div class="time" style="width: 2.9850746268657%"></div>
 <pre>
 
-  Theorem isomorphic_second_isomorphism : (A&amp;P) / Ψ ≅ (A/Φ) &amp; Q.</pre>
+  Theorem isomorphic_second_isomorphism : (A&amp;&amp;P) / Ψ ≅ (A/Φ) &amp;&amp; Q.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 216
@@ -1181,24 +1181,24 @@ Time: 0s">
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 217
 Time: 0.002s">
-<div class="time" style="width: 1.4705882352941%"></div>
+<div class="time" style="width: 1.4925373134328%"></div>
 <pre>
     exact (BuildIsomorphic def_second_isomorphism).</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 218
 Time: 0.001s">
-<div class="time" style="width: 0.73529411764706%"></div>
+<div class="time" style="width: 0.74626865671642%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 219
 Time: 0.003s">
-<div class="time" style="width: 2.2058823529412%"></div>
+<div class="time" style="width: 2.2388059701493%"></div>
 <pre>
 
-  Corollary id_second_isomorphism : (A&amp;P) / Ψ = (A/Φ) &amp; Q.</pre>
+  Corollary id_second_isomorphism : (A&amp;&amp;P) / Ψ = (A/Φ) &amp;&amp; Q.</pre>
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 221
@@ -1223,8 +1223,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_second_isomorphism.v
 Line: 224
-Time: 0.01s">
-<div class="time" style="width: 7.3529411764706%"></div>
+Time: 0.011s">
+<div class="time" style="width: 8.2089552238806%"></div>
 <pre>
 End second_isomorphism.</pre>
 </div>

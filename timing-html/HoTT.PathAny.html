@@ -132,8 +132,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: PathAny.v
 Line: 19
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition equiv_path_along_equiv {A B : Type} {P : A -&gt; A -&gt; Type}
            (e : B &lt;~&gt; A)
            (K : forall b0 b1 : B, P (e b0) (e b1) &lt;~&gt; b0 = b1)
@@ -184,8 +184,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: PathAny.v
 Line: 29
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Definition equiv_path_issig_contr {A B : Type} {P : A -&gt; A -&gt; Type}
            (e : B &lt;~&gt; A)
            (Prefl : forall b, P (e b) (e b))
@@ -244,8 +244,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: PathAny.v
 Line: 41
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2727272727273%"></div>
 <pre>Definition contr_sigma_sigma (A : Type) (B : A -&gt; Type)
            (C : A -&gt; Type) (D : forall a, B a -&gt; C a -&gt; Type)
            {cac : Contr {x:A &amp; C x} }
@@ -262,22 +262,22 @@ Proof.</pre>
 </div>
 <div class="code" title="File: PathAny.v
 Line: 47
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   pose (d := (center {y:B a &amp; D a y c}).2).</pre>
 </div>
 <div class="code" title="File: PathAny.v
 Line: 48
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2727272727273%"></div>
 <pre>
   set (b := (center {y:B a &amp; D a y c}).1) in *.</pre>
 </div>
 <div class="code" title="File: PathAny.v
 Line: 49
-Time: 0.001s">
-<div class="time" style="width: 2.2727272727273%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   exists ((a;b);(c;d)).</pre>
 </div>
@@ -304,8 +304,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: PathAny.v
 Line: 53
-Time: 0.002s">
-<div class="time" style="width: 4.5454545454545%"></div>
+Time: 0.001s">
+<div class="time" style="width: 2.2727272727273%"></div>
 <pre>
   change (((a;b);(c;d)) = ((ac'.1;bd'.1);(ac'.2;bd'.2))
           :&gt; {ab : {x:A &amp; B x} &amp; {y:C ab.1 &amp; D ab.1 ab.2 y} }).</pre>
@@ -319,8 +319,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: PathAny.v
 Line: 56
-Time: 0.006s">
-<div class="time" style="width: 13.636363636364%"></div>
+Time: 0.005s">
+<div class="time" style="width: 11.363636363636%"></div>
 <pre>
   destruct (@path_contr {x:A &amp; C x} _ (a;c) ac').</pre>
 </div>

@@ -1168,7 +1168,7 @@
           
 
             i = 230;
-            data = "1 goal (ID 230)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  u : Symbol σ	  ============================	  ComputeOpQuotient (u ^^ A) (u ^^ QuotientAlgebra)	";
+            data = "1 goal (ID 230)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  u : Symbol σ	  ============================	  ComputeOpQuotient u.#A u.#QuotientAlgebra	";
             responses[i]=data;
           
 
@@ -1568,7 +1568,7 @@
           
 
             i = 310;
-            data = "1 goal (ID 35)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  H0 : Funext	  u : Symbol σ	  ============================	  OpPreserving def_hom_quotient (u ^^ A) (u ^^ A / Φ)	";
+            data = "1 goal (ID 35)	  	  H : Funext	  σ : Signature	  A : Algebra σ	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  H0 : Funext	  u : Symbol σ	  ============================	  OpPreserving def_hom_quotient u.#A u.#(A / Φ)	";
             responses[i]=data;
           
 
@@ -2018,22 +2018,22 @@
           
 
             i = 400;
-            data = "1 goal (ID 131)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  f : Homomorphism A B	  R : forall (s : Sort σ) (x y : A s), Φ s x y -> f s x = f s y	  u : Symbol σ	  ============================	  OpPreserving def_hom_quotient_algebra_mapout (u ^^ A / Φ) (u ^^ B)	";
+            data = "1 goal (ID 131)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  f : Homomorphism A B	  R : forall (s : Sort σ) (x y : A s), Φ s x y -> f s x = f s y	  u : Symbol σ	  ============================	  OpPreserving def_hom_quotient_algebra_mapout u.#(A / Φ) u.#B	";
             responses[i]=data;
           
 
             i = 401;
-            data = "2 focused goals	(shelved: 1) (ID 134)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  f : Homomorphism A B	  R : forall (s : Sort σ) (x y : A s), Φ s x y -> f s x = f s y	  u : Symbol σ	  ============================	  ComputeOpQuotient A Φ ?α (u ^^ A / Φ)		goal 2 (ID 135) is:	 OpPreserving f ?α (u ^^ B)	";
+            data = "2 focused goals	(shelved: 1) (ID 134)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  f : Homomorphism A B	  R : forall (s : Sort σ) (x y : A s), Φ s x y -> f s x = f s y	  u : Symbol σ	  ============================	  ComputeOpQuotient A Φ ?α u.#(A / Φ)		goal 2 (ID 135) is:	 OpPreserving f ?α u.#B	";
             responses[i]=data;
           
 
             i = 402;
-            data = "1 focused goal	(shelved: 1) (ID 134)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  f : Homomorphism A B	  R : forall (s : Sort σ) (x y : A s), Φ s x y -> f s x = f s y	  u : Symbol σ	  ============================	  ComputeOpQuotient A Φ ?α (u ^^ A / Φ)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 135) is:	 OpPreserving f (u ^^ A) (u ^^ B)	";
+            data = "1 focused goal	(shelved: 1) (ID 134)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  f : Homomorphism A B	  R : forall (s : Sort σ) (x y : A s), Φ s x y -> f s x = f s y	  u : Symbol σ	  ============================	  ComputeOpQuotient A Φ ?α u.#(A / Φ)	<infomsg>	This subproof is complete, but there are some unfocused goals.	Focus next goal with bullet -.	</infomsg>	1 goal		goal 1 (ID 135) is:	 OpPreserving f u.#A u.#B	";
             responses[i]=data;
           
 
             i = 403;
-            data = "1 goal (ID 135)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  f : Homomorphism A B	  R : forall (s : Sort σ) (x y : A s), Φ s x y -> f s x = f s y	  u : Symbol σ	  ============================	  OpPreserving f (u ^^ A) (u ^^ B)	No more goals.	";
+            data = "1 goal (ID 135)	  	  H : Univalence	  σ : Signature	  A : Algebra σ	  B : Algebra σ	  IsHSetAlgebra0 : IsHSetAlgebra B	  Φ : forall s : Sort σ, Relation (A s)	  IsCongruence0 : IsCongruence A Φ	  f : Homomorphism A B	  R : forall (s : Sort σ) (x y : A s), Φ s x y -> f s x = f s y	  u : Symbol σ	  ============================	  OpPreserving f u.#A u.#B	No more goals.	";
             responses[i]=data;
           
 
@@ -2735,7 +2735,7 @@ Let <span class="inlinecode"><a class="idref" href="HoTTBookExercises.html#Book_
 <br>
   <span class="id" title="keyword">Definition</span> <a id="ops_quotient_algebra" class="idref" href="#ops_quotient_algebra"><span class="id" title="definition">ops_quotient_algebra</span></a> (<a id="u:61" class="idref" href="#u:61"><span class="id" title="binder">u</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#07c4c3c2d21f14f12fb31eb37c7c0f3b"><span class="id" title="variable">σ</span></a>)<br>
     : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#carriers_quotient_algebra"><span class="id" title="definition">carriers_quotient_algebra</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#07c4c3c2d21f14f12fb31eb37c7c0f3b"><span class="id" title="variable">σ</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#u:61"><span class="id" title="variable">u</span></a>)<br>
-    := <a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#op_quotient_algebra"><span class="id" title="definition">op_quotient_algebra</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#u:61"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#e11c7cea9fb47a1f2a2927c4977af045"><span class="id" title="notation">^^</span></a><a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#quotient_algebra.A"><span class="id" title="variable">A</span></a>) (<a class="idref" href="HoTT.Classes.interfaces.ua_congruence.html#ops_compatible_cong"><span class="id" title="method">ops_compatible_cong</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#quotient_algebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#df51d49f5452536d1a9e65c0a31012bd"><span class="id" title="variable">Φ</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#u:61"><span class="id" title="variable">u</span></a>)<a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">).1</span></a>.</span><span class="command" onmouseout="
+    := <a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">(</span></a><a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#op_quotient_algebra"><span class="id" title="definition">op_quotient_algebra</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#u:61"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#670aaa831c72eda4657f4b90245a7ea8"><span class="id" title="notation">.#</span></a><a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#quotient_algebra.A"><span class="id" title="variable">A</span></a> (<a class="idref" href="HoTT.Classes.interfaces.ua_congruence.html#ops_compatible_cong"><span class="id" title="method">ops_compatible_cong</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#quotient_algebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#df51d49f5452536d1a9e65c0a31012bd"><span class="id" title="variable">Φ</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#u:61"><span class="id" title="variable">u</span></a>)<a class="idref" href="HoTT.Basics.Overture.html#::fibration_scope:x_'.1'"><span class="id" title="notation">).1</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_15');
       " onmouseover="
       mouseover(166, '0_3_15');
@@ -2817,8 +2817,8 @@ The following lemma gives the computation rule for the quotient
 
 <div class="doc" scenenumber="35"> </div>
 
-    where <span class="inlinecode"><span class="id" title="var">α</span></span> is the uncurried <span class="inlinecode"><span class="id" title="var">u</span>^^<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> operation and <span class="inlinecode"><span class="id" title="var">β</span></span> is the
-    uncurried <span class="inlinecode"><span class="id" title="var">u</span>^^<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#QuotientAlgebra"><span class="id" title="definition">QuotientAlgebra</span></a></span> operation. 
+    where <span class="inlinecode"><span class="id" title="var">α</span></span> is the uncurried <span class="inlinecode"><span class="id" title="var">u</span>.#<a class="idref" href="HoTTBookExercises.html#Book_4_5.parts.A"><span class="id" title="variable">A</span></a></span> operation and <span class="inlinecode"><span class="id" title="var">β</span></span> is the
+    uncurried <span class="inlinecode"><span class="id" title="var">u</span>.#<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#QuotientAlgebra"><span class="id" title="definition">QuotientAlgebra</span></a></span> operation. 
 </div>
 <div scenenumber="27" class="code">
 <span class="command" onmouseout="
@@ -2828,7 +2828,7 @@ The following lemma gives the computation rule for the quotient
       ">
 <br>
   <span class="id" title="keyword">Lemma</span> <a id="compute_op_quotient" class="idref" href="#compute_op_quotient"><span class="id" title="lemma">compute_op_quotient</span></a> (<a id="u:62" class="idref" href="#u:62"><span class="id" title="binder">u</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#07c4c3c2d21f14f12fb31eb37c7c0f3b"><span class="id" title="variable">σ</span></a>)<br>
-    : <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#ComputeOpQuotient"><span class="id" title="definition">ComputeOpQuotient</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#u:62"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#e11c7cea9fb47a1f2a2927c4977af045"><span class="id" title="notation">^^</span></a><a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#quotient_algebra.A"><span class="id" title="variable">A</span></a>) (<a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#u:62"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#e11c7cea9fb47a1f2a2927c4977af045"><span class="id" title="notation">^^</span></a><a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#QuotientAlgebra"><span class="id" title="definition">QuotientAlgebra</span></a>).</span><span class="command" onmouseout="
+    : <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#ComputeOpQuotient"><span class="id" title="definition">ComputeOpQuotient</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#u:62"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#670aaa831c72eda4657f4b90245a7ea8"><span class="id" title="notation">.#</span></a><a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#quotient_algebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#u:62"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#670aaa831c72eda4657f4b90245a7ea8"><span class="id" title="notation">.#</span></a><a class="idref" href="HoTT.Classes.theory.ua_quotient_algebra.html#QuotientAlgebra"><span class="id" title="definition">QuotientAlgebra</span></a>.</span><span class="command" onmouseout="
       mouseout('0_3_27');
       " onmouseover="
       mouseover(231, '0_3_27');

@@ -243,7 +243,7 @@
           
 
             i = 45;
-            data = "1 goal (ID 23)	  	  H : Funext	  σ : Signature	  I : Type	  A : I -> Algebra σ	  i : I	  u : Symbol σ	  ============================	  OpPreserving (def_proj_prod_algebra i) (u ^^ ProdAlgebra I A) (u ^^ A i)	";
+            data = "1 goal (ID 23)	  	  H : Funext	  σ : Signature	  I : Type	  A : I -> Algebra σ	  i : I	  u : Symbol σ	  ============================	  OpPreserving (def_proj_prod_algebra i) u.#(ProdAlgebra I A) u.#(A i)	";
             responses[i]=data;
           
 
@@ -378,17 +378,17 @@
           
 
             i = 72;
-            data = "1 goal (ID 37)	  	  H : Funext	  σ : Signature	  I : Type	  A : I -> Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  ============================	  OpPreserving (def_prod_algebra_mapin (λ i : I, f i)) 	    (u ^^ C) (u ^^ ProdAlgebra I A)	";
+            data = "1 goal (ID 37)	  	  H : Funext	  σ : Signature	  I : Type	  A : I -> Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  ============================	  OpPreserving (def_prod_algebra_mapin (λ i : I, f i)) u.#C	    u.#(ProdAlgebra I A)	";
             responses[i]=data;
           
 
             i = 73;
-            data = "1 goal (ID 39)	  	  H : Funext	  σ : Signature	  I : Type	  A : I -> Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  ============================	  forall i : I, OpPreserving (f i) (u ^^ C) (u ^^ A i)	";
+            data = "1 goal (ID 39)	  	  H : Funext	  σ : Signature	  I : Type	  A : I -> Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  ============================	  forall i : I, OpPreserving (f i) u.#C u.#(A i)	";
             responses[i]=data;
           
 
             i = 74;
-            data = "1 goal (ID 40)	  	  H : Funext	  σ : Signature	  I : Type	  A : I -> Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  i : I	  ============================	  OpPreserving (f i) (u ^^ C) (u ^^ A i)	";
+            data = "1 goal (ID 40)	  	  H : Funext	  σ : Signature	  I : Type	  A : I -> Algebra σ	  C : Algebra σ	  f : forall i : I, Homomorphism C (A i)	  u : Symbol σ	  i : I	  ============================	  OpPreserving (f i) u.#C u.#(A i)	";
             responses[i]=data;
           
 
@@ -1030,7 +1030,7 @@ The following section defines product algebra <span class="inlinecode"><a class=
 <br>
   <span class="id" title="keyword">Definition</span> <a id="ops_prod_algebra" class="idref" href="#ops_prod_algebra"><span class="id" title="definition">ops_prod_algebra</span></a> (<a id="u:15" class="idref" href="#u:15"><span class="id" title="binder">u</span></a> : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Symbol"><span class="id" title="projection">Symbol</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#644990be8ed7634adcd419b6a7b9d2ae"><span class="id" title="variable">σ</span></a>)<br>
     : <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#Operation"><span class="id" title="definition">Operation</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#carriers_prod_algebra"><span class="id" title="definition">carriers_prod_algebra</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#644990be8ed7634adcd419b6a7b9d2ae"><span class="id" title="variable">σ</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#u:15"><span class="id" title="variable">u</span></a>)<br>
-    := <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#op_prod_algebra"><span class="id" title="definition">op_prod_algebra</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#644990be8ed7634adcd419b6a7b9d2ae"><span class="id" title="variable">σ</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#u:15"><span class="id" title="variable">u</span></a>) (<a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">(</span></a><a id="i:16" class="idref" href="#i:16"><span class="id" title="binder">i</span></a>:<a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#prod_algebra.I"><span class="id" title="variable">I</span></a><a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#u:15"><span class="id" title="variable">u</span></a> <a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#e11c7cea9fb47a1f2a2927c4977af045"><span class="id" title="notation">^^</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#prod_algebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#i:16"><span class="id" title="variable">i</span></a>).</span><span class="command" onmouseout="
+    := <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#op_prod_algebra"><span class="id" title="definition">op_prod_algebra</span></a> (<a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#644990be8ed7634adcd419b6a7b9d2ae"><span class="id" title="variable">σ</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#u:15"><span class="id" title="variable">u</span></a>) (<a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">λ</span></a> <a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">(</span></a><a id="i:16" class="idref" href="#i:16"><span class="id" title="binder">i</span></a>:<a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#prod_algebra.I"><span class="id" title="variable">I</span></a><a class="idref" href="HoTT.Utf8.html#bc1ad27deabe143d39d35abe6be2c1a4"><span class="id" title="notation">),</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#u:15"><span class="id" title="variable">u</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#670aaa831c72eda4657f4b90245a7ea8"><span class="id" title="notation">.#(</span></a><a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#prod_algebra.A"><span class="id" title="variable">A</span></a> <a class="idref" href="HoTT.Classes.theory.ua_prod_algebra.html#i:16"><span class="id" title="variable">i</span></a><a class="idref" href="HoTT.Classes.interfaces.ua_algebra.html#670aaa831c72eda4657f4b90245a7ea8"><span class="id" title="notation">)</span></a>).</span><span class="command" onmouseout="
       mouseout('0_3_7');
       " onmouseover="
       mouseover(21, '0_3_7');

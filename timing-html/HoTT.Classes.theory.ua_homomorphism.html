@@ -41,14 +41,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 5
-Time: 0.123s">
+Time: 0.12s">
 <div class="time" style="width: 100%"></div>
 <pre>Require Export HoTT.Classes.interfaces.ua_setalgebra.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 5
 Time: 0.01s">
-<div class="time" style="width: 8.130081300813%"></div>
+<div class="time" style="width: 8.3333333333333%"></div>
 <pre>
 
 Require Import
@@ -101,8 +101,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 29
-Time: 0.002s">
-<div class="time" style="width: 1.6260162601626%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>Fixpoint OpPreserving {w : SymbolType σ}
     : Operation A w → Operation B w → Type
     := match w with
@@ -113,7 +113,7 @@ Time: 0.002s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 34
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 
   Global Instance trunc_oppreserving `{Funext} {n : trunc_index}
@@ -130,15 +130,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 40
-Time: 0.008s">
-<div class="time" style="width: 6.5040650406504%"></div>
+Time: 0.009s">
+<div class="time" style="width: 7.5%"></div>
 <pre>
     induction w; exact _.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 41
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -150,17 +150,17 @@ Time: 0s">
 
 (** The family of functions [f : ∀ (s : Sort σ), A s → B s] above is
     a homomorphism if for each function symbol [u : Symbol σ], it is
-    [OpPreserving (u^^A) (u^^B)] with respect to the algebra
-    operations [u^^A] and [u^^B] corresponding to [u]. *)
+    [OpPreserving u.#A u.#B] with respect to the algebra
+    operations [u.#A] and [u.#B] corresponding to [u]. *)
 
  </pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 49
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>Class IsHomomorphism : Type
-    := oppreserving_hom : ∀ (u : Symbol σ), OpPreserving (u^^A) (u^^B).</pre>
+    := oppreserving_hom : ∀ (u : Symbol σ), OpPreserving u.#A u.#B.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 50
@@ -182,7 +182,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 55
 Time: 0.003s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.5%"></div>
 <pre>
     apply trunc_forall.</pre>
 </div>
@@ -195,15 +195,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 57
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 End is_homomorphism.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 58
-Time: 0.003s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
 
 Record Homomorphism {σ} {A B : Algebra σ} : Type := BuildHomomorphism
@@ -253,8 +253,8 @@ Global Existing Instance is_homomorphism_hom.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 72
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 
 Lemma apD10_homomorphism {σ} {A B : Algebra σ} {f g : Homomorphism A B}
@@ -277,7 +277,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 77
 Time: 0.002s">
-<div class="time" style="width: 1.6260162601626%"></div>
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre> by destruct p.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -290,7 +290,7 @@ Defined.</pre>
 <div class="code" title="File: ua_homomorphism.v
 Line: 78
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 
 Definition SigHomomorphism {σ} (A B : Algebra σ) : Type :=
@@ -315,21 +315,21 @@ Proof.</pre>
 <div class="code" title="File: ua_homomorphism.v
 Line: 85
 Time: 0.012s">
-<div class="time" style="width: 9.7560975609756%"></div>
+<div class="time" style="width: 10%"></div>
 <pre>
   issig.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 86
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 Defined.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 87
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 
 Global Instance trunc_homomorphism `{Funext} {σ} {A B : Algebra σ}
@@ -345,8 +345,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 92
-Time: 0.008s">
-<div class="time" style="width: 6.5040650406504%"></div>
+Time: 0.009s">
+<div class="time" style="width: 7.5%"></div>
 <pre>
   apply (trunc_equiv _ (issig_homomorphism A B)).</pre>
 </div>
@@ -372,7 +372,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 99
 Time: 0.002s">
-<div class="time" style="width: 1.6260162601626%"></div>
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>Lemma path_homomorphism {σ} {A B : Algebra σ} (f g : Homomorphism A B)
   (p : def_hom f = def_hom g)
   (q : p#(is_homomorphism_hom f) = is_homomorphism_hom g)
@@ -387,8 +387,8 @@ Proof.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 103
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
   destruct f, g.</pre>
 </div>
@@ -401,13 +401,13 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 104
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre> by path_induction.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 104
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 Defined.</pre>
 </div>
@@ -425,8 +425,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 110
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>Lemma path_hset_homomorphism `{Funext} {σ} {A B : Algebra σ}
   `{!IsHSetAlgebra B} (f g : Homomorphism A B)
   (p : def_hom f = def_hom g)
@@ -448,8 +448,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 115
-Time: 0.002s">
-<div class="time" style="width: 1.6260162601626%"></div>
+Time: 0.003s">
+<div class="time" style="width: 2.5%"></div>
 <pre> apply path_ishprop.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -478,7 +478,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 125
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>Class IsIsomorphism {σ : Signature} {A B : Algebra σ}
   (f : ∀ s, A s → B s) `{!IsHomomorphism f}
   := isequiv_isomorphism : ∀ (s : Sort σ), IsEquiv (f s).</pre>
@@ -517,8 +517,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 135
-Time: 0.008s">
-<div class="time" style="width: 6.5040650406504%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.8333333333333%"></div>
 <pre> rapply (Build_Equiv _ _ (f s)).</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -531,7 +531,7 @@ Defined.</pre>
 <div class="code" title="File: ua_homomorphism.v
 Line: 136
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 
 Global Instance hprop_is_isomorphism `{Funext} {σ : Signature}
@@ -548,14 +548,14 @@ Proof.</pre>
 <div class="code" title="File: ua_homomorphism.v
 Line: 141
 Time: 0.005s">
-<div class="time" style="width: 4.0650406504065%"></div>
+<div class="time" style="width: 4.1666666666667%"></div>
 <pre>
   apply trunc_forall.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 142
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 Qed.</pre>
 </div>
@@ -596,7 +596,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 158
 Time: 0.002s">
-<div class="time" style="width: 1.6260162601626%"></div>
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
 
   Lemma path_oppreserving_ap_operation (f : ∀ s, A s → B s)
@@ -614,8 +614,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 165
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
     induction w.</pre>
 </div>
@@ -642,7 +642,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 168
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre> destruct a as [x a].</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -653,14 +653,14 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 168
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre> apply P.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 168
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
   Defined.</pre>
 </div>
@@ -678,19 +678,19 @@ Time: 0s">
     &gt;&gt;
 
     where [(a1, a2, ..., an, tt) : FamilyProd A [s1; s2; ...; sn]] and
-    [α], [β] uncurried versions of [u^^A], [u^^B] respectively. *)
+    [α], [β] uncurried versions of [u.#A], [u.#B] respectively. *)
 
  </pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 181
-Time: 0.002s">
-<div class="time" style="width: 1.6260162601626%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>Lemma path_homomorphism_ap_operation (f : ∀ s, A s → B s)
     `{!IsHomomorphism f}
     : ∀ (u : Symbol σ) (a : FamilyProd A (dom_symboltype (σ u))),
-      f (cod_symboltype (σ u)) (ap_operation (u^^A) a)
-      = ap_operation (u^^B) (map_family_prod f a).</pre>
+      f (cod_symboltype (σ u)) (ap_operation u.#A a)
+      = ap_operation u.#B (map_family_prod f a).</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 185
@@ -709,7 +709,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 187
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre> by apply path_oppreserving_ap_operation.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -777,7 +777,7 @@ Time: 0s">
 Line: 199
 Time: 0s">
 <div class="time" style="width: 0%"></div>
-<pre> generalize (u^^A).</pre>
+<pre> generalize u.#A.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 199
@@ -813,8 +813,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 201
-Time: 0.002s">
-<div class="time" style="width: 1.6260162601626%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre> now intro x.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -850,7 +850,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 207
 Time: 0.004s">
-<div class="time" style="width: 3.2520325203252%"></div>
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -871,8 +871,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 211
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 
 End hom_id.</pre>
@@ -898,7 +898,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 218
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
   Context
     {σ} {A B : Algebra σ}
@@ -906,8 +906,8 @@ Time: 0.001s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 221
-Time: 0.006s">
-<div class="time" style="width: 4.8780487804878%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.8333333333333%"></div>
 <pre>
 
   Global Instance is_homomorphism_inv : IsHomomorphism (λ s, (f s)^-1).</pre>
@@ -929,9 +929,9 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 225
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
-   generalize (u^^A) (u^^B) (oppreserving_hom f u).</pre>
+   generalize u.#A u.#B (oppreserving_hom f u).</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 226
@@ -943,7 +943,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 227
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
    induction (σ u).</pre>
 </div>
@@ -988,7 +988,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 230
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
      exact (transport (λ y, OpPreserving f _ (b y))
               (eisretr (f t) x) (P (_^-1 x))).</pre>
@@ -996,14 +996,14 @@ Time: 0.001s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 232
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 233
 Time: 0.007s">
-<div class="time" style="width: 5.6910569105691%"></div>
+<div class="time" style="width: 5.8333333333333%"></div>
 <pre>
 
   Global Instance is_isomorphism_inv : IsIsomorphism (λ s, (f s)^-1).</pre>
@@ -1024,8 +1024,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 237
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre> exact _.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -1038,7 +1038,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 238
 Time: 0.007s">
-<div class="time" style="width: 5.6910569105691%"></div>
+<div class="time" style="width: 5.8333333333333%"></div>
 <pre>
 
   Definition hom_inv : Homomorphism B A
@@ -1047,7 +1047,7 @@ Time: 0.007s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 241
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 
 End hom_inv.</pre>
@@ -1081,7 +1081,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 250
 Time: 0.004s">
-<div class="time" style="width: 3.2520325203252%"></div>
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>
 
   Lemma oppreserving_compose (g : ∀ s, B s → C s) `{!IsHomomorphism g}
@@ -1100,7 +1100,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 257
 Time: 0.002s">
-<div class="time" style="width: 1.6260162601626%"></div>
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
     induction w; simpl in *.</pre>
 </div>
@@ -1114,7 +1114,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 259
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre> by path_induction.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -1132,21 +1132,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 260
-Time: 0.035s">
-<div class="time" style="width: 28.455284552846%"></div>
+Time: 0.036s">
+<div class="time" style="width: 30%"></div>
 <pre> now apply (IHw _ (β (f _ x))).</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 260
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
   Defined.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 261
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
 
   Global Instance is_homomorphism_compose
@@ -1171,9 +1171,9 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 268
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
-    by apply (oppreserving_compose g f (u^^A) (u^^B) (u^^C)).</pre>
+    by apply (oppreserving_compose g f u.#A u.#B u.#C).</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 269
@@ -1185,7 +1185,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 270
 Time: 0.002s">
-<div class="time" style="width: 1.6260162601626%"></div>
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
 
   Global Instance is_isomorphism_compose
@@ -1209,21 +1209,21 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 277
-Time: 0.009s">
-<div class="time" style="width: 7.3170731707317%"></div>
+Time: 0.012s">
+<div class="time" style="width: 10%"></div>
 <pre> apply isequiv_compose.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 277
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
   Qed.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 278
-Time: 0.003s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
 
   Definition hom_compose
@@ -1233,8 +1233,8 @@ Time: 0.003s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 283
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
 
 End hom_compose.</pre>
@@ -1303,8 +1303,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 310
-Time: 0.005s">
-<div class="time" style="width: 4.0650406504065%"></div>
+Time: 0.007s">
+<div class="time" style="width: 5.8333333333333%"></div>
 <pre>Lemma path_operations_equiv {w : SymbolType σ}
     (α : Operation A w) (β : Operation B w)
     (f : ∀ (s : Sort σ), A s &lt;~&gt; B s) (P : OpPreserving f α β)
@@ -1322,7 +1322,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 316
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
     induction w; simpl in *.</pre>
 </div>
@@ -1336,7 +1336,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 318
 Time: 0.003s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.5%"></div>
 <pre> transport_path_forall_hammer.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
@@ -1361,29 +1361,29 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 320
-Time: 0.003s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0.004s">
+<div class="time" style="width: 3.3333333333333%"></div>
 <pre>
       transport_path_forall_hammer.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 321
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
       rewrite transport_forall_constant.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 322
 Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+<div class="time" style="width: 0.83333333333333%"></div>
 <pre>
       rewrite transport_arrow_toconst.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 323
-Time: 0.001s">
-<div class="time" style="width: 0.8130081300813%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.6666666666667%"></div>
 <pre>
       rewrite (transport_path_universe_V (f t)).</pre>
 </div>
@@ -1396,8 +1396,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 325
-Time: 0.003s">
-<div class="time" style="width: 2.4390243902439%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.1666666666667%"></div>
 <pre>
       specialize (P ((f t)^-1 y)).</pre>
 </div>
@@ -1410,8 +1410,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 327
-Time: 0.007s">
-<div class="time" style="width: 5.6910569105691%"></div>
+Time: 0.008s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -1422,27 +1422,27 @@ Time: 0s">
 <pre>
 
 (** Suppose [u : Symbol σ] is a function symbol. Recall that
-    [u^^A] is notation for [operations A u : Operation A (σ u)]. This
+    [u.#A] is notation for [operations A u : Operation A (σ u)]. This
     is the algebra operation corresponding to function symbol [u]. *)
 
 (** An isomorphism [f : ∀ s, A s → B s] induces a family of
     equivalences [e : ∀ (s : Sort σ), A s &lt;~&gt; B s]. Let [u : Symbol σ]
     be a function symbol. Since [f] is a homomorphism, the induced
-    family of equivalences [e] satisfies [OpPreserving e (u^^A) (u^^B)].
-    By [path_operations_equiv] above, we can then transport [u^^A] along
-    the path [path_equiv_family e] and obtain a path to [u^^B]. *)
+    family of equivalences [e] satisfies [OpPreserving e (u.#A) (u.#B)].
+    By [path_operations_equiv] above, we can then transport [u.#A] along
+    the path [path_equiv_family e] and obtain a path to [u.#B]. *)
 
  </pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 341
-Time: 0.005s">
-<div class="time" style="width: 4.0650406504065%"></div>
+Time: 0.008s">
+<div class="time" style="width: 6.6666666666667%"></div>
 <pre>Lemma path_operations_isomorphism (f : ∀ s, A s → B s)
     `{IsIsomorphism σ A B f} (u : Symbol σ)
     : transport (λ C : Carriers σ, Operation C (σ u))
-        (path_equiv_family (equiv_isomorphism f)) (u^^A)
-      = u^^B.</pre>
+        (path_equiv_family (equiv_isomorphism f)) u.#A
+      = u.#B.</pre>
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 345
@@ -1491,8 +1491,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: ua_homomorphism.v
 Line: 354
-Time: 0.004s">
-<div class="time" style="width: 3.2520325203252%"></div>
+Time: 0.005s">
+<div class="time" style="width: 4.1666666666667%"></div>
 <pre>
     apply (path_algebra _ _ (path_equiv_family (equiv_isomorphism f))).</pre>
 </div>
@@ -1509,7 +1509,7 @@ Time: 0s">
 <div class="code" title="File: ua_homomorphism.v
 Line: 359
 Time: 0.003s">
-<div class="time" style="width: 2.4390243902439%"></div>
+<div class="time" style="width: 2.5%"></div>
 <pre>abstract (
       funext u;
       exact (transport_forall_constant _ _ u
