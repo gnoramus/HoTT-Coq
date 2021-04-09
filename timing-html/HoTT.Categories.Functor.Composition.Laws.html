@@ -37,20 +37,20 @@ Time: 0s">
 <div class="code" title="File: Laws.v
 Line: 1
 Time: 0.015s">
-<div class="time" style="width: 9.3167701863354%"></div>
+<div class="time" style="width: 8.5227272727273%"></div>
 <pre>Require Import Category.Core Functor.Core Functor.Composition.Core Functor.Identity.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 1
-Time: 0.024s">
-<div class="time" style="width: 14.906832298137%"></div>
+Time: 0.025s">
+<div class="time" style="width: 14.204545454545%"></div>
 <pre>
 Require Import Functor.Paths.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 2
-Time: 0.002s">
-<div class="time" style="width: 1.2422360248447%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
 Require Import Basics.PathGroupoids Basics.Tactics HoTT.Tactics.</pre>
 </div>
@@ -148,7 +148,7 @@ Time: 0s">
 <div class="code" title="File: Laws.v
 Line: 22
 Time: 0.002s">
-<div class="time" style="width: 1.2422360248447%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
     by path_functor.</pre>
 </div>
@@ -184,7 +184,7 @@ Time: 0s">
 <div class="code" title="File: Laws.v
 Line: 28
 Time: 0.002s">
-<div class="time" style="width: 1.2422360248447%"></div>
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
     by path_functor.</pre>
 </div>
@@ -206,16 +206,16 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 33
-Time: 0.002s">
-<div class="time" style="width: 1.2422360248447%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.7045454545455%"></div>
 <pre>Definition left_identity_fst F
   : ap object_of (left_identity F) = idpath
     := @path_functor_uncurried_fst _ _ _ (1 o F) F 1 1.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 35
-Time: 0.007s">
-<div class="time" style="width: 4.3478260869565%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.7045454545455%"></div>
 <pre>
 
   Definition right_identity_fst F
@@ -224,8 +224,8 @@ Time: 0.007s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 39
-Time: 0.001s">
-<div class="time" style="width: 0.62111801242236%"></div>
+Time: 0.002s">
+<div class="time" style="width: 1.1363636363636%"></div>
 <pre>
 End identity_lemmas.</pre>
 </div>
@@ -239,8 +239,8 @@ Hint Rewrite @left_identity @right_identity : category.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 42
-Time: 0.001s">
-<div class="time" style="width: 0.62111801242236%"></div>
+Time: 0s">
+<div class="time" style="width: 0%"></div>
 <pre>
 Hint Rewrite @left_identity @right_identity : functor.</pre>
 </div>
@@ -309,8 +309,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 58
-Time: 0.002s">
-<div class="time" style="width: 1.2422360248447%"></div>
+Time: 0.003s">
+<div class="time" style="width: 1.7045454545455%"></div>
 <pre>
     by path_functor.</pre>
 </div>
@@ -333,7 +333,7 @@ Time: 0s">
 <div class="code" title="File: Laws.v
 Line: 63
 Time: 0.006s">
-<div class="time" style="width: 3.7267080745342%"></div>
+<div class="time" style="width: 3.4090909090909%"></div>
 <pre>Definition associativity_fst F G H
   : ap object_of (associativity F G H) = idpath
     := @path_functor_uncurried_fst _ _ _ ((H o G) o F) (H o (G o F)) 1%path 1%path.</pre>
@@ -341,14 +341,14 @@ Time: 0.006s">
 <div class="code" title="File: Laws.v
 Line: 65
 Time: 0.001s">
-<div class="time" style="width: 0.62111801242236%"></div>
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
 End composition_lemmas.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 66
-Time: 0s">
-<div class="time" style="width: 0%"></div>
+Time: 0.001s">
+<div class="time" style="width: 0.56818181818182%"></div>
 <pre>
 
 #[export]
@@ -421,8 +421,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 98
-Time: 0.003s">
-<div class="time" style="width: 1.8633540372671%"></div>
+Time: 0.005s">
+<div class="time" style="width: 2.8409090909091%"></div>
 <pre>Lemma triangle C D E (F : Functor C D) (G : Functor D E)
   : (associativity F 1 G @ ap (compose G) (left_identity F))
     = (ap (fun G' : Functor D E =&gt; G' o F) (right_identity G)).</pre>
@@ -436,15 +436,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 101
-Time: 0.12s">
-<div class="time" style="width: 74.534161490683%"></div>
+Time: 0.125s">
+<div class="time" style="width: 71.022727272727%"></div>
 <pre>
     coherence_t.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 102
-Time: 0.014s">
-<div class="time" style="width: 8.695652173913%"></div>
+Time: 0.016s">
+<div class="time" style="width: 9.0909090909091%"></div>
 <pre>
   Qed.</pre>
 </div>
@@ -475,8 +475,8 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 122
-Time: 0.009s">
-<div class="time" style="width: 5.5900621118012%"></div>
+Time: 0.01s">
+<div class="time" style="width: 5.6818181818182%"></div>
 <pre>Lemma pentagon A B C D E
         (F : Functor A B) (G : Functor B C) (H : Functor C D) (K : Functor D E)
   : (associativity F G (K o H) @ associativity (G o F) H K)
@@ -491,15 +491,15 @@ Time: 0s">
 </div>
 <div class="code" title="File: Laws.v
 Line: 126
-Time: 0.161s">
+Time: 0.176s">
 <div class="time" style="width: 100%"></div>
 <pre>
     coherence_t.</pre>
 </div>
 <div class="code" title="File: Laws.v
 Line: 127
-Time: 0.025s">
-<div class="time" style="width: 15.527950310559%"></div>
+Time: 0.03s">
+<div class="time" style="width: 17.045454545455%"></div>
 <pre>
   Qed.</pre>
 </div>
